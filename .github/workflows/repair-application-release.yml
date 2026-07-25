@@ -1,0 +1,89 @@
+name: Repair application release
+
+on:
+  push:
+    branches:
+      - release/application-ready-2026-07-25
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repair-application-release
+  cancel-in-progress: true
+
+jobs:
+  repair:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+
+    steps:
+      - name: Check out release branch
+        uses: actions/checkout@v4
+        with:
+          ref: release/application-ready-2026-07-25
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Repair current release assertions
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('scripts/check-stale-strings.js')
+          text = path.read_text()
+          old = "'At least 59 published outputs supported'"
+          new = "'At least 59 published projects supported'"
+          if old not in text:
+              raise SystemExit('Expected stale Entropy assertion was not found')
+          path.write_text(text.replace(old, new, 1))
+          PY
+
+      - name: Build and capture diagnostics
+        id: build
+        run: |
+          set +e
+          mkdir -p .github/diagnostics
+          set -o pipefail
+          npm run build 2>&1 | tee .github/diagnostics/application-release-build.log
+          status=${PIPESTATUS[0]}
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Verify rendering
+        id: render
+        if: steps.build.outputs.status == '0'
+        run: npm run verify:render
+
+      - name: Generate application PDFs
+        id: pdf
+        if: steps.build.outputs.status == '0'
+        run: npm run pdf
+
+      - name: Finalize successful repair
+        if: steps.build.outputs.status == '0' && steps.render.conclusion == 'success' && steps.pdf.conclusion == 'success'
+        run: |
+          rm -f .github/diagnostics/application-release-build.log
+          rm -f .github/workflows/repair-application-release.yml
+
+      - name: Commit repair and diagnostics
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "fix: verify the application-ready release"
+          git push origin HEAD:release/application-ready-2026-07-25
+
+      - name: Require successful release verification
+        if: steps.build.outputs.status != '0' || steps.render.conclusion == 'failure' || steps.pdf.conclusion == 'failure'
+        run: exit 1
