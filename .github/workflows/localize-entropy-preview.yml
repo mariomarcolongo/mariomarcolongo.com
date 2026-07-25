@@ -1,0 +1,69 @@
+name: Localize Entropy preview
+
+on:
+  push:
+    branches:
+      - release/application-ready-2026-07-25
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - reopened
+      - synchronize
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  localize:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out release branch
+        uses: actions/checkout@v4
+        with:
+          ref: release/application-ready-2026-07-25
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Preserve the published Entropy visualization locally
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 3 --output public/media/work/entropy-dashboard-800.webp \
+            https://entropyforlife.it/wp-content/uploads/2024/10/Dashboard-1-5-png.webp
+          test -s public/media/work/entropy-dashboard-800.webp
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('data/portfolio-human.js')
+          text = path.read_text()
+          old = 'https://entropyforlife.it/wp-content/uploads/2024/10/Dashboard-1-5-png.webp'
+          new = '/media/work/entropy-dashboard-800.webp'
+          count = text.count(old)
+          if count != 2:
+              raise SystemExit(f'Expected two Entropy image references, found {count}')
+          path.write_text(text.replace(old, new))
+          PY
+
+      - name: Install and verify production build
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+
+      - name: Commit the localized evidence preview
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/localize-entropy-preview.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "perf: serve the Entropy evidence preview locally"
+          git push origin HEAD:release/application-ready-2026-07-25
