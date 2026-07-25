@@ -118,7 +118,7 @@ assertContains(index, 'class="v8-hero-gallery"', 'dist/index.html');
 assertContains(index, 'class="v8-case-stack"', 'dist/index.html');
 assertContains(index, 'class="v8-product"', 'dist/index.html');
 for (const media of [
-  '/media/work/model-behavior-profile.jpg', 'https://entropyforlife.it/wp-content/uploads/2024/10/Dashboard-1-5-png.webp',
+  '/evidence/gray-swan-metrics-2026-07-25.svg', 'https://entropyforlife.it/wp-content/uploads/2024/10/Dashboard-1-5-png.webp',
   '/media/work/yourself-to-science-800.webp', '/media/work/mdpi-filter-1-800.webp',
   '/media/work/mdpi-filter-2-800.webp', '/media/work/wikimedia-clinical-overlap.svg',
   '/media/work/tableau-mortality-800.webp', '/media/work/flourish-oesophageal-cancer.svg'
@@ -161,8 +161,8 @@ pass('Master CV positioning checked');
 const securityText = normalizeHtmlText(pages.security);
 for (const needle of [
   'AI evaluation and model-behavior record.', 'What the record demonstrates', 'Evaluation approach',
-  'Limitations and interpretation', 'Leaderboard-counted breaks', 'complete 26-wave activity table',
-  '/evidence/gray-swan-2026-07-24/', 'Open live Gray Swan profile', '105/106'
+  'Limitations and interpretation', 'Proving Ground total breaks', 'historical 24 July 26-wave activity table',
+  '/evidence/gray-swan-profile-2026-07-25.html', 'Open live Gray Swan profile', '109'
 ]) assertContains(securityText, needle, 'dist/security.html');
 for (const needle of [
   'independently verified policy or alignment boundary failure',
