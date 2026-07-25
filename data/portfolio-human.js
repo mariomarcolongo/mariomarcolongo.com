@@ -272,5 +272,3 @@ const PORTFOLIO_HUMAN = {
 if (typeof module !== "undefined" && module.exports) {
   module.exports = PORTFOLIO_HUMAN;
 }
-
-export default PORTFOLIO_HUMAN;
