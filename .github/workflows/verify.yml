@@ -35,13 +35,10 @@ jobs:
       - name: Diagnose mobile layout
         run: node scripts/diagnose-mobile-overflow.js | tee audit-output/mobile-overflow.json
 
-      - name: Verify deterministic generated files
+      - name: Regenerate and verify canonical dossiers
         run: |
           npm run generate:llms
-          git diff --exit-code -- \
-            llms.txt llms-full.txt cv-llm.txt \
-            public/llms.txt public/llms-full.txt public/cv-llm.txt public/data/source.js \
-            index.html integrity.html cv.html cv-resume.html cv-research.html cv-editorial.html cv-integrity.html security.html
+          node scripts/verify-dist.js
 
       - name: Verify rendered pages and interactions
         shell: bash
