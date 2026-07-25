@@ -43,14 +43,31 @@ jobs:
           test -s public/media/work/entropy-dashboard-800.webp
           python - <<'PY'
           from pathlib import Path
-          path = Path('data/portfolio-human.js')
-          text = path.read_text()
-          old = 'https://entropyforlife.it/wp-content/uploads/2024/10/Dashboard-1-5-png.webp'
-          new = '/media/work/entropy-dashboard-800.webp'
-          count = text.count(old)
+
+          remote = 'https://entropyforlife.it/wp-content/uploads/2024/10/Dashboard-1-5-png.webp'
+          local = '/media/work/entropy-dashboard-800.webp'
+
+          portfolio = Path('data/portfolio-human.js')
+          text = portfolio.read_text()
+          count = text.count(remote)
           if count != 2:
               raise SystemExit(f'Expected two Entropy image references, found {count}')
-          path.write_text(text.replace(old, new))
+          portfolio.write_text(text.replace(remote, local))
+
+          source_checks = Path('scripts/check-stale-strings.js')
+          text = source_checks.read_text()
+          if remote not in text:
+              raise SystemExit('Source integrity check did not contain the remote Entropy image')
+          text = text.replace(remote, local)
+          required_anchor = "'public/media/work/mdpi-filter-1-800.webp'"
+          text = text.replace(required_anchor, "'public/media/work/entropy-dashboard-800.webp', " + required_anchor, 1)
+          source_checks.write_text(text)
+
+          generated_checks = Path('scripts/verify-dist.js')
+          text = generated_checks.read_text()
+          if remote not in text:
+              raise SystemExit('Generated-output check did not contain the remote Entropy image')
+          generated_checks.write_text(text.replace(remote, local))
           PY
 
       - name: Install and verify production build
