@@ -27,23 +27,37 @@ jobs:
       - name: Build production site
         run: npm run build
 
-      - name: Verify Gray Swan rank snapshot
-        run: grep -R --fixed-strings "#77 · Top 7%" dist public/llms.txt public/llms-full.txt public/cv-llm.txt
-
-      - name: Verify Gray Swan break total
-        run: grep -R --fixed-strings "106 platform-recorded challenge breaks" dist public/llms.txt public/llms-full.txt public/cv-llm.txt
-
-      - name: Verify Gray Swan evidence link
-        run: grep -R --fixed-strings "gray-swan-profile-2026-07-24.html" dist public/llms.txt public/llms-full.txt public/cv-llm.txt
-
-      - name: Reject every legacy Gray Swan wording variant
+      - name: Verify latest Gray Swan snapshot
         shell: bash
         run: |
           set -euo pipefail
           surfaces=(dist public/llms.txt public/llms-full.txt public/cv-llm.txt)
+          grep -R --fixed-strings "#75 · Top 6%" "${surfaces[@]}"
+          grep -R --fixed-strings "110 platform-recorded challenge breaks" "${surfaces[@]}"
+          grep -R --fixed-strings "gray-swan-profile-2026-07-25.html" "${surfaces[@]}"
+          grep -R --fixed-strings "27 global unique breaks" "${surfaces[@]}"
+          grep -R --fixed-strings "1,090 points" "${surfaces[@]}"
+          grep -R --fixed-strings "246 submissions" "${surfaces[@]}"
+
+      - name: Reject superseded Gray Swan claims on applicant-facing surfaces
+        shell: bash
+        run: |
+          set -euo pipefail
+          surfaces=(
+            dist/index.html
+            dist/cv.html
+            dist/data/source.js
+            dist/data/source-overrides.js
+            public/llms.txt
+            public/llms-full.txt
+            public/cv-llm.txt
+          )
           legacy=(
             "top 8%"
             "top-8%"
+            "top 7%"
+            "#77"
+            "106 platform-recorded challenge breaks"
             "75+ confirmed model breaks"
             "75+ platform-confirmed model breaks"
             "75+ confirmed adversarial model breaks"
@@ -51,7 +65,7 @@ jobs:
             "75+ confirmed breaks"
           )
           for phrase in "${legacy[@]}"; do
-            ! grep -R --include='*.html' --include='*.txt' --include='*.js' --fixed-strings "$phrase" "${surfaces[@]}"
+            ! grep -R --fixed-strings "$phrase" "${surfaces[@]}"
           done
 
       - name: Verify server-rendered Gray Swan CV fallback
@@ -60,31 +74,60 @@ jobs:
           set -euo pipefail
           grep --fixed-strings "AI Red-Teaming & Model Behavior Evaluation Practitioner" dist/cv.html
           grep --fixed-strings "Jul 2026 — Present" dist/cv.html
-          grep --fixed-strings "106 platform-recorded challenge breaks" dist/cv.html
+          grep --fixed-strings "#75 (top 6%)" dist/cv.html
+          grep --fixed-strings "110 platform-recorded challenge breaks" dist/cv.html
 
-      - name: Verify Entropy documented-project total
-        run: grep -R --fixed-strings "59+ Documented Projects" dist public/llms.txt public/llms-full.txt public/cv-llm.txt
-
-      - name: Verify Entropy evidence labels
+      - name: Verify Entropy scope and direct evidence links
         shell: bash
         run: |
           set -euo pipefail
+          surfaces=(dist public/llms.txt public/llms-full.txt public/cv-llm.txt)
+          grep -R --fixed-strings "59+ Published Projects" "${surfaces[@]}"
           grep -R --fixed-strings "55+ YouTube Projects" dist public/llms-full.txt public/cv-llm.txt
           grep -R --fixed-strings "4 Co-Authored Articles" dist public/llms-full.txt public/cv-llm.txt
           grep -R --fixed-strings "Selected Thumbnails" dist public/llms-full.txt public/cv-llm.txt
-          ! grep --fixed-strings "Videos & Documentaries" dist/cv.html
-          ! grep --fixed-strings "Author Page" dist/cv.html
-
-      - name: Verify Entropy playlists
-        shell: bash
-        run: |
-          set -euo pipefail
           grep -R --fixed-strings "PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh" dist public/llms-full.txt public/cv-llm.txt
           grep -R --fixed-strings "PLUXju4zC0Sks" dist public/llms-full.txt public/cv-llm.txt
 
-      - name: Verify evidence files are deployed
+      - name: Verify conservative capability wording
         shell: bash
         run: |
           set -euo pipefail
+          surfaces=(
+            dist/index.html
+            dist/cv.html
+            dist/data/source.js
+            dist/data/source-overrides.js
+            public/llms.txt
+            public/llms-full.txt
+            public/cv-llm.txt
+          )
+          grep -R --fixed-strings "Founder & Technical Product Owner" "${surfaces[@]}"
+          grep -R --fixed-strings "Scientific Research, Fact-Checking & Website Operations Contractor" "${surfaces[@]}"
+          grep -R --fixed-strings "AI-Assisted Web Product Delivery & Technical Operations" "${surfaces[@]}"
+          grep -R --fixed-strings "English (C1 overall, EF SET 68/100" "${surfaces[@]}"
+          overclaims=(
+            "Founder & Lead Builder"
+            "Founder and lead builder"
+            "Founder and lead developer"
+            "Sole web developer"
+            "AI-Native Engineering & Open Science Data"
+            "Web Engineering & Architecture:"
+          )
+          for phrase in "${overclaims[@]}"; do
+            ! grep -R --fixed-strings "$phrase" "${surfaces[@]}"
+          done
+
+      - name: Verify dated evidence files are deployed
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s dist/evidence/gray-swan-profile-2026-07-25.html
+          test -s dist/evidence/gray-swan-profile-2026-07-25.json
+          test -s dist/evidence/gray-swan-metrics-2026-07-25.svg
           test -s dist/evidence/gray-swan-profile-2026-07-24.html
           test -s dist/evidence/gray-swan-profile-2026-07-24.json
+          grep --fixed-strings "#75" dist/evidence/gray-swan-profile-2026-07-25.html
+          grep --fixed-strings "Top 6%" dist/evidence/gray-swan-profile-2026-07-25.html
+          grep --fixed-strings "110" dist/evidence/gray-swan-profile-2026-07-25.json
+          grep --fixed-strings "07a2f84ab0d93905911258625dcb0f874ed8f5ba3b79ce060d41b3d0e2529ebd" dist/evidence/gray-swan-profile-2026-07-25.json
