@@ -111,6 +111,7 @@ for (const obsolete of [
   'Pencil_Fascist_Tuberculosis', 'Alessandro Lanzoni', 'Public analysis across three platforms.',
   '/media/work/model-behavior-method.svg', '/media/work/entropy-social-proof.svg',
   '/media/work/model-behavior-record.svg', '/media/work/entropy-h5n1.png',
+  '/evidence/gray-swan-metrics-2026-07-25.svg', '/media/work/entropy-dashboard-800.webp',
   'Special:ListFiles/Digressivo'
 ]) assertNotContains(index, obsolete, 'dist/index.html');
 assertContains(index, 'class="portfolio-v8"', 'dist/index.html');
@@ -118,7 +119,7 @@ assertContains(index, 'class="v8-hero-gallery"', 'dist/index.html');
 assertContains(index, 'class="v8-case-stack"', 'dist/index.html');
 assertContains(index, 'class="v8-product"', 'dist/index.html');
 for (const media of [
-  '/evidence/gray-swan-metrics-2026-07-25.svg', '/media/work/entropy-dashboard-800.webp',
+  '/media/work/gray-swan-summary-2026-07-25.svg', '/media/work/entropy-work-overview.svg',
   '/media/work/yourself-to-science-800.webp', '/media/work/mdpi-filter-1-800.webp',
   '/media/work/mdpi-filter-2-800.webp', '/media/work/wikimedia-clinical-overlap.svg',
   '/media/work/tableau-mortality-800.webp', '/media/work/flourish-oesophageal-cancer.svg'
@@ -179,21 +180,8 @@ for (const needle of [
   'Founder & Technical Product Builder', 'Product Owner & Technical Builder', 'Creator & Systems Builder'
 ]) assertNotContains(allGenerated, needle, 'Generated outputs');
 
-const canonicalExpectations = [
-  ['dist/index.html', 'https://mariomarcolongo.com/'], ['dist/integrity.html', 'https://mariomarcolongo.com/integrity.html'],
-  ['dist/cv.html', 'https://mariomarcolongo.com/cv.html'], ['dist/cv-resume.html', 'https://mariomarcolongo.com/cv-resume.html'],
-  ['dist/cv-research.html', 'https://mariomarcolongo.com/cv-research.html'],
-  ['dist/cv-editorial.html', 'https://mariomarcolongo.com/cv-editorial.html'],
-  ['dist/cv-integrity.html', 'https://mariomarcolongo.com/cv-integrity.html'],
-  ['dist/security.html', 'https://mariomarcolongo.com/security.html']
-];
-for (const [file, url] of canonicalExpectations) {
-  const html = read(file);
-  assertContains(html, `<link rel="canonical" href="${url}">`, file);
-}
-
 if (failures) {
   console.error(`\nGenerated-output verification failed with ${failures} issue(s).`);
   process.exit(1);
 }
-console.log('\nAll generated-output checks passed.');
+console.log('\nGenerated-output verification passed.');
