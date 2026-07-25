@@ -37,7 +37,7 @@ const PORTFOLIO_HUMAN = {
       id: "entropy",
       label: "Scientific fact-checking",
       title: "Published scientific work",
-      image: "https://entropyforlife.it/wp-content/uploads/2024/10/Dashboard-1-5-png.webp",
+      image: "/media/work/entropy-dashboard-800.webp",
       alt: "Published scientific visualization by Mario Marcolongo for Entropy for Life",
       href: "https://entropyforlife.it/autore/mario-marcolongo/"
     },
@@ -130,7 +130,7 @@ const PORTFOLIO_HUMAN = {
           href: "https://entropyforlife.it"
         }
       ],
-      image: "https://entropyforlife.it/wp-content/uploads/2024/10/Dashboard-1-5-png.webp",
+      image: "/media/work/entropy-dashboard-800.webp",
       alt: "Published scientific visualization by Mario Marcolongo for Entropy for Life",
       imageCaption: "Published output · article, data visualization and source review",
       tone: "red"
