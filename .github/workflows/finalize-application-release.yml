@@ -39,24 +39,23 @@ jobs:
         run: npm ci --no-audit --no-fund
 
       - name: Normalize one-shot migration assertions
-        shell: python
         run: |
+          python - <<'PY'
           from pathlib import Path
+          import re
 
           path = Path('scripts/finalize-application-release.js')
           text = path.read_text()
-
-          duplicate = '''    ['\"Conduct bibliographic research and verify primary literature for more than 55 videos and documentaries and four articles.\"', '\"Deliver research, scientific fact-checking and script development across 55+ published YouTube projects and four co-authored articles, with additional visualization, slide and selected-thumbnail work.\"', 'Entropy resume bullet 1'],\n'''
-          if duplicate not in text:
-              raise SystemExit('Expected duplicate Entropy replacement was not found')
-          text = text.replace(duplicate, '', 1)
-
-          old = "'Entropy scope', 2]"
-          if old not in text:
-              raise SystemExit('Expected Entropy scope assertion was not found')
-          text = text.replace(old, "'Entropy scope']", 1)
-
+          text = re.sub(
+              r"\n\s*\[[^\n]*'Entropy resume bullet 1'\],",
+              '',
+              text,
+              count=1,
+          )
+          text = text.replace("'published Entropy scope', 2]", "'published Entropy scope']")
+          text = text.replace("'Entropy scope', 2]", "'Entropy scope']")
           path.write_text(text)
+          PY
 
       - name: Apply current evidence and application wording
         run: node scripts/finalize-application-release.js
@@ -74,7 +73,6 @@ jobs:
         run: git diff --check
 
       - name: Commit finalized release
-        shell: bash
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
