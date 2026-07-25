@@ -36,29 +36,31 @@ jobs:
       - name: Verify Gray Swan evidence link
         run: grep -R --fixed-strings "gray-swan-profile-2026-07-24.html" dist public/llms.txt public/llms-full.txt public/cv-llm.txt
 
-      - name: Reject stale top-8-percent claim in HTML
+      - name: Reject every legacy Gray Swan wording variant
         shell: bash
         run: |
           set -euo pipefail
-          ! grep -R --include='*.html' --fixed-strings "top 8%" dist
+          surfaces=(dist public/llms.txt public/llms-full.txt public/cv-llm.txt)
+          legacy=(
+            "top 8%"
+            "top-8%"
+            "75+ confirmed model breaks"
+            "75+ platform-confirmed model breaks"
+            "75+ confirmed adversarial model breaks"
+            "75+ independently verified LLM breaks"
+            "75+ confirmed breaks"
+          )
+          for phrase in "${legacy[@]}"; do
+            ! grep -R --include='*.html' --include='*.txt' --include='*.js' --fixed-strings "$phrase" "${surfaces[@]}"
+          done
 
-      - name: Reject stale top-8-percent claim in JavaScript
+      - name: Verify server-rendered Gray Swan CV fallback
         shell: bash
         run: |
           set -euo pipefail
-          ! grep -R --include='*.js' --fixed-strings "top 8%" dist
-
-      - name: Reject stale top-8-percent claim in dossiers
-        shell: bash
-        run: |
-          set -euo pipefail
-          ! grep --fixed-strings "top 8%" public/llms.txt public/llms-full.txt public/cv-llm.txt
-
-      - name: Reject stale 75-break claim
-        shell: bash
-        run: |
-          set -euo pipefail
-          ! grep -R --include='*.html' --include='*.txt' --include='*.js' --fixed-strings "75+ confirmed model breaks" dist public/llms.txt public/llms-full.txt public/cv-llm.txt
+          grep --fixed-strings "AI Red-Teaming & Model Behavior Evaluation Practitioner" dist/cv.html
+          grep --fixed-strings "Jul 2026 — Present" dist/cv.html
+          grep --fixed-strings "106 platform-recorded challenge breaks" dist/cv.html
 
       - name: Verify Entropy documented-project total
         run: grep -R --fixed-strings "59+ Documented Projects" dist public/llms.txt public/llms-full.txt public/cv-llm.txt
@@ -70,6 +72,8 @@ jobs:
           grep -R --fixed-strings "55+ YouTube Projects" dist public/llms-full.txt public/cv-llm.txt
           grep -R --fixed-strings "4 Co-Authored Articles" dist public/llms-full.txt public/cv-llm.txt
           grep -R --fixed-strings "Selected Thumbnails" dist public/llms-full.txt public/cv-llm.txt
+          ! grep --fixed-strings "Videos & Documentaries" dist/cv.html
+          ! grep --fixed-strings "Author Page" dist/cv.html
 
       - name: Verify Entropy playlists
         shell: bash
