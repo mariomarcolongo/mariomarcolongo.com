@@ -62,6 +62,8 @@ const {
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
 
   <slot name="head" />
+  <!-- Loaded after each page's /data/source.js and before page hydration. -->
+  <script is:inline src="/data/source-overrides.js"></script>
 </head>
 <body>
   <div id="scrollProgress"></div>

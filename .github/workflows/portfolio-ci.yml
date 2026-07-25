@@ -1,0 +1,86 @@
+name: Portfolio CI
+
+on:
+  pull_request:
+  push:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Build production site
+        run: npm run build
+
+      - name: Verify Gray Swan rank snapshot
+        run: grep -R --fixed-strings "#77 · Top 7%" dist public/llms.txt public/llms-full.txt public/cv-llm.txt
+
+      - name: Verify Gray Swan break total
+        run: grep -R --fixed-strings "106 platform-recorded challenge breaks" dist public/llms.txt public/llms-full.txt public/cv-llm.txt
+
+      - name: Verify Gray Swan evidence link
+        run: grep -R --fixed-strings "gray-swan-profile-2026-07-24.html" dist public/llms.txt public/llms-full.txt public/cv-llm.txt
+
+      - name: Reject stale top-8-percent claim in HTML
+        shell: bash
+        run: |
+          set -euo pipefail
+          ! grep -R --include='*.html' --fixed-strings "top 8%" dist
+
+      - name: Reject stale top-8-percent claim in JavaScript
+        shell: bash
+        run: |
+          set -euo pipefail
+          ! grep -R --include='*.js' --fixed-strings "top 8%" dist
+
+      - name: Reject stale top-8-percent claim in dossiers
+        shell: bash
+        run: |
+          set -euo pipefail
+          ! grep --fixed-strings "top 8%" public/llms.txt public/llms-full.txt public/cv-llm.txt
+
+      - name: Reject stale 75-break claim
+        shell: bash
+        run: |
+          set -euo pipefail
+          ! grep -R --include='*.html' --include='*.txt' --include='*.js' --fixed-strings "75+ confirmed model breaks" dist public/llms.txt public/llms-full.txt public/cv-llm.txt
+
+      - name: Verify Entropy documented-project total
+        run: grep -R --fixed-strings "59+ Documented Projects" dist public/llms.txt public/llms-full.txt public/cv-llm.txt
+
+      - name: Verify Entropy evidence labels
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -R --fixed-strings "55+ YouTube Projects" dist public/llms-full.txt public/cv-llm.txt
+          grep -R --fixed-strings "4 Co-Authored Articles" dist public/llms-full.txt public/cv-llm.txt
+          grep -R --fixed-strings "Selected Thumbnails" dist public/llms-full.txt public/cv-llm.txt
+
+      - name: Verify Entropy playlists
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -R --fixed-strings "PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh" dist public/llms-full.txt public/cv-llm.txt
+          grep -R --fixed-strings "PLUXju4zC0Sks" dist public/llms-full.txt public/cv-llm.txt
+
+      - name: Verify evidence files are deployed
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s dist/evidence/gray-swan-profile-2026-07-24.html
+          test -s dist/evidence/gray-swan-profile-2026-07-24.json

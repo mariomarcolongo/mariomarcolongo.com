@@ -4,13 +4,13 @@
   "private": true,
   "description": "AI-Native Systems Builder, Open Science Technologist & Empirical Data Synthesizer portfolio and CV SSOT",
   "scripts": {
-    "dev": "node scripts/generate-llm-dossiers.js && astro dev",
-    "build": "node scripts/generate-llm-dossiers.js && astro build && cp dist/index.html index.html 2>/dev/null && cp dist/cv.html cv.html 2>/dev/null || true",
+    "dev": "node -r ./data/source-overrides-node.cjs scripts/generate-llm-dossiers.js && node scripts/patch-generated-content.js && astro dev",
+    "build": "node -r ./data/source-overrides-node.cjs scripts/generate-llm-dossiers.js && astro build && node scripts/patch-generated-content.js && cp dist/index.html index.html && cp dist/cv.html cv.html",
     "deploy": "npx wrangler pages deploy dist --project-name=mariomarcolongo",
     "preview": "astro preview",
-    "generate:llms": "node scripts/generate-llm-dossiers.js",
+    "generate:llms": "node -r ./data/source-overrides-node.cjs scripts/generate-llm-dossiers.js && node scripts/patch-generated-content.js",
     "generate:favicons": "node scripts/generate-favicons.js",
-    "cv:custom": "node scripts/generate-custom-cv.js",
+    "cv:custom": "node -r ./data/source-overrides-node.cjs scripts/generate-custom-cv.js",
     "pdf:cv": "node scripts/generate-cv-pdf.js",
     "pdf:campbell": "node scripts/generate-campbell-pdf.js",
     "pdf": "node scripts/generate-cv-pdf.js && node scripts/generate-campbell-pdf.js"
