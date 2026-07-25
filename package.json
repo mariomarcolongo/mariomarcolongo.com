@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node -r ./data/source-overrides-node.cjs scripts/generate-llm-dossiers.js && node scripts/patch-generated-content.js && astro dev",
     "build": "node -r ./data/source-overrides-node.cjs scripts/generate-llm-dossiers.js && astro build && node scripts/patch-generated-content.js && cp dist/index.html index.html && cp dist/cv.html cv.html",
-    "deploy": "npx wrangler pages deploy dist --project-name=mariomarcolongo",
+    "deploy": "npx wrangler pages deploy dist --project-name=mariomarcolongo-pages",
     "preview": "astro preview",
     "generate:llms": "node -r ./data/source-overrides-node.cjs scripts/generate-llm-dossiers.js && node scripts/patch-generated-content.js",
     "generate:favicons": "node scripts/generate-favicons.js",
