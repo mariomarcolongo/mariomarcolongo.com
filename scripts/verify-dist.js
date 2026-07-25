@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 const fs = require('node:fs');
 const path = require('node:path');
-const D = require('../data/source.js');
-const P = require('../data/application-profiles.js');
-const H = require('../data/portfolio-human.js');
+const { D, H, P } = require('../data/release-data.js');
 const {
   generateLlmsTxt,
   generateLlmsFullTxt,
@@ -99,7 +97,7 @@ for (const needle of [
   'data-testid="human-capabilities"', 'data-testid="human-work"', 'data-testid="human-documents"',
   'Where I can contribute.', 'Selected work, shown through the actual output.',
   'Start with the role you are hiring for.', 'AI evaluation and scientific evidence roles.',
-  'Zotero plugin', 'Protein by bodyweight by country', '#75 on the Proving Ground leaderboard'
+  'Zotero plugin', 'Protein by bodyweight by country', '#75 on the Proving Ground,'
 ]) assertContains(indexText, needle, 'dist/index.html');
 for (const obsolete of [
   'class="portfolio-v4"', 'class="portfolio-v5"', 'class="portfolio-v7"',
@@ -111,15 +109,15 @@ for (const obsolete of [
   'Pencil_Fascist_Tuberculosis', 'Alessandro Lanzoni', 'Public analysis across three platforms.',
   '/media/work/model-behavior-method.svg', '/media/work/entropy-social-proof.svg',
   '/media/work/model-behavior-record.svg', '/media/work/entropy-h5n1.png',
-  '/evidence/gray-swan-metrics-2026-07-25.svg', '/media/work/entropy-dashboard-800.webp',
-  'Special:ListFiles/Digressivo'
+  '/media/work/model-behavior-profile.webp', '/evidence/gray-swan-metrics-2026-07-25.svg',
+  '/media/work/entropy-dashboard-800.webp', 'Special:ListFiles/Digressivo'
 ]) assertNotContains(index, obsolete, 'dist/index.html');
 assertContains(index, 'class="portfolio-v8"', 'dist/index.html');
 assertContains(index, 'class="v8-hero-gallery"', 'dist/index.html');
 assertContains(index, 'class="v8-case-stack"', 'dist/index.html');
 assertContains(index, 'class="v8-product"', 'dist/index.html');
 for (const media of [
-  '/media/work/gray-swan-summary-2026-07-25.svg', '/media/work/entropy-work-overview.svg',
+  '/media/work/gray-swan-summary-2026-07-25.svg', '/media/work/entropy-work-inventory.svg',
   '/media/work/yourself-to-science-800.webp', '/media/work/mdpi-filter-1-800.webp',
   '/media/work/mdpi-filter-2-800.webp', '/media/work/wikimedia-clinical-overlap.svg',
   '/media/work/tableau-mortality-800.webp', '/media/work/flourish-oesophageal-cancer.svg'
@@ -163,7 +161,7 @@ const securityText = normalizeHtmlText(pages.security);
 for (const needle of [
   'AI evaluation and model-behavior record.', 'What the record demonstrates', 'Evaluation approach',
   'Limitations and interpretation', 'Proving Ground total breaks', 'historical 24 July 26-wave activity table',
-  '/evidence/gray-swan-profile-2026-07-25.html', 'Open live Gray Swan profile', '109'
+  '/evidence/gray-swan-2026-07-25/', 'Open live Gray Swan profile', '109'
 ]) assertContains(securityText, needle, 'dist/security.html');
 for (const needle of [
   'independently verified policy or alignment boundary failure',
