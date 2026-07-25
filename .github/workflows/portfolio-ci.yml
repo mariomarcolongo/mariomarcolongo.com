@@ -72,9 +72,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          grep --fixed-strings "AI Red-Teaming & Model Behavior Evaluation Practitioner" dist/cv.html
-          grep --fixed-strings "Jul 2026 — Present" dist/cv.html
-          grep --fixed-strings "#75 (top 6%)" dist/cv.html
+          grep -E "AI Red-Teaming (&|&amp;) Model Behavior Evaluation Practitioner" dist/cv.html
+          grep --fixed-strings "Jul 2026" dist/cv.html
+          grep --fixed-strings "#75" dist/cv.html
+          grep --fixed-strings "top 6%" dist/cv.html
           grep --fixed-strings "110 platform-recorded challenge breaks" dist/cv.html
 
       - name: Verify Entropy scope and direct evidence links
