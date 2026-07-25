@@ -1,0 +1,20 @@
+{
+  "label": "AI Evaluation & Model Behavior CV",
+  "route": "cv-resume.html",
+  "pages": [
+    {
+      "page": 1,
+      "contentBottom": 923,
+      "footerTop": 1077,
+      "clearance": 154,
+      "pageHeight": 1123
+    },
+    {
+      "page": 2,
+      "contentBottom": 881,
+      "footerTop": 1077,
+      "clearance": 197,
+      "pageHeight": 1123
+    }
+  ]
+}

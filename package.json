@@ -1,23 +1,27 @@
 {
   "name": "mariomarcolongo",
-  "version": "2026.07.0",
+  "version": "2026.07.2",
   "private": true,
-  "description": "Scientific AI evaluation, research-data operations, open-science product delivery, and evidence-verification portfolio and CV",
+  "description": "AI evaluation, scientific evidence and research operations portfolio with role-specific CVs and evidence-bound public records",
   "scripts": {
-    "dev": "node -r ./data/source-overrides-node.cjs scripts/generate-llm-dossiers.js && node scripts/patch-generated-content.js && astro dev",
-    "build": "node -r ./data/source-overrides-node.cjs scripts/generate-llm-dossiers.js && astro build && node scripts/patch-generated-content.js && cp dist/index.html index.html && cp dist/cv.html cv.html",
-    "deploy": "npx wrangler pages deploy dist --project-name=mariomarcolongo-pages",
+    "lint": "node scripts/check-stale-strings.js",
+    "dev": "node scripts/check-stale-strings.js && node scripts/generate-llm-dossiers.js && astro dev",
+    "build": "npm run lint && node scripts/generate-llm-dossiers.js && astro build && node scripts/postbuild.js && node scripts/verify-dist.js",
+    "deploy": "npm run build && npm run verify:render && npx wrangler pages deploy dist --project-name=mariomarcolongo",
     "preview": "astro preview",
-    "generate:llms": "node -r ./data/source-overrides-node.cjs scripts/generate-llm-dossiers.js && node scripts/patch-generated-content.js",
+    "generate:llms": "node scripts/generate-llm-dossiers.js",
     "generate:favicons": "node scripts/generate-favicons.js",
-    "cv:custom": "node -r ./data/source-overrides-node.cjs scripts/generate-custom-cv.js",
+    "cv:custom": "node scripts/generate-custom-cv.js",
     "pdf:cv": "node scripts/generate-cv-pdf.js",
-    "pdf:campbell": "node scripts/generate-campbell-pdf.js",
-    "pdf": "node scripts/generate-cv-pdf.js && node scripts/generate-campbell-pdf.js"
+    "pdf:resume": "node scripts/generate-resume-pdf.js",
+    "pdf": "npm run pdf:resume && npm run pdf:cv",
+    "verify:dist": "node scripts/verify-dist.js",
+    "verify:render": "node scripts/verify-rendering.js"
   },
   "author": "Mario Marcolongo <me@mariomarcolongo.com>",
   "devDependencies": {
     "astro": "^7.0.9",
+    "pdf-lib": "^1.17.1",
     "puppeteer": "^25.3.0",
     "turndown": "^7.2.4",
     "wrangler": "^4.110.0"

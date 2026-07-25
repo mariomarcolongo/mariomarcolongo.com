@@ -1,0 +1,133 @@
+/* Mobile attention architecture: one active horizontal story per section instead of a 16,000px card stack. */
+@media (max-width: 720px) {
+  .v7-section {
+    padding: 58px 0 !important;
+  }
+
+  .v7-section-head {
+    margin-bottom: 28px !important;
+  }
+
+  .v7-case-stack,
+  .v7-lab-grid,
+  .v7-profile-grid,
+  .v7-documents {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 14px !important;
+    width: 100% !important;
+    padding: 2px 10px 18px 0 !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: var(--v7-cobalt) transparent;
+  }
+
+  .v7-case-stack::after,
+  .v7-lab-grid::after,
+  .v7-profile-grid::after,
+  .v7-documents::after {
+    content: "";
+    flex: 0 0 1px;
+  }
+
+  .v7-case {
+    flex: 0 0 91% !important;
+    align-self: flex-start;
+    padding: 24px 20px 20px !important;
+    border: 1px solid var(--v7-line);
+    border-radius: 26px;
+    background: var(--v7-surface);
+    box-shadow: 0 14px 36px rgba(29, 37, 45, 0.08);
+    scroll-snap-align: start;
+  }
+
+  .v7-case-copy h3 {
+    font-size: clamp(2.35rem, 11vw, 3.45rem) !important;
+  }
+
+  .v7-case-lead {
+    font-size: 0.98rem;
+  }
+
+  .v7-case-decisions {
+    margin-top: 24px;
+  }
+
+  .v7-case-decisions > div {
+    padding: 14px 0;
+  }
+
+  .v7-boundary {
+    margin-top: 18px;
+  }
+
+  .v7-case-visual {
+    min-height: 360px !important;
+    margin-top: 25px;
+    padding: 23px 18px !important;
+    border-radius: 21px;
+  }
+
+  .v7-case-lines {
+    margin-top: 64px !important;
+  }
+
+  .v7-case-line {
+    padding: 14px;
+  }
+
+  .v7-lab-item,
+  .v7-lab-featured,
+  .v7-lab-item:nth-child(4) {
+    display: block !important;
+    flex: 0 0 84% !important;
+    align-self: stretch;
+    scroll-snap-align: start;
+  }
+
+  .v7-lab-demo {
+    min-height: 190px !important;
+  }
+
+  .v7-lab-copy {
+    min-height: 360px;
+    padding: 24px;
+  }
+
+  .v7-artifact {
+    margin-bottom: 68px;
+  }
+
+  .v7-profile-grid > article,
+  .v7-disclosure {
+    flex: 0 0 83% !important;
+    min-height: 250px;
+    scroll-snap-align: start;
+  }
+
+  .v7-disclosure {
+    display: block !important;
+  }
+
+  .v7-disclosure summary {
+    font-size: 2rem;
+  }
+
+  .v7-experience-list article {
+    padding: 20px 0;
+  }
+
+  .v7-document,
+  .v7-document.is-recommended {
+    flex: 0 0 86% !important;
+    min-height: 330px !important;
+    scroll-snap-align: start;
+  }
+
+  .v7-contact {
+    margin-top: 12px;
+  }
+}

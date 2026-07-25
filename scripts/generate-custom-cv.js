@@ -11,8 +11,8 @@
  *   node scripts/generate-custom-cv.js --help
  */
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
 const D = require('../data/source.js');
 
 const args = process.argv.slice(2);
@@ -119,7 +119,7 @@ function generateModularCv(d) {
       out += `### ${p.title}\n`;
       out += `**${p.role}** | ${linkUrl}\n\n`;
       out += `${p.description}\n\n`;
-      if (p.highlights && p.highlights.length) {
+      if (p.highlights?.length) {
         p.highlights.forEach(h => {
           out += `- ${h}\n`;
         });
@@ -132,7 +132,8 @@ function generateModularCv(d) {
   out += `## Education & Certifications\n\n`;
   if (d.education) {
     d.education.forEach(e => {
-      out += `- **${e.title}** ${e.period ? `(${e.period})` : ''} — ${e.detail}\n`;
+      const periodPart = e.period ? '(' + e.period + ') ' : '';
+      out += `- **${e.title}** ${periodPart}— ${e.detail}\n`;
     });
   }
   out += `\n`;

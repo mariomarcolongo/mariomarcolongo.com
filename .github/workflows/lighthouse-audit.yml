@@ -1,0 +1,116 @@
+name: Lighthouse 100 audit
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lighthouse-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+
+      - name: Build and verify all public outputs
+        run: |
+          npm run build
+          npm run verify:render
+          npm run pdf
+
+      - name: Run production-like Lighthouse audits on every public route
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p lighthouse-output
+          node scripts/lighthouse-static-server.js > /tmp/lighthouse-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID || true' EXIT
+          for i in {1..30}; do
+            if curl -fsS http://127.0.0.1:4173/index.html >/dev/null; then break; fi
+            sleep 1
+          done
+          curl -fsS http://127.0.0.1:4173/index.html >/dev/null
+          export CHROME_PATH="$(node -e "console.log(require('puppeteer').executablePath())")"
+
+          routes=(
+            index.html
+            integrity.html
+            cv.html
+            cv-resume.html
+            cv-research.html
+            cv-editorial.html
+            cv-integrity.html
+            security.html
+          )
+
+          for route in "${routes[@]}"; do
+            key="${route%.html}"
+            for mode in mobile desktop; do
+              preset=()
+              if [[ "$mode" == "desktop" ]]; then preset=(--preset=desktop); fi
+              npx --yes lighthouse@12.8.2 "http://127.0.0.1:4173/${route}" \
+                --quiet "${preset[@]}" \
+                --chrome-flags='--headless --no-sandbox --disable-dev-shm-usage' \
+                --only-categories=performance,accessibility,best-practices,seo \
+                --output=json --output-path="lighthouse-output/${key}-${mode}.json"
+            done
+          done
+
+          node - <<'NODE'
+          const fs = require('node:fs');
+          const routes = [
+            'index', 'integrity', 'cv', 'cv-resume',
+            'cv-research', 'cv-editorial', 'cv-integrity', 'security'
+          ];
+          const categories = ['performance', 'accessibility', 'best-practices', 'seo'];
+          let failed = false;
+          const summary = [
+            '# Lighthouse audit — every public route', '',
+            '| Route | Mode | Performance | Accessibility | Best practices | SEO |',
+            '|---|---|---:|---:|---:|---:|'
+          ];
+
+          for (const route of routes) {
+            for (const mode of ['mobile', 'desktop']) {
+              const name = `${route}-${mode}`;
+              const report = JSON.parse(fs.readFileSync(`lighthouse-output/${name}.json`, 'utf8'));
+              const scores = Object.fromEntries(categories.map((key) => [key, Math.round(report.categories[key].score * 100)]));
+              const diagnostics = Object.entries(report.audits)
+                .filter(([, audit]) => typeof audit.score === 'number' && audit.score < 1 && !['notApplicable', 'informative', 'manual'].includes(audit.scoreDisplayMode))
+                .map(([id, audit]) => ({ id, score: audit.score, title: audit.title }));
+              fs.writeFileSync(`lighthouse-output/${name}-scores.json`, JSON.stringify(scores, null, 2));
+              fs.writeFileSync(`lighthouse-output/${name}-diagnostics.json`, JSON.stringify(diagnostics, null, 2));
+              console.log(`${name}:`, scores);
+              summary.push(`| ${route}.html | ${mode} | ${scores.performance} | ${scores.accessibility} | ${scores['best-practices']} | ${scores.seo} |`);
+              if (categories.some((key) => scores[key] !== 100)) failed = true;
+            }
+          }
+
+          if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `${summary.join('\n')}\n`);
+          fs.writeFileSync('lighthouse-output/summary.md', `${summary.join('\n')}\n`);
+          if (failed) process.exit(1);
+          NODE
+
+      - name: Upload Lighthouse reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-100-audit
+          path: lighthouse-output/**/*
+          if-no-files-found: error
+          retention-days: 14

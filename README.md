@@ -1,121 +1,120 @@
-# Mario Marcolongo — Personal Portfolio & Curriculum Vitae
+# Mario Marcolongo — Portfolio & Application CV System
 
-> **Scientific Fact-Checker · Open Science Technologist · Systems Developer**  
-> 🌐 Live Website: [mariomarcolongo.com](https://mariomarcolongo.com) (`mariomarcolongo.org` redirects here)  
-> 🔍 Primary Source Verification: ORCID [0000-0003-2846-7115](https://orcid.org/0000-0003-2846-7115) · ENA Accession [PRJEB109744](https://www.ebi.ac.uk/ena/browser/view/PRJEB109744)
+> **AI Evaluation & Research Operations Specialist**  
+> Model Behavior · Scientific Evidence · Knowledge Integrity · Open Science & Data Quality
 
----
+Live website: [mariomarcolongo.com](https://mariomarcolongo.com)
 
-## Overview
+## Purpose
 
-This repository hosts the source code and single-source-of-truth (SSOT) data layer for **Mario Marcolongo's personal web portfolio and interactive curriculum vitae**. Engineered with **Astro** and deployed on **Cloudflare Pages**, the platform combines modern, dynamic web design with state-of-the-art **AI-native discovery** and **open-science verifiability**.
+This repository generates Mario Marcolongo's public portfolio, evidence record, work-sample pages, machine-readable dossiers and role-specific application CVs.
 
-Every piece of biographical data, research infrastructure, professional experience, and technical skill is structured centrally. Both visual web pages and machine-readable dossiers (`llms.txt`, Markdown replicas, structured JSON-LD) are deterministically generated from this exact data source.
+The public positioning is intentionally ambitious but evidence-bound. It presents current strengths in exploratory AI evaluation, paid scientific verification, research/product operations and knowledge integrity without claiming independent software-development, penetration-testing or senior red-team-engineering experience that has not yet been demonstrated.
 
----
+## Career hierarchy
 
-## Key Architectural Pillars
+The homepage prioritizes the evidence most relevant to higher-upside roles and to realistic paths toward them:
 
-### 1. Single Source of Truth (`data/source.js`)
-- **No Data Drift**: All portfolio items, career milestones, skills, key metrics, and publications reside cleanly in a centralized JavaScript module (`data/source.js`).
-- **Unified Rendering**: The frontend pages (`src/pages/index.astro`, `src/pages/cv.astro`), AI dossiers, and custom PDF exporters pull from this exact SSOT during build time.
+1. **AI evaluation and model behavior** — exploratory adversarial testing, safeguards support, evaluation operations and evidence-bound reporting.
+2. **Scientific AI quality and research data** — primary-source verification, provenance, metadata, domain-expert review and research operations.
+3. **Trust, safety and knowledge integrity** — source provenance, public-record investigation, structured-data integrity and OSINT support.
+4. **Research, editorial and community operations** — a credible bridge path for evidence-synthesis, editorial-production and participant-facing roles.
 
-### 2. AI-Native & Agent-Ready Infrastructure
-- **LLMs.txt Standard (`/llms.txt`, `/llms-full.txt`, `/cv-llm.txt`)**: Automated build scripts generate structured, clean Markdown dossiers optimized for large language models, AI search engines (`PerplexityBot`, `ClaudeBot`, `GPTBot`), and recruiter evaluation.
-- **Build-Time Markdown Emitter (`src/integrations/markdown-emitter.mjs`)**: A custom Astro build integration that traverses generated static routes in `dist/` and emits pristine `.md` replicas (e.g., `index.md`, `cv.md`) with valid YAML frontmatter and stripped UI boilerplate.
-- **Edge HTTP Content Negotiation (`functions/[[path]].js`)**: A custom Cloudflare Pages edge function inspects incoming requests. When queried by AI agents, command-line tools (`curl`, `HTTPie`), or clients requesting `Accept: text/markdown`, the edge function automatically serves clean Markdown dossiers (`llms-full.txt` or `cv-llm.txt`) while delivering rich, interactive HTML to human visitors.
-- **WebMCP & A2A Discovery**: Integrates Model Context Protocol client registration (`navigator.ai` / `navigator.modelContext`) and Agent-to-Agent discovery headers (`Link: <.../llms.txt>; rel="describedby"`, `.well-known/agent-card.json`).
+Longer-term targets include automated evaluation, AI-safety program or technical operations, evaluation infrastructure and higher-responsibility trust/integrity work. Engineering-heavy roles remain a development target requiring independently understood Python, software-testing and security experience.
 
-### 3. Publication-Grade CV & Modular CLI Tooling
-- **Interactive Web CV (`/cv.html`)**: Features publication-grade typography, responsive layout, dark/light theme support, and a one-click **"Copy AI CV"** button that copies clean Markdown structured for LLM prompts.
-- **Flawless Native Print Styles (`@media print`)**: Pressing `Cmd+P` / `Ctrl+P` renders a crisp, executive resume stripped of web navigation and optimized for ATS parsing and executive review.
-- **Modular CV Generator (`scripts/generate-custom-cv.js`)**: A command-line script allowing tailored Markdown resumes by excluding specific projects or applying predefined profiles:
-  ```bash
-  # Generate a tailored CV excluding specific projects
-  npm run cv:custom -- --exclude=emergent-humanity,telegram-bot --out=cv-tailored.md
+## Public routes
 
-  # Use a predefined profile (e.g., Campbell Collaboration focus)
-  npm run cv:custom -- --profile=campbell --out=cv-campbell.md
-  ```
-- **Local Headless PDF Generator (`scripts/generate-cv-pdf.js`)**: Spins up a temporary local static server (`127.0.0.1`) and uses headless Chromium (`puppeteer`) to render exact, publication-ready A4 PDF resumes with custom running headers and footers (`Mario Marcolongo — Curriculum Vitae.pdf`).
+- **Portfolio (`/`)** — readable metric-led evidence cards, three principal cases, supporting products and curated data artifacts, an explicit high-autonomy working profile, concise experience and targeted CV selection.
+- **AI Evaluation Record (`/security.html`)** — scope, methodology, platform-reported Gray Swan activity, the live participant profile as the primary destination, an archived verification fallback and explicit limitations.
+- **Knowledge Integrity Work Samples (`/integrity.html`)** — provenance, health-information monitoring, entity reconciliation and structured-data cases.
+- **AI Evaluation & Model Behavior CV (`/cv-resume.html`)** — two-page application document.
+- **Scientific AI Quality & Research Data CV (`/cv-research.html`)** — two-page application document.
+- **Trust, Safety & Knowledge Integrity CV (`/cv-integrity.html`)** — two-page application document.
+- **Research, Editorial & Community Operations CV (`/cv-editorial.html`)** — two-page bridge document.
+- **Master CV (`/cv.html`)** — comprehensive evidence archive; not the default application attachment.
 
----
+All four specialized application CVs are verified as exactly two A4 pages. The master CV is intentionally comprehensive and may be longer.
 
-## Repository Structure
+## Focus-group research attribution
 
-```text
-├── data/
-│   └── source.js             # Single Source of Truth (SSOT) for all portfolio & CV content
-├── src/
-│   ├── pages/
-│   │   ├── index.astro       # Main interactive portfolio landing page
-│   │   └── cv.astro          # Comprehensive Curriculum Vitae page
-│   ├── layouts/
-│   │   └── Layout.astro      # Base layout with WebMCP registration & JSON-LD schemas
-│   ├── styles/               # Vanilla CSS design system & typography
-│   └── integrations/
-│       └── markdown-emitter.mjs # Custom Astro integration emitting .md replicas
-├── functions/
-│   └── [[path]].js           # Cloudflare Pages edge worker (content negotiation & headers)
-├── scripts/
-│   ├── build.js              # Core dossier compilation and build coordinator
-│   ├── generate-llm-dossiers.js # Builds llms.txt, llms-full.txt, and cv-llm.txt
-│   ├── generate-custom-cv.js # CLI tool for modular, profile-tailored CV generation
-│   ├── generate-cv-pdf.js    # Puppeteer PDF generator for general CV
-│   └── generate-favicons.js  # High-res favicon and manifest generator
-└── public/                   # Static assets, favicons, sitemap.xml, robots.txt
+Marta Panzeri gave permission to identify her and the institutional context of the collaboration. The public record therefore names:
+
+- Marta Panzeri;
+- the Department of Developmental Psychology and Socialisation (DPSS);
+- the University of Padua;
+- the related public thesis context.
+
+The description covers Mario's own contribution to remote focus-group facilitation with autistic participants, including structured prompts, participant-sensitive pacing, two-person handoffs, recruitment, literature research, technical preparation and privacy boundaries. It does not disclose participant identities, recordings or confidential session content, and it does not imply institutional endorsement.
+
+The collaboration is retained as named experience and in the relevant CV; it is not given the same homepage prominence as the three principal high-upside evidence cases.
+
+## Evidence architecture
+
+- `data/source.js` — canonical factual dossier and public evidence boundaries.
+- `data/application-profiles.js` — role-specific CV selection and wording.
+- `data/portfolio-human.js` — homepage hierarchy, evidence cards, explicit link destinations, working-profile language and application routes.
+- `src/pages/` — Astro source pages.
+- `src/styles/portfolio-v6-overrides.css` — readable evidence-card system and corrected contact contrast layered over the established portfolio layout.
+- `scripts/generate-llm-dossiers.js` — canonical machine-readable dossiers.
+- `scripts/postbuild.js` — generated root mirrors and post-build outputs.
+- `scripts/verify-dist.js` — generated-output, metadata and evidence assertions.
+- `scripts/verify-rendering.js` — desktop, tablet, mobile, light/dark and no-JavaScript rendering checks.
+- `scripts/lighthouse-static-server.js` — production-like compressed static server used by the Lighthouse gate.
+
+Generated outputs include:
+
+- `llms.txt`
+- `llms-full.txt`
+- `cv-llm.txt`
+- static HTML mirrors for all public routes
+- four specialized two-page PDFs
+- a comprehensive master-CV PDF
+- responsive WebP portfolio previews
+- page-specific Open Graph images and favicon assets
+
+## Gray Swan evidence
+
+The public evaluation page uses the live Gray Swan participant profile as its primary external destination and retains the [archive.is/inkFs](https://archive.is/inkFs) snapshot as a verification fallback for recruiters, automated readers and archival crawlers. Counts are presented as platform-reported snapshots, not as independent vulnerability reproduction or certification.
+
+## Private phone number in local PDFs
+
+The public repository and website do not contain a personal phone number. To include it in locally generated PDFs, set `CV_PHONE` only in the local environment:
+
+```bash
+CV_PHONE="+39 ..." npm run pdf
 ```
 
----
+The generator injects the value at render time without writing it into tracked source files or public HTML.
 
-## Getting Started & Commands
+## Verification and release gates
 
-### Prerequisites
-- **Node.js** v18.0.0 or higher
-- **npm** v9.0.0 or higher
-
-### Installation & Development
 ```bash
-# Clone the repository
-git clone https://github.com/jnton/mariomarcolongo.git
-cd mariomarcolongo
-
-# Install dependencies
-npm install
-
-# Start local development server (http://localhost:4321)
-# Note: Automatically generates llms.txt dossiers before starting Astro
-npm run dev
-```
-
-### Production Build
-```bash
-# Generate dossiers, compile Astro static assets, and emit Markdown replicas
+npm ci
 npm run build
+npm run verify:render
+npm run pdf
 ```
 
-### Specialized Tasks
-| Command | Description |
-| :--- | :--- |
-| `npm run generate:llms` | Compiles `data/source.js` into `llms.txt`, `llms-full.txt`, and `cv-llm.txt` |
-| `npm run cv:custom` | Run modular CV generator (use `-- --help` for options) |
-| `npm run pdf:cv` | Compile `dist/cv.html` into a local, publication-ready PDF using headless Chromium |
-| `npm run generate:favicons` | Generate multi-resolution PNG/ICO favicons and `site.webmanifest` |
+The build fails closed on stale positioning, unsupported claims, missing generated files, invalid structured data and inconsistent dossier mirrors.
 
----
+The permanent `Lighthouse 100 audit` workflow is read-only. It builds the repository, runs the complete rendering and PDF suites, serves the production output with compression and cache behavior, and requires exact category scores of 100 for mobile and desktop in:
 
-## Open Science & Primary Source Verification
+- Performance
+- Accessibility
+- Best Practices
+- SEO
 
-All claims, open-source infrastructure projects, and Wikimedia contributions referenced across the portfolio are backed by verifiable public records:
-- **ORCID Profile**: [https://orcid.org/0000-0003-2846-7115](https://orcid.org/0000-0003-2846-7115)
-- **Primary Genomic Pipeline (`git-nome`)**: [https://github.com/jnton/git-nome](https://github.com/jnton/git-nome)
-- **Raw Genomic Data (European Nucleotide Archive)**: [PRJEB109744](https://www.ebi.ac.uk/ena/browser/view/PRJEB109744)
-- **Open Science Infrastructure**: [Yourself to Science™](https://yourselftoscience.org)
+The workflow archives the complete Lighthouse JSON reports and diagnostic opportunities. Category scores are lab measurements rather than a guarantee that every real-world visit will always reproduce the same timings.
 
----
+## Public records
 
-## License & Usage Notice
+- [ORCID 0000-0003-2846-7115](https://orcid.org/0000-0003-2846-7115)
+- [Gray Swan Proving Ground profile](https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf)
+- [Archived Gray Swan snapshot](https://archive.is/inkFs)
+- [Wikimedia CentralAuth record](https://commons.wikimedia.org/wiki/Special:CentralAuth/Digressivo)
+- [ENA accession PRJEB109744](https://www.ebi.ac.uk/ena/browser/view/PRJEB109744)
+- [Yourself to Science](https://yourselftoscience.org)
 
-This repository is open-sourced to provide transparency into the technical implementation and architecture of a modern, AI-steered personal platform.
+## Licensing
 
-While the code and architectural patterns are open for educational reference and inspection, **the biographical content, personal data, project descriptions, and individual identity contained within `data/source.js` and associated files remain the exclusive intellectual property and personal data of Mario Marcolongo.**
+Licensing differs by component and is documented at the relevant project, dataset or record level. Portfolio source code, datasets, images and editorial content must not be treated as sharing one blanket licence.

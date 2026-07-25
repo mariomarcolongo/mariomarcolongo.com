@@ -1,0 +1,229 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SiteNav from "../components/SiteNav.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import "../styles/portfolio-v3.css";
+import "../styles/integrity.css";
+import D from "../../data/source.js";
+import V from "../../data/portfolio-v3.js";
+
+const pageTitle = "Knowledge Integrity & Investigation Work Samples — Mario Marcolongo";
+const pageDescription = "Public, attributable work samples demonstrating source provenance, health-information monitoring, structured-data verification and evidence-bound investigation methods.";
+
+const records = [
+  {
+    id: "pencil",
+    number: "01",
+    category: "Historical provenance & rights",
+    title: "Fascist-era carpenter's pencil: provenance, description and permission",
+    context: "Four photographs of a privately held historical carpenter's pencil were supplied directly by the original photographer. The object carries Fascist-era anti-tuberculosis inscriptions and belonged to Aristide Ravaglia, an Italian joiner born in 1890.",
+    work: [
+      "Prepared concise English and Italian descriptions and captions for the front, reverse and angled views.",
+      "Transcribed and translated the inscriptions while preserving the original political and historical context.",
+      "Documented ownership context, photographer attribution, source route and reusable licensing information.",
+      "Published the records through Wikimedia Commons; the visible file page records permission reviewed by Wikimedia's Volunteer Response Team."
+    ],
+    demonstrates: ["Source provenance", "Rights and authorship context", "Bilingual metadata", "Historical object documentation"],
+    limitations: "The public record verifies the uploaded media, descriptions, author attribution and VRT permission status. Private correspondence and the complete family-history verification process are not published.",
+    href: "https://commons.wikimedia.org/wiki/File:Pencil_Fascist_Tuberculosis_Campaign_Italy_Side_A_Angle.jpg",
+    linkLabel: "Inspect the Commons record"
+  },
+  {
+    id: "h5n1",
+    number: "02",
+    category: "Rapid health-information monitoring",
+    title: "H5N1 situation tracker: dated developments and source reconciliation",
+    context: "A public-facing rolling article tracked fast-changing H5N1 developments across human cases, animal outbreaks and public-health reporting.",
+    work: [
+      "Co-authored the tracker and organized developments chronologically so readers could distinguish current information from earlier reporting.",
+      "Compared reports across scientific, public-health and reputable journalistic sources, preserving outbound citations.",
+      "Separated confirmed developments from broader pandemic-risk interpretation and updated the article as the evidence changed.",
+      "Translated a technically complex and uncertain evidence landscape into concise public communication."
+    ],
+    demonstrates: ["Live source monitoring", "Chronology", "Cross-source corroboration", "Uncertainty communication"],
+    limitations: "This is a public science-communication record, not an intelligence product or an independent epidemiological surveillance system. Source selection and editorial decisions are visible only to the extent documented in the article.",
+    href: "https://entropyforlife.it/2024/10/25/influenza-aviaria-situazione-epidemiologica-aggiornata/",
+    linkLabel: "Inspect the published tracker"
+  },
+  {
+    id: "directory",
+    number: "03",
+    category: "Entity verification & research provenance",
+    title: "Yourself to Science: verifying participation opportunities",
+    context: "A public directory helps people identify research initiatives that accept genomes, health data, biological samples or other forms of participation.",
+    work: [
+      "Defined inclusion and exclusion criteria for clinical studies, biobanks, registries, donation programs and related initiatives.",
+      "Structured fields for organization, participation type, geographic availability, data or sample type, source URL and licensing context.",
+      "Reconciled organizations and initiatives across public websites, Wikidata, FAIRsharing, Zenodo and other primary records.",
+      "Created update and provenance workflows so a visible directory entry can be traced to an inspectable source."
+    ],
+    demonstrates: ["Entity reconciliation", "Inclusion criteria", "Source traceability", "Structured-data quality"],
+    limitations: "The directory verifies public participation information at the time of review. It does not independently audit the scientific quality, privacy practices or institutional claims of every listed initiative.",
+    href: "https://yourselftoscience.org",
+    linkLabel: "Inspect the directory"
+  },
+  {
+    id: "wikimedia",
+    number: "04",
+    category: "Long-running public knowledge record",
+    title: "Wikimedia and Wikidata: auditable source and metadata work",
+    context: "One public CentralAuth identity records eight years of activity across English Wikipedia, Italian Wikipedia, Wikidata and Wikimedia Commons.",
+    work: [
+      "Checked citations and public claims, reconciled conflicting source details and improved structured records.",
+      "Created or published evidence visualizations and open media with source, licensing and descriptive metadata.",
+      "Worked across prose, structured-data and media repositories rather than a single content format.",
+      "Maintained a public edit trail that allows individual contributions to be reviewed rather than relying on self-reported totals alone."
+    ],
+    demonstrates: ["Citation verification", "Structured metadata", "Public audit trail", "Cross-project research"],
+    limitations: "The aggregate contribution count demonstrates sustained activity, not that every edit was investigative, high quality or independently validated. Individual examples must be assessed on their own histories and sources.",
+    href: "https://commons.wikimedia.org/wiki/Special:CentralAuth/Digressivo",
+    linkLabel: "Inspect the public contribution record"
+  }
+];
+
+const methods = [
+  ["Question decomposition", "Translate a broad claim into identities, dates, locations, source types and falsifiable sub-questions."],
+  ["Source hierarchy", "Prioritize primary records, official datasets, scholarly literature and attributable public documentation."],
+  ["Cross-source checking", "Compare independent records, dates, wording and metadata; document unresolved disagreement rather than forcing certainty."],
+  ["Provenance & rights", "Track who created a record, how it was obtained, what can be published and which licensing or permission evidence exists."],
+  ["Entity reconciliation", "Resolve naming variants, organizations, identifiers and relationships across websites and structured databases."],
+  ["Evidence-bound reporting", "Separate what the source directly supports from inference, platform labels, private context or unverified interpretation."]
+];
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical="https://mariomarcolongo.com/integrity.html">
+  <Fragment slot="head">
+    <script is:inline>document.documentElement.classList.add("v3-js");</script>
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      name: pageTitle,
+      description: pageDescription,
+      url: "https://mariomarcolongo.com/integrity.html",
+      mainEntity: { "@id": "https://mariomarcolongo.com/#person" },
+      about: ["Knowledge integrity", "Open-source research", "Source provenance", "Trust and safety"]
+    })}></script>
+  </Fragment>
+
+  <SiteNav activePage="integrity" />
+
+  <main class="v3-page integrity-page">
+    <section class="integrity-hero">
+      <div class="v3-kicker v3-enter" style="--enter-delay:60ms">Knowledge integrity · public work sample</div>
+      <h1 class="v3-enter" style="--enter-delay:130ms">Investigation is useful only when the evidence trail survives scrutiny.</h1>
+      <p class="v3-enter" style="--enter-delay:210ms">This page collects public, attributable examples of source provenance, health-information monitoring, entity reconciliation and structured-data verification. It does not present generic OSINT tool familiarity as proof of investigative ability.</p>
+      <div class="v3-hero-actions v3-enter" style="--enter-delay:290ms">
+        <a class="v3-button v3-button-primary" href="/cv-integrity.html">Trust & Integrity CV →</a>
+        <a class="v3-button" href="#records">Inspect case records</a>
+        <a class="v3-button v3-button-quiet" href="/">Back to portfolio</a>
+      </div>
+    </section>
+
+    <section class="integrity-principles v3-reveal" aria-label="Evidence principles">
+      <article><strong>Public first</strong><span>Use records a reviewer can inspect directly.</span></article>
+      <article><strong>Scope explicit</strong><span>State what the evidence does—and does not—show.</span></article>
+      <article><strong>Privacy preserved</strong><span>Do not publish private correspondence or unnecessary personal data.</span></article>
+      <article><strong>Corrections welcome</strong><span>Keep a visible path for updates and source revision.</span></article>
+    </section>
+
+    <section class="v3-section" id="records">
+      <div class="v3-section-head v3-reveal">
+        <div>
+          <div class="v3-kicker">Public case records</div>
+          <h2>Four different investigation surfaces.</h2>
+        </div>
+        <p>Historical objects, fast-moving health information, research entities and collaborative knowledge bases require different sources. The common discipline is traceability.</p>
+      </div>
+
+      <div class="integrity-records">
+        {records.map((record, index) => (
+          <article class={`integrity-record ${record.id} v3-reveal`} style={`--reveal-delay:${index * 70}ms`}>
+            <div class="integrity-record-number">{record.number}</div>
+            <div class="integrity-record-main">
+              <div class="integrity-record-category">{record.category}</div>
+              <h3>{record.title}</h3>
+              <p class="integrity-context">{record.context}</p>
+              <div class="integrity-record-columns">
+                <div>
+                  <h4>Work performed</h4>
+                  <ul>{record.work.map((item) => <li>{item}</li>)}</ul>
+                </div>
+                <div>
+                  <h4>Capabilities demonstrated</h4>
+                  <div class="v3-methods">{record.demonstrates.map((item) => <span>{item}</span>)}</div>
+                  <div class="integrity-limit"><strong>Evidence boundary</strong><p>{record.limitations}</p></div>
+                </div>
+              </div>
+              <a class="v3-button v3-button-small" href={record.href} target="_blank" rel="noopener noreferrer">{record.linkLabel} ↗</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="v3-section" id="method">
+      <div class="v3-section-head v3-reveal">
+        <div>
+          <div class="v3-kicker">Method</div>
+          <h2>A reusable investigation workflow.</h2>
+        </div>
+        <p>The method is intentionally tool-agnostic. Search engines, archives and structured databases change; the reasoning and documentation requirements remain.</p>
+      </div>
+      <div class="integrity-method-grid">
+        {methods.map(([title, body], index) => (
+          <article class="integrity-method v3-reveal" style={`--reveal-delay:${(index % 3) * 60}ms`}>
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <h3>{title}</h3>
+            <p>{body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="integrity-ethics v3-reveal">
+      <div>
+        <div class="v3-kicker">Ethical boundary</div>
+        <h2>Open-source research is not permission to expose people.</h2>
+      </div>
+      <div>
+        <p>The portfolio focuses on public-interest knowledge, scientific claims, systems and attributable public records. It does not publish private identifiers, doxxing material, invasive personal profiling or methods designed to bypass legitimate access controls.</p>
+        <p>For professional trust & safety or investigation work, collection and disclosure should remain proportionate to the risk, authorized by the organization and documented under the applicable privacy and safety rules.</p>
+      </div>
+    </section>
+
+    <section class="v3-contact v3-reveal">
+      <div>
+        <div class="v3-kicker">Application lane</div>
+        <h2>Trust, safety & knowledge integrity.</h2>
+        <p>The current evidence supports analyst, research and operations roles. It does not support presenting the profile as an application-security engineer, penetration tester or covert investigator.</p>
+      </div>
+      <div class="v3-contact-links">
+        <a href="/cv-integrity.html"><span>CV</span><strong>Trust & Knowledge Integrity</strong><span aria-hidden="true">↗</span></a>
+        <a href="/security.html"><span>AI</span><strong>Model-behavior evaluation</strong><span aria-hidden="true">↗</span></a>
+        <a href={D.identity.centralAuth} target="_blank" rel="noopener noreferrer"><span>Record</span><strong>Wikimedia CentralAuth</strong><span aria-hidden="true">↗</span></a>
+        <a href={`mailto:${D.identity.email}`}><span>Email</span><strong>{D.identity.email}</strong><span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter version={D.identity.buildVersion} />
+
+  <script is:inline>
+    (function revealIntegrityPage() {
+      var elements = Array.from(document.querySelectorAll(".v3-reveal"));
+      var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        elements.forEach(function(element) { element.classList.add("is-visible"); });
+        return;
+      }
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.1, rootMargin: "0px 0px -6% 0px" });
+      elements.forEach(function(element) { observer.observe(element); });
+    })();
+  </script>
+</Layout>

@@ -1,0 +1,96 @@
+/* Portfolio v9 corrections: real screenshots, neutral framing and balanced dark-mode contrast. */
+
+[data-theme="dark"] {
+  --v8-bg: #0d0f0e;
+  --v8-paper: #181b18;
+  --v8-paper-2: #232720;
+  --v8-ink: #f5f0e7;
+  --v8-text: #d1cec6;
+  --v8-muted: #a4a69f;
+  --v8-line: rgba(245, 240, 231, 0.2);
+  --v8-red: #ff826d;
+  --v8-blue: #96abff;
+  --v8-green: #72d2ad;
+  --v8-black: #050706;
+}
+
+.v8-hero-shot-1 img {
+  object-fit: cover;
+  object-position: center top;
+  background: #090b0d;
+}
+
+/* Preserve the complete dated profile so rank, percentile, points and break counts remain visible. */
+.v8-case-blue {
+  align-items: start;
+}
+
+.v8-case-blue .v8-case-media {
+  min-height: 0;
+  aspect-ratio: 1400 / 929;
+}
+
+.v8-case-blue .v8-case-media picture,
+.v8-case-blue .v8-case-media img {
+  height: 100%;
+  min-height: 0;
+}
+
+.v8-case-blue .v8-case-media img {
+  object-fit: contain;
+  object-position: center center;
+  padding: 0;
+  background: #090b0d;
+}
+
+.v8-case-red .v8-case-media img[src^="https://entropyforlife.it/"] {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.v8-case-blue .v8-case-media,
+.v8-hero-shot-1 {
+  border-color: rgba(255, 255, 255, 0.16);
+  background: #090b0d;
+}
+
+.v8-case-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  align-items: center;
+}
+
+.v8-case-links .v8-text-link {
+  margin: 0;
+}
+
+[data-theme="dark"] .v8-hero-shot,
+[data-theme="dark"] .v8-case-media {
+  border-color: rgba(245, 240, 231, 0.2);
+}
+
+[data-theme="dark"] .v8-shot-caption,
+[data-theme="dark"] .v8-case-media > span {
+  background: rgba(248, 245, 238, 0.95);
+  color: #111310;
+}
+
+[data-theme="dark"] .v8-shot-caption small {
+  color: #555a53;
+}
+
+@media (max-width: 720px) {
+  .v8-case-blue .v8-case-media {
+    aspect-ratio: 1400 / 929;
+  }
+
+  .v8-case-blue .v8-case-media img {
+    object-position: center center;
+  }
+
+  .v8-case-links {
+    display: grid;
+    gap: 12px;
+  }
+}

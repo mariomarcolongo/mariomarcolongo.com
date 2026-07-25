@@ -1,0 +1,41 @@
+.portfolio-v4 img[src$="telegram-bot-card.svg"] {
+  object-fit: contain !important;
+  object-position: center !important;
+  background: #f7f4ed;
+}
+
+.pv4-product img[src$="telegram-bot-card.svg"] {
+  padding: 14px;
+}
+
+@media (max-width: 760px) {
+  .pv4-stage-main img {
+    width: 100%;
+    height: clamp(280px, 92vw, 360px);
+    aspect-ratio: auto;
+    object-fit: cover;
+    object-position: top left;
+  }
+
+  .pv4-stage-thumb img {
+    width: 100%;
+    height: 168px;
+    aspect-ratio: auto;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  .pv4-stage-thumb img[src$="telegram-bot-card.svg"] {
+    object-fit: contain;
+    object-position: center;
+    padding: 5px;
+  }
+
+  .pv4-stage-thumbs {
+    margin-top: 14px;
+  }
+
+  .pv4-stage-thumb {
+    flex-basis: 70%;
+  }
+}

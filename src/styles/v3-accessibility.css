@@ -1,0 +1,23 @@
+html:not(.v3-js) .v3-reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+html:not(.v3-js) .v3-lens-panel {
+  display: block !important;
+  margin-top: 18px;
+}
+
+html:not(.v3-js) .v3-lens-panel:first-child {
+  margin-top: 0;
+}
+
+html:not(.v3-js) .v3-project-card {
+  display: flex !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .v3-hero-visual {
+    transform: none !important;
+  }
+}

@@ -1,0 +1,65 @@
+
+> mariomarcolongo@2026.07.2 build
+> npm run lint && node scripts/generate-llm-dossiers.js && astro build && node scripts/postbuild.js && node scripts/verify-dist.js
+
+
+> mariomarcolongo@2026.07.2 lint
+> node scripts/check-stale-strings.js
+
+Source integrity check passed.
+Generating AI / LLM Markdown files from canonical SSOT...
+✓ Generated llms.txt (5282 bytes)
+✓ Generated llms-full.txt (16746 bytes)
+✓ Generated cv-llm.txt (13266 bytes)
+[2m09:00:19[22m [34m[types][39m Generated [2m70ms[22m
+[2m09:00:19[22m [34m[build][39m output: [34m"static"[39m
+[2m09:00:19[22m [34m[build][39m mode: [34m"static"[39m
+[2m09:00:19[22m [34m[build][39m directory: [34m/home/runner/work/mariomarcolongo/mariomarcolongo/dist/[39m
+[2m09:00:19[22m [34m[build][39m Collecting build info...
+[2m09:00:19[22m [34m[build][39m [32m✓ Completed in 124ms.[39m
+[2m09:00:19[22m [34m[build][39m Building static entrypoints...
+[2m09:00:19[22m [34m[vite][39m [32m✓ built in 131ms[39m
+[2m09:00:19[22m [34m[vite][39m [32m✓ built in 153ms[39m
+[2m09:00:19[22m [34m[build][39m Rearranging server assets...
+
+[42m[30m generating static routes [39m[49m
+[2m09:00:19[22m   [34m├─[39m [2m/cv.html[22m [2m(+11ms)[22m 
+[2m09:00:19[22m   [34m├─[39m [2m/cv-editorial.html[22m [2m(+3ms)[22m 
+[2m09:00:19[22m   [34m├─[39m [2m/cv-integrity.html[22m [2m(+6ms)[22m 
+[2m09:00:19[22m   [34m├─[39m [2m/cv-research.html[22m [2m(+2ms)[22m 
+[2m09:00:19[22m   [34m├─[39m [2m/cv-resume.html[22m [2m(+2ms)[22m 
+[2m09:00:19[22m   [34m├─[39m [2m/integrity.html[22m [2m(+2ms)[22m 
+[2m09:00:19[22m   [34m├─[39m [2m/security.html[22m [2m(+2ms)[22m 
+[2m09:00:19[22m   [34m├─[39m [2m/index.html[22m [2m(+6ms)[22m 
+[2m09:00:19[22m [32m✓ Completed in 43ms.
+[39m
+[2m09:00:19[22m [34m[build][39m [32m✓ Completed in 389ms.[39m
+[markdown-emitter] Traversing /home/runner/work/mariomarcolongo/mariomarcolongo/dist/ to generate Markdown replicas...
+✓ Generated Markdown replica: cv-editorial.html -> cv-editorial.md (6284 bytes)
+✓ Generated Markdown replica: cv-integrity.html -> cv-integrity.md (6496 bytes)
+✓ Generated Markdown replica: cv-research.html -> cv-research.md (6094 bytes)
+✓ Generated Markdown replica: cv-resume.html -> cv-resume.md (6343 bytes)
+✓ Generated Markdown replica: cv.html -> cv.md (13471 bytes)
+✓ Generated Markdown replica: index.html -> index.md (17000 bytes)
+✓ Generated Markdown replica: integrity.html -> integrity.md (8458 bytes)
+✓ Generated Markdown replica: security.html -> security.md (5046 bytes)
+[2m09:00:19[22m [34m[build][39m 8 page(s) built in [1m547ms[22m
+[2m09:00:19[22m [34m[build][39m [1mComplete![22m
+Copied dist/index.html -> index.html
+Copied dist/integrity.html -> integrity.html
+Copied dist/cv.html -> cv.html
+Copied dist/cv-resume.html -> cv-resume.html
+Copied dist/cv-research.html -> cv-research.html
+Copied dist/cv-editorial.html -> cv-editorial.html
+Copied dist/cv-integrity.html -> cv-integrity.html
+Copied dist/security.html -> security.html
+Post-build artifact check passed (17 required files).
+PASS: Canonical dossier mirrors checked
+FAIL: dist/index.html is missing: I investigate claims
+PASS: Broad portfolio homepage checked
+PASS: Four specialized application CVs checked
+PASS: Knowledge-integrity work sample checked
+PASS: Master CV positioning checked
+PASS: Evaluation record evidence boundary checked
+
+Generated-output verification failed with 1 issue(s).

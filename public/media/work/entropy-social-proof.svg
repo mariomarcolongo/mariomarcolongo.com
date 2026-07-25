@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Entropy for Life public social-platform scale</title>
+  <desc id="desc">Rounded public counts for YouTube, Instagram and Telegram, plus official presence on TikTok, Facebook, X and LinkedIn. Platform audiences may overlap.</desc>
+  <defs>
+    <linearGradient id="ig" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#f9ce34"/><stop offset="0.45" stop-color="#ee2a7b"/><stop offset="1" stop-color="#6228d7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" fill="#f7f6f2"/>
+  <rect x="34" y="34" width="1132" height="692" rx="26" fill="#ffffff"/>
+  <text x="78" y="103" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="2" fill="#d9593f">PAID SCIENTIFIC VERIFICATION · ENTROPY FOR LIFE</text>
+  <text x="78" y="161" font-family="Georgia, serif" font-size="44" fill="#17202a">Scientific production across a large public network</text>
+  <text x="78" y="202" font-family="Arial, sans-serif" font-size="20" fill="#596875">Public profile counts observed in July 2026; they are platform totals, not unique people.</text>
+
+  <g transform="translate(78 270)">
+    <rect width="320" height="225" rx="20" fill="#fff5f4"/>
+    <rect x="26" y="28" width="74" height="52" rx="14" fill="#ff0033"/>
+    <path d="m57 42 22 12-22 12z" fill="#fff"/>
+    <text x="26" y="130" font-family="Georgia, serif" font-size="58" fill="#17202a">266K</text>
+    <text x="26" y="169" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#17202a">YouTube subscribers</text>
+    <text x="26" y="199" font-family="Arial, sans-serif" font-size="16" fill="#71808d">Official channel</text>
+  </g>
+
+  <g transform="translate(440 270)">
+    <rect width="320" height="225" rx="20" fill="#fbf3fb"/>
+    <rect x="26" y="27" width="56" height="56" rx="16" fill="url(#ig)"/>
+    <rect x="39" y="40" width="30" height="30" rx="9" fill="none" stroke="#fff" stroke-width="4"/>
+    <circle cx="62" cy="47" r="3.5" fill="#fff"/>
+    <text x="26" y="130" font-family="Georgia, serif" font-size="58" fill="#17202a">159K</text>
+    <text x="26" y="169" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#17202a">Instagram followers</text>
+    <text x="26" y="199" font-family="Arial, sans-serif" font-size="16" fill="#71808d">Official account</text>
+  </g>
+
+  <g transform="translate(802 270)">
+    <rect width="320" height="225" rx="20" fill="#f0f8fc"/>
+    <circle cx="54" cy="55" r="29" fill="#269ed8"/>
+    <path d="M32 53 76 35c7-3 12 3 9 10L74 86c-2 7-9 9-14 4L48 79l-8 8c-4 4-9 1-8-5l2-18 32-24-39 19c-7 3-10-3-5-6Z" fill="#fff"/>
+    <text x="26" y="130" font-family="Georgia, serif" font-size="58" fill="#17202a">4.1K</text>
+    <text x="26" y="169" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#17202a">Telegram subscribers</text>
+    <text x="26" y="199" font-family="Arial, sans-serif" font-size="16" fill="#71808d">Official channel</text>
+  </g>
+
+  <g transform="translate(78 548)">
+    <text x="0" y="24" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="1.4" fill="#71808d">ALSO OFFICIAL ON</text>
+    <g transform="translate(0 46)">
+      <rect width="150" height="54" rx="27" fill="#17202a"/><text x="75" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">♪ TikTok</text>
+      <rect x="166" width="150" height="54" rx="27" fill="#1877f2"/><text x="241" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">f Facebook</text>
+      <rect x="332" width="112" height="54" rx="27" fill="#101010"/><text x="388" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#fff">X</text>
+      <rect x="460" width="156" height="54" rx="27" fill="#0a66c2"/><text x="538" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">in LinkedIn</text>
+    </g>
+    <text x="680" y="82" font-family="Georgia, serif" font-size="30" fill="#17202a">7 official social platforms</text>
+  </g>
+</svg>

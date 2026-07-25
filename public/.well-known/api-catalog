@@ -6,34 +6,49 @@
         {
           "href": "https://mariomarcolongo.com/llms.txt",
           "type": "text/markdown",
-          "title": "Mario Marcolongo — Standard AI Dossier & Overview"
+          "title": "Mario Marcolongo — Evidence-Bound Professional Summary"
         },
         {
           "href": "https://mariomarcolongo.com/llms-full.txt",
           "type": "text/markdown",
-          "title": "Mario Marcolongo — Comprehensive Verified Dossier & Empirical Logs"
+          "title": "Mario Marcolongo — Comprehensive Evidence Dossier"
         },
         {
           "href": "https://mariomarcolongo.com/cv-llm.txt",
           "type": "text/markdown",
-          "title": "Mario Marcolongo — Machine-Actionable Curriculum Vitae"
+          "title": "Mario Marcolongo — Machine-Readable Master CV"
         }
       ],
       "item": [
         {
+          "href": "https://mariomarcolongo.com/cv-resume.html",
+          "type": "text/html",
+          "title": "AI Safety Evaluation Application CV"
+        },
+        {
+          "href": "https://mariomarcolongo.com/cv-research.html",
+          "type": "text/html",
+          "title": "Research Verification & Data Quality Application CV"
+        },
+        {
+          "href": "https://mariomarcolongo.com/security.html",
+          "type": "text/html",
+          "title": "Model Behavior Evaluation Record"
+        },
+        {
           "href": "https://mariomarcolongo.com/.well-known/agent-card.json",
           "type": "application/json",
-          "title": "Agent-to-Agent (A2A) Discovery Card"
+          "title": "Agent-to-Agent Discovery Card"
         },
         {
           "href": "https://mariomarcolongo.com/.well-known/mcp/server-card.json",
           "type": "application/json",
-          "title": "Model Context Protocol (MCP) Server Card"
+          "title": "Model Context Protocol Resource Card"
         },
         {
           "href": "https://mariomarcolongo.com/.well-known/agent-skills/index.json",
           "type": "application/json",
-          "title": "Agent Skills Discovery Index v0.2.0"
+          "title": "Evidence-Bound Skills Index"
         }
       ],
       "service-doc": [

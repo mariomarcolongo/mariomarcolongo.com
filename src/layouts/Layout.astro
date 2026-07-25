@@ -1,5 +1,11 @@
 ---
 import '../styles/global.css';
+import '../styles/v3-accessibility.css';
+import '../styles/portfolio-v7-safety.css';
+import '../styles/portfolio-v7-mobile.css';
+import '../styles/application-print-fit.css';
+import '../styles/accessibility-final.css';
+import '../styles/portfolio-v9-overrides.css';
 
 export interface Props {
   title?: string;
@@ -8,62 +14,78 @@ export interface Props {
 }
 
 const {
-  title = "Mario Marcolongo — I check the claims other people don't.",
-  description = "Primary source verification, open science infrastructure (Yourself to Science™ indexing 55+ research studies), interactive systems simulation (Emergent Humanity), and empirical data synthesis.",
+  title = "Mario Marcolongo — Research, Evidence & AI Operations",
+  description = "Research, evidence and AI operations portfolio spanning scientific verification, knowledge integrity, AI evaluation, open science and data quality.",
   canonical = "https://mariomarcolongo.com/"
 } = Astro.props;
+
+const htmlClass = canonical === "https://mariomarcolongo.com/" ? "human-portfolio" : undefined;
+const socialImagePath = canonical.includes('/security')
+  ? '/og/security.png'
+  : canonical.includes('/integrity')
+    ? '/og/integrity.png'
+    : canonical.includes('/cv')
+      ? '/og/cv.png'
+      : '/og/home.png';
+const socialImage = `https://mariomarcolongo.com${socialImagePath}`;
 ---
 
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" class={htmlClass}>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f6f2" />
   <title>{title}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonical} />
 
-  <!-- Favicon & PWA Manifest -->
-  <link rel="icon" type="image/x-icon" sizes="32x32" href="/favicon.ico" />
-  <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="mask-icon" href="/favicon.svg" color="#34D399" />
   <link rel="manifest" href="/site.webmanifest" />
 
-  <!-- WebMCP & Agent-to-Agent Discovery Links -->
+  <script is:inline id="mm-theme">
+    (function() {
+      try {
+        var stored = null;
+        try { stored = localStorage.getItem('theme'); } catch(e) {}
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (stored === 'dark' || (!stored && prefersDark)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch(err) {}
+    })();
+  </script>
+
   <link rel="api-catalog" href="https://mariomarcolongo.com/.well-known/api-catalog" />
   <link rel="describedby" type="text/plain" href="https://mariomarcolongo.com/llms.txt" />
   <link rel="describedby" type="text/plain" href="https://mariomarcolongo.com/llms-full.txt" />
   <link rel="agent-card" href="https://mariomarcolongo.com/.well-known/agent-card.json" />
   <link rel="mcp-server-card" href="https://mariomarcolongo.com/.well-known/mcp/server-card.json" />
 
-  <!-- Open Graph / Social Previews -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonical} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:image" content="https://mariomarcolongo.com/og-preview.png" />
+  <meta property="og:image" content={socialImage} />
+  <meta property="og:image:secure_url" content={socialImage} />
+  <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content={`${title} — social preview`} />
   <meta property="og:site_name" content="Mario Marcolongo" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content={canonical} />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content="https://mariomarcolongo.com/og-preview.png" />
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <meta name="twitter:image" content={socialImage} />
+  <meta name="twitter:image:alt" content={`${title} — social preview`} />
 
   <slot name="head" />
-  <!-- Loaded after each page's /data/source.js and before page hydration. -->
-  <script is:inline src="/data/source-overrides.js"></script>
 </head>
 <body>
   <div id="scrollProgress"></div>
@@ -79,7 +101,7 @@ const {
               tools: [
                 {
                   name: "query_dossier",
-                  description: "Retrieve comprehensive verified biographical summary, work history, skills, and open science projects.",
+                  description: "Retrieve Mario Marcolongo's evidence-bound professional dossier, work history and public records.",
                   inputSchema: {
                     type: "object",
                     properties: {
@@ -95,11 +117,8 @@ const {
                 },
                 {
                   name: "query_cv",
-                  description: "Access Mario Marcolongo's machine-actionable Curriculum Vitae.",
-                  inputSchema: {
-                    type: "object",
-                    properties: {}
-                  },
+                  description: "Access Mario Marcolongo's machine-readable master CV.",
+                  inputSchema: { type: "object", properties: {} },
                   execute: async () => {
                     const res = await fetch('/cv-llm.txt');
                     const text = await res.text();
@@ -108,11 +127,8 @@ const {
                 },
                 {
                   name: "query_genomic_pipeline",
-                  description: "Access full technical logs and variant analysis notes for the public 41x WGS genomic donation (ENA PRJEB109744).",
-                  inputSchema: {
-                    type: "object",
-                    properties: {}
-                  },
+                  description: "Access technical notes for the public 41x WGS genomic donation under ENA PRJEB109744.",
+                  inputSchema: { type: "object", properties: {} },
                   execute: async () => {
                     const res = await fetch('/llms-full.txt');
                     const text = await res.text();

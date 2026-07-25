@@ -1,0 +1,12 @@
+---
+import ApplicationCv from "../components/ApplicationCv.astro";
+import P from "../../data/application-profiles.js";
+---
+
+<ApplicationCv
+  profile={P.researchQuality}
+  shared={P.shared}
+  canonical="https://mariomarcolongo.com/cv-research.html"
+  alternateHref="/cv-resume.html"
+  alternateLabel="AI Safety Evaluation CV"
+/>

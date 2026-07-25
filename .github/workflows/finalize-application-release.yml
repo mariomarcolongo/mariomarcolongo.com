@@ -1,0 +1,84 @@
+name: Finalize application release
+
+on:
+  push:
+    branches:
+      - release/application-ready-2026-07-25
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: finalize-application-release
+  cancel-in-progress: true
+
+jobs:
+  finalize:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+
+    steps:
+      - name: Check out release branch
+        uses: actions/checkout@v4
+        with:
+          ref: release/application-ready-2026-07-25
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Normalize one-shot migration assertions
+        shell: python
+        run: |
+          from pathlib import Path
+
+          path = Path('scripts/finalize-application-release.js')
+          text = path.read_text()
+
+          duplicate = '''    ['\"Conduct bibliographic research and verify primary literature for more than 55 videos and documentaries and four articles.\"', '\"Deliver research, scientific fact-checking and script development across 55+ published YouTube projects and four co-authored articles, with additional visualization, slide and selected-thumbnail work.\"', 'Entropy resume bullet 1'],\n'''
+          if duplicate not in text:
+              raise SystemExit('Expected duplicate Entropy replacement was not found')
+          text = text.replace(duplicate, '', 1)
+
+          old = "'Entropy scope', 2]"
+          if old not in text:
+              raise SystemExit('Expected Entropy scope assertion was not found')
+          text = text.replace(old, "'Entropy scope']", 1)
+
+          path.write_text(text)
+
+      - name: Apply current evidence and application wording
+        run: node scripts/finalize-application-release.js
+
+      - name: Build and verify generated output
+        run: npm run build
+
+      - name: Verify rendered pages and interactions
+        run: npm run verify:render
+
+      - name: Generate all application PDFs
+        run: npm run pdf
+
+      - name: Check patch formatting
+        run: git diff --check
+
+      - name: Commit finalized release
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "release: finalize application-ready portfolio"
+          git push origin HEAD:release/application-ready-2026-07-25

@@ -1,0 +1,1168 @@
+:root {
+  --career-bg: #f4f2ed;
+  --career-panel: rgba(255, 255, 255, 0.88);
+  --career-panel-solid: #ffffff;
+  --career-ink: #121826;
+  --career-muted: #556070;
+  --career-subtle: #727d8c;
+  --career-line: rgba(18, 24, 38, 0.12);
+  --career-line-strong: rgba(18, 24, 38, 0.22);
+  --career-accent: #1f5d52;
+  --career-accent-2: #b65c38;
+  --career-accent-soft: rgba(31, 93, 82, 0.1);
+  --career-warm-soft: rgba(182, 92, 56, 0.1);
+  --career-shadow: 0 24px 70px rgba(35, 37, 41, 0.1);
+  --career-radius: 26px;
+  --career-radius-sm: 16px;
+  --career-max: 1180px;
+}
+
+[data-theme="dark"] {
+  --career-bg: #0d1117;
+  --career-panel: rgba(20, 27, 36, 0.9);
+  --career-panel-solid: #151c25;
+  --career-ink: #f2f5f7;
+  --career-muted: #c0c8d1;
+  --career-subtle: #929dad;
+  --career-line: rgba(255, 255, 255, 0.11);
+  --career-line-strong: rgba(255, 255, 255, 0.2);
+  --career-accent: #79c4b5;
+  --career-accent-2: #ef9a72;
+  --career-accent-soft: rgba(121, 196, 181, 0.12);
+  --career-warm-soft: rgba(239, 154, 114, 0.12);
+  --career-shadow: 0 28px 80px rgba(0, 0, 0, 0.36);
+}
+
+body {
+  background:
+    radial-gradient(circle at 12% 0%, rgba(31, 93, 82, 0.08), transparent 32rem),
+    radial-gradient(circle at 92% 15%, rgba(182, 92, 56, 0.07), transparent 28rem),
+    var(--career-bg);
+}
+
+.career-page,
+.application-shell,
+.master-shell,
+.evaluation-shell {
+  color: var(--career-ink);
+}
+
+.career-page {
+  width: min(var(--career-max), calc(100% - 48px));
+  margin: 0 auto;
+  padding: 132px 0 72px;
+}
+
+.career-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.75fr);
+  gap: 62px;
+  align-items: center;
+  min-height: 620px;
+  padding: 40px 0 76px;
+}
+
+.career-kicker,
+.career-section-kicker,
+.application-eyebrow,
+.evaluation-eyebrow,
+.master-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 20px;
+  color: var(--career-accent);
+  font: 700 0.76rem/1.2 var(--font-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.career-kicker::before,
+.career-section-kicker::before,
+.application-eyebrow::before,
+.evaluation-eyebrow::before,
+.master-eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.career-title {
+  max-width: 850px;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 7.2vw, 6.9rem);
+  line-height: 0.94;
+  letter-spacing: -0.065em;
+  font-weight: 850;
+}
+
+.career-title em {
+  display: block;
+  color: var(--career-accent);
+  font-style: normal;
+}
+
+.career-lede {
+  max-width: 720px;
+  margin: 30px 0 0;
+  color: var(--career-muted);
+  font-size: clamp(1.08rem, 1.8vw, 1.34rem);
+  line-height: 1.68;
+}
+
+.career-lede strong {
+  color: var(--career-ink);
+  font-weight: 650;
+}
+
+.career-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.career-actions .btn {
+  padding-inline: 20px;
+}
+
+.career-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px 18px;
+  margin-top: 26px;
+  color: var(--career-subtle);
+  font-size: 0.9rem;
+}
+
+.career-proof-stack {
+  position: relative;
+  display: grid;
+  gap: 14px;
+  padding: 22px;
+  border: 1px solid var(--career-line);
+  border-radius: var(--career-radius);
+  background: var(--career-panel);
+  box-shadow: var(--career-shadow);
+  backdrop-filter: blur(18px);
+}
+
+.career-proof-stack::before {
+  content: "";
+  position: absolute;
+  inset: 16px -14px -16px 20px;
+  z-index: -1;
+  border-radius: var(--career-radius);
+  border: 1px solid var(--career-line);
+  background: var(--career-accent-soft);
+}
+
+.career-proof-heading {
+  padding: 7px 8px 15px;
+  border-bottom: 1px solid var(--career-line);
+}
+
+.career-proof-heading span {
+  display: block;
+  color: var(--career-subtle);
+  font: 700 0.72rem/1.2 var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.career-proof-heading strong {
+  display: block;
+  margin-top: 7px;
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  letter-spacing: -0.025em;
+}
+
+.career-proof-item {
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+  padding: 16px;
+  border-radius: 18px;
+  background: var(--career-panel-solid);
+  border: 1px solid var(--career-line);
+}
+
+.career-proof-value {
+  color: var(--career-accent);
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+}
+
+.career-proof-copy strong {
+  display: block;
+  font-size: 0.95rem;
+}
+
+.career-proof-copy span {
+  display: block;
+  margin-top: 3px;
+  color: var(--career-subtle);
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.career-section {
+  padding: 92px 0;
+  border-top: 1px solid var(--career-line);
+}
+
+.career-section-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.7fr);
+  gap: 48px;
+  align-items: end;
+  margin-bottom: 42px;
+}
+
+.career-section-title {
+  margin: 0;
+  max-width: 760px;
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4vw, 4.25rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.career-section-copy {
+  margin: 0;
+  color: var(--career-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.career-role-grid,
+.career-document-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.career-role-card,
+.career-document-card,
+.career-evidence-card,
+.evaluation-card,
+.master-guidance,
+.application-guide {
+  border: 1px solid var(--career-line);
+  border-radius: var(--career-radius-sm);
+  background: var(--career-panel);
+  box-shadow: 0 14px 40px rgba(35, 37, 41, 0.05);
+}
+
+.career-role-card {
+  padding: 28px;
+}
+
+.career-role-card.primary {
+  border-color: color-mix(in srgb, var(--career-accent) 45%, transparent);
+  background: linear-gradient(145deg, var(--career-accent-soft), var(--career-panel));
+}
+
+.career-role-card.secondary {
+  border-color: color-mix(in srgb, var(--career-accent-2) 40%, transparent);
+  background: linear-gradient(145deg, var(--career-warm-soft), var(--career-panel));
+}
+
+.career-role-label {
+  color: var(--career-subtle);
+  font: 700 0.72rem/1.2 var(--font-mono);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.career-role-card h3,
+.career-document-card h3,
+.career-evidence-card h3,
+.evaluation-card h3 {
+  margin: 11px 0 9px;
+  font-family: var(--font-display);
+  font-size: 1.42rem;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+}
+
+.career-role-card p,
+.career-document-card p,
+.career-evidence-card p,
+.evaluation-card p {
+  margin: 0;
+  color: var(--career-muted);
+  line-height: 1.62;
+}
+
+.career-role-list,
+.evaluation-list,
+.master-list,
+.application-list {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.career-role-list li,
+.evaluation-list li,
+.master-list li,
+.application-list li {
+  position: relative;
+  margin: 8px 0;
+  padding-left: 20px;
+  color: var(--career-muted);
+  line-height: 1.52;
+}
+
+.career-role-list li::before,
+.evaluation-list li::before,
+.master-list li::before,
+.application-list li::before {
+  content: "";
+  position: absolute;
+  top: 0.67em;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--career-accent);
+}
+
+.career-evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.career-evidence-card {
+  display: flex;
+  min-height: 300px;
+  flex-direction: column;
+  padding: 28px;
+}
+
+.career-evidence-index {
+  color: var(--career-accent);
+  font: 700 0.78rem/1.2 var(--font-mono);
+}
+
+.career-evidence-metric {
+  margin-top: auto;
+  padding-top: 28px;
+  color: var(--career-ink);
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+
+.career-card-link {
+  display: inline-flex;
+  margin-top: 22px;
+  font-weight: 700;
+}
+
+.career-document-card {
+  padding: 30px;
+}
+
+.career-document-card.recommended {
+  outline: 2px solid var(--career-accent);
+  outline-offset: -2px;
+}
+
+.career-document-badge {
+  display: inline-flex;
+  padding: 7px 10px;
+  border-radius: 999px;
+  color: var(--career-accent);
+  background: var(--career-accent-soft);
+  font: 700 0.7rem/1 var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.career-contact-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.6fr);
+  gap: 42px;
+  padding: 44px;
+  border-radius: var(--career-radius);
+  color: #f7faf9;
+  background: #173e38;
+  box-shadow: var(--career-shadow);
+}
+
+.career-contact-panel h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.career-contact-panel p {
+  margin: 18px 0 0;
+  max-width: 650px;
+  color: rgba(247, 250, 249, 0.76);
+  font-size: 1.05rem;
+  line-height: 1.68;
+}
+
+.career-contact-links {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+}
+
+.career-contact-links a {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 14px 0;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: 650;
+}
+
+/* Application documents */
+.application-shell,
+.master-shell,
+.evaluation-shell {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 118px 0 64px;
+}
+
+.application-guide,
+.master-guidance {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 26px;
+  align-items: center;
+  margin-bottom: 28px;
+  padding: 24px 28px;
+}
+
+.application-guide h1,
+.master-guidance h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  letter-spacing: -0.04em;
+}
+
+.application-guide p,
+.master-guidance p {
+  margin: 8px 0 0;
+  max-width: 760px;
+  color: var(--career-muted);
+}
+
+.application-guide-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 9px;
+}
+
+.application-pages {
+  display: grid;
+  gap: 28px;
+}
+
+.application-page,
+.master-document {
+  position: relative;
+  width: min(100%, 930px);
+  margin: 0 auto;
+  padding: 54px 58px;
+  border: 1px solid var(--career-line);
+  border-radius: 6px;
+  background: var(--career-panel-solid);
+  box-shadow: var(--career-shadow);
+}
+
+.application-page {
+  min-height: 1240px;
+}
+
+.application-header {
+  padding-bottom: 24px;
+  border-bottom: 3px solid var(--career-ink);
+}
+
+.application-header-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 26px;
+  align-items: flex-start;
+}
+
+.application-name,
+.master-name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 2.72rem;
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.application-title,
+.master-title {
+  margin: 11px 0 0;
+  color: var(--career-accent);
+  font-size: 1.08rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.application-subtitle {
+  max-width: 650px;
+  margin: 7px 0 0;
+  color: var(--career-muted);
+  font-size: 0.88rem;
+}
+
+.application-contact {
+  display: grid;
+  min-width: 235px;
+  gap: 4px;
+  color: var(--career-muted);
+  font-size: 0.76rem;
+  text-align: right;
+}
+
+.application-contact a {
+  color: inherit;
+}
+
+.application-summary {
+  margin: 25px 0 0;
+  color: var(--career-ink);
+  font-size: 0.92rem;
+  line-height: 1.58;
+}
+
+.application-section {
+  margin-top: 28px;
+}
+
+.application-section-title,
+.master-section-title {
+  margin: 0 0 14px;
+  padding-bottom: 7px;
+  color: var(--career-ink);
+  border-bottom: 1px solid var(--career-line-strong);
+  font: 800 0.76rem/1.2 var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.application-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.application-metric {
+  padding: 14px;
+  border: 1px solid var(--career-line);
+  border-radius: 10px;
+  background: var(--career-accent-soft);
+}
+
+.application-metric strong {
+  display: block;
+  color: var(--career-accent);
+  font-family: var(--font-display);
+  font-size: 1.42rem;
+  letter-spacing: -0.04em;
+}
+
+.application-metric span {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.application-metric small {
+  display: block;
+  margin-top: 4px;
+  color: var(--career-subtle);
+  font-size: 0.63rem;
+  line-height: 1.35;
+}
+
+.application-entry,
+.master-entry {
+  margin-top: 18px;
+}
+
+.application-entry:first-of-type,
+.master-entry:first-of-type {
+  margin-top: 0;
+}
+
+.application-entry-head,
+.master-entry-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: start;
+}
+
+.application-entry h3,
+.master-entry h3 {
+  margin: 0;
+  font-size: 0.97rem;
+  line-height: 1.35;
+}
+
+.application-organization,
+.master-organization {
+  margin-top: 2px;
+  color: var(--career-accent);
+  font-size: 0.79rem;
+  font-weight: 700;
+}
+
+.application-period,
+.master-period {
+  color: var(--career-subtle);
+  font-size: 0.74rem;
+  white-space: nowrap;
+}
+
+.application-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin-top: 4px;
+  font-size: 0.7rem;
+}
+
+.application-list {
+  margin-top: 8px;
+}
+
+.application-list li {
+  margin: 4px 0;
+  padding-left: 15px;
+  font-size: 0.76rem;
+  line-height: 1.46;
+}
+
+.application-list li::before {
+  top: 0.62em;
+  width: 5px;
+  height: 5px;
+}
+
+.application-two-col {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 28px;
+}
+
+.application-skill {
+  display: grid;
+  grid-template-columns: 128px minmax(0, 1fr);
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--career-line);
+  font-size: 0.74rem;
+  line-height: 1.45;
+}
+
+.application-skill strong {
+  color: var(--career-ink);
+}
+
+.application-skill span {
+  color: var(--career-muted);
+}
+
+.application-evidence {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 11px;
+}
+
+.application-evidence article {
+  padding: 15px;
+  border: 1px solid var(--career-line);
+  border-radius: 10px;
+}
+
+.application-evidence h3 {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.application-evidence p {
+  margin: 6px 0 0;
+  color: var(--career-muted);
+  font-size: 0.68rem;
+  line-height: 1.45;
+}
+
+.application-footer-note {
+  position: absolute;
+  right: 58px;
+  bottom: 34px;
+  left: 58px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 10px;
+  border-top: 1px solid var(--career-line);
+  color: var(--career-subtle);
+  font-size: 0.65rem;
+}
+
+/* Master CV */
+.master-document {
+  max-width: 980px;
+  padding: 58px 66px;
+}
+
+.master-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.55fr);
+  gap: 38px;
+  padding-bottom: 30px;
+  border-bottom: 3px solid var(--career-ink);
+}
+
+.master-contact {
+  color: var(--career-muted);
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+
+.master-contact strong {
+  color: var(--career-ink);
+}
+
+.master-summary {
+  margin: 25px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.master-section {
+  margin-top: 36px;
+}
+
+.master-list {
+  margin-top: 9px;
+}
+
+.master-list li {
+  margin: 5px 0;
+  font-size: 0.82rem;
+}
+
+.master-tag {
+  display: inline-flex;
+  margin-left: 8px;
+  padding: 3px 7px;
+  border-radius: 999px;
+  color: var(--career-subtle);
+  background: var(--career-accent-soft);
+  font: 700 0.6rem/1 var(--font-mono);
+  text-transform: uppercase;
+}
+
+/* Evaluation record */
+.evaluation-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 50px;
+  align-items: end;
+  padding: 44px 0 60px;
+}
+
+.evaluation-title {
+  margin: 0;
+  max-width: 780px;
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 6.5vw, 6.1rem);
+  line-height: 0.96;
+  letter-spacing: -0.06em;
+}
+
+.evaluation-lede {
+  max-width: 760px;
+  margin: 26px 0 0;
+  color: var(--career-muted);
+  font-size: 1.12rem;
+  line-height: 1.7;
+}
+
+.evaluation-scope-note {
+  padding: 24px;
+  border: 1px solid var(--career-line);
+  border-radius: var(--career-radius-sm);
+  background: var(--career-accent-soft);
+}
+
+.evaluation-scope-note strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.evaluation-scope-note p {
+  margin: 0;
+  color: var(--career-muted);
+  font-size: 0.87rem;
+  line-height: 1.55;
+}
+
+.evaluation-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 58px;
+}
+
+.evaluation-metric {
+  padding: 28px;
+  border: 1px solid var(--career-line);
+  border-radius: var(--career-radius-sm);
+  background: var(--career-panel);
+}
+
+.evaluation-metric strong {
+  display: block;
+  color: var(--career-accent);
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  letter-spacing: -0.05em;
+}
+
+.evaluation-metric span {
+  display: block;
+  margin-top: 6px;
+  font-weight: 750;
+}
+
+.evaluation-metric small {
+  display: block;
+  margin-top: 5px;
+  color: var(--career-subtle);
+}
+
+.evaluation-section {
+  padding: 62px 0;
+  border-top: 1px solid var(--career-line);
+}
+
+.evaluation-section-head {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(280px, 0.6fr);
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.evaluation-section h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3.45rem);
+  letter-spacing: -0.045em;
+}
+
+.evaluation-section-head p {
+  margin: 0;
+  color: var(--career-muted);
+  line-height: 1.68;
+}
+
+.evaluation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.evaluation-card {
+  padding: 26px;
+}
+
+.evaluation-step {
+  color: var(--career-accent);
+  font: 700 0.72rem/1 var(--font-mono);
+}
+
+.evaluation-details {
+  margin-top: 24px;
+  border: 1px solid var(--career-line);
+  border-radius: var(--career-radius-sm);
+  background: var(--career-panel);
+  overflow: hidden;
+}
+
+.evaluation-details summary {
+  cursor: pointer;
+  padding: 20px 24px;
+  font-weight: 750;
+}
+
+.evaluation-table-wrap {
+  overflow-x: auto;
+  border-top: 1px solid var(--career-line);
+}
+
+.evaluation-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.evaluation-table th,
+.evaluation-table td {
+  padding: 11px 16px;
+  border-bottom: 1px solid var(--career-line);
+  text-align: left;
+}
+
+.evaluation-table th {
+  color: var(--career-subtle);
+  font: 700 0.68rem/1.2 var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .career-hero,
+  .career-section-heading,
+  .career-contact-panel,
+  .evaluation-hero,
+  .evaluation-section-head,
+  .master-header {
+    grid-template-columns: 1fr;
+  }
+
+  .career-hero {
+    min-height: auto;
+    gap: 42px;
+  }
+
+  .career-proof-stack {
+    max-width: 620px;
+  }
+
+  .career-evidence-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .career-evidence-card {
+    min-height: 0;
+  }
+
+  .application-guide,
+  .master-guidance {
+    grid-template-columns: 1fr;
+  }
+
+  .application-guide-actions {
+    justify-content: flex-start;
+  }
+
+  .application-page,
+  .master-document {
+    padding: 42px 36px;
+  }
+
+  .application-header-row {
+    display: grid;
+  }
+
+  .application-contact {
+    min-width: 0;
+    text-align: left;
+  }
+
+  .application-metrics,
+  .application-evidence {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .application-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .evaluation-hero {
+    align-items: start;
+  }
+}
+
+@media (max-width: 640px) {
+  .career-page,
+  .application-shell,
+  .master-shell,
+  .evaluation-shell {
+    width: min(100% - 28px, var(--career-max));
+    padding-top: 98px;
+  }
+
+  .career-title {
+    font-size: clamp(3.15rem, 17vw, 5.2rem);
+  }
+
+  .career-role-grid,
+  .career-document-grid,
+  .evaluation-grid,
+  .evaluation-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .career-section {
+    padding: 66px 0;
+  }
+
+  .career-contact-panel {
+    padding: 30px 24px;
+  }
+
+  .career-proof-item {
+    grid-template-columns: 70px minmax(0, 1fr);
+    padding: 13px;
+  }
+
+  .application-guide,
+  .master-guidance {
+    padding: 20px;
+  }
+
+  .application-page,
+  .master-document {
+    min-height: 0;
+    padding: 32px 22px 72px;
+  }
+
+  .application-name,
+  .master-name {
+    font-size: 2.2rem;
+  }
+
+  .application-metrics,
+  .application-evidence {
+    grid-template-columns: 1fr;
+  }
+
+  .application-skill {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .application-footer-note {
+    right: 22px;
+    bottom: 24px;
+    left: 22px;
+  }
+
+  .evaluation-title {
+    font-size: clamp(3rem, 15vw, 4.6rem);
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+  }
+
+  .application-shell {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  .application-guide,
+  .application-shell > .print-hide,
+  .nav,
+  footer,
+  #scrollProgress {
+    display: none !important;
+  }
+
+  .application-pages {
+    display: block;
+  }
+
+  .application-page {
+    width: 210mm;
+    height: 297mm;
+    min-height: 297mm;
+    margin: 0;
+    padding: 13mm 15mm 15mm;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: #ffffff;
+    color: #111827;
+    break-after: page;
+    page-break-after: always;
+    overflow: hidden;
+  }
+
+  .application-page:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  .application-header {
+    border-color: #111827;
+  }
+
+  .application-title,
+  .application-organization,
+  .application-metric strong,
+  .application-eyebrow {
+    color: #1f5d52 !important;
+  }
+
+  .application-summary,
+  .application-section-title,
+  .application-entry h3,
+  .application-skill strong {
+    color: #111827 !important;
+  }
+
+  .application-subtitle,
+  .application-contact,
+  .application-list li,
+  .application-skill span,
+  .application-evidence p,
+  .application-period,
+  .application-footer-note {
+    color: #4b5563 !important;
+  }
+
+  .application-metric,
+  .application-evidence article {
+    background: #f4f7f6 !important;
+    border-color: #d7dddb !important;
+  }
+
+  .application-footer-note {
+    right: 15mm;
+    bottom: 8mm;
+    left: 15mm;
+  }
+}

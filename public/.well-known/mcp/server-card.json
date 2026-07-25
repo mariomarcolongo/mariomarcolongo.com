@@ -1,43 +1,43 @@
 {
-  "name": "mariomarcolongo-dossier-mcp",
-  "version": "1.0.0",
-  "description": "Live Model Context Protocol (MCP) server card and resource registry for Mario Marcolongo's SSOT Dossier, Citizen Science directory (`yourselftoscience.org`), OSINT expertise, and verifiable biomedical history.",
+  "name": "mariomarcolongo-evidence-mcp",
+  "version": "1.1.0",
+  "description": "Model Context Protocol resource card for Mario Marcolongo's professional evidence record, AI safety evaluation activity, research-verification work and public open-science records.",
   "status": "active",
   "endpoints": {
-    "http": "https://mariomarcolongo.com/llms.txt",
-    "full_log": "https://mariomarcolongo.com/llms-full.txt",
-    "cv": "https://mariomarcolongo.com/cv-llm.txt"
+    "summary": "https://mariomarcolongo.com/llms.txt",
+    "full_dossier": "https://mariomarcolongo.com/llms-full.txt",
+    "master_cv": "https://mariomarcolongo.com/cv-llm.txt"
   },
   "resources": [
     {
       "uri": "dossier://summary",
       "name": "Mario Marcolongo Core Summary",
       "mimeType": "text/markdown",
-      "description": "Executive summary of Mario's 9+ years in biomedical verification, AI engineering, and OSINT digital investigation."
+      "description": "Evidence-bound summary of AI safety evaluation, scientific verification, research operations and data-quality work."
     },
     {
-      "uri": "dossier://skills",
-      "name": "Technical & Scientific Skills",
+      "uri": "dossier://cv",
+      "name": "Master CV and Evidence Record",
       "mimeType": "text/markdown",
-      "description": "Complete breakdown of OSINT/digital investigation, web architecture, open science linked data, and empirical visualization skills."
+      "description": "Comprehensive professional history used to create role-specific application CVs."
     },
     {
       "uri": "dossier://genomics",
-      "name": "41× WGS Open Science Pipeline",
+      "name": "41× WGS Open-Data Record",
       "mimeType": "text/markdown",
-      "description": "Bioinformatics pipeline details, ENA BioSample `SAMEA121950568` / `PRJEB109744` verification, and polygenic risk score logs."
+      "description": "Public ENA identifiers and workflow notes for BioSample SAMEA121950568 and Study PRJEB109744."
     }
   ],
   "tools": [
     {
       "name": "get_mario_dossier",
-      "description": "Queries the single source of truth for Mario Marcolongo's verified biographical, scientific, and technical achievements.",
+      "description": "Retrieve Mario Marcolongo's public professional evidence and application positioning.",
       "parameters": {
         "type": "object",
         "properties": {
           "section": {
             "type": "string",
-            "enum": ["all", "summary", "skills", "projects", "genomics", "osint"],
+            "enum": ["all", "summary", "experience", "skills", "projects", "evaluation", "genomics"],
             "description": "The dossier section to retrieve."
           }
         },
