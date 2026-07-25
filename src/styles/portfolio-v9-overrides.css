@@ -1,4 +1,4 @@
-/* Portfolio v9 corrections: real screenshots, neutral framing and balanced dark-mode contrast. */
+/* Portfolio v9 corrections: legible evidence summaries, neutral framing and balanced dark-mode contrast. */
 
 [data-theme="dark"] {
   --v8-bg: #0d0f0e;
@@ -14,20 +14,22 @@
   --v8-black: #050706;
 }
 
-.v8-hero-shot-1 img {
-  object-fit: cover;
-  object-position: center top;
+/* Keep both quantitative hero summaries intact rather than cropping their evidence. */
+.v8-hero-shot-1 img,
+.v8-hero-shot-2 img {
+  object-fit: contain;
+  object-position: center center;
   background: #090b0d;
 }
 
-/* Preserve the complete dated profile so rank, percentile, points and break counts remain visible. */
+/* Preserve the complete dated Gray Swan summary so both metric systems remain visible. */
 .v8-case-blue {
   align-items: start;
 }
 
 .v8-case-blue .v8-case-media {
   min-height: 0;
-  aspect-ratio: 1400 / 929;
+  aspect-ratio: 1200 / 760;
 }
 
 .v8-case-blue .v8-case-media picture,
@@ -43,13 +45,28 @@
   background: #090b0d;
 }
 
-.v8-case-red .v8-case-media img[src^="https://entropyforlife.it/"] {
-  object-fit: cover;
+/* The Entropy visual is an inventory, not a decorative article screenshot: show every number and label. */
+.v8-case-red .v8-case-media {
+  min-height: 0;
+  aspect-ratio: 1200 / 760;
+}
+
+.v8-case-red .v8-case-media picture,
+.v8-case-red .v8-case-media img {
+  height: 100%;
+  min-height: 0;
+}
+
+.v8-case-red .v8-case-media img {
+  object-fit: contain;
   object-position: center center;
+  padding: 0;
+  background: #11130f;
 }
 
 .v8-case-blue .v8-case-media,
-.v8-hero-shot-1 {
+.v8-hero-shot-1,
+.v8-hero-shot-2 {
   border-color: rgba(255, 255, 255, 0.16);
   background: #090b0d;
 }
@@ -81,11 +98,13 @@
 }
 
 @media (max-width: 720px) {
-  .v8-case-blue .v8-case-media {
-    aspect-ratio: 1400 / 929;
+  .v8-case-blue .v8-case-media,
+  .v8-case-red .v8-case-media {
+    aspect-ratio: 1200 / 760;
   }
 
-  .v8-case-blue .v8-case-media img {
+  .v8-case-blue .v8-case-media img,
+  .v8-case-red .v8-case-media img {
     object-position: center center;
   }
 
