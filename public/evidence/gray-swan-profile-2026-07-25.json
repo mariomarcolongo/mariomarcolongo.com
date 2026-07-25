@@ -10,7 +10,8 @@
     "capturedLocal": "2026-07-25T21:19:07+02:00",
     "capturedUtc": "2026-07-25T19:19:07Z",
     "timestampBasis": "Inferred from the user-supplied screenshot filename and Europe/Rome summer-time offset.",
-    "evidenceImage": "https://mariomarcolongo.com/evidence/gray-swan-metrics-2026-07-25.svg",
+    "evidenceImage": "https://mariomarcolongo.com/media/work/gray-swan-summary-2026-07-25.svg",
+    "evidenceImageType": "Legible vector summary of transcribed metrics; not the original platform screenshot.",
     "originalScreenshot": {
       "filename": "Screenshot 2026-07-25 at 21.19.07.png",
       "pixelDimensions": "2047x1162",
@@ -58,7 +59,8 @@
     "The four displayed Proving Ground area counters in the later screenshot sum to 109 while the platform displays 110 Total Breaks. Both values are transcribed exactly; no internal aggregation rule is inferred.",
     "A same-day WACZ capture at 17:09 UTC records #75, top 6%, and 109 total breaks before the later screenshot recorded 110. This documents the profile changing during the day.",
     "Rankings, percentiles, points, and totals are dynamic. Portfolio claims should cite the snapshot date and, where precision matters, the capture time.",
-    "The current screenshot and locally retained WACZ are account-holder-preserved evidence, not attestations issued by Gray Swan."
+    "The current screenshot and locally retained WACZ are account-holder-preserved evidence, not attestations issued by Gray Swan.",
+    "The public SVG is a vector summary for legibility; the original screenshot is identified by filename, dimensions and SHA-256 in this manifest."
   ],
   "previousSnapshot": {
     "evidencePage": "https://mariomarcolongo.com/evidence/gray-swan-profile-2026-07-24.html",
