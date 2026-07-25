@@ -26,9 +26,10 @@ function read(relativePath) {
   return value;
 }
 function normalizeHtmlText(content) {
-  return String(content)
-    .replaceAll('&amp;', '&').replaceAll('&#39;', "'").replaceAll('&quot;', '"')
-    .replaceAll('&gt;', '>').replaceAll('&lt;', '<');
+  const entities = new Map([
+    ['&amp;', '&'], ['&#39;', "'"], ['&quot;', '"'], ['&gt;', '>'], ['&lt;', '<']
+  ]);
+  return String(content).replace(/&(?:amp|#39|quot|gt|lt);/g, (entity) => entities.get(entity) || entity);
 }
 function assertContains(content, needle, label) {
   if (!content.includes(needle)) fail(`${label} is missing: ${needle}`);
@@ -98,7 +99,7 @@ for (const needle of [
   'data-testid="human-capabilities"', 'data-testid="human-work"', 'data-testid="human-documents"',
   'Where I can contribute.', 'Selected work, shown through the actual output.',
   'Start with the role you are hiring for.', 'AI evaluation and scientific evidence roles.',
-  'Zotero plugin', 'Protein by bodyweight by country', '#77 on the Proving Ground leaderboard'
+  'Zotero plugin', 'Protein by bodyweight by country', '#75 on the Proving Ground leaderboard'
 ]) assertContains(indexText, needle, 'dist/index.html');
 for (const obsolete of [
   'class="portfolio-v4"', 'class="portfolio-v5"', 'class="portfolio-v7"',

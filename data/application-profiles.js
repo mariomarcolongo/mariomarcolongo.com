@@ -4,7 +4,7 @@ const APPLICATION_PROFILES = {
     documentLabel: "Specialized Application CV",
     title: "AI Evaluation & Model Behavior Specialist",
     subtitle: "Model behavior testing · adversarial QA · evidence-bound reporting · evaluation operations",
-    summary: "AI evaluation and research-verification specialist with sustained self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. Gray Swan Proving Ground participant ranked #77 (top 7%) on 24 July 2026, with 105 leaderboard-counted breaks across 232 Proving Ground submissions and 26 waves. Brings eight years of auditable claim verification, paid scientific fact-checking, structured research workflows and clear evidence-bound reporting.",
+    summary: "AI evaluation and research-verification specialist with sustained self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. Gray Swan Proving Ground participant ranked #75 (top 6%) on 25 July 2026, with 110 platform-recorded total breaks; the same profile showed Arena rank #370, 27 global unique breaks, 1,090 points and 246 submissions. Brings eight years of auditable claim verification, paid scientific fact-checking, structured research workflows and clear evidence-bound reporting.",
     fit: [
       "AI evaluation and safeguards operations",
       "AI content red teaming and adversarial QA",
@@ -12,36 +12,37 @@ const APPLICATION_PROFILES = {
       "Human-data quality, grading and evaluation operations"
     ],
     strengths: [
-      { value: "105", label: "Leaderboard-counted model breaks", detail: "#77 · top 7% · 26 Proving Ground waves" },
-      { value: "232", label: "Proving Ground submissions", detail: "242 total Arena submissions shown separately" },
-      { value: "55+", label: "Videos and documentaries checked", detail: "Paid primary-source verification for Entropy for Life" },
+      { value: "110", label: "Platform-recorded Proving Ground breaks", detail: "#75 · top 6% · 25 July 2026" },
+      { value: "246", label: "Arena submissions", detail: "#370 rank · 27 unique breaks · 1,090 points" },
+      { value: "59+", label: "Published projects supported", detail: "55+ YouTube video projects · 4 co-authored articles" },
       { value: "4,317", label: "Auditable Wikimedia contributions", detail: "Eight years of inspectable claim and source work" }
     ],
     experience: [
       {
         role: "Model-Behavior Evaluator",
         organization: "Independent practice · Gray Swan Proving Ground",
-        period: "2023 — Present",
+        period: "Jul 2026 — Present",
         links: [
           { label: "Evaluation record", url: "/security.html" },
           { label: "Public profile", url: "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf" }
         ],
         bullets: [
           "Conduct self-directed testing of LLM instruction handling, policy boundaries and edge cases across chat, image, agentic tool-use and indirect prompt-injection settings.",
-          "Reached #77 on the Proving Ground leaderboard (top 7%) with 105 leaderboard-counted breaks across 232 submissions and 26 listed waves on 24 July 2026.",
+          "Reached #75 on the Proving Ground leaderboard (top 6%) with 110 platform-recorded total breaks on 25 July 2026; the same profile showed Arena rank #370, 27 global unique breaks, 1,090 points and 246 submissions.",
           "Document public evidence conservatively, separating platform-reported outcomes from independent verification, model-wide conclusions or security certification."
         ]
       },
       {
-        role: "Scientific Fact-Checker, Writer & Website Manager",
+        role: "Scientific Research, Fact-Checking & Website Operations Contractor",
         organization: "Entropy for Life · Independent contractor",
         period: "Jun 2023 — Present",
         links: [
           { label: "Author page", url: "https://entropyforlife.it/autore/mario-marcolongo/" },
-          { label: "Video archive", url: "https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh" }
+          { label: "55+ YouTube projects", url: "https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh" },
+          { label: "Selected thumbnails", url: "https://www.youtube.com/playlist?list=PLUXju4zC0Sks" }
         ],
         bullets: [
-          "Conduct bibliographic research and verify primary literature for more than 55 videos and documentaries and four published articles.",
+          "Deliver primary-literature research, scientific fact-checking and script development across 55+ published YouTube video projects and four co-authored articles; most video assignments combine all three functions, while selected work focuses on fact-checking and/or data visualization.",
           "Identify unsupported claims, conflicting evidence and source-quality problems, then communicate corrections in a small recurring production team consisting primarily of Giacomo Moro Mauretto, the video editor and me.",
           "Formally acknowledged in Giacomo Moro Mauretto's Mondadori book Italiani veri for scientific-literature research and error detection."
         ]
@@ -102,7 +103,7 @@ const APPLICATION_PROFILES = {
     strengths: [
       { value: "8 years", label: "Auditable verification work", detail: "Public source, citation and structured-data record" },
       { value: "55+", label: "Research initiatives indexed", detail: "Clinical studies, biobanks, registries and donation programs" },
-      { value: "55+", label: "Videos and documentaries checked", detail: "Plus four published articles" },
+      { value: "59+", label: "Published projects supported", detail: "55+ YouTube video projects · 4 co-authored articles" },
       { value: "70+", label: "Scientific visualizations", detail: "Biomedical, epidemiological and public-health evidence" }
     ],
     experience: [
@@ -121,7 +122,7 @@ const APPLICATION_PROFILES = {
         ]
       },
       {
-        role: "Scientific Fact-Checker, Writer & Website Manager",
+        role: "Scientific Research, Fact-Checking & Website Operations Contractor",
         organization: "Entropy for Life · Independent contractor",
         period: "Jun 2023 — Present",
         links: [
@@ -129,7 +130,7 @@ const APPLICATION_PROFILES = {
           { label: "Website", url: "https://entropyforlife.it" }
         ],
         bullets: [
-          "Verify primary literature and conduct bibliographic research for more than 55 videos and documentaries and four articles across biology, medicine and public health.",
+          "Verify primary literature and conduct bibliographic research for 55+ published YouTube video projects and four co-authored articles across biology, medicine and public health.",
           "Translate complex evidence into clear editorial recommendations, identify unsupported claims and document uncertainty or disagreement between sources.",
           "Manage hosting, DNS, SSL, WordPress configuration, technical SEO and functional site changes."
         ]
@@ -179,7 +180,7 @@ const APPLICATION_PROFILES = {
     documentLabel: "Specialized Application CV",
     title: "Research, Editorial & Community Operations Specialist",
     subtitle: "Evidence synthesis · editorial coordination · research programs · community engagement · AI-enabled workflows",
-    summary: "Research, editorial and community-operations specialist with paid experience supporting scientific content production, primary-source fact-checking, professional writing and web operations. Co-developed and facilitated approximately 4–5 structured remote focus-group sessions, typically lasting 1–2 hours, with autistic participants discussing sensitive sexuality and relationship topics under Marta Panzeri at the University of Padua DPSS. Also contributed evidence research to more than 55 videos and documentaries and four published articles and founded an open research-participation directory covering more than 55 initiatives.",
+    summary: "Research, editorial and community-operations specialist with paid experience supporting scientific content production, primary-source fact-checking, professional writing and web operations. Co-developed and facilitated approximately 4–5 structured remote focus-group sessions, typically lasting 1–2 hours, with autistic participants discussing sensitive sexuality and relationship topics under Marta Panzeri at the University of Padua DPSS. Also contributed evidence research to 55+ published YouTube video projects and four co-authored articles and founded an open research-participation directory covering more than 55 initiatives.",
     fit: [
       "Assistant editor and editorial operations",
       "Evidence-synthesis program coordination",
@@ -187,23 +188,24 @@ const APPLICATION_PROFILES = {
       "Scientific communications and publication support"
     ],
     strengths: [
-      { value: "55+", label: "Scientific productions supported", detail: "Videos and documentaries plus four articles" },
+      { value: "59+", label: "Published projects supported", detail: "55+ YouTube video projects · 4 co-authored articles" },
       { value: "55+", label: "Research initiatives coordinated", detail: "Verification, metadata and public participation records" },
       { value: "4,317", label: "Public knowledge contributions", detail: "Long-running editorial and source-work record" },
       { value: "2022–25", label: "Sensitive research facilitation", detail: "Remote focus groups with autistic participants" }
     ],
     experience: [
       {
-        role: "Scientific Fact-Checker, Writer & Website Manager",
+        role: "Scientific Research, Fact-Checking & Website Operations Contractor",
         organization: "Entropy for Life · Independent contractor",
         period: "Jun 2023 — Present",
         links: [
           { label: "Author page", url: "https://entropyforlife.it/autore/mario-marcolongo/" },
-          { label: "Video archive", url: "https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh" }
+          { label: "55+ YouTube projects", url: "https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh" },
+          { label: "Selected thumbnails", url: "https://www.youtube.com/playlist?list=PLUXju4zC0Sks" }
         ],
         bullets: [
-          "Support a small recurring science-communication team by researching primary literature, checking claims and communicating corrections for more than 55 videos and documentaries and four articles.",
-          "Write and co-author public-facing scientific content, maintain source documentation and translate complex evidence into clear editorial recommendations.",
+          "Support a small recurring science-communication team across 55+ published YouTube video projects and four co-authored articles through primary-literature research, scientific fact-checking, script development and clear correction notes.",
+          "Create or support scripts, data visualizations, presentation slides, on-screen assets, short-form materials and selected thumbnails, with roles attributed per project.",
           "Manage the project website, hosting, DNS, SSL, WordPress configuration, technical SEO and day-to-day troubleshooting."
         ]
       },
@@ -278,7 +280,7 @@ const APPLICATION_PROFILES = {
     strengths: [
       { value: "8 years", label: "Public source-work record", detail: "Wikipedia, Wikidata and Wikimedia Commons" },
       { value: "4,317", label: "Auditable contributions", detail: "Claims, citations, metadata and media records" },
-      { value: "105", label: "Leaderboard-counted model breaks", detail: "#77 · top 7% · four evaluation surfaces" },
+      { value: "110", label: "Platform-recorded Proving Ground breaks", detail: "#75 · top 6% · four evaluation surfaces" },
       { value: "55+", label: "Scientific productions checked", detail: "Health and biology evidence verification" }
     ],
     experience: [
@@ -297,7 +299,7 @@ const APPLICATION_PROFILES = {
         ]
       },
       {
-        role: "Scientific Fact-Checker, Writer & Website Manager",
+        role: "Scientific Research, Fact-Checking & Website Operations Contractor",
         organization: "Entropy for Life · Independent contractor",
         period: "Jun 2023 — Present",
         links: [
@@ -313,14 +315,14 @@ const APPLICATION_PROFILES = {
       {
         role: "Model-Behavior Evaluator",
         organization: "Independent practice · Gray Swan Proving Ground",
-        period: "2023 — Present",
+        period: "Jul 2026 — Present",
         links: [
           { label: "Evaluation record", url: "/security.html" },
           { label: "Public profile", url: "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf" }
         ],
         bullets: [
           "Test instruction hierarchy, policy boundaries, indirect prompt injection and agentic tool-use behavior across repeated adversarial scenarios.",
-          "Reached #77 on the Proving Ground leaderboard (top 7%) with 105 leaderboard-counted breaks across 232 Proving Ground submissions, while documenting the limitations and the profile/leaderboard discrepancy.",
+          "Reached #75 on the Proving Ground leaderboard (top 6%) with 110 platform-recorded total breaks, while documenting that the four visible area counters sum to 109 and keeping Arena metrics separate.",
           "Apply threat-oriented thinking and evidence capture to ambiguous system behavior without claiming application-security or penetration-testing expertise."
         ]
       }

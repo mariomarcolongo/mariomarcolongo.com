@@ -1,0 +1,11 @@
+
+> mariomarcolongo@2026.07.2 build
+> npm run lint && node scripts/generate-llm-dossiers.js && astro build && node scripts/postbuild.js && node scripts/verify-dist.js
+
+
+> mariomarcolongo@2026.07.2 lint
+> node scripts/check-stale-strings.js
+
+FAIL src/pages/index.astro:1 — Homepage is missing current artifact-led portfolio content: At least 59 published outputs supported
+
+Source integrity check failed with 1 issue(s).

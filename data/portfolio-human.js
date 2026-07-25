@@ -5,15 +5,15 @@ const PORTFOLIO_HUMAN = {
 
   proofMoments: [
     {
-      value: "105",
-      label: "leaderboard-counted model breaks",
-      detail: "#77 · top 7% · 24 July 2026",
+      value: "110",
+      label: "platform-recorded Proving Ground breaks",
+      detail: "#75 · top 6% · 25 July 2026",
       href: "/security.html"
     },
     {
       value: "59+",
       label: "published scientific outputs supported",
-      detail: "55+ video/documentary productions · 4 articles",
+      detail: "55+ YouTube video projects · 4 co-authored articles",
       href: "https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh"
     },
     {
@@ -29,8 +29,8 @@ const PORTFOLIO_HUMAN = {
       id: "model-record",
       label: "AI evaluation",
       title: "Gray Swan Proving Ground profile",
-      image: "/media/work/model-behavior-profile.jpg",
-      alt: "Gray Swan Arena profile screenshot showing Mario Marcolongo ranked number 77 in Proving Ground, top 7 percent",
+      image: "/evidence/gray-swan-metrics-2026-07-25.svg",
+      alt: "Gray Swan Arena profile screenshot showing Mario Marcolongo ranked number 75 in Proving Ground, top 6 percent, with 110 total breaks",
       href: "/security.html"
     },
     {
@@ -88,15 +88,15 @@ const PORTFOLIO_HUMAN = {
       number: "01",
       label: "AI evaluation",
       title: "Finding model failures across four evaluation surfaces.",
-      lead: "Across 26 public challenge waves, I tested chat, image, agent and indirect prompt-injection behavior and preserved a dated public record of the result.",
+      lead: "I tested chat, image, agent and indirect prompt-injection behavior and preserved dated public evidence that keeps Proving Ground and Arena metrics separate.",
       action: "I vary the interaction path, preserve reproduction notes and distinguish direct observations from platform labels, independent verification and model-wide conclusions.",
-      result: "#77 on the Proving Ground leaderboard, top 7%, with 105 leaderboard-counted breaks across 232 Proving Ground submissions on 24 July 2026.",
+      result: "#75 on the Proving Ground leaderboard, top 6%, with 110 platform-recorded total breaks on 25 July 2026; the same screenshot shows Arena rank #370, 27 global unique breaks, 1,090 points and 246 submissions.",
       boundary: "This supports model-evaluation and adversarial-QA work. It is not presented as penetration testing or senior red-team engineering.",
       href: "/security.html",
       linkLabel: "Open the evaluation record",
-      image: "/media/work/model-behavior-profile.jpg",
+      image: "/evidence/gray-swan-metrics-2026-07-25.svg",
       alt: "Gray Swan Arena profile screenshot showing Mario Marcolongo's Proving Ground rank, percentile, break count and activity",
-      imageCaption: "Real platform profile · #77 · top 7% · dated 24 July 2026",
+      imageCaption: "Real platform profile · #75 · top 6% · 110 total breaks · dated 25 July 2026",
       tone: "blue"
     },
     {
@@ -106,7 +106,7 @@ const PORTFOLIO_HUMAN = {
       title: "Fact-checking scientific productions before publication.",
       lead: "In a small recurring production team, I verify the evidence behind YouTube videos, documentaries and articles before publication.",
       action: "Fact-checking is the recurring component. Depending on the production, I also contribute to script development, data visualization, slide creation and thumbnail direction or design, and I attribute those roles per item rather than treating every output as identical.",
-      result: "At least 59 published outputs supported: 55+ video and documentary productions indexed through the YouTube contribution playlist, plus four articles. A separate playlist records thumbnail work.",
+      result: "At least 59 published projects supported: 55+ YouTube video projects indexed through the contribution playlist, plus four co-authored articles. A separate playlist records selected thumbnail work.",
       boundary: "Final wording, editing and publication remain with the team. The current thumbnail playlist includes work created predominantly or entirely by me and work developed collaboratively with the video editor; direction-only thumbnails are not yet included.",
       href: "https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh",
       linkLabel: "Open the YouTube contribution playlist",
@@ -118,12 +118,16 @@ const PORTFOLIO_HUMAN = {
           href: "https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh"
         },
         {
-          label: "Four published articles",
+          label: "Four co-authored articles",
           href: "https://entropyforlife.it/autore/mario-marcolongo/"
         },
         {
-          label: "Thumbnail-work playlist",
+          label: "Selected thumbnail-work playlist",
           href: "https://www.youtube.com/playlist?list=PLUXju4zC0Sks"
+        },
+        {
+          label: "Official Entropy for Life website",
+          href: "https://entropyforlife.it"
         }
       ],
       image: "https://entropyforlife.it/wp-content/uploads/2024/10/Dashboard-1-5-png.webp",

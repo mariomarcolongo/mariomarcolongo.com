@@ -10,7 +10,7 @@ const EXPECTED = {
   email: 'me@mariomarcolongo.com',
   orcid: '0000-0003-2846-7115',
   ena: 'PRJEB109744',
-  version: 'v2026.07.21',
+  version: 'v2026.07.25',
   graySwanId: '6a57be70d15e123775a1e9cf'
 };
 
@@ -30,7 +30,8 @@ const REQUIRED = [
   'scripts/verify-rendering.js', 'public/.well-known/api-catalog',
   'public/.well-known/agent-card.json', 'public/.well-known/mcp/server-card.json',
   'public/robots.txt', 'public/sitemap.xml', 'public/site.webmanifest',
-  'public/media/work/model-behavior-profile.jpg', 'public/media/work/yourself-to-science-800.webp',
+  'public/evidence/gray-swan-profile-2026-07-25.html', 'public/evidence/gray-swan-profile-2026-07-25.json',
+  'public/evidence/gray-swan-metrics-2026-07-25.svg', 'public/media/work/yourself-to-science-800.webp',
   'public/media/work/mdpi-filter-1-800.webp', 'public/media/work/mdpi-filter-2-800.webp',
   'public/media/work/wikimedia-clinical-overlap.svg'
 ];
@@ -108,6 +109,18 @@ for (const [field, actual, expected] of identityChecks) {
   if (actual !== expected) fail('data/source.js', 1, `${field} must equal ${JSON.stringify(expected)}; found ${JSON.stringify(actual)}.`);
 }
 
+const currentGraySwanChecks = [
+  ['redTeamActivity.asOf', D.redTeamActivity?.asOf, '25 July 2026'],
+  ['redTeamActivity.leaderboardRank', D.redTeamActivity?.leaderboardRank, 75],
+  ['redTeamActivity.platformReportedBreaks', D.redTeamActivity?.platformReportedBreaks, 110],
+  ['redTeamActivity.totalArenaSubmissions', D.redTeamActivity?.totalArenaSubmissions, 246],
+  ['redTeamActivity.globalUniqueBreaks', D.redTeamActivity?.globalUniqueBreaks, 27],
+  ['redTeamActivity.globalPoints', D.redTeamActivity?.globalPoints, 1090]
+];
+for (const [field, actual, expected] of currentGraySwanChecks) {
+  if (actual !== expected) fail('data/source.js', 1, `${field} must equal ${JSON.stringify(expected)}; found ${JSON.stringify(actual)}.`);
+}
+
 const focusGroup = (D.experience || []).find((item) => String(item.role || '').includes('Focus-Group'));
 if (!focusGroup) fail('data/source.js', 1, 'Named focus-group research experience is missing.');
 else {
@@ -123,6 +136,7 @@ for (const [name, command] of Object.entries(packageJson.scripts || {})) {
 }
 if (!String(packageJson.scripts?.deploy || '').startsWith('npm run build')) fail('package.json', 1, 'Deployment must begin with a successful production build.');
 if (!String(packageJson.scripts?.build || '').includes('verify-dist.js')) fail('package.json', 1, 'Production build must run generated-output verification.');
+if (!String(packageJson.scripts?.deploy || '').includes('--project-name=mariomarcolongo-pages')) fail('package.json', 1, 'Deployment must target the production Cloudflare Pages project.');
 
 const indexSource = fs.readFileSync(path.join(ROOT, 'src/pages/index.astro'), 'utf8');
 const portfolioSource = fs.readFileSync(path.join(ROOT, 'data/portfolio-human.js'), 'utf8');
@@ -138,16 +152,17 @@ for (const requiredText of [
   'A diagram that became a reusable public reference.',
   'Start with the role you are hiring for.',
   'AI evaluation and scientific evidence roles.',
-  '#77 on the Proving Ground leaderboard',
+  '#75 on the Proving Ground leaderboard',
   'Fact-checking scientific productions before publication.',
   'At least 59 published outputs supported',
   'PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh',
-  'PLUXju4zC0Sks'
+  'PLUXju4zC0Sks',
+  'Official Entropy for Life website'
 ]) {
   if (!homepageSource.includes(requiredText)) fail('src/pages/index.astro', 1, `Homepage is missing current artifact-led portfolio content: ${requiredText}`);
 }
 for (const requiredMedia of [
-  '/media/work/model-behavior-profile.jpg', 'https://entropyforlife.it/wp-content/uploads/2024/10/Dashboard-1-5-png.webp',
+  '/evidence/gray-swan-metrics-2026-07-25.svg', 'https://entropyforlife.it/wp-content/uploads/2024/10/Dashboard-1-5-png.webp',
   '/media/work/yourself-to-science-800.webp', '/media/work/mdpi-filter-1-800.webp',
   '/media/work/mdpi-filter-2-800.webp', '/media/work/wikimedia-clinical-overlap.svg'
 ]) {

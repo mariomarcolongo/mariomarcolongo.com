@@ -24,10 +24,26 @@
       "totalBreaks": 110,
       "weeksActive": 0,
       "progressByArea": {
-        "chat": { "breaks": 36, "available": 552, "displayedPercent": 7 },
-        "image": { "breaks": 32, "available": 387, "displayedPercent": 8 },
-        "agent": { "breaks": 28, "available": 593, "displayedPercent": 5 },
-        "indirect": { "breaks": 13, "available": 547, "displayedPercent": 2 }
+        "chat": {
+          "breaks": 36,
+          "available": 552,
+          "displayedPercent": 7
+        },
+        "image": {
+          "breaks": 32,
+          "available": 387,
+          "displayedPercent": 8
+        },
+        "agent": {
+          "breaks": 28,
+          "available": 593,
+          "displayedPercent": 5
+        },
+        "indirect": {
+          "breaks": 13,
+          "available": 547,
+          "displayedPercent": 2
+        }
       }
     },
     "arenaProfile": {
@@ -39,12 +55,30 @@
     }
   },
   "notes": [
-    "The four displayed Proving Ground area counters sum to 109 while the platform displays 110 Total Breaks. Both values are transcribed exactly; no internal aggregation rule is inferred.",
-    "Rankings, percentiles, points, and totals are dynamic. Portfolio claims should cite this snapshot date.",
-    "This current snapshot is a portfolio-hosted screenshot supplied by the account holder. The previous 24 July 2026 snapshot remains separately preserved through Perma.cc and a locally verified WACZ package."
+    "The four displayed Proving Ground area counters in the later screenshot sum to 109 while the platform displays 110 Total Breaks. Both values are transcribed exactly; no internal aggregation rule is inferred.",
+    "A same-day WACZ capture at 17:09 UTC records #75, top 6%, and 109 total breaks before the later screenshot recorded 110. This documents the profile changing during the day.",
+    "Rankings, percentiles, points, and totals are dynamic. Portfolio claims should cite the snapshot date and, where precision matters, the capture time.",
+    "The current screenshot and locally retained WACZ are account-holder-preserved evidence, not attestations issued by Gray Swan."
   ],
   "previousSnapshot": {
     "evidencePage": "https://mariomarcolongo.com/evidence/gray-swan-profile-2026-07-24.html",
     "permaCapture": "https://perma.cc/U8TY-PWYA"
+  },
+  "sameDayWacz": {
+    "capturedUtc": "2026-07-25T17:09:22.921Z",
+    "packageModifiedUtc": "2026-07-25T17:39:08.982Z",
+    "waczVersion": "1.1.1",
+    "software": "Webrecorder ArchiveWeb.page 0.16.2, using warcio.js 2.4.10",
+    "packageSha256": "1bce44f1fb2a15dfeac79ee500a6fe3b2ac2d9187576acebdd9b873c81cdc983",
+    "displayedMetrics": {
+      "provingGroundRank": 75,
+      "percentileLabel": "top 6%",
+      "totalBreaks": 109,
+      "arenaRank": 372,
+      "globalUniqueBreaks": 26,
+      "globalPoints": 1080,
+      "totalSubmissions": 245
+    },
+    "scope": "Locally retained WACZ package captured roughly two hours before the later screenshot; it corroborates the rank and percentile but records the immediately preceding totals."
   }
 }

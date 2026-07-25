@@ -8,14 +8,14 @@
 const MARIO_DOSSIER = {
   identity: {
     name: "Mario Marcolongo",
-    buildVersion: "v2026.07.21",
+    buildVersion: "v2026.07.25",
     enaAccession: "PRJEB109744",
     enaUrl: "https://www.ebi.ac.uk/ena/browser/view/PRJEB109744",
     centralAuth: "https://commons.wikimedia.org/wiki/Special:CentralAuth/Digressivo",
     grayswanId: "6a57be70d15e123775a1e9cf",
     grayswanUrl: "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
-    grayswanArchiveUrl: "/evidence/gray-swan-2026-07-24/",
-    evaluationAsOf: "24 July 2026",
+    grayswanArchiveUrl: "/evidence/gray-swan-profile-2026-07-25.html",
+    evaluationAsOf: "25 July 2026",
     jobTitle: "AI Evaluation & Research Operations Specialist",
     secondaryTitle: "Model Behavior · Scientific Evidence · Knowledge Integrity · Open Science & Data Quality",
     headline: "I evaluate model behavior, verify scientific evidence, and operate research systems.",
@@ -59,9 +59,9 @@ const MARIO_DOSSIER = {
       icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>`,
       title: "Model Behavior & Adversarial Testing",
       lead: "Structured, self-directed probing of LLM and multimodal-system behavior across chat, image, tool-use and indirect prompt-injection challenges.",
-      desc: "The dated Gray Swan Proving Ground record shows #77 on the leaderboard (top 7%) on 24 July 2026, with 105 leaderboard-counted breaks across 232 Proving Ground submissions. The record demonstrates sustained evaluation activity; it is not an independent security audit or certification.",
+      desc: "The dated Gray Swan profile shows Proving Ground rank #75 (top 6%) with 110 platform-recorded total breaks on 25 July 2026. The same screenshot shows Arena rank #370, 27 global unique breaks, 1,090 points and 246 submissions. The record demonstrates sustained evaluation activity; it is not an independent security audit or certification.",
       highlights: [
-        { label: "Leaderboard-Counted Activity", detail: "#77 · top 7% · 105 breaks across 26 waves on 24 July 2026" },
+        { label: "Leaderboard-Counted Activity", detail: "#75 · top 6% · 110 platform-recorded breaks on 25 July 2026" },
         { label: "Testing Surfaces", detail: "Chat, multimodal/image, agentic tool-use and indirect prompt injection" }
       ]
     },
@@ -101,8 +101,8 @@ const MARIO_DOSSIER = {
   ],
 
   stats: [
-    { value: "105", label: "Leaderboard-Counted Model Breaks", detail: "#77 · top 7% · 26 Proving Ground waves · 24 July 2026" },
-    { value: "232", label: "Proving Ground Submissions", detail: "242 total Arena submissions shown separately on the dated profile" },
+    { value: "110", label: "Platform-Recorded Proving Ground Breaks", detail: "#75 · top 6% · 25 July 2026" },
+    { value: "246", label: "Arena Submissions", detail: "Arena rank #370 · 27 global unique breaks · 1,090 points" },
     { value: "55+", label: "Research Initiatives Indexed", detail: "Clinical studies, biobanks, donation programs, registries and other research initiatives" },
     { value: "55+ Videos & 4 Articles", label: "Paid Scientific Verification", detail: "Primary-source research and fact-checking for Entropy for Life" },
     { value: "4,317", label: "Auditable Wikimedia Contributions", detail: "Public contributions across Wikipedia, Wikidata and Wikimedia Commons as of July 2026" }
@@ -113,7 +113,7 @@ const MARIO_DOSSIER = {
       id: "ai-red-teaming",
       title: "Model Behavior & Adversarial Evaluation",
       oneLiner: "Public aggregate record of self-directed model-behavior evaluation across chat, multimodal, agentic tool-use and indirect prompt-injection challenges.",
-      description: "Self-directed model-behavior evaluation conducted through the Gray Swan Proving Ground. The dated record shows #77 on the Proving Ground leaderboard, top 7%, with 105 leaderboard-counted breaks across 232 Proving Ground submissions and 26 listed waves. Aggregate counts and selected public labels are presented with explicit evidence limitations; complete prompts, outputs, model versions and adjudication materials are not reproduced.",
+      description: "Self-directed model-behavior evaluation conducted through the Gray Swan Proving Ground. The dated 25 July 2026 screenshot shows Proving Ground rank #75, top 6%, with 110 platform-recorded total breaks; the same profile shows Arena rank #370, 27 global unique breaks, 1,090 points and 246 submissions. Aggregate counts and selected public labels are presented with explicit evidence limitations; complete prompts, outputs, model versions and adjudication materials are not reproduced.",
       role: "Model-Behavior Evaluator",
       tech: ["Adversarial Evaluation", "Prompt Injection", "Agentic Tool-Use", "Multimodal Safety", "Evidence-Bound Reporting"],
       links: {
@@ -121,8 +121,8 @@ const MARIO_DOSSIER = {
         profile: "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf"
       },
       highlights: [
-        "105 Leaderboard-Counted Model Breaks: #77 and top 7% on the dated Proving Ground snapshot",
-        "232 Proving Ground Submissions: 242 total Arena submissions are shown separately",
+        "110 Platform-Recorded Proving Ground Breaks: #75 and top 6% on the dated 25 July 2026 snapshot",
+        "Arena Profile Context: #370 rank, 27 global unique breaks, 1,090 points and 246 submissions",
         "Evidence Boundary: Platform-reported outcomes are separated from independent verification or security-certification claims"
       ]
     },
@@ -148,19 +148,20 @@ const MARIO_DOSSIER = {
     {
       id: "entropy-for-life",
       title: "Entropy for Life — Scientific Verification & Web Operations",
-      oneLiner: "Paid scientific fact-checker, writer, data visualizer and website manager supporting more than 55 videos and documentaries and four articles.",
-      description: "Conduct bibliographic research and verify primary literature for more than 55 videos and documentaries and four articles. Identify unsupported claims, conflicting evidence and source-quality problems; communicate corrections to a non-specialist production team. Manage OVHCloud hosting, DNS, SSL, WordPress configuration, layout and functionality changes, and technical SEO. Formally acknowledged in Giacomo Moro Mauretto’s Mondadori book Italiani veri.",
-      role: "Scientific Fact-Checker, Writer & Website Manager",
-      tech: ["Primary-Source Fact-Checking", "Bibliographic Research", "Scientific Writing", "WordPress", "DNS/SSL", "Technical SEO"],
+      oneLiner: "Paid scientific research, fact-checking, script-development, visual-production and website-operations work across 59+ published projects.",
+      description: "Paid contractor for Entropy for Life across 59+ publicly indexed projects: 55+ published YouTube video projects and four co-authored articles. Most video assignments combine primary-literature research, scientific fact-checking and script development; selected assignments focus on fact-checking and/or data visualization. Also produce data visualizations, presentation slides, on-screen assets, short-form materials and selected thumbnails independently or with video editor Alessandro Lanzoni. Additional Instagram and TikTok work is not yet fully indexed. Manage OVHCloud hosting, DNS, SSL, WordPress configuration, layout and functionality changes, and technical SEO. Formally acknowledged in Giacomo Moro Mauretto’s Mondadori book Italiani veri.",
+      role: "Scientific Research, Fact-Checking & Website Operations Contractor",
+      tech: ["Primary-Literature Research", "Scientific Fact-Checking", "Script Development", "Data Visualization & Presentation Design", "WordPress", "DNS/SSL", "Technical SEO"],
       links: {
         website: "https://entropyforlife.it",
         playlist: "https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh",
-        authorPage: "https://entropyforlife.it/autore/mario-marcolongo/"
+        authorPage: "https://entropyforlife.it/autore/mario-marcolongo/",
+        thumbnails: "https://www.youtube.com/playlist?list=PLUXju4zC0Sks"
       },
       highlights: [
-        "55+ Videos and Documentaries: Primary literature researched and checked",
-        "Four Published Articles: Scientific writing and evidence verification",
-        "Operational Responsibility: Hosting, DNS, SSL, WordPress and technical SEO"
+        "55+ Published YouTube Projects: Primary literature researched, checked and developed into scripts",
+        "Four Co-Authored Articles: Scientific writing and evidence verification",
+        "Visual & Website Operations: Slides, on-screen assets, selected thumbnails, hosting, DNS/SSL, WordPress and technical SEO"
       ]
     },
     {
@@ -276,14 +277,20 @@ const MARIO_DOSSIER = {
 
   redTeamActivity: {
     platform: "Gray Swan AI Proving Ground",
-    asOf: "24 July 2026",
-    rankBand: "#77 · Top 7%",
-    leaderboardRank: 77,
+    asOf: "25 July 2026",
+    rankBand: "#75 · Top 6%",
+    leaderboardRank: 75,
+    platformReportedBreaks: 110,
+    areaBreaks: { chat: 36, image: 32, agent: 28, indirect: 13 },
+    areaBreaksTotal: 109,
+    arenaRank: 370,
+    globalUniqueBreaks: 27,
+    globalPoints: 1090,
     submissions: 232,
-    totalArenaSubmissions: 242,
+    totalArenaSubmissions: 246,
     previousChats: 953,
     confirmedBreaks: 105,
-    profileReportedBreaks: 106,
+    profileReportedBreaks: 110,
     publicLabels: ["damage-property", "toxic-plant", "package-theft-image"],
     waves: [
       { wave: 1, breaks: 14, available: 67 },
@@ -339,7 +346,7 @@ const MARIO_DOSSIER = {
       role: "Model-Behavior Evaluator",
       org: "Independent practice · Gray Swan Proving Ground participant",
       tag: "Independent practice",
-      period: "2023 — Present",
+      period: "Jul 2026 — Present",
       links: {
         caseStudy: "/security.html",
         profile: "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
@@ -347,32 +354,33 @@ const MARIO_DOSSIER = {
       },
       bullets: [
         "Conduct self-directed testing of LLM instruction handling, policy boundaries and edge cases across chat, image, agentic tool-use and indirect prompt-injection settings.",
-        "Reached #77 on the Proving Ground leaderboard (top 7%) with 105 leaderboard-counted breaks across 232 Proving Ground submissions and 26 listed waves on 24 July 2026.",
+        "Reached #75 on the Proving Ground leaderboard (top 6%) with 110 platform-recorded total breaks on 25 July 2026; the same profile showed Arena rank #370, 27 global unique breaks, 1,090 points and 246 submissions.",
         "Document platform-reported outcomes conservatively, separating public evidence from independent verification, security certification or model-wide conclusions."
       ],
       resumeBullets: [
         "Conduct self-directed adversarial testing across chat, multimodal, agentic tool-use and indirect prompt-injection settings.",
-        "Reached #77 on the Proving Ground leaderboard (top 7%) with 105 leaderboard-counted breaks across 232 Proving Ground submissions and 26 listed waves on 24 July 2026."
+        "Reached #75 on the Proving Ground leaderboard (top 6%) with 110 platform-recorded total breaks on 25 July 2026; the same profile showed Arena rank #370, 27 global unique breaks, 1,090 points and 246 submissions."
       ]
     },
     {
-      role: "Scientific Fact-Checker, Writer & Website Manager",
+      role: "Scientific Research, Fact-Checking & Website Operations Contractor",
       org: "Entropy for Life — Italy",
       tag: "Independent contractor",
       period: "Jun 2023 — Present",
       links: {
         website: "https://entropyforlife.it",
         playlist: "https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh",
-        authorPage: "https://entropyforlife.it/autore/mario-marcolongo/"
+        authorPage: "https://entropyforlife.it/autore/mario-marcolongo/",
+        thumbnails: "https://www.youtube.com/playlist?list=PLUXju4zC0Sks"
       },
       bullets: [
-        "Conduct bibliographic research and verify primary literature for more than 55 videos and documentaries and four articles.",
-        "Identify unsupported claims, conflicting evidence and source-quality problems and communicate corrections within a small recurring team consisting primarily of Giacomo Moro Mauretto, the video editor and me.",
-        "Manage OVHCloud hosting, DNS, SSL, WordPress configuration, layout and functionality changes, and technical SEO.",
+        "Deliver primary-literature research, scientific fact-checking and script development across 55+ published YouTube video projects and four co-authored articles; most video assignments combine all three functions, while selected work focuses on fact-checking and/or data visualization.",
+        "Produce data visualizations, presentation slides and on-screen assets, short-form materials and selected thumbnails independently or with video editor Alessandro Lanzoni; additional Instagram and TikTok work is not yet fully indexed.",
+        "Manage OVHCloud hosting, DNS, SSL, WordPress configuration, layout and functionality changes, and technical SEO as website operations rather than conventional independent software development.",
         "Formally acknowledged in Giacomo Moro Mauretto’s Mondadori book Italiani veri for scientific-literature research and error detection."
       ],
       resumeBullets: [
-        "Conduct bibliographic research and verify primary literature for more than 55 videos and documentaries and four articles.",
+        "Deliver primary-literature research, scientific fact-checking and script development across 55+ published YouTube video projects and four co-authored articles; most video assignments combine all three functions, while selected work focuses on fact-checking and/or data visualization.",
         "Identify unsupported claims and source-quality problems; manage WordPress, hosting, DNS/SSL and technical SEO; formally acknowledged in the Mondadori book Italiani veri."
       ]
     },
