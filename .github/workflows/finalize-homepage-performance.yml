@@ -1,4 +1,5 @@
 name: Finalize homepage performance
+# Triggered after the workflow became available on the release branch.
 
 on:
   push:
