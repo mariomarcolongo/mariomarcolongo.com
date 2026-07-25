@@ -41,13 +41,10 @@ jobs:
           from pathlib import Path
           path = Path('src/pages/index.astro')
           text = path.read_text()
-          old = '''                loading={index === 0 ? "eager" : "lazy"}
-                decoding="async"'''
-          new = '''                loading={index < 2 ? "eager" : "lazy"}
-                fetchpriority={index < 2 ? "high" : "auto"}
-                decoding="async"'''
+          old = 'loading={index === 0 ? "eager" : "lazy"}'
+          new = 'loading={index < 2 ? "eager" : "lazy"}\n                fetchpriority={index < 2 ? "high" : "auto"}'
           if text.count(old) != 1:
-              raise SystemExit(f'Expected one hero-image loading block, found {text.count(old)}')
+              raise SystemExit(f'Expected one hero-image loading attribute, found {text.count(old)}')
           path.write_text(text.replace(old, new, 1))
           PY
 
