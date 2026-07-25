@@ -59,13 +59,15 @@ jobs:
       - name: Check patch formatting
         run: git diff --check
 
-      - name: Upload verification screenshots, logs and PDFs
+      - name: Upload verification screenshots, logs, generated HTML and PDFs
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: verification-output
           path: |
             audit-output/**/*
+            dist/index.html
+            dist/security.html
             Mario Marcolongo — AI Evaluation & Model Behavior CV.pdf
             Mario Marcolongo — Scientific AI Quality & Research Data CV.pdf
             Mario Marcolongo — Research Editorial & Community Operations CV.pdf
