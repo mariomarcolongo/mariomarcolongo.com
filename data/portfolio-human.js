@@ -28,18 +28,18 @@ const PORTFOLIO_HUMAN = {
     {
       id: "model-record",
       label: "AI evaluation",
-      title: "Gray Swan Proving Ground profile",
-      image: "/evidence/gray-swan-metrics-2026-07-25.svg",
-      alt: "Gray Swan Arena profile screenshot showing Mario Marcolongo ranked number 75 in Proving Ground, top 6 percent, with 110 total breaks",
+      title: "Gray Swan evaluation record",
+      image: "/media/work/gray-swan-summary-2026-07-25.svg",
+      alt: "Dated Gray Swan activity summary showing Proving Ground rank 75, top 6 percent and 110 total breaks, with Arena metrics shown separately",
       href: "/security.html"
     },
     {
       id: "entropy",
       label: "Scientific fact-checking",
-      title: "Published scientific work",
-      image: "/media/work/entropy-dashboard-800.webp",
-      alt: "Published scientific visualization by Mario Marcolongo for Entropy for Life",
-      href: "https://entropyforlife.it/autore/mario-marcolongo/"
+      title: "59+ published projects supported",
+      image: "/media/work/entropy-work-overview.svg",
+      alt: "Entropy for Life contribution overview showing more than 55 YouTube video projects, four co-authored articles and the roles contributed across outputs",
+      href: "https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh"
     },
     {
       id: "research-directory",
@@ -94,9 +94,9 @@ const PORTFOLIO_HUMAN = {
       boundary: "This supports model-evaluation and adversarial-QA work. It is not presented as penetration testing or senior red-team engineering.",
       href: "/security.html",
       linkLabel: "Open the evaluation record",
-      image: "/evidence/gray-swan-metrics-2026-07-25.svg",
-      alt: "Gray Swan Arena profile screenshot showing Mario Marcolongo's Proving Ground rank, percentile, break count and activity",
-      imageCaption: "Real platform profile · #75 · top 6% · 110 total breaks · dated 25 July 2026",
+      image: "/media/work/gray-swan-summary-2026-07-25.svg",
+      alt: "Dated summary of Mario Marcolongo's Gray Swan Proving Ground and Arena activity, with the two metric sets presented separately",
+      imageCaption: "Dated platform summary · #75 · top 6% · 110 Proving Ground breaks",
       tone: "blue"
     },
     {
@@ -110,8 +110,8 @@ const PORTFOLIO_HUMAN = {
       boundary: "Final wording, editing and publication remain with the team. The current thumbnail playlist includes work created predominantly or entirely by me and work developed collaboratively with the video editor; direction-only thumbnails are not yet included.",
       href: "https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh",
       linkLabel: "Open the YouTube contribution playlist",
-      mediaHref: "https://entropyforlife.it/autore/mario-marcolongo/",
-      mediaLinkLabel: "Open the published article and visualization archive",
+      mediaHref: "https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh",
+      mediaLinkLabel: "Open the 55+ YouTube contribution playlist",
       links: [
         {
           label: "YouTube contribution playlist",
@@ -130,9 +130,9 @@ const PORTFOLIO_HUMAN = {
           href: "https://entropyforlife.it"
         }
       ],
-      image: "/media/work/entropy-dashboard-800.webp",
-      alt: "Published scientific visualization by Mario Marcolongo for Entropy for Life",
-      imageCaption: "Published output · article, data visualization and source review",
+      image: "/media/work/entropy-work-overview.svg",
+      alt: "Contribution overview for Mario Marcolongo's Entropy for Life work, separating more than 55 video projects from four co-authored articles and listing the varying production roles",
+      imageCaption: "59+ published projects · 55+ video projects · 4 articles · roles attributed per output",
       tone: "red"
     },
     {
@@ -272,3 +272,5 @@ const PORTFOLIO_HUMAN = {
 if (typeof module !== "undefined" && module.exports) {
   module.exports = PORTFOLIO_HUMAN;
 }
+
+export default PORTFOLIO_HUMAN;
