@@ -1,10 +1,16 @@
 name: Finalize homepage performance
-# Triggered after the workflow became available on the release branch.
 
 on:
   push:
     branches:
       - release/application-ready-2026-07-25
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - reopened
+      - synchronize
   workflow_dispatch:
 
 permissions:
