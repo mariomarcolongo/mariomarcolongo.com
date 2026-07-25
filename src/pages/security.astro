@@ -55,7 +55,7 @@ const evaluationJsonLd = {
   name: title,
   description,
   url: "https://mariomarcolongo.com/security.html",
-  dateModified: "2026-07-25",
+  dateModified: "2026-07-26",
   author: { "@id": "https://mariomarcolongo.com/#person" },
   about: { "@type": "Thing", name: "AI evaluation and model behavior" },
   citation: [D.identity.grayswanUrl, archiveUrl]
@@ -143,15 +143,15 @@ const evaluationJsonLd = {
     <section class="evaluation-section" id="public-evidence">
       <div class="evaluation-section-head">
         <h2>Publicly inspectable evidence</h2>
-        <p>The live Gray Swan profile is the primary source. The latest dated evidence page preserves a real screenshot showing #75, top 6% and 110 total breaks, while keeping the Arena profile metrics separate. It also records that the four visible area counters sum to 109 rather than silently inferring an aggregation rule.</p>
+        <p>The live Gray Swan profile is the primary source. The latest dated evidence page records the later 25 July metrics, the original screenshot hash and capture metadata, while keeping Proving Ground and Arena figures separate. It also records that the four visible area counters sum to 109 rather than silently inferring an aggregation rule.</p>
       </div>
 
       <div class="evaluation-grid">
         <article class="evaluation-card">
           <div class="evaluation-step">DATED PROFILE EVIDENCE</div>
-          <h3>25 July 2026 platform snapshot</h3>
-          <p>Real platform screenshot preserving #75, top 6%, 110 Proving Ground total breaks, Arena rank #370, 27 global unique breaks, 1,090 points and 246 submissions.</p>
-          <img src="/evidence/gray-swan-metrics-2026-07-25.svg" width="1200" height="593" alt="Gray Swan profile screenshot showing rank 75, top 6 percent and 110 Proving Ground total breaks, alongside Arena metrics" style="display:block;width:100%;height:auto;margin-top:1rem;border-radius:.75rem" />
+          <h3>25 July 2026 evidence summary</h3>
+          <p>Dated record for #75, top 6%, 110 Proving Ground total breaks, Arena rank #370, 27 global unique breaks, 1,090 points and 246 submissions.</p>
+          <img src="/media/work/gray-swan-summary-2026-07-25.svg" width="1200" height="760" alt="Dated Gray Swan activity summary showing Proving Ground and Arena metrics separately" style="display:block;width:100%;height:auto;margin-top:1rem;border-radius:.75rem" />
           <p><a class="p5-link" href={archiveUrl}>Open the dated evidence page →</a></p>
         </article>
         {(D.redTeamActivity.publicLabels || []).map((label) => (
