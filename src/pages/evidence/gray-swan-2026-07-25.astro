@@ -7,7 +7,7 @@ import release from "../../../data/release-data.js";
 
 const { D, GS } = release;
 const title = "Gray Swan Proving Ground Evidence — 25 July 2026";
-const description = "Dated Gray Swan profile screenshot showing Mario Marcolongo at Proving Ground rank 75, top 6%, with 110 total breaks and separate Arena profile metrics.";
+const description = "Dated Gray Swan evidence summary for Mario Marcolongo: Proving Ground rank 75, top 6%, 110 total breaks, separate Arena metrics and preserved capture metadata.";
 const evidenceJsonLd = {
   "@context": "https://schema.org",
   "@type": "DigitalDocument",
@@ -15,13 +15,21 @@ const evidenceJsonLd = {
   description,
   url: "https://mariomarcolongo.com/evidence/gray-swan-2026-07-25/",
   dateCreated: "2026-07-25T19:19:07Z",
+  dateModified: "2026-07-26",
   author: { "@id": "https://mariomarcolongo.com/#person" },
   isBasedOn: D.identity.grayswanUrl,
-  encoding: {
-    "@type": "MediaObject",
-    contentUrl: "https://mariomarcolongo.com/evidence/gray-swan-profile-2026-07-25.png",
-    encodingFormat: "image/png"
-  }
+  encoding: [
+    {
+      "@type": "MediaObject",
+      contentUrl: "https://mariomarcolongo.com/media/work/gray-swan-summary-2026-07-25.svg",
+      encodingFormat: "image/svg+xml"
+    },
+    {
+      "@type": "MediaObject",
+      contentUrl: "https://mariomarcolongo.com/evidence/gray-swan-profile-2026-07-25.json",
+      encodingFormat: "application/json"
+    }
+  ]
 };
 ---
 
@@ -35,21 +43,22 @@ const evidenceJsonLd = {
   <main class="evaluation-shell">
     <section class="evaluation-hero">
       <div>
-        <div class="evaluation-eyebrow">Dated platform snapshot · 25 July 2026</div>
+        <div class="evaluation-eyebrow">Dated platform record · 25 July 2026</div>
         <h1 class="evaluation-title">Gray Swan profile evidence.</h1>
         <p class="evaluation-lede">
-          The user-supplied screenshot visibly displays Proving Ground rank #{GS.rank}, {GS.percentile.toLowerCase()} and {GS.totalBreaks} Total Breaks. It also preserves the separate Arena profile metrics: rank #{GS.arenaRank}, {GS.arenaUniqueBreaks} global unique breaks, {GS.arenaPoints.toLocaleString("en-US")} points and {GS.arenaSubmissions} submissions.
+          The account-holder capture displayed Proving Ground rank #{GS.rank}, {GS.percentile.toLowerCase()} and {GS.totalBreaks} Total Breaks. It also recorded the separate Arena metrics: rank #{GS.arenaRank}, {GS.arenaUniqueBreaks} global unique breaks, {GS.arenaPoints.toLocaleString("en-US")} points and {GS.arenaSubmissions} submissions.
         </p>
         <div class="career-actions">
           <a class="btn btn-primary" href={D.identity.grayswanUrl} target="_blank" rel="noopener noreferrer">Open live Gray Swan profile ↗</a>
           <a class="btn" href="/security.html">Read the evaluation record</a>
+          <a class="btn" href="/evidence/gray-swan-profile-2026-07-25.html">Open preservation manifest</a>
           <a class="btn" href="/evidence/gray-swan-2026-07-24/">Previous preserved snapshot</a>
         </div>
       </div>
 
       <aside class="evaluation-scope-note">
-        <strong>Preservation status</strong>
-        <p>This current screenshot is hosted with the portfolio and is not a Gray Swan-issued attestation. The preceding 24 July snapshot remains separately preserved through Perma.cc and a locally verified WACZ package.</p>
+        <strong>Evidence boundary</strong>
+        <p>The visible graphic below is a legible vector summary of transcribed metrics, not a recreated platform screenshot. The source filename, dimensions, timestamp and SHA-256 are recorded in the preservation manifest; the live profile and previous archived snapshot remain linked separately.</p>
       </aside>
     </section>
 
@@ -73,22 +82,26 @@ const evidenceJsonLd = {
 
     <section class="evaluation-section">
       <div class="evaluation-section-head">
-        <h2>The complete platform view</h2>
-        <p>The full screenshot is shown directly, with no synthetic reconstruction of the metrics.</p>
+        <h2>Legible dated summary</h2>
+        <p>The summary keeps Proving Ground and Arena metrics separate and states the visible 109/110 aggregation discrepancy rather than hiding it.</p>
       </div>
       <figure style="margin:0">
-        <a href="/evidence/gray-swan-profile-2026-07-25.png" aria-label="Open the full-resolution Gray Swan screenshot">
-          <img src="/evidence/gray-swan-profile-2026-07-25.png" alt={`Full Gray Swan Arena profile screenshot showing Mario Marcolongo at Proving Ground rank ${GS.rank}, ${GS.percentile.toLowerCase()}, with ${GS.totalBreaks} total breaks`} width="2047" height="1162" style="display:block;width:100%;height:auto;border:1px solid rgba(127,127,127,.3);border-radius:18px;background:#101216" />
+        <a href="/media/work/gray-swan-summary-2026-07-25.svg" aria-label="Open the Gray Swan evidence summary at full size">
+          <img src="/media/work/gray-swan-summary-2026-07-25.svg" alt={`Dated Gray Swan activity summary showing Proving Ground rank ${GS.rank}, ${GS.percentile.toLowerCase()}, ${GS.totalBreaks} total breaks and separate Arena metrics`} width="1200" height="760" style="display:block;width:100%;height:auto;border:1px solid rgba(127,127,127,.3);border-radius:18px;background:#101216" />
         </a>
         <figcaption style="margin-top:12px;line-height:1.6">
-          Captured locally on 25 July 2026 at 21:19:07 Europe/Rome. Original dimensions: 2047 × 1162 pixels.
+          Summary generated from the metrics recorded in the 25 July account-holder capture. It is intentionally optimized for portfolio-scale readability.
         </figcaption>
       </figure>
+      <div class="career-actions" style="margin-top:18px">
+        <a class="btn" href="/evidence/gray-swan-profile-2026-07-25.html">Preservation manifest and capture chain</a>
+        <a class="btn" href="/evidence/gray-swan-profile-2026-07-25.json">Machine-readable evidence JSON</a>
+      </div>
     </section>
 
     <section class="evaluation-section">
       <div class="evaluation-section-head">
-        <h2>Values transcribed from the screenshot</h2>
+        <h2>Values transcribed from the capture</h2>
         <p>Arena and Proving Ground use separate ranking and activity systems. They are kept separate below to avoid presenting rank #370 and rank #75 as contradictory measurements.</p>
       </div>
       <div class="evaluation-grid">
