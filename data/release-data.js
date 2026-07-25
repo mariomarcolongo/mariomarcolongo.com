@@ -203,10 +203,10 @@ H.proofMoments[1] = {
 const grayHero = findById(H.heroMedia, "model-record");
 if (grayHero) {
   grayHero.title = `#${GS.rank} · ${GS.percentile} · ${GS.totalBreaks} breaks`;
-  grayHero.image = "/media/work/model-behavior-profile.webp";
+  grayHero.image = "/media/work/gray-swan-summary-2026-07-25.svg";
   delete grayHero.imageSet;
   grayHero.alt =
-    `Gray Swan profile screenshot showing Mario Marcolongo at Proving Ground rank ${GS.rank}, ${GS.percentile.toLowerCase()}, with ${GS.totalBreaks} total breaks`;
+    `Dated Gray Swan evaluation summary showing Proving Ground rank ${GS.rank}, ${GS.percentile.toLowerCase()}, ${GS.totalBreaks} total breaks and separate Arena activity metrics`;
   grayHero.href = "/security.html";
 }
 const entropyHero = findById(H.heroMedia, "entropy");
@@ -227,10 +227,10 @@ if (modelCase) {
   modelCase.boundary =
     `The four visible area counters sum to ${GS.displayedAreaTotal} while the profile displays ${GS.totalBreaks} total breaks. Both are reported without inferring the platform’s internal aggregation. This supports evaluation and adversarial-QA applications, not penetration-testing or senior red-team engineering claims.`;
   modelCase.href = "/security.html";
-  modelCase.image = "/media/work/model-behavior-profile.webp";
+  modelCase.image = "/media/work/gray-swan-summary-2026-07-25.svg";
   modelCase.alt =
-    `Gray Swan Arena profile screenshot showing rank ${GS.rank}, ${GS.percentile.toLowerCase()}, ${GS.totalBreaks} total breaks and Arena activity`;
-  modelCase.imageCaption = `Real platform profile · #${GS.rank} · ${GS.percentile.toLowerCase()} · ${GS.asOf}`;
+    `Dated Gray Swan evaluation summary showing Proving Ground rank ${GS.rank}, ${GS.percentile.toLowerCase()}, ${GS.totalBreaks} total breaks and separate Arena metrics`;
+  modelCase.imageCaption = `Dated platform summary · #${GS.rank} · ${GS.percentile.toLowerCase()} · ${GS.asOf}`;
 }
 
 const entropyCase = findById(H.cases, "scientific-verification");
