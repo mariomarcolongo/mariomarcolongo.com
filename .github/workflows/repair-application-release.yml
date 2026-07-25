@@ -1,10 +1,12 @@
 name: Repair application release
-# Triggered after the workflow became available on the release branch.
 
 on:
   push:
     branches:
       - release/application-ready-2026-07-25
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
