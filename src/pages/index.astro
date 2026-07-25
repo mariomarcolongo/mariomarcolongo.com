@@ -70,8 +70,7 @@ const isExternal = (href) => href.startsWith("http");
                 alt={item.alt}
                 width="800"
                 height="520"
-                loading={index < 2 ? "eager" : "lazy"}
-                fetchpriority={index < 2 ? "high" : "auto"}
+                loading={index === 0 ? "eager" : "lazy"}
                 decoding="async"
               />
             </picture>
@@ -241,60 +240,99 @@ const isExternal = (href) => href.startsWith("http");
       </div>
     </section>
 
-    <section class="v8-experience" id="experience" aria-labelledby="experience-title">
-      <header data-reveal>
-        <div class="v8-kicker">Experience</div>
-        <h2 id="experience-title">Selected roles and recurring work.</h2>
+    <section class="v8-section v8-experience" id="experience" aria-labelledby="experience-title">
+      <header class="v8-section-head" data-reveal>
+        <div>
+          <div class="v8-kicker">Experience</div>
+          <h2 id="experience-title">Relevant experience.</h2>
+        </div>
+        <p>The targeted CVs carry the full application detail.</p>
       </header>
       <div class="v8-experience-list">
         {selectedExperience.map((item) => (
           <article data-reveal>
+            <time>{item.period}</time>
             <div>
-              <span>{item.period}</span>
-              <strong>{item.tag}</strong>
+              <h3>{item.role}</h3>
+              <p><strong>{item.org}</strong> · {item.resumeBullets?.[0] || item.bullets?.[0]}</p>
             </div>
-            <h3>{item.role}</h3>
-            <p>{item.org}</p>
-            <ul>{item.bullets.slice(0, 2).map((bullet) => <li>{bullet}</li>)}</ul>
           </article>
         ))}
       </div>
     </section>
 
-    <section class="v8-section v8-documents" id="documents" data-testid="human-documents" aria-labelledby="documents-title">
-      <header data-reveal>
-        <div class="v8-kicker">Application documents</div>
-        <h2 id="documents-title">Start with the role you are hiring for.</h2>
-        <p>Each application CV is exactly two A4 pages and uses the same evidence base with a different role hierarchy.</p>
+    <section class="v8-section v8-applications" id="applications" data-testid="human-documents" aria-labelledby="applications-title">
+      <header class="v8-section-head" data-reveal>
+        <div>
+          <div class="v8-kicker">Application documents</div>
+          <h2 id="applications-title">Start with the role you are hiring for.</h2>
+        </div>
+        <p>The AI evaluation CV is the recommended default. The others are deliberately tailored alternatives.</p>
       </header>
-      <div class="v8-document-grid">
-        {H.applicationDocuments.map((item) => (
-          <article data-reveal>
-            <span>{item.label}</span>
+
+      <div class="v8-documents">
+        {H.applicationDocuments.map((item, index) => (
+          <a class={`v8-document ${index === 0 ? "is-recommended" : ""}`} href={item.href} data-reveal>
+            <span>{item.recommendedFor}</span>
             <h3>{item.title}</h3>
-            <p>{item.body}</p>
-            <div>
-              <a href={item.href}>Open CV</a>
-              {item.pdfHref && <a href={item.pdfHref}>PDF</a>}
-            </div>
-          </article>
+            <p>{item.description}</p>
+            <small>Open CV <i aria-hidden="true">→</i></small>
+          </a>
         ))}
       </div>
     </section>
 
     <section class="v8-contact" id="contact" aria-labelledby="contact-title" data-reveal>
       <div>
-        <div class="v8-kicker">Contact</div>
+        <span>Current focus</span>
         <h2 id="contact-title">AI evaluation and scientific evidence roles.</h2>
-        <p>Open to remote or relocation-based roles in AI evaluation, scientific AI quality, research operations and knowledge integrity.</p>
+        <p>Especially model-behavior evaluation, scientific fact-checking, research-data quality and knowledge-integrity work.</p>
       </div>
-      <div class="v8-contact-actions">
-        <a class="v8-button v8-button-primary" href={`mailto:${D.identity.email}`}>Email Mario</a>
-        <a class="v8-text-link" href={D.identity.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn<span aria-hidden="true">↗</span></a>
-        <a class="v8-text-link" href={D.identity.github} target="_blank" rel="noopener noreferrer">GitHub<span aria-hidden="true">↗</span></a>
+      <div class="v8-actions">
+        <a class="v8-button v8-button-light" href={`mailto:${D.identity.email}`}>Email Mario</a>
+        <a class="v8-button v8-button-ghost" href={D.identity.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
     </section>
   </main>
 
   <SiteFooter version={D.identity.buildVersion} />
+
+  <script is:inline>
+    (() => {
+      document.documentElement.classList.add("v8-js");
+
+      const gallery = document.querySelector("[data-hero-gallery]");
+      if (gallery && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        let frame = 0;
+        gallery.addEventListener("pointermove", (event) => {
+          cancelAnimationFrame(frame);
+          frame = requestAnimationFrame(() => {
+            const rect = gallery.getBoundingClientRect();
+            const x = ((event.clientX - rect.left) / rect.width - 0.5) * 2;
+            const y = ((event.clientY - rect.top) / rect.height - 0.5) * 2;
+            gallery.style.setProperty("--gallery-x", x.toFixed(3));
+            gallery.style.setProperty("--gallery-y", y.toFixed(3));
+          });
+        });
+        gallery.addEventListener("pointerleave", () => {
+          gallery.style.setProperty("--gallery-x", "0");
+          gallery.style.setProperty("--gallery-y", "0");
+        });
+      }
+
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.08 });
+        document.querySelectorAll("[data-reveal]").forEach((element) => observer.observe(element));
+      } else {
+        document.querySelectorAll("[data-reveal]").forEach((element) => element.classList.add("is-visible"));
+      }
+    })();
+  </script>
 </Layout>
