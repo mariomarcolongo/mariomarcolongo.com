@@ -42,13 +42,27 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
-          path = Path('scripts/check-stale-strings.js')
-          text = path.read_text()
-          old = "'At least 59 published outputs supported'"
-          new = "'At least 59 published projects supported'"
-          if old not in text:
-              raise SystemExit('Expected stale Entropy assertion was not found')
-          path.write_text(text.replace(old, new, 1))
+
+          checks = Path('scripts/check-stale-strings.js')
+          text = checks.read_text()
+          text = text.replace(
+              "'At least 59 published outputs supported'",
+              "'At least 59 published projects supported'",
+          )
+          checks.write_text(text)
+
+          verify = Path('scripts/verify-dist.js')
+          text = verify.read_text()
+          text = text.replace(
+              "'/media/work/model-behavior-profile.jpg'",
+              "'/evidence/gray-swan-metrics-2026-07-25.svg'",
+              1,
+          )
+          text = text.replace(
+              "'Limitations and interpretation', 'Leaderboard-counted breaks', 'complete 26-wave activity table',\n  '/evidence/gray-swan-2026-07-24/', 'Open live Gray Swan profile', '105/106'",
+              "'Limitations and interpretation', 'Proving Ground total breaks', 'historical 24 July 26-wave activity table',\n  '/evidence/gray-swan-profile-2026-07-25.html', 'Open live Gray Swan profile', '109'",
+          )
+          verify.write_text(text)
           PY
 
       - name: Build and capture diagnostics
