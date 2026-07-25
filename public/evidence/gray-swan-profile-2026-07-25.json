@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "subject": {
+    "name": "Mario Marcolongo",
+    "platform": "Gray Swan Arena",
+    "profileUrl": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf"
+  },
+  "snapshot": {
+    "displayDate": "25 July 2026",
+    "capturedLocal": "2026-07-25T21:19:07+02:00",
+    "capturedUtc": "2026-07-25T19:19:07Z",
+    "timestampBasis": "Inferred from the user-supplied screenshot filename and Europe/Rome summer-time offset.",
+    "evidenceImage": "https://mariomarcolongo.com/evidence/gray-swan-metrics-2026-07-25.svg",
+    "originalScreenshot": {
+      "filename": "Screenshot 2026-07-25 at 21.19.07.png",
+      "pixelDimensions": "2047x1162",
+      "sha256": "07a2f84ab0d93905911258625dcb0f874ed8f5ba3b79ce060d41b3d0e2529ebd"
+    }
+  },
+  "metrics": {
+    "provingGround": {
+      "globalRank": 75,
+      "percentileLabel": "top 6%",
+      "totalBreaks": 110,
+      "weeksActive": 0,
+      "progressByArea": {
+        "chat": { "breaks": 36, "available": 552, "displayedPercent": 7 },
+        "image": { "breaks": 32, "available": 387, "displayedPercent": 8 },
+        "agent": { "breaks": 28, "available": 593, "displayedPercent": 5 },
+        "indirect": { "breaks": 13, "available": 547, "displayedPercent": 2 }
+      }
+    },
+    "arenaProfile": {
+      "globalRank": 370,
+      "globalUniqueBreaks": 27,
+      "globalPoints": 1090,
+      "submissions": 246,
+      "maximumStreakWeeks": 2
+    }
+  },
+  "notes": [
+    "The four displayed Proving Ground area counters sum to 109 while the platform displays 110 Total Breaks. Both values are transcribed exactly; no internal aggregation rule is inferred.",
+    "Rankings, percentiles, points, and totals are dynamic. Portfolio claims should cite this snapshot date.",
+    "This current snapshot is a portfolio-hosted screenshot supplied by the account holder. The previous 24 July 2026 snapshot remains separately preserved through Perma.cc and a locally verified WACZ package."
+  ],
+  "previousSnapshot": {
+    "evidencePage": "https://mariomarcolongo.com/evidence/gray-swan-profile-2026-07-24.html",
+    "permaCapture": "https://perma.cc/U8TY-PWYA"
+  }
+}

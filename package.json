@@ -2,7 +2,7 @@
   "name": "mariomarcolongo",
   "version": "2026.07.0",
   "private": true,
-  "description": "AI-Native Systems Builder, Open Science Technologist & Empirical Data Synthesizer portfolio and CV SSOT",
+  "description": "Scientific AI evaluation, research-data operations, open-science product delivery, and evidence-verification portfolio and CV",
   "scripts": {
     "dev": "node -r ./data/source-overrides-node.cjs scripts/generate-llm-dossiers.js && node scripts/patch-generated-content.js && astro dev",
     "build": "node -r ./data/source-overrides-node.cjs scripts/generate-llm-dossiers.js && astro build && node scripts/patch-generated-content.js && cp dist/index.html index.html && cp dist/cv.html cv.html",
