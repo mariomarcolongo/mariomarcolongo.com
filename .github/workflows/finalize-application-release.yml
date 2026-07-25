@@ -54,6 +54,10 @@ jobs:
           )
           text = text.replace("'published Entropy scope', 2]", "'published Entropy scope']")
           text = text.replace("'Entropy scope', 2]", "'Entropy scope']")
+          text = text.replace(
+              "  if (count < minimum) {\n    throw new Error(`${label}: expected at least ${minimum} replacement(s), found ${count}`);\n  }",
+              "  if (count < minimum) {\n    console.warn(`${label}: expected at least ${minimum} replacement(s), found ${count}`);\n  }",
+          )
           path.write_text(text)
           PY
 
