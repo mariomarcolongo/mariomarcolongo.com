@@ -1,0 +1,121 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SiteNav from "../../components/SiteNav.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+import "../../styles/career-v2.css";
+import release from "../../../data/release-data.js";
+
+const { D, GS } = release;
+const title = "Gray Swan Proving Ground Evidence — 25 July 2026";
+const description = "Dated Gray Swan profile screenshot showing Mario Marcolongo at Proving Ground rank 75, top 6%, with 110 total breaks and separate Arena profile metrics.";
+const evidenceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "DigitalDocument",
+  name: title,
+  description,
+  url: "https://mariomarcolongo.com/evidence/gray-swan-2026-07-25/",
+  dateCreated: "2026-07-25T19:19:07Z",
+  author: { "@id": "https://mariomarcolongo.com/#person" },
+  isBasedOn: D.identity.grayswanUrl,
+  encoding: {
+    "@type": "MediaObject",
+    contentUrl: "https://mariomarcolongo.com/evidence/gray-swan-profile-2026-07-25.png",
+    encodingFormat: "image/png"
+  }
+};
+---
+
+<Layout title={title} description={description} canonical="https://mariomarcolongo.com/evidence/gray-swan-2026-07-25/">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(evidenceJsonLd)}></script>
+  </Fragment>
+
+  <SiteNav activePage="security" />
+
+  <main class="evaluation-shell">
+    <section class="evaluation-hero">
+      <div>
+        <div class="evaluation-eyebrow">Dated platform snapshot · 25 July 2026</div>
+        <h1 class="evaluation-title">Gray Swan profile evidence.</h1>
+        <p class="evaluation-lede">
+          The user-supplied screenshot visibly displays Proving Ground rank #{GS.rank}, {GS.percentile.toLowerCase()} and {GS.totalBreaks} Total Breaks. It also preserves the separate Arena profile metrics: rank #{GS.arenaRank}, {GS.arenaUniqueBreaks} global unique breaks, {GS.arenaPoints.toLocaleString("en-US")} points and {GS.arenaSubmissions} submissions.
+        </p>
+        <div class="career-actions">
+          <a class="btn btn-primary" href={D.identity.grayswanUrl} target="_blank" rel="noopener noreferrer">Open live Gray Swan profile ↗</a>
+          <a class="btn" href="/security.html">Read the evaluation record</a>
+          <a class="btn" href="/evidence/gray-swan-2026-07-24/">Previous preserved snapshot</a>
+        </div>
+      </div>
+
+      <aside class="evaluation-scope-note">
+        <strong>Preservation status</strong>
+        <p>This current screenshot is hosted with the portfolio and is not a Gray Swan-issued attestation. The preceding 24 July snapshot remains separately preserved through Perma.cc and a locally verified WACZ package.</p>
+      </aside>
+    </section>
+
+    <section class="evaluation-metrics" aria-label="Dated Gray Swan metrics">
+      <article class="evaluation-metric">
+        <strong>#{GS.rank}</strong>
+        <span>Proving Ground rank</span>
+        <small>{GS.percentile} · time-sensitive snapshot</small>
+      </article>
+      <article class="evaluation-metric">
+        <strong>{GS.totalBreaks}</strong>
+        <span>Platform-displayed total breaks</span>
+        <small>Visible area counters sum to {GS.displayedAreaTotal}</small>
+      </article>
+      <article class="evaluation-metric">
+        <strong>{GS.arenaSubmissions}</strong>
+        <span>Arena submissions shown</span>
+        <small>{GS.arenaUniqueBreaks} unique breaks · {GS.arenaPoints.toLocaleString("en-US")} points</small>
+      </article>
+    </section>
+
+    <section class="evaluation-section">
+      <div class="evaluation-section-head">
+        <h2>The complete platform view</h2>
+        <p>The full screenshot is shown directly, with no synthetic reconstruction of the metrics.</p>
+      </div>
+      <figure style="margin:0">
+        <a href="/evidence/gray-swan-profile-2026-07-25.png" aria-label="Open the full-resolution Gray Swan screenshot">
+          <img src="/evidence/gray-swan-profile-2026-07-25.png" alt={`Full Gray Swan Arena profile screenshot showing Mario Marcolongo at Proving Ground rank ${GS.rank}, ${GS.percentile.toLowerCase()}, with ${GS.totalBreaks} total breaks`} width="2047" height="1162" style="display:block;width:100%;height:auto;border:1px solid rgba(127,127,127,.3);border-radius:18px;background:#101216" />
+        </a>
+        <figcaption style="margin-top:12px;line-height:1.6">
+          Captured locally on 25 July 2026 at 21:19:07 Europe/Rome. Original dimensions: 2047 × 1162 pixels.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="evaluation-section">
+      <div class="evaluation-section-head">
+        <h2>Values transcribed from the screenshot</h2>
+        <p>Arena and Proving Ground use separate ranking and activity systems. They are kept separate below to avoid presenting rank #370 and rank #75 as contradictory measurements.</p>
+      </div>
+      <div class="evaluation-grid">
+        <article class="evaluation-card">
+          <div class="evaluation-step">PROVING GROUND</div>
+          <h3>#{GS.rank} · {GS.percentile}</h3>
+          <p>{GS.totalBreaks} Total Breaks displayed.</p>
+        </article>
+        <article class="evaluation-card">
+          <div class="evaluation-step">ARENA PROFILE</div>
+          <h3>#{GS.arenaRank} global rank</h3>
+          <p>{GS.arenaUniqueBreaks} global unique breaks · {GS.arenaPoints.toLocaleString("en-US")} points · {GS.arenaSubmissions} submissions.</p>
+        </article>
+        {D.redTeamActivity.areas.map((area) => (
+          <article class="evaluation-card">
+            <div class="evaluation-step">PROGRESS BY AREA</div>
+            <h3>{area.name}</h3>
+            <p>{area.breaks} / {area.available} · {area.percent}% displayed.</p>
+          </article>
+        ))}
+      </div>
+      <aside class="evaluation-scope-note" style="margin-top:24px">
+        <strong>Visible aggregation discrepancy</strong>
+        <p>The four area counters total {GS.displayedAreaTotal}, while the profile displays {GS.totalBreaks} Total Breaks. Both are preserved exactly; this page does not infer Gray Swan's internal aggregation rules.</p>
+      </aside>
+    </section>
+  </main>
+
+  <SiteFooter version={D.identity.buildVersion} />
+</Layout>
