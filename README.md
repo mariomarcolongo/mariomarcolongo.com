@@ -25,7 +25,7 @@ Longer-term targets include automated evaluation, AI-safety program or technical
 ## Public routes
 
 - **Portfolio (`/`)** — readable metric-led evidence cards, three principal cases, supporting products and curated data artifacts, an explicit high-autonomy working profile, concise experience and targeted CV selection.
-- **AI Evaluation Record (`/security.html`)** — scope, methodology, platform-reported Gray Swan activity, the live participant profile as the primary destination, an archived verification fallback and explicit limitations.
+- **AI Evaluation Record (`/security.html`)** — scope, methodology, platform-reported Gray Swan activity, the live participant profile as the primary destination, dated evidence and explicit limitations.
 - **Knowledge Integrity Work Samples (`/integrity.html`)** — provenance, health-information monitoring, entity reconciliation and structured-data cases.
 - **AI Evaluation & Model Behavior CV (`/cv-resume.html`)** — two-page application document.
 - **Scientific AI Quality & Research Data CV (`/cv-research.html`)** — two-page application document.
@@ -74,7 +74,9 @@ Generated outputs include:
 
 ## Gray Swan evidence
 
-The public evaluation page uses the live Gray Swan participant profile as its primary external destination and retains the [archive.is/inkFs](https://archive.is/inkFs) snapshot as a verification fallback for recruiters, automated readers and archival crawlers. Counts are presented as platform-reported snapshots, not as independent vulnerability reproduction or certification.
+The live Gray Swan participant profile is the primary external destination. The current dated evidence page preserves the 25 July 2026 screenshot showing Proving Ground rank #75, top 6%, and 110 platform-recorded total breaks, alongside the separate Arena metrics (#370 rank, 27 global unique breaks, 1,090 points and 246 submissions).
+
+A locally retained same-day WACZ capture records the immediately preceding state at 17:09 UTC: the same #75/top-6% position with 109 total breaks, Arena rank #372, 26 unique breaks, 1,080 points and 245 submissions. Its hash and scope are documented without publishing potentially sensitive archive-request data. The independently preserved 24 July snapshot remains available through Perma.cc. All counts are presented as time-stamped platform records, not independent vulnerability reproduction or certification.
 
 ## Private phone number in local PDFs
 
@@ -110,7 +112,8 @@ The workflow archives the complete Lighthouse JSON reports and diagnostic opport
 
 - [ORCID 0000-0003-2846-7115](https://orcid.org/0000-0003-2846-7115)
 - [Gray Swan Proving Ground profile](https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf)
-- [Archived Gray Swan snapshot](https://archive.is/inkFs)
+- [Gray Swan evidence — 25 July 2026](https://mariomarcolongo.com/evidence/gray-swan-profile-2026-07-25.html)
+- [Historical Gray Swan capture — 24 July 2026](https://perma.cc/U8TY-PWYA)
 - [Wikimedia CentralAuth record](https://commons.wikimedia.org/wiki/Special:CentralAuth/Digressivo)
 - [ENA accession PRJEB109744](https://www.ebi.ac.uk/ena/browser/view/PRJEB109744)
 - [Yourself to Science](https://yourselftoscience.org)
