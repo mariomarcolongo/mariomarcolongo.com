@@ -11,7 +11,7 @@ Research, evidence and AI operations specialist with eight years of auditable pu
 ### 1. Model Behavior & Adversarial Testing
 Structured, self-directed probing of LLM and multimodal-system behavior across chat, image, tool-use and indirect prompt-injection challenges.
 
-- **Leaderboard-Counted Activity**: #77 · top 7% · 105 breaks across 26 waves on 24 July 2026
+- **Leaderboard-Counted Activity**: #75 · top 6% · 110 platform-recorded breaks on 25 July 2026
 - **Testing Surfaces**: Chat, multimodal/image, agentic tool-use and indirect prompt injection
 
 ### 2. Evidence Synthesis & Primary-Source Fact-Checking
@@ -39,15 +39,15 @@ Defining requirements, inspecting code structure and behavior, testing implement
 - Defined the inclusion model, verification workflow, provenance fields, licensing structure and machine-readable metadata requirements.
 - Use AI-assisted implementation while personally defining requirements, inspecting code structure and behavior, testing releases and maintaining the service.
 
-### Model-Behavior Evaluator — Independent practice · Gray Swan Proving Ground participant (2023 — Present) [Independent practice]
+### Model-Behavior Evaluator — Independent practice · Gray Swan Proving Ground participant (Jul 2026 — Present) [Independent practice]
 - Conduct self-directed testing of LLM instruction handling, policy boundaries and edge cases across chat, image, agentic tool-use and indirect prompt-injection settings.
-- Reached #77 on the Proving Ground leaderboard (top 7%) with 105 leaderboard-counted breaks across 232 Proving Ground submissions and 26 listed waves on 24 July 2026.
+- Reached #75 on the Proving Ground leaderboard (top 6%) with 110 platform-recorded total breaks on 25 July 2026; the same profile showed Arena rank #370, 27 global unique breaks, 1,090 points and 246 submissions.
 - Document platform-reported outcomes conservatively, separating public evidence from independent verification, security certification or model-wide conclusions.
 
-### Scientific Fact-Checker, Writer & Website Manager — Entropy for Life — Italy (Jun 2023 — Present) [Independent contractor]
-- Conduct bibliographic research and verify primary literature for more than 55 videos and documentaries and four articles.
-- Identify unsupported claims, conflicting evidence and source-quality problems and communicate corrections within a small recurring team consisting primarily of Giacomo Moro Mauretto, the video editor and me.
-- Manage OVHCloud hosting, DNS, SSL, WordPress configuration, layout and functionality changes, and technical SEO.
+### Scientific Research, Fact-Checking & Website Operations Contractor — Entropy for Life — Italy (Jun 2023 — Present) [Independent contractor]
+- Deliver primary-literature research, scientific fact-checking and script development across 55+ published YouTube video projects and four co-authored articles; most video assignments combine all three functions, while selected work focuses on fact-checking and/or data visualization.
+- Produce data visualizations, presentation slides and on-screen assets, short-form materials and selected thumbnails independently or with video editor Alessandro Lanzoni; additional Instagram and TikTok work is not yet fully indexed.
+- Manage OVHCloud hosting, DNS, SSL, WordPress configuration, layout and functionality changes, and technical SEO as website operations rather than conventional independent software development.
 - Formally acknowledged in Giacomo Moro Mauretto’s Mondadori book Italiani veri for scientific-literature research and error detection.
 
 ### Volunteer Focus-Group Co-Facilitator & Research Operations Contributor — Department of Developmental Psychology and Socialisation (DPSS), University of Padua (Nov 2022 — 2025) [Volunteer research collaboration supervised by Marta Panzeri]
@@ -79,10 +79,10 @@ Defining requirements, inspecting code structure and behavior, testing implement
 **Role**: Model-Behavior Evaluator
 **Tech Stack**: Adversarial Evaluation, Prompt Injection, Agentic Tool-Use, Multimodal Safety, Evidence-Bound Reporting
 
-Self-directed model-behavior evaluation conducted through the Gray Swan Proving Ground. The dated record shows #77 on the Proving Ground leaderboard, top 7%, with 105 leaderboard-counted breaks across 232 Proving Ground submissions and 26 listed waves. Aggregate counts and selected public labels are presented with explicit evidence limitations; complete prompts, outputs, model versions and adjudication materials are not reproduced.
+Self-directed model-behavior evaluation conducted through the Gray Swan Proving Ground. The dated 25 July 2026 screenshot shows Proving Ground rank #75, top 6%, with 110 platform-recorded total breaks; the same profile shows Arena rank #370, 27 global unique breaks, 1,090 points and 246 submissions. Aggregate counts and selected public labels are presented with explicit evidence limitations; complete prompts, outputs, model versions and adjudication materials are not reproduced.
 
-- 105 Leaderboard-Counted Model Breaks: #77 and top 7% on the dated Proving Ground snapshot
-- 232 Proving Ground Submissions: 242 total Arena submissions are shown separately
+- 110 Platform-Recorded Proving Ground Breaks: #75 and top 6% on the dated 25 July 2026 snapshot
+- Arena Profile Context: #370 rank, 27 global unique breaks, 1,090 points and 246 submissions
 - Evidence Boundary: Platform-reported outcomes are separated from independent verification or security-certification claims
 
 ### Yourself to Science™ | Open Research-Participation Directory (Website: https://yourselftoscience.org | GitHub: https://github.com/yourselftoscience/yourselftoscience.org | DOI: https://doi.org/10.5281/zenodo.15109359 | FAIRsharing: https://doi.org/10.25504/FAIRsharing.d3d487)
@@ -96,14 +96,14 @@ Founded, designed and operate an open-source research-participation directory in
 - Open Records: FAIRsharing and Zenodo registrations with machine-readable interfaces
 
 ### Entropy for Life — Scientific Verification & Web Operations (Website: https://entropyforlife.it | Videos & Documentaries: https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh | Author Page: https://entropyforlife.it/autore/mario-marcolongo/)
-**Role**: Scientific Fact-Checker, Writer & Website Manager
-**Tech Stack**: Primary-Source Fact-Checking, Bibliographic Research, Scientific Writing, WordPress, DNS/SSL, Technical SEO
+**Role**: Scientific Research, Fact-Checking & Website Operations Contractor
+**Tech Stack**: Primary-Literature Research, Scientific Fact-Checking, Script Development, Data Visualization & Presentation Design, WordPress, DNS/SSL, Technical SEO
 
-Conduct bibliographic research and verify primary literature for more than 55 videos and documentaries and four articles. Identify unsupported claims, conflicting evidence and source-quality problems; communicate corrections to a non-specialist production team. Manage OVHCloud hosting, DNS, SSL, WordPress configuration, layout and functionality changes, and technical SEO. Formally acknowledged in Giacomo Moro Mauretto’s Mondadori book Italiani veri.
+Paid contractor for Entropy for Life across 59+ publicly indexed projects: 55+ published YouTube video projects and four co-authored articles. Most video assignments combine primary-literature research, scientific fact-checking and script development; selected assignments focus on fact-checking and/or data visualization. Also produce data visualizations, presentation slides, on-screen assets, short-form materials and selected thumbnails independently or with video editor Alessandro Lanzoni. Additional Instagram and TikTok work is not yet fully indexed. Manage OVHCloud hosting, DNS, SSL, WordPress configuration, layout and functionality changes, and technical SEO. Formally acknowledged in Giacomo Moro Mauretto’s Mondadori book Italiani veri.
 
-- 55+ Videos and Documentaries: Primary literature researched and checked
-- Four Published Articles: Scientific writing and evidence verification
-- Operational Responsibility: Hosting, DNS, SSL, WordPress and technical SEO
+- 55+ Published YouTube Projects: Primary literature researched, checked and developed into scripts
+- Four Co-Authored Articles: Scientific writing and evidence verification
+- Visual & Website Operations: Slides, on-screen assets, selected thumbnails, hosting, DNS/SSL, WordPress and technical SEO
 
 ### MDPI Filter | Browser Extension (Chrome Store: https://chromewebstore.google.com/detail/mdpi-filter/comknkeimaaadpiopddjoknflbmjeccp | Edge Store: https://microsoftedge.microsoft.com/addons/detail/mdpi-filter/efonlkldplkaeekpiajloajjmkappjgi | GitHub: https://github.com/orgs/mdpi-filter/repositories)
 **Role**: Product Owner & AI-Assisted Technical Operator

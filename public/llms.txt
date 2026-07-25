@@ -6,8 +6,8 @@
 > **I use AI-assisted implementation extensively. I define requirements and workflows, inspect code structure and behavior, test implementations, diagnose functional problems, guide iterative changes, deploy releases, and maintain services. I do not present myself as an independent software developer.**
 
 ## Quick Facts & Key Metrics
-- **105** (Leaderboard-Counted Model Breaks): #77 · top 7% · 26 Proving Ground waves · 24 July 2026
-- **232** (Proving Ground Submissions): 242 total Arena submissions shown separately on the dated profile
+- **110** (Platform-Recorded Proving Ground Breaks): #75 · top 6% · 25 July 2026
+- **246** (Arena Submissions): Arena rank #370 · 27 global unique breaks · 1,090 points
 - **55+** (Research Initiatives Indexed): Clinical studies, biobanks, donation programs, registries and other research initiatives
 - **55+ Videos & 4 Articles** (Paid Scientific Verification): Primary-source research and fact-checking for Entropy for Life
 - **4,317** (Auditable Wikimedia Contributions): Public contributions across Wikipedia, Wikidata and Wikimedia Commons as of July 2026

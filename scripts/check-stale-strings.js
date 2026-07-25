@@ -154,7 +154,7 @@ for (const requiredText of [
   'AI evaluation and scientific evidence roles.',
   '#75 on the Proving Ground leaderboard',
   'Fact-checking scientific productions before publication.',
-  'At least 59 published outputs supported',
+  'At least 59 published projects supported',
   'PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh',
   'PLUXju4zC0Sks',
   'Official Entropy for Life website'
