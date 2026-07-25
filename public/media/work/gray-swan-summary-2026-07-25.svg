@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Gray Swan evaluation activity summary — 25 July 2026</title>
+  <desc id="desc">Dated summary of Mario Marcolongo's platform-reported Gray Swan activity: Proving Ground rank 75, top 6 percent, 110 total breaks; Arena rank 370, 27 unique breaks, 1,090 points and 246 submissions. The visible area counters sum to 109 while the platform displayed 110 total breaks.</desc>
+  <rect width="1200" height="760" fill="#0b1018"/>
+  <rect x="34" y="34" width="1132" height="692" rx="24" fill="#111a28" stroke="#314057" stroke-width="2"/>
+
+  <text x="78" y="94" fill="#7ea5ff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" letter-spacing="2">DATED PLATFORM SNAPSHOT · 25 JULY 2026</text>
+  <text x="78" y="151" fill="#f6f8fc" font-family="Georgia, 'Times New Roman', serif" font-size="46">Gray Swan evaluation activity</text>
+  <text x="78" y="190" fill="#aab7ca" font-family="Arial, Helvetica, sans-serif" font-size="19">Proving Ground and Arena are shown separately; all figures are tied to the capture date.</text>
+
+  <g transform="translate(78 235)">
+    <rect width="525" height="230" rx="18" fill="#17243a" stroke="#4c78ff" stroke-width="2"/>
+    <text x="28" y="42" fill="#8db0ff" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="1.4">PROVING GROUND</text>
+    <text x="28" y="118" fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-size="72">#75</text>
+    <text x="218" y="99" fill="#dce7ff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">GLOBAL RANK</text>
+    <text x="218" y="131" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">TOP 6%</text>
+    <line x1="28" y1="158" x2="497" y2="158" stroke="#3b4e6c"/>
+    <text x="28" y="205" fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-size="38">110</text>
+    <text x="115" y="202" fill="#b9c8de" font-family="Arial, Helvetica, sans-serif" font-size="17">platform-recorded total breaks</text>
+  </g>
+
+  <g transform="translate(625 235)">
+    <rect width="497" height="230" rx="18" fill="#151d29" stroke="#35445b" stroke-width="2"/>
+    <text x="28" y="42" fill="#9db0c8" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="1.4">ARENA PROFILE</text>
+    <g transform="translate(28 70)">
+      <text x="0" y="38" fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-size="42">#370</text>
+      <text x="0" y="66" fill="#9db0c8" font-family="Arial, Helvetica, sans-serif" font-size="15">global rank</text>
+    </g>
+    <g transform="translate(158 70)">
+      <text x="0" y="38" fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-size="42">27</text>
+      <text x="0" y="66" fill="#9db0c8" font-family="Arial, Helvetica, sans-serif" font-size="15">unique breaks</text>
+    </g>
+    <g transform="translate(283 70)">
+      <text x="0" y="38" fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-size="42">1,090</text>
+      <text x="0" y="66" fill="#9db0c8" font-family="Arial, Helvetica, sans-serif" font-size="15">points</text>
+    </g>
+    <line x1="28" y1="158" x2="469" y2="158" stroke="#35445b"/>
+    <text x="28" y="205" fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-size="38">246</text>
+    <text x="118" y="202" fill="#b4c1d1" font-family="Arial, Helvetica, sans-serif" font-size="17">submissions shown</text>
+  </g>
+
+  <text x="78" y="516" fill="#9db0c8" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" letter-spacing="1.4">PROVING GROUND SURFACES</text>
+  <g transform="translate(78 540)" font-family="Arial, Helvetica, sans-serif">
+    <g><rect width="246" height="76" rx="14" fill="#162338"/><text x="20" y="31" fill="#a9b8cc" font-size="15">CHAT</text><text x="20" y="59" fill="#ffffff" font-size="24" font-weight="700">36 breaks</text></g>
+    <g transform="translate(262 0)"><rect width="246" height="76" rx="14" fill="#162338"/><text x="20" y="31" fill="#a9b8cc" font-size="15">IMAGE</text><text x="20" y="59" fill="#ffffff" font-size="24" font-weight="700">32 breaks</text></g>
+    <g transform="translate(524 0)"><rect width="246" height="76" rx="14" fill="#162338"/><text x="20" y="31" fill="#a9b8cc" font-size="15">AGENT</text><text x="20" y="59" fill="#ffffff" font-size="24" font-weight="700">28 breaks</text></g>
+    <g transform="translate(786 0)"><rect width="258" height="76" rx="14" fill="#162338"/><text x="20" y="31" fill="#a9b8cc" font-size="15">INDIRECT</text><text x="20" y="59" fill="#ffffff" font-size="24" font-weight="700">13 breaks</text></g>
+  </g>
+
+  <rect x="78" y="644" width="1044" height="52" rx="12" fill="#1b2635"/>
+  <text x="98" y="676" fill="#c9d3df" font-family="Arial, Helvetica, sans-serif" font-size="15">Visible area counters total 109; the platform displayed 110 total breaks. Both values are reported without inferring the internal rule.</text>
+</svg>
