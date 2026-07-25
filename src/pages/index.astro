@@ -70,7 +70,8 @@ const isExternal = (href) => href.startsWith("http");
                 alt={item.alt}
                 width="800"
                 height="520"
-                loading={index === 0 ? "eager" : "lazy"}
+                loading={index < 2 ? "eager" : "lazy"}
+                fetchpriority={index < 2 ? "high" : "auto"}
                 decoding="async"
               />
             </picture>
