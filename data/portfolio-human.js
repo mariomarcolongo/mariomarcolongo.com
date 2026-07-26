@@ -1,3 +1,5 @@
+const ENTROPY_WORK_URL = "https://entropyforlife.it/mario-marcolongo-entropy-for-life/";
+
 const PORTFOLIO_HUMAN = {
   eyebrow: "AI evaluation · scientific fact-checking",
   headline: "I test AI systems and verify scientific claims.",
@@ -14,13 +16,13 @@ const PORTFOLIO_HUMAN = {
       value: "59+",
       label: "published scientific outputs supported",
       detail: "55+ YouTube video projects · 4 co-authored articles",
-      href: "https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh"
+      href: ENTROPY_WORK_URL
     },
     {
       value: "460K+",
       label: "combined public platform following",
       detail: "Entropy for Life brand audience · 250K+ YouTube subscribers · non-unique",
-      href: "https://entropyforlife.it"
+      href: ENTROPY_WORK_URL
     }
   ],
 
@@ -39,7 +41,7 @@ const PORTFOLIO_HUMAN = {
       title: "Published science communication work",
       image: "/media/work/entropy-h5n1.png",
       alt: "Published Entropy for Life science communication output supported through research, fact-checking and production work",
-      href: "https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh"
+      href: ENTROPY_WORK_URL
     },
     {
       id: "research-directory",
@@ -106,33 +108,21 @@ const PORTFOLIO_HUMAN = {
       title: "Fact-checking and producing scientific content before publication.",
       lead: "Entropy for Life is an Italian science-communication brand with 250K+ YouTube subscribers and 460K+ combined public following across YouTube, Instagram and TikTok.",
       action: "Primary-literature research and scientific fact-checking are recurring. Depending on the assignment, I also contribute to script development, data visualization, slide and on-screen assets, and selected thumbnail concepts or production. Audience packaging is optimized around click-through rate, watch time, retention and immediate attention capture.",
-      result: "At least 59 documented published projects supported: 55+ YouTube video projects indexed through the contribution playlist, plus four co-authored articles. A separate playlist records selected thumbnail work.",
+      result: "At least 59 documented published projects supported: 55+ YouTube video projects and four co-authored articles, consolidated in an official work record published by Entropy for Life.",
       boundary: "The audience belongs to Entropy for Life, not to me, and the combined platform total is not a count of unique people. Quantified CTR or watch-time lift should only be claimed when comparable channel analytics can be published.",
-      href: "https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh",
-      linkLabel: "Open the YouTube contribution playlist",
-      mediaHref: "https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh",
-      mediaLinkLabel: "Open the 55+ YouTube contribution playlist",
+      href: ENTROPY_WORK_URL,
+      linkLabel: "View my official Entropy for Life portfolio",
+      mediaHref: ENTROPY_WORK_URL,
+      mediaLinkLabel: "View my official Entropy for Life portfolio",
       links: [
         {
-          label: "YouTube contribution playlist",
-          href: "https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh"
-        },
-        {
-          label: "Four co-authored articles",
-          href: "https://entropyforlife.it/autore/mario-marcolongo/"
-        },
-        {
-          label: "Selected thumbnail-work playlist",
-          href: "https://www.youtube.com/playlist?list=PLUXju4zC0Sks"
-        },
-        {
-          label: "Official Entropy for Life website",
-          href: "https://entropyforlife.it"
+          label: "Official work record published by Entropy for Life",
+          href: ENTROPY_WORK_URL
         }
       ],
       image: "/media/work/entropy-h5n1.png",
       alt: "Published Entropy for Life science communication output supported through research, fact-checking and production work",
-      imageCaption: "Audience scale, published work and optimization responsibilities",
+      imageCaption: "Official work record, audience scale and documented contributions",
       tone: "red"
     },
     {
