@@ -17,10 +17,10 @@ const PORTFOLIO_HUMAN = {
       href: "https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh"
     },
     {
-      value: "4,317",
-      label: "auditable public-knowledge contributions",
-      detail: "Wikipedia, Wikidata and Wikimedia Commons · July 2026",
-      href: "https://commons.wikimedia.org/wiki/Special:CentralAuth/Digressivo"
+      value: "460K+",
+      label: "combined public platform following",
+      detail: "Entropy for Life brand audience · 250K+ YouTube subscribers · non-unique",
+      href: "https://entropyforlife.it"
     }
   ],
 
@@ -28,17 +28,17 @@ const PORTFOLIO_HUMAN = {
     {
       id: "model-record",
       label: "AI evaluation",
-      title: "Gray Swan evaluation record",
-      image: "/media/work/gray-swan-summary-2026-07-25.svg",
-      alt: "Dated Gray Swan activity summary showing Proving Ground rank 75, top 6 percent and 110 total breaks, with Arena metrics shown separately",
+      title: "Gray Swan Arena profile",
+      image: "/media/work/model-behavior-profile.jpg",
+      alt: "Screenshot of Mario Marcolongo's Gray Swan Arena and Proving Ground profile showing the dated public ranking and activity record",
       href: "/security.html"
     },
     {
       id: "entropy",
       label: "Scientific fact-checking",
-      title: "59+ published projects supported",
-      image: "/media/work/entropy-work-overview.svg",
-      alt: "Entropy for Life contribution overview showing more than 55 YouTube video projects, four co-authored articles and the roles contributed across outputs",
+      title: "Published science communication work",
+      image: "/media/work/entropy-h5n1.png",
+      alt: "Published Entropy for Life science communication output supported through research, fact-checking and production work",
       href: "https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh"
     },
     {
@@ -94,20 +94,20 @@ const PORTFOLIO_HUMAN = {
       boundary: "This supports model-evaluation and adversarial-QA work. It is not presented as penetration testing or senior red-team engineering.",
       href: "/security.html",
       linkLabel: "Open the evaluation record",
-      image: "/media/work/gray-swan-summary-2026-07-25.svg",
-      alt: "Dated summary of Mario Marcolongo's Gray Swan Proving Ground and Arena activity, with the two metric sets presented separately",
-      imageCaption: "Dated platform summary · #75 · top 6% · 110 Proving Ground breaks",
+      image: "/media/work/model-behavior-profile.jpg",
+      alt: "Screenshot of the dated Gray Swan Arena profile showing Proving Ground rank, percentile, breaks and separate Arena activity metrics",
+      imageCaption: "Original Gray Swan profile screenshot · dated public platform record",
       tone: "blue"
     },
     {
       id: "scientific-verification",
       number: "02",
       label: "Scientific fact-checking",
-      title: "Fact-checking scientific productions before publication.",
-      lead: "In a small recurring production team, I verify the evidence behind YouTube videos, documentaries and articles before publication.",
-      action: "Fact-checking is the recurring component. Depending on the production, I also contribute to script development, data visualization, slide creation and thumbnail direction or design, and I attribute those roles per item rather than treating every output as identical.",
-      result: "At least 59 published projects supported: 55+ YouTube video projects indexed through the contribution playlist, plus four co-authored articles. A separate playlist records selected thumbnail work.",
-      boundary: "Final wording, editing and publication remain with the team. The current thumbnail playlist includes work created predominantly or entirely by me and work developed collaboratively with the video editor; direction-only thumbnails are not yet included.",
+      title: "Fact-checking and producing scientific content before publication.",
+      lead: "Entropy for Life is an Italian science-communication brand with 250K+ YouTube subscribers and 460K+ combined public following across YouTube, Instagram and TikTok.",
+      action: "Primary-literature research and scientific fact-checking are recurring. Depending on the assignment, I also contribute to script development, data visualization, slide and on-screen assets, and selected thumbnail concepts or production. Audience packaging is optimized around click-through rate, watch time, retention and immediate attention capture.",
+      result: "At least 59 documented published projects supported: 55+ YouTube video projects indexed through the contribution playlist, plus four co-authored articles. A separate playlist records selected thumbnail work.",
+      boundary: "The audience belongs to Entropy for Life, not to me, and the combined platform total is not a count of unique people. Quantified CTR or watch-time lift should only be claimed when comparable channel analytics can be published.",
       href: "https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh",
       linkLabel: "Open the YouTube contribution playlist",
       mediaHref: "https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh",
@@ -130,9 +130,9 @@ const PORTFOLIO_HUMAN = {
           href: "https://entropyforlife.it"
         }
       ],
-      image: "/media/work/entropy-work-overview.svg",
-      alt: "Contribution overview for Mario Marcolongo's Entropy for Life work, separating more than 55 video projects from four co-authored articles and listing the varying production roles",
-      imageCaption: "59+ published projects · 55+ video projects · 4 articles · roles attributed per output",
+      image: "/media/work/entropy-h5n1.png",
+      alt: "Published Entropy for Life science communication output supported through research, fact-checking and production work",
+      imageCaption: "Audience scale, published work and optimization responsibilities",
       tone: "red"
     },
     {
@@ -261,10 +261,10 @@ const PORTFOLIO_HUMAN = {
       recommendedFor: "Integrity and investigation roles"
     },
     {
-      title: "Research, Editorial & Community Operations",
-      description: "Scientific fact-checking, editorial coordination, evidence synthesis and participant-facing research operations.",
+      title: "Research, Editorial & Content Operations",
+      description: "Scientific fact-checking, editorial coordination, audience packaging, evidence synthesis and content operations.",
       href: "/cv-editorial.html",
-      recommendedFor: "Editorial and research-operations roles"
+      recommendedFor: "Editorial, content-operations and audience-quality roles"
     }
   ]
 };
