@@ -13,15 +13,15 @@ const PORTFOLIO_HUMAN = {
       href: "/security.html"
     },
     {
-      value: "59+",
-      label: "published scientific outputs supported",
-      detail: "55+ YouTube video projects · 4 co-authored articles",
+      value: "80",
+      label: "documented published content contributions",
+      detail: "55 YouTube videos · 4 articles · 21 short-form pieces",
       href: ENTROPY_WORK_URL
     },
     {
-      value: "460K+",
+      value: "480K+",
       label: "combined public platform following",
-      detail: "Entropy for Life brand audience · 250K+ YouTube subscribers · non-unique",
+      detail: "Entropy for Life brand audience · 267K YouTube subscribers · non-unique",
       href: ENTROPY_WORK_URL
     }
   ],
@@ -38,9 +38,9 @@ const PORTFOLIO_HUMAN = {
     {
       id: "entropy",
       label: "Scientific fact-checking",
-      title: "Published science communication work",
+      title: "Official Entropy for Life work record",
       image: "/media/work/entropy-h5n1.png",
-      alt: "Published Entropy for Life science communication output supported through research, fact-checking and production work",
+      alt: "Published Entropy for Life science communication work supported through research, fact-checking, production and website work",
       href: ENTROPY_WORK_URL
     },
     {
@@ -106,14 +106,14 @@ const PORTFOLIO_HUMAN = {
       number: "02",
       label: "Scientific fact-checking",
       title: "Fact-checking and producing scientific content before publication.",
-      lead: "Entropy for Life is an Italian science-communication brand with 250K+ YouTube subscribers and 460K+ combined public following across YouTube, Instagram and TikTok.",
-      action: "Primary-literature research and scientific fact-checking are recurring. Depending on the assignment, I also contribute to script development, data visualization, slide and on-screen assets, and selected thumbnail concepts or production. Audience packaging is optimized around click-through rate, watch time, retention and immediate attention capture.",
-      result: "At least 59 documented published projects supported: 55+ YouTube video projects and four co-authored articles, consolidated in an official work record published by Entropy for Life.",
+      lead: "Entropy for Life is an Italian science-communication brand with 267K YouTube subscribers and 480K+ combined public following across YouTube, Instagram and TikTok.",
+      action: "Primary-literature research and scientific fact-checking are recurring. Depending on the assignment, I also contribute to script development, data analysis and visualization, slides and on-screen assets, short-form content and selected thumbnail concepts or production. I designed and built entropyforlife.it in WordPress and manage its responsive design, publishing and OVHcloud technical operations.",
+      result: "80 documented published content contributions: 55 YouTube videos, four co-authored articles and 21 short-form pieces. The official work record also indexes selected thumbnail work; thumbnail contributions overlap with video projects and are not added to the 80.",
       boundary: "The audience belongs to Entropy for Life, not to me, and the combined platform total is not a count of unique people. Quantified CTR or watch-time lift should only be claimed when comparable channel analytics can be published.",
       href: ENTROPY_WORK_URL,
-      linkLabel: "View my official Entropy for Life portfolio",
+      linkLabel: "View my official Entropy for Life work record",
       mediaHref: ENTROPY_WORK_URL,
-      mediaLinkLabel: "View my official Entropy for Life portfolio",
+      mediaLinkLabel: "View my official Entropy for Life work record",
       links: [
         {
           label: "Official work record published by Entropy for Life",
@@ -121,8 +121,8 @@ const PORTFOLIO_HUMAN = {
         }
       ],
       image: "/media/work/entropy-h5n1.png",
-      alt: "Published Entropy for Life science communication output supported through research, fact-checking and production work",
-      imageCaption: "Official work record, audience scale and documented contributions",
+      alt: "Published Entropy for Life science communication work supported through research, fact-checking, production and website work",
+      imageCaption: "Official work record with videos, articles, short-form content and selected thumbnails",
       tone: "red"
     },
     {
