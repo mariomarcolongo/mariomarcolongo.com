@@ -99,9 +99,10 @@ for (const needle of [
   'Where I can contribute.', 'Selected work, shown through the actual output.',
   'Start with the role you are hiring for.', 'AI evaluation and scientific evidence roles.',
   'Zotero plugin', 'Protein by bodyweight by country', '#75 on the Proving Ground,',
-  '267K', '36.5M', 'Research, production and website work', 'Thumbnail goals',
+  '267K', '36.5M', '80', '55 YouTube videos', '21 short-form pieces',
+  'Research, content and website work', 'Official evidence index',
   'Platform metrics describe the production environment',
-  'Research and fact-checking', 'Production work', 'Website management',
+  'Research and fact-checking', 'Content production', 'Website design and management',
   ENTROPY_WORK_URL, 'Official work record published by Entropy for Life'
 ]) assertContains(indexText, needle, 'dist/index.html');
 for (const obsolete of [
@@ -117,7 +118,8 @@ for (const obsolete of [
   '/evidence/gray-swan-metrics-2026-07-25.svg', '/media/work/entropy-dashboard-800.webp',
   'Special:ListFiles/Digressivo', 'Selected paid work', 'Contribution and production scale',
   'YouTube production environment', 'Packaging criteria',
-  'PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh', 'PLUXju4zC0Sks'
+  'PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh', 'PLUXju4zC0Sks',
+  '55+ documented YouTube projects', 'Official Entropy for Life website'
 ]) assertNotContains(index, obsolete, 'dist/index.html');
 assertContains(index, 'class="portfolio-v8"', 'dist/index.html');
 assertContains(index, 'class="v8-hero-gallery"', 'dist/index.html');
@@ -148,6 +150,7 @@ for (const [name, profile] of applicationProfiles) {
   assertContains(html, 'id="cvPhoneSlot"', `dist/${name}.html`);
   assertContains(html, ENTROPY_WORK_URL, `dist/${name}.html`);
   assertContains(text, 'Official Entropy for Life work record', `dist/${name}.html`);
+  assertContains(text, '80', `dist/${name}.html`);
 }
 assertContains(normalizeHtmlText(pages.editorial), 'Marta Panzeri', 'dist/cv-editorial.html');
 assertContains(normalizeHtmlText(pages.editorial), 'Department of Developmental Psychology and Socialisation', 'dist/cv-editorial.html');
@@ -168,7 +171,8 @@ const masterText = normalizeHtmlText(pages.cv);
 for (const needle of [
   'Master CV & Evidence Record', 'not presented as an independent software developer', 'AI Safety',
   'Research & Data Quality', 'Editorial & Community', 'Trust & Knowledge Integrity', 'Marta Panzeri',
-  '36.5M', 'Scientific Content Quality & Operations Contractor', ENTROPY_WORK_URL
+  '36.5M', '80', 'Scientific Content Quality & Operations Contractor',
+  'Official Entropy for Life work record', ENTROPY_WORK_URL
 ]) assertContains(masterText, needle, 'dist/cv.html');
 pass('Master CV positioning checked');
 
