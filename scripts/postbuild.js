@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const fs = require('node:fs');
 const path = require('node:path');
+const { applyPresentationPatches } = require('./apply-portfolio-presentation.js');
 
 const ROOT = path.resolve(__dirname, '..');
 const DIST = path.join(ROOT, 'dist');
@@ -21,7 +22,11 @@ const REQUIRED = [
   '.well-known/mcp/server-card.json',
   'robots.txt',
   'sitemap.xml',
-  'site.webmanifest'
+  'site.webmanifest',
+  'styles/portfolio-presentation-v10.css',
+  'media/work/gray-swan-profile-2026-07-26.svg',
+  'evidence/gray-swan-profile-2026-07-26.html',
+  'evidence/gray-swan-profile-2026-07-26.json'
 ];
 const ROOT_HTML_MIRRORS = [
   'index.html',
@@ -43,6 +48,7 @@ function assertNonEmpty(relativePath) {
 
 try {
   REQUIRED.forEach(assertNonEmpty);
+  applyPresentationPatches(DIST);
   for (const relativePath of ROOT_HTML_MIRRORS) {
     const source = path.join(DIST, relativePath);
     const destination = path.join(ROOT, relativePath);
