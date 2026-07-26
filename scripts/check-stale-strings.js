@@ -4,6 +4,7 @@ const path = require('node:path');
 const D = require('../data/source.js');
 
 const ROOT = path.resolve(__dirname, '..');
+const ENTROPY_WORK_URL = 'https://entropyforlife.it/mario-marcolongo-entropy-for-life/';
 const EXPECTED = {
   jobTitle: 'AI Evaluation & Research Operations Specialist',
   secondaryTitle: 'Model Behavior · Scientific Evidence · Knowledge Integrity · Open Science & Data Quality',
@@ -161,9 +162,8 @@ for (const requiredText of [
   'Audience optimization',
   'click-through rate',
   'watch time',
-  'PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh',
-  'PLUXju4zC0Sks',
-  'Official Entropy for Life website'
+  ENTROPY_WORK_URL,
+  'Official work record published by Entropy for Life'
 ]) {
   if (!homepageSource.includes(requiredText)) fail('src/pages/index.astro', 1, `Homepage is missing current artifact-led portfolio content: ${requiredText}`);
 }
