@@ -99,7 +99,8 @@ for (const needle of [
   'Start with the role you are hiring for.', 'AI evaluation and scientific evidence roles.',
   'Zotero plugin', 'Protein by bodyweight by country', '#75 on the Proving Ground,',
   '480K+', '267K', '36.5M', 'Content-performance practice', 'click-through rate', 'watch time',
-  'audience and channel-level totals belong to Entropy for Life'
+  'Audience and channel metrics describe the production environment',
+  'Evidence quality', 'Content production', 'Publishing operations'
 ]) assertContains(indexText, needle, 'dist/index.html');
 for (const obsolete of [
   'class="portfolio-v4"', 'class="portfolio-v5"', 'class="portfolio-v7"',
@@ -119,12 +120,14 @@ assertContains(index, 'class="v8-hero-gallery"', 'dist/index.html');
 assertContains(index, 'class="v8-case-stack"', 'dist/index.html');
 assertContains(index, 'class="v8-product"', 'dist/index.html');
 assertContains(index, 'v10-entropy-panel', 'dist/index.html');
+assertContains(index, 'v11-platform-grid', 'dist/index.html');
 for (const media of [
-  '/media/work/model-behavior-profile.jpg', '/media/work/gray-swan-profile-2026-07-26.svg', '/media/work/entropy-h5n1.png',
+  '/media/work/model-behavior-profile.jpg', '/media/work/gray-swan-profile-2026-07-26.svg',
   '/media/work/yourself-to-science-800.webp', '/media/work/mdpi-filter-1-800.webp',
   '/media/work/mdpi-filter-2-800.webp', '/media/work/wikimedia-clinical-overlap.svg',
   '/media/work/tableau-mortality-800.webp', '/media/work/flourish-oesophageal-cancer.svg'
 ]) assertContains(index, media, 'dist/index.html');
+assertNotContains(index, '/media/work/entropy-h5n1.png', 'dist/index.html');
 assertContains(index, 'https://github.com/orgs/mdpi-filter/repositories', 'dist/index.html');
 assertContains(index, 'https://jnton.github.io/protein-by-bodyweight-country/', 'dist/index.html');
 pass('Artifact-led homepage checked');
@@ -143,8 +146,9 @@ for (const [name, profile] of applicationProfiles) {
 }
 assertContains(normalizeHtmlText(pages.editorial), 'Marta Panzeri', 'dist/cv-editorial.html');
 assertContains(normalizeHtmlText(pages.editorial), 'Department of Developmental Psychology and Socialisation', 'dist/cv-editorial.html');
-assertContains(normalizeHtmlText(pages.editorial), '480K+', 'dist/cv-editorial.html');
+assertContains(normalizeHtmlText(pages.editorial), '36.5M', 'dist/cv-editorial.html');
 assertContains(normalizeHtmlText(pages.editorial), 'click-through rate', 'dist/cv-editorial.html');
+assertContains(normalizeHtmlText(pages.editorial), 'Performance-aware content packaging', 'dist/cv-editorial.html');
 pass('Four specialized application CVs checked');
 
 const integrityText = normalizeHtmlText(pages.integrityPage);
@@ -159,7 +163,7 @@ const masterText = normalizeHtmlText(pages.cv);
 for (const needle of [
   'Master CV & Evidence Record', 'not presented as an independent software developer', 'AI Safety',
   'Research & Data Quality', 'Editorial & Community', 'Trust & Knowledge Integrity', 'Marta Panzeri',
-  '480K+', 'Audience Optimization Contractor'
+  '36.5M', 'Scientific Content Quality & Operations Contractor'
 ]) assertContains(masterText, needle, 'dist/cv.html');
 pass('Master CV positioning checked');
 
