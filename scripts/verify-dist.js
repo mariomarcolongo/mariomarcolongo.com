@@ -98,8 +98,8 @@ for (const needle of [
   'Where I can contribute.', 'Selected work, shown through the actual output.',
   'Start with the role you are hiring for.', 'AI evaluation and scientific evidence roles.',
   'Zotero plugin', 'Protein by bodyweight by country', '#75 on the Proving Ground,',
-  '480K+', '267K', '36.5M', 'Content-performance practice', 'click-through rate', 'watch time',
-  'Audience and channel metrics describe the production environment',
+  '267K', '36.5M', 'Contribution and production scale', 'Packaging criteria',
+  'Platform metrics describe the production environment',
   'Evidence quality', 'Content production', 'Publishing operations'
 ]) assertContains(indexText, needle, 'dist/index.html');
 for (const obsolete of [
@@ -120,7 +120,7 @@ assertContains(index, 'class="v8-hero-gallery"', 'dist/index.html');
 assertContains(index, 'class="v8-case-stack"', 'dist/index.html');
 assertContains(index, 'class="v8-product"', 'dist/index.html');
 assertContains(index, 'v10-entropy-panel', 'dist/index.html');
-assertContains(index, 'v11-platform-grid', 'dist/index.html');
+assertContains(index, 'v12-platform-proof', 'dist/index.html');
 for (const media of [
   '/media/work/model-behavior-profile.jpg', '/media/work/gray-swan-profile-2026-07-26.svg', '/media/work/entropy-h5n1.png',
   '/media/work/yourself-to-science-800.webp', '/media/work/mdpi-filter-1-800.webp',
