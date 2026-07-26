@@ -25,6 +25,7 @@ const REQUIRED = [
   'site.webmanifest',
   'styles/portfolio-presentation-v10.css',
   'styles/portfolio-presentation-v10-mobile-fix.css',
+  'styles/portfolio-presentation-v11.css',
   'media/work/gray-swan-profile-2026-07-26.svg',
   'evidence/gray-swan-profile-2026-07-26.html',
   'evidence/gray-swan-profile-2026-07-26.json'
@@ -63,9 +64,8 @@ function normalizeCurrentCvMetrics() {
   }
 }
 
-function addMobileEvidenceFix() {
+function addIndexStylesheet(href) {
   const filePath = path.join(DIST, 'index.html');
-  const href = '/styles/portfolio-presentation-v10-mobile-fix.css';
   const current = fs.readFileSync(filePath, 'utf8');
   if (current.includes(href)) return;
   if (!current.includes('</head>')) throw new Error('dist/index.html has no closing head tag');
@@ -81,7 +81,8 @@ try {
     console.log(`Presentation patch reached an already-current CV: ${error.message}`);
   }
   normalizeCurrentCvMetrics();
-  addMobileEvidenceFix();
+  addIndexStylesheet('/styles/portfolio-presentation-v10-mobile-fix.css');
+  addIndexStylesheet('/styles/portfolio-presentation-v11.css');
   for (const relativePath of ROOT_HTML_MIRRORS) {
     const source = path.join(DIST, relativePath);
     const destination = path.join(ROOT, relativePath);
