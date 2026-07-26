@@ -9,6 +9,7 @@ const {
 } = require('./lib/dossier-generators.js');
 
 const ROOT = path.resolve(__dirname, '..');
+const ENTROPY_WORK_URL = 'https://entropyforlife.it/mario-marcolongo-entropy-for-life/';
 let failures = 0;
 
 function fail(message) {
@@ -101,7 +102,7 @@ for (const needle of [
   '267K', '36.5M', 'Research, production and website work', 'Thumbnail goals',
   'Platform metrics describe the production environment',
   'Research and fact-checking', 'Production work', 'Website management',
-  'See 55+ YouTube projects I worked on'
+  ENTROPY_WORK_URL, 'Official work record published by Entropy for Life'
 ]) assertContains(indexText, needle, 'dist/index.html');
 for (const obsolete of [
   'class="portfolio-v4"', 'class="portfolio-v5"', 'class="portfolio-v7"',
@@ -115,7 +116,8 @@ for (const obsolete of [
   '/media/work/model-behavior-record.svg', '/media/work/model-behavior-profile.webp',
   '/evidence/gray-swan-metrics-2026-07-25.svg', '/media/work/entropy-dashboard-800.webp',
   'Special:ListFiles/Digressivo', 'Selected paid work', 'Contribution and production scale',
-  'YouTube production environment', 'Packaging criteria'
+  'YouTube production environment', 'Packaging criteria',
+  'PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh', 'PLUXju4zC0Sks'
 ]) assertNotContains(index, obsolete, 'dist/index.html');
 assertContains(index, 'class="portfolio-v8"', 'dist/index.html');
 assertContains(index, 'class="v8-hero-gallery"', 'dist/index.html');
@@ -144,6 +146,8 @@ for (const [name, profile] of applicationProfiles) {
   assertContains(text, 'Page 2 of 2', `dist/${name}.html`);
   assertContains(text, 'C1 overall', `dist/${name}.html`);
   assertContains(html, 'id="cvPhoneSlot"', `dist/${name}.html`);
+  assertContains(html, ENTROPY_WORK_URL, `dist/${name}.html`);
+  assertContains(text, 'Official Entropy for Life work record', `dist/${name}.html`);
 }
 assertContains(normalizeHtmlText(pages.editorial), 'Marta Panzeri', 'dist/cv-editorial.html');
 assertContains(normalizeHtmlText(pages.editorial), 'Department of Developmental Psychology and Socialisation', 'dist/cv-editorial.html');
@@ -164,7 +168,7 @@ const masterText = normalizeHtmlText(pages.cv);
 for (const needle of [
   'Master CV & Evidence Record', 'not presented as an independent software developer', 'AI Safety',
   'Research & Data Quality', 'Editorial & Community', 'Trust & Knowledge Integrity', 'Marta Panzeri',
-  '36.5M', 'Scientific Content Quality & Operations Contractor'
+  '36.5M', 'Scientific Content Quality & Operations Contractor', ENTROPY_WORK_URL
 ]) assertContains(masterText, needle, 'dist/cv.html');
 pass('Master CV positioning checked');
 
@@ -185,6 +189,7 @@ pass('Evaluation record evidence boundary checked');
 const allGenerated = normalizeHtmlText(Object.values(pages).join('\n')) + Object.values(canonical).join('\n');
 assertContains(allGenerated, D.identity.jobTitle, 'Generated outputs');
 assertContains(allGenerated, D.identity.secondaryTitle, 'Generated outputs');
+assertContains(allGenerated, ENTROPY_WORK_URL, 'Generated outputs');
 for (const needle of [
   'AI Safety Evaluation & Research Verification Specialist', 'AI Evaluation & Research Verification Specialist',
   'Founder & Technical Product Builder', 'Product Owner & Technical Builder', 'Creator & Systems Builder'
