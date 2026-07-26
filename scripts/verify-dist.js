@@ -122,12 +122,11 @@ assertContains(index, 'class="v8-product"', 'dist/index.html');
 assertContains(index, 'v10-entropy-panel', 'dist/index.html');
 assertContains(index, 'v11-platform-grid', 'dist/index.html');
 for (const media of [
-  '/media/work/model-behavior-profile.jpg', '/media/work/gray-swan-profile-2026-07-26.svg',
+  '/media/work/model-behavior-profile.jpg', '/media/work/gray-swan-profile-2026-07-26.svg', '/media/work/entropy-h5n1.png',
   '/media/work/yourself-to-science-800.webp', '/media/work/mdpi-filter-1-800.webp',
   '/media/work/mdpi-filter-2-800.webp', '/media/work/wikimedia-clinical-overlap.svg',
   '/media/work/tableau-mortality-800.webp', '/media/work/flourish-oesophageal-cancer.svg'
 ]) assertContains(index, media, 'dist/index.html');
-assertNotContains(index, '/media/work/entropy-h5n1.png', 'dist/index.html');
 assertContains(index, 'https://github.com/orgs/mdpi-filter/repositories', 'dist/index.html');
 assertContains(index, 'https://jnton.github.io/protein-by-bodyweight-country/', 'dist/index.html');
 pass('Artifact-led homepage checked');
