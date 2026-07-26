@@ -10,8 +10,8 @@
     "capturedLocal": "2026-07-25T21:19:07+02:00",
     "capturedUtc": "2026-07-25T19:19:07Z",
     "timestampBasis": "Inferred from the user-supplied screenshot filename and Europe/Rome summer-time offset.",
-    "evidenceImage": "https://mariomarcolongo.com/media/work/gray-swan-summary-2026-07-25.svg",
-    "evidenceImageType": "Legible vector summary of transcribed metrics; not the original platform screenshot.",
+    "publicScreenshotPreview": "https://mariomarcolongo.com/media/work/model-behavior-profile.jpg",
+    "publicScreenshotPreviewType": "Compressed public profile screenshot used by the portfolio; not a synthetic metric graphic.",
     "originalScreenshot": {
       "filename": "Screenshot 2026-07-25 at 21.19.07.png",
       "pixelDimensions": "2047x1162",
@@ -60,7 +60,7 @@
     "A same-day WACZ capture at 17:09 UTC records #75, top 6%, and 109 total breaks before the later screenshot recorded 110. This documents the profile changing during the day.",
     "Rankings, percentiles, points, and totals are dynamic. Portfolio claims should cite the snapshot date and, where precision matters, the capture time.",
     "The current screenshot and locally retained WACZ are account-holder-preserved evidence, not attestations issued by Gray Swan.",
-    "The public SVG is a vector summary for legibility; the original screenshot is identified by filename, dimensions and SHA-256 in this manifest."
+    "The portfolio now displays a compressed screenshot preview directly; the original source capture remains identified by filename, dimensions and SHA-256 in this manifest."
   ],
   "previousSnapshot": {
     "evidencePage": "https://mariomarcolongo.com/evidence/gray-swan-profile-2026-07-24.html",
