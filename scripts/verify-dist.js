@@ -97,7 +97,9 @@ for (const needle of [
   'data-testid="human-capabilities"', 'data-testid="human-work"', 'data-testid="human-documents"',
   'Where I can contribute.', 'Selected work, shown through the actual output.',
   'Start with the role you are hiring for.', 'AI evaluation and scientific evidence roles.',
-  'Zotero plugin', 'Protein by bodyweight by country', '#75 on the Proving Ground,'
+  'Zotero plugin', 'Protein by bodyweight by country', '#75 on the Proving Ground,',
+  '460K+', '250K+', 'Audience optimization', 'click-through rate', 'watch time',
+  'The audience belongs to Entropy for Life, not to me'
 ]) assertContains(indexText, needle, 'dist/index.html');
 for (const obsolete of [
   'class="portfolio-v4"', 'class="portfolio-v5"', 'class="portfolio-v7"',
@@ -108,16 +110,17 @@ for (const obsolete of [
   'The hard part is rarely finding a paper.', 'Discuss a difficult problem.',
   'Pencil_Fascist_Tuberculosis', 'Alessandro Lanzoni', 'Public analysis across three platforms.',
   '/media/work/model-behavior-method.svg', '/media/work/entropy-social-proof.svg',
-  '/media/work/model-behavior-record.svg', '/media/work/entropy-h5n1.png',
-  '/media/work/model-behavior-profile.webp', '/evidence/gray-swan-metrics-2026-07-25.svg',
-  '/media/work/entropy-dashboard-800.webp', 'Special:ListFiles/Digressivo'
+  '/media/work/model-behavior-record.svg', '/media/work/model-behavior-profile.webp',
+  '/evidence/gray-swan-metrics-2026-07-25.svg', '/media/work/entropy-dashboard-800.webp',
+  'Special:ListFiles/Digressivo'
 ]) assertNotContains(index, obsolete, 'dist/index.html');
 assertContains(index, 'class="portfolio-v8"', 'dist/index.html');
 assertContains(index, 'class="v8-hero-gallery"', 'dist/index.html');
 assertContains(index, 'class="v8-case-stack"', 'dist/index.html');
 assertContains(index, 'class="v8-product"', 'dist/index.html');
+assertContains(index, 'class="v8-audience-proof"', 'dist/index.html');
 for (const media of [
-  '/media/work/gray-swan-summary-2026-07-25.svg', '/media/work/entropy-work-inventory.svg',
+  '/media/work/model-behavior-profile.jpg', '/media/work/entropy-h5n1.png',
   '/media/work/yourself-to-science-800.webp', '/media/work/mdpi-filter-1-800.webp',
   '/media/work/mdpi-filter-2-800.webp', '/media/work/wikimedia-clinical-overlap.svg',
   '/media/work/tableau-mortality-800.webp', '/media/work/flourish-oesophageal-cancer.svg'
