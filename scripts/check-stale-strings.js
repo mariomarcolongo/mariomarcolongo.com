@@ -17,6 +17,7 @@ const EXPECTED = {
 const REQUIRED = [
   'package.json', 'package-lock.json', 'data/source.js', 'data/application-profiles.js',
   'data/portfolio-human.js', 'data/recent-application-evidence.js',
+  'data/career-positioning.js',
   'src/layouts/Layout.astro', 'src/components/SiteNav.astro',
   'src/components/SiteFooter.astro', 'src/components/ApplicationCv.astro', 'src/pages/index.astro',
   'src/pages/integrity.astro', 'src/pages/cv.astro', 'src/pages/cv-resume.astro',
@@ -153,8 +154,8 @@ for (const requiredText of [
   'Start with the role you are hiring for.',
   'AI evaluation and scientific evidence roles.',
   '#75 on the Proving Ground leaderboard',
-  'Fact-checking scientific productions before publication.',
-  'At least 59 published projects supported',
+  'Fact-checking and producing scientific content before publication.',
+  'At least 59 documented published projects supported',
   '460K+',
   '250K+',
   'Audience optimization',
