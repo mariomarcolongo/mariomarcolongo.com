@@ -77,14 +77,7 @@ jobs:
                   --only-categories=performance,accessibility,best-practices,seo \
                   --output=json --output-path="$report"
 
-                score=$(node - "$report" <<'NODE'
-                const fs = require('node:fs');
-                const report = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'));
-                const categories = ['performance', 'accessibility', 'best-practices', 'seo'];
-                console.log(categories.reduce((total, key) => total + Math.round(report.categories[key].score * 100), 0));
-                NODE
-                )
-
+                score=$(node -e "const fs=require('node:fs');const r=JSON.parse(fs.readFileSync(process.argv[1],'utf8'));const c=['performance','accessibility','best-practices','seo'];console.log(c.reduce((t,k)=>t+Math.round(r.categories[k].score*100),0));" "$report")
                 if (( score > best_score )); then
                   best_score=$score
                   best_report=$report
@@ -137,6 +130,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: lighthouse-100-audit
-          path: lighthouse-output/**/*
+          path: lighthouse-output/
           if-no-files-found: error
           retention-days: 14
