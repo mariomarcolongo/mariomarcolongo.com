@@ -98,9 +98,10 @@ for (const needle of [
   'Where I can contribute.', 'Selected work, shown through the actual output.',
   'Start with the role you are hiring for.', 'AI evaluation and scientific evidence roles.',
   'Zotero plugin', 'Protein by bodyweight by country', '#75 on the Proving Ground,',
-  '267K', '36.5M', 'Contribution and production scale', 'Packaging criteria',
+  '267K', '36.5M', 'Research, production and website work', 'Thumbnail goals',
   'Platform metrics describe the production environment',
-  'Evidence quality', 'Content production', 'Publishing operations'
+  'Research and fact-checking', 'Production work', 'Website management',
+  'See 55+ YouTube projects I worked on'
 ]) assertContains(indexText, needle, 'dist/index.html');
 for (const obsolete of [
   'class="portfolio-v4"', 'class="portfolio-v5"', 'class="portfolio-v7"',
@@ -113,7 +114,8 @@ for (const obsolete of [
   '/media/work/model-behavior-method.svg', '/media/work/entropy-social-proof.svg',
   '/media/work/model-behavior-record.svg', '/media/work/model-behavior-profile.webp',
   '/evidence/gray-swan-metrics-2026-07-25.svg', '/media/work/entropy-dashboard-800.webp',
-  'Special:ListFiles/Digressivo'
+  'Special:ListFiles/Digressivo', 'Selected paid work', 'Contribution and production scale',
+  'YouTube production environment', 'Packaging criteria'
 ]) assertNotContains(index, obsolete, 'dist/index.html');
 assertContains(index, 'class="portfolio-v8"', 'dist/index.html');
 assertContains(index, 'class="v8-hero-gallery"', 'dist/index.html');
