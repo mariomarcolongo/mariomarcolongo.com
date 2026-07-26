@@ -52,6 +52,10 @@ function patchIndex(html) {
   html = html.replaceAll('#370', `#${CURRENT.arenaRank}`);
   html = html.replaceAll('250K+', CURRENT.youtubeSubscribers);
   html = html.replaceAll('460K+', CURRENT.combinedFollowers);
+  html = html.replaceAll(
+    'Supported 59+ published projects for an Italian science-communication brand with 267K YouTube subscribers and 480K+ combined platform following; recurring evidence review plus audience-focused visual packaging, selected thumbnails and web operations.',
+    'Delivered 80 documented published content contributions—55 YouTube videos, 4 co-authored articles and 21 short-form pieces—for an Italian science-communication brand with 267K YouTube subscribers and 480K+ combined platform following; recurring evidence review, content production, selected thumbnails and website operations.'
+  );
   html = replaceRequired(
     html,
     '<span>Original Gray Swan profile screenshot · dated public platform record</span>',
