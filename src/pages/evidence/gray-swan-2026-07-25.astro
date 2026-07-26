@@ -7,7 +7,7 @@ import release from "../../../data/release-data.js";
 
 const { D, GS } = release;
 const title = "Gray Swan Proving Ground Evidence — 25 July 2026";
-const description = "Dated Gray Swan evidence summary for Mario Marcolongo: Proving Ground rank 75, top 6%, 110 total breaks, separate Arena metrics and preserved capture metadata.";
+const description = "Dated Gray Swan evidence record for Mario Marcolongo: original public profile screenshot, Proving Ground rank 75, top 6%, 110 total breaks, separate Arena metrics and preserved capture metadata.";
 const evidenceJsonLd = {
   "@context": "https://schema.org",
   "@type": "DigitalDocument",
@@ -21,8 +21,8 @@ const evidenceJsonLd = {
   encoding: [
     {
       "@type": "MediaObject",
-      contentUrl: "https://mariomarcolongo.com/media/work/gray-swan-summary-2026-07-25.svg",
-      encodingFormat: "image/svg+xml"
+      contentUrl: "https://mariomarcolongo.com/media/work/model-behavior-profile.jpg",
+      encodingFormat: "image/jpeg"
     },
     {
       "@type": "MediaObject",
@@ -58,7 +58,7 @@ const evidenceJsonLd = {
 
       <aside class="evaluation-scope-note">
         <strong>Evidence boundary</strong>
-        <p>The visible graphic below is a legible vector summary of transcribed metrics, not a recreated platform screenshot. The source filename, dimensions, timestamp and SHA-256 are recorded in the preservation manifest; the live profile and previous archived snapshot remain linked separately.</p>
+        <p>The visible image below is the public Gray Swan profile screenshot used in the portfolio. The preservation manifest separately records the source filename, original dimensions, timestamp and SHA-256; the live profile and previous archived snapshot remain directly linked.</p>
       </aside>
     </section>
 
@@ -82,15 +82,15 @@ const evidenceJsonLd = {
 
     <section class="evaluation-section">
       <div class="evaluation-section-head">
-        <h2>Legible dated summary</h2>
-        <p>The summary keeps Proving Ground and Arena metrics separate and states the visible 109/110 aggregation discrepancy rather than hiding it.</p>
+        <h2>Original public profile screenshot</h2>
+        <p>The screenshot is shown directly rather than converted into a synthetic infographic. Proving Ground and Arena remain separate measurement systems, and the dated text below makes the important values readable without altering the source image.</p>
       </div>
       <figure style="margin:0">
-        <a href="/media/work/gray-swan-summary-2026-07-25.svg" aria-label="Open the Gray Swan evidence summary at full size">
-          <img src="/media/work/gray-swan-summary-2026-07-25.svg" alt={`Dated Gray Swan activity summary showing Proving Ground rank ${GS.rank}, ${GS.percentile.toLowerCase()}, ${GS.totalBreaks} total breaks and separate Arena metrics`} width="1200" height="760" style="display:block;width:100%;height:auto;border:1px solid rgba(127,127,127,.3);border-radius:18px;background:#101216" />
+        <a href="/media/work/model-behavior-profile.jpg" aria-label="Open the Gray Swan profile screenshot at full size">
+          <img src="/media/work/model-behavior-profile.jpg" alt={`Screenshot of the dated Gray Swan profile showing Proving Ground rank ${GS.rank}, ${GS.percentile.toLowerCase()}, ${GS.totalBreaks} total breaks and separate Arena activity`} width="800" height="350" style="display:block;width:100%;height:auto;border:1px solid rgba(127,127,127,.3);border-radius:18px;background:#090b0d" />
         </a>
         <figcaption style="margin-top:12px;line-height:1.6">
-          Summary generated from the metrics recorded in the 25 July account-holder capture. It is intentionally optimized for portfolio-scale readability.
+          Public screenshot preview. Open it at full size or use the preservation manifest for the original capture metadata and cryptographic hash.
         </figcaption>
       </figure>
       <div class="career-actions" style="margin-top:18px">
