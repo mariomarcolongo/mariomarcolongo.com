@@ -156,12 +156,12 @@ for (const requiredText of [
   'AI evaluation and scientific evidence roles.',
   '#75 on the Proving Ground leaderboard',
   'Fact-checking and producing scientific content before publication.',
-  'At least 59 documented published projects supported',
-  '460K+',
-  '250K+',
-  'Audience optimization',
-  'click-through rate',
-  'watch time',
+  '80 documented published content contributions',
+  '55 YouTube videos',
+  '21 short-form pieces',
+  '480K+',
+  '267K',
+  'designed and built entropyforlife.it',
   ENTROPY_WORK_URL,
   'Official work record published by Entropy for Life'
 ]) {
@@ -180,7 +180,9 @@ for (const rejectedText of [
   'class="portfolio-v5"', 'class="portfolio-v7"', 'class="v7-engine"',
   'class="p5-work-mosaic"', 'Public analysis across three platforms.',
   '/media/work/model-behavior-record.svg',
-  '/media/work/entropy-dashboard-800.webp', '/evidence/gray-swan-metrics-2026-07-25.svg'
+  '/media/work/entropy-dashboard-800.webp', '/evidence/gray-swan-metrics-2026-07-25.svg',
+  'PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh', 'PLUXju4zC0Sks',
+  'Official Entropy for Life website'
 ]) {
   if (homepageSource.includes(rejectedText)) fail('src/pages/index.astro', 1, `Homepage still contains rejected content: ${rejectedText}`);
 }
