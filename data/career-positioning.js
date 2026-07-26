@@ -152,11 +152,11 @@ if (modelCase) {
 
 const entropyCase = H?.cases?.find((item) => item?.id === 'scientific-verification');
 if (entropyCase) {
-  entropyCase.title = 'Scientific content quality across research, production and publishing.';
-  entropyCase.lead = `Paid contractor supporting Entropy for Life, an Italian science-communication brand with ${audience.youtubeSubscribers} YouTube subscribers and ${audience.youtubeViews} channel views.`;
-  entropyCase.action = 'Own primary-literature research and scientific fact-checking across documented productions. Depending on the assignment, translate evidence into scripts, data visualizations, slides and on-screen assets; develop selected thumbnails and performance-aware visual packaging; and manage WordPress, hosting, DNS/SSL and technical SEO.';
-  entropyCase.result = `${audience.projects} documented projects supported: ${audience.videoProjects} YouTube video projects and ${audience.articles} co-authored articles, with a cross-functional remit spanning evidence quality, content production and publishing operations.`;
-  entropyCase.boundary = 'Audience and channel metrics describe the production environment, not a personal audience or a causal performance claim. Quantified thumbnail lift is stated only when comparable analytics are available.';
+  entropyCase.title = 'Evidence quality and content operations at creator scale.';
+  entropyCase.lead = 'Paid contractor supporting an established Italian science-communication brand across evidence review, content production and publishing operations.';
+  entropyCase.action = 'Own recurring primary-literature research and scientific fact-checking. Depending on the assignment, also develop scripts, data visualizations, slides, on-screen assets and selected thumbnails; manage WordPress, hosting, DNS/SSL and technical SEO; and use click-through rate, watch time, retention and attention capture as visual-packaging criteria.';
+  entropyCase.result = `${audience.projects} documented projects supported: ${audience.videoProjects} YouTube video projects and ${audience.articles} co-authored articles, with responsibilities spanning evidence quality, content production and publishing operations.`;
+  entropyCase.boundary = 'Platform metrics describe the production environment, not a personal audience. Quantified thumbnail lift is stated only when comparable analytics are available.';
 }
 
 if (P.aiSafety) {
