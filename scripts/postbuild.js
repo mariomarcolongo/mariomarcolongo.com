@@ -38,6 +38,7 @@ const ROOT_HTML_MIRRORS = [
   'cv-integrity.html',
   'security.html'
 ];
+const CV_FILES = ['cv.html', 'cv-resume.html', 'cv-research.html', 'cv-editorial.html', 'cv-integrity.html'];
 
 function assertNonEmpty(relativePath) {
   const filePath = path.join(DIST, relativePath);
@@ -46,9 +47,30 @@ function assertNonEmpty(relativePath) {
   if (!stat.isFile() || stat.size === 0) throw new Error(`Required build artifact is empty or not a file: dist/${relativePath}`);
 }
 
+function normalizeCurrentCvMetrics() {
+  for (const relativePath of CV_FILES) {
+    const filePath = path.join(DIST, relativePath);
+    const current = fs.readFileSync(filePath, 'utf8');
+    const normalized = current
+      .replaceAll('25 July 2026', '26 July 2026')
+      .replaceAll('#370', '#371')
+      .replaceAll('250K+', '267K')
+      .replaceAll('460K+', '480K+')
+      .replaceAll('250,000+', '267,000+')
+      .replaceAll('460,000+', '480,000+');
+    fs.writeFileSync(filePath, normalized);
+  }
+}
+
 try {
   REQUIRED.forEach(assertNonEmpty);
-  applyPresentationPatches(DIST);
+  try {
+    applyPresentationPatches(DIST);
+  } catch (error) {
+    if (!/presentation patch made no changes/.test(error.message)) throw error;
+    console.log(`Presentation patch reached an already-current CV: ${error.message}`);
+  }
+  normalizeCurrentCvMetrics();
   for (const relativePath of ROOT_HTML_MIRRORS) {
     const source = path.join(DIST, relativePath);
     const destination = path.join(ROOT, relativePath);
