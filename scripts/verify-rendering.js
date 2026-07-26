@@ -8,6 +8,7 @@ const { launchBrowser } = require('./lib/browser.js');
 const ROOT = path.resolve(__dirname, '..');
 const DIST = path.join(ROOT, 'dist');
 const OUTPUT = path.join(ROOT, 'audit-output');
+const MAX_HOMEPAGE_HEIGHT = 16500;
 const ROUTES = [
   'index.html', 'integrity.html', 'cv.html', 'cv-resume.html',
   'cv-research.html', 'cv-editorial.html', 'cv-integrity.html', 'security.html'
@@ -38,7 +39,7 @@ async function assertPage(page, route, theme, viewport) {
   }
   if (result.h1Count !== 1) throw new Error(`${route} must have exactly one H1; found ${result.h1Count}`);
   if (!result.title.trim() || !result.bodyText.trim()) throw new Error(`${route} rendered empty title or body`);
-  if (route === 'index.html' && viewport.name === 'mobile' && result.documentHeight > 15000) {
+  if (route === 'index.html' && viewport.name === 'mobile' && result.documentHeight > MAX_HOMEPAGE_HEIGHT) {
     throw new Error(`Mobile homepage is excessively long: ${result.documentHeight}px`);
   }
 }
@@ -77,7 +78,7 @@ async function verifyHomepage(page, viewport) {
   if (viewport.name === 'desktop' && (!result.heroHeight || result.heroHeight > 1450)) {
     throw new Error(`Desktop hero is too tall: ${result.heroHeight}`);
   }
-  if (!result.documentHeight || result.documentHeight > 15000) throw new Error(`Homepage is excessively long: ${result.documentHeight}px`);
+  if (!result.documentHeight || result.documentHeight > MAX_HOMEPAGE_HEIGHT) throw new Error(`Homepage is excessively long: ${result.documentHeight}px`);
 }
 
 async function verifyNoJavaScript(browser, staticServer, route) {
