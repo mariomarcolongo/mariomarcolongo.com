@@ -1,4 +1,4 @@
-/* Portfolio v9 corrections: legible evidence summaries, neutral framing and balanced dark-mode contrast. */
+/* Portfolio v9 corrections: real evidence, readable audience context and balanced dark-mode contrast. */
 
 [data-theme="dark"] {
   --v8-bg: #0d0f0e;
@@ -14,22 +14,27 @@
   --v8-black: #050706;
 }
 
-/* Keep both quantitative hero summaries intact rather than cropping their evidence. */
-.v8-hero-shot-1 img,
-.v8-hero-shot-2 img {
+/* The hero uses public work rather than synthetic metric graphics. */
+.v8-hero-shot-1 img {
   object-fit: contain;
   object-position: center center;
   background: #090b0d;
 }
 
-/* Preserve the complete dated Gray Swan summary so both metric systems remain visible. */
+.v8-hero-shot-2 img {
+  object-fit: cover;
+  object-position: center top;
+  background: #151713;
+}
+
+/* Show the original Gray Swan profile at its natural wide ratio. */
 .v8-case-blue {
   align-items: start;
 }
 
 .v8-case-blue .v8-case-media {
   min-height: 0;
-  aspect-ratio: 1200 / 760;
+  aspect-ratio: 800 / 350;
 }
 
 .v8-case-blue .v8-case-media picture,
@@ -45,30 +50,142 @@
   background: #090b0d;
 }
 
-/* The Entropy visual is an inventory, not a decorative article screenshot: show every number and label. */
-.v8-case-red .v8-case-media {
-  min-height: 0;
-  aspect-ratio: 1200 / 760;
-}
-
-.v8-case-red .v8-case-media picture,
-.v8-case-red .v8-case-media img {
-  height: 100%;
-  min-height: 0;
-}
-
-.v8-case-red .v8-case-media img {
-  object-fit: contain;
-  object-position: center center;
-  padding: 0;
-  background: #11130f;
-}
-
 .v8-case-blue .v8-case-media,
-.v8-hero-shot-1,
-.v8-hero-shot-2 {
+.v8-hero-shot-1 {
   border-color: rgba(255, 255, 255, 0.16);
   background: #090b0d;
+}
+
+/* Entropy for Life: responsive HTML evidence instead of tiny text embedded in an image. */
+.v8-audience-proof {
+  position: relative;
+  min-height: 620px;
+  aspect-ratio: auto;
+  isolation: isolate;
+  padding: clamp(30px, 5vw, 58px);
+  background: #11130f;
+  color: #f8f3e9 !important;
+}
+
+.v8-audience-proof::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(145deg, rgba(13, 16, 12, 0.9), rgba(13, 16, 12, 0.97)),
+    radial-gradient(circle at 80% 18%, rgba(255, 116, 91, 0.24), transparent 42%);
+}
+
+.v8-audience-proof .v8-audience-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  object-position: center top;
+  padding: 0;
+  opacity: 0.16;
+  filter: saturate(0.65) contrast(1.12);
+}
+
+.v8-audience-proof-inner {
+  display: grid;
+  gap: 28px;
+  width: 100%;
+  max-width: 720px;
+  padding-bottom: 60px;
+}
+
+.v8-audience-eyebrow {
+  color: #ff8b76;
+  font: 760 0.72rem/1.25 var(--v8-mono);
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.v8-audience-main {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: clamp(20px, 4vw, 38px);
+  align-items: center;
+}
+
+.v8-audience-main strong {
+  font-family: var(--v8-serif);
+  font-size: clamp(4.8rem, 10vw, 8.5rem);
+  font-weight: 500;
+  line-height: 0.82;
+  letter-spacing: -0.075em;
+}
+
+.v8-audience-main p {
+  max-width: 330px;
+  margin: 0;
+  color: #f5f0e7;
+  font-size: clamp(1.1rem, 2.2vw, 1.75rem);
+  font-weight: 740;
+  line-height: 1.18;
+}
+
+.v8-audience-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.v8-audience-metrics > div {
+  display: grid;
+  gap: 6px;
+  min-height: 106px;
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.065);
+}
+
+.v8-audience-metrics strong {
+  font-family: var(--v8-serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  line-height: 0.95;
+}
+
+.v8-audience-metrics span {
+  color: #d2cec4;
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.v8-audience-focus {
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.v8-audience-focus strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #ff8b76;
+  font: 760 0.72rem/1.25 var(--v8-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.v8-audience-focus p {
+  max-width: 650px;
+  margin: 0;
+  color: #ece7de;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.v8-audience-proof-inner > small {
+  color: #aaa99f;
+  font-size: 0.68rem;
+  line-height: 1.5;
 }
 
 .v8-case-links {
@@ -98,18 +215,53 @@
 }
 
 @media (max-width: 720px) {
-  .v8-case-blue .v8-case-media,
-  .v8-case-red .v8-case-media {
-    aspect-ratio: 1200 / 760;
+  .v8-case-blue .v8-case-media {
+    aspect-ratio: 800 / 350;
   }
 
-  .v8-case-blue .v8-case-media img,
-  .v8-case-red .v8-case-media img {
+  .v8-case-blue .v8-case-media img {
     object-position: center center;
+  }
+
+  .v8-audience-proof {
+    min-height: 610px;
+    padding: 30px 24px;
+  }
+
+  .v8-audience-main {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .v8-audience-main strong {
+    font-size: clamp(4.7rem, 24vw, 7rem);
+  }
+
+  .v8-audience-main p {
+    max-width: 100%;
+  }
+
+  .v8-audience-metrics {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .v8-audience-metrics > div {
+    min-height: 96px;
+    padding: 16px;
   }
 
   .v8-case-links {
     display: grid;
     gap: 12px;
+  }
+}
+
+@media (max-width: 430px) {
+  .v8-audience-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .v8-audience-proof {
+    min-height: 760px;
   }
 }
