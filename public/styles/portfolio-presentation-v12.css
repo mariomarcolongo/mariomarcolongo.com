@@ -1,10 +1,10 @@
-/* Mobile reading order: introduce Mario's role before presenting the supporting evidence panel. */
-@media (max-width: 900px) {
-  .v8-case-red .v8-case-copy {
-    order: 1;
+/* Stacked reading order: introduce Mario's role before presenting the supporting evidence panel. */
+@media (max-width: 1080px) {
+  .v8-case.v8-case-red.is-reversed .v8-case-copy {
+    order: 1 !important;
   }
 
-  .v8-case-red .v8-case-media {
-    order: 2;
+  .v8-case.v8-case-red.is-reversed .v8-case-media {
+    order: 2 !important;
   }
 }
