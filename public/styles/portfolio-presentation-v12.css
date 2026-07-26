@@ -5,6 +5,15 @@
   width: min(1320px, calc(100% - 48px));
 }
 
+/* Some legacy rules override the HTML hidden attribute; force a single theme icon. */
+.nav-editorial .theme-toggle [hidden] {
+  display: none !important;
+}
+
+.nav-editorial .theme-toggle svg:not([hidden]) {
+  display: block;
+}
+
 /* The recommended CV should lead, not become a tall decorative slab. */
 .v8-documents {
   grid-template-columns: repeat(6, minmax(0, 1fr));
