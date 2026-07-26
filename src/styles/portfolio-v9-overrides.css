@@ -56,6 +56,11 @@
   background: #090b0d;
 }
 
+/* Give the audience evidence as much visual weight as the copy. */
+.v8-case-red {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 /* Entropy for Life: responsive HTML evidence instead of tiny text embedded in an image. */
 .v8-audience-proof {
   position: relative;
@@ -93,7 +98,7 @@
 
 .v8-audience-proof-inner {
   display: grid;
-  gap: 28px;
+  gap: 26px;
   width: 100%;
   max-width: 720px;
   padding-bottom: 60px;
@@ -108,26 +113,26 @@
 
 .v8-audience-main {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: clamp(20px, 4vw, 38px);
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 13px;
+  align-items: start;
 }
 
 .v8-audience-main strong {
   font-family: var(--v8-serif);
-  font-size: clamp(4.8rem, 10vw, 8.5rem);
+  font-size: clamp(5rem, 9vw, 7.7rem);
   font-weight: 500;
   line-height: 0.82;
   letter-spacing: -0.075em;
 }
 
 .v8-audience-main p {
-  max-width: 330px;
+  max-width: 520px;
   margin: 0;
   color: #f5f0e7;
-  font-size: clamp(1.1rem, 2.2vw, 1.75rem);
+  font-size: clamp(1.05rem, 1.8vw, 1.45rem);
   font-weight: 740;
-  line-height: 1.18;
+  line-height: 1.22;
 }
 
 .v8-audience-metrics {
@@ -214,6 +219,12 @@
   color: #555a53;
 }
 
+@media (max-width: 900px) {
+  .v8-case-red {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 720px) {
   .v8-case-blue .v8-case-media {
     aspect-ratio: 800 / 350;
@@ -226,11 +237,6 @@
   .v8-audience-proof {
     min-height: 610px;
     padding: 30px 24px;
-  }
-
-  .v8-audience-main {
-    grid-template-columns: 1fr;
-    gap: 14px;
   }
 
   .v8-audience-main strong {
