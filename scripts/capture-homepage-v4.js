@@ -37,6 +37,9 @@ async function capture(browser, server, name, width, height, theme) {
       .map((image) => ({ src: image.getAttribute('src'), alt: image.alt }));
     const contact = document.querySelector('.v8-contact');
     const contactStyle = contact ? getComputedStyle(contact) : null;
+    const caseImages = document.querySelectorAll('.v8-case-media img').length;
+    const entropyPanels = document.querySelectorAll('.v10-entropy-panel').length;
+    const totalPortfolioImages = document.querySelectorAll('.portfolio-v8 img').length;
     return {
       scrollWidth: document.documentElement.scrollWidth,
       clientWidth: document.documentElement.clientWidth,
@@ -45,9 +48,12 @@ async function capture(browser, server, name, width, height, theme) {
       contactOpacity: contactStyle ? Number.parseFloat(contactStyle.opacity) : null,
       contactHeight: contact ? Math.round(contact.getBoundingClientRect().height) : null,
       heroImages: document.querySelectorAll('.v8-hero-shot img').length,
-      caseImages: document.querySelectorAll('.v8-case-media img').length,
+      caseImages,
+      entropyPanels,
+      caseVisuals: caseImages + entropyPanels,
       productImages: document.querySelectorAll('.v8-product-shot img').length,
-      totalPortfolioImages: document.querySelectorAll('.portfolio-v8 img').length,
+      totalPortfolioImages,
+      totalPortfolioVisuals: totalPortfolioImages + entropyPanels,
       brokenLocalImages: brokenImages.filter((item) => item.src && item.src.startsWith('/')),
       brokenExternalImages: brokenImages.filter((item) => !item.src || !item.src.startsWith('/'))
     };
@@ -63,8 +69,8 @@ async function capture(browser, server, name, width, height, theme) {
   if (!measurements.contactExists || measurements.contactOpacity < 0.95 || !measurements.contactHeight) {
     throw new Error(`${name} has a hidden or missing contact conversion section: ${JSON.stringify(measurements)}`);
   }
-  if (measurements.heroImages < 4 || measurements.caseImages < 3 || measurements.productImages < 2 || measurements.totalPortfolioImages < 12) {
-    throw new Error(`${name} does not render the expected real-work media: ${JSON.stringify(measurements)}`);
+  if (measurements.heroImages < 4 || measurements.caseVisuals < 3 || measurements.entropyPanels !== 1 || measurements.productImages < 2 || measurements.totalPortfolioVisuals < 12) {
+    throw new Error(`${name} does not render the expected real-work evidence: ${JSON.stringify(measurements)}`);
   }
   if (measurements.brokenLocalImages.length) {
     throw new Error(`${name} has broken first-party images: ${JSON.stringify(measurements.brokenLocalImages)}`);
