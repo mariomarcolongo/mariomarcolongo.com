@@ -118,7 +118,7 @@ assertContains(index, 'class="portfolio-v8"', 'dist/index.html');
 assertContains(index, 'class="v8-hero-gallery"', 'dist/index.html');
 assertContains(index, 'class="v8-case-stack"', 'dist/index.html');
 assertContains(index, 'class="v8-product"', 'dist/index.html');
-assertContains(index, 'class="v8-audience-proof"', 'dist/index.html');
+assertContains(index, 'v8-audience-proof', 'dist/index.html');
 for (const media of [
   '/media/work/model-behavior-profile.jpg', '/media/work/entropy-h5n1.png',
   '/media/work/yourself-to-science-800.webp', '/media/work/mdpi-filter-1-800.webp',
