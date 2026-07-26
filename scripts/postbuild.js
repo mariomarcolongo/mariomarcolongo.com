@@ -64,6 +64,12 @@ function normalizeCurrentCvMetrics() {
   }
 }
 
+function normalizeIndexCopy() {
+  const filePath = path.join(DIST, 'index.html');
+  const current = fs.readFileSync(filePath, 'utf8');
+  fs.writeFileSync(filePath, current.replaceAll('Performance-aware packaging', 'Content-performance practice'));
+}
+
 function addIndexStylesheet(href) {
   const filePath = path.join(DIST, 'index.html');
   const current = fs.readFileSync(filePath, 'utf8');
@@ -81,6 +87,7 @@ try {
     console.log(`Presentation patch reached an already-current CV: ${error.message}`);
   }
   normalizeCurrentCvMetrics();
+  normalizeIndexCopy();
   addIndexStylesheet('/styles/portfolio-presentation-v10-mobile-fix.css');
   addIndexStylesheet('/styles/portfolio-presentation-v11.css');
   for (const relativePath of ROOT_HTML_MIRRORS) {
