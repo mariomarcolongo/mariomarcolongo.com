@@ -98,8 +98,8 @@ for (const needle of [
   'Where I can contribute.', 'Selected work, shown through the actual output.',
   'Start with the role you are hiring for.', 'AI evaluation and scientific evidence roles.',
   'Zotero plugin', 'Protein by bodyweight by country', '#75 on the Proving Ground,',
-  '460K+', '250K+', 'Audience optimization', 'click-through rate', 'watch time',
-  'The audience belongs to Entropy for Life, not to me'
+  '480K+', '267K', '36.5M', 'Content-performance practice', 'click-through rate', 'watch time',
+  'audience and channel-level totals belong to Entropy for Life'
 ]) assertContains(indexText, needle, 'dist/index.html');
 for (const obsolete of [
   'class="portfolio-v4"', 'class="portfolio-v5"', 'class="portfolio-v7"',
@@ -118,9 +118,9 @@ assertContains(index, 'class="portfolio-v8"', 'dist/index.html');
 assertContains(index, 'class="v8-hero-gallery"', 'dist/index.html');
 assertContains(index, 'class="v8-case-stack"', 'dist/index.html');
 assertContains(index, 'class="v8-product"', 'dist/index.html');
-assertContains(index, 'v8-audience-proof', 'dist/index.html');
+assertContains(index, 'v10-entropy-panel', 'dist/index.html');
 for (const media of [
-  '/media/work/model-behavior-profile.jpg', '/media/work/entropy-h5n1.png',
+  '/media/work/model-behavior-profile.jpg', '/media/work/gray-swan-profile-2026-07-26.svg', '/media/work/entropy-h5n1.png',
   '/media/work/yourself-to-science-800.webp', '/media/work/mdpi-filter-1-800.webp',
   '/media/work/mdpi-filter-2-800.webp', '/media/work/wikimedia-clinical-overlap.svg',
   '/media/work/tableau-mortality-800.webp', '/media/work/flourish-oesophageal-cancer.svg'
@@ -143,7 +143,7 @@ for (const [name, profile] of applicationProfiles) {
 }
 assertContains(normalizeHtmlText(pages.editorial), 'Marta Panzeri', 'dist/cv-editorial.html');
 assertContains(normalizeHtmlText(pages.editorial), 'Department of Developmental Psychology and Socialisation', 'dist/cv-editorial.html');
-assertContains(normalizeHtmlText(pages.editorial), '460K+', 'dist/cv-editorial.html');
+assertContains(normalizeHtmlText(pages.editorial), '480K+', 'dist/cv-editorial.html');
 assertContains(normalizeHtmlText(pages.editorial), 'click-through rate', 'dist/cv-editorial.html');
 pass('Four specialized application CVs checked');
 
@@ -159,7 +159,7 @@ const masterText = normalizeHtmlText(pages.cv);
 for (const needle of [
   'Master CV & Evidence Record', 'not presented as an independent software developer', 'AI Safety',
   'Research & Data Quality', 'Editorial & Community', 'Trust & Knowledge Integrity', 'Marta Panzeri',
-  '460K+', 'Audience Optimization Contractor'
+  '480K+', 'Audience Optimization Contractor'
 ]) assertContains(masterText, needle, 'dist/cv.html');
 pass('Master CV positioning checked');
 
@@ -167,7 +167,8 @@ const securityText = normalizeHtmlText(pages.security);
 for (const needle of [
   'AI evaluation and model-behavior record.', 'What the record demonstrates', 'Evaluation approach',
   'Limitations and interpretation', 'Proving Ground total breaks', 'historical 24 July 26-wave activity table',
-  '/evidence/gray-swan-2026-07-25/', 'Open live Gray Swan profile', '109'
+  '/evidence/gray-swan-2026-07-25/', '/evidence/gray-swan-profile-2026-07-26.html',
+  '/media/work/gray-swan-profile-2026-07-26.svg', 'Open live Gray Swan profile', '109'
 ]) assertContains(securityText, needle, 'dist/security.html');
 for (const needle of [
   'independently verified policy or alignment boundary failure',
