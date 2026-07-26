@@ -8,13 +8,81 @@ import H from "../../data/portfolio-human.js";
 import { buildProfileGraph } from "../lib/structured-data.js";
 
 const pageTitle = "Mario Marcolongo — AI Evaluation & Scientific Fact-Checking";
-const pageDescription = "Portfolio focused on AI model-behavior evaluation, scientific fact-checking and supporting research-information systems.";
+const pageDescription = "Portfolio focused on AI model-behavior evaluation, scientific fact-checking, audience-focused scientific content operations and supporting research-information systems.";
 const profileJsonLd = buildProfileGraph(D, "https://mariomarcolongo.com/", pageTitle);
 
+const entropyAudience = {
+  combinedFollowing: "460K+",
+  youtubeSubscribers: "250K+",
+  projects: "59+",
+  videoProjects: "55+",
+  articles: "4",
+  note: "Combined public platform following is non-unique and time-sensitive."
+};
+
+const heroMedia = H.heroMedia.map((item) => {
+  if (item.id === "model-record") {
+    return {
+      ...item,
+      title: "Gray Swan Arena profile",
+      image: "/media/work/model-behavior-profile.jpg",
+      imageSet: undefined,
+      alt: "Screenshot of Mario Marcolongo's Gray Swan Arena and Proving Ground profile showing the dated public ranking and activity record"
+    };
+  }
+  if (item.id === "entropy") {
+    return {
+      ...item,
+      title: "Published science communication work",
+      image: "/media/work/entropy-h5n1.png",
+      imageSet: undefined,
+      alt: "Published Entropy for Life science communication output supported through research, fact-checking and production work"
+    };
+  }
+  return item;
+});
+
+const portfolioCases = H.cases.map((item) => {
+  if (item.id === "model-behavior") {
+    return {
+      ...item,
+      image: "/media/work/model-behavior-profile.jpg",
+      imageSet: undefined,
+      alt: "Screenshot of the dated Gray Swan Arena profile showing Proving Ground rank, percentile, breaks and separate Arena activity metrics",
+      imageCaption: "Original Gray Swan profile screenshot · dated public platform record"
+    };
+  }
+  if (item.id === "scientific-verification") {
+    return {
+      ...item,
+      mediaKind: "audience-proof",
+      image: "/media/work/entropy-h5n1.png",
+      lead: `Entropy for Life is an Italian science-communication brand with ${entropyAudience.youtubeSubscribers} YouTube subscribers and ${entropyAudience.combinedFollowing} combined public following across YouTube, Instagram and TikTok.`,
+      action: "Primary-literature research and scientific fact-checking are recurring. Depending on the assignment, I also develop scripts, data visualizations, presentation slides and on-screen assets, and selected thumbnails independently or with the video editor. For audience packaging, I follow current platform guidance and optimize concepts for click-through rate, watch time, retention and immediate attention capture.",
+      result: `${entropyAudience.projects} documented published projects supported: ${entropyAudience.videoProjects} YouTube video projects and ${entropyAudience.articles} co-authored articles, delivered inside a science-communication operation with substantial public reach.`,
+      boundary: "The audience belongs to Entropy for Life, not to me, and the combined platform total is not a count of unique people. Thumbnail and packaging work is presented as an evidence-based optimization practice; a quantified CTR or watch-time lift should only be claimed when comparable channel analytics can be published.",
+      imageCaption: "Audience scale, published work and optimization responsibilities",
+      audience: entropyAudience
+    };
+  }
+  return item;
+});
+
+const grayExperience = D.experience.find((item) => item.role?.includes("Model-Behavior"));
+const entropyExperience = D.experience.find((item) => item.org?.includes("Entropy for Life"));
+const researchExperience = D.experience.find((item) => item.org?.includes("Yourself to Science"));
 const selectedExperience = [
-  D.experience.find((item) => item.role?.includes("Model-Behavior")),
-  D.experience.find((item) => item.org?.includes("Entropy for Life")),
-  D.experience.find((item) => item.org?.includes("Yourself to Science"))
+  grayExperience,
+  entropyExperience
+    ? {
+        ...entropyExperience,
+        role: "Scientific Fact-Checking, Content Operations & Audience Optimization Contractor",
+        resumeBullets: [
+          `Supported ${entropyAudience.projects} published projects for an Italian science-communication brand with ${entropyAudience.youtubeSubscribers} YouTube subscribers and ${entropyAudience.combinedFollowing} combined platform following; recurring evidence review plus audience-focused visual packaging, selected thumbnails and web operations.`
+        ]
+      }
+    : undefined,
+  researchExperience
 ].filter(Boolean);
 
 const isExternal = (href) => href.startsWith("http");
@@ -55,7 +123,7 @@ const isExternal = (href) => href.startsWith("http");
       </div>
 
       <div class="v8-hero-gallery" data-hero-gallery data-reveal aria-label="Selected work previews">
-        {H.heroMedia.map((item, index) => (
+        {heroMedia.map((item, index) => (
           <a
             class={`v8-hero-shot v8-hero-shot-${index + 1}`}
             href={item.href}
@@ -110,21 +178,52 @@ const isExternal = (href) => href.startsWith("http");
       </header>
 
       <div class="v8-case-stack" data-testid="human-capabilities">
-        {H.cases.map((item, index) => (
+        {portfolioCases.map((item, index) => (
           <article class={`v8-case v8-case-${item.tone} ${index % 2 ? "is-reversed" : ""}`} data-case={item.id} data-reveal>
-            <a
-              class="v8-case-media"
-              href={item.mediaHref || item.href}
-              target={isExternal(item.mediaHref || item.href) ? "_blank" : undefined}
-              rel={isExternal(item.mediaHref || item.href) ? "noopener noreferrer" : undefined}
-              aria-label={item.mediaLinkLabel || item.linkLabel}
-            >
-              <picture>
-                {item.imageSet && <source srcset={item.imageSet} sizes="(max-width: 760px) 92vw, 720px" />}
-                <img src={item.image} alt={item.alt} width="1200" height="760" loading="lazy" decoding="async" />
-              </picture>
-              <span>{item.imageCaption}</span>
-            </a>
+            {item.mediaKind === "audience-proof" ? (
+              <a
+                class="v8-case-media v8-audience-proof"
+                href={item.mediaHref || item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={item.mediaLinkLabel || item.linkLabel}
+              >
+                <img class="v8-audience-backdrop" src={item.image} alt="" width="1200" height="760" loading="lazy" decoding="async" aria-hidden="true" />
+                <div class="v8-audience-proof-inner">
+                  <div class="v8-audience-eyebrow">Italian science communication platform</div>
+                  <div class="v8-audience-main">
+                    <strong>{item.audience.combinedFollowing}</strong>
+                    <p>combined public following across YouTube, Instagram and TikTok</p>
+                  </div>
+                  <div class="v8-audience-metrics" aria-label="Audience and work metrics">
+                    <div><strong>{item.audience.youtubeSubscribers}</strong><span>YouTube subscribers</span></div>
+                    <div><strong>{item.audience.projects}</strong><span>projects supported</span></div>
+                    <div><strong>{item.audience.videoProjects}</strong><span>YouTube projects</span></div>
+                    <div><strong>{item.audience.articles}</strong><span>co-authored articles</span></div>
+                  </div>
+                  <div class="v8-audience-focus">
+                    <strong>Audience optimization</strong>
+                    <p>Thumbnail concepts and production, visual packaging, slides and on-screen assets informed by CTR, watch-time, retention and attention-capture best practices.</p>
+                  </div>
+                  <small>{item.audience.note}</small>
+                </div>
+                <span>{item.imageCaption}</span>
+              </a>
+            ) : (
+              <a
+                class="v8-case-media"
+                href={item.mediaHref || item.href}
+                target={isExternal(item.mediaHref || item.href) ? "_blank" : undefined}
+                rel={isExternal(item.mediaHref || item.href) ? "noopener noreferrer" : undefined}
+                aria-label={item.mediaLinkLabel || item.linkLabel}
+              >
+                <picture>
+                  {item.imageSet && <source srcset={item.imageSet} sizes="(max-width: 760px) 92vw, 720px" />}
+                  <img src={item.image} alt={item.alt} width="1200" height="760" loading="lazy" decoding="async" />
+                </picture>
+                <span>{item.imageCaption}</span>
+              </a>
+            )}
 
             <div class="v8-case-copy">
               <div class="v8-case-index">
