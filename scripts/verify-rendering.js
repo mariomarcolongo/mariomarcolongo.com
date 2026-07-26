@@ -161,13 +161,25 @@ async function main() {
 
           const themeState = await page.evaluate(() => {
             const button = document.getElementById('themeBtn');
-            return button ? { pressed: button.getAttribute('aria-pressed'), label: button.getAttribute('aria-label') } : null;
+            if (!button) return null;
+            const visibleIcons = Array.from(button.querySelectorAll('svg')).filter((icon) => {
+              const style = getComputedStyle(icon);
+              return !icon.hidden && style.display !== 'none' && style.visibility !== 'hidden';
+            }).length;
+            return {
+              pressed: button.getAttribute('aria-pressed'),
+              label: button.getAttribute('aria-label'),
+              visibleIcons
+            };
           });
           if (!themeState) throw new Error(`${route} is missing theme control`);
           const expectedPressed = theme === 'dark' ? 'true' : 'false';
           const expectedLabel = theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme';
           if (themeState.pressed !== expectedPressed || themeState.label !== expectedLabel) {
             throw new Error(`${route} theme control state is incorrect for ${theme}`);
+          }
+          if (themeState.visibleIcons !== 1) {
+            throw new Error(`${route} theme control must show exactly one icon; found ${themeState.visibleIcons}`);
           }
 
           if (APPLICATION_ROUTES.has(route)) {
