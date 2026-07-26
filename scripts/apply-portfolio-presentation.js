@@ -52,6 +52,12 @@ function patchIndex(html) {
   html = html.replaceAll('#370', `#${CURRENT.arenaRank}`);
   html = html.replaceAll('250K+', CURRENT.youtubeSubscribers);
   html = html.replaceAll('460K+', CURRENT.combinedFollowers);
+  html = replaceRegexRequired(
+    html,
+    /<strong>480K\+<\/strong>\s*<span>combined public platform following<\/span>\s*<small>Entropy for Life brand audience · 267K YouTube subscribers · non-unique<\/small>/,
+    '<strong>36.5M</strong><span>YouTube channel views in the production environment</span><small>267K subscribers · Entropy for Life brand context</small>',
+    'Homepage Entropy proof metric'
+  );
   html = html.replaceAll(
     'Supported 59+ published projects for an Italian science-communication brand with 267K YouTube subscribers and 480K+ combined platform following; recurring evidence review plus audience-focused visual packaging, selected thumbnails and web operations.',
     'Delivered 80 documented published content contributions—55 YouTube videos, 4 co-authored articles and 21 short-form pieces—for an Italian science-communication brand with 267K YouTube subscribers and 480K+ combined platform following; recurring evidence review, content production, selected thumbnails and website operations.'
