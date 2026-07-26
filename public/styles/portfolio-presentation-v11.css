@@ -1,0 +1,85 @@
+/* Final recruiter hierarchy for the Entropy case. Loaded after v10. */
+
+.v11-panel-head {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.v11-panel-head h4 {
+  max-width: 12ch;
+}
+
+.v11-context-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+  padding-top: 2px;
+}
+
+.v11-context-head strong {
+  color: #ff8b76;
+  font: 760 0.62rem/1.25 var(--v8-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.v11-context-head span {
+  color: #8f938a;
+  font: 660 0.52rem/1.3 var(--v8-mono);
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+.v11-youtube-card {
+  grid-template-columns: 1fr;
+  gap: 8px;
+  align-items: start;
+}
+
+.v11-platform-name {
+  grid-column: auto;
+}
+
+.v11-youtube-main > strong {
+  font-size: clamp(2.65rem, 4vw, 3.6rem);
+}
+
+.v11-youtube-secondary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 5px 15px;
+  padding-bottom: 0;
+  text-align: left;
+}
+
+.v11-youtube-secondary span {
+  white-space: nowrap;
+}
+
+.v11-scope-note {
+  max-width: 62ch;
+}
+
+@media (max-width: 1180px) {
+  .v11-youtube-secondary {
+    gap: 5px 18px;
+  }
+}
+
+@media (max-width: 720px) {
+  .v11-context-head {
+    display: grid;
+    gap: 3px;
+  }
+
+  .v11-panel-head h4 {
+    max-width: none;
+    font-size: clamp(2rem, 10vw, 2.75rem);
+  }
+
+  .v11-youtube-main > strong {
+    font-size: clamp(2.75rem, 15vw, 3.75rem);
+  }
+}
