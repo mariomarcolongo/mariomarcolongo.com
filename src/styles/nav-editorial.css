@@ -83,13 +83,20 @@
   color: var(--p5-ink, var(--ink));
 }
 
-/* Preserve the native hidden state even when legacy SVG rules set display explicitly. */
-.nav-editorial .theme-toggle [hidden] {
-  display: none !important;
+.nav-editorial .theme-icon {
+  display: block;
 }
 
-.nav-editorial .theme-toggle svg:not([hidden]) {
-  display: block;
+.nav-editorial .theme-icon-moon {
+  display: none;
+}
+
+[data-theme="dark"] .nav-editorial .theme-icon-sun {
+  display: none;
+}
+
+[data-theme="dark"] .nav-editorial .theme-icon-moon {
+  display: inline;
 }
 
 .nav-editorial .theme-toggle:hover {
