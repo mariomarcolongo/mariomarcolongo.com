@@ -152,7 +152,7 @@ if (modelCase) {
 
 const entropyCase = H?.cases?.find((item) => item?.id === 'scientific-verification');
 if (entropyCase) {
-  entropyCase.title = 'Scientific evidence and content operations at creator scale.';
+  entropyCase.title = 'Scientific content quality across research, production and publishing.';
   entropyCase.lead = `Paid contractor supporting Entropy for Life, an Italian science-communication brand with ${audience.youtubeSubscribers} YouTube subscribers and ${audience.youtubeViews} channel views.`;
   entropyCase.action = 'Own primary-literature research and scientific fact-checking across documented productions. Depending on the assignment, translate evidence into scripts, data visualizations, slides and on-screen assets; develop selected thumbnails and performance-aware visual packaging; and manage WordPress, hosting, DNS/SSL and technical SEO.';
   entropyCase.result = `${audience.projects} documented projects supported: ${audience.videoProjects} YouTube video projects and ${audience.articles} co-authored articles, with a cross-functional remit spanning evidence quality, content production and publishing operations.`;
