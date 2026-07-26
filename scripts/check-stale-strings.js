@@ -31,7 +31,7 @@ const REQUIRED = [
   'public/.well-known/agent-card.json', 'public/.well-known/mcp/server-card.json',
   'public/robots.txt', 'public/sitemap.xml', 'public/site.webmanifest',
   'public/evidence/gray-swan-profile-2026-07-25.html', 'public/evidence/gray-swan-profile-2026-07-25.json',
-  'public/media/work/gray-swan-summary-2026-07-25.svg', 'public/media/work/entropy-work-overview.svg',
+  'public/media/work/model-behavior-profile.jpg', 'public/media/work/entropy-h5n1.png',
   'public/media/work/yourself-to-science-800.webp', 'public/media/work/mdpi-filter-1-800.webp',
   'public/media/work/mdpi-filter-2-800.webp', 'public/media/work/wikimedia-clinical-overlap.svg'
 ];
@@ -155,6 +155,11 @@ for (const requiredText of [
   '#75 on the Proving Ground leaderboard',
   'Fact-checking scientific productions before publication.',
   'At least 59 published projects supported',
+  '460K+',
+  '250K+',
+  'Audience optimization',
+  'click-through rate',
+  'watch time',
   'PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh',
   'PLUXju4zC0Sks',
   'Official Entropy for Life website'
@@ -162,7 +167,7 @@ for (const requiredText of [
   if (!homepageSource.includes(requiredText)) fail('src/pages/index.astro', 1, `Homepage is missing current artifact-led portfolio content: ${requiredText}`);
 }
 for (const requiredMedia of [
-  '/media/work/gray-swan-summary-2026-07-25.svg', '/media/work/entropy-work-overview.svg',
+  '/media/work/model-behavior-profile.jpg', '/media/work/entropy-h5n1.png',
   '/media/work/yourself-to-science-800.webp', '/media/work/mdpi-filter-1-800.webp',
   '/media/work/mdpi-filter-2-800.webp', '/media/work/wikimedia-clinical-overlap.svg'
 ]) {
@@ -173,7 +178,7 @@ for (const rejectedText of [
   'Pencil_Fascist_Tuberculosis', 'class="portfolio-v4"',
   'class="portfolio-v5"', 'class="portfolio-v7"', 'class="v7-engine"',
   'class="p5-work-mosaic"', 'Public analysis across three platforms.',
-  '/media/work/model-behavior-record.svg', '/media/work/entropy-h5n1.png',
+  '/media/work/model-behavior-record.svg',
   '/media/work/entropy-dashboard-800.webp', '/evidence/gray-swan-metrics-2026-07-25.svg'
 ]) {
   if (homepageSource.includes(rejectedText)) fail('src/pages/index.astro', 1, `Homepage still contains rejected content: ${rejectedText}`);
