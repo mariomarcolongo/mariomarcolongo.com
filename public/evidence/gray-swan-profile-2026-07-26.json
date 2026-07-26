@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "subject": {
+    "name": "Mario Marcolongo",
+    "platform": "Gray Swan Arena",
+    "profileUrl": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf"
+  },
+  "snapshot": {
+    "displayDate": "26 July 2026",
+    "capturedLocal": "2026-07-26T13:11:03+02:00",
+    "capturedUtc": "2026-07-26T11:11:03Z",
+    "timestampBasis": "Inferred from the user-supplied screenshot filename and Europe/Rome summer-time offset.",
+    "evidenceImage": "https://mariomarcolongo.com/media/work/gray-swan-profile-2026-07-26.svg",
+    "evidenceImageType": "Full platform screenshot delivered as a high-quality optimized WebP inside an SVG wrapper; original PNG hash and dimensions are recorded.",
+    "originalScreenshot": {
+      "filename": "Screenshot 2026-07-26 at 13.11.03.png",
+      "pixelDimensions": "2047x1160",
+      "sha256": "f655d6ce331352a2f7a85e2112a67503bc6e6c4d4388276df256bfa82b6cec1a"
+    }
+  },
+  "metrics": {
+    "provingGround": {
+      "globalRank": 75,
+      "percentileLabel": "top 6%",
+      "totalBreaks": 110,
+      "weeksActive": 0,
+      "progressByArea": {
+        "chat": { "breaks": 36, "available": 552, "displayedPercent": 7 },
+        "image": { "breaks": 32, "available": 387, "displayedPercent": 8 },
+        "agent": { "breaks": 28, "available": 593, "displayedPercent": 5 },
+        "indirect": { "breaks": 13, "available": 547, "displayedPercent": 2 }
+      }
+    },
+    "arenaProfile": {
+      "globalRank": 371,
+      "globalUniqueBreaks": 27,
+      "globalPoints": 1090,
+      "prizeMoneyWonUsd": 0,
+      "submissions": 246,
+      "maximumStreakWeeks": 2
+    }
+  },
+  "notes": [
+    "The four displayed Proving Ground area counters sum to 109 while the platform displays 110 Total Breaks. Both values are transcribed exactly; no internal aggregation rule is inferred.",
+    "Rankings, percentiles, points and totals are dynamic. Portfolio claims cite the snapshot date.",
+    "This is an account-holder-preserved screenshot, not an attestation or certification issued by Gray Swan.",
+    "The previous 25 July 2026 snapshot remains preserved separately and displayed Arena rank 370."
+  ],
+  "previousSnapshot": {
+    "evidencePage": "https://mariomarcolongo.com/evidence/gray-swan-profile-2026-07-25.html",
+    "permaCapture": "https://perma.cc/U8TY-PWYA"
+  }
+}
