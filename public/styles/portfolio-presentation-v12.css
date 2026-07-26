@@ -1,0 +1,10 @@
+/* Mobile reading order: introduce Mario's role before presenting the supporting evidence panel. */
+@media (max-width: 900px) {
+  .v8-case-red .v8-case-copy {
+    order: 1;
+  }
+
+  .v8-case-red .v8-case-media {
+    order: 2;
+  }
+}
