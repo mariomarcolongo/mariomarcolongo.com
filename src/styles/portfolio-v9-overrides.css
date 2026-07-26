@@ -62,12 +62,14 @@
 }
 
 /* Entropy for Life: responsive HTML evidence instead of tiny text embedded in an image. */
-.v8-audience-proof {
+.portfolio-v8 .v8-audience-proof {
   position: relative;
-  min-height: 620px;
-  aspect-ratio: auto;
+  height: auto !important;
+  min-height: 0 !important;
+  aspect-ratio: auto !important;
   isolation: isolate;
   padding: clamp(30px, 5vw, 58px);
+  overflow: hidden;
   background: #11130f;
   color: #f8f3e9 !important;
 }
@@ -89,6 +91,7 @@
   width: 100%;
   height: 100%;
   min-height: 0;
+  aspect-ratio: auto;
   object-fit: cover;
   object-position: center top;
   padding: 0;
@@ -101,7 +104,7 @@
   gap: 26px;
   width: 100%;
   max-width: 720px;
-  padding-bottom: 60px;
+  padding-bottom: 76px;
 }
 
 .v8-audience-eyebrow {
@@ -234,8 +237,10 @@
     object-position: center center;
   }
 
-  .v8-audience-proof {
-    min-height: 610px;
+  .portfolio-v8 .v8-audience-proof {
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: auto !important;
     padding: 30px 24px;
   }
 
@@ -259,15 +264,5 @@
   .v8-case-links {
     display: grid;
     gap: 12px;
-  }
-}
-
-@media (max-width: 430px) {
-  .v8-audience-metrics {
-    grid-template-columns: 1fr;
-  }
-
-  .v8-audience-proof {
-    min-height: 760px;
   }
 }
