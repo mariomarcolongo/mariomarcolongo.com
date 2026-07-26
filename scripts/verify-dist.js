@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const fs = require('node:fs');
 const path = require('node:path');
-const { D, H, P } = require('../data/release-data.js');
+const { D, H, P } = require('../data/career-positioning.js');
 const {
   generateLlmsTxt,
   generateLlmsFullTxt,
@@ -143,6 +143,8 @@ for (const [name, profile] of applicationProfiles) {
 }
 assertContains(normalizeHtmlText(pages.editorial), 'Marta Panzeri', 'dist/cv-editorial.html');
 assertContains(normalizeHtmlText(pages.editorial), 'Department of Developmental Psychology and Socialisation', 'dist/cv-editorial.html');
+assertContains(normalizeHtmlText(pages.editorial), '460K+', 'dist/cv-editorial.html');
+assertContains(normalizeHtmlText(pages.editorial), 'click-through rate', 'dist/cv-editorial.html');
 pass('Four specialized application CVs checked');
 
 const integrityText = normalizeHtmlText(pages.integrityPage);
@@ -156,7 +158,8 @@ pass('Knowledge-integrity work sample checked');
 const masterText = normalizeHtmlText(pages.cv);
 for (const needle of [
   'Master CV & Evidence Record', 'not presented as an independent software developer', 'AI Safety',
-  'Research & Data Quality', 'Editorial & Community', 'Trust & Knowledge Integrity', 'Marta Panzeri'
+  'Research & Data Quality', 'Editorial & Community', 'Trust & Knowledge Integrity', 'Marta Panzeri',
+  '460K+', 'Audience Optimization Contractor'
 ]) assertContains(masterText, needle, 'dist/cv.html');
 pass('Master CV positioning checked');
 
