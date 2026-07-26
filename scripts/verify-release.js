@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const fs = require("node:fs");
 const path = require("node:path");
-const { D, H, P, GS, ENTROPY } = require("../data/release-data.js");
+const { D, H, P, graySwan: GS, audience: ENTROPY, ENTROPY_WORK_URL } = require("../data/career-positioning.js");
 
 const ROOT = path.resolve(__dirname, "..");
 let failures = 0;
@@ -103,18 +103,14 @@ for (const expected of [
   String(GS.totalBreaks),
   GS.asOf,
   String(GS.arenaRank),
-  String(GS.arenaUniqueBreaks),
-  GS.arenaPoints.toLocaleString("en-US"),
-  String(GS.arenaSubmissions),
-  ENTROPY.totalProjects,
+  String(GS.uniqueBreaks),
+  GS.points.toLocaleString("en-US"),
+  String(GS.submissions),
+  ENTROPY.projects,
   `${ENTROPY.videoProjects} YouTube`,
   `${ENTROPY.articles} co-authored articles`,
-  ENTROPY.videosUrl,
-  ENTROPY.articlesUrl,
-  ENTROPY.thumbnailsUrl,
-  ENTROPY.websiteUrl,
+  ENTROPY_WORK_URL,
   "/media/work/model-behavior-profile.webp",
-  ENTROPY.inventoryImage,
   GS.evidencePath
 ]) contains(currentOutputs, expected, "Current applicant-facing outputs");
 
@@ -129,18 +125,20 @@ for (const stale of [
   "Fact-checking scientific scripts before publication.",
   "Founder & Technical Product Builder",
   "Sole web developer",
-  "AI-Native Engineering"
+  "AI-Native Engineering",
+  "PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh",
+  "PLUXju4zC0Sks"
 ]) excludes(currentOutputs, stale, "Current applicant-facing outputs");
 
 const home = normalize(pages.home);
 for (const expected of [
   H.headline,
   "Fact-checking and producing scientific content before publication.",
-  `${ENTROPY.totalProjects} documented published projects`,
+  `${ENTROPY.projects} documented published projects`,
   `${ENTROPY.videoProjects} YouTube projects`,
   `${ENTROPY.articles} co-authored articles`,
-  "Selected thumbnail-work playlist",
-  "Official Entropy for Life website",
+  "Official work record published by Entropy for Life",
+  ENTROPY_WORK_URL,
   `#${GS.rank} · ${GS.percentile.toLowerCase()} · ${GS.asOf}`,
   "data-testid=\"human-capabilities\"",
   "data-testid=\"human-work\"",
@@ -172,7 +170,9 @@ for (const [label, html, profile] of profiles) {
   contains(text, "Page 1 of 2", label);
   contains(text, "Page 2 of 2", label);
   contains(text, "C1 overall", label);
-  contains(text, ENTROPY.totalProjects, label);
+  contains(text, ENTROPY.projects, label);
+  contains(text, ENTROPY_WORK_URL, label);
+  contains(text, "Official Entropy for Life work record", label);
 }
 contains(normalize(pages.ai), String(GS.totalBreaks), "AI evaluation CV");
 contains(normalize(pages.integrity), String(GS.totalBreaks), "Integrity CV");
@@ -184,14 +184,15 @@ for (const expected of [
   "Master CV & Evidence Record",
   "not presented as an independent software developer",
   String(GS.totalBreaks),
-  ENTROPY.totalProjects,
-  "Scientific Research, Fact-Checking & Website Operations Contractor"
+  ENTROPY.projects,
+  "Scientific Content Quality & Operations Contractor",
+  ENTROPY_WORK_URL
 ]) contains(master, expected, "Master CV");
 pass("Master CV checked");
 
 if (D.identity.buildVersion !== "v2026.07.26") fail("Release build version is not current.");
-if (D.redTeamActivity.confirmedBreaks !== GS.totalBreaks) fail("Current Gray Swan total is inconsistent.");
-if (D.redTeamActivity.displayedAreaBreaks !== GS.displayedAreaTotal) fail("Area-total evidence boundary is inconsistent.");
+if (D.redTeamActivity.platformReportedBreaks !== GS.totalBreaks) fail("Current Gray Swan total is inconsistent.");
+if (D.redTeamActivity.areaBreaksTotal !== GS.displayedAreaTotal) fail("Area-total evidence boundary is inconsistent.");
 
 if (failures) {
   console.error(`\nApplication-release verification failed with ${failures} issue(s).`);
