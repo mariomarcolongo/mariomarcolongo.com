@@ -1,5 +1,6 @@
 name: Deploy to Cloudflare Pages
 
+# Production deployment for the application-ready portfolio.
 on:
   push:
     branches: [main]
