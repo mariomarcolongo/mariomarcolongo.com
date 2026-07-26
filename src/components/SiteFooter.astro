@@ -1,0 +1,70 @@
+---
+export interface Props {
+  version?: string;
+}
+
+const { version = 'v2026.07.21' } = Astro.props;
+---
+
+<footer class="site-footer print-hide">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-text">
+        <p><strong>© 2026 Mario Marcolongo.</strong> Project datasets, code and site content retain the licences stated in their respective repositories and records. Active Build: {version}</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://orcid.org/0000-0003-2846-7115" target="_blank" rel="noopener noreferrer">ORCID: 0000-0003-2846-7115</a>
+        <a href="https://www.ebi.ac.uk/ena/browser/view/PRJEB109744" target="_blank" rel="noopener noreferrer">ENA: PRJEB109744</a>
+        <a href="https://github.com/jnton" target="_blank" rel="noopener noreferrer">GitHub: jnton</a>
+        <a href="https://www.linkedin.com/in/mario-marcolongo" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-content footer-dossiers">
+      <div class="footer-text">
+        <span>Machine-actionable dossiers for verification and automated processing:</span>
+      </div>
+      <div class="footer-links footer-dossier-links">
+        <a href="/llms.txt" class="btn btn-sm" target="_blank" rel="noopener noreferrer">llms.txt</a>
+        <a href="/llms-full.txt" class="btn btn-sm" target="_blank" rel="noopener noreferrer">llms-full.txt</a>
+        <a href="/cv-llm.txt" class="btn btn-sm" target="_blank" rel="noopener noreferrer">cv-llm.txt</a>
+        <button
+          class="btn btn-ai btn-sm"
+          type="button"
+          onclick="copyCanonicalText('/llms-full.txt', this, '✓ Copied Dossier!')"
+          title="Copy the canonical complete AI-compatible dossier"
+        >✨ Copy complete dossier</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script is:inline>
+  (function exposeCanonicalCopyUtility() {
+    if (window.copyCanonicalText) return;
+
+    window.copyCanonicalText = async function copyCanonicalText(url, btnEl, successText) {
+      var originalText = btnEl.textContent;
+      btnEl.disabled = true;
+      btnEl.textContent = 'Copying...';
+
+      try {
+        var response = await fetch(url, { cache: 'no-store' });
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        var content = await response.text();
+        if (!content.trim()) throw new Error('Canonical file was empty');
+        await navigator.clipboard.writeText(content);
+        btnEl.textContent = successText || '✓ Copied!';
+        btnEl.classList.add('copy-success');
+      } catch (error) {
+        console.error('Unable to copy canonical file ' + url + ':', error);
+        btnEl.textContent = 'Unable to copy';
+      }
+
+      window.setTimeout(function() {
+        btnEl.textContent = originalText;
+        btnEl.disabled = false;
+        btnEl.classList.remove('copy-success');
+      }, 2200);
+    };
+  })();
+</script>

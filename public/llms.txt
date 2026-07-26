@@ -1,24 +1,30 @@
-# Mario Marcolongo — Scientific AI Evaluation & Research Data Specialist
+# Mario Marcolongo — AI Evaluation & Research Operations Specialist
+> Model Behavior · Scientific Evidence · Knowledge Integrity · Open Science & Data Quality
 
-> Scientific AI evaluation and research data specialist with 8+ years of experience verifying biomedical and technical claims across public knowledge bases (since March 2018; 4,317 documented edits across English/Italian Wikipedia, Wikidata, and Wikimedia Commons). Founder and lead developer of Yourself to Science™ (yourselftoscience.org), an open-source catalogue and unified directory indexing 55+ initiatives where people can contribute their biological and digital self (including genomic data, biological samples, biobanks, and clinical trials) to scientific research. Managed technical web infrastructure (OVHCloud, custom WordPress, SEO) and upheld scientific integrity for Entropy for Life (245,000+ YouTube subscribers / 480,000+ cross-platform community)—conducting bibliographic research, fact-checking scripts, and creating empirical data visualizations across 55+ documentaries and articles, earning formal acknowledgment in a Mondadori book. Volunteer research facilitator under Prof. Marta Panzeri at the University of Padua Department of Developmental Psychology and Socialisation (Nov 2022 – 2025), designing standardized focus group protocols and co-conducting psychological research sessions with autistic participants to inform educational strategies and support programs.
+> Research, evidence and AI operations specialist with eight years of auditable public-source and structured-data work, paid scientific fact-checking and writing, community-facing research facilitation, ownership of an open research-participation directory, and sustained adversarial testing of AI systems. The profile supports four application lanes: AI evaluation and model behavior; research, editorial and community operations; knowledge integrity and trust; and open science and data quality. Public claims are reported with explicit evidence boundaries, while technical implementation is described accurately as code-literate, AI-assisted operations rather than independent software development.
+
+> **I use AI-assisted implementation extensively. I define requirements and workflows, inspect code structure and behavior, test implementations, diagnose functional problems, guide iterative changes, deploy releases, and maintain services. I do not present myself as an independent software developer.**
 
 ## Quick Facts & Key Metrics
-- **100 / 100 — Level 5** (Cloudflare Agent-Ready Audit): Full marks on Cloudflare's isitagentready.com audit: Discoverability 4/4, Content 1/1, Bot Access Control 2/2, API/Auth/MCP & Skill Discovery 7/7. Cloudflare's own data shows most professional sites score well under 50.
-- **100 / 100** (Web & AI Readiness Architecture): Perfect 100 Lighthouse (Performance/a11y/SEO) & 3/3 Agentic Browsing score on Yourself to Science™
-- **70+ Vizzes** (Empirical Data Visualizations): Published 55+ Flourish & 15 Tableau Public epidemiological, demographic & ISTAT workbooks analyzing ~80+ datasets
-- **55+ Videos & 4 Articles** (Science Verification & Editorial Acceleration): Fact-checked primary literature across 55+ YouTube videos (long & short), co-authored 4 articles, designed data visualizations & Reels, and managed A/B tested thumbnails/titles for Giacomo Moro Mauretto's Entropy for Life (480K+ community); acknowledged in Mondadori book Italiani Veri
-- **4,317 Edits** (Wikimedia & Knowledge Graph Curation): Verifiable contributions across English Wikipedia (1,592), Wikidata (1,249), Italian Wikipedia (752), and Wikimedia Commons (684)
-- Work Authorization: Italian Citizen — Unrestricted EU work authorization; eligible for Swiss EU/EFTA mobility procedures; international B2B via Italian Partita IVA; sponsorship required elsewhere.
-- Languages: Italian (Native / Mother Tongue) · English (C1 Advanced Overall: C2 Reading/Listening, B2 Writing/Speaking)
+- **110** (Platform-Recorded Proving Ground Breaks): #75 · top 6% · 25 July 2026
+- **246** (Arena Submissions): Arena rank #370 · 27 global unique breaks · 1,090 points
+- **55+** (Research Initiatives Indexed): Clinical studies, biobanks, donation programs, registries and other research initiatives
+- **55+ Videos & 4 Articles** (Paid Scientific Verification): Primary-source research and fact-checking for Entropy for Life
+- **4,317** (Auditable Wikimedia Contributions): Public contributions across Wikipedia, Wikidata and Wikimedia Commons as of July 2026
+- Work Authorization: EU/EEA work-authorized; Swiss EU/EFTA permit eligible; open to employer-sponsored work authorization elsewhere; self-funded relocation considered for exceptional opportunities.
+- Languages: Italian (Native / Mother Tongue) · English (C1 overall, EF SET 68/100; advanced technical reading and professional/technical writing)
 
 ## Core Competencies
-- AI Red-Teaming & Adversarial Evaluation: Top 8% globally on Gray Swan AI Proving Ground (https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf) — 75+ confirmed model breaks across Chat, Image, Agent, and Indirect-Injection categories (as of July 2026).
-- Web Engineering & Architecture: JavaScript, Node.js, Static & Serverless Architecture, WordPress Development & Customization, HTML/CSS Design Systems, Cloud DNS / SSL / OVHCloud / AWS Lambda / API Gateway
-- Scientific Verification & Methodologies: Bibliographic Research Methodology, Primary Source Fact-Checking, Psychological Focus Group Facilitation & Standardized Protocols, Epidemiological Data Synthesis, Cochrane/Galenos Screening
-- Open-Source Intelligence (OSINT) & Digital Investigation: Multi-engine Boolean search (Google, DuckDuckGo, Yandex) and academic/gray-literature querying (Google Scholar, PubMed, Europe PMC); reverse-image and facial-recognition verification (PimEyes, Yandex Images, Google Lens, TinEye); EXIF/metadata extraction and file provenance verification; archival/provenance research (Wayback Machine, Archive.today); WHOIS/DNS history and certificate-transparency lookups for tracing site ownership and technical infrastructure; cross-platform digital-footprint correlation for claim verification, source attribution, and coordinated-inauthentic-behavior detection
-- Open Science & AI Infrastructure: FAIRsharing Standards, Semantic Linked Data (JSON-LD, RDF Turtle, llms.txt, live MCP Servers), Public Knowledge Bases (Wikidata, ENA BioSample)
-- Data Visualization & Tools: High-Clarity SVG Vector Diagramming, Tableau Public, Flourish, Git / GitHub, GitHub Actions CI/CD
-- Languages: Italian (Mother tongue / Native) · English (C1 Advanced Overall: Listening C2, Reading C2, Writing B2, Spoken Production B2, Spoken Interaction B2) · French (Basic A2/A1) · Spanish (Basic A2/A1)
+- AI Safety Evaluation & Adversarial Testing: Exploratory model-behavior testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection.
+- Evaluation Operations: Test planning, evidence capture, reproducibility notes, taxonomy thinking, issue classification, evidence-bound reporting and mitigation-retesting concepts.
+- Scientific Verification & Evidence Synthesis: Primary-source fact-checking, bibliographic research, claim decomposition, evidence screening, source-quality assessment and cross-source corroboration.
+- Data Quality & Provenance: Structured metadata, entity reconciliation, validation rules, documentation, taxonomy design and public-record verification.
+- Code-Literate Technical Operations: Requirements definition, codebase reading and behavior inspection, functional testing, issue diagnosis, deployment operations and service maintenance.
+- AI-Assisted Technical Workflow: Uses coding agents for implementation support while personally inspecting structure and behavior, testing results and coordinating revisions; not independent software development.
+- Open Science & Structured Data: Wikimedia, Wikidata, FAIRsharing, Zenodo, ENA records, JSON-LD, RDF Turtle/VoID, OpenAPI and MCP interfaces.
+- Web & Cloud Operations: WordPress, HTML/CSS modification, Git/GitHub, JSON, REST APIs, AWS Lambda, Cloudflare Pages, DNS/SSL and CI/CD operations.
+- Data Visualization: SVG vector diagrams, Tableau Public, Flourish and open-data publication.
+- Languages: Italian — native. English — C1 overall (EF SET 68/100), with advanced technical reading and professional/technical writing.
 
 ## Links
 - [Website](https://mariomarcolongo.com): Main portfolio homepage
@@ -28,7 +34,7 @@
 - [LinkedIn](https://www.linkedin.com/in/mario-marcolongo): Professional LinkedIn profile
 - [ORCID](https://orcid.org/0000-0003-2846-7115): ORCID scientific researcher profile
 - [GitHub](https://github.com/jnton): GitHub profile and open-source repositories
-- [Agent-Readiness Audit](https://isitagentready.com/mariomarcolongo.com?checks=robotsTxt%2Csitemap%2ClinkHeaders%2CdnsAid%2CmarkdownNegotiation%2CrobotsTxtAiRules%2CcontentSignals%2CwebBotAuth%2CapiCatalog%2CoauthDiscovery%2CoauthProtectedResource%2CauthMd%2CmcpServerCard%2Ca2aAgentCard%2CagentSkills%2CwebMcp%2Cx402%2Cmpp%2Cucp%2Cacp): Verified full marks on Cloudflare isitagentready.com audit
+- [Agent-Readiness Audit](https://isitagentready.com/mariomarcolongo.com?checks=robotsTxt%2Csitemap%2ClinkHeaders%2CdnsAid%2CmarkdownNegotiation%2CrobotsTxtAiRules%2CcontentSignals%2CwebBotAuth%2CapiCatalog%2CoauthDiscovery%2CoauthProtectedResource%2CauthMd%2CmcpServerCard%2Ca2aAgentCard%2CagentSkills%2CwebMcp%2Cx402%2Cmpp%2Cucp%2Cacp): Agent-discovery and machine-readable endpoints implemented; live audit to be rerun after deployment.
 - [A2A Agent Card](https://mariomarcolongo.com/.well-known/agent-card.json): Agent-to-Agent discovery card
-- [Genomic Pipeline Codebase](https://github.com/jnton/git-nome): Open-source pipeline for clinical/research genome analysis
+- [Genomic Pipeline Codebase](https://github.com/jnton/git-nome): Personal genomics workflow and open-data pipeline
 - [Portfolio SSOT Codebase](https://github.com/jnton/mariomarcolongo): Source code and Single Source of Truth for this portfolio

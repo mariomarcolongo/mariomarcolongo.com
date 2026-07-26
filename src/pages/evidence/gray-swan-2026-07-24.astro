@@ -1,0 +1,66 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SiteNav from "../../components/SiteNav.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+import "../../styles/career-v2.css";
+import D from "../../../data/source.js";
+
+const title = "Gray Swan Proving Ground Evidence — 24 July 2026";
+const description = "Dated screenshot and interpretation notes for Mario Marcolongo's Gray Swan Proving Ground profile.";
+---
+
+<Layout title={title} description={description} canonical="https://mariomarcolongo.com/evidence/gray-swan-2026-07-24/">
+  <SiteNav activePage="security" />
+
+  <main class="evaluation-shell">
+    <section class="evaluation-hero">
+      <div>
+        <div class="evaluation-eyebrow">Dated platform snapshot · 24 July 2026</div>
+        <h1 class="evaluation-title">Gray Swan Proving Ground evidence.</h1>
+        <p class="evaluation-lede">
+          The preserved public profile shows Mario Marcolongo at #77 on the Proving Ground leaderboard, in the top 7%, with 232 Proving Ground submissions. The leaderboard, category totals and 26 wave totals reconcile to 105 breaks; the profile aggregate displayed 106.
+        </p>
+        <div class="career-actions">
+          <a class="btn btn-primary" href={D.identity.grayswanUrl} target="_blank" rel="noopener noreferrer">Open live Gray Swan profile ↗</a>
+          <a class="btn" href="/security.html">Read the evaluation record</a>
+        </div>
+      </div>
+
+      <aside class="evaluation-scope-note">
+        <strong>Evidence boundary</strong>
+        <p>This is a user-preserved screenshot of Gray Swan's public interface, not a Gray Swan-issued certificate or independent reproduction of every accepted submission.</p>
+      </aside>
+    </section>
+
+    <section class="evaluation-section">
+      <div class="evaluation-section-head">
+        <h2>The real platform view</h2>
+        <p>The screenshot is shown directly rather than redesigned as a synthetic portfolio graphic.</p>
+      </div>
+      <figure style="margin:0">
+        <img src="/media/work/model-behavior-profile.jpg" alt="Gray Swan profile screenshot showing Mario Marcolongo ranked 77 and top 7 percent" width="1750" height="875" style="display:block;width:100%;height:auto;border:1px solid rgba(127,127,127,.3);border-radius:18px" />
+        <figcaption style="margin-top:12px;line-height:1.6">Profile aggregate: 106 breaks. Reconciled leaderboard, category and wave total: 105. The portfolio uses 105.</figcaption>
+      </figure>
+    </section>
+
+    <section class="evaluation-metrics" aria-label="Dated platform metrics">
+      <article class="evaluation-metric">
+        <strong>#77</strong>
+        <span>Proving Ground rank</span>
+        <small>Top 7% · time-sensitive snapshot</small>
+      </article>
+      <article class="evaluation-metric">
+        <strong>105</strong>
+        <span>Leaderboard-counted breaks</span>
+        <small>26 wave totals also sum to 105</small>
+      </article>
+      <article class="evaluation-metric">
+        <strong>232</strong>
+        <span>Proving Ground submissions</span>
+        <small>242 total Arena submissions shown on profile</small>
+      </article>
+    </section>
+  </main>
+
+  <SiteFooter version={D.identity.buildVersion} />
+</Layout>

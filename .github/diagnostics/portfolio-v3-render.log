@@ -1,0 +1,7 @@
+
+> mariomarcolongo@2026.07.2 verify:render
+> node scripts/verify-rendering.js
+
+Using Chromium: /usr/bin/google-chrome-stable
+Rendering verification failed: Error: No-JS homepage is missing: AI Safety & Adversarial Testing Specialist, Research, Editorial & Community Operations Specialist, Trust, Safety & Knowledge Integrity Specialist, Research Verification & Data Quality Specialist
+    at main (/home/runner/work/mariomarcolongo/mariomarcolongo/scripts/verify-rendering.js:173:42)

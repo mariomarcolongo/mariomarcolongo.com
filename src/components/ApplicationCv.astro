@@ -1,0 +1,201 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SiteNav from "./SiteNav.astro";
+import SiteFooter from "./SiteFooter.astro";
+import "../styles/career-v2.css";
+import RECENT_APPLICATION_EVIDENCE from "../../data/recent-application-evidence.js";
+
+export interface Props {
+  profile: any;
+  shared: any;
+  canonical: string;
+  alternateHref: string;
+  alternateLabel: string;
+}
+
+const { profile, shared, canonical, alternateHref, alternateLabel } = Astro.props;
+const firstPageExperience = profile.experience.slice(0, 2);
+const secondPageExperience = profile.experience.slice(2);
+const recentEvidence = RECENT_APPLICATION_EVIDENCE[profile.id]?.evidence || {};
+const evidence = profile.evidence.map((item, index) => recentEvidence[index] || item);
+const pageTitle = `Mario Marcolongo — ${profile.title}`;
+const pageDescription = `Specialized two-page application CV for ${profile.title.toLowerCase()} roles.`;
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={canonical}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      name: pageTitle,
+      url: canonical,
+      mainEntity: { "@id": "https://mariomarcolongo.com/#person" }
+    })}></script>
+  </Fragment>
+
+  <SiteNav activePage="resume" />
+
+  <div class="application-shell">
+    <section class="application-guide print-hide" aria-label="How to use this CV">
+      <div>
+        <div class="application-eyebrow">{profile.documentLabel}</div>
+        <h2>{profile.title}</h2>
+        <p>This is the concise document to send for this role family. The master CV is a comprehensive evidence archive; it is normally not attached unless requested.</p>
+      </div>
+      <div class="application-guide-actions">
+        <a class="btn" href={alternateHref}>{alternateLabel}</a>
+        <a class="btn" href="/#applications">All application CVs</a>
+        <a class="btn" href="/cv.html">Master CV</a>
+        <button class="btn btn-primary" type="button" onclick="window.print()">Print / Save PDF</button>
+      </div>
+    </section>
+
+    <div class="application-pages" id="cvDocument">
+      <article class="application-page">
+        <header class="application-header">
+          <div class="application-header-row">
+            <div>
+              <h1 class="application-name">{shared.name}</h1>
+              <div class="application-title">{profile.title}</div>
+              <p class="application-subtitle">{profile.subtitle}</p>
+            </div>
+            <div class="application-contact">
+              <span>{shared.location}</span>
+              <a href={shared.website}>{shared.website.replace("https://", "")}</a>
+              <a href={`mailto:${shared.email}`}>{shared.email}</a>
+              <a id="cvPhoneSlot" class="application-phone" hidden></a>
+              <a href={shared.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href={shared.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+          <p class="application-summary">{profile.summary}</p>
+        </header>
+
+        <section class="application-section">
+          <h2 class="application-section-title">Selected evidence</h2>
+          <div class="application-metrics">
+            {profile.strengths.map((item) => (
+              <div class="application-metric">
+                <strong>{item.value}</strong>
+                <span>{item.label}</span>
+                <small>{item.detail}</small>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section class="application-section">
+          <h2 class="application-section-title">Relevant experience</h2>
+          {firstPageExperience.map((item) => (
+            <article class="application-entry">
+              <div class="application-entry-head">
+                <div>
+                  <h3>{item.role}</h3>
+                  <div class="application-organization">{item.organization}</div>
+                  <div class="application-links">
+                    {item.links.map((link) => (
+                      <a href={link.url} target={link.url.startsWith("http") ? "_blank" : undefined} rel={link.url.startsWith("http") ? "noopener noreferrer" : undefined}>{link.label} ↗</a>
+                    ))}
+                  </div>
+                </div>
+                <span class="application-period">{item.period}</span>
+              </div>
+              <ul class="application-list">
+                {item.bullets.map((bullet) => <li>{bullet}</li>)}
+              </ul>
+            </article>
+          ))}
+        </section>
+
+        <div class="application-footer-note">
+          <span>{profile.title}</span>
+          <span>Page 1 of 2</span>
+        </div>
+      </article>
+
+      <article class="application-page">
+        {secondPageExperience.length > 0 && (
+          <section class="application-section" style="margin-top: 0;">
+            <h2 class="application-section-title">Additional relevant experience</h2>
+            {secondPageExperience.map((item) => (
+              <article class="application-entry">
+                <div class="application-entry-head">
+                  <div>
+                    <h3>{item.role}</h3>
+                    <div class="application-organization">{item.organization}</div>
+                    <div class="application-links">
+                      {item.links.map((link) => (
+                        <a href={link.url} target={link.url.startsWith("http") ? "_blank" : undefined} rel={link.url.startsWith("http") ? "noopener noreferrer" : undefined}>{link.label} ↗</a>
+                      ))}
+                    </div>
+                  </div>
+                  <span class="application-period">{item.period}</span>
+                </div>
+                <ul class="application-list">
+                  {item.bullets.map((bullet) => <li>{bullet}</li>)}
+                </ul>
+              </article>
+            ))}
+          </section>
+        )}
+
+        <section class="application-section">
+          <h2 class="application-section-title">Additional evidence</h2>
+          <div class="application-evidence">
+            {evidence.map((item) => (
+              <article>
+                <h3><a href={item.link} target={item.link.startsWith("http") ? "_blank" : undefined} rel={item.link.startsWith("http") ? "noopener noreferrer" : undefined}>{item.title}</a></h3>
+                <p>{item.body}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section class="application-section">
+          <h2 class="application-section-title">Capabilities</h2>
+          {profile.skills.map(([title, detail]) => (
+            <div class="application-skill">
+              <strong>{title}</strong>
+              <span>{detail}</span>
+            </div>
+          ))}
+        </section>
+
+        <div class="application-two-col">
+          <section class="application-section">
+            <h2 class="application-section-title">Best-fit role families</h2>
+            <ul class="application-list">
+              {profile.fit.map((item) => <li>{item}</li>)}
+            </ul>
+          </section>
+
+          <section class="application-section">
+            <h2 class="application-section-title">Credentials & language</h2>
+            <ul class="application-list">
+              {shared.education.slice(0, 3).map((item) => <li>{item}</li>)}
+              <li>{shared.language}</li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="application-footer-note">
+          <span>{shared.name} · {shared.email}</span>
+          <span>Page 2 of 2</span>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <script is:inline>
+    (function injectPrivateCvData() {
+      var privateData = typeof window !== "undefined" && window._privateData ? window._privateData : {};
+      var phoneSlot = document.getElementById("cvPhoneSlot");
+      if (!phoneSlot || !privateData.phone) return;
+      phoneSlot.textContent = privateData.phone;
+      phoneSlot.setAttribute("href", "tel:" + String(privateData.phone).replace(/\s+/g, ""));
+      phoneSlot.hidden = false;
+    })();
+  </script>
+
+  <SiteFooter version="v2026.07.21" />
+</Layout>

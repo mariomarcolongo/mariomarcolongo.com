@@ -1,0 +1,64 @@
+name: Verify portfolio
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Build and verify generated output
+        run: npm run build
+
+      - name: Verify deterministic generated files
+        run: |
+          npm run generate:llms
+          git diff --exit-code -- \
+            llms.txt llms-full.txt cv-llm.txt \
+            public/llms.txt public/llms-full.txt public/cv-llm.txt public/data/source.js \
+            index.html integrity.html cv.html cv-resume.html cv-research.html cv-editorial.html cv-integrity.html security.html
+
+      - name: Verify rendered pages and interactions
+        run: npm run verify:render
+
+      - name: Generate four specialized application PDFs
+        run: npm run pdf:resume
+
+      - name: Generate master CV PDF
+        run: npm run pdf:cv
+
+      - name: Check patch formatting
+        run: git diff --check
+
+      - name: Upload verification screenshots and PDFs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verification-output
+          path: |
+            audit-output/**/*.png
+            Mario Marcolongo — AI Safety & Adversarial Testing CV.pdf
+            Mario Marcolongo — Research Verification & Data Quality CV.pdf
+            Mario Marcolongo — Research Editorial & Community Operations CV.pdf
+            Mario Marcolongo — Trust Safety & Knowledge Integrity CV.pdf
+            Mario Marcolongo — Curriculum Vitae.pdf
+          if-no-files-found: ignore
+          retention-days: 7

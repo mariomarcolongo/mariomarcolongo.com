@@ -1,0 +1,20 @@
+{
+  "label": "Trust, Safety & Knowledge Integrity CV",
+  "route": "cv-integrity.html",
+  "pages": [
+    {
+      "page": 1,
+      "contentBottom": 945,
+      "footerTop": 1077,
+      "clearance": 132,
+      "pageHeight": 1123
+    },
+    {
+      "page": 2,
+      "contentBottom": 868,
+      "footerTop": 1077,
+      "clearance": 209,
+      "pageHeight": 1123
+    }
+  ]
+}

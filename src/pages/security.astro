@@ -1,0 +1,210 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SiteNav from "../components/SiteNav.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import "../styles/career-v2.css";
+import D from "../../data/source.js";
+
+const title = "AI Evaluation & Model Behavior Record — Mario Marcolongo";
+const description = "Concise public record of self-directed model-behavior evaluation on the Gray Swan Proving Ground, including scope, methodology, platform-reported activity, archived evidence and limitations.";
+const asOf = D.redTeamActivity.asOf || "25 July 2026";
+const archiveUrl = D.identity.grayswanArchiveUrl || "/evidence/gray-swan-profile-2026-07-25.html";
+
+const areas = [
+  {
+    title: "Instruction hierarchy and multi-turn behavior",
+    body: "Probe whether constraints, refusals and contextual priorities remain stable across direct and extended conversations."
+  },
+  {
+    title: "Multimodal and visual inputs",
+    body: "Test interactions between textual instructions and information embedded in images, diagrams or visual typography."
+  },
+  {
+    title: "Agentic tool-use and function selection",
+    body: "Investigate whether tool selection and function calls remain aligned when external, nested or conflicting context is present."
+  },
+  {
+    title: "Indirect prompt injection",
+    body: "Test how systems handle adversarial instructions contained in retrieved documents, web pages or uploaded files."
+  }
+];
+
+const method = [
+  {
+    title: "Define the behavior under test",
+    body: "Translate an ambiguous risk or product behavior into an observable condition, boundary or expected response."
+  },
+  {
+    title: "Vary context and attack path",
+    body: "Explore direct, multi-turn, multimodal, nested and tool-mediated variants rather than relying on a single prompt."
+  },
+  {
+    title: "Record evidence conservatively",
+    body: "Separate observed behavior and platform status from interpretation, model-wide conclusions or unsupported severity claims."
+  },
+  {
+    title: "Communicate reproducibly",
+    body: "Document the test area, preconditions, behavior, limitations and available public evidence in a form another evaluator can inspect."
+  }
+];
+
+const evaluationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://mariomarcolongo.com/security.html#webpage",
+  name: title,
+  description,
+  url: "https://mariomarcolongo.com/security.html",
+  dateModified: "2026-07-26",
+  author: { "@id": "https://mariomarcolongo.com/#person" },
+  about: { "@type": "Thing", name: "AI evaluation and model behavior" },
+  citation: [D.identity.grayswanUrl, archiveUrl]
+};
+---
+
+<Layout title={title} description={description} canonical="https://mariomarcolongo.com/security.html">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(evaluationJsonLd)}></script>
+  </Fragment>
+
+  <SiteNav activePage="security" />
+
+  <div class="evaluation-shell">
+    <section class="evaluation-hero">
+      <div>
+        <div class="evaluation-eyebrow">Public evaluation evidence</div>
+        <h1 class="evaluation-title">AI evaluation and model-behavior record.</h1>
+        <p class="evaluation-lede">
+          Self-directed adversarial testing across chat, image, agentic tool-use and indirect prompt-injection challenges. This page explains what the public activity demonstrates, how the work is approached and where the evidence stops.
+        </p>
+        <div class="career-actions">
+          <a class="btn btn-primary" href={D.identity.grayswanUrl} target="_blank" rel="noopener noreferrer">Open live Gray Swan profile ↗</a>
+          <a class="btn" href={archiveUrl} target="_blank" rel="noopener noreferrer">Open verification snapshot ↗</a>
+          <a class="btn" href="/cv-resume.html">AI Evaluation Application CV</a>
+        </div>
+      </div>
+
+      <aside class="evaluation-scope-note">
+        <strong>Evidence boundary</strong>
+        <p>Counts and ranking are platform-reported snapshots as of {asOf}. They are not an independent security audit, formal certification, proof of model-wide vulnerability or reproduction of every adjudicated result.</p>
+      </aside>
+    </section>
+
+    <section class="evaluation-metrics" aria-label="Platform-reported activity">
+      <article class="evaluation-metric">
+        <strong>{D.redTeamActivity.platformReportedBreaks}</strong>
+        <span>Proving Ground total breaks</span>
+        <small>#75 · top 6% · {asOf}</small>
+      </article>
+      <article class="evaluation-metric">
+        <strong>{D.redTeamActivity.totalArenaSubmissions}</strong>
+        <span>Arena submissions</span>
+        <small>#370 Arena rank · 27 unique breaks · 1,090 points</small>
+      </article>
+      <article class="evaluation-metric">
+        <strong>{D.redTeamActivity.rankBand}</strong>
+        <span>Proving Ground rank</span>
+        <small>Time-sensitive platform snapshot · {asOf}</small>
+      </article>
+    </section>
+
+    <section class="evaluation-section" id="scope" data-testid="evaluation-scope">
+      <div class="evaluation-section-head">
+        <h2>What the record demonstrates</h2>
+        <p>Sustained exploratory testing, familiarity with several model-interaction surfaces, repeated submission workflows and careful distinction between public evidence and interpretation.</p>
+      </div>
+      <div class="evaluation-grid">
+        {areas.map((area, index) => (
+          <article class="evaluation-card">
+            <div class="evaluation-step">AREA {String(index + 1).padStart(2, "0")}</div>
+            <h3>{area.title}</h3>
+            <p>{area.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="evaluation-section" id="method" data-testid="evaluation-method">
+      <div class="evaluation-section-head">
+        <h2>Evaluation approach</h2>
+        <p>The current public record is stronger as evidence of evaluation judgment and persistence than as evidence of security engineering. The methodology therefore emphasizes observable behavior, test variation, documentation and evidence boundaries.</p>
+      </div>
+      <div class="evaluation-grid">
+        {method.map((step, index) => (
+          <article class="evaluation-card">
+            <div class="evaluation-step">STEP {String(index + 1).padStart(2, "0")}</div>
+            <h3>{step.title}</h3>
+            <p>{step.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="evaluation-section" id="public-evidence">
+      <div class="evaluation-section-head">
+        <h2>Publicly inspectable evidence</h2>
+        <p>The live Gray Swan profile is the primary source. The latest dated evidence page records the later 25 July metrics, the original screenshot hash and capture metadata, while keeping Proving Ground and Arena figures separate. It also records that the four visible area counters sum to 109 rather than silently inferring an aggregation rule.</p>
+      </div>
+
+      <div class="evaluation-grid">
+        <article class="evaluation-card">
+          <div class="evaluation-step">DATED PROFILE EVIDENCE</div>
+          <h3>25 July 2026 Gray Swan profile screenshot</h3>
+          <p>Dated public profile record for #75, top 6%, 110 Proving Ground total breaks, Arena rank #370, 27 global unique breaks, 1,090 points and 246 submissions.</p>
+          <a href="/media/work/model-behavior-profile.jpg" aria-label="Open the Gray Swan profile screenshot at full size">
+            <img src="/media/work/model-behavior-profile.jpg" width="800" height="350" alt="Screenshot of Mario Marcolongo's dated Gray Swan Arena and Proving Ground profile" style="display:block;width:100%;height:auto;margin-top:1rem;border-radius:.75rem;background:#090b0d" />
+          </a>
+          <p><a class="p5-link" href={archiveUrl}>Open the dated evidence and preservation record →</a></p>
+        </article>
+        {(D.redTeamActivity.publicLabels || []).map((label) => (
+          <article class="evaluation-card">
+            <div class="evaluation-step">PUBLIC PLATFORM LABEL</div>
+            <h3><code>{label}</code></h3>
+            <p>Category visible through the public platform record. It is not presented as a complete vulnerability report or independently reproduced exploit.</p>
+          </article>
+        ))}
+      </div>
+
+      <details class="evaluation-details">
+        <summary>Open the historical 24 July 26-wave activity table</summary>
+        <div class="evaluation-table-wrap" role="region" aria-label="Gray Swan testing wave activity" tabindex="0">
+          <table class="evaluation-table">
+            <thead>
+              <tr>
+                <th scope="col">Wave</th>
+                <th scope="col">Leaderboard-counted breaks</th>
+                <th scope="col">Available challenges shown</th>
+              </tr>
+            </thead>
+            <tbody>
+              {D.redTeamActivity.waves.map((wave) => (
+                <tr>
+                  <td>Wave {wave.wave}</td>
+                  <td>{wave.breaks}</td>
+                  <td>{wave.available}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </details>
+    </section>
+
+    <section class="evaluation-section" id="limitations" data-testid="evaluation-limitations">
+      <div class="evaluation-section-head">
+        <h2>Limitations and interpretation</h2>
+        <p>This record supports applications to AI evaluation, safeguards operations, trust & safety and adversarial QA roles. It does not yet establish the application-security, independent Python development or automated-framework experience expected from senior AI red-team engineers.</p>
+      </div>
+      <ul class="evaluation-list">
+        <li>The 25 July screenshot displays 110 Total Breaks while its four visible category counters sum to 109; both values are reported exactly and no internal aggregation rule is inferred.</li>
+        <li>The historical 24 July record remains available separately and documented a 105/106 discrepancy before the later profile update.</li>
+        <li>The public source does not expose complete prompts, outputs, model versions or adjudication materials for every result.</li>
+        <li>Counts and rankings are snapshots and may change after {asOf}.</li>
+        <li>No claim is made that every recorded result represents a security vulnerability or model-wide failure.</li>
+        <li>The next evidence milestone is a public evaluation dataset with explicit rubrics, reproducible test cases and calibration with another evaluator.</li>
+      </ul>
+    </section>
+  </div>
+
+  <SiteFooter version={D.identity.buildVersion} />
+</Layout>

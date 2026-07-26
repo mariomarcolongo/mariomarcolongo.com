@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Entropy for Life documented work inventory</title>
+  <desc id="desc">59 plus documented published projects: 55 plus YouTube video projects and four co-authored articles, with recurring literature research and scientific fact-checking plus project-specific scripts, visualizations, slides and thumbnails.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10110f"/>
+      <stop offset="1" stop-color="#20231e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff765d"/>
+      <stop offset="1" stop-color="#ffb36d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" rx="28" fill="url(#bg)"/>
+  <rect x="34" y="34" width="1132" height="692" rx="18" fill="none" stroke="#4a4d46" stroke-width="2"/>
+  <rect x="34" y="34" width="1132" height="10" rx="5" fill="url(#accent)"/>
+
+  <text x="76" y="104" fill="#ff8b73" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="22" font-weight="700" letter-spacing="3">ENTROPY FOR LIFE · DOCUMENTED PUBLISHED WORK</text>
+
+  <text x="74" y="276" fill="#fffaf1" font-family="Georgia, Times New Roman, serif" font-size="176" font-weight="500">59+</text>
+  <text x="470" y="211" fill="#fffaf1" font-family="Inter, Arial, sans-serif" font-size="43" font-weight="750">published projects</text>
+  <text x="470" y="266" fill="#aeb2aa" font-family="Inter, Arial, sans-serif" font-size="26">documented through direct public evidence</text>
+
+  <rect x="72" y="334" width="500" height="146" rx="18" fill="#292c27" stroke="#50544c"/>
+  <text x="104" y="401" fill="#fffaf1" font-family="Georgia, Times New Roman, serif" font-size="66">55+</text>
+  <text x="246" y="392" fill="#fffaf1" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="750">YouTube video projects</text>
+  <text x="246" y="432" fill="#aeb2aa" font-family="Inter, Arial, sans-serif" font-size="21">contribution playlist</text>
+
+  <rect x="596" y="334" width="532" height="146" rx="18" fill="#292c27" stroke="#50544c"/>
+  <text x="628" y="401" fill="#fffaf1" font-family="Georgia, Times New Roman, serif" font-size="66">4</text>
+  <text x="712" y="392" fill="#fffaf1" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="750">co-authored articles</text>
+  <text x="712" y="432" fill="#aeb2aa" font-family="Inter, Arial, sans-serif" font-size="21">author page and published sources</text>
+
+  <line x1="72" y1="526" x2="1128" y2="526" stroke="#4a4d46" stroke-width="2"/>
+
+  <text x="76" y="575" fill="#ff8b73" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="18" font-weight="700" letter-spacing="2">RECURRING RESPONSIBILITIES</text>
+  <text x="76" y="620" fill="#fffaf1" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="650">Primary-literature research · scientific fact-checking</text>
+
+  <text x="76" y="672" fill="#ff8b73" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="18" font-weight="700" letter-spacing="2">DEPENDING ON THE PROJECT</text>
+  <text x="76" y="710" fill="#c9ccc4" font-family="Inter, Arial, sans-serif" font-size="22">Script development · data visualization · slides/on-screen assets · selected thumbnails</text>
+</svg>

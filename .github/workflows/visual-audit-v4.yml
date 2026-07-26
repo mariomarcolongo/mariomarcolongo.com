@@ -1,0 +1,53 @@
+name: Visual audit portfolio
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - scripts/capture-homepage-v4.js
+      - src/pages/index.astro
+      - src/pages/evidence/**
+      - src/styles/portfolio-v8.css
+      - src/styles/portfolio-v9-overrides.css
+      - src/styles/nav-editorial.css
+      - data/portfolio-human.js
+      - public/media/work/**
+      - .github/workflows/visual-audit-v4.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - name: Build and retain diagnostics
+        shell: bash
+        run: |
+          mkdir -p audit-build
+          set -o pipefail
+          npm run build 2>&1 | tee audit-build/build.log
+      - name: Capture scrolled homepage states
+        run: node scripts/capture-homepage-v4.js
+      - name: Preserve Gray Swan source asset
+        shell: bash
+        run: |
+          cp public/media/work/gray-swan-profile-2026-07-24.svg audit-v4/gray-swan-profile-2026-07-24.svg
+          cp audit-build/build.log audit-v4/build.log
+          sha256sum audit-v4/gray-swan-profile-2026-07-24.svg > audit-v4/gray-swan-profile-2026-07-24.sha256
+      - name: Upload visual audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-visual-audit
+          path: audit-v4/**/*
+          if-no-files-found: error
+          retention-days: 7

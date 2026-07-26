@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Model-behavior evaluation workflow</title>
+  <desc id="desc">A clear three-stage workflow showing threat surface selection, test variation, and conservative evidence recording, with Gray Swan aggregate activity below.</desc>
+  <rect width="1200" height="760" fill="#eef2f8"/>
+  <rect x="34" y="34" width="1132" height="692" rx="26" fill="#ffffff"/>
+  <text x="78" y="104" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="2" fill="#d9593f">MODEL-BEHAVIOR EVALUATION</text>
+  <text x="78" y="164" font-family="Georgia, serif" font-size="46" fill="#17202a">From ambiguous risk to an inspectable record</text>
+  <text x="78" y="204" font-family="Arial, sans-serif" font-size="20" fill="#596875">Exploratory testing, not a claim of independent security certification.</text>
+
+  <g transform="translate(78 268)">
+    <rect width="286" height="220" rx="18" fill="#f7f6f2"/>
+    <circle cx="44" cy="44" r="22" fill="#2257d6"/>
+    <text x="44" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#fff">1</text>
+    <text x="28" y="96" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#17202a">SELECT THE SURFACE</text>
+    <text x="28" y="134" font-family="Arial, sans-serif" font-size="18" fill="#3d4a56">Instruction hierarchy</text>
+    <text x="28" y="164" font-family="Arial, sans-serif" font-size="18" fill="#3d4a56">Multimodal inputs</text>
+    <text x="28" y="194" font-family="Arial, sans-serif" font-size="18" fill="#3d4a56">Tools and retrieved context</text>
+  </g>
+
+  <path d="M382 378h52" stroke="#93a0aa" stroke-width="4" stroke-linecap="round"/>
+  <path d="m424 366 14 12-14 12" fill="none" stroke="#93a0aa" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g transform="translate(454 268)">
+    <rect width="286" height="220" rx="18" fill="#f7f6f2"/>
+    <circle cx="44" cy="44" r="22" fill="#d9593f"/>
+    <text x="44" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#fff">2</text>
+    <text x="28" y="96" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#17202a">VARY THE ATTACK PATH</text>
+    <text x="28" y="134" font-family="Arial, sans-serif" font-size="18" fill="#3d4a56">Direct and multi-turn</text>
+    <text x="28" y="164" font-family="Arial, sans-serif" font-size="18" fill="#3d4a56">Nested and indirect</text>
+    <text x="28" y="194" font-family="Arial, sans-serif" font-size="18" fill="#3d4a56">Tool-mediated variants</text>
+  </g>
+
+  <path d="M758 378h52" stroke="#93a0aa" stroke-width="4" stroke-linecap="round"/>
+  <path d="m800 366 14 12-14 12" fill="none" stroke="#93a0aa" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g transform="translate(830 268)">
+    <rect width="292" height="220" rx="18" fill="#f7f6f2"/>
+    <circle cx="44" cy="44" r="22" fill="#2f7254"/>
+    <text x="44" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#fff">3</text>
+    <text x="28" y="96" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#17202a">RECORD THE EVIDENCE</text>
+    <text x="28" y="134" font-family="Arial, sans-serif" font-size="18" fill="#3d4a56">Observed behavior</text>
+    <text x="28" y="164" font-family="Arial, sans-serif" font-size="18" fill="#3d4a56">Reproduction notes</text>
+    <text x="28" y="194" font-family="Arial, sans-serif" font-size="18" fill="#3d4a56">Limits and platform status</text>
+  </g>
+
+  <g transform="translate(78 548)">
+    <rect width="1044" height="126" rx="18" fill="#17202a"/>
+    <text x="30" y="43" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="1.5" fill="#aeb9c3">GRAY SWAN PUBLIC ACTIVITY · JULY 2026</text>
+    <text x="30" y="91" font-family="Georgia, serif" font-size="38" fill="#ffffff">75</text>
+    <text x="92" y="91" font-family="Arial, sans-serif" font-size="17" fill="#d5dde4">confirmed breaks</text>
+    <text x="350" y="91" font-family="Georgia, serif" font-size="38" fill="#ffffff">156</text>
+    <text x="430" y="91" font-family="Arial, sans-serif" font-size="17" fill="#d5dde4">submissions</text>
+    <text x="700" y="91" font-family="Georgia, serif" font-size="38" fill="#ffffff">26</text>
+    <text x="758" y="91" font-family="Arial, sans-serif" font-size="17" fill="#d5dde4">listed waves</text>
+  </g>
+</svg>

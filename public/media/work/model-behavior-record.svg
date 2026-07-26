@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Public model-behavior evaluation activity record</title>
+  <desc id="desc">Editorial visualization of 75 platform-confirmed model breaks across 156 submissions and 26 listed Gray Swan testing waves as of July 2026.</desc>
+  <rect width="1440" height="900" fill="#101815"/>
+  <rect x="54" y="54" width="1332" height="792" rx="2" fill="#f4efe5" stroke="#172022" stroke-width="3"/>
+  <text x="100" y="122" fill="#d6533b" font-family="ui-monospace, monospace" font-size="24" font-weight="700" letter-spacing="3">PUBLIC ACTIVITY RECORD · JULY 2026</text>
+  <text x="100" y="205" fill="#172022" font-family="Georgia, serif" font-size="62">Model-behavior testing</text>
+  <text x="100" y="258" fill="#4b595b" font-family="Arial, sans-serif" font-size="25">Platform-reported aggregate results—not an independent security audit.</text>
+
+  <g transform="translate(100 330)">
+    <rect width="350" height="218" fill="#dce6f5" stroke="#172022" stroke-width="2"/>
+    <text x="28" y="48" fill="#3158c8" font-family="ui-monospace, monospace" font-size="20" font-weight="700">BREAKS</text>
+    <text x="28" y="142" fill="#172022" font-family="Georgia, serif" font-size="92">75</text>
+    <text x="28" y="188" fill="#4b595b" font-family="Arial, sans-serif" font-size="21">platform-confirmed</text>
+  </g>
+  <g transform="translate(495 330)">
+    <rect width="350" height="218" fill="#f0d8d0" stroke="#172022" stroke-width="2"/>
+    <text x="28" y="48" fill="#d6533b" font-family="ui-monospace, monospace" font-size="20" font-weight="700">SUBMISSIONS</text>
+    <text x="28" y="142" fill="#172022" font-family="Georgia, serif" font-size="92">156</text>
+    <text x="28" y="188" fill="#4b595b" font-family="Arial, sans-serif" font-size="21">across listed waves</text>
+  </g>
+  <g transform="translate(890 330)">
+    <rect width="350" height="218" fill="#d8e1c7" stroke="#172022" stroke-width="2"/>
+    <text x="28" y="48" fill="#657149" font-family="ui-monospace, monospace" font-size="20" font-weight="700">WAVES</text>
+    <text x="28" y="142" fill="#172022" font-family="Georgia, serif" font-size="92">26</text>
+    <text x="28" y="188" fill="#4b595b" font-family="Arial, sans-serif" font-size="21">public activity periods</text>
+  </g>
+
+  <line x1="100" y1="622" x2="1240" y2="622" stroke="#172022" stroke-width="2"/>
+  <text x="100" y="682" fill="#172022" font-family="Georgia, serif" font-size="31">Chat</text>
+  <text x="313" y="682" fill="#172022" font-family="Georgia, serif" font-size="31">Multimodal</text>
+  <text x="600" y="682" fill="#172022" font-family="Georgia, serif" font-size="31">Tool use</text>
+  <text x="830" y="682" fill="#172022" font-family="Georgia, serif" font-size="31">Indirect injection</text>
+  <text x="100" y="748" fill="#4b595b" font-family="Arial, sans-serif" font-size="22">Evidence boundary:</text>
+  <text x="290" y="748" fill="#4b595b" font-family="Arial, sans-serif" font-size="22">counts reflect the platform’s status labels; full prompts, outputs and adjudication materials are not reproduced.</text>
+  <text x="100" y="802" fill="#3158c8" font-family="ui-monospace, monospace" font-size="20">mariomarcolongo.com/security.html</text>
+</svg>

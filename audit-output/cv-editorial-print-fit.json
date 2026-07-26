@@ -1,0 +1,20 @@
+{
+  "label": "Research, Editorial & Community Operations CV",
+  "route": "cv-editorial.html",
+  "pages": [
+    {
+      "page": 1,
+      "contentBottom": 992,
+      "footerTop": 1077,
+      "clearance": 85,
+      "pageHeight": 1123
+    },
+    {
+      "page": 2,
+      "contentBottom": 854,
+      "footerTop": 1077,
+      "clearance": 224,
+      "pageHeight": 1123
+    }
+  ]
+}

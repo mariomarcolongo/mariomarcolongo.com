@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# AI Crawlers & LLM Discovery (Benign & Welcome)
+# AI crawlers and LLM discovery
 User-agent: GPTBot
 Allow: /
 
@@ -17,10 +17,7 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-# Content-Signal directives indicating open access for AI training, search, and input
-Content-Signal: ai-train=yes, search=yes, ai-input=yes
-
-# Sitemaps, AI Dossiers, and Discovery Endpoints
+# Sitemaps, AI dossiers and discovery endpoints
 Sitemap: https://mariomarcolongo.com/sitemap.xml
 Allow: /llms.txt
 Allow: /llms-full.txt
@@ -28,4 +25,3 @@ Allow: /cv-llm.txt
 Allow: /auth.md
 Allow: /data/source.js
 Allow: /.well-known/
-

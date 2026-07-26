@@ -1,0 +1,14 @@
+---
+import ApplicationCv from "../components/ApplicationCv.astro";
+import career from "../../data/career-positioning.js";
+
+const { P } = career;
+---
+
+<ApplicationCv
+  profile={P.integrity}
+  shared={P.shared}
+  canonical="https://mariomarcolongo.com/cv-integrity.html"
+  alternateHref="/cv-resume.html"
+  alternateLabel="AI Safety CV"
+/>

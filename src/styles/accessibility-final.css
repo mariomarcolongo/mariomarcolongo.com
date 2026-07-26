@@ -1,0 +1,23 @@
+/* Final public-route accessibility corrections verified against Lighthouse node reports. */
+[data-theme="light"] .v7-kicker {
+  color: #a53b27;
+}
+
+[data-theme="light"] .v7-availability {
+  color: #56636d;
+}
+
+[data-theme="light"] .application-metric small,
+[data-theme="light"] .application-period,
+[data-theme="light"] .application-footer-note,
+[data-theme="light"] .master-period,
+[data-theme="light"] .master-tag {
+  color: #56616f;
+}
+
+.master-contact a {
+  display: inline-flex;
+  min-height: 24px;
+  align-items: center;
+  padding-block: 2px;
+}

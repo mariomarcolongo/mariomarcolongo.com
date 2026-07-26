@@ -1,0 +1,142 @@
+/* Targeted CV print-fit rules: preserve two real A4 pages without footer overlap or clipped content. */
+@media print {
+  .application-page {
+    padding: 9mm 13mm 13mm !important;
+  }
+
+  .application-header {
+    padding-bottom: 14px !important;
+  }
+
+  .application-name {
+    font-size: 2.4rem !important;
+  }
+
+  .application-title {
+    margin-top: 7px !important;
+    font-size: 0.98rem !important;
+  }
+
+  .application-subtitle {
+    margin-top: 4px !important;
+    font-size: 0.8rem !important;
+  }
+
+  .application-contact {
+    gap: 1px !important;
+    font-size: 0.68rem !important;
+  }
+
+  .application-summary {
+    margin-top: 14px !important;
+    font-size: 0.81rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .application-section {
+    margin-top: 16px !important;
+  }
+
+  .application-section-title {
+    margin-bottom: 8px !important;
+    padding-bottom: 4px !important;
+    font-size: 0.69rem !important;
+  }
+
+  .application-metrics {
+    gap: 7px !important;
+  }
+
+  .application-metric {
+    padding: 9px !important;
+  }
+
+  .application-metric strong {
+    font-size: 1.2rem !important;
+  }
+
+  .application-metric span {
+    margin-top: 2px !important;
+    font-size: 0.66rem !important;
+  }
+
+  .application-metric small {
+    margin-top: 1px !important;
+    font-size: 0.57rem !important;
+  }
+
+  .application-entry {
+    margin-top: 10px !important;
+  }
+
+  .application-entry h3 {
+    font-size: 0.88rem !important;
+  }
+
+  .application-organization {
+    font-size: 0.72rem !important;
+  }
+
+  .application-period {
+    font-size: 0.67rem !important;
+  }
+
+  .application-links {
+    gap: 3px 10px !important;
+    margin-top: 2px !important;
+    font-size: 0.63rem !important;
+  }
+
+  .application-list {
+    margin-top: 5px !important;
+  }
+
+  .application-list li {
+    margin: 1px 0 !important;
+    padding-left: 12px !important;
+    font-size: 0.68rem !important;
+    line-height: 1.31 !important;
+  }
+
+  .application-evidence {
+    gap: 7px !important;
+  }
+
+  .application-evidence article {
+    padding: 10px !important;
+  }
+
+  .application-evidence h3 {
+    font-size: 0.72rem !important;
+  }
+
+  .application-evidence p {
+    margin-top: 3px !important;
+    font-size: 0.6rem !important;
+    line-height: 1.31 !important;
+  }
+
+  .application-skill {
+    grid-template-columns: 108px minmax(0, 1fr) !important;
+    gap: 9px !important;
+    padding: 5px 0 !important;
+    font-size: 0.66rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .application-two-col {
+    gap: 18px !important;
+  }
+
+  .application-two-col .application-section {
+    margin-top: 13px !important;
+  }
+
+  .application-footer-note {
+    right: 13mm !important;
+    bottom: 6mm !important;
+    left: 13mm !important;
+    padding-top: 6px !important;
+    font-size: 0.59rem !important;
+  }
+}

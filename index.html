@@ -1,915 +1,117 @@
-<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Mario Marcolongo — Scientific AI Evaluation &amp; Research Data Specialist</title><meta name="description" content="Scientific AI evaluation, research data systems (Yourself to Science™ indexing 55+ research initiatives), primary source verification, and empirical data synthesis."><link rel="canonical" href="https://mariomarcolongo.com/"><!-- Favicon & PWA Manifest --><link rel="icon" type="image/x-icon" sizes="32x32" href="/favicon.ico"><link rel="shortcut icon" href="/favicon.ico"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/favicon.svg" color="#34D399"><link rel="manifest" href="/site.webmanifest"><!-- WebMCP & Agent-to-Agent Discovery Links --><link rel="api-catalog" href="https://mariomarcolongo.com/.well-known/api-catalog"><link rel="describedby" type="text/plain" href="https://mariomarcolongo.com/llms.txt"><link rel="describedby" type="text/plain" href="https://mariomarcolongo.com/llms-full.txt"><link rel="agent-card" href="https://mariomarcolongo.com/.well-known/agent-card.json"><link rel="mcp-server-card" href="https://mariomarcolongo.com/.well-known/mcp/server-card.json"><!-- Open Graph / Social Previews --><meta property="og:type" content="website"><meta property="og:url" content="https://mariomarcolongo.com/"><meta property="og:title" content="Mario Marcolongo — Scientific AI Evaluation &amp; Research Data Specialist"><meta property="og:description" content="Scientific AI evaluation, research data systems (Yourself to Science™ indexing 55+ research initiatives), primary source verification, and empirical data synthesis."><meta property="og:image" content="https://mariomarcolongo.com/og-preview.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:site_name" content="Mario Marcolongo"><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://mariomarcolongo.com/"><meta name="twitter:title" content="Mario Marcolongo — Scientific AI Evaluation &amp; Research Data Specialist"><meta name="twitter:description" content="Scientific AI evaluation, research data systems (Yourself to Science™ indexing 55+ research initiatives), primary source verification, and empirical data synthesis."><meta name="twitter:image" content="https://mariomarcolongo.com/og-preview.png"><!-- Google Fonts --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet"><script src="/data/source.js"></script><script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "ProfilePage",
-        "@id": "https://mariomarcolongo.com/#webpage",
-        "name": "Mario Marcolongo — Scientific AI Evaluation & Research Data Specialist",
-        "url": "https://mariomarcolongo.com/",
-        "mainEntity": { "@id": "https://mariomarcolongo.com/#person" }
-      },
-      {
-        "@type": "Person",
-        "@id": "https://mariomarcolongo.com/#person",
-        "name": "Mario Marcolongo",
-        "jobTitle": "Scientific AI Evaluation & Research Data Specialist",
-        "description": "Scientific AI evaluation and research data specialist specializing in evidence quality, knowledge graphs, open-science systems, and primary source verification.",
-        "url": "https://mariomarcolongo.com",
-        "identifier": "https://orcid.org/0000-0003-2846-7115",
-        "sameAs": [
-          "https://github.com/jnton",
-          "https://orcid.org/0000-0003-2846-7115",
-          "https://www.linkedin.com/in/mario-marcolongo",
-          "https://yourselftoscience.org"
-        ],
-        "hasCredential": [
-          {
-            "@type": "EducationalOccupationalCredential",
-            "name": "4,317 Verified Wikimedia Contributions (CentralAuth Verified)",
-            "credentialCategory": "Empirical Verification & Primary Literature Synthesis"
-          },
-          {
-            "@type": "EducationalOccupationalCredential",
-            "name": "ENA BioSample SAMEA121950568 — Public Domain 41× WGS Dataset",
-            "credentialCategory": "Open Genomic Stewardship & FAIR Biobanking"
-          }
-        ],
-        "knowsAbout": [
-          "Systems Architecture & Serverless Engineering",
-          "41× Whole Genome Sequencing Bioinformatics (Terra.bio BAM/VCF Extraction & Nextflow pgsc_calc / Apple Silicon)",
-          "Polygenic Risk Score (PRS) Computation & HPO/MONDO Disease Ontologies",
-          "Epistemic Rigor & Primary Literature Fact-Checking",
-          "FAIR Open Biobanking & Citizen Science Stewardship",
-          "Psychological Focus Group Facilitation & Autistic Community Recruitment",
-          "Bridging Epistemic Rigor with Public Comprehension & Institutional Collaborations (AIRC)"
-        ]
-      },
-      {
-        "@type": "SoftwareApplication",
-        "@id": "https://yourselftoscience.org/#app",
-        "name": "Yourself to Science™",
-        "applicationCategory": "ScientificApplication",
-        "operatingSystem": "Web",
-        "description": "Open citizen science directory and biobanking platform indexing 55+ clinical studies under CC0/AGPL-3.0, verified in FAIRsharing and Zenodo.",
-        "url": "https://yourselftoscience.org",
-        "author": { "@id": "https://mariomarcolongo.com/#person" }
-      },
-      {
-        "@type": "SoftwareApplication",
-        "@id": "https://mariomarcolongo.com/#telegram-bot",
-        "name": "Wikipedia Link Converter Bot",
-        "applicationCategory": "UtilitiesApplication",
-        "operatingSystem": "AWS Lambda / Telegram Serverless",
-        "description": "Serverless automation converting non-English Wikipedia links to canonical English pages instantly.",
-        "url": "https://t.me/ToEnWikipediaBot",
-        "author": { "@id": "https://mariomarcolongo.com/#person" }
-      },
-      {
-        "@type": "SoftwareApplication",
-        "@id": "https://mariomarcolongo.com/#mdpi-filter",
-        "name": "MDPI Publisher Verification Pipeline",
-        "applicationCategory": "DeveloperApplication",
-        "operatingSystem": "Browser Extension / Node.js",
-        "description": "Automated pipeline and browser extension auditing bibliographic citations and publisher indexing.",
-        "author": { "@id": "https://mariomarcolongo.com/#person" }
-      },
-      {
-        "@type": "CreativeWork",
-        "@id": "https://emergent-humanity.com/#work",
-        "name": "Emergent Humanity — Interactive Narration & Network Simulation",
-        "description": "16-chapter interactive narration and living browser simulation modeling humanity as an emergent network entity.",
-        "url": "https://emergent-humanity.com",
-        "author": { "@id": "https://mariomarcolongo.com/#person" }
-      },
-      {
-        "@type": "CreativeWork",
-        "@id": "https://mariomarcolongo.com/#wikimedia-edits",
-        "name": "4,317 Verified Wikimedia Contributions",
-        "description": "Verified empirical literature synthesis and structured scientific fact-checking across English Wikipedia, Italian Wikipedia, Wikidata, and Wikimedia Commons.",
-        "url": "https://commons.wikimedia.org/wiki/Special:CentralAuth/Digressivo",
-        "author": { "@id": "https://mariomarcolongo.com/#person" }
-      },
-      {
-        "@type": "MedicalScholarlyArticle",
-        "@id": "https://mariomarcolongo.com/#genomic-pipeline",
-        "name": "Whole-Genome Sequencing Pipeline & Polygenic Risk Scoring (41×)",
-        "headline": "Utilized Terra.bio cloud biomedical platform to align raw FASTQ reads and extract high-coverage GRCh38 BAM and VCF files, then ran downstream local Nextflow pgsc_calc on Apple Silicon (M4 Macbook).",
-        "description": "Donated personal 41× Whole Genome Sequencing raw paired-end FASTQ reads (DNBSEQ-T7) under ENA BioSample SAMEA121950568. Processed raw FASTQ reads via Terra.bio cloud bioinformatic platform to extract high-coverage GRCh38 BAM alignments and VCF variant call files. Architected downstream local bioinformatic pipeline on Apple Silicon (M4 Macbook) converting VCF to Plink2 (PGEN/PVAR/PSAM) and running Nextflow pgsc_calc with PCA ancestry projection against 1000 Genomes/HGDP reference panels, computing Z-Score standardized Polygenic Risk Scores, pharmacogenomic loci, mitochondrial heteroplasmy, and dark matter novel variant filtration mapped to HPO/MONDO ontologies.",
-        "author": { "@id": "https://mariomarcolongo.com/#person" },
-        "url": "https://www.ebi.ac.uk/ena/browser/view/PRJEB109744"
-      },
-      {
-        "@type": "ClaimReview",
-        "@id": "https://mariomarcolongo.com/#claim-verification-1",
-        "claimReviewed": "Mario Marcolongo has contributed 4,317 verified public edits across Wikimedia Foundation projects with strict primary source fact-checking.",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5",
-          "alternateName": "Empirically Verified Primary Record"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "Wikimedia CentralAuth Registry",
-          "url": "https://en.wikipedia.org"
-        }
-      },
-      {
-        "@type": "ClaimReview",
-        "@id": "https://mariomarcolongo.com/#claim-verification-2",
-        "claimReviewed": "Mario Marcolongo released his 41× Whole Genome Sequencing dataset to the public domain under ENA BioSample SAMEA121950568.",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5",
-          "alternateName": "Public Domain Biological Accession Verified"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "European Nucleotide Archive (EMBL-EBI)",
-          "url": "https://www.ebi.ac.uk/ena/browser/view/SAMEA121950568"
-        }
-      },
-      {
-        "@type": "Review",
-        "@id": "https://mariomarcolongo.com/#clinical-facilitation-review",
-        "itemReviewed": { "@id": "https://mariomarcolongo.com/#person" },
-        "author": {
-          "@type": "Organization",
-          "name": "Biomedical & Psychological Research Collaborators"
-        },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        },
-        "name": "Exceptional Epistemic Rigor, Emotional Intelligence, and Collaborative Leadership",
-        "reviewBody": "Mario Marcolongo demonstrates top-percentile epistemic rigor paired with exceptional emotional intelligence and psychological safety leadership. Volunteering as an independent researcher, he developed standardized facilitation guides and served as primary/co-conductor for psychological focus groups with autistic participants, while successfully aligning diverse commercial and institutional sponsors including AIRC."
-      }
-    ]
-  }
-  </script><link rel="stylesheet" href="/_astro/Layout.2OKXZJNq.css"></head><body><div id="scrollProgress"></div><main id="main-content"><div id="scrollProgress" aria-hidden="true"></div><nav class="nav" id="mainNav"><a href="/" class="nav-name" id="navName">Mario Marcolongo</a><div class="nav-actions"><a href="#proof" class="nav-link hide-mobile">Proof</a><a href="#about" class="nav-link hide-mobile">Focus</a><a href="#work" class="nav-link hide-mobile">Work</a><a href="#numbers" class="nav-link hide-mobile">Impact</a><a href="#contact" class="nav-link hide-mobile">Contact</a><a href="/cv" class="nav-link">Full CV</a><button class="btn btn-ai hide-mobile" onclick="copyAiContent('unified', this)" title="1-Click copy complete AI-compatible Markdown Curriculum Vitae" style="padding: 6px 12px; font-size: 13px;">✨ Copy for AI</button><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme" id="themeBtn">☀</button></div></nav><section class="hero"><div class="container"><div><div class="hero-animate" style="--delay: 0.05s;"><div class="badge-pill"><span class="badge-dot"></span><span>Italian Citizen · Unrestricted EU Work Authorization & Global B2B Partita IVA</span></div></div><h1 class="hero-headline hero-animate" id="heroHeadline" style="--delay: 0.15s;">I check the claims other people don't.</h1><p class="hero-sub hero-animate" id="heroSub" style="--delay: 0.25s;">Eight years of verifiable Wikipedia edits<button class="cite-btn" data-cite="edits" aria-expanded="false" title="Click to inspect source">1</button> holding up under scrutiny. A personal genome<button class="cite-btn" data-cite="ena" aria-expanded="false" title="Click to inspect source">2</button> released to the public domain under a real ENA accession number. An open science registry<button class="cite-btn" data-cite="registry" aria-expanded="false" title="Click to inspect platform">3</button> cataloging 55+ research initiatives cited across 37 Wikidata entities. And ranked top 8% globally on Gray Swan AI's proving ground<button class="cite-btn" data-cite="grayswan" aria-expanded="false" title="Click to inspect profile">4</button> — with 75+ confirmed adversarial model breaks (as of July 2026) across chat, multimodal, agentic, and prompt-injection challenges.</p><div class="hero-meta hero-animate" style="--delay: 0.35s;"><span id="heroLocation">Italy (Italian Citizen — Unrestricted EU Work Authorization)</span><span>·</span><span id="heroLanguages">Italian (Native) & English (C1 Overall)</span><span>·</span><a href="https://orcid.org/0000-0003-2846-7115" target="_blank" rel="noopener noreferrer" id="heroOrcid">ORCID ↗</a></div><div class="hero-actions hero-animate" style="--delay: 0.45s;"><a href="#work" class="btn btn-primary">Explore My Work ↓</a><a href="#proof" class="btn">Verified Proof</a><button class="btn btn-ai" onclick="copyAiContent('unified', this)" title="1-Click copy complete AI-compatible Markdown Curriculum Vitae">✨ Copy for AI (LLMs)</button></div></div></div></section><section class="section" id="proof" style="padding-top: 20px; padding-bottom: 60px;"><div class="container"><div class="reveal"><div class="section-label">Independently Auditable Public Evidence</div><h2 class="section-title">Primary sources you can inspect directly.</h2><p class="section-desc">Every contribution on this page is backed by primary source verification, verifiable open identities, and public accessions. Click any badge to inspect the original record.</p></div><div class="proof-grid reveal"><div class="proof-row"><span class="proof-tag">In Print</span><p class="proof-text">Named in the acknowledgments of <b>Italiani Veri</b> (Mondadori, 2025) as a collaborator "excellent at digging into the scientific literature and catching errors."<button class="cite-btn" data-cite="book" aria-expanded="false" title="Click to inspect verification source">1</button></p></div><div class="proof-row"><span class="proof-tag">On the Record</span><p class="proof-text">4,317 verified contributions across Wikipedia, Wikidata, and Wikimedia Commons, under a checkable public CentralAuth account.<button class="cite-btn" data-cite="edits" aria-expanded="false" title="Click to inspect verification source">2</button></p></div><div class="proof-row"><span class="proof-tag">Open Research Registry</span><p class="proof-text">Founder & architect of <b>Yourself to Science™</b> (yourselftoscience.org), an open citizen science platform cataloging 55+ research studies and bio-donations — cited across 37 Wikidata entities (P854).<button class="cite-btn" data-cite="registry" aria-expanded="false" title="Click to inspect verification source">3</button></p></div><div class="proof-row"><span class="proof-tag">Open Genomic Donor & Pipeline</span><p class="proof-text">Donated personal 41× Whole Genome Sequencing raw paired-end FASTQ reads (DNBSEQ-T7) to the public domain (CC0) under ENA BioSample SAMEA121950568, with complete local pipeline codebase open-sourced on GitHub (`git-nome`).<button class="cite-btn" data-cite="ena" aria-expanded="false" title="Click to inspect verification source">4</button></p></div><div class="proof-row"><span class="proof-tag">AI Red-Teaming</span><p class="proof-text">Ranked top 8% globally on Gray Swan AI's Proving Ground — 75+ independently verified LLM breaks across chat, image, agentic, and prompt-injection categories (as of July 2026). Gray Swan's research is cited across 11 frontier model system cards, including Anthropic's Claude family and OpenAI's GPT-5/o1/o3-mini.<button class="cite-btn" data-cite="grayswan" aria-expanded="false" title="Click to inspect profile">5</button></p></div><div class="proof-row"><span class="proof-tag">Agent-Ready Architecture</span><p class="proof-text">100% agent-ready web infrastructure verified by independent benchmark — passing all 16 autonomous agent endpoints including live A2A Agent Card (`agent-card.json`), DNS-AID, and llms.txt.<button class="cite-btn" data-cite="agentready" aria-expanded="false" title="Click to inspect live benchmark">6</button></p></div></div></div></section><section class="section" id="about"><div class="container"><div class="reveal"><div class="section-label">Core Focus</div><h2 class="section-title">Where AI execution meets scientific rigor.</h2><p class="section-desc">Bridging rapid AI-native prototyping, open biomedical data infrastructure, and evidence synthesis.</p></div><div class="pillars reveal-stagger" id="pillarGrid"><!-- Hydrated from source.js --></div></div></section><section class="section" id="work"><div class="container"><div class="reveal"><div class="section-label">Featured Work</div><h2 class="section-title">Production systems & open research.</h2><p class="section-desc">Public tools, automated pipelines, and citizen science directories built for real-world impact.</p></div><div class="project-list" id="projectList"><!-- Hydrated from source.js --></div></div></section><section class="section" id="numbers"><div class="container"><div class="reveal"><div class="section-label">Verifiable Impact</div><h2 class="section-title">Evidence across scientific & technical ecosystems.</h2></div><div class="stats-grid reveal-stagger" id="statsGrid"><!-- Hydrated from source.js --></div><div class="reveal"><div class="wiki-bar-group" id="wikiBreakdown"><!-- Wikimedia contribution bars --></div></div></div></section><section class="section" id="visualizations"><div class="container"><div class="reveal"><div class="section-label">Scientific Visualizations</div><h2 class="section-title">Adopted across Wikipedia & academic publishing.</h2><p class="section-desc">Original vector data visualizations published under open licenses on Wikimedia Commons.</p></div><div class="reveal"><div class="viz-tabs" id="vizTabs"><!-- Hydrated from source.js --></div><div class="viz-display"><img id="vizImg" src="" alt="" decoding="async" loading="lazy" width="1200" height="675" style="width: 100%; height: auto; aspect-ratio: 16/9;"></div><p class="viz-caption" id="vizCaption"></p><div class="viz-btn-row"><a id="vizLink" href="" target="_blank" rel="noopener noreferrer" class="btn btn-sm" aria-label="View current data visualization on Wikimedia Commons">View on Wikimedia Commons ↗</a><a href="https://public.tableau.com/app/profile/mario.marcolongo/vizzes" target="_blank" rel="noopener noreferrer" class="btn btn-sm" aria-label="View Mario Marcolongo Tableau Public Portfolio">Tableau Portfolio ↗</a><a href="https://app.flourish.studio/@Digressivo" target="_blank" rel="noopener noreferrer" class="btn btn-sm" aria-label="View Mario Marcolongo Flourish Studio Portfolio">Flourish Portfolio ↗</a></div></div></div></section><section class="section" id="contact"><div class="container"><div class="reveal"><div class="section-label">Connect</div><h2 class="section-title">Let's build together.</h2><p class="section-desc">Open to high-impact projects, AI research teams, and global opportunities.</p></div><div class="contact-grid reveal"><div class="contact-row"><span class="contact-label">Email</span><span class="contact-value"><a href="mailto:me@mariomarcolongo.com" id="contactEmail">me@mariomarcolongo.com</a></span></div><div class="contact-row"><span class="contact-label">LinkedIn</span><span class="contact-value"><a href="https://www.linkedin.com/in/mario-marcolongo" target="_blank" rel="noopener noreferrer" id="contactLinkedin">linkedin.com/in/mario-marcolongo ↗</a></span></div><div class="contact-row"><span class="contact-label">ORCID</span><span class="contact-value"><a href="https://orcid.org/0000-0003-2846-7115" target="_blank" rel="noopener noreferrer">0000-0003-2846-7115 ↗</a></span></div><div class="contact-row"><span class="contact-label">GitHub</span><span class="contact-value"><a href="https://github.com/jnton" target="_blank" rel="noopener noreferrer" id="contactGithub">github.com/jnton ↗</a></span></div></div><div class="reveal contact-cv-action"><a href="/cv" class="btn btn-primary">View Comprehensive Profile & CV →</a></div></div></section><footer class="site-footer"><div class="container"><div class="footer-content"><span class="footer-text">© 2026 Mario Marcolongo · <a href="https://github.com/jnton/mariomarcolongo" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Built Open-Source</a></span><div class="footer-links"><a href="https://github.com/jnton/mariomarcolongo" target="_blank" rel="noopener noreferrer">Source Code</a><a href="/llms-full.txt" target="_blank" rel="noopener noreferrer">llms.txt</a><a href="/sitemap.xml" target="_blank" rel="noopener noreferrer">Sitemap</a><a href="https://github.com/jnton" target="_blank" rel="noopener noreferrer">GitHub Profile</a></div></div></div></footer><script>
-    const D = window.MARIO_DOSSIER || {};
-
-    // ---- SCROLL REVEAL ----
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-    // ---- NAV SCROLL & ACTIVE SECTION HIGHLIGHTING ----
-    const nav = document.getElementById('mainNav');
-    const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
-    const sectionIds = Array.from(navLinks).map(link => link.getAttribute('href').substring(1));
-    const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
-    const scrollProgressEl = document.getElementById('scrollProgress');
-    const supportsScrollTimeline = CSS.supports('animation-timeline', 'scroll()');
-
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY;
-      if (nav) nav.classList.toggle('scrolled', scrollY > 40);
-
-      // Scroll Progress bar JS fallback for non-supporting browsers
-      if (!supportsScrollTimeline && scrollProgressEl) {
-        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-        const progress = scrollable > 0 ? (scrollY / scrollable) : 0;
-        scrollProgressEl.style.transform = `scaleX(${progress})`;
-      }
-
-      // Highlight active navigation section
-      let currentSectionId = '';
-      const triggerY = scrollY + 140;
-      sections.forEach(sec => {
-        if (sec.offsetTop <= triggerY && sec.offsetTop + sec.offsetHeight > triggerY) {
-          currentSectionId = sec.getAttribute('id');
-        }
-      });
-
-      navLinks.forEach(link => {
-        const targetId = link.getAttribute('href').substring(1);
-        link.classList.toggle('active', targetId === currentSectionId && currentSectionId !== '');
-      });
-    }, { passive: true });
-
-    // ---- THEME ----
-    function toggleTheme() {
-      const html = document.documentElement;
-      const current = html.getAttribute('data-theme');
-      const next = current === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', next);
-      document.getElementById('themeBtn').textContent = next === 'dark' ? '☾' : '☀';
-      try { localStorage.setItem('mm-theme', next); } catch(e) {}
-    }
-
-    // Restore saved theme
-    try {
-      const saved = localStorage.getItem('mm-theme');
-      if (saved) {
-        document.documentElement.setAttribute('data-theme', saved);
-        document.getElementById('themeBtn').textContent = saved === 'dark' ? '☾' : '☀';
-      }
-    } catch(e) {}
-
-    // ---- HYDRATE PILLARS ----
-    function hydratePillars() {
-      const grid = document.getElementById('pillarGrid');
-      if (!D.pillars || !grid) return;
-
-      grid.innerHTML = D.pillars.map(p => `
-        <div class="pillar reveal">
-          <div class="pillar-header">
-            <div class="pillar-icon-box" aria-hidden="true">${p.icon}</div>
-            ${p.category ? `<span class="pillar-category">${p.category}</span>` : ''}
-          </div>
-          <h3 class="pillar-title">${p.title}</h3>
-          <p class="pillar-lead">${p.lead || p.desc}</p>
-          ${p.highlights ? `
-            <div class="pillar-highlights">
-              ${p.highlights.map(h => `
-                <div class="pillar-highlight-item">
-                  <span class="pillar-highlight-dot"></span>
-                  <div class="pillar-highlight-text">
-                    <strong>${h.label}:</strong> ${h.detail}
-                  </div>
-                </div>
-              `).join('')}
-            </div>
-          ` : ''}
-        </div>
-      `).join('');
-
-      grid.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-    }
-
-    // ---- HYDRATE PROJECTS ----
-    function hydrateProjects() {
-      const list = document.getElementById('projectList');
-      if (!D.projects || !list) return;
-
-      list.innerHTML = D.projects.map((p, i) => {
-        const visual = buildProjectVisual(p, i);
-        const links = buildProjectLinks(p);
-        const highlights = p.highlights ? p.highlights.map(h => `<li>${h}</li>`).join('') : '';
-        const isEven = i % 2 === 0;
-
-        return `
-          <article class="project-card reveal" style="${!isEven ? 'direction: rtl;' : ''}">
-            <div class="project-info" style="direction: ltr;">
-              <div class="project-tag">${p.role}</div>
-              <h3 class="project-title">${p.title}</h3>
-              <p class="project-one-liner">${p.oneLiner}</p>
-              ${highlights ? `<ul class="project-highlights">${highlights}</ul>` : ''}
-              <div class="project-links">${links}</div>
-            </div>
-            <div class="project-visual" style="direction: ltr;">
-              ${visual}
-            </div>
-          </article>
-        `;
-      }).join('');
-
-      list.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-    }
-
-    function buildProjectVisual(p, i) {
-      if (p.id === 'mdpi-filter') {
-        const imgSrc = (p.links && p.links.screenshots && p.links.screenshots[0])
-          ? p.links.screenshots[0]
-          : 'https://lh3.googleusercontent.com/1KKa3LqvJ6ayP9Kh6_jmAWXzL3naOfPnnKtWb8vjd25XMn1ELMNFDxGjgtvShNmDhWG4x_uuynunm9lVD7wQ3hAI=s1280-w1280-h800';
-        return `<div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; overflow:hidden; border-radius:14px; background:#F8FAFC; border:1px solid #E2E8F0;"><img src="${imgSrc}" alt="${p.title} screenshot" loading="lazy" style="width:100%; height:100%; object-fit:cover;"></div>`;
-      }
-      if (p.id === 'telegram-bot') {
-        return `
-          <div class="telegram-mock">
-            <div class="tg-header">
-              <div class="tg-avatar">
-                <img src="/telegram-bot-icon.svg" alt="Wikipedia Link Converter Bot Icon" style="width: 100%; height: 100%; object-fit: contain;">
-              </div>
-              <div>
-                <div class="tg-name">Wikipedia Link Converter</div>
-                <div class="tg-status">serverless bot</div>
-              </div>
-            </div>
-            <div class="tg-body">
-              <div class="tg-bubble-out">
-                <span class="tg-link">https://it.wikipedia.org/wiki/Bianco_e_nero</span>
-              </div>
-              <div class="tg-bubble-in">
-                English canonical page resolved for <strong>Bianco e nero</strong>:<br>
-                <span class="tg-link">https://en.wikipedia.org/wiki/Black_and_white</span>
-              </div>
-            </div>
-          </div>
-        `;
-      }
-      if (p.id === 'referendum-map') {
-        return `<img src="/referendum-turnout-threshold-by-country.svg" alt="Referendum Turnout Threshold World Map" loading="lazy" style="object-fit: contain; padding: 20px;">`;
-      }
-      if (p.id === 'entropy-for-life') {
-        return `
-          <div class="mock-visual-box" style="padding: 36px 28px; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 26px;">
-            <!-- Channel Header -->
-            <div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
-              <div style="width: 68px; height: 68px; border-radius: 20px; background: linear-gradient(135deg, #F43F5E, #BE123C); display: flex; align-items: center; justify-content: center; font-size: 30px; color: #FFF; box-shadow: 0 8px 26px rgba(225,29,72,0.35);">▶</div>
-              <div>
-                <div style="font-family: var(--font-display); font-size: 24px; font-weight: 800; color: var(--ink); letter-spacing: -0.02em;">@EntropyforLife</div>
-                <div style="font-size: 13px; color: var(--ink-soft); font-weight: 500; margin-top: 2px;">Giacomo Moro Mauretto · Evolutionary Biology</div>
-              </div>
-            </div>
-
-            <!-- Hero Community Metric -->
-            <div style="display: flex; flex-direction: column; align-items: center;">
-              <div style="font-family: var(--font-display); font-size: 46px; font-weight: 900; color: var(--ink); line-height: 1; letter-spacing: -0.03em;">480,000+</div>
-              <div style="font-size: 12px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 6px;">Total Cross-Platform Community</div>
-            </div>
-
-            <!-- 3 Key Metric Cards Grid -->
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; width: 100%; max-width: 440px;">
-              <div style="background: var(--bg-surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 10px; text-align: center; box-shadow: var(--shadow);">
-                <div style="font-family: var(--font-display); font-size: 20px; font-weight: 800; color: var(--ink);">266K+</div>
-                <div style="font-size: 11px; color: var(--ink-soft); font-weight: 600; margin-top: 3px;">YouTube Subs</div>
-              </div>
-              <div style="background: var(--bg-surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 10px; text-align: center; box-shadow: var(--shadow);">
-                <div style="font-family: var(--font-display); font-size: 20px; font-weight: 800; color: var(--ink);">36.2M+</div>
-                <div style="font-size: 11px; color: var(--ink-soft); font-weight: 600; margin-top: 3px;">Total Views</div>
-              </div>
-              <div style="background: var(--bg-surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 10px; text-align: center; box-shadow: var(--shadow);">
-                <div style="font-family: var(--font-display); font-size: 20px; font-weight: 800; color: var(--ink);">55+</div>
-                <div style="font-size: 11px; color: var(--ink-soft); font-weight: 600; margin-top: 3px;">Videos Checked</div>
-              </div>
-            </div>
-
-            <!-- Verified Scope / Ecosystem Badges -->
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 460px;">
-              <span style="background: var(--bg-surface); border: 1px solid var(--line); color: var(--ink); padding: 6px 14px; border-radius: 99px; font-size: 11.5px; font-weight: 600;">📚 2 Mondadori Books</span>
-              <span style="background: var(--bg-surface); border: 1px solid var(--line); color: var(--ink); padding: 6px 14px; border-radius: 99px; font-size: 11.5px; font-weight: 600;">🔬 AIRC Partner</span>
-              <span style="background: var(--bg-surface); border: 1px solid var(--line); color: var(--ink); padding: 6px 14px; border-radius: 99px; font-size: 11.5px; font-weight: 600;">📺 Rai 3 Kilimangiaro</span>
-              <span style="background: var(--bg-surface); border: 1px solid var(--line); color: var(--ink); padding: 6px 14px; border-radius: 99px; font-size: 11.5px; font-weight: 600;">📸 IG: 158K+ · TikTok: 54K+</span>
-            </div>
-          </div>
-        `;
-      }
-      if (p.id === 'yourself-to-science') {
-        return `
-          <div class="mock-visual-box" style="padding: 16px; overflow: hidden; border-radius: 14px; background: #FFFFFF; border: 1px solid #E2E8F0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; text-align: left;">
-            <!-- Top Nav -->
-            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #F1F5F9; padding-bottom: 12px; margin-bottom: 16px;">
-              <div style="display: flex; align-items: center; gap: 8px;">
-                <img src="/y2s-logo.svg" alt="Yourself to Science Logo" style="width: 28px; height: 28px; object-fit: contain;">
-                <img src="/y2s-title.svg" alt="Yourself to Science™" style="height: 16px; object-fit: contain;">
-              </div>
-              <div style="display: flex; align-items: center; gap: 14px; font-size: 11px; color: #475569; font-weight: 500;">
-                <span>Stats</span>
-                <span>Our Mission</span>
-                <span style="background: #2563EB; color: #FFFFFF; padding: 5px 12px; border-radius: 6px; font-weight: 600;">Get Involved</span>
-              </div>
-            </div>
-            <!-- Hero Title -->
-            <div style="text-align: center; margin-bottom: 18px;">
-              <div style="color: #2563EB; font-size: 22px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 6px;">Contribute to Research</div>
-              <div style="font-size: 11.5px; color: #64748B; line-height: 1.45; max-width: 90%; margin: 0 auto;">
-                A comprehensive open-source catalogue for contributing your biological and digital self to scientific research. Browse opportunities to share your data, genome, biological samples, and more.
-              </div>
-            </div>
-            <!-- Search Pill Bar -->
-            <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 99px; padding: 7px 16px; display: flex; justify-content: space-between; align-items: center; font-size: 10px; color: #64748B; box-shadow: 0 2px 8px rgba(0,0,0,0.03); margin: 0 12px 18px 12px; overflow-x: auto;">
-              <div><strong style="color: #0F172A; font-weight: 700; margin-right: 4px;">CATEGORY</strong>Any type</div>
-              <div style="height: 12px; width: 1px; background: #E2E8F0;"></div>
-              <div><strong style="color: #0F172A; font-weight: 700; margin-right: 4px;">AVAILABLE IN</strong>Anywhere</div>
-              <div style="height: 12px; width: 1px; background: #E2E8F0;"></div>
-              <div><strong style="color: #0F172A; font-weight: 700; margin-right: 4px;">DATA TYPE</strong>All</div>
-              <div style="height: 12px; width: 1px; background: #E2E8F0;"></div>
-              <div style="display: flex; align-items: center; gap: 4px; color: #2563EB; font-weight: 600;">
-                <span>🔍</span><span>Search</span>
-              </div>
-            </div>
-            <!-- Mini Program Cards -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; text-align: left;">
-              <!-- Card 1 -->
-              <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                  <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px;">
-                    <div style="display: flex; flex-wrap: wrap; gap: 4px;">
-                      <span style="background: #EFF6FF; color: #2563EB; font-size: 8px; font-weight: 700; padding: 2px 6px; border-radius: 4px;">BIOLOGICAL SAMPLES</span>
-                      <span style="background: #FEF3C7; color: #D97706; font-size: 8px; font-weight: 700; padding: 2px 6px; border-radius: 4px;">HEALTH DATA</span>
-                    </div>
-                    <span style="background: #FFE4E6; color: #E11D48; width: 20px; height: 20px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 10px;">♥</span>
-                  </div>
-                  <div style="margin-bottom: 6px;">
-                    <span style="background: #F1F5F9; color: #475569; font-size: 8px; font-weight: 600; padding: 2px 6px; border-radius: 4px;">COMMERCIAL</span>
-                  </div>
-                  <div style="font-weight: 700; font-size: 13px; color: #0F172A; margin-bottom: 4px;">23andMe Research Participation</div>
-                  <div style="font-size: 10px; color: #64748B;">🏢 23andMe Holding Co.</div>
-                  <div style="font-size: 9.5px; color: #94A3B8; margin-top: 2px;">• Based in United States</div>
-                </div>
-                <div style="margin-top: 10px; background: #EFF6FF; border: 1px solid #DBEAFE; border-radius: 6px; padding: 5px 8px; font-size: 9px; color: #2563EB; display: flex; align-items: center; gap: 5px;">
-                  <span>ℹ️</span><span>Requires being a customer</span>
-                </div>
-              </div>
-              <!-- Card 2 -->
-              <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                  <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px;">
-                    <div style="display: flex; flex-wrap: wrap; gap: 4px;">
-                      <span style="background: #EFF6FF; color: #2563EB; font-size: 8px; font-weight: 700; padding: 2px 6px; border-radius: 4px;">BIOLOGICAL SAMPLES</span>
-                      <span style="background: #FCE7F3; color: #DB2777; font-size: 8px; font-weight: 700; padding: 2px 6px; border-radius: 4px;">TISSUE DONATION</span>
-                    </div>
-                    <div style="display: flex; gap: 4px;">
-                      <span style="background: #D1FAE5; color: #059669; width: 20px; height: 20px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700;">$</span>
-                      <span style="background: #FFE4E6; color: #E11D48; width: 20px; height: 20px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 10px;">♥</span>
-                    </div>
-                  </div>
-                  <div style="margin-bottom: 6px;">
-                    <span style="background: #F1F5F9; color: #475569; font-size: 8px; font-weight: 600; padding: 2px 6px; border-radius: 4px;">PUBLIC & NON-PROFIT</span>
-                  </div>
-                  <div style="font-weight: 700; font-size: 13px; color: #0F172A; margin-bottom: 4px;">AATB Accredited Bank Search</div>
-                  <div style="font-size: 10px; color: #64748B;">🏢 American Association of Tissue Banks (AATB)</div>
-                  <div style="font-size: 9.5px; color: #94A3B8; margin-top: 2px;">• Based in United States</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        `;
-      }
-      if (p.id === 'emergent-humanity') {
-        return `
-          <div class="mock-visual-box node-viz-wrap" style="padding: 0; overflow: hidden; border-radius: 14px; background: #12160F; position: relative; aspect-ratio: 16/9; min-height: 220px;">
-            <canvas id="nodeCanvas" aria-label="Interactive network simulation of human nodes and connections" style="width: 100%; height: 100%; display: block;"></canvas>
-            <div style="position: absolute; top: 12px; right: 12px; pointer-events: none;">
-              <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; background: rgba(154, 91, 19, 0.85); color: #fff; padding: 4px 10px; border-radius: 99px; backdrop-filter: blur(4px);">INTERACTIVE NARRATION · ACTIVE ALPHA</span>
-            </div>
-          </div>
-        `;
-      }
-      return `<div class="mock-visual-box"><div style="font-size:48px;opacity:0.3;">⚡</div></div>`;
-    }
-
-    function buildProjectLinks(p) {
-      const btns = [];
-      const l = p.links || {};
-      const t = (p.title || p.org || 'project').replace(/"/g, '&quot;');
-      if (l.website) btns.push(`<a href="${l.website}" target="_blank" rel="noopener noreferrer" class="btn btn-sm" aria-label="Visit site for ${t}">Visit Site ↗</a>`);
-      if (l.playlist) btns.push(`<a href="${l.playlist}" target="_blank" rel="noopener noreferrer" class="btn btn-sm" aria-label="Videos and documentaries for ${t}">Videos & Documentaries ↗</a>`);
-      if (l.authorPage) btns.push(`<a href="${l.authorPage}" target="_blank" rel="noopener noreferrer" class="btn btn-sm" aria-label="Author page for ${t}">Author Page ↗</a>`);
-      if (l.chromeStore) btns.push(`<a href="${l.chromeStore}" target="_blank" rel="noopener noreferrer" class="btn btn-sm" aria-label="Chrome Store extension for ${t}">Chrome Store ↗</a>`);
-      if (l.edgeStore) btns.push(`<a href="${l.edgeStore}" target="_blank" rel="noopener noreferrer" class="btn btn-sm" aria-label="Edge Add-on for ${t}">Edge Store ↗</a>`);
-      if (l.youtube) btns.push(`<a href="${l.youtube}" target="_blank" rel="noopener noreferrer" class="btn btn-sm" aria-label="YouTube channel for ${t}">YouTube ↗</a>`);
-      if (l.bot || l.telegramBot) btns.push(`<a href="${l.bot || l.telegramBot}" target="_blank" rel="noopener noreferrer" class="btn btn-sm" aria-label="Telegram Bot for ${t}">Try Bot ↗</a>`);
-      if (l.wikimedia) btns.push(`<a href="${l.wikimedia}" target="_blank" rel="noopener noreferrer" class="btn btn-sm" aria-label="Wikimedia contributions for ${t}">Wikimedia ↗</a>`);
-      if (l.github || l.githubOrg) btns.push(`<a href="${l.github || l.githubOrg}" target="_blank" rel="noopener noreferrer" class="btn btn-sm" aria-label="GitHub repository for ${t}">GitHub ↗</a>`);
-      if (l.doi) btns.push(`<a href="${l.doi}" target="_blank" rel="noopener noreferrer" class="btn btn-sm" aria-label="DOI publication for ${t}">DOI ↗</a>`);
-      if (l.fairsharing) btns.push(`<a href="${l.fairsharing}" target="_blank" rel="noopener noreferrer" class="btn btn-sm" aria-label="FAIRsharing record for ${t}">FAIRsharing ↗</a>`);
-      if (l.tableau) btns.push(`<a href="${l.tableau}" target="_blank" rel="noopener noreferrer" class="btn btn-sm" aria-label="Tableau portfolio for ${t}">Tableau ↗</a>`);
-      if (l.flourish) btns.push(`<a href="${l.flourish}" target="_blank" rel="noopener noreferrer" class="btn btn-sm" aria-label="Flourish studio portfolio for ${t}">Flourish ↗</a>`);
-      return btns.join('');
-    }
-
-    // ---- HYDRATE STATS ----
-    function hydrateStats() {
-      const grid = document.getElementById('statsGrid');
-      if (!D.stats || !grid) return;
-
-      grid.innerHTML = D.stats.map(s => `
-        <div class="stat-card reveal">
-          <div class="stat-value">${s.value}</div>
-          <div class="stat-label">${s.label}</div>
-          <div class="stat-detail">${s.detail}</div>
-        </div>
-      `).join('');
-
-      grid.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-      // Wikimedia breakdown bars
-      const breakdown = document.getElementById('wikiBreakdown');
-      if (D.wikimedia && D.wikimedia.breakdown && breakdown) {
-        const max = Math.max(...D.wikimedia.breakdown.map(b => parseInt(b.edits.replace(/,/g, ''))));
-        breakdown.innerHTML = D.wikimedia.breakdown.map(b => {
-          const count = parseInt(b.edits.replace(/,/g, ''));
-          const pct = (count / max * 100).toFixed(1);
-          return `
-            <div class="wiki-bar-item">
-              <span class="wiki-bar-label">${b.platform}</span>
-              <div class="wiki-bar-track">
-                <div class="wiki-bar-fill" data-width="${pct}%"></div>
-              </div>
-              <span class="wiki-bar-count">${b.edits}</span>
-            </div>
-          `;
-        }).join('');
-
-        // Animate bars on scroll
-        const barObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.querySelectorAll('.wiki-bar-fill').forEach(bar => {
-                bar.style.width = bar.dataset.width;
-              });
-              barObserver.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.3 });
-        barObserver.observe(breakdown);
-      }
-    }
-
-    // ---- HYDRATE VISUALIZATIONS ----
-    function hydrateViz() {
-      const tabs = document.getElementById('vizTabs');
-      if (!D.visualizations || !tabs) return;
-
-      tabs.innerHTML = D.visualizations.map((v, i) => `
-        <button class="viz-tab${i === 0 ? ' active' : ''}" onclick="showViz(${i}, this)">${v.title}</button>
-      `).join('');
-
-      showViz(0, null);
-    }
-
-    function showViz(index, btn) {
-      const viz = D.visualizations[index];
-      if (!viz) return;
-
-      document.getElementById('vizImg').src = viz.src;
-      document.getElementById('vizImg').alt = viz.title;
-      document.getElementById('vizCaption').textContent = viz.caption;
-      document.getElementById('vizLink').href = viz.fileUrl;
-
-      if (btn) {
-        document.querySelectorAll('.viz-tab').forEach(t => t.classList.remove('active'));
-        btn.classList.add('active');
-      }
-    }
-
-    // ---- HYDRATE HERO FROM SSOT ----
-    function hydrateHero() {
-      if (!D.identity) return;
-      const h = document.getElementById('heroHeadline');
-      const s = document.getElementById('heroSub');
-      const loc = document.getElementById('heroLocation');
-      if (h && D.identity.headline) h.textContent = D.identity.headline;
-      if (s && (D.identity.heroSubHtml || D.identity.role)) s.innerHTML = D.identity.heroSubHtml || D.identity.role;
-      if (loc && D.identity.location) loc.textContent = D.identity.location;
-    }
-
-    // ---- INTERACTIVE CITATION SYSTEM ("VERIFIED, NOT ASSERTED") ----
-    const CITATIONS = {
-      edits: {
-        text: "1,592 English Wikipedia edits, 752 Italian Wikipedia edits, 1,249 on Wikidata, 684 on Wikimedia Commons — 4,317 total verified contributions under one audit-ready identity.",
-        href: "https://commons.wikimedia.org/wiki/Special:CentralAuth/Digressivo",
-        label: "Wikimedia CentralAuth Public Record ↗"
-      },
-      ena: {
-        text: "Executed a local 41× Whole Genome Sequencing pipeline on Apple Silicon (M4 Macbook), mapping raw paired-end FASTQ reads to BAM/VCF via Terra.bio. Orchestrated API queries against the EBI PGS Catalog to compute 50+ polygenic risk scores locally, mapping phenotypic metadata to HPO/MONDO ontologies under ENA Accession PRJEB109744 (complete open-source pipeline codebase published on GitHub: jnton/git-nome).",
-        href: "https://www.ebi.ac.uk/ena/browser/view/PRJEB109744",
-        label: "ENA Accession PRJEB109744 & Pipeline Repository ↗"
-      },
-      registry: {
-        text: "Founder & architect of Yourself to Science™ — an open citizen science platform cataloging 55+ research studies across genomes, clinical trials, and bio-donations, cited across 37 Wikidata entities (P854).",
-        href: "https://yourselftoscience.org",
-        label: "yourselftoscience.org ↗"
-      },
-      book: {
-        text: "Giacomo Moro Mauretto's 'Italiani Veri', published by Mondadori in April 2025 — official acknowledgment published on the final page.",
-        href: "https://www.mondadori.it/libri/italiani-veri-giacomo-moro-mauretto/",
-        label: "Italiani Veri — Mondadori ↗"
-      },
-      grayswan: {
-        text: "Ranked top 8% globally on Gray Swan AI's Proving Ground — achieved 75+ confirmed model breaks across chat, image, agentic, and prompt-injection categories during safety evaluation challenges (as of July 2026). Gray Swan's research is cited across 11 frontier model system cards.",
-        href: "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
-        label: "Gray Swan Proving Ground Profile ↗"
-      },
-      agentready: {
-        text: "Independently verified by IsItAgentReady benchmark passing 16/16 autonomous agent endpoints: robotsTxt, sitemap, linkHeaders, dnsAid, markdownNegotiation, robotsTxtAiRules, contentSignals, apiCatalog, authMd, mcpServerCard, a2aAgentCard, agentSkills.",
-        href: "https://isitagentready.com/mariomarcolongo.com?checks=robotsTxt%2Csitemap%2ClinkHeaders%2CdnsAid%2CmarkdownNegotiation%2CrobotsTxtAiRules%2CcontentSignals%2CwebBotAuth%2CapiCatalog%2CoauthDiscovery%2CoauthProtectedResource%2CauthMd%2CmcpServerCard%2Ca2aAgentCard%2CagentSkills%2CwebMcp%2Cx402%2Cmpp%2Cucp%2Cacp",
-        label: "Live Agent-Readiness Benchmark (16/16 Passing) ↗"
-      }
-    };
-
-    let activePopover = null;
-
-    function initCitations() {
-      document.querySelectorAll('button.cite-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          const key = btn.dataset.cite;
-          if (activePopover && activePopover.key === key) {
-            closePopover();
-            return;
-          }
-          openPopover(btn, CITATIONS[key], key);
-        });
-      });
-
-      document.addEventListener('click', closePopover);
-      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closePopover(); });
-      window.addEventListener('scroll', closePopover, { passive: true });
-    }
-
-    function openPopover(btn, data, key) {
-      closePopover();
-      if (!data) return;
-      const pop = document.createElement('div');
-      pop.className = 'cite-popover';
-      pop.setAttribute('role', 'tooltip');
-      pop.innerHTML = `<p>${data.text}</p><a href="${data.href}" target="_blank" rel="noopener noreferrer">${data.label}</a>`;
-      pop.addEventListener('click', (e) => e.stopPropagation());
-      document.body.appendChild(pop);
-
-      const rect = btn.getBoundingClientRect();
-      const popRect = pop.getBoundingClientRect();
-      let left = rect.left + window.scrollX - popRect.width / 2 + rect.width / 2;
-      left = Math.max(16, Math.min(left, window.innerWidth - popRect.width - 16));
-      const top = rect.bottom + window.scrollY + 10;
-      pop.style.left = left + 'px';
-      pop.style.top = top + 'px';
-
-      btn.setAttribute('aria-expanded', 'true');
-      activePopover = { el: pop, key, btn };
-    }
-
-    function closePopover() {
-      if (activePopover) {
-        activePopover.el.remove();
-        activePopover.btn.setAttribute('aria-expanded', 'false');
-        activePopover = null;
-      }
-    }
-
-    // ---- NODE NETWORK VISUALIZATION (Emergent Humanity Simulation) ----
-    // ---- NODE NETWORK VISUALIZATION (Emergent Humanity Interactive Simulation) ----
-    function initNodeNetwork() {
-      const canvas = document.getElementById('nodeCanvas');
-      if (!canvas) return;
-      const ctx = canvas.getContext('2d');
-      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-      let mouse = { x: null, y: null, active: false };
-      let draggedNode = null;
-      let pulses = [];
-
-      function resizeCanvas() {
-        const rect = canvas.parentElement.getBoundingClientRect();
-        canvas.width = rect.width * 2;
-        canvas.height = rect.height * 2;
-        ctx.setTransform(2, 0, 0, 2, 0, 0);
-      }
-
-      const NODE_COUNT = 18;
-      let nodes = [];
-
-      function initNodes() {
-        const rect = canvas.parentElement.getBoundingClientRect();
-        nodes = Array.from({ length: NODE_COUNT }, () => ({
-          x: Math.random() * rect.width,
-          y: Math.random() * rect.height,
-          vx: (Math.random() - 0.5) * 0.22,
-          vy: (Math.random() - 0.5) * 0.22,
-          r: 2.8 + Math.random() * 2.2,
-          signal: 0
-        }));
-      }
-
-      canvas.addEventListener('mousemove', (e) => {
-        const rect = canvas.getBoundingClientRect();
-        mouse.x = e.clientX - rect.left;
-        mouse.y = e.clientY - rect.top;
-        mouse.active = true;
-
-        if (draggedNode) {
-          draggedNode.x = mouse.x;
-          draggedNode.y = mouse.y;
-          canvas.style.cursor = 'grabbing';
+<!DOCTYPE html><html lang="en" class="human-portfolio"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#f7f6f2"><title>Mario Marcolongo — AI Evaluation &amp; Scientific Fact-Checking</title><meta name="description" content="Portfolio focused on AI model-behavior evaluation, scientific fact-checking and supporting research-information systems."><link rel="canonical" href="https://mariomarcolongo.com/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><script id="mm-theme">
+    (function() {
+      try {
+        var stored = null;
+        try { stored = localStorage.getItem('theme'); } catch(e) {}
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (stored === 'dark' || (!stored && prefersDark)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
         } else {
-          const hovered = nodes.some(n => Math.hypot(n.x - mouse.x, n.y - mouse.y) < 14);
-          canvas.style.cursor = hovered ? 'pointer' : 'default';
+          document.documentElement.setAttribute('data-theme', 'light');
         }
-      });
-
-      canvas.addEventListener('mouseleave', () => {
-        mouse.active = false;
-        draggedNode = null;
-        canvas.style.cursor = 'default';
-      });
-
-      canvas.addEventListener('mousedown', (e) => {
-        const rect = canvas.getBoundingClientRect();
-        const mx = e.clientX - rect.left;
-        const my = e.clientY - rect.top;
-        const target = nodes.find(n => Math.hypot(n.x - mx, n.y - my) < 16);
-        if (target) {
-          draggedNode = target;
-          target.signal = 1;
-        }
-      });
-
-      canvas.addEventListener('mouseup', () => {
-        draggedNode = null;
-      });
-
-      canvas.addEventListener('click', (e) => {
-        const rect = canvas.getBoundingClientRect();
-        const mx = e.clientX - rect.left;
-        const my = e.clientY - rect.top;
-        pulses.push({ x: mx, y: my, radius: 0, maxRadius: Math.max(rect.width, rect.height) * 0.75 });
-      });
-
-      function drawFrame() {
-        const rect = canvas.parentElement.getBoundingClientRect();
-        ctx.clearRect(0, 0, rect.width, rect.height);
-
-        // Update pulses
-        pulses = pulses.filter(p => p.radius < p.maxRadius);
-        pulses.forEach(p => {
-          p.radius += 3.5;
-          ctx.strokeStyle = `rgba(245, 158, 11, ${0.45 * (1 - p.radius / p.maxRadius)})`;
-          ctx.lineWidth = 1.5;
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-          ctx.stroke();
-
-          // Energize nodes touched by pulse wave
-          nodes.forEach(n => {
-            if (Math.abs(Math.hypot(n.x - p.x, n.y - p.y) - p.radius) < 10) {
-              n.signal = 1;
-            }
-          });
-        });
-
-        if (!reduceMotion) {
-          nodes.forEach(n => {
-            if (n !== draggedNode) {
-              n.x += n.vx;
-              n.y += n.vy;
-              if (n.x < 0 || n.x > rect.width) n.vx *= -1;
-              if (n.y < 0 || n.y > rect.height) n.vy *= -1;
-            }
-            if (n.signal > 0) n.signal = Math.max(0, n.signal - 0.02);
-          });
-        }
-
-        // Draw connections
-        for (let i = 0; i < nodes.length; i++) {
-          for (let j = i + 1; j < nodes.length; j++) {
-            const a = nodes[i], b = nodes[j];
-            const d = Math.hypot(a.x - b.x, a.y - b.y);
-            const maxD = rect.width * 0.38;
-            if (d < maxD) {
-              const alpha = 0.65 * (1 - d / maxD);
-              const isSignal = a.signal > 0.2 || b.signal > 0.2;
-              ctx.strokeStyle = isSignal
-                ? `rgba(245, 158, 11, ${Math.min(1, alpha * 2)})`
-                : `rgba(154, 91, 19, ${alpha})`;
-              ctx.lineWidth = isSignal ? 1.5 : 1;
-              ctx.beginPath();
-              ctx.moveTo(a.x, a.y);
-              ctx.lineTo(b.x, b.y);
-              ctx.stroke();
-            }
-          }
-        }
-
-        // Draw interactive mouse bridge lines
-        if (mouse.active && mouse.x !== null) {
-          nodes.forEach(n => {
-            const d = Math.hypot(n.x - mouse.x, n.y - mouse.y);
-            const maxD = rect.width * 0.32;
-            if (d < maxD) {
-              ctx.strokeStyle = `rgba(245, 158, 11, ${0.75 * (1 - d / maxD)})`;
-              ctx.lineWidth = 1.2;
-              ctx.beginPath();
-              ctx.moveTo(mouse.x, mouse.y);
-              ctx.lineTo(n.x, n.y);
-              ctx.stroke();
-            }
-          });
-        }
-
-        // Draw nodes
-        nodes.forEach(n => {
-          ctx.fillStyle = n.signal > 0.1 ? '#F59E0B' : '#EFEEE6';
-          ctx.beginPath();
-          ctx.arc(n.x, n.y, n.r + (n.signal * 2), 0, Math.PI * 2);
-          ctx.fill();
-        });
-
-        if (!reduceMotion) requestAnimationFrame(drawFrame);
-      }
-
-      function setup() {
-        resizeCanvas();
-        initNodes();
-        drawFrame();
-      }
-
-      setup();
-      window.addEventListener('resize', () => {
-        ctx.setTransform(1, 0, 0, 1, 0, 0);
-        setup();
-      });
+      } catch(err) {}
+    })();
+  </script><link rel="api-catalog" href="https://mariomarcolongo.com/.well-known/api-catalog"><link rel="describedby" type="text/plain" href="https://mariomarcolongo.com/llms.txt"><link rel="describedby" type="text/plain" href="https://mariomarcolongo.com/llms-full.txt"><link rel="agent-card" href="https://mariomarcolongo.com/.well-known/agent-card.json"><link rel="mcp-server-card" href="https://mariomarcolongo.com/.well-known/mcp/server-card.json"><meta property="og:type" content="website"><meta property="og:url" content="https://mariomarcolongo.com/"><meta property="og:title" content="Mario Marcolongo — AI Evaluation &amp; Scientific Fact-Checking"><meta property="og:description" content="Portfolio focused on AI model-behavior evaluation, scientific fact-checking and supporting research-information systems."><meta property="og:image" content="https://mariomarcolongo.com/og/home.png"><meta property="og:image:secure_url" content="https://mariomarcolongo.com/og/home.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Mario Marcolongo — AI Evaluation &amp; Scientific Fact-Checking — social preview"><meta property="og:site_name" content="Mario Marcolongo"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://mariomarcolongo.com/"><meta name="twitter:title" content="Mario Marcolongo — AI Evaluation &amp; Scientific Fact-Checking"><meta name="twitter:description" content="Portfolio focused on AI model-behavior evaluation, scientific fact-checking and supporting research-information systems."><meta name="twitter:image" content="https://mariomarcolongo.com/og/home.png"><meta name="twitter:image:alt" content="Mario Marcolongo — AI Evaluation &amp; Scientific Fact-Checking — social preview"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfilePage","@id":"https://mariomarcolongo.com/#webpage","name":"Mario Marcolongo — AI Evaluation & Scientific Fact-Checking","url":"https://mariomarcolongo.com/","mainEntity":{"@id":"https://mariomarcolongo.com/#person"}},{"@type":"Person","@id":"https://mariomarcolongo.com/#person","name":"Mario Marcolongo","jobTitle":"AI Evaluation & Research Operations Specialist","description":"Research, evidence and AI operations specialist with eight years of auditable public-source and structured-data work, paid scientific fact-checking and writing, community-facing research facilitation, ownership of an open research-participation directory, and sustained adversarial testing of AI systems. The profile supports four application lanes: AI evaluation and model behavior; research, editorial and community operations; knowledge integrity and trust; and open science and data quality. Public claims are reported with explicit evidence boundaries, while technical implementation is described accurately as code-literate, AI-assisted operations rather than independent software development.","url":"https://mariomarcolongo.com","identifier":"https://orcid.org/0000-0003-2846-7115","sameAs":["https://github.com/jnton","https://orcid.org/0000-0003-2846-7115","https://www.linkedin.com/in/mario-marcolongo","https://commons.wikimedia.org/wiki/Special:CentralAuth/Digressivo","https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf","https://public.tableau.com/app/profile/mario.marcolongo/vizzes"],"subjectOf":[{"@type":"WebPage","@id":"https://mariomarcolongo.com/security.html#webpage"}],"knowsAbout":["Model behavior evaluation","Scientific evidence review","Evaluation operations","Primary-source fact-checking","Open science metadata","Research-participation directories","Public personal-genomics workflows","Technical product delivery"],"hasCredential":[{"@type":"EducationalOccupationalCredential","name":"EF SET English Certificate 68/100 (C1 overall)","credentialCategory":"EF Standard English Test","recognizedBy":{"@type":"Organization","name":"EF Standard English Test"},"url":"https://cert.efset.org/en/eJz39v","dateCreated":"Mar 2024"},{"@type":"EducationalOccupationalCredential","name":"Career Essentials in Generative AI","credentialCategory":"Microsoft and LinkedIn","recognizedBy":{"@type":"Organization","name":"Microsoft and LinkedIn"},"url":"https://www.linkedin.com/learning/certificates/c4f1f59578e3ac2567787e262e3b2ec55debf96bbbced4d34d5edaa821d9e6d9","dateCreated":"Mar 2024"},{"@type":"EducationalOccupationalCredential","name":"GALENOS Crowd Evidence Synthesis Training","credentialCategory":"Systematic-review screening training","recognizedBy":{"@type":"Organization","name":"Cochrane Crowd & GALENOS"},"dateCreated":"May 2026"}]},{"@type":"SoftwareApplication","@id":"https://yourselftoscience.org/#app","name":"Yourself to Science™","applicationCategory":"ScientificApplication","operatingSystem":"Web","description":"Open-source research-participation directory indexing more than 55 clinical studies, biobanks, donation programmes, registries and other research initiatives.","url":"https://yourselftoscience.org","author":{"@id":"https://mariomarcolongo.com/#person"},"hasPart":[{"@type":"Dataset","name":"Yourself to Science dataset","license":"https://creativecommons.org/publicdomain/zero/1.0/"},{"@type":"SoftwareSourceCode","name":"Yourself to Science source code","codeRepository":"https://github.com/yourselftoscience/yourselftoscience.org","license":"https://www.gnu.org/licenses/agpl-3.0.html"},{"@type":"CreativeWork","name":"Yourself to Science website content","license":"https://creativecommons.org/licenses/by-sa/4.0/"}]},{"@type":"Dataset","@id":"https://mariomarcolongo.com/#genomic-dataset","name":"41× Whole Genome Sequencing Raw Paired-End FASTQ Reads (DNBSEQ-T7)","description":"Personal 41× whole-genome sequencing raw paired-end FASTQ reads released to the public domain under ENA BioSample SAMEA121950568 and Study PRJEB109744.","license":"https://creativecommons.org/publicdomain/zero/1.0/","creator":{"@id":"https://mariomarcolongo.com/#person"},"url":"https://www.ebi.ac.uk/ena/browser/view/PRJEB109744"},{"@type":"SoftwareSourceCode","@id":"https://mariomarcolongo.com/#genomic-pipeline","name":"Personal Genomics Workflow and Open-Data Pipeline (git-nome)","description":"Workflow for processing personal whole-genome sequencing data, downstream variant formats and research-oriented polygenic-score calculations.","codeRepository":"https://github.com/jnton/git-nome","author":{"@id":"https://mariomarcolongo.com/#person"}}]}</script><style>:root{--bg:#fafaf9;--bg-surface:#fff;--bg-subtle:#f3f3f0;--bg-elevated:#fff;--ink:#111827;--ink-soft:#374151;--ink-faint:#52525b;--line:#00000012;--line-strong:#00000024;--accent:#1d4ed8;--accent-soft:#2563eb14;--emerald:#059669;--emerald-soft:#10b98114;--font-display:"Outfit", -apple-system, BlinkMacSystemFont, sans-serif;--font-body:"Inter", -apple-system, BlinkMacSystemFont, sans-serif;--font-mono:"JetBrains Mono", monospace;--page-max:1160px;--max-width:1160px;--content-max:760px;--case-max:1080px;--text-max:72ch;--sec-major:80px;--sec-compact:56px;--card-gap:24px;--para-gap:16px;--radius:20px;--radius-sm:12px;--shadow:0 1px 3px #00000008, 0 6px 20px #0000000d;--shadow-lg:0 6px 16px #0000000f, 0 24px 56px #0000001f}[data-theme=dark]{--bg:#0a0a0a;--bg-surface:#131313;--bg-subtle:#181818;--bg-elevated:#1c1c1c;--ink:#f3f4f6;--ink-soft:#c2c2c2;--ink-faint:#94a3b8;--line:#ffffff12;--line-strong:#ffffff26;--accent:#60a5fa;--accent-soft:#60a5fa1f;--emerald:#34d399;--emerald-soft:#34d3991f;--shadow:0 1px 3px #0006, 0 6px 20px #00000073;--shadow-lg:0 6px 16px #00000080, 0 24px 56px #000000b3}*,:before,:after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:80px}body{font-family:var(--font-body);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:1rem;line-height:1.65;transition:background-color .35s,color .35s;overflow-x:hidden}p{margin-bottom:var(--para-gap);max-width:var(--text-max)}p:last-child{margin-bottom:0}a{color:var(--accent);text-decoration:none;transition:color .2s}a:hover{text-decoration:underline}:focus-visible{outline:2px solid var(--accent);outline-offset:2px}button,a.btn,.nav-link,.theme-toggle{min-height:44px}.container{max-width:var(--page-max);margin:0 auto;padding:0 32px}@media (prefers-reduced-motion:no-preference){@keyframes grow-progress{0%{transform:scaleX(0)}to{transform:scaleX(1)}}}#scrollProgress{background:linear-gradient(90deg, var(--accent), var(--emerald));transform-origin:0;z-index:1001;pointer-events:none;width:100%;height:3px;box-shadow:0 0 12px var(--accent-soft);position:fixed;top:0;left:0;transform:scaleX(0)}@supports (animation-timeline:scroll()){@media (prefers-reduced-motion:no-preference){#scrollProgress{animation:linear grow-progress scroll()}}}@keyframes heroFadeUp{0%{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}.hero-animate{opacity:1}@media (prefers-reduced-motion:no-preference){html.motion-ready .hero-animate{opacity:0;animation:.75s cubic-bezier(.16,1,.3,1) forwards heroFadeUp;animation-delay:var(--delay,0s)}}.reveal{opacity:1;transition:opacity .65s cubic-bezier(.16,1,.3,1),transform .65s cubic-bezier(.16,1,.3,1);transform:none}@media (prefers-reduced-motion:no-preference){html.motion-ready .reveal:not(.visible){opacity:0;transform:translateY(24px)}html.motion-ready .reveal.visible{opacity:1;transform:translateY(0)}}.reveal-stagger>.reveal:first-child{transition-delay:0s}.reveal-stagger>.reveal:nth-child(2){transition-delay:70ms}.reveal-stagger>.reveal:nth-child(3){transition-delay:.14s}.reveal-stagger>.reveal:nth-child(4){transition-delay:.21s}.reveal-stagger>.reveal:nth-child(5){transition-delay:.28s}.nav{z-index:100;background:0 0;justify-content:space-between;align-items:center;padding:16px 32px;transition:background .3s,box-shadow .3s,backdrop-filter .3s;display:flex;position:fixed;top:0;left:0;right:0}.nav.scrolled{backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--line);background:#fafaf9e0}[data-theme=dark] .nav.scrolled{background:#0a0a0ae0}.nav-name{font-family:var(--font-display);color:var(--ink);letter-spacing:-.025em;font-size:18.5px;font-weight:800;text-decoration:none}.nav-name:hover{text-decoration:none}.nav-actions{align-items:center;gap:10px;display:flex}.resume-label-short,.nav-name-short,.evaluation-label-short{display:none}.nav-link{color:var(--ink-soft);border-radius:8px;padding:8px 14px;font-size:14px;font-weight:500;text-decoration:none;transition:color .2s,background .2s}.nav-link:hover{color:var(--ink);background:var(--line);text-decoration:none}.nav-link.active{color:var(--accent);background:var(--accent-soft);font-weight:600}.theme-toggle{border:1px solid var(--line-strong);background:var(--bg-surface);width:38px;height:38px;color:var(--ink-soft);cursor:pointer;border-radius:10px;justify-content:center;align-items:center;font-size:16px;transition:all .2s;display:flex}.theme-toggle:hover{border-color:var(--accent);color:var(--accent)}.hero{flex-direction:column;justify-content:center;min-height:94vh;padding:130px 0 80px;display:flex}.badge-pill{font-family:var(--font-mono);background:var(--accent-soft);color:var(--accent);border-radius:999px;align-items:center;gap:8px;width:fit-content;margin-bottom:24px;padding:6px 14px;font-size:12px;font-weight:600;display:inline-flex}.badge-dot{background:var(--emerald);width:7px;height:7px;box-shadow:0 0 0 3px var(--emerald-soft);border-radius:50%}.hero-headline{font-family:var(--font-display);letter-spacing:-.035em;color:var(--ink);max-width:860px;margin-bottom:22px;font-size:clamp(40px,5.8vw,68px);font-weight:900;line-height:1.06}.hero-sub{color:var(--ink-soft);max-width:640px;margin-bottom:14px;font-size:clamp(17px,2vw,20px);line-height:1.6}.hero-meta{font-family:var(--font-mono);color:var(--ink-faint);flex-wrap:wrap;align-items:center;gap:16px;margin-bottom:38px;font-size:13px;display:flex}.hero-meta a{color:var(--ink-faint)}.hero-meta a:hover{color:var(--accent)}.hero-actions{flex-wrap:wrap;gap:12px;display:flex}.btn{font-family:var(--font-body);border-radius:var(--radius-sm);border:1px solid var(--line-strong);background:var(--bg-surface);color:var(--ink);cursor:pointer;align-items:center;gap:8px;padding:12px 24px;font-size:14.5px;font-weight:600;text-decoration:none;transition:all .2s;display:inline-flex}.btn:hover{border-color:var(--accent);box-shadow:0 4px 16px var(--accent-soft);text-decoration:none;transform:translateY(-1px)}.btn-primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}.btn-primary:hover{background:var(--accent);border-color:var(--accent);color:#fff}.btn-sm{border-radius:8px;padding:8px 16px;font-size:13px}.section{padding:var(--sec-major) 0}.section-compact{padding:var(--sec-compact) 0}.section-label{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:14px;font-size:12px;font-weight:600}.section-title{font-family:var(--font-display);letter-spacing:-.025em;color:var(--ink);margin-bottom:16px;font-size:clamp(28px,3.5vw,42px);font-weight:800;line-height:1.15}.section-desc{color:var(--ink-soft);max-width:640px;margin-bottom:48px;font-size:17px;line-height:1.65}.pillars{grid-template-columns:repeat(3,1fr);gap:24px;display:grid}@media (width<=860px){.pillars{grid-template-columns:1fr}}.pillar{background:var(--bg-surface);border:1px solid var(--line);border-radius:var(--radius);flex-direction:column;padding:30px;transition:border-color .35s cubic-bezier(.16,1,.3,1),box-shadow .35s cubic-bezier(.16,1,.3,1),transform .35s cubic-bezier(.16,1,.3,1);display:flex;position:relative;overflow:hidden}.pillar:before{content:"";background:linear-gradient(90deg, var(--accent), var(--emerald));opacity:0;height:3px;transition:opacity .3s;position:absolute;top:0;left:0;right:0}.pillar:hover{border-color:#2563eb5c;transform:translateY(-5px);box-shadow:0 16px 36px #00000014,0 0 24px #2563eb0f}.pillar:hover:before{opacity:1}.pillar-header{align-items:center;gap:12px;margin-bottom:18px;display:flex}.pillar-icon-box{width:44px;height:44px;color:var(--accent);background:#2563eb14;border:1px solid #2563eb29;border-radius:11px;flex-shrink:0;justify-content:center;align-items:center;transition:transform .35s cubic-bezier(.34,1.56,.64,1),background .35s;display:flex}.pillar:hover .pillar-icon-box{background:#2563eb24;transform:scale(1.08)rotate(-4deg)}.pillar-category{font-family:var(--font-mono);letter-spacing:.08em;color:var(--accent);text-transform:uppercase;font-size:11px;font-weight:700}.pillar-title{font-family:var(--font-display);color:var(--ink);margin-bottom:12px;font-size:20px;font-weight:700;line-height:1.35}.pillar-lead{color:var(--ink);opacity:.88;margin-bottom:22px;font-size:14.5px;line-height:1.62}.pillar-highlights{border-top:1px solid var(--line);flex-direction:column;gap:13px;margin-top:auto;padding-top:20px;display:flex}.pillar-highlight-item{color:var(--ink);align-items:flex-start;gap:10px;font-size:13.5px;line-height:1.52;display:flex}.pillar-highlight-dot{background:var(--accent);border-radius:50%;flex-shrink:0;width:6px;height:6px;margin-top:7px;box-shadow:0 0 0 3px #2563eb1f}.pillar-highlight-text{color:var(--ink-soft)}.pillar-highlight-text strong{color:var(--ink);font-weight:600}.project-list{flex-direction:column;gap:36px;display:flex}.project-card{background:var(--bg-surface);border:1px solid var(--line);border-radius:var(--radius);grid-template-columns:1fr 1fr;gap:40px;transition:border-color .35s cubic-bezier(.16,1,.3,1),box-shadow .35s cubic-bezier(.16,1,.3,1),transform .35s cubic-bezier(.16,1,.3,1);display:grid;overflow:hidden}.project-card:hover{border-color:var(--line-strong);transform:translateY(-4px);box-shadow:0 20px 48px #0000001a,0 0 32px #2563eb0f}.project-visual img{transition:transform .6s cubic-bezier(.16,1,.3,1)}.project-card:hover .project-visual img{transform:scale(1.03)}@media (width<=860px){.project-card{grid-template-columns:1fr}}.project-info{flex-direction:column;justify-content:center;padding:40px;display:flex}.project-tag{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--accent);margin-bottom:12px;font-size:11.5px;font-weight:600}.project-title{font-family:var(--font-display);letter-spacing:-.02em;color:var(--ink);margin-bottom:12px;font-size:clamp(24px,2.5vw,30px);font-weight:800}.project-one-liner{color:var(--ink-soft);margin-bottom:22px;font-size:16px;line-height:1.65}.project-highlights{margin-bottom:28px;list-style:none}.project-highlights li{color:var(--ink-soft);padding:5px 0 5px 22px;font-size:14.5px;position:relative}.project-highlights li:before{content:"→";color:var(--emerald);font-weight:700;position:absolute;left:0}.project-links{flex-wrap:wrap;gap:10px;display:flex}.project-visual{background:var(--bg-subtle);justify-content:center;align-items:center;min-height:320px;display:flex;overflow:hidden}.project-visual img{object-fit:cover;width:100%;height:100%}.telegram-mock{background:#0e1621;border-radius:18px;width:88%;max-width:350px;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;overflow:hidden;box-shadow:0 16px 40px #00000059}.tg-header{background:#17212b;border-bottom:1px solid #ffffff0f;align-items:center;gap:12px;padding:14px 18px;display:flex}.tg-avatar{background:#fff;border-radius:50%;justify-content:center;align-items:center;width:36px;height:36px;padding:3px;display:flex;overflow:hidden;box-shadow:0 2px 6px #00000040}.tg-name{color:#fff;font-size:14px;font-weight:600}.tg-status{color:#6c7883;font-size:11px}.tg-body{flex-direction:column;gap:12px;padding:16px;display:flex}.tg-bubble-out{color:#fff;background:#2b5278;border-radius:12px 12px 4px;align-self:flex-end;max-width:86%;padding:10px 14px;font-size:12.5px;line-height:1.45}.tg-bubble-in{color:#fff;background:#182533;border:1px solid #ffffff0d;border-radius:12px 12px 12px 4px;align-self:flex-start;max-width:86%;padding:10px 14px;font-size:12.5px;line-height:1.45}.tg-link{color:#64b5f6;word-break:break-all;text-decoration:underline}.mock-visual-box{text-align:center;flex-direction:column;justify-content:center;align-items:center;gap:16px;width:100%;padding:36px;display:flex}.mock-icon-badge{color:#fff;background:#e11d48;border-radius:16px;justify-content:center;align-items:center;width:60px;height:60px;font-size:28px;display:flex;box-shadow:0 4px 18px #e11d484d}.mock-title{font-family:var(--font-display);color:var(--ink);font-size:22px;font-weight:800}.mock-number{font-family:var(--font-display);color:var(--ink);font-size:38px;font-weight:900}.mock-subtext{color:var(--ink-soft);max-width:270px;font-size:14px}.tag-row{flex-wrap:wrap;justify-content:center;gap:8px;display:flex}.tag-chip{font-family:var(--font-mono);border-radius:6px;padding:5px 10px;font-size:11px}.tag-emerald{background:var(--emerald-soft);color:var(--emerald)}.tag-accent{background:var(--accent-soft);color:var(--accent)}.viz-display{border:1px solid var(--line);border-radius:var(--radius);background:#fff;width:100%;margin-bottom:20px;overflow:hidden}[data-theme=dark] .viz-display{background:#fafafa}.viz-display img{object-fit:contain;width:100%;max-height:420px;padding:28px}.viz-tabs{flex-wrap:wrap;gap:8px;margin-bottom:22px;display:flex}.viz-tab{font-family:var(--font-mono);border:1px solid var(--line);background:var(--bg-surface);color:var(--ink-soft);cursor:pointer;border-radius:10px;padding:9px 18px;font-size:12.5px;font-weight:600;transition:all .2s}.viz-tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}.viz-tab:hover:not(.active){border-color:var(--accent);color:var(--accent)}.viz-caption{color:var(--ink-soft);max-width:760px;font-size:15px;line-height:1.65}.viz-btn-row{flex-wrap:wrap;gap:10px;margin-top:20px;display:flex}.stats-grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;display:grid}.stat-card{background:var(--bg-surface);border:1px solid var(--line);border-radius:var(--radius);text-align:center;padding:32px 24px}.stat-value{font-family:var(--font-display);letter-spacing:-.03em;color:var(--ink);margin-bottom:8px;font-size:clamp(34px,4vw,48px);font-weight:900;line-height:1}.stat-label{color:var(--ink);margin-bottom:6px;font-size:14.5px;font-weight:700}.stat-detail{color:var(--ink-soft);font-size:12.5px;line-height:1.5}.wiki-bar-group{background:var(--bg-surface);border:1px solid var(--line);border-radius:var(--radius);flex-direction:column;gap:14px;max-width:660px;margin-top:36px;padding:28px;display:flex}.wiki-bar-item{align-items:center;gap:16px;display:flex}.wiki-bar-label{color:var(--ink-soft);min-width:170px;font-size:13.5px;font-weight:600}.wiki-bar-track{background:var(--line);border-radius:4px;flex:1;height:8px;overflow:hidden}.wiki-bar-fill{background:var(--accent);border-radius:4px;width:0;height:100%;transition:width 1s cubic-bezier(.16,1,.3,1)}.wiki-bar-count{font-family:var(--font-mono);color:var(--ink);text-align:right;min-width:54px;font-size:13px;font-weight:600}.contact-grid{background:var(--bg-surface);border:1px solid var(--line);border-radius:var(--radius);flex-direction:column;gap:18px;max-width:560px;padding:34px;display:flex}.contact-row{align-items:center;gap:18px;font-size:15px;display:flex}.contact-label{font-family:var(--font-mono);color:var(--ink-faint);text-transform:uppercase;letter-spacing:.06em;min-width:90px;font-size:12px}.contact-value{color:var(--ink);font-weight:500}.contact-value a{color:var(--accent)}.contact-cv-action{margin-top:32px}.site-footer{border-top:1px solid var(--line);margin-top:80px;padding:44px 0}.footer-content{flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;display:flex}.footer-text{color:var(--ink-faint);font-size:13.5px}.footer-links{gap:20px;display:flex}.footer-links a{color:var(--ink-faint);font-size:13.5px}.footer-links a:hover{color:var(--accent)}.footer-dossiers{border-top:1px solid var(--line);margin-top:24px;padding-top:20px}.footer-dossiers .footer-text span{color:var(--ink-faint);font-size:13px}.footer-dossier-links{flex-wrap:wrap;align-items:center;gap:12px;max-width:100%}.copy-success{background:var(--emerald)!important;color:#fff!important}.proof-grid{flex-direction:column;gap:16px;display:flex}.proof-row{background:var(--bg-surface);border:1px solid var(--line);border-radius:var(--radius);align-items:flex-start;gap:20px;padding:22px 26px;transition:border-color .25s,box-shadow .25s,transform .25s;display:flex}.proof-row:hover{border-color:var(--line-strong);box-shadow:var(--shadow);transform:translateY(-2px)}.proof-tag{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.08em;color:#2f5233;white-space:nowrap;background:#2f523317;border:1px solid #2f52333d;border-radius:999px;height:fit-content;margin-top:2px;padding:5px 12px;font-size:11.5px;font-weight:700}.proof-text{color:var(--ink);flex:1;font-size:16px;line-height:1.65}.proof-text b{font-weight:700}button.cite-btn{font-family:var(--font-mono);color:#9a5b13;vertical-align:super;cursor:pointer;background:#9a5b131a;border:1px solid #9a5b1347;border-radius:5px;height:19px;margin-left:6px;padding:0 6px;font-size:11px;font-weight:700;line-height:17px;transition:background .15s,color .15s,transform .15s}button.cite-btn:hover,button.cite-btn[aria-expanded=true]{color:#f8f7f1;background:#9a5b13;transform:translateY(-1px)}.cite-popover{z-index:9999;background:var(--bg-surface);border:1px solid var(--line-strong);border-radius:12px;max-width:320px;padding:16px 18px;animation:.16s cubic-bezier(.16,1,.3,1) popIn;position:absolute;box-shadow:0 16px 36px #00000038}@keyframes popIn{0%{opacity:0;transform:translateY(-6px)scale(.97)}to{opacity:1;transform:translateY(0)scale(1)}}.cite-popover p{color:var(--ink-soft);margin-bottom:10px;font-size:13.5px;line-height:1.55}.cite-popover a{font-family:var(--font-mono);color:var(--verified);align-items:center;gap:4px;font-size:12px;font-weight:700;text-decoration:none;display:inline-flex}.cite-popover a:hover{text-decoration:underline}.emergent{border-top:1px solid var(--line)}.emergent-grid{grid-template-columns:1fr .85fr;align-items:center;gap:56px;display:grid}@media (width<=860px){.emergent-grid{grid-template-columns:1fr;gap:40px}}.emergent-eyebrow{font-family:var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:16px;font-size:11.5px}.emergent-title{font-family:var(--font-display);letter-spacing:-.01em;margin-bottom:18px;font-size:clamp(28px,3.6vw,38px);font-weight:500}.emergent-body{color:var(--ink-soft);margin-bottom:12px;font-size:16px;line-height:1.75}.emergent-quote{font-family:var(--font-display);color:var(--ink);margin:22px 0 26px;font-size:17px;font-style:italic}.emergent-link{font-family:var(--font-mono);color:#2f5233;border-bottom:1px solid #2f5233;align-items:center;gap:8px;padding-bottom:2px;font-size:13px;font-weight:700;text-decoration:none;display:inline-flex}.emergent-link:hover{opacity:.75}.node-viz-wrap{aspect-ratio:4/3.1;background:#12160f;border-radius:14px;position:relative;overflow:hidden}.node-viz-wrap canvas{width:100%;height:100%;display:block}.btn-ai{color:var(--accent);background:linear-gradient(135deg,#2563eb1a,#10b9811f);border:1px solid #2563eb52;align-items:center;gap:6px;font-weight:600;transition:all .25s;display:inline-flex}.btn-ai:hover{border-color:var(--accent);background:linear-gradient(135deg,#2563eb2e,#10b98133);transform:translateY(-2px);box-shadow:0 4px 16px #2563eb26}.ai-modal-backdrop{backdrop-filter:blur(8px);z-index:10000;opacity:0;pointer-events:none;background:#00000085;justify-content:center;align-items:center;padding:20px;transition:opacity .25s;display:flex;position:fixed;inset:0}.ai-modal-backdrop.open{opacity:1;pointer-events:auto}.ai-modal{background:var(--bg-surface);border:1px solid var(--line);border-radius:18px;width:100%;max-width:580px;padding:28px;transition:transform .28s cubic-bezier(.16,1,.3,1);transform:translateY(14px)scale(.97);box-shadow:0 24px 64px #00000040}.ai-modal-backdrop.open .ai-modal{transform:translateY(0)scale(1)}.ai-modal-header{justify-content:space-between;align-items:flex-start;margin-bottom:12px;display:flex}.ai-modal-tag{font-family:var(--font-mono);letter-spacing:.1em;color:var(--accent);margin-bottom:4px;font-size:11px;font-weight:700}.ai-modal-title{font-family:var(--font-display);color:var(--ink);font-size:22px;font-weight:700}.ai-modal-close{color:var(--ink-soft);cursor:pointer;background:0 0;border:none;border-radius:6px;padding:4px 8px;font-size:20px}.ai-modal-close:hover{color:var(--ink);background:#7878801a}.ai-modal-desc{color:var(--ink);opacity:.85;margin-bottom:22px;font-size:14.5px;line-height:1.55}.ai-options{flex-direction:column;gap:12px;display:flex}.ai-option-card{border:1px solid var(--line);background:var(--bg);border-radius:12px;justify-content:space-between;align-items:center;gap:16px;padding:16px 18px;transition:border-color .2s,transform .2s;display:flex}.ai-option-card:hover{border-color:#2563eb59}.ai-option-name{color:var(--ink);margin-bottom:4px;font-size:14.5px;font-weight:700}.ai-option-detail{color:var(--ink-soft);font-size:13px;line-height:1.4}.btn-ai-copy{flex-shrink:0}@media (width<=1024px){.section{padding:64px 0}.section-compact{padding:48px 0}.pillars{gap:20px}.project-list{gap:28px}}@media (width<=768px){.section{padding:48px 0}.section-compact{padding:36px 0}.pillars{gap:16px}.project-list{gap:20px}.proof-row{flex-direction:column;gap:10px;padding:18px 20px}.container{padding:0 20px}.hero{padding:110px 0 48px}.nav{gap:12px;padding:12px 16px}.nav-actions{gap:6px}.nav-link{align-items:center;min-height:44px;padding:8px 10px;font-size:13px;display:inline-flex}.nav-link.nav-overview,.nav-link.nav-full-cv{display:none}.nav-resume{align-items:center;min-height:44px;display:inline-flex;padding-inline:12px!important}.theme-toggle{flex:0 0 44px;width:44px;height:44px}.footer-links{flex-wrap:wrap}.footer-dossier-links{gap:8px;width:100%}.resume-label-full{display:none}.resume-label-short{display:inline}.wiki-bar-label{min-width:120px}}@media (width<=520px){.nav-name{white-space:nowrap;font-size:16px}.nav-name-full,.evaluation-label-full{display:none}.nav-name-short,.evaluation-label-short{display:inline}.nav-evaluation{display:inline-flex}.nav-resume{display:inline-flex!important}}.nav-btn-ai{padding:6px 12px!important;font-size:13px!important}.section-proof{padding-top:20px!important;padding-bottom:60px!important}.project-card-reverse{direction:rtl}.project-card-reverse>*{direction:ltr}.hero-animate-1{animation-delay:50ms}.hero-animate-2{animation-delay:.15s}.hero-animate-3{animation-delay:.25s}.hero-animate-4{animation-delay:.35s}.hero-animate-5{animation-delay:.45s}.inline-proof-link{color:inherit;font-weight:600;text-decoration:underline}.viz-main-img{aspect-ratio:16/9;width:100%;height:auto}.footer-source-link{color:inherit;text-decoration:underline}.proj-viz-mdpi{background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;justify-content:center;align-items:center;width:100%;height:100%;display:flex;overflow:hidden}.proj-viz-mdpi img{object-fit:cover;width:100%;height:100%}.proj-viz-tg-icon{object-fit:contain;width:100%;height:100%}.proj-viz-map{object-fit:contain;padding:20px}.proj-viz-entropy{flex-direction:column;justify-content:center;align-items:center;gap:26px;width:100%;height:100%;padding:36px 28px;display:flex}.proj-viz-entropy-top{flex-direction:column;align-items:center;gap:12px;display:flex}.proj-viz-entropy-play{color:#fff;background:linear-gradient(135deg,#f43f5e,#be123c);border-radius:20px;justify-content:center;align-items:center;width:68px;height:68px;font-size:30px;display:flex;box-shadow:0 8px 26px #e11d4859}.proj-viz-entropy-handle{font-family:var(--font-display);color:var(--ink);letter-spacing:-.02em;font-size:24px;font-weight:800}.proj-viz-entropy-bio{color:var(--ink-soft);margin-top:2px;font-size:13px;font-weight:500}.proj-viz-entropy-mid{flex-direction:column;align-items:center;display:flex}.proj-viz-entropy-num{font-family:var(--font-display);color:var(--ink);letter-spacing:-.03em;font-size:46px;font-weight:900;line-height:1}.proj-viz-entropy-label{color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-top:6px;font-size:12px;font-weight:700}.proj-viz-entropy-grid{grid-template-columns:repeat(3,1fr);gap:12px;width:100%;max-width:440px;display:grid}.proj-viz-entropy-stat{background:var(--bg-surface);border:1px solid var(--line);text-align:center;box-shadow:var(--shadow);border-radius:14px;padding:14px 10px}.proj-viz-entropy-stat-val{font-family:var(--font-display);color:var(--ink);font-size:20px;font-weight:800}.proj-viz-entropy-stat-title{color:var(--ink-soft);margin-top:3px;font-size:11px;font-weight:600}.proj-viz-entropy-tags{flex-wrap:wrap;justify-content:center;gap:8px;max-width:460px;display:flex}.proj-viz-entropy-tag{background:var(--bg-surface);border:1px solid var(--line);color:var(--ink);border-radius:99px;padding:6px 14px;font-size:11.5px;font-weight:600}.proj-viz-entropy-context{color:var(--ink-soft);text-align:center;opacity:.75;padding:4px 0;font-size:10.5px;font-style:italic}.proj-viz-y2s{text-align:left;background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:16px;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;overflow:hidden}.proj-viz-y2s-hdr{border-bottom:1px solid #f1f5f9;justify-content:space-between;align-items:center;margin-bottom:16px;padding-bottom:12px;display:flex}.proj-viz-y2s-logos{align-items:center;gap:8px;display:flex}.proj-viz-y2s-logo-icon{object-fit:contain;width:28px;height:28px}.proj-viz-y2s-logo-title{object-fit:contain;height:16px}.proj-viz-y2s-nav{color:#475569;align-items:center;gap:14px;font-size:11px;font-weight:500;display:flex}.proj-viz-y2s-btn{color:#fff;background:#2563eb;border-radius:6px;padding:5px 12px;font-weight:600}.proj-viz-y2s-hero{text-align:center;margin-bottom:18px}.proj-viz-y2s-title{color:#2563eb;letter-spacing:-.02em;margin-bottom:6px;font-size:22px;font-weight:800}.proj-viz-y2s-sub{color:#64748b;max-width:90%;margin:0 auto;font-size:11.5px;line-height:1.45}.proj-viz-y2s-bar{color:#64748b;background:#fff;border:1px solid #e2e8f0;border-radius:99px;justify-content:space-between;align-items:center;margin:0 12px 18px;padding:7px 16px;font-size:10px;display:flex;overflow-x:auto;box-shadow:0 2px 8px #00000008}.proj-viz-y2s-bar strong{color:#0f172a;margin-right:4px;font-weight:700}.proj-viz-y2s-sep{background:#e2e8f0;width:1px;height:12px}.proj-viz-y2s-grid{grid-template-columns:repeat(2,1fr);gap:10px;display:grid}.proj-viz-y2s-card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:12px;box-shadow:0 2px 10px #00000005}.proj-viz-y2s-card-top{justify-content:space-between;align-items:flex-start;margin-bottom:8px;display:flex}.proj-viz-y2s-badge-purple{color:#6b21a8;text-transform:uppercase;background:#f3e8ff;border-radius:4px;padding:3px 7px;font-size:8px;font-weight:700}.proj-viz-y2s-badge-green{color:#15803d;text-transform:uppercase;background:#dcfce7;border-radius:4px;padding:3px 7px;font-size:8px;font-weight:700}.proj-viz-y2s-tag{color:#475569;background:#f1f5f9;border-radius:4px;padding:2px 6px;font-size:8px;font-weight:600}.proj-viz-y2s-card-title{color:#0f172a;margin-bottom:4px;font-size:13px;font-weight:700}.proj-viz-y2s-card-inst{color:#64748b;font-size:10px}.proj-viz-y2s-card-loc{color:#94a3b8;margin-top:2px;font-size:9.5px}.proj-viz-node-wrap{aspect-ratio:16/9;background:#12160f;border-radius:14px;min-height:220px;padding:0;position:relative;overflow:hidden}.proj-viz-node-canvas{width:100%;height:100%;display:block}.proj-viz-node-pill-wrap{pointer-events:none;position:absolute;top:12px;right:12px}.proj-viz-node-pill{text-transform:uppercase;color:#fff;backdrop-filter:blur(4px);background:#9a5b13d9;border-radius:99px;padding:4px 10px;font-size:10px;font-weight:700}.proj-viz-redteam{text-align:left;background:#0f172a;border:1px solid #1e293b;border-radius:14px;flex-direction:column;justify-content:space-between;height:100%;min-height:240px;padding:24px;display:flex}.proj-viz-redteam-top{align-items:center;gap:8px;margin-bottom:16px;display:flex}.proj-viz-redteam-dot{background:#ef4444;border-radius:50%;width:8px;height:8px;display:inline-block}.proj-viz-redteam-hdr{letter-spacing:.08em;text-transform:uppercase;color:#94a3b8;font-size:11px;font-weight:700}.proj-viz-redteam-val{color:#f8fafc;margin-bottom:6px;font-size:32px;font-weight:800;line-height:1.1}.proj-viz-redteam-sub{color:#94a3b8;margin-bottom:16px;font-size:13px}.proj-viz-redteam-box{background:#1e293b99;border:1px solid #334155;border-radius:10px;padding:12px 14px}.proj-viz-redteam-lbl{color:#f8fafc;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;font-size:10.5px;font-weight:700}.proj-viz-redteam-desc{color:#cbd5e1;font-size:11.5px;line-height:1.4}html:not(.v3-js) .v3-reveal{opacity:1!important;transform:none!important}html:not(.v3-js) .v3-lens-panel{margin-top:18px;display:block!important}html:not(.v3-js) .v3-lens-panel:first-child{margin-top:0}html:not(.v3-js) .v3-project-card{display:flex!important}@media (prefers-reduced-motion:reduce){.v3-hero-visual{transform:none!important}}.v7-js .v7-contact[data-reveal]{opacity:1;transform:none}@media (width<=720px){.v7-section{padding:58px 0!important}.v7-section-head{margin-bottom:28px!important}.v7-case-stack,.v7-lab-grid,.v7-profile-grid,.v7-documents{overscroll-behavior-inline:contain;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--v7-cobalt) transparent;flex-wrap:nowrap!important;gap:14px!important;width:100%!important;padding:2px 10px 18px 0!important;display:flex!important;overflow:auto hidden!important}.v7-case-stack:after,.v7-lab-grid:after,.v7-profile-grid:after,.v7-documents:after{content:"";flex:0 0 1px}.v7-case{border:1px solid var(--v7-line);background:var(--v7-surface);scroll-snap-align:start;border-radius:26px;align-self:flex-start;box-shadow:0 14px 36px #1d252d14;flex:0 0 91%!important;padding:24px 20px 20px!important}.v7-case-copy h3{font-size:clamp(2.35rem,11vw,3.45rem)!important}.v7-case-lead{font-size:.98rem}.v7-case-decisions{margin-top:24px}.v7-case-decisions>div{padding:14px 0}.v7-boundary{margin-top:18px}.v7-case-visual{border-radius:21px;margin-top:25px;min-height:360px!important;padding:23px 18px!important}.v7-case-lines{margin-top:64px!important}.v7-case-line{padding:14px}.v7-lab-item,.v7-lab-featured,.v7-lab-item:nth-child(4){scroll-snap-align:start;align-self:stretch;flex:0 0 84%!important;display:block!important}.v7-lab-demo{min-height:190px!important}.v7-lab-copy{min-height:360px;padding:24px}.v7-artifact{margin-bottom:68px}.v7-profile-grid>article,.v7-disclosure{scroll-snap-align:start;min-height:250px;flex:0 0 83%!important}.v7-disclosure{display:block!important}.v7-disclosure summary{font-size:2rem}.v7-experience-list article{padding:20px 0}.v7-document,.v7-document.is-recommended{scroll-snap-align:start;flex:0 0 86%!important;min-height:330px!important}.v7-contact{margin-top:12px}}@media print{.application-page{padding:9mm 13mm 13mm!important}.application-header{padding-bottom:14px!important}.application-name{font-size:2.4rem!important}.application-title{margin-top:7px!important;font-size:.98rem!important}.application-subtitle{margin-top:4px!important;font-size:.8rem!important}.application-contact{gap:1px!important;font-size:.68rem!important}.application-summary{margin-top:14px!important;font-size:.81rem!important;line-height:1.4!important}.application-section{margin-top:16px!important}.application-section-title{margin-bottom:8px!important;padding-bottom:4px!important;font-size:.69rem!important}.application-metrics{gap:7px!important}.application-metric{padding:9px!important}.application-metric strong{font-size:1.2rem!important}.application-metric span{margin-top:2px!important;font-size:.66rem!important}.application-metric small{margin-top:1px!important;font-size:.57rem!important}.application-entry{margin-top:10px!important}.application-entry h3{font-size:.88rem!important}.application-organization{font-size:.72rem!important}.application-period{font-size:.67rem!important}.application-links{gap:3px 10px!important;margin-top:2px!important;font-size:.63rem!important}.application-list{margin-top:5px!important}.application-list li{margin:1px 0!important;padding-left:12px!important;font-size:.68rem!important;line-height:1.31!important}.application-evidence{gap:7px!important}.application-evidence article{padding:10px!important}.application-evidence h3{font-size:.72rem!important}.application-evidence p{margin-top:3px!important;font-size:.6rem!important;line-height:1.31!important}.application-skill{grid-template-columns:108px minmax(0,1fr)!important;gap:9px!important;padding:5px 0!important;font-size:.66rem!important;line-height:1.3!important}.application-two-col{gap:18px!important}.application-two-col .application-section{margin-top:13px!important}.application-footer-note{padding-top:6px!important;font-size:.59rem!important;bottom:6mm!important;left:13mm!important;right:13mm!important}}[data-theme=light] .v7-kicker{color:#a53b27}[data-theme=light] .v7-availability{color:#56636d}[data-theme=light] .application-metric small,[data-theme=light] .application-period,[data-theme=light] .application-footer-note,[data-theme=light] .master-period,[data-theme=light] .master-tag{color:#56616f}.master-contact a{align-items:center;min-height:24px;padding-block:2px;display:inline-flex}[data-theme=dark]{--v8-bg:#0d0f0e;--v8-paper:#181b18;--v8-paper-2:#232720;--v8-ink:#f5f0e7;--v8-text:#d1cec6;--v8-muted:#a4a69f;--v8-line:#f5f0e733;--v8-red:#ff826d;--v8-blue:#96abff;--v8-green:#72d2ad;--v8-black:#050706}.v8-hero-shot-1 img{object-fit:cover;object-position:center top;background:#090b0d}.v8-case-blue{align-items:start}.v8-case-blue .v8-case-media{aspect-ratio:1400/929;min-height:0}.v8-case-blue .v8-case-media picture,.v8-case-blue .v8-case-media img{height:100%;min-height:0}.v8-case-blue .v8-case-media img{object-fit:contain;object-position:center center;background:#090b0d;padding:0}.v8-case-red .v8-case-media img[src^="https://entropyforlife.it/"]{object-fit:cover;object-position:center center}.v8-case-blue .v8-case-media,.v8-hero-shot-1{background:#090b0d;border-color:#ffffff29}.v8-case-links{flex-wrap:wrap;align-items:center;gap:12px 24px;display:flex}.v8-case-links .v8-text-link{margin:0}[data-theme=dark] .v8-hero-shot,[data-theme=dark] .v8-case-media{border-color:#f5f0e733}[data-theme=dark] .v8-shot-caption,[data-theme=dark] .v8-case-media>span{color:#111310;background:#f8f5eef2}[data-theme=dark] .v8-shot-caption small{color:#555a53}@media (width<=720px){.v8-case-blue .v8-case-media{aspect-ratio:1400/929}.v8-case-blue .v8-case-media img{object-position:center center}.v8-case-links{gap:12px;display:grid}}.nav.nav-editorial{z-index:100;background:color-mix(in srgb, var(--p5-bg,var(--bg)) 94%, transparent);backdrop-filter:blur(12px);border-bottom:1px solid #0000;padding:0;transition:border-color .16s,background .16s;display:block;position:fixed;inset:0 0 auto}.nav.nav-editorial.scrolled{border-bottom-color:var(--p5-line,var(--line));background:color-mix(in srgb, var(--p5-bg,var(--bg)) 98%, transparent)}.nav-editorial .nav-shell{justify-content:space-between;align-items:center;gap:24px;width:min(1180px,100% - 48px);min-height:66px;margin:0 auto;display:flex}.nav-editorial .nav-name{min-height:auto;color:var(--p5-ink,var(--ink));letter-spacing:-.015em;padding:0;font-family:Inter,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;font-size:.93rem;font-weight:780;text-decoration:none}.nav-editorial .nav-actions{align-items:center;gap:21px;display:flex}.nav-editorial .nav-link,.nav-editorial .nav-contact{min-height:42px;color:var(--p5-text,var(--ink-soft));background:0 0;border:0;align-items:center;padding:0;font-size:.8rem;font-weight:720;text-decoration:none;display:inline-flex;position:relative}.nav-editorial .nav-link:hover,.nav-editorial .nav-link.active,.nav-editorial .nav-contact:hover{color:var(--p5-blue,var(--accent));background:0 0;text-decoration:none}.nav-editorial .nav-contact{color:var(--p5-coral,var(--accent))}.nav-editorial .theme-toggle{background:var(--p5-surface,var(--bg-raised));width:36px;height:36px;min-height:36px;box-shadow:inset 0 0 0 1px var(--p5-line,var(--line));color:var(--p5-ink,var(--ink));border:0;border-radius:50%;place-items:center;display:grid}.nav-editorial .theme-toggle:hover{color:var(--p5-blue,var(--accent));transform:none}@media (width<=760px){.nav-editorial .nav-shell{width:calc(100% - 28px);min-height:62px}.nav-editorial .nav-actions{gap:15px}.nav-editorial .nav-experience{display:none}.nav-editorial .nav-link,.nav-editorial .nav-contact{font-size:.78rem}.nav-editorial .theme-toggle{width:34px;height:34px}}@media (width<=390px){.nav-editorial .nav-actions{gap:12px}.nav-editorial .nav-name{font-size:.87rem}}:root{--p5-coral:#b34532;--p5-muted:#65727d}[data-theme=dark]{--p5-coral:#ff9b86;--p5-muted:#a6b2bc}.nav-editorial .nav-contact,.portfolio-v5 .p5-kicker,.portfolio-v5 .p5-card-label,.portfolio-v5 .p5-product-label,.portfolio-v5 .p5-experience time{color:#b34532!important}.portfolio-v5 .p5-work-caption span,.portfolio-v5 .p5-proof small,.portfolio-v5 .p5-proof-line{color:#65727d!important}.portfolio-v5 .p5-document .p5-link{color:#2f5fc5!important}.portfolio-v5 .p5-document:nth-child(4){opacity:1}[data-theme=dark] .nav-editorial .nav-contact,[data-theme=dark] .portfolio-v5 .p5-kicker,[data-theme=dark] .portfolio-v5 .p5-card-label,[data-theme=dark] .portfolio-v5 .p5-product-label,[data-theme=dark] .portfolio-v5 .p5-experience time{color:#ff9b86!important}[data-theme=dark] .portfolio-v5 .p5-work-caption span,[data-theme=dark] .portfolio-v5 .p5-proof small,[data-theme=dark] .portfolio-v5 .p5-proof-line{color:#a6b2bc!important}[data-theme=dark] .portfolio-v5 .p5-document .p5-link{color:#9fb9ff!important}.portfolio-v5 .p5-hero{grid-template-columns:minmax(0,.86fr) minmax(460px,1.14fr);gap:clamp(34px,4.5vw,62px);padding:42px 0 54px}.portfolio-v5 .p5-hero h1{letter-spacing:-.045em;max-width:610px;font-size:clamp(2.8rem,4.25vw,4.35rem);line-height:1.01}.portfolio-v5 .p5-hero-copy>p{margin-top:19px;font-size:clamp(.98rem,1.15vw,1.1rem);line-height:1.58}.portfolio-v5 .p5-actions{margin-top:24px}.portfolio-v5 .p5-availability{margin-top:17px}.portfolio-v5 .p5-work-tile img{height:164px}@media (width<=980px){.portfolio-v5 .p5-hero{grid-template-columns:minmax(0,1fr);padding-top:38px}.portfolio-v5 .p5-hero h1{max-width:760px}}@media (width<=680px){.portfolio-v5 .p5-hero{gap:30px;padding:34px 0 42px}.portfolio-v5 .p5-hero h1{font-size:clamp(2.55rem,11.5vw,3.45rem)}.portfolio-v5 .p5-work-tile img{height:112px}}
+:root{--v8-bg:#f2eee5;--v8-paper:#fffdf8;--v8-paper-2:#e9e3d7;--v8-ink:#11110f;--v8-text:#3f413d;--v8-muted:#60635d;--v8-line:#11110f29;--v8-red:#bd2f1e;--v8-blue:#2855ff;--v8-green:#0b6d4d;--v8-acid:#d8ff4f;--v8-black:#0c0d0d;--v8-shadow:0 28px 75px #1c181129;--v8-serif:Georgia, "Times New Roman", serif;--v8-sans:Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;--v8-mono:"SFMono-Regular", Consolas, "Liberation Mono", monospace}[data-theme=dark]{--v8-bg:#111210;--v8-paper:#191a17;--v8-paper-2:#24251f;--v8-ink:#f5f0e7;--v8-text:#c8c6bf;--v8-muted:#989a93;--v8-line:#f5f0e729;--v8-red:#ff765d;--v8-blue:#809cff;--v8-green:#67c9a4;--v8-acid:#d8ff4f;--v8-black:#060706;--v8-shadow:0 28px 85px #0000006b}.human-portfolio body{background:var(--v8-bg);color:var(--v8-ink)}.portfolio-v8{width:min(1320px,100% - 48px);color:var(--v8-ink);font-family:var(--v8-sans);margin:0 auto;padding-top:96px}.portfolio-v8 *,.portfolio-v8 :before,.portfolio-v8 :after{box-sizing:border-box}.portfolio-v8 a{color:inherit}.v8-kicker{color:var(--v8-red);font:760 .72rem/1.35 var(--v8-mono);letter-spacing:.12em;text-transform:uppercase}.v8-actions{flex-wrap:wrap;gap:10px;margin-top:30px;display:flex}.v8-button{border:1px solid var(--v8-line);background:var(--v8-paper);border-radius:999px;justify-content:center;align-items:center;min-height:48px;padding:12px 19px;font-size:.88rem;font-weight:760;transition:transform .18s,border-color .18s,background .18s,color .18s;display:inline-flex;color:var(--v8-ink)!important;text-decoration:none!important}.v8-button:hover,.v8-button:focus-visible{border-color:var(--v8-ink);transform:translateY(-3px)}.v8-button-primary{border-color:var(--v8-ink);background:var(--v8-ink);color:var(--v8-bg)!important}.v8-button-invert,.v8-button-light{background:#fff;border-color:#fff;color:#0c0d0d!important}.v8-button-ghost{background:0 0;border-color:#ffffff57;color:#fff!important}.v8-text-link{border-bottom:1px solid;align-items:center;gap:10px;padding-bottom:4px;font-size:.88rem;font-weight:760;display:inline-flex;color:var(--v8-blue)!important;text-decoration:none!important}.v8-text-link span{transition:transform .18s}.v8-text-link:hover span,.v8-text-link:focus-visible span{transform:translate(3px,-3px)}.v8-text-link-light{color:#fff!important}.v8-hero{grid-template-columns:minmax(0,.82fr) minmax(560px,1.18fr);align-items:center;gap:clamp(44px,6vw,90px);min-height:calc(100svh - 96px);padding:clamp(56px,7vw,96px) 0 72px;display:grid}.v8-hero-copy h1{max-width:710px;font-family:var(--v8-serif);letter-spacing:-.066em;text-wrap:balance;margin:18px 0 0;font-size:clamp(4rem,7vw,7.4rem);font-weight:500;line-height:.88}.v8-hero-lede{max-width:670px;color:var(--v8-text);margin-top:28px;font-size:clamp(1.03rem,1.35vw,1.2rem);line-height:1.72}.v8-availability{max-width:620px;color:var(--v8-muted);margin-top:22px;font-size:.8rem;line-height:1.55}.v8-proof-strip{border-top:1px solid var(--v8-line);border-bottom:1px solid var(--v8-line);grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:44px;display:grid}.v8-proof-strip a{gap:5px;min-width:0;padding:20px 16px 20px 0;text-decoration:none;display:grid}.v8-proof-strip a+a{border-left:1px solid var(--v8-line);padding-left:16px}.v8-proof-strip strong{font-family:var(--v8-serif);font-size:clamp(1.8rem,3vw,2.7rem);font-weight:500;line-height:.95}.v8-proof-strip span{color:var(--v8-ink);font-size:.74rem;font-weight:760;line-height:1.28}.v8-proof-strip small{color:var(--v8-muted);font-size:.61rem;line-height:1.4}.v8-hero-gallery{--gallery-x:0;--gallery-y:0;perspective:1200px;min-height:720px;position:relative}.v8-hero-gallery:before{content:"";border:1px solid var(--v8-line);background:linear-gradient(90deg, transparent 49.8%, var(--v8-line) 50%, transparent 50.2%), linear-gradient(transparent 49.8%, var(--v8-line) 50%, transparent 50.2%);opacity:.45;background-size:68px 68px;position:absolute;inset:8% 4% 4% 10%}.v8-hero-shot{box-shadow:var(--v8-shadow);transform-style:preserve-3d;background:#fff;border:1px solid #11110f42;transition:transform .26s cubic-bezier(.2,.75,.2,1),box-shadow .26s,z-index 0s .12s;display:block;position:absolute;overflow:hidden;color:#111!important;text-decoration:none!important}.v8-hero-shot picture,.v8-hero-shot img{width:100%;height:100%;display:block}.v8-hero-shot img{object-fit:cover;object-position:top;transition:transform .42s cubic-bezier(.2,.75,.2,1)}.v8-hero-shot:hover,.v8-hero-shot:focus-visible{z-index:12;box-shadow:0 38px 100px #19161047}.v8-hero-shot:hover img,.v8-hero-shot:focus-visible img{transform:scale(1.025)}.v8-hero-shot-1{z-index:4;width:72%;height:48%;transform:translate3d(calc(var(--gallery-x) * 7px), calc(var(--gallery-y) * 7px), 0) rotate(1.2deg);top:5%;right:5%}.v8-hero-shot-1 img{object-fit:contain;background:#0f1721}.v8-hero-shot-2{z-index:5;width:58%;height:42%;transform:translate3d(calc(var(--gallery-x) * -10px), calc(var(--gallery-y) * -8px), 0) rotate(-3.5deg);bottom:4%;left:1%}.v8-hero-shot-3{z-index:6;width:51%;height:39%;transform:translate3d(calc(var(--gallery-x) * 12px), calc(var(--gallery-y) * -10px), 0) rotate(3deg);bottom:1%;right:1%}.v8-hero-shot-4{z-index:7;width:31%;height:31%;transform:translate3d(calc(var(--gallery-x) * -14px), calc(var(--gallery-y) * 12px), 0) rotate(-4.5deg);top:1%;left:2%}.v8-hero-shot:hover,.v8-hero-shot:focus-visible{transform:translate3d(0,-9px,20px)rotate(0)}.v8-shot-caption{backdrop-filter:blur(12px);background:#fffdf8f0;gap:2px;padding:10px 12px;display:grid;position:absolute;bottom:10px;left:10px;right:10px}.v8-shot-caption small{color:#5a5c57;font:700 .58rem/1.2 var(--v8-mono);letter-spacing:.08em;text-transform:uppercase}.v8-shot-caption strong{font-size:.78rem;line-height:1.2}.v8-scope-band{background:var(--v8-black);color:#fff;margin:12px calc(50% - 50vw) 0;padding:clamp(60px,8vw,104px) max(24px,50vw - 660px)}.v8-scope-band>header{grid-template-columns:minmax(0,1fr) minmax(300px,.8fr);align-items:end;gap:50px;display:grid}.v8-scope-band h2{max-width:830px;font-family:var(--v8-serif);letter-spacing:-.055em;margin:14px 0 0;font-size:clamp(3rem,5.4vw,5.8rem);font-weight:500;line-height:.93}.v8-scope-grid{border-top:1px solid #ffffff38;border-bottom:1px solid #ffffff38;grid-template-columns:1fr 1fr .78fr;margin-top:64px;display:grid}.v8-scope-grid article{min-height:290px;padding:30px 30px 34px 0}.v8-scope-grid article+article{border-left:1px solid #ffffff38;padding-left:30px}.v8-scope-grid article.is-supporting{background:var(--v8-acid);color:#111;padding-right:30px}.v8-scope-grid span{font:730 .63rem/1.2 var(--v8-mono);letter-spacing:.08em;text-transform:uppercase;opacity:.65}.v8-scope-grid h3{max-width:360px;font-family:var(--v8-serif);letter-spacing:-.04em;margin:50px 0 0;font-size:clamp(1.8rem,3vw,3rem);font-weight:500;line-height:1}.v8-scope-grid p{max-width:380px;color:inherit;opacity:.78;margin-top:18px;font-size:.86rem;line-height:1.62}.v8-section{padding:clamp(88px,11vw,150px) 0}.v8-section-head{grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);align-items:end;gap:clamp(35px,7vw,100px);margin-bottom:64px;display:grid}.v8-section-head h2,.v8-profile-head h2{max-width:900px;font-family:var(--v8-serif);letter-spacing:-.06em;text-wrap:balance;margin:14px 0 0;font-size:clamp(3.2rem,6vw,6.4rem);font-weight:500;line-height:.92}.v8-section-head>p{color:var(--v8-text);margin:0;font-size:.92rem;line-height:1.68}.v8-case-stack{gap:118px;display:grid}.v8-case{--case-color:var(--v8-blue);grid-template-columns:minmax(0,1.18fr) minmax(360px,.82fr);align-items:center;gap:clamp(44px,7vw,98px);display:grid}.v8-case-red{--case-color:var(--v8-red)}.v8-case-green{--case-color:var(--v8-green)}.v8-case.is-reversed .v8-case-media{order:2}.v8-case.is-reversed .v8-case-copy{order:1}.v8-case-media{border:1px solid var(--v8-line);background:var(--v8-paper);min-height:620px;box-shadow:var(--v8-shadow);display:block;position:relative;overflow:hidden;text-decoration:none!important}.v8-case-media:before{content:"";z-index:2;background:var(--case-color);height:6px;position:absolute;top:0;left:0;right:0}.v8-case-media picture,.v8-case-media img{width:100%;height:100%;display:block}.v8-case-media img{object-fit:cover;object-position:top;min-height:620px;transition:transform .52s cubic-bezier(.2,.75,.2,1)}.v8-case-blue .v8-case-media img{object-fit:contain;background:#101a28;padding:4%}.v8-case-media:hover img,.v8-case-media:focus-visible img{transform:scale(1.025)}.v8-case-media>span{z-index:3;color:#111;font:700 .67rem/1.4 var(--v8-mono);background:#fffdf8f0;padding:12px 14px;position:absolute;bottom:18px;left:18px;right:18px;box-shadow:0 10px 34px #00000021}.v8-case-copy{position:sticky;top:120px}.v8-case-index{color:var(--case-color);font:760 .69rem/1.3 var(--v8-mono);letter-spacing:.08em;text-transform:uppercase;align-items:center;gap:13px;display:flex}.v8-case-index span{border:1px solid;border-radius:50%;place-items:center;width:32px;height:32px;display:inline-grid}.v8-case-copy h3{max-width:590px;font-family:var(--v8-serif);letter-spacing:-.055em;margin:24px 0 0;font-size:clamp(2.8rem,4.8vw,5.2rem);font-weight:500;line-height:.94}.v8-case-lead{max-width:560px;color:var(--v8-text);margin-top:26px;font-size:1.02rem;line-height:1.65}.v8-case-details{border-top:1px solid var(--v8-line);gap:0;margin:34px 0 0;display:grid}.v8-case-details div{border-bottom:1px solid var(--v8-line);grid-template-columns:104px minmax(0,1fr);gap:18px;padding:20px 0;display:grid}.v8-case-details dt{color:var(--case-color);font:760 .64rem/1.45 var(--v8-mono);letter-spacing:.07em;text-transform:uppercase}.v8-case-details dd{color:var(--v8-text);margin:0;font-size:.87rem;line-height:1.63}.v8-scope-note{border-left:3px solid var(--case-color);color:var(--v8-muted);margin:22px 0 26px;padding-left:15px;font-size:.76rem;line-height:1.58}.v8-scope-note strong{color:var(--v8-ink)}.v8-product{color:#fff;background:#0a0d12;grid-template-columns:minmax(320px,.72fr) minmax(0,1.28fr);align-items:center;gap:clamp(42px,7vw,96px);margin:0 calc(50% - 50vw);padding:clamp(76px,10vw,140px) max(24px,50vw - 660px);display:grid;overflow:hidden}.v8-product-copy h2{max-width:660px;font-family:var(--v8-serif);letter-spacing:-.058em;margin:17px 0 0;font-size:clamp(3.2rem,5.8vw,6.2rem);font-weight:500;line-height:.92}.v8-product-copy p{color:#ffffffc2;max-width:650px;margin-top:27px;font-size:.96rem;line-height:1.72}.v8-product-copy>small{color:#ffffff8a;font:680 .68rem/1.45 var(--v8-mono);margin-top:24px;display:block}.v8-product-gallery{min-height:650px;position:relative}.v8-product-shot{background:#fff;border:1px solid #fff3;position:absolute;overflow:hidden;box-shadow:0 32px 100px #00000075}.v8-product-shot picture,.v8-product-shot img{width:100%;height:100%;display:block}.v8-product-shot img{object-fit:cover;object-position:top}.v8-product-shot-1{z-index:2;width:82%;height:62%;top:0;right:0;transform:rotate(1.5deg)}.v8-product-shot-2{z-index:3;width:72%;height:55%;bottom:0;left:0;transform:rotate(-3deg)}.v8-artifact{grid-template-columns:minmax(320px,.72fr) minmax(0,1.28fr);align-items:center;gap:clamp(46px,7vw,94px);margin-top:0;padding:clamp(90px,12vw,160px) 0;display:grid}.v8-artifact-copy{align-self:start;position:sticky;top:120px}.v8-artifact-copy h2{font-family:var(--v8-serif);letter-spacing:-.058em;margin:17px 0 0;font-size:clamp(3.2rem,5.7vw,6.2rem);font-weight:500;line-height:.92}.v8-artifact-copy p{color:var(--v8-text);margin-top:26px;font-size:.94rem;line-height:1.7}.v8-artifact-copy .v8-text-link{margin-top:27px}.v8-artifact-main{border:1px solid var(--v8-line);box-shadow:var(--v8-shadow);background:#fff;display:block;overflow:hidden}.v8-artifact-main img{width:100%;height:auto;padding:4%;display:block}.v8-artifact-rail{grid-column:2;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;display:grid}.v8-artifact-rail a{border:1px solid var(--v8-line);background:var(--v8-paper);text-decoration:none;display:grid;overflow:hidden}.v8-artifact-rail picture,.v8-artifact-rail img{width:100%;display:block}.v8-artifact-rail img{aspect-ratio:1.55;object-fit:cover;object-position:top}.v8-artifact-rail span{gap:4px;padding:16px;display:grid}.v8-artifact-rail small{color:var(--v8-red);font:720 .59rem/1.3 var(--v8-mono);letter-spacing:.08em;text-transform:uppercase}.v8-artifact-rail strong{font-family:var(--v8-serif);font-size:1.25rem;font-weight:500}.v8-more{border-top:1px solid var(--v8-line);border-bottom:1px solid var(--v8-line);grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);align-items:end;gap:60px;padding:56px 0;display:grid}.v8-more h2{font-family:var(--v8-serif);letter-spacing:-.045em;margin:12px 0 0;font-size:clamp(2.1rem,4vw,4rem);font-weight:500;line-height:.98}.v8-more nav{display:grid}.v8-more nav a{border-top:1px solid var(--v8-line);justify-content:space-between;gap:20px;padding:15px 0;font-weight:720;text-decoration:none;display:flex}.v8-more nav a:last-child{border-bottom:1px solid var(--v8-line)}.v8-profile{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:start;gap:clamp(54px,8vw,110px);display:grid}.v8-profile-head{position:sticky;top:120px}.v8-profile-head p{max-width:700px;color:var(--v8-text);margin-top:28px;font-size:1rem;line-height:1.72}.v8-principles{border-top:1px solid var(--v8-line)}.v8-principles article{border-bottom:1px solid var(--v8-line);grid-template-columns:52px minmax(0,1fr);gap:20px;padding:29px 0;display:grid}.v8-principles article>span{color:var(--v8-red);font:720 .67rem/1.2 var(--v8-mono)}.v8-principles h3{font-family:var(--v8-serif);margin:0;font-size:1.7rem;font-weight:500;line-height:1.05}.v8-principles p{color:var(--v8-text);grid-column:2;margin:7px 0 0;font-size:.86rem;line-height:1.58}.v8-experience,.v8-experience-list{border-top:1px solid var(--v8-line)}.v8-experience-list article{border-bottom:1px solid var(--v8-line);grid-template-columns:170px minmax(0,1fr);gap:32px;padding:25px 0;display:grid}.v8-experience-list time{color:var(--v8-red);font:700 .67rem/1.45 var(--v8-mono)}.v8-experience-list h3{margin:0;font-size:1rem}.v8-experience-list p{color:var(--v8-text);margin:6px 0 0;font-size:.84rem;line-height:1.55}.v8-applications{border-top:1px solid var(--v8-line)}.v8-documents{grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:16px;display:grid}.v8-document{border:1px solid var(--v8-line);background:var(--v8-paper);flex-direction:column;min-height:270px;padding:28px;text-decoration:none;transition:transform .18s,border-color .18s,box-shadow .18s;display:flex}.v8-document:hover,.v8-document:focus-visible{border-color:var(--v8-ink);transform:translateY(-5px);box-shadow:0 22px 55px #1c18111f}.v8-document.is-recommended{background:var(--v8-ink);min-height:842px;color:var(--v8-bg);grid-row:span 3}.v8-document>span{color:var(--v8-red);font:730 .63rem/1.45 var(--v8-mono);letter-spacing:.07em;text-transform:uppercase}.v8-document h3{max-width:580px;font-family:var(--v8-serif);letter-spacing:-.045em;margin:25px 0 0;font-size:clamp(2rem,3.5vw,3.7rem);font-weight:500;line-height:.98}.v8-document.is-recommended h3{margin-top:auto;font-size:clamp(3.2rem,5.4vw,6rem)}.v8-document p{max-width:590px;color:var(--v8-text);margin-top:18px;font-size:.88rem;line-height:1.62}.v8-document.is-recommended p{color:#ffffffb8}.v8-document small{color:var(--v8-blue);justify-content:space-between;margin-top:auto;padding-top:30px;font-weight:760;display:flex}.v8-document.is-recommended small{color:var(--v8-acid)}.v8-document small i{font-size:1.2rem;font-style:normal}.v8-contact{background:var(--v8-black);color:#fff;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:50px;margin-top:20px;padding:clamp(58px,8vw,104px);display:grid}.v8-contact>div>span{color:var(--v8-acid);font:730 .67rem/1.35 var(--v8-mono);letter-spacing:.09em;text-transform:uppercase}.v8-contact h2{max-width:860px;font-family:var(--v8-serif);letter-spacing:-.06em;margin:15px 0 0;font-size:clamp(3.4rem,6vw,6.5rem);font-weight:500;line-height:.91}.v8-contact p{color:#ffffffad;max-width:730px;margin-top:22px;font-size:.92rem;line-height:1.65}.v8-js [data-reveal]{opacity:0;transition:opacity .65s,transform .65s cubic-bezier(.2,.75,.2,1);transform:translateY(24px)}.v8-js [data-reveal].is-visible{opacity:1;transform:translateY(0)}@media (width<=1080px){.portfolio-v8{width:min(100% - 36px,1040px)}.v8-hero{grid-template-columns:1fr;min-height:auto}.v8-hero-copy{max-width:850px}.v8-hero-gallery{min-height:650px}.v8-scope-band,.v8-product{padding-left:24px;padding-right:24px}.v8-case{grid-template-columns:1fr}.v8-case.is-reversed .v8-case-media,.v8-case.is-reversed .v8-case-copy{order:initial}.v8-case-copy,.v8-artifact-copy,.v8-profile-head{position:static}.v8-product{grid-template-columns:1fr}.v8-product-gallery{min-height:620px}.v8-artifact{grid-template-columns:1fr}.v8-artifact-rail{grid-column:auto}.v8-profile,.v8-contact{grid-template-columns:1fr}}@media (width<=720px){.portfolio-v8{width:min(100% - 24px,680px);padding-top:78px}.v8-hero{gap:38px;padding:42px 0 52px}.v8-hero-copy h1{font-size:clamp(3.35rem,16vw,5.25rem);line-height:.9}.v8-hero-lede{font-size:1rem}.v8-actions{display:grid}.v8-button{width:100%}.v8-proof-strip{grid-template-columns:1fr}.v8-proof-strip a{padding:17px 0}.v8-proof-strip a+a{border-top:1px solid var(--v8-line);border-left:0;padding-left:0}.v8-hero-gallery{scroll-snap-type:x mandatory;gap:14px;min-height:auto;margin-left:-12px;margin-right:-12px;padding:8px 12px 32px;scroll-padding-inline:12px;display:flex;overflow-x:auto}.v8-hero-gallery:before{display:none}.v8-hero-shot,.v8-hero-shot-1,.v8-hero-shot-2,.v8-hero-shot-3,.v8-hero-shot-4{scroll-snap-align:center;flex:0 0 82vw;width:82vw;height:58vw;max-height:420px;position:relative;inset:auto;transform:none}.v8-scope-band{margin-top:0;padding-top:64px;padding-bottom:64px}.v8-scope-band>header,.v8-section-head,.v8-more{grid-template-columns:1fr}.v8-scope-band h2,.v8-section-head h2,.v8-profile-head h2,.v8-product-copy h2,.v8-artifact-copy h2,.v8-contact h2{font-size:clamp(3rem,14vw,4.8rem)}.v8-scope-grid{grid-template-columns:1fr}.v8-scope-grid article{min-height:0;padding:25px 0}.v8-scope-grid article+article{border-top:1px solid #ffffff38;border-left:0;padding-left:0}.v8-scope-grid article.is-supporting{margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px}.v8-scope-grid h3{margin-top:23px}.v8-section{padding:82px 0}.v8-section-head{gap:24px;margin-bottom:40px}.v8-case-stack{gap:82px}.v8-case{gap:32px}.v8-case-media,.v8-case-media img{aspect-ratio:1/.78;min-height:0}.v8-case-copy h3{font-size:clamp(2.8rem,13vw,4.5rem)}.v8-case-details div{grid-template-columns:1fr;gap:8px}.v8-product{gap:36px;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);padding-top:72px;padding-bottom:72px}.v8-product-gallery{scroll-snap-type:x mandatory;gap:14px;min-height:auto;padding:8px 0 24px;display:flex;overflow-x:auto}.v8-product-shot,.v8-product-shot-1,.v8-product-shot-2{scroll-snap-align:center;flex:0 0 86vw;width:86vw;height:56vw;position:relative;inset:auto;transform:none}.v8-artifact{gap:34px;padding:82px 0}.v8-artifact-rail{scroll-snap-type:x mandatory;gap:14px;margin-left:-12px;margin-right:-12px;padding:4px 12px 24px;display:flex;overflow-x:auto}.v8-artifact-rail a{scroll-snap-align:center;flex:0 0 75vw}.v8-more{gap:30px}.v8-principles article{grid-template-columns:38px minmax(0,1fr)}.v8-experience-list article{grid-template-columns:1fr;gap:8px}.v8-documents{grid-template-columns:1fr}.v8-document,.v8-document.is-recommended{grid-row:auto;min-height:310px}.v8-document.is-recommended h3{margin-top:46px;font-size:clamp(3rem,13vw,4.8rem)}.v8-contact{margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);padding:64px 24px}}@media (prefers-reduced-motion:reduce){.portfolio-v8 *,.portfolio-v8 :before,.portfolio-v8 :after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation:none!important}.v8-js [data-reveal]{opacity:1;transform:none}}
+</style></head><body><div id="scrollProgress"></div><main id="main-content"><header class="nav nav-editorial print-hide" id="siteNav"><div class="nav-shell"><a href="/" class="nav-name" aria-label="Mario Marcolongo — Home">Mario Marcolongo</a><nav class="nav-actions" aria-label="Primary navigation"><a href="/#selected-work" class="nav-link active">Work</a><a href="/#experience" class="nav-link nav-experience">Experience</a><a href="/#applications" class="nav-link ">CV</a><a href="/#contact" class="nav-contact">Contact</a><button class="theme-toggle" id="themeBtn" aria-label="Switch to dark theme" aria-pressed="false" type="button"><svg class="theme-icon-light" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.41M17.66 6.34l1.41-1.41" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg><svg class="theme-icon-dark" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" hidden><path d="M20 15.2A8.5 8.5 0 0 1 8.8 4 8.5 8.5 0 1 0 20 15.2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg></button></nav></div></header><script>
+  (function initNavAndTheme() {
+    var navEl = document.getElementById("siteNav");
+    if (navEl) {
+      var onScroll = function() { navEl.classList.toggle("scrolled", window.scrollY > 10); };
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
     }
 
-    // ---- INIT ----
-    document.addEventListener('DOMContentLoaded', () => {
-      hydrateHero();
-      hydratePillars();
-      hydrateProjects();
-      hydrateStats();
-      hydrateViz();
-      initCitations();
-      initNodeNetwork();
+    var themeBtn = document.getElementById("themeBtn");
+    if (!themeBtn) return;
+
+    function updateThemeControl(theme) {
+      var isDark = theme === "dark";
+      var lightIcon = themeBtn.querySelector(".theme-icon-light");
+      var darkIcon = themeBtn.querySelector(".theme-icon-dark");
+      if (lightIcon) lightIcon.hidden = isDark;
+      if (darkIcon) darkIcon.hidden = !isDark;
+      themeBtn.setAttribute("aria-pressed", isDark ? "true" : "false");
+      themeBtn.setAttribute("aria-label", isDark ? "Switch to light theme" : "Switch to dark theme");
+    }
+
+    var current = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+    updateThemeControl(current);
+
+    themeBtn.addEventListener("click", function() {
+      var active = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+      var next = active === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      updateThemeControl(next);
+      try { localStorage.setItem("theme", next); } catch (e) {}
     });
+  })();
+</script><main class="portfolio-v8" id="content"><section class="v8-hero" aria-labelledby="portfolio-title"><div class="v8-hero-copy" data-reveal><div class="v8-kicker">AI evaluation · scientific fact-checking</div><h1 id="portfolio-title">I test AI systems and verify scientific claims.</h1><p class="v8-hero-lede">My primary work is AI model-behavior evaluation and scientific fact-checking. I also build and operate research-information tools when a recurring verification problem needs a practical system.</p><div class="v8-actions"><a class="v8-button v8-button-primary" href="#selected-work">See the work</a><a class="v8-button" href="/cv-resume.html">Open the AI evaluation CV</a></div><p class="v8-availability">Italy · EU work authorization · worldwide relocation · international contracting</p><div class="v8-proof-strip" aria-label="Selected public evidence"><a href="/security.html"><strong>110</strong><span>platform-recorded Proving Ground breaks</span><small>#75 · top 6% · 25 July 2026</small></a><a href="https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh" target="_blank" rel="noopener noreferrer"><strong>59+</strong><span>published scientific outputs supported</span><small>55+ YouTube video projects · 4 co-authored articles</small></a><a href="https://commons.wikimedia.org/wiki/Special:CentralAuth/Digressivo" target="_blank" rel="noopener noreferrer"><strong>4,317</strong><span>auditable public-knowledge contributions</span><small>Wikipedia, Wikidata and Wikimedia Commons · July 2026</small></a></div></div><div class="v8-hero-gallery" data-hero-gallery data-reveal aria-label="Selected work previews"><a class="v8-hero-shot v8-hero-shot-1" href="/security.html" style="--shot-index:0"><picture><img src="/evidence/gray-swan-metrics-2026-07-25.svg" alt="Gray Swan Arena profile screenshot showing Mario Marcolongo ranked number 75 in Proving Ground, top 6 percent, with 110 total breaks" width="800" height="520" loading="eager" fetchpriority="high" decoding="async"></picture><span class="v8-shot-caption"><small>AI evaluation</small><strong>Gray Swan Proving Ground profile</strong></span></a><a class="v8-hero-shot v8-hero-shot-2" href="https://entropyforlife.it/autore/mario-marcolongo/" target="_blank" rel="noopener noreferrer" style="--shot-index:1"><picture><img src="/media/work/entropy-dashboard-800.webp" alt="Published scientific visualization by Mario Marcolongo for Entropy for Life" width="800" height="520" loading="eager" fetchpriority="high" decoding="async"></picture><span class="v8-shot-caption"><small>Scientific fact-checking</small><strong>Published scientific work</strong></span></a><a class="v8-hero-shot v8-hero-shot-3" href="https://yourselftoscience.org/" target="_blank" rel="noopener noreferrer" style="--shot-index:2"><picture><source srcset="/media/work/yourself-to-science-400.webp 400w, /media/work/yourself-to-science-800.webp 800w" sizes="(max-width: 760px) 78vw, 520px"><img src="/media/work/yourself-to-science-800.webp" alt="Screenshot of the Yourself to Science research-participation directory" width="800" height="520" loading="lazy" fetchpriority="auto" decoding="async"></picture><span class="v8-shot-caption"><small>Research information</small><strong>Yourself to Science</strong></span></a><a class="v8-hero-shot v8-hero-shot-4" href="https://chromewebstore.google.com/detail/mdpi-filter/comknkeimaaadpiopddjoknflbmjeccp" target="_blank" rel="noopener noreferrer" style="--shot-index:3"><picture><source srcset="/media/work/mdpi-filter-1-400.webp 400w, /media/work/mdpi-filter-1-800.webp 800w" sizes="(max-width: 760px) 78vw, 520px"><img src="/media/work/mdpi-filter-1-800.webp" alt="Screenshot of MDPI Filter identifying an MDPI publication in a literature-search workflow" width="800" height="520" loading="lazy" fetchpriority="auto" decoding="async"></picture><span class="v8-shot-caption"><small>Research tooling</small><strong>MDPI Filter</strong></span></a></div></section><section class="v8-scope-band" aria-labelledby="scope-title" data-reveal><header><div class="v8-kicker">Professional scope</div><h2 id="scope-title">Where I can contribute.</h2></header><div class="v8-scope-grid"><article class><span>01 · Primary</span><h3>AI model-behavior evaluation</h3><p>Adversarial and edge-case testing across chat, multimodal inputs, tool use and indirect prompt injection.</p></article><article class><span>02 · Primary</span><h3>Scientific fact-checking</h3><p>Primary-literature review for scripts, articles and public scientific communication.</p></article><article class="is-supporting"><span>03 · Supporting</span><h3>Research information systems</h3><p>Structured records, provenance rules and maintained tools for recurring research-information problems.</p></article></div></section><section class="v8-section v8-work" id="selected-work" data-testid="human-work" aria-labelledby="selected-work-title"><header class="v8-section-head" data-reveal><div><div class="v8-kicker">Selected work</div><h2 id="selected-work-title">Selected work, shown through the actual output.</h2></div><p>Each case shows the actual public output, my contribution and the boundary of what that work demonstrates.</p></header><div class="v8-case-stack" data-testid="human-capabilities"><article class="v8-case v8-case-blue " data-case="model-behavior" data-reveal><a class="v8-case-media" href="/security.html" aria-label="Open the evaluation record"><picture><img src="/evidence/gray-swan-metrics-2026-07-25.svg" alt="Gray Swan Arena profile screenshot showing Mario Marcolongo's Proving Ground rank, percentile, break count and activity" width="1200" height="760" loading="lazy" decoding="async"></picture><span>Real platform profile · #75 · top 6% · 110 total breaks · dated 25 July 2026</span></a><div class="v8-case-copy"><div class="v8-case-index"><span>01</span><strong>AI evaluation</strong></div><h3>Finding model failures across four evaluation surfaces.</h3><p class="v8-case-lead">I tested chat, image, agent and indirect prompt-injection behavior and preserved dated public evidence that keeps Proving Ground and Arena metrics separate.</p><dl class="v8-case-details"><div><dt>What I did</dt><dd>I vary the interaction path, preserve reproduction notes and distinguish direct observations from platform labels, independent verification and model-wide conclusions.</dd></div><div><dt>Result</dt><dd>#75 on the Proving Ground leaderboard, top 6%, with 110 platform-recorded total breaks on 25 July 2026; the same screenshot shows Arena rank #370, 27 global unique breaks, 1,090 points and 246 submissions.</dd></div></dl><p class="v8-scope-note"><strong>Scope:</strong> This supports model-evaluation and adversarial-QA work. It is not presented as penetration testing or senior red-team engineering.</p><div class="v8-case-links" aria-label="AI evaluation evidence links"><a class="v8-text-link" href="/security.html">Open the evaluation record<span aria-hidden="true">↗</span></a></div></div></article><article class="v8-case v8-case-red is-reversed" data-case="scientific-verification" data-reveal><a class="v8-case-media" href="https://entropyforlife.it/autore/mario-marcolongo/" target="_blank" rel="noopener noreferrer" aria-label="Open the published article and visualization archive"><picture><img src="/media/work/entropy-dashboard-800.webp" alt="Published scientific visualization by Mario Marcolongo for Entropy for Life" width="1200" height="760" loading="lazy" decoding="async"></picture><span>Published output · article, data visualization and source review</span></a><div class="v8-case-copy"><div class="v8-case-index"><span>02</span><strong>Scientific fact-checking</strong></div><h3>Fact-checking scientific productions before publication.</h3><p class="v8-case-lead">In a small recurring production team, I verify the evidence behind YouTube videos, documentaries and articles before publication.</p><dl class="v8-case-details"><div><dt>What I did</dt><dd>Fact-checking is the recurring component. Depending on the production, I also contribute to script development, data visualization, slide creation and thumbnail direction or design, and I attribute those roles per item rather than treating every output as identical.</dd></div><div><dt>Result</dt><dd>At least 59 published projects supported: 55+ YouTube video projects indexed through the contribution playlist, plus four co-authored articles. A separate playlist records selected thumbnail work.</dd></div></dl><p class="v8-scope-note"><strong>Scope:</strong> Final wording, editing and publication remain with the team. The current thumbnail playlist includes work created predominantly or entirely by me and work developed collaboratively with the video editor; direction-only thumbnails are not yet included.</p><div class="v8-case-links" aria-label="Scientific fact-checking evidence links"><a class="v8-text-link" href="https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh" target="_blank" rel="noopener noreferrer">YouTube contribution playlist<span aria-hidden="true">↗</span></a><a class="v8-text-link" href="https://entropyforlife.it/autore/mario-marcolongo/" target="_blank" rel="noopener noreferrer">Four co-authored articles<span aria-hidden="true">↗</span></a><a class="v8-text-link" href="https://www.youtube.com/playlist?list=PLUXju4zC0Sks" target="_blank" rel="noopener noreferrer">Selected thumbnail-work playlist<span aria-hidden="true">↗</span></a><a class="v8-text-link" href="https://entropyforlife.it" target="_blank" rel="noopener noreferrer">Official Entropy for Life website<span aria-hidden="true">↗</span></a></div></div></article><article class="v8-case v8-case-green " data-case="research-system" data-reveal><a class="v8-case-media" href="https://yourselftoscience.org/" target="_blank" rel="noopener noreferrer" aria-label="Explore Yourself to Science"><picture><source srcset="/media/work/yourself-to-science-400.webp 400w, /media/work/yourself-to-science-800.webp 800w" sizes="(max-width: 760px) 92vw, 720px"><img src="/media/work/yourself-to-science-800.webp" alt="Screenshot of the Yourself to Science research-participation directory" width="1200" height="760" loading="lazy" decoding="async"></picture><span>Live public product · catalogue, provenance and machine-readable records</span></a><div class="v8-case-copy"><div class="v8-case-index"><span>03</span><strong>Supporting research system</strong></div><h3>Building a maintained directory of research opportunities.</h3><p class="v8-case-lead">Yourself to Science turns scattered institutional opportunities into a public catalogue with explicit inclusion and update rules.</p><dl class="v8-case-details"><div><dt>What I did</dt><dd>I defined the inclusion criteria, verification fields, provenance model, licensing boundaries, update workflow and public-data requirements, then coordinated AI-assisted implementation and ongoing operation.</dd></div><div><dt>Result</dt><dd>More than 55 opportunities indexed, with FAIRsharing and Zenodo records and human- and machine-readable interfaces.</dd></div></dl><p class="v8-scope-note"><strong>Scope:</strong> My contribution covers requirements, information architecture, verification, functional testing, deployment diagnosis and operations—not unaided software development.</p><div class="v8-case-links" aria-label="Supporting research system evidence links"><a class="v8-text-link" href="https://yourselftoscience.org/" target="_blank" rel="noopener noreferrer">Explore Yourself to Science<span aria-hidden="true">↗</span></a></div></div></article></div></section><section class="v8-product" id="lab" aria-labelledby="product-title" data-reveal><div class="v8-product-copy"><div class="v8-kicker">Current product</div><h2 id="product-title">MDPI Filter now works in the browser and as a Zotero plugin.</h2><p>The current product identifies MDPI references across literature-search and reference-management workflows while avoiding ambiguous title-based matches. The broader rebrand and expansion to retractions, comments and other research-integrity signals are future work, not shipped functionality.</p><small>Chrome · Edge · Firefox · Safari source · Zotero 7–9</small><div class="v8-actions"><a class="v8-button v8-button-invert" href="https://chromewebstore.google.com/detail/mdpi-filter/comknkeimaaadpiopddjoknflbmjeccp" target="_blank" rel="noopener noreferrer">Open the Chrome Web Store listing</a><a class="v8-button v8-button-ghost" href="https://github.com/orgs/mdpi-filter/repositories" target="_blank" rel="noopener noreferrer">Open the product repositories</a></div></div><div class="v8-product-gallery" aria-label="MDPI Filter screenshots"><figure class="v8-product-shot v8-product-shot-1"><picture><source srcset="/media/work/mdpi-filter-1-400.webp 400w, /media/work/mdpi-filter-1-800.webp 800w" sizes="(max-width: 760px) 86vw, 580px"><img src="/media/work/mdpi-filter-1-800.webp" alt="MDPI Filter highlighting a publication in a literature-search result" width="800" height="500" loading="lazy" decoding="async"></picture></figure><figure class="v8-product-shot v8-product-shot-2"><picture><source srcset="/media/work/mdpi-filter-2-400.webp 400w, /media/work/mdpi-filter-2-800.webp 800w" sizes="(max-width: 760px) 86vw, 580px"><img src="/media/work/mdpi-filter-2-800.webp" alt="MDPI Filter extension interface and filtering controls" width="800" height="500" loading="lazy" decoding="async"></picture></figure></div></section><section class="v8-artifact" aria-labelledby="artifact-title" data-reveal><div class="v8-artifact-copy"><div class="v8-kicker">Scientific visualization</div><h2 id="artifact-title">A diagram that became a reusable public reference.</h2><p>I designed this vector diagram to show overlap among monogenic conditions associated with autism, dystonia, epilepsy and schizophrenia. The Wikimedia record exposes the source file, authorship, revision history and reuse across four Wikipedia language editions.</p><a class="v8-text-link" href="https://commons.wikimedia.org/wiki/File:Overlapping_clinical_phenotypes_in_genes_associated_with_monogenic_forms_of_autism_spectrum_disorder_(ASD),_dystonia,_epilepsy_and_schizophrenia.svg" target="_blank" rel="noopener noreferrer">Open the Wikimedia source record<span aria-hidden="true">↗</span></a></div><a class="v8-artifact-main" href="https://commons.wikimedia.org/wiki/File:Overlapping_clinical_phenotypes_in_genes_associated_with_monogenic_forms_of_autism_spectrum_disorder_(ASD),_dystonia,_epilepsy_and_schizophrenia.svg" target="_blank" rel="noopener noreferrer" aria-label="Open the Wikimedia source record"><img src="/media/work/wikimedia-clinical-overlap.svg" alt="Euler diagram of overlapping clinical phenotypes in genes associated with autism spectrum disorder, dystonia, epilepsy and schizophrenia" width="1100" height="720" loading="lazy" decoding="async"></a><div class="v8-artifact-rail" aria-label="Additional public visualizations"><a href="https://public.tableau.com/app/profile/mario.marcolongo/vizzes" target="_blank" rel="noopener noreferrer"><picture><source srcset="/media/work/tableau-mortality-400.webp 400w, /media/work/tableau-mortality-800.webp 800w" sizes="(max-width: 760px) 70vw, 320px"><img src="/media/work/tableau-mortality-800.webp" alt="Screenshot of a public-health mortality data visualization" width="500" height="330" loading="lazy" decoding="async"></picture><span><small>Public-health visualization</small><strong>Mortality patterns</strong></span></a><a href="https://app.flourish.studio/@Digressivo" target="_blank" rel="noopener noreferrer"><picture><img src="/media/work/flourish-oesophageal-cancer.svg" alt="Global visualization of oesophageal cancer incidence" width="500" height="330" loading="lazy" decoding="async"></picture><span><small>Global cancer data</small><strong>Oesophageal cancer incidence</strong></span></a></div></section><section class="v8-more" aria-labelledby="more-title" data-reveal><div><div class="v8-kicker">More public work</div><h2 id="more-title">Additional tools and experiments.</h2></div><nav aria-label="More public projects"><a href="https://jnton.github.io/protein-by-bodyweight-country/" target="_blank" rel="noopener noreferrer">Protein by bodyweight by country<span aria-hidden="true">↗</span></a><a href="https://t.me/ToEnWikipediaBot" target="_blank" rel="noopener noreferrer">English Wikipedia Link Converter<span aria-hidden="true">↗</span></a><a href="https://jnton.github.io/emergent-humanity/" target="_blank" rel="noopener noreferrer">Emergent Humanity<span aria-hidden="true">↗</span></a></nav></section><section class="v8-section v8-profile" id="operating-style" aria-labelledby="profile-title"><header class="v8-profile-head" data-reveal><div class="v8-kicker">Working preferences</div><h2 id="profile-title">Clear goals, direct feedback and responsibility for the result.</h2><p>I work best when the objective and decision rights are explicit, feedback is direct and I can follow a problem through investigation, documentation, release and maintenance.</p></header><div class="v8-principles"><article data-reveal><span>01</span><h3>Separate observation from interpretation</h3><p>State what was directly observed before drawing a broader conclusion.</p></article><article data-reveal><span>02</span><h3>Make assumptions visible</h3><p>Document the definitions, exclusions and judgments that affect the result.</p></article><article data-reveal><span>03</span><h3>Plan for maintenance</h3><p>Treat updates, provenance and operational recovery as part of the work.</p></article></div></section><section class="v8-section v8-experience" id="experience" aria-labelledby="experience-title"><header class="v8-section-head" data-reveal><div><div class="v8-kicker">Experience</div><h2 id="experience-title">Relevant experience.</h2></div><p>The targeted CVs carry the full application detail.</p></header><div class="v8-experience-list"><article data-reveal><time>Jul 2026 — Present</time><div><h3>Model-Behavior Evaluator</h3><p><strong>Independent practice · Gray Swan Proving Ground participant</strong> · Conduct self-directed adversarial testing across chat, multimodal, agentic tool-use and indirect prompt-injection settings.</p></div></article><article data-reveal><time>Jun 2023 — Present</time><div><h3>Scientific Research, Fact-Checking &amp; Website Operations Contractor</h3><p><strong>Entropy for Life — Italy</strong> · Deliver primary-literature research, scientific fact-checking and script development across 55+ published YouTube video projects and four co-authored articles; most video assignments combine all three functions, while selected work focuses on fact-checking and/or data visualization.</p></div></article><article data-reveal><time>Aug 2024 — Present</time><div><h3>Founder &amp; Research-Workflow Owner</h3><p><strong>Yourself to Science™</strong> · Founded and operate an open-source research-participation directory indexing more than 55 initiatives, with documented verification, provenance and metadata workflows.</p></div></article></div></section><section class="v8-section v8-applications" id="applications" data-testid="human-documents" aria-labelledby="applications-title"><header class="v8-section-head" data-reveal><div><div class="v8-kicker">Application documents</div><h2 id="applications-title">Start with the role you are hiring for.</h2></div><p>The AI evaluation CV is the recommended default. The others are deliberately tailored alternatives.</p></header><div class="v8-documents"><a class="v8-document is-recommended" href="/cv-resume.html" data-reveal><span>Recommended for AI evaluation and safeguards roles</span><h3>AI Evaluation &amp; Model Behavior</h3><p>Model-behavior testing, adversarial QA, evaluation operations and evidence-bound reporting.</p><small>Open CV <i aria-hidden="true">→</i></small></a><a class="v8-document " href="/cv-research.html" data-reveal><span>Scientific AI and research-data roles</span><h3>Scientific AI Quality &amp; Research Data</h3><p>Scientific evidence review, research-data quality, provenance, metadata and research operations.</p><small>Open CV <i aria-hidden="true">→</i></small></a><a class="v8-document " href="/cv-integrity.html" data-reveal><span>Integrity and investigation roles</span><h3>Trust, Safety &amp; Knowledge Integrity</h3><p>Source provenance, public-record research, content integrity and investigation support.</p><small>Open CV <i aria-hidden="true">→</i></small></a><a class="v8-document " href="/cv-editorial.html" data-reveal><span>Editorial and research-operations roles</span><h3>Research, Editorial &amp; Community Operations</h3><p>Scientific fact-checking, editorial coordination, evidence synthesis and participant-facing research operations.</p><small>Open CV <i aria-hidden="true">→</i></small></a></div></section><section class="v8-contact" id="contact" aria-labelledby="contact-title" data-reveal><div><span>Current focus</span><h2 id="contact-title">AI evaluation and scientific evidence roles.</h2><p>Especially model-behavior evaluation, scientific fact-checking, research-data quality and knowledge-integrity work.</p></div><div class="v8-actions"><a class="v8-button v8-button-light" href="mailto:me@mariomarcolongo.com">Email Mario</a><a class="v8-button v8-button-ghost" href="https://www.linkedin.com/in/mario-marcolongo" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></section></main><footer class="site-footer print-hide"><div class="container"><div class="footer-content"><div class="footer-text"><p><strong>© 2026 Mario Marcolongo.</strong> Project datasets, code and site content retain the licences stated in their respective repositories and records. Active Build: v2026.07.25</p></div><div class="footer-links"><a href="https://orcid.org/0000-0003-2846-7115" target="_blank" rel="noopener noreferrer">ORCID: 0000-0003-2846-7115</a><a href="https://www.ebi.ac.uk/ena/browser/view/PRJEB109744" target="_blank" rel="noopener noreferrer">ENA: PRJEB109744</a><a href="https://github.com/jnton" target="_blank" rel="noopener noreferrer">GitHub: jnton</a><a href="https://www.linkedin.com/in/mario-marcolongo" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></div><div class="footer-content footer-dossiers"><div class="footer-text"><span>Machine-actionable dossiers for verification and automated processing:</span></div><div class="footer-links footer-dossier-links"><a href="/llms.txt" class="btn btn-sm" target="_blank" rel="noopener noreferrer">llms.txt</a><a href="/llms-full.txt" class="btn btn-sm" target="_blank" rel="noopener noreferrer">llms-full.txt</a><a href="/cv-llm.txt" class="btn btn-sm" target="_blank" rel="noopener noreferrer">cv-llm.txt</a><button class="btn btn-ai btn-sm" type="button" onclick="copyCanonicalText('/llms-full.txt', this, '✓ Copied Dossier!')" title="Copy the canonical complete AI-compatible dossier">✨ Copy complete dossier</button></div></div></div></footer><script>
+  (function exposeCanonicalCopyUtility() {
+    if (window.copyCanonicalText) return;
 
-    // ---- 1-CLICK AI COPY EXPORT ----
-    function generateLiveMarkdown(d, type) {
-      if (!d) return null;
-      if (type === 'llms.txt') {
-        return `# ${d.identity.name} — ${d.identity.jobTitle || 'Scientific AI Evaluation & Research Data Specialist'}\n\n> ${d.summary}\n\n## Quick Facts\n` +
-          (d.stats ? d.stats.map(s => `- **${s.value}** (${s.label}): ${s.detail}`).join('\n') : '') +
-          `\n- Work Authorization: ${d.identity.relocation}\n- Languages: ${d.identity.languages}\n\n## Core Competencies\n` +
-          (d.skills ? d.skills.map(s => `- ${s}`).join('\n') : '') +
-          `\n\n## Links\n- Website: ${d.identity.domain}\n- Full profile: ${d.identity.domain}/llms-full.txt\n- Full CV: ${d.identity.domain}/cv-llm.txt\n- Email: ${d.identity.email}\n`;
-      }
-      if (type === 'llms-full.txt' || type === 'unified') {
-        let out = `# ${d.identity.name} — ${d.identity.jobTitle || 'Comprehensive Profile & Curriculum Vitae'}\n\n## Overview\n${d.summary}\n\n## Core Pillars\n\n`;
-        (d.pillars || []).forEach((p, i) => {
-          out += `### ${i + 1}. ${p.title}\n${p.lead}\n\n` +
-            (p.highlights || []).map(h => `- **${h.label}**: ${h.detail}`).join('\n') + `\n\n`;
-        });
-        out += `## Key Projects\n\n`;
-        (d.projects || []).forEach(p => {
-          const linkUrl = p.links && (p.links.website || p.links.bot || p.links.github || p.links.chromeStore) ? (p.links.website || p.links.bot || p.links.github || p.links.chromeStore) : '';
-          out += `### ${p.title} (${linkUrl})\n**Role**: ${p.role}\n\n${p.description}\n\n` +
-            (p.highlights || []).map(im => `- ${im}`).join('\n') + `\n\n`;
-        });
-        out += `## Experience & Leadership\n\n`;
-        (d.experience || []).forEach(e => {
-          out += `### ${e.role} — ${e.org} (${e.period})\n` + (e.bullets || []).map(b => `- ${b}`).join('\n') + `\n\n`;
-        });
-        if (type === 'unified') {
-          out += `---\n# CURRICULUM VITAE\n\n## Education & Training\n\n` +
-            (d.education || []).map(ed => `- **${ed.title}** (${ed.period || ''}): ${ed.detail}`).join('\n') + `\n\n`;
-        }
-        return out;
-      }
-      if (type === 'cv-llm.txt') {
-        let out = `# ${d.identity.name} — Curriculum Vitae (AI / LLM Markdown)\n> ${d.identity.headline}\n> Location: ${d.identity.location} · ${d.identity.relocation}\n\n## Executive Summary\n${d.summary}\n\n## Core Competencies\n` +
-          (d.skills || []).map(s => `- ${s}`).join('\n') + `\n\n## Professional Experience\n\n`;
-        (d.experience || []).forEach(e => {
-          out += `### ${e.role} — ${e.org} (${e.period})\n` + (e.bullets || []).map(b => `- ${b}`).join('\n') + `\n\n`;
-        });
-        return out;
-      }
-      return null;
-    }
-
-    async function copyAiContent(fileType, btnEl) {
-      const origText = btnEl.textContent;
+    window.copyCanonicalText = async function copyCanonicalText(url, btnEl, successText) {
+      var originalText = btnEl.textContent;
+      btnEl.disabled = true;
       btnEl.textContent = 'Copying...';
-      let content = generateLiveMarkdown(window.MARIO_DOSSIER, fileType);
-
-      if (!content) {
-        try {
-          if (fileType === 'unified') {
-            const [pRes, cRes] = await Promise.all([
-              fetch('llms-full.txt'),
-              fetch('cv-llm.txt')
-            ]);
-            const pText = pRes.ok ? await pRes.text() : '';
-            const cText = cRes.ok ? await cRes.text() : '';
-            content = `# MARIO MARCOLONGO — UNIFIED AI CURRICULUM VITAE\n\n${pText}\n\n---\n\n${cText}`;
-          } else {
-            const res = await fetch(fileType);
-            if (res.ok) content = await res.text();
-          }
-        } catch (err) {
-          console.warn('Fetch fallback triggered for AI copy:', err);
-        }
-      }
-
-      if (!content) {
-        content = `# Mario Marcolongo — AI Curriculum Vitae\nScientific Fact-Checker, Open Science Technologist & Systems Developer.\n4,317 verified Wikimedia contributions. Founder of Yourself to Science™ (yourselftoscience.org).\nView full profile online at https://mariomarcolongo.com/llms-full.txt`;
-      }
 
       try {
+        var response = await fetch(url, { cache: 'no-store' });
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        var content = await response.text();
+        if (!content.trim()) throw new Error('Canonical file was empty');
         await navigator.clipboard.writeText(content);
-        btnEl.textContent = '✓ Copied Markdown!';
-        btnEl.style.background = 'var(--emerald)';
-        btnEl.style.color = '#fff';
-        setTimeout(() => {
-          btnEl.textContent = origText;
-          btnEl.style.background = '';
-          btnEl.style.color = '';
-        }, 2200);
-      } catch (err) {
-        btnEl.textContent = 'Failed to copy';
+        btnEl.textContent = successText || '✓ Copied!';
+        btnEl.classList.add('copy-success');
+      } catch (error) {
+        console.error('Unable to copy canonical file ' + url + ':', error);
+        btnEl.textContent = 'Unable to copy';
       }
-    }
+
+      window.setTimeout(function() {
+        btnEl.textContent = originalText;
+        btnEl.disabled = false;
+        btnEl.classList.remove('copy-success');
+      }, 2200);
+    };
+  })();
+</script><script>
+    (() => {
+      document.documentElement.classList.add("v8-js");
+
+      const gallery = document.querySelector("[data-hero-gallery]");
+      if (gallery && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        let frame = 0;
+        gallery.addEventListener("pointermove", (event) => {
+          cancelAnimationFrame(frame);
+          frame = requestAnimationFrame(() => {
+            const rect = gallery.getBoundingClientRect();
+            const x = ((event.clientX - rect.left) / rect.width - 0.5) * 2;
+            const y = ((event.clientY - rect.top) / rect.height - 0.5) * 2;
+            gallery.style.setProperty("--gallery-x", x.toFixed(3));
+            gallery.style.setProperty("--gallery-y", y.toFixed(3));
+          });
+        });
+        gallery.addEventListener("pointerleave", () => {
+          gallery.style.setProperty("--gallery-x", "0");
+          gallery.style.setProperty("--gallery-y", "0");
+        });
+      }
+
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.08 });
+        document.querySelectorAll("[data-reveal]").forEach((element) => observer.observe(element));
+      } else {
+        document.querySelectorAll("[data-reveal]").forEach((element) => element.classList.add("is-visible"));
+      }
+    })();
   </script></main><script>
     (function initWebMCP() {
       function registerTools() {
@@ -919,7 +121,7 @@
               tools: [
                 {
                   name: "query_dossier",
-                  description: "Retrieve comprehensive verified biographical summary, work history, skills, and open science projects.",
+                  description: "Retrieve Mario Marcolongo's evidence-bound professional dossier, work history and public records.",
                   inputSchema: {
                     type: "object",
                     properties: {
@@ -935,11 +137,8 @@
                 },
                 {
                   name: "query_cv",
-                  description: "Access Mario Marcolongo's machine-actionable Curriculum Vitae.",
-                  inputSchema: {
-                    type: "object",
-                    properties: {}
-                  },
+                  description: "Access Mario Marcolongo's machine-readable master CV.",
+                  inputSchema: { type: "object", properties: {} },
                   execute: async () => {
                     const res = await fetch('/cv-llm.txt');
                     const text = await res.text();
@@ -948,11 +147,8 @@
                 },
                 {
                   name: "query_genomic_pipeline",
-                  description: "Access full technical logs and variant analysis notes for the public 41x WGS genomic donation (ENA PRJEB109744).",
-                  inputSchema: {
-                    type: "object",
-                    properties: {}
-                  },
+                  description: "Access technical notes for the public 41x WGS genomic donation under ENA PRJEB109744.",
+                  inputSchema: { type: "object", properties: {} },
                   execute: async () => {
                     const res = await fetch('/llms-full.txt');
                     const text = await res.text();

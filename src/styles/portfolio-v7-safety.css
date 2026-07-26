@@ -1,0 +1,5 @@
+/* Critical conversion content must never remain hidden if an intersection observer misses the final viewport. */
+.v7-js .v7-contact[data-reveal] {
+  opacity: 1;
+  transform: none;
+}

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">English Wikipedia Link Converter Telegram bot</title>
+  <desc id="desc">A product card for the Telegram bot that converts non-English Wikipedia links to their English equivalents.</desc>
+  <rect width="1200" height="800" fill="#f7f4ed"/>
+  <rect x="48" y="48" width="1104" height="704" rx="28" fill="#ffffff" stroke="#17201f" stroke-width="3"/>
+  <circle cx="176" cy="178" r="74" fill="#269ed8"/>
+  <path d="M122 174 224 132c12-5 22 5 18 18l-25 118c-3 14-16 18-27 10l-38-28-20 20c-7 7-19 2-18-8l5-45 74-68-90 55c-13 8-25-4-11-10Z" fill="#fff"/>
+  <text x="286" y="158" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="700" fill="#17201f">TELEGRAM BOT</text>
+  <text x="286" y="210" font-family="Georgia,serif" font-size="48" fill="#17201f">English Wikipedia</text>
+  <text x="286" y="264" font-family="Georgia,serif" font-size="48" fill="#17201f">Link Converter</text>
+  <text x="88" y="392" font-family="Inter,Arial,sans-serif" font-size="26" font-weight="700" fill="#269ed8">@ToEnWikipediaBot</text>
+  <line x1="88" y1="424" x2="1112" y2="424" stroke="#d6d1c7" stroke-width="2"/>
+  <text x="88" y="490" font-family="Inter,Arial,sans-serif" font-size="30" fill="#394744">Paste a non-English Wikipedia link.</text>
+  <text x="88" y="548" font-family="Inter,Arial,sans-serif" font-size="30" fill="#394744">Receive the corresponding English article.</text>
+  <g transform="translate(88 622)">
+    <rect width="252" height="70" rx="35" fill="#17201f"/>
+    <text x="126" y="45" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="700" fill="#fff">PRIVATE CHATS</text>
+    <rect x="272" width="178" height="70" rx="35" fill="#f7f4ed" stroke="#17201f" stroke-width="2"/>
+    <text x="361" y="45" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="700" fill="#17201f">GROUPS</text>
+    <rect x="470" width="208" height="70" rx="35" fill="#f7f4ed" stroke="#17201f" stroke-width="2"/>
+    <text x="574" y="45" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="700" fill="#17201f">INLINE MODE</text>
+  </g>
+</svg>

@@ -1,0 +1,134 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SiteNav from "../../components/SiteNav.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+import "../../styles/career-v2.css";
+import release from "../../../data/release-data.js";
+
+const { D, GS } = release;
+const title = "Gray Swan Proving Ground Evidence — 25 July 2026";
+const description = "Dated Gray Swan evidence record for Mario Marcolongo: original public profile screenshot, Proving Ground rank 75, top 6%, 110 total breaks, separate Arena metrics and preserved capture metadata.";
+const evidenceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "DigitalDocument",
+  name: title,
+  description,
+  url: "https://mariomarcolongo.com/evidence/gray-swan-2026-07-25/",
+  dateCreated: "2026-07-25T19:19:07Z",
+  dateModified: "2026-07-26",
+  author: { "@id": "https://mariomarcolongo.com/#person" },
+  isBasedOn: D.identity.grayswanUrl,
+  encoding: [
+    {
+      "@type": "MediaObject",
+      contentUrl: "https://mariomarcolongo.com/media/work/model-behavior-profile.jpg",
+      encodingFormat: "image/jpeg"
+    },
+    {
+      "@type": "MediaObject",
+      contentUrl: "https://mariomarcolongo.com/evidence/gray-swan-profile-2026-07-25.json",
+      encodingFormat: "application/json"
+    }
+  ]
+};
+---
+
+<Layout title={title} description={description} canonical="https://mariomarcolongo.com/evidence/gray-swan-2026-07-25/">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(evidenceJsonLd)}></script>
+  </Fragment>
+
+  <SiteNav activePage="security" />
+
+  <main class="evaluation-shell">
+    <section class="evaluation-hero">
+      <div>
+        <div class="evaluation-eyebrow">Dated platform record · 25 July 2026</div>
+        <h1 class="evaluation-title">Gray Swan profile evidence.</h1>
+        <p class="evaluation-lede">
+          The account-holder capture displayed Proving Ground rank #{GS.rank}, {GS.percentile.toLowerCase()} and {GS.totalBreaks} Total Breaks. It also recorded the separate Arena metrics: rank #{GS.arenaRank}, {GS.arenaUniqueBreaks} global unique breaks, {GS.arenaPoints.toLocaleString("en-US")} points and {GS.arenaSubmissions} submissions.
+        </p>
+        <div class="career-actions">
+          <a class="btn btn-primary" href={D.identity.grayswanUrl} target="_blank" rel="noopener noreferrer">Open live Gray Swan profile ↗</a>
+          <a class="btn" href="/security.html">Read the evaluation record</a>
+          <a class="btn" href="/evidence/gray-swan-profile-2026-07-25.html">Open preservation manifest</a>
+          <a class="btn" href="/evidence/gray-swan-2026-07-24/">Previous preserved snapshot</a>
+        </div>
+      </div>
+
+      <aside class="evaluation-scope-note">
+        <strong>Evidence boundary</strong>
+        <p>The visible image below is the public Gray Swan profile screenshot used in the portfolio. The preservation manifest separately records the source filename, original dimensions, timestamp and SHA-256; the live profile and previous archived snapshot remain directly linked.</p>
+      </aside>
+    </section>
+
+    <section class="evaluation-metrics" aria-label="Dated Gray Swan metrics">
+      <article class="evaluation-metric">
+        <strong>#{GS.rank}</strong>
+        <span>Proving Ground rank</span>
+        <small>{GS.percentile} · time-sensitive snapshot</small>
+      </article>
+      <article class="evaluation-metric">
+        <strong>{GS.totalBreaks}</strong>
+        <span>Platform-displayed total breaks</span>
+        <small>Visible area counters sum to {GS.displayedAreaTotal}</small>
+      </article>
+      <article class="evaluation-metric">
+        <strong>{GS.arenaSubmissions}</strong>
+        <span>Arena submissions shown</span>
+        <small>{GS.arenaUniqueBreaks} unique breaks · {GS.arenaPoints.toLocaleString("en-US")} points</small>
+      </article>
+    </section>
+
+    <section class="evaluation-section">
+      <div class="evaluation-section-head">
+        <h2>Original public profile screenshot</h2>
+        <p>The screenshot is shown directly rather than converted into a synthetic infographic. Proving Ground and Arena remain separate measurement systems, and the dated text below makes the important values readable without altering the source image.</p>
+      </div>
+      <figure style="margin:0">
+        <a href="/media/work/model-behavior-profile.jpg" aria-label="Open the Gray Swan profile screenshot at full size">
+          <img src="/media/work/model-behavior-profile.jpg" alt={`Screenshot of the dated Gray Swan profile showing Proving Ground rank ${GS.rank}, ${GS.percentile.toLowerCase()}, ${GS.totalBreaks} total breaks and separate Arena activity`} width="800" height="350" style="display:block;width:100%;height:auto;border:1px solid rgba(127,127,127,.3);border-radius:18px;background:#090b0d" />
+        </a>
+        <figcaption style="margin-top:12px;line-height:1.6">
+          Public screenshot preview. Open it at full size or use the preservation manifest for the original capture metadata and cryptographic hash.
+        </figcaption>
+      </figure>
+      <div class="career-actions" style="margin-top:18px">
+        <a class="btn" href="/evidence/gray-swan-profile-2026-07-25.html">Preservation manifest and capture chain</a>
+        <a class="btn" href="/evidence/gray-swan-profile-2026-07-25.json">Machine-readable evidence JSON</a>
+      </div>
+    </section>
+
+    <section class="evaluation-section">
+      <div class="evaluation-section-head">
+        <h2>Values transcribed from the capture</h2>
+        <p>Arena and Proving Ground use separate ranking and activity systems. They are kept separate below to avoid presenting rank #370 and rank #75 as contradictory measurements.</p>
+      </div>
+      <div class="evaluation-grid">
+        <article class="evaluation-card">
+          <div class="evaluation-step">PROVING GROUND</div>
+          <h3>#{GS.rank} · {GS.percentile}</h3>
+          <p>{GS.totalBreaks} Total Breaks displayed.</p>
+        </article>
+        <article class="evaluation-card">
+          <div class="evaluation-step">ARENA PROFILE</div>
+          <h3>#{GS.arenaRank} global rank</h3>
+          <p>{GS.arenaUniqueBreaks} global unique breaks · {GS.arenaPoints.toLocaleString("en-US")} points · {GS.arenaSubmissions} submissions.</p>
+        </article>
+        {D.redTeamActivity.areas.map((area) => (
+          <article class="evaluation-card">
+            <div class="evaluation-step">PROGRESS BY AREA</div>
+            <h3>{area.name}</h3>
+            <p>{area.breaks} / {area.available} · {area.percent}% displayed.</p>
+          </article>
+        ))}
+      </div>
+      <aside class="evaluation-scope-note" style="margin-top:24px">
+        <strong>Visible aggregation discrepancy</strong>
+        <p>The four area counters total {GS.displayedAreaTotal}, while the profile displays {GS.totalBreaks} Total Breaks. Both are preserved exactly; this page does not infer Gray Swan's internal aggregation rules.</p>
+      </aside>
+    </section>
+  </main>
+
+  <SiteFooter version={D.identity.buildVersion} />
+</Layout>
