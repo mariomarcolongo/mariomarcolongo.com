@@ -1,10 +1,114 @@
-/* Stacked reading order: introduce Mario's role before presenting the supporting evidence panel. */
+/* Final recruiter-facing refinements: reading order, aligned navigation and scannable CV choices. */
+
+/* Keep the fixed header aligned with the 1320px portfolio grid. */
+.nav-editorial .nav-shell {
+  width: min(1320px, calc(100% - 48px));
+}
+
+/* The recommended CV should lead, not become a tall decorative slab. */
+.v8-documents {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+.v8-document {
+  grid-column: span 2;
+  min-height: 330px;
+  padding: 32px;
+}
+
+.v8-document > span {
+  min-height: 2.9em;
+}
+
+.v8-document h3 {
+  max-width: 15ch;
+  font-size: clamp(1.9rem, 2.65vw, 2.8rem);
+  line-height: 1;
+}
+
+.v8-document.is-recommended {
+  grid-column: 1 / -1;
+  grid-row: auto;
+  min-height: 360px;
+  padding: clamp(34px, 4vw, 50px);
+}
+
+.v8-document.is-recommended h3 {
+  max-width: 820px;
+  margin-top: 38px;
+  font-size: clamp(3.25rem, 5vw, 5.25rem);
+  line-height: 0.94;
+}
+
+.v8-document.is-recommended p {
+  max-width: 700px;
+}
+
+.v8-applications .v8-section-head h2 {
+  max-width: 11ch;
+  font-size: clamp(3.2rem, 5.4vw, 5.9rem);
+}
+
+/* Stacked case-study reading order: introduce Mario's role before supporting evidence. */
 @media (max-width: 1080px) {
+  .nav-editorial .nav-shell {
+    width: calc(100% - 36px);
+  }
+
   .v8-case.v8-case-red.is-reversed .v8-case-copy {
     order: 1 !important;
   }
 
   .v8-case.v8-case-red.is-reversed .v8-case-media {
     order: 2 !important;
+  }
+
+  .v8-documents {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .v8-document {
+    grid-column: auto;
+  }
+
+  .v8-document.is-recommended {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 720px) {
+  .nav-editorial .nav-shell {
+    width: calc(100% - 24px);
+  }
+
+  .v8-documents {
+    grid-template-columns: 1fr;
+  }
+
+  .v8-document,
+  .v8-document.is-recommended {
+    grid-column: auto;
+    min-height: 285px;
+    padding: 24px;
+  }
+
+  .v8-document > span {
+    min-height: 0;
+  }
+
+  .v8-document h3 {
+    font-size: clamp(2rem, 9.5vw, 3rem);
+  }
+
+  .v8-document.is-recommended h3 {
+    margin-top: 34px;
+    font-size: clamp(2.85rem, 13vw, 4.25rem);
+  }
+
+  .v8-applications .v8-section-head h2 {
+    max-width: 10.5ch;
+    font-size: clamp(3rem, 13vw, 4.5rem);
   }
 }
