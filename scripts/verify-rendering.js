@@ -50,7 +50,8 @@ async function verifyHomepage(page, viewport) {
     heroMediaCount: document.querySelectorAll('.v8-hero-shot img').length,
     scopeCount: document.querySelectorAll('.v8-scope-grid article').length,
     caseCount: document.querySelectorAll('.v8-case').length,
-    caseMediaCount: document.querySelectorAll('.v8-case-media img').length,
+    caseImageCount: document.querySelectorAll('.v8-case-media img').length,
+    entropyPanelCount: document.querySelectorAll('.v10-entropy-panel').length,
     productImageCount: document.querySelectorAll('.v8-product-shot img').length,
     visualArtifactCount: document.querySelectorAll('.v8-artifact img').length,
     principleCount: document.querySelectorAll('.v8-principles > article').length,
@@ -66,7 +67,11 @@ async function verifyHomepage(page, viewport) {
   if (result.proofCount !== H.proofMoments.length) throw new Error(`Homepage must render ${H.proofMoments.length} proof moments`);
   if (result.heroMediaCount !== H.heroMedia.length) throw new Error(`Homepage must render ${H.heroMedia.length} hero work previews`);
   if (result.scopeCount !== H.scopes.length) throw new Error(`Homepage must render ${H.scopes.length} scope statements`);
-  if (result.caseCount !== H.cases.length || result.caseMediaCount !== H.cases.length) throw new Error(`Homepage must render ${H.cases.length} media-led cases`);
+  if (result.caseCount !== H.cases.length) throw new Error(`Homepage must render ${H.cases.length} selected-work cases`);
+  if (result.caseImageCount + result.entropyPanelCount < H.cases.length) {
+    throw new Error(`Homepage must provide visual evidence for all ${H.cases.length} cases`);
+  }
+  if (result.entropyPanelCount !== 1) throw new Error('Homepage must render exactly one recruiter-facing Entropy evidence panel');
   if (result.productImageCount !== H.mdpiFilter.images.length) throw new Error(`Homepage must render ${H.mdpiFilter.images.length} MDPI Filter screenshots`);
   if (result.visualArtifactCount < 1 + H.visualArtifacts.length) throw new Error('Homepage must render the featured visualization and secondary visual artifacts');
   if (result.principleCount !== H.workingPrinciples.length) throw new Error(`Homepage must render ${H.workingPrinciples.length} working principles`);
@@ -111,7 +116,8 @@ async function verifyNoJavaScript(browser, staticServer, route) {
       scrollWidth: document.documentElement.scrollWidth,
       clientWidth: document.documentElement.clientWidth,
       externalLinks: document.querySelectorAll('a[href^="http"]').length,
-      imageCount: document.querySelectorAll('.portfolio-v8 img').length
+      imageCount: document.querySelectorAll('.portfolio-v8 img').length,
+      entropyPanelCount: document.querySelectorAll('.v10-entropy-panel').length
     };
   }, expected);
 
@@ -123,7 +129,8 @@ async function verifyNoJavaScript(browser, staticServer, route) {
     throw new Error(`${route} no-JS mobile output overflows horizontally (${result.scrollWidth} > ${result.clientWidth})`);
   }
   if (route === 'index.html' && result.externalLinks === 0) throw new Error('Homepage no-JS output has no external evidence links');
-  if (route === 'index.html' && result.imageCount < 10) throw new Error(`Homepage no-JS output has too few real work images: ${result.imageCount}`);
+  if (route === 'index.html' && result.imageCount < 9) throw new Error(`Homepage no-JS output has too few real work images: ${result.imageCount}`);
+  if (route === 'index.html' && result.entropyPanelCount !== 1) throw new Error('Homepage no-JS output is missing the Entropy evidence panel');
 
   await page.screenshot({ path: path.join(OUTPUT, `${slug(route)}-no-js-mobile.png`), fullPage: true });
   await page.close();
