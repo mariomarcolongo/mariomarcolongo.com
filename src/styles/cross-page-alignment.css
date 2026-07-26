@@ -1,0 +1,108 @@
+/* Shared palette and layout refinements for evidence records and CV documents.
+   These pages remain deliberately document-focused while using the portfolio's
+   warm paper, ink, blue, green and red visual language in both themes. */
+
+:root {
+  --career-bg: #f2eee5;
+  --career-panel: rgba(255, 253, 248, 0.92);
+  --career-panel-solid: #fffdf8;
+  --career-ink: #11110f;
+  --career-muted: #3f413d;
+  --career-subtle: #60635d;
+  --career-line: rgba(17, 17, 15, 0.16);
+  --career-line-strong: rgba(17, 17, 15, 0.26);
+  --career-accent: #0b6d4d;
+  --career-accent-2: #bd2f1e;
+  --career-accent-soft: rgba(11, 109, 77, 0.1);
+  --career-warm-soft: rgba(189, 47, 30, 0.1);
+  --career-shadow: 0 24px 70px rgba(28, 24, 17, 0.12);
+
+  --v3-bg: #f2eee5;
+  --v3-bg-elevated: #fffdf8;
+  --v3-bg-soft: #e9e3d7;
+  --v3-ink: #11110f;
+  --v3-ink-soft: #3f413d;
+  --v3-muted: #60635d;
+  --v3-line: rgba(17, 17, 15, 0.16);
+  --v3-line-strong: rgba(17, 17, 15, 0.26);
+  --v3-violet: #2855ff;
+  --v3-violet-rgb: 40, 85, 255;
+  --v3-blue: #0b6d4d;
+  --v3-blue-rgb: 11, 109, 77;
+  --v3-cyan: #148e89;
+  --v3-cyan-rgb: 20, 142, 137;
+  --v3-coral: #bd2f1e;
+  --v3-coral-rgb: 189, 47, 30;
+  --v3-shadow: 0 28px 90px rgba(28, 24, 17, 0.14);
+  --v3-shadow-soft: 0 14px 45px rgba(28, 24, 17, 0.09);
+}
+
+[data-theme="dark"] {
+  --career-bg: #111210;
+  --career-panel: rgba(25, 26, 23, 0.94);
+  --career-panel-solid: #191a17;
+  --career-ink: #f5f0e7;
+  --career-muted: #c8c6bf;
+  --career-subtle: #989a93;
+  --career-line: rgba(245, 240, 231, 0.16);
+  --career-line-strong: rgba(245, 240, 231, 0.26);
+  --career-accent: #67c9a4;
+  --career-accent-2: #ff765d;
+  --career-accent-soft: rgba(103, 201, 164, 0.12);
+  --career-warm-soft: rgba(255, 118, 93, 0.12);
+  --career-shadow: 0 28px 85px rgba(0, 0, 0, 0.42);
+
+  --v3-bg: #111210;
+  --v3-bg-elevated: #191a17;
+  --v3-bg-soft: #24251f;
+  --v3-ink: #f5f0e7;
+  --v3-ink-soft: #c8c6bf;
+  --v3-muted: #989a93;
+  --v3-line: rgba(245, 240, 231, 0.16);
+  --v3-line-strong: rgba(245, 240, 231, 0.26);
+  --v3-violet: #809cff;
+  --v3-violet-rgb: 128, 156, 255;
+  --v3-blue: #67c9a4;
+  --v3-blue-rgb: 103, 201, 164;
+  --v3-cyan: #55c8c1;
+  --v3-cyan-rgb: 85, 200, 193;
+  --v3-coral: #ff765d;
+  --v3-coral-rgb: 255, 118, 93;
+  --v3-shadow: 0 32px 100px rgba(0, 0, 0, 0.46);
+  --v3-shadow-soft: 0 18px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* The action group must wrap rather than compress the document introduction. */
+.application-guide,
+.master-guidance {
+  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+  align-items: end;
+}
+
+.application-guide > div:first-child,
+.master-guidance > div:first-child,
+.application-guide-actions {
+  min-width: 0;
+}
+
+.application-guide h2,
+.master-guidance h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+}
+
+@media (max-width: 900px) {
+  .application-guide,
+  .master-guidance {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .application-guide-actions {
+    justify-content: flex-start;
+  }
+}
