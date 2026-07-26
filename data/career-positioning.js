@@ -8,6 +8,8 @@
 const release = require('./release-data.js');
 const { D, H, P } = release;
 
+const ENTROPY_WORK_URL = 'https://entropyforlife.it/mario-marcolongo-entropy-for-life/';
+
 const graySwan = Object.freeze({
   asOf: '26 July 2026',
   rank: 75,
@@ -35,6 +37,7 @@ const audience = Object.freeze({
   projects: '59+',
   videoProjects: '55+',
   articles: 4,
+  workRecordUrl: ENTROPY_WORK_URL,
   scopeNote: 'Brand audience; cross-platform follower totals are non-unique and time-sensitive.'
 });
 
@@ -49,6 +52,12 @@ function replaceStrength(profile, index, value, label, detail) {
 function addSkill(profile, title, detail) {
   if (!Array.isArray(profile?.skills)) return;
   if (!profile.skills.some(([existing]) => existing === title)) profile.skills.push([title, detail]);
+}
+
+function useOfficialEntropyRecord(profile) {
+  const item = findEntropyExperience(profile);
+  if (item) item.links = [{ label: 'Official Entropy for Life work record', url: ENTROPY_WORK_URL }];
+  return item;
 }
 
 D.identity.buildVersion = 'v2026.07.26';
@@ -89,13 +98,7 @@ if (masterGray) {
 const masterEntropy = D.experience?.find((item) => item?.org?.includes('Entropy for Life'));
 if (masterEntropy) {
   masterEntropy.role = 'Scientific Content Quality & Operations Contractor';
-  masterEntropy.links = {
-    ...(masterEntropy.links || {}),
-    website: 'https://entropyforlife.it',
-    playlist: 'https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh',
-    authorPage: 'https://entropyforlife.it/autore/mario-marcolongo/',
-    thumbnails: 'https://www.youtube.com/playlist?list=PLUXju4zC0Sks'
-  };
+  masterEntropy.links = { website: ENTROPY_WORK_URL };
   masterEntropy.bullets = [
     `Supported ${audience.projects} documented published projects within an Italian science-communication brand with ${audience.youtubeSubscribers} YouTube subscribers and ${audience.youtubeViews} channel views.`,
     'Own recurring primary-literature research and scientific fact-checking; depending on the assignment, translate evidence into scripts, data visualizations, presentation slides and on-screen assets.',
@@ -115,6 +118,7 @@ if (entropyProject) {
   entropyProject.description =
     `Conduct recurring primary-literature research and scientific fact-checking across ${audience.projects} documented published projects: ${audience.videoProjects} YouTube video projects and ${audience.articles} co-authored articles. Entropy for Life is an Italian science-communication brand with ${audience.youtubeSubscribers} YouTube subscribers, ${audience.youtubeViewsExact} channel views, ${audience.instagramFollowers} Instagram followers and ${audience.tiktokFollowers} TikTok followers as of ${audience.asOf}. Depending on the assignment, also translate evidence into scripts, data visualizations, slides and on-screen assets, develop selected thumbnail concepts or production, and operate the supporting website stack. Visual packaging is developed with click-through rate, watch time, retention and immediate attention capture as explicit design objectives. The audience belongs to the brand, and cross-platform totals are not counts of unique people.`;
   entropyProject.role = 'Scientific Content Quality & Operations Contractor';
+  entropyProject.links = { website: ENTROPY_WORK_URL };
   entropyProject.highlights = [
     `Production Scale: ${audience.youtubeViews} YouTube views · ${audience.youtubeSubscribers} subscribers · ${audience.youtubeVideos} published videos`,
     `Documented Work: ${audience.projects} projects · ${audience.videoProjects} YouTube projects · ${audience.articles} co-authored articles`,
@@ -133,15 +137,18 @@ if (Array.isArray(H?.proofMoments)) {
     value: audience.projects,
     label: 'documented published projects',
     detail: `${audience.videoProjects} YouTube projects · ${audience.articles} articles`,
-    href: 'https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh'
+    href: ENTROPY_WORK_URL
   };
   H.proofMoments[2] = {
     value: audience.youtubeViews,
     label: 'YouTube channel views in the production environment',
     detail: `${audience.youtubeSubscribers} subscribers · Entropy for Life brand context`,
-    href: 'https://www.youtube.com/@entropyforlife'
+    href: ENTROPY_WORK_URL
   };
 }
+
+const entropyHero = H?.heroMedia?.find((item) => item?.id === 'entropy');
+if (entropyHero) entropyHero.href = ENTROPY_WORK_URL;
 
 const modelCase = H?.cases?.find((item) => item?.id === 'model-behavior');
 if (modelCase) {
@@ -157,11 +164,16 @@ if (entropyCase) {
   entropyCase.action = 'Own recurring primary-literature research and scientific fact-checking. Depending on the assignment, also develop scripts, data visualizations, slides, on-screen assets and selected thumbnails; manage WordPress, hosting, DNS/SSL and technical SEO; and use click-through rate, watch time, retention and attention capture as visual-packaging criteria.';
   entropyCase.result = `${audience.projects} documented projects supported: ${audience.videoProjects} YouTube video projects and ${audience.articles} co-authored articles, with responsibilities spanning evidence quality, content production and publishing operations.`;
   entropyCase.boundary = 'Platform metrics describe the production environment, not a personal audience. Quantified thumbnail lift is stated only when comparable analytics are available.';
+  entropyCase.href = ENTROPY_WORK_URL;
+  entropyCase.mediaHref = ENTROPY_WORK_URL;
+  entropyCase.linkLabel = 'View my official Entropy for Life portfolio';
+  entropyCase.mediaLinkLabel = 'View my official Entropy for Life portfolio';
+  entropyCase.links = [{ label: 'Official work record published by Entropy for Life', href: ENTROPY_WORK_URL }];
 }
 
 if (P.aiSafety) {
   P.aiSafety.summary = `AI evaluation and research-verification specialist with self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. The Gray Swan Proving Ground profile displayed rank #${graySwan.rank} (${graySwan.percentile.toLowerCase()}) and ${graySwan.totalBreaks} total breaks on ${graySwan.asOf}. Brings eight years of auditable claim verification and ${audience.projects} published-project experience inside a ${audience.youtubeSubscribers}-subscriber, ${audience.youtubeViews}-view science-communication environment.`;
-  const item = findEntropyExperience(P.aiSafety);
+  const item = useOfficialEntropyRecord(P.aiSafety);
   if (item) {
     item.role = 'Scientific Content Quality & Operations Contractor';
     item.bullets = [
@@ -175,16 +187,19 @@ if (P.aiSafety) {
 if (P.researchQuality) {
   P.researchQuality.summary = `Research-verification and data-quality specialist with eight years of auditable scientific, biomedical and structured-data work. Paid contractor across ${audience.projects} documented Entropy for Life projects inside a science-communication brand with ${audience.youtubeSubscribers} YouTube subscribers and ${audience.youtubeViews} channel views, plus founder of an open research-participation directory with documented verification and metadata workflows.`;
   replaceStrength(P.researchQuality, 2, audience.projects, 'Published scientific projects', `${audience.videoProjects} YouTube projects · ${audience.articles} articles · ${audience.youtubeSubscribers} YouTube subscribers`);
+  useOfficialEntropyRecord(P.researchQuality);
 }
 
 if (P.editorialCommunity) {
   P.editorialCommunity.summary = `Research, editorial and content-operations specialist with paid experience across ${audience.projects} documented Entropy for Life projects inside an Italian science-communication brand with ${audience.youtubeSubscribers} YouTube subscribers and ${audience.youtubeViews} channel views. Work spans primary-source fact-checking, scripts and visual production, performance-aware packaging, selected thumbnails, professional writing and web operations.`;
   replaceStrength(P.editorialCommunity, 0, audience.youtubeViews, 'YouTube channel views', `${audience.youtubeSubscribers} subscribers · established creator-brand context`);
   addSkill(P.editorialCommunity, 'Performance-aware content packaging', 'Thumbnail concepts, visual hierarchy and attention structure informed by click-through rate, watch time, retention and current platform best practices.');
+  useOfficialEntropyRecord(P.editorialCommunity);
 }
 
 if (P.integrity) {
   P.integrity.summary = `Knowledge-integrity and open-source research specialist with eight years of auditable Wikimedia work, paid scientific verification across ${audience.projects} Entropy for Life projects inside a ${audience.youtubeSubscribers}-subscriber science-communication brand, and self-directed adversarial testing of AI systems. The ${graySwan.asOf} Gray Swan snapshot displayed rank #${graySwan.rank} (${graySwan.percentile.toLowerCase()}) and ${graySwan.totalBreaks} Proving Ground total breaks.`;
+  useOfficialEntropyRecord(P.integrity);
 }
 
-module.exports = { ...release, D, H, P, audience, graySwan };
+module.exports = { ...release, D, H, P, audience, graySwan, ENTROPY_WORK_URL };
