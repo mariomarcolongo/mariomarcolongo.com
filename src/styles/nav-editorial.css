@@ -83,6 +83,15 @@
   color: var(--p5-ink, var(--ink));
 }
 
+/* Preserve the native hidden state even when legacy SVG rules set display explicitly. */
+.nav-editorial .theme-toggle [hidden] {
+  display: none !important;
+}
+
+.nav-editorial .theme-toggle svg:not([hidden]) {
+  display: block;
+}
+
 .nav-editorial .theme-toggle:hover {
   color: var(--p5-blue, var(--accent));
   transform: none;
