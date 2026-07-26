@@ -46,6 +46,29 @@
   max-width: 700px;
 }
 
+/* In dark mode the recommended card deliberately inverts to paper; restore matching text contrast. */
+[data-theme="dark"] .v8-document.is-recommended {
+  border-color: rgba(17, 18, 16, 0.16);
+}
+
+[data-theme="dark"] .v8-document.is-recommended > span {
+  color: #b63827;
+}
+
+[data-theme="dark"] .v8-document.is-recommended p {
+  color: rgba(17, 18, 16, 0.72);
+}
+
+[data-theme="dark"] .v8-document.is-recommended small {
+  color: #244eea;
+}
+
+[data-theme="dark"] .v8-document.is-recommended:hover,
+[data-theme="dark"] .v8-document.is-recommended:focus-visible {
+  border-color: #111210;
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.28);
+}
+
 .v8-applications .v8-section-head h2 {
   max-width: 11ch;
   font-size: clamp(3.2rem, 5.4vw, 5.9rem);
