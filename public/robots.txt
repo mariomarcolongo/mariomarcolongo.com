@@ -1,7 +1,6 @@
 # Public portfolio and machine-readable professional dossier.
-# Crawling is allowed for search and query-time AI grounding.
-# AI training is reserved through the Content-Signal HTTP response header:
-# search=yes, ai-input=yes, ai-train=no
+# Crawling, indexing, query-time AI use and AI training are permitted.
+# The origin also sends: Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: *
 Allow: /
