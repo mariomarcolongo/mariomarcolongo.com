@@ -88,6 +88,8 @@ CV_PHONE="+39 ..." npm run pdf
 
 The generator injects the value at render time without writing it into tracked source files or public HTML. `CV_PHONE` takes precedence over the ignored local config.
 
+After building, `npm run preview` serves a loopback-only local preview that injects the phone into the five CV responses without modifying `dist/`. Use `npm run preview:public` when you need to inspect the exact public output without private contact data.
+
 ## Verification and release gates
 
 ```bash

@@ -590,17 +590,19 @@ body {
 .application-metric span {
   display: block;
   margin-top: 4px;
-  font-size: 0.72rem;
+  color: var(--career-ink);
+  font-size: 0.75rem;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.35;
 }
 
 .application-metric small {
   display: block;
   margin-top: 4px;
-  color: var(--career-subtle);
-  font-size: 0.63rem;
-  line-height: 1.35;
+  color: var(--career-muted);
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1.42;
 }
 
 .application-entry,
@@ -1140,7 +1142,8 @@ body {
   .application-summary,
   .application-section-title,
   .application-entry h3,
-  .application-skill strong {
+  .application-skill strong,
+  .application-metric span {
     color: #111827 !important;
   }
 
@@ -1150,7 +1153,8 @@ body {
   .application-skill span,
   .application-evidence p,
   .application-period,
-  .application-footer-note {
+  .application-footer-note,
+  .application-metric small {
     color: #4b5563 !important;
   }
 
