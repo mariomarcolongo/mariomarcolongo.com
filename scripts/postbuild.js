@@ -42,6 +42,12 @@ const ROOT_HTML_MIRRORS = [
   'security.html'
 ];
 const CV_FILES = ['cv.html', 'cv-resume.html', 'cv-research.html', 'cv-editorial.html', 'cv-integrity.html'];
+const INDEX_PRESENTATION_STYLES = [
+  '/styles/portfolio-presentation-v10.css',
+  '/styles/portfolio-presentation-v10-mobile-fix.css',
+  '/styles/portfolio-presentation-v11.css',
+  '/styles/portfolio-presentation-v12.css'
+];
 
 function assertNonEmpty(relativePath) {
   const filePath = path.join(DIST, relativePath);
@@ -79,6 +85,24 @@ function addIndexStylesheet(href) {
   fs.writeFileSync(filePath, current.replace('</head>', `<link rel="stylesheet" href="${href}"></head>`));
 }
 
+function inlineIndexPresentationStyles() {
+  const filePath = path.join(DIST, 'index.html');
+  let html = fs.readFileSync(filePath, 'utf8');
+  const css = [];
+
+  for (const href of INDEX_PRESENTATION_STYLES) {
+    const link = `<link rel="stylesheet" href="${href}">`;
+    if (!html.includes(link)) throw new Error(`dist/index.html is missing expected presentation stylesheet: ${href}`);
+    const stylesheetPath = path.join(DIST, href.replace(/^\//, ''));
+    css.push(`/* ${href} */\n${fs.readFileSync(stylesheetPath, 'utf8')}`);
+    html = html.replace(link, '');
+  }
+
+  if (!html.includes('</head>')) throw new Error('dist/index.html has no closing head tag');
+  html = html.replace('</head>', `<style data-inline="portfolio-presentation">\n${css.join('\n')}\n</style></head>`);
+  fs.writeFileSync(filePath, html);
+}
+
 try {
   REQUIRED.forEach(assertNonEmpty);
   try {
@@ -92,6 +116,7 @@ try {
   addIndexStylesheet('/styles/portfolio-presentation-v10-mobile-fix.css');
   addIndexStylesheet('/styles/portfolio-presentation-v11.css');
   addIndexStylesheet('/styles/portfolio-presentation-v12.css');
+  inlineIndexPresentationStyles();
   for (const relativePath of ROOT_HTML_MIRRORS) {
     const source = path.join(DIST, relativePath);
     const destination = path.join(ROOT, relativePath);
