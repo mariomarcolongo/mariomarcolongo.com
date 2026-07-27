@@ -80,13 +80,13 @@ A locally retained same-day WACZ capture records the immediately preceding state
 
 ## Private phone number in local PDFs
 
-The public repository and website do not contain a personal phone number. To include it in locally generated PDFs, set `CV_PHONE` only in the local environment:
+The public repository and website do not contain a personal phone number. Locally generated PDFs read the ignored `data/private.local.js` contact config when it defines `window.MARIO_PRIVATE.phone`. To override it for one command, set `CV_PHONE` in the local environment:
 
 ```bash
 CV_PHONE="+39 ..." npm run pdf
 ```
 
-The generator injects the value at render time without writing it into tracked source files or public HTML.
+The generator injects the value at render time without writing it into tracked source files or public HTML. `CV_PHONE` takes precedence over the ignored local config.
 
 ## Verification and release gates
 

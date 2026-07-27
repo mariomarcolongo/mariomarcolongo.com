@@ -7,9 +7,9 @@
 ---
 
 ## Executive Summary
-Research, evidence and AI operations specialist with eight years of auditable public-source and structured-data work, paid scientific fact-checking and writing, community-facing research facilitation, ownership of an open research-participation directory, and sustained adversarial testing of AI systems. The profile supports four application lanes: AI evaluation and model behavior; research, editorial and community operations; knowledge integrity and trust; and open science and data quality. Public claims are reported with explicit evidence boundaries, while technical implementation is described accurately as code-literate, AI-assisted operations rather than independent software development.
+Research, evidence and AI operations specialist with eight years of auditable public-source and structured-data work, paid scientific fact-checking and editorial production, community-facing research facilitation, ownership of an open research-participation directory, and sustained adversarial testing of AI systems. On 26 July 2026, the Gray Swan Proving Ground profile displayed rank #75 (top 6%) and 110 total breaks. Entropy for Life work covers 80 documented published content contributions: 55 YouTube videos · 4 articles · 21 short-form pieces. Technical work is code-literate and AI-assisted, with personal ownership of requirements, verification, deployment and maintenance.
 
-> **I use AI-assisted implementation extensively. I define requirements and workflows, inspect code structure and behavior, test implementations, diagnose functional problems, guide iterative changes, deploy releases, and maintain services. I do not present myself as an independent software developer.**
+> **My technical work is code-literate and AI-assisted: I define requirements and workflows, inspect implementation behavior, test releases, diagnose functional problems, guide iterations, deploy releases and maintain services.**
 
 ---
 
@@ -19,7 +19,7 @@ Research, evidence and AI operations specialist with eight years of auditable pu
 - Scientific Verification & Evidence Synthesis: Primary-source fact-checking, bibliographic research, claim decomposition, evidence screening, source-quality assessment and cross-source corroboration.
 - Data Quality & Provenance: Structured metadata, entity reconciliation, validation rules, documentation, taxonomy design and public-record verification.
 - Code-Literate Technical Operations: Requirements definition, codebase reading and behavior inspection, functional testing, issue diagnosis, deployment operations and service maintenance.
-- AI-Assisted Technical Workflow: Uses coding agents for implementation support while personally inspecting structure and behavior, testing results and coordinating revisions; not independent software development.
+- AI-Assisted Technical Workflow: Uses coding agents for implementation support while personally defining requirements, inspecting structure and behavior, testing results, guiding revisions, deploying releases and maintaining services.
 - Open Science & Structured Data: Wikimedia, Wikidata, FAIRsharing, Zenodo, ENA records, JSON-LD, RDF Turtle/VoID, OpenAPI and MCP interfaces.
 - Web & Cloud Operations: WordPress, HTML/CSS modification, Git/GitHub, JSON, REST APIs, AWS Lambda, Cloudflare Pages, DNS/SSL and CI/CD operations.
 - Data Visualization: SVG vector diagrams, Tableau Public, Flourish and open-data publication.
@@ -32,7 +32,7 @@ Research, evidence and AI operations specialist with eight years of auditable pu
 ### Founder & Research-Workflow Owner — Yourself to Science™
 *Aug 2024 — Present* · **[Independent project]**
 
-- Founded and operate an open-source research-participation directory indexing more than 55 clinical studies, biobanks, donation programs, registries and other initiatives.
+- Founded and operate an open-source research-participation directory indexing 55 resources; as of 27 July 2026, 37 unique Wikidata items use yourselftoscience.org as a reference URL (P854).
 - Defined the inclusion model, verification workflow, provenance fields, licensing structure and machine-readable metadata requirements.
 - Use AI-assisted implementation while personally defining requirements, inspecting code structure and behavior, testing releases and maintaining the service.
 
@@ -40,16 +40,16 @@ Research, evidence and AI operations specialist with eight years of auditable pu
 *Jul 2026 — Present* · **[Independent practice]**
 
 - Conduct self-directed testing of LLM instruction handling, policy boundaries and edge cases across chat, image, agentic tool-use and indirect prompt-injection settings.
-- Reached #75 on the Proving Ground leaderboard (top 6%) with 110 platform-recorded total breaks on 25 July 2026; the same profile showed Arena rank #370, 27 global unique breaks, 1,090 points and 246 submissions.
-- Document platform-reported outcomes conservatively, separating public evidence from independent verification, security certification or model-wide conclusions.
+- Reached #75 on the Proving Ground (top 6%) with 110 platform-displayed total breaks on 26 July 2026; the same profile displayed Arena rank #371, 27 global unique breaks, 1,090 points and 246 submissions.
+- Document the visible 109/110 discrepancy and separate platform-reported outcomes from independent verification, security certification or model-wide conclusions.
 
-### Scientific Research, Fact-Checking & Website Operations Contractor — Entropy for Life — Italy
+### Scientific Content Quality & Operations Contractor — Entropy for Life — Italy
 *Jun 2023 — Present* · **[Independent contractor]**
 
-- Deliver primary-literature research, scientific fact-checking and script development across 55+ published YouTube video projects and four co-authored articles; most video assignments combine all three functions, while selected work focuses on fact-checking and/or data visualization.
-- Produce data visualizations, presentation slides and on-screen assets, short-form materials and selected thumbnails independently or with video editor Alessandro Lanzoni; additional Instagram and TikTok work is not yet fully indexed.
-- Manage OVHCloud hosting, DNS, SSL, WordPress configuration, layout and functionality changes, and technical SEO as website operations rather than conventional independent software development.
-- Formally acknowledged in Giacomo Moro Mauretto’s Mondadori book Italiani veri for scientific-literature research and error detection.
+- Delivered 80 documented published content contributions: 55 YouTube videos, 4 co-authored articles and 21 short-form pieces.
+- Own recurring primary-literature research and scientific fact-checking; depending on the assignment, translate evidence into scripts, data analyses, visualizations, presentation slides, on-screen assets and short-form content.
+- Develop selected thumbnail concepts and visual packaging independently or with the video editor, using click-through rate, watch time, retention and immediate attention capture as explicit design criteria.
+- Designed and built entropyforlife.it in WordPress and manage responsive design, publishing, OVHcloud hosting, DNS, SSL and technical SEO; formally acknowledged in the Mondadori book Italiani veri for scientific-literature research and error detection.
 
 ### Volunteer Focus-Group Co-Facilitator & Research Operations Contributor — Department of Developmental Psychology and Socialisation (DPSS), University of Padua
 *Nov 2022 — 2025* · **[Volunteer research collaboration supervised by Marta Panzeri]**
@@ -91,17 +91,17 @@ Research, evidence and AI operations specialist with eight years of auditable pu
 ### Model Behavior & Adversarial Evaluation
 **Model-Behavior Evaluator**
 
-Self-directed model-behavior evaluation conducted through the Gray Swan Proving Ground. The dated 25 July 2026 screenshot shows Proving Ground rank #75, top 6%, with 110 platform-recorded total breaks; the same profile shows Arena rank #370, 27 global unique breaks, 1,090 points and 246 submissions. Aggregate counts and selected public labels are presented with explicit evidence limitations; complete prompts, outputs, model versions and adjudication materials are not reproduced.
+Self-directed model-behavior evaluation conducted through the Gray Swan Proving Ground. The 25 July 2026 profile snapshot displays rank #75, top 6%, and 110 total breaks. The same snapshot shows 246 Arena submissions, 27 global unique breaks, 1,090 points and Arena rank #370. Aggregate counts are presented with explicit evidence limitations; complete prompts, outputs, model versions and adjudication materials are not reproduced.
 
 ### Yourself to Science™ | Open Research-Participation Directory
 **Founder & Research-Workflow Owner** | Website: https://yourselftoscience.org | GitHub: https://github.com/yourselftoscience/yourselftoscience.org | DOI: https://doi.org/10.5281/zenodo.15109359 | FAIRsharing: https://doi.org/10.25504/FAIRsharing.d3d487
 
-Founded, designed and operate an open-source research-participation directory indexing more than 55 initiatives. Defined the inclusion model, verification workflow, provenance fields, licensing structure and machine-readable metadata requirements, including JSON-LD, RDF Turtle/VoID, OpenAPI and an MCP interface. Technical implementation is AI-assisted and personally verified through requirements, code reading, functional testing and operational maintenance.
+Founded, designed and operate an open-source research-participation directory indexing 55 resources. As of 27 July 2026, 37 unique Wikidata items use yourselftoscience.org as a reference URL (P854). Defined the inclusion model, verification workflow, provenance fields, licensing structure and machine-readable metadata requirements, including JSON-LD, RDF Turtle/VoID, OpenAPI and an MCP interface. Technical implementation is AI-assisted and personally verified through requirements, code reading, functional testing and operational maintenance.
 
-### Entropy for Life — Scientific Verification & Web Operations
-**Scientific Research, Fact-Checking & Website Operations Contractor** | Website: https://entropyforlife.it | Videos & Documentaries: https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh | Author Page: https://entropyforlife.it/autore/mario-marcolongo/
+### Entropy for Life — Scientific Content Quality & Operations
+**Scientific Content Quality & Operations Contractor**
 
-Paid contractor for Entropy for Life across 59+ publicly indexed projects: 55+ published YouTube video projects and four co-authored articles. Most video assignments combine primary-literature research, scientific fact-checking and script development; selected assignments focus on fact-checking and/or data visualization. Also produce data visualizations, presentation slides, on-screen assets, short-form materials and selected thumbnails independently or with video editor Alessandro Lanzoni. Additional Instagram and TikTok work is not yet fully indexed. Manage OVHCloud hosting, DNS, SSL, WordPress configuration, layout and functionality changes, and technical SEO. Formally acknowledged in Giacomo Moro Mauretto’s Mondadori book Italiani veri.
+Conduct recurring primary-literature research and scientific fact-checking across 80 documented published content contributions: 55 YouTube videos, 4 co-authored articles and 21 short-form pieces. Entropy for Life is an Italian science-communication brand with 267K YouTube subscribers, 36,524,137 channel views, 159K Instagram followers and 54K TikTok followers as of 26 July 2026. Depending on the assignment, also translate evidence into scripts, data analyses, visualizations, slides, on-screen assets, short-form content and selected thumbnail concepts or production. Designed and built entropyforlife.it in WordPress and operate its responsive design, publishing and OVHcloud technical stack. The audience belongs to the brand, and cross-platform totals are not counts of unique people.
 
 ### MDPI Filter | Browser Extension
 **Product Owner & AI-Assisted Technical Operator** | Chrome Store: https://chromewebstore.google.com/detail/mdpi-filter/comknkeimaaadpiopddjoknflbmjeccp | Edge Store: https://microsoftedge.microsoft.com/addons/detail/mdpi-filter/efonlkldplkaeekpiajloajjmkappjgi | GitHub: https://github.com/orgs/mdpi-filter/repositories
@@ -122,7 +122,7 @@ Developed the concept, narrative structure, interaction requirements and behavio
 
 ## Education & Certifications
 
-- **Coursework in Medicine and Surgery** (2020) — Università degli Studi della Campania ‘Luigi Vanvitelli’ · Degree not completed
+- **Medicine and Surgery studies** (Enrolled 2020 — Present) — Università degli Studi della Campania ‘Luigi Vanvitelli’ · Studies currently inactive
 - **EF SET English Certificate 68/100 (C1 overall)** (Mar 2024) — EF Standard English Test · Credential: https://cert.efset.org/en/eJz39v
 - **Career Essentials in Generative AI** (Mar 2024) — Microsoft and LinkedIn · Credential: https://www.linkedin.com/learning/certificates/c4f1f59578e3ac2567787e262e3b2ec55debf96bbbced4d34d5edaa821d9e6d9
 - **GALENOS Crowd Evidence Synthesis Training** (May 2026) — Cochrane Crowd & GALENOS · Systematic-review screening training

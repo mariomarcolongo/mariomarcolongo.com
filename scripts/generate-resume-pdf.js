@@ -4,6 +4,7 @@ const path = require('node:path');
 const { PDFDocument } = require('pdf-lib');
 const { startStaticServer } = require('./lib/static-server.js');
 const { launchBrowser } = require('./lib/browser.js');
+const { resolveCvPhone } = require('./lib/private-contact.js');
 
 const DOCUMENTS = [
   {
@@ -31,6 +32,7 @@ const DOCUMENTS = [
 async function generateResumePdfs() {
   const distDir = path.resolve(process.cwd(), 'dist');
   const auditDir = path.resolve(process.cwd(), 'audit-output');
+  const phone = resolveCvPhone();
   fs.mkdirSync(auditDir, { recursive: true });
   for (const document of DOCUMENTS) {
     const htmlPath = path.join(distDir, document.route);
@@ -54,7 +56,7 @@ async function generateResumePdfs() {
           phoneSlot.setAttribute('href', `tel:${String(phone).replace(/\s+/g, '')}`);
           phoneSlot.hidden = false;
         }
-      }, process.env.CV_PHONE || '');
+      }, phone);
 
       const fit = await page.evaluate(() => Array.from(document.querySelectorAll('.application-page')).map((applicationPage, index) => {
         const pageRect = applicationPage.getBoundingClientRect();

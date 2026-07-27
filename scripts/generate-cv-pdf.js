@@ -4,10 +4,12 @@ const path = require('node:path');
 const { PDFDocument } = require('pdf-lib');
 const { startStaticServer } = require('./lib/static-server.js');
 const { launchBrowser } = require('./lib/browser.js');
+const { resolveCvPhone } = require('./lib/private-contact.js');
 
 async function generateCvPdf() {
   const distDir = path.resolve(process.cwd(), 'dist');
   const htmlPath = path.join(distDir, 'cv.html');
+  const phone = resolveCvPhone();
   if (!fs.existsSync(htmlPath)) throw new Error('dist/cv.html not found. Run `npm run build` first.');
 
   const staticServer = await startStaticServer(distDir);
@@ -21,10 +23,13 @@ async function generateCvPdf() {
       document.documentElement.setAttribute('data-theme', 'light');
       const phoneSlot = document.getElementById('cvPhoneSlot');
       if (phoneSlot && phone) {
-        phoneSlot.innerHTML = `· <a href="tel:${phone.replace(/\s/g, '')}">${phone}</a>`;
+        phoneSlot.textContent = `· ${phone}`;
+        phoneSlot.setAttribute('href', `tel:${phone.replace(/\s/g, '')}`);
+        phoneSlot.hidden = false;
         phoneSlot.classList.add('has-phone');
+        if (phoneSlot.nextElementSibling?.tagName !== 'BR') phoneSlot.after(document.createElement('br'));
       }
-    }, process.env.CV_PHONE || '');
+    }, phone);
 
     const outPath = path.resolve(process.cwd(), 'Mario Marcolongo — Curriculum Vitae.pdf');
     await page.pdf({

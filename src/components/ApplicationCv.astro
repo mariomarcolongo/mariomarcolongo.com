@@ -188,7 +188,7 @@ const pageDescription = `Specialized two-page application CV for ${profile.title
 
   <script is:inline>
     (function injectPrivateCvData() {
-      var privateData = typeof window !== "undefined" && window._privateData ? window._privateData : {};
+      var privateData = typeof window !== "undefined" ? (window.MARIO_PRIVATE || window._privateData || {}) : {};
       var phoneSlot = document.getElementById("cvPhoneSlot");
       if (!phoneSlot || !privateData.phone) return;
       phoneSlot.textContent = privateData.phone;
