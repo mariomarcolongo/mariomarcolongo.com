@@ -1,8 +1,8 @@
 # Public portfolio and machine-readable professional dossier.
 # Crawling, indexing, query-time AI use and AI training are permitted.
-# The origin also sends: Content-Signal: search=yes, ai-input=yes, ai-train=yes
 
 User-agent: *
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 Allow: /
 
 Sitemap: https://mariomarcolongo.com/sitemap.xml

@@ -1,4 +1,6 @@
-# Agent Access and Content-Use Policy
+# auth.md
+
+Agent access and content-use policy for `mariomarcolongo.com`.
 
 **Domain:** `mariomarcolongo.com`  
 **Owner:** Mario Marcolongo (`me@mariomarcolongo.com`)  
@@ -18,14 +20,18 @@ Primary machine-readable resources:
 - `/.well-known/agent-card.json` — Agent-to-Agent discovery card
 - `/.well-known/mcp/server-card.json` — MCP server card
 
-This is a static site. It does **not** expose token-issuance, OAuth registration, credential-exchange or protected-resource endpoints. References to authentication in discovery metadata describe compatibility information only and do not create a functioning authorization service.
+## Registration and authentication
+
+No registration or authentication is required for the site's public read-only resources. Agents may access them directly with ordinary `GET` or `HEAD` requests.
+
+This is a static site. It does **not** expose token-issuance, OAuth registration, credential-exchange or protected-resource endpoints. Discovery metadata must not be interpreted as creating a functioning authorization service.
 
 ## Content-use signals
 
-The origin sends this response header on static resources:
+The origin sends this response header on static resources and the same directive is published in `/robots.txt`:
 
 ```http
-Content-Signal: search=yes, ai-input=yes, ai-train=yes
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 ```
 
 The intended interpretation is:
@@ -34,7 +40,7 @@ The intended interpretation is:
 - **ai-input=yes** — retrieval, grounding, analysis, summarization, citation, embeddings, agent workflows and other AI-input uses are permitted.
 - **ai-train=yes** — use for AI model training, fine-tuning, evaluation and related machine-learning workflows is permitted.
 
-No separate permission is required for these automated or AI uses. The same permissive policy is summarized in `/robots.txt`. Content Signals express content-use permissions; they are not authentication mechanisms or technical access controls.
+No separate permission is required for these automated or AI uses. Content Signals express content-use permissions; they are not authentication mechanisms or technical access controls.
 
 ## Licensing and attribution
 
