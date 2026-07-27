@@ -9,28 +9,36 @@
   }
 
   /*
-   * WebKit can round an element that is exactly 297mm tall onto a second sheet.
-   * Keep a 1mm pagination safety margin and place the explicit page break before
-   * every page after the first, rather than after every page.
+   * Safari can generate an empty trailing sheet for a fixed-height element that
+   * nearly fills A4, even when its declared height is fractionally below 297mm.
+   * Use a deliberately shorter page box and only force a break after non-final
+   * pages. Avoid break-inside constraints on the page wrapper itself, because
+   * WebKit may treat those as an additional pagination boundary.
    */
+  .application-pages {
+    display: block !important;
+  }
+
   .application-page {
     width: 210mm !important;
-    height: 296mm !important;
-    min-height: 296mm !important;
-    max-height: 296mm !important;
+    height: 280mm !important;
+    min-height: 280mm !important;
+    max-height: 280mm !important;
+    margin: 0 !important;
     box-sizing: border-box !important;
     break-before: auto !important;
     page-break-before: auto !important;
     break-after: auto !important;
     page-break-after: auto !important;
-    break-inside: avoid-page !important;
-    page-break-inside: avoid !important;
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+    overflow: hidden !important;
     padding: 9mm 13mm 13mm !important;
   }
 
-  .application-page + .application-page {
-    break-before: page !important;
-    page-break-before: always !important;
+  .application-page:not(:last-child) {
+    break-after: page !important;
+    page-break-after: always !important;
   }
 
   .application-header {
