@@ -54,7 +54,7 @@ function patchIndex(html) {
   html = html.replaceAll('460K+', CURRENT.combinedFollowers);
   html = replaceRegexRequired(
     html,
-    /<strong>480K\+<\/strong>\s*<span>combined public platform following<\/span>\s*<small>Entropy for Life brand audience · 267K YouTube subscribers · non-unique<\/small>/,
+    /<strong>(?:480K\+|36\.5M)<\/strong>\s*<span>(?:combined public platform following|YouTube channel views in the production environment)<\/span>\s*<small>(?:Entropy for Life brand audience · 267K YouTube subscribers · non-unique|267K subscribers · Entropy for Life brand context)<\/small>/,
     '<strong>36.5M</strong><span>YouTube channel views in the production environment</span><small>267K subscribers · Entropy for Life brand context</small>',
     'Homepage Entropy proof metric'
   );
