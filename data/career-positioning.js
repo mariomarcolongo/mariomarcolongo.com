@@ -43,6 +43,13 @@ const audience = Object.freeze({
   scopeNote: 'Brand audience; cross-platform follower totals are non-unique and time-sensitive.'
 });
 
+const yourselfToScience = Object.freeze({
+  asOf: '27 July 2026',
+  resources: 55,
+  wikidataReferences: 37,
+  statsUrl: 'https://yourselftoscience.org/stats'
+});
+
 function findEntropyExperience(profile) {
   return profile?.experience?.find((item) => item?.organization?.includes('Entropy for Life'));
 }
@@ -64,6 +71,10 @@ function useOfficialEntropyRecord(profile) {
 
 function contributionBreakdown() {
   return `${audience.videoProjects} YouTube videos · ${audience.articles} articles · ${audience.shortForm} short-form pieces`;
+}
+
+function wikidataReferenceStatement() {
+  return `${yourselfToScience.wikidataReferences} unique Wikidata items use yourselftoscience.org as a reference URL (P854)`;
 }
 
 D.identity.buildVersion = 'v2026.07.27';
@@ -96,6 +107,12 @@ if (technicalPillar) {
     'Uses coding agents for implementation support while personally defining requirements and workflows, inspecting code structure and behavior, testing releases, diagnosing functional problems, guiding revisions, deploying releases and maintaining services.';
 }
 
+const dataQualityPillar = D.pillars?.find((item) => item?.category === 'DATA QUALITY & OPEN SCIENCE');
+if (dataQualityPillar) {
+  dataQualityPillar.desc =
+    `Founded and operate Yourself to Science™, an open-source research-participation directory indexing ${yourselfToScience.resources} resources with documented inclusion, verification, provenance, metadata and licensing workflows. As of ${yourselfToScience.asOf}, ${wikidataReferenceStatement()}.`;
+}
+
 const masterGray = D.experience?.find((item) => item?.role?.includes('Model-Behavior'));
 if (masterGray) {
   masterGray.bullets = [
@@ -126,21 +143,62 @@ if (masterEntropy) {
     'Designed and built entropyforlife.it in WordPress and manage responsive design, publishing, OVHcloud hosting, DNS, SSL and technical SEO; formally acknowledged in the Mondadori book Italiani veri for scientific-literature research and error detection.'
   ];
   masterEntropy.resumeBullets = [
-    `Delivered ${audience.projects} documented published content contributions—${audience.videoProjects} YouTube videos, ${audience.articles} articles and ${audience.shortForm} short-form pieces—through evidence review, content production and publishing operations.`,
+    `Delivered ${audience.projects} documented published content contributions—${audience.videoProjects} YouTube videos, ${audience.articles} articles and ${audience.shortForm} pieces—through evidence review, content production and publishing operations.`,
     'Designed and built entropyforlife.it in WordPress and manage its responsive design, publishing and OVHcloud technical operations.'
   ];
 }
 
+const masterYourselfToScience = D.experience?.find((item) => item?.org?.includes('Yourself to Science'));
+if (masterYourselfToScience) {
+  masterYourselfToScience.links = {
+    ...(masterYourselfToScience.links || {}),
+    stats: yourselfToScience.statsUrl
+  };
+  if (masterYourselfToScience.bullets?.[0]) {
+    masterYourselfToScience.bullets[0] =
+      `Founded and operate an open-source research-participation directory indexing ${yourselfToScience.resources} resources; as of ${yourselfToScience.asOf}, ${wikidataReferenceStatement()}.`;
+  }
+  if (masterYourselfToScience.resumeBullets?.[0]) {
+    masterYourselfToScience.resumeBullets[0] =
+      `Founded and operate an open-source directory indexing ${yourselfToScience.resources} research-participation resources; ${yourselfToScience.wikidataReferences} unique Wikidata items use the domain as a P854 reference URL.`;
+  }
+}
+
 const medicineEducation = D.education?.find((item) => item?.title?.includes('Medicine and Surgery'));
 if (medicineEducation) {
-  medicineEducation.title = 'Studies in Medicine and Surgery';
-  medicineEducation.status = 'Degree not completed';
+  medicineEducation.title = 'Medicine and Surgery studies';
+  medicineEducation.period = 'Enrolled 2020 — Present';
+  medicineEducation.status = 'Studies currently inactive';
+}
+
+const researchDirectoryStat = D.stats?.find((item) => item?.label?.includes('Research Initiatives'));
+if (researchDirectoryStat) {
+  researchDirectoryStat.value = String(yourselfToScience.resources);
+  researchDirectoryStat.label = 'Research Resources Indexed';
+  researchDirectoryStat.detail = `${yourselfToScience.wikidataReferences} unique Wikidata items use the domain as a P854 reference URL`;
 }
 
 const aiWorkflowSkill = D.skills?.findIndex((item) => item.startsWith('AI-Assisted Technical Workflow:'));
 if (aiWorkflowSkill >= 0) {
   D.skills[aiWorkflowSkill] =
     'AI-Assisted Technical Workflow: Uses coding agents for implementation support while personally defining requirements, inspecting structure and behavior, testing results, guiding revisions, deploying releases and maintaining services.';
+}
+
+const yourselfToScienceProject = D.projects?.find((item) => item?.id === 'yourself-to-science');
+if (yourselfToScienceProject) {
+  yourselfToScienceProject.oneLiner =
+    `An open-source directory indexing ${yourselfToScience.resources} research-participation resources, with ${yourselfToScience.wikidataReferences} unique Wikidata items using the domain as a reference URL.`;
+  yourselfToScienceProject.description =
+    `Founded, designed and operate an open-source research-participation directory indexing ${yourselfToScience.resources} resources. As of ${yourselfToScience.asOf}, ${wikidataReferenceStatement()}. Defined the inclusion model, verification workflow, provenance fields, licensing structure and machine-readable metadata requirements, including JSON-LD, RDF Turtle/VoID, OpenAPI and an MCP interface. Technical implementation is AI-assisted and personally verified through requirements, code reading, functional testing and operational maintenance.`;
+  yourselfToScienceProject.links = {
+    ...(yourselfToScienceProject.links || {}),
+    stats: yourselfToScience.statsUrl
+  };
+  yourselfToScienceProject.highlights = [
+    `${yourselfToScience.resources} Research Resources: Clinical studies, biobanks, donation programs, registries and other opportunities catalogued`,
+    'Verification Workflow: Inclusion, provenance, metadata and licensing requirements documented',
+    `${yourselfToScience.wikidataReferences} Wikidata References: Unique items using yourselftoscience.org as a P854 reference URL`
+  ];
 }
 
 const entropyProject = D.projects?.find((item) => item?.id === 'entropy-for-life');
@@ -216,15 +274,22 @@ if (entropyCase) {
   entropyCase.links = [{ label: 'Official work record published by Entropy for Life', href: ENTROPY_WORK_URL }];
 }
 
+const researchSystemCase = H?.cases?.find((item) => item?.id === 'research-system');
+if (researchSystemCase) {
+  researchSystemCase.result =
+    `${yourselfToScience.resources} resources indexed; as of ${yourselfToScience.asOf}, ${wikidataReferenceStatement()}. FAIRsharing, Zenodo and human- and machine-readable interfaces provide additional public records.`;
+  researchSystemCase.boundary =
+    'Technical ownership covers requirements, information architecture, verification, functional testing, deployment diagnosis and ongoing operations; implementation is AI-assisted.';
+  researchSystemCase.links = [
+    { label: 'View project statistics and Wikidata references', href: yourselfToScience.statsUrl }
+  ];
+}
+
 if (P.shared) {
   P.shared.location =
     'Italy · Italian/EU citizen · Open to worldwide relocation · International B2B contracting';
   if (Array.isArray(P.shared.education)) {
-    P.shared.education = P.shared.education.map((item) =>
-      item.includes('Medicine and Surgery')
-        ? 'Studies in Medicine and Surgery — Università degli Studi della Campania Luigi Vanvitelli, 2020; degree not completed'
-        : item
-    );
+    P.shared.education = P.shared.education.filter((item) => !item.includes('Medicine and Surgery'));
   }
 }
 
@@ -249,6 +314,13 @@ if (P.aiSafety) {
 
 if (P.researchQuality) {
   P.researchQuality.summary = `Research-verification and data-quality specialist with eight years of auditable scientific, biomedical and structured-data work. Paid contractor across ${audience.projects} documented Entropy for Life content contributions inside a science-communication brand with ${audience.youtubeSubscribers} YouTube subscribers and ${audience.youtubeViews} channel views, plus founder of an open research-participation directory with documented verification and metadata workflows.`;
+  replaceStrength(
+    P.researchQuality,
+    1,
+    String(yourselfToScience.resources),
+    'Research resources indexed',
+    `${yourselfToScience.wikidataReferences} unique Wikidata items use the domain as a P854 reference URL`
+  );
   replaceStrength(P.researchQuality, 2, audience.projects, 'Published scientific content contributions', contributionBreakdown());
   const item = useOfficialEntropyRecord(P.researchQuality);
   if (item) {
@@ -257,6 +329,17 @@ if (P.researchQuality) {
       'Translate complex evidence into clear editorial recommendations, identify unsupported claims and document uncertainty or disagreement between sources.',
       'Designed and built entropyforlife.it in WordPress and manage responsive design, publishing, OVHcloud hosting, DNS, SSL and technical SEO.'
     ];
+  }
+  const y2s = P.researchQuality.experience?.find((experience) => experience?.organization?.includes('Yourself to Science'));
+  if (y2s) {
+    y2s.links = [
+      ...(y2s.links || []),
+      { label: 'Project statistics', url: yourselfToScience.statsUrl }
+    ];
+    if (y2s.bullets?.[0]) {
+      y2s.bullets[0] =
+        `Founded and operate an open-source directory indexing ${yourselfToScience.resources} research-participation resources; as of ${yourselfToScience.asOf}, ${wikidataReferenceStatement()}.`;
+    }
   }
 }
 
@@ -289,6 +372,12 @@ if (P.integrity) {
     gray.bullets[2] =
       'Apply threat-oriented reasoning and structured evidence capture to ambiguous AI-system behavior.';
   }
+  const directoryEvidence = P.integrity.evidence?.find((evidence) => evidence?.title?.includes('Open research-directory'));
+  if (directoryEvidence) {
+    directoryEvidence.body =
+      `Defined inclusion, provenance and entity-reconciliation workflows for ${yourselfToScience.resources} resources; ${yourselfToScience.wikidataReferences} unique Wikidata items use the domain as a P854 reference URL.`;
+    directoryEvidence.link = yourselfToScience.statsUrl;
+  }
 }
 
-module.exports = { ...release, D, H, P, audience, graySwan, ENTROPY_WORK_URL };
+module.exports = { ...release, D, H, P, audience, graySwan, yourselfToScience, ENTROPY_WORK_URL };
