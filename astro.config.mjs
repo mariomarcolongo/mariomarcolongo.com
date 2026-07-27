@@ -1,13 +1,28 @@
 import { defineConfig } from 'astro/config';
 import markdownEmitter from './src/integrations/markdown-emitter.mjs';
 
-const dossierInterop = {
-  name: 'mario-dossier-commonjs-interop',
+const legacyDataDefaultExports = new Map([
+  ['/data/source.js', 'MARIO_DOSSIER'],
+  ['/data/portfolio-human.js', 'PORTFOLIO_HUMAN'],
+  ['/data/portfolio-v3.js', 'PORTFOLIO_V3'],
+  ['/data/recent-application-evidence.js', 'RECENT_APPLICATION_EVIDENCE']
+]);
+
+const legacyDataInterop = {
+  name: 'mario-legacy-data-commonjs-interop',
   enforce: 'pre',
   transform(code, id) {
-    if (!id.endsWith('/data/source.js')) return null;
-    if (code.includes('export default MARIO_DOSSIER')) return null;
-    return `${code}\nexport default MARIO_DOSSIER;\n`;
+    const cleanId = id.split('?', 1)[0];
+    const matchedExport = [...legacyDataDefaultExports.entries()]
+      .find(([pathSuffix]) => cleanId.endsWith(pathSuffix));
+
+    if (!matchedExport) return null;
+
+    const [, identifier] = matchedExport;
+    const defaultExport = `export default ${identifier}`;
+    if (code.includes(defaultExport)) return null;
+
+    return `${code}\n${defaultExport};\n`;
   }
 };
 
@@ -18,7 +33,7 @@ export default defineConfig({
     inlineStylesheets: 'always'
   },
   vite: {
-    plugins: [dossierInterop]
+    plugins: [legacyDataInterop]
   },
   integrations: [
     markdownEmitter()
