@@ -1,34 +1,17 @@
+# Public portfolio and machine-readable professional dossier.
+# Crawling is allowed for search and query-time AI grounding.
+# AI training is reserved through the Content-Signal HTTP response header:
+# search=yes, ai-input=yes, ai-train=no
+
 User-agent: *
-Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 
-# AI crawlers and LLM discovery
-# Search indexing and query-time AI grounding are allowed; model training is reserved.
-User-agent: GPTBot
-Content-Signal: search=yes, ai-input=yes, ai-train=no
-Allow: /
-
-User-agent: ChatGPT-User
-Content-Signal: search=yes, ai-input=yes, ai-train=no
-Allow: /
-
-User-agent: ClaudeBot
-Content-Signal: search=yes, ai-input=yes, ai-train=no
-Allow: /
-
-User-agent: PerplexityBot
-Content-Signal: search=yes, ai-input=yes, ai-train=no
-Allow: /
-
-User-agent: Google-Extended
-Content-Signal: search=yes, ai-input=yes, ai-train=no
-Allow: /
-
-# Sitemaps, AI dossiers and discovery endpoints
 Sitemap: https://mariomarcolongo.com/sitemap.xml
-Allow: /llms.txt
-Allow: /llms-full.txt
-Allow: /cv-llm.txt
-Allow: /auth.md
-Allow: /data/source.js
-Allow: /.well-known/
+
+# Public discovery endpoints covered by the blanket Allow rule:
+# /llms.txt
+# /llms-full.txt
+# /cv-llm.txt
+# /auth.md
+# /data/source.js
+# /.well-known/
