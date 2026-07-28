@@ -22,7 +22,13 @@
   padding-block: 2px;
 }
 
-/* The longer evidence-led headline remains within the verified desktop hero budget. */
+/* Keep the longer evidence-led hero within the verified desktop height budget. */
 .human-portfolio .v8-hero-gallery {
   min-height: 716px;
+}
+
+@media (min-width: 901px) {
+  .human-portfolio .v8-hero-copy h1 {
+    font-size: clamp(4rem, 6.7vw, 7.4rem);
+  }
 }
