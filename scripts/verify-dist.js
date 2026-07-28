@@ -103,6 +103,7 @@ for (const needle of [
   'Research, content and website work', 'Official evidence index',
   'Platform metrics describe the production environment',
   'Research and fact-checking', 'Content production', 'Website design and management',
+  'Nebula Genomics', 'consumer-genomics privacy',
   ENTROPY_WORK_URL, 'Official work record published by Entropy for Life'
 ]) assertContains(indexText, needle, 'dist/index.html');
 for (const obsolete of [
@@ -119,7 +120,8 @@ for (const obsolete of [
   'Special:ListFiles/Digressivo', 'Selected paid work', 'Contribution and production scale',
   'YouTube production environment', 'Packaging criteria',
   'PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh', 'PLUXju4zC0Sks',
-  '55+ documented YouTube projects', 'Official Entropy for Life website'
+  '55+ documented YouTube projects', 'Official Entropy for Life website',
+  'Oscar Giannino', 'Massimo Teodorani'
 ]) assertNotContains(index, obsolete, 'dist/index.html');
 assertContains(index, 'class="portfolio-v8"', 'dist/index.html');
 assertContains(index, 'class="v8-hero-gallery"', 'dist/index.html');
@@ -161,9 +163,13 @@ pass('Four specialized application CVs checked');
 
 const integrityText = normalizeHtmlText(pages.integrityPage);
 for (const needle of [
-  'Investigation is useful only when the evidence trail survives scrutiny.', "Fascist-era carpenter's pencil",
+  'Investigation is useful only when the evidence trail survives scrutiny.',
+  'Nebula Genomics: tracing privacy, corporate and legal claims over time',
+  'Archival reconstruction of a legally sensitive public record',
+  'Biographical source-quality and notability review',
+  "Fascist-era carpenter's pencil", 'Additional provenance and rights work.',
   'H5N1 situation tracker', 'Yourself to Science: verifying participation opportunities',
-  'Wikimedia and Wikidata: auditable source and metadata work', 'Evidence boundary', 'Ethical boundary'
+  'Wikimedia and Wikidata: auditable source and metadata work', 'Evidence boundary', 'Ethical and legal boundary'
 ]) assertContains(integrityText, needle, 'dist/integrity.html');
 pass('Knowledge-integrity work sample checked');
 
@@ -172,6 +178,7 @@ for (const needle of [
   'Master CV & Evidence Record', 'not presented as an independent software developer', 'AI Safety',
   'Research & Data Quality', 'Editorial & Community', 'Trust & Knowledge Integrity', 'Marta Panzeri',
   '36.5M', '80', 'Scientific Content Quality & Operations Contractor',
+  'Consumer-genomics privacy record', 'Investigation work samples',
   'Official Entropy for Life work record', ENTROPY_WORK_URL
 ]) assertContains(masterText, needle, 'dist/cv.html');
 pass('Master CV positioning checked');
