@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import SiteNav from "../components/SiteNav.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import "../styles/career-v2.css";
-import career from "../../data/career-positioning.js";
+import career from "../../data/investigation-positioning.mjs";
 import { buildProfileGraph } from "../lib/structured-data.js";
 
 const { D, P } = career;
@@ -67,7 +67,13 @@ function linksFor(item) {
     tableau: "Tableau",
     flourish: "Flourish",
     doi: "Zenodo DOI",
-    fairsharing: "FAIRsharing"
+    fairsharing: "FAIRsharing",
+    centralAuth: "Wikimedia CentralAuth",
+    investigations: "Investigation work samples",
+    consumerPrivacy: "Consumer-genomics privacy record",
+    archivalRecord: "Archival-record reconstruction",
+    sourceQualityReview: "Source-quality review record",
+    syndromicAutism: "Syndromic autism evidence"
   };
   return Object.entries(item.links)
     .filter(([, url]) => typeof url === "string")
@@ -218,23 +224,11 @@ function linksFor(item) {
         <ul class="master-list">
           {P.shared.education.map((item) => <li>{item}</li>)}
           <li>{P.shared.language}</li>
+          {P.shared.training.map((item) => <li>{item}</li>)}
         </ul>
       </section>
     </article>
   </div>
-
-  <script is:inline>
-    (function injectPrivateCvData() {
-      var privateData = typeof window !== "undefined" ? (window.MARIO_PRIVATE || window._privateData || {}) : {};
-      var phoneSlot = document.getElementById("cvPhoneSlot");
-      if (!phoneSlot || !privateData.phone) return;
-      phoneSlot.textContent = `· ${privateData.phone}`;
-      phoneSlot.setAttribute("href", `tel:${String(privateData.phone).replace(/\s+/g, "")}`);
-      phoneSlot.hidden = false;
-      phoneSlot.classList.add("has-phone");
-      if (!phoneSlot.nextElementSibling || phoneSlot.nextElementSibling.tagName !== "BR") phoneSlot.after(document.createElement("br"));
-    })();
-  </script>
 
   <SiteFooter version={D.identity.buildVersion} />
 </Layout>
