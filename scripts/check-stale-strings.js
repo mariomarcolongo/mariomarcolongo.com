@@ -18,7 +18,7 @@ const EXPECTED = {
 const REQUIRED = [
   'package.json', 'package-lock.json', 'data/source.js', 'data/application-profiles.js',
   'data/portfolio-human.js', 'data/recent-application-evidence.js',
-  'data/career-positioning.js',
+  'data/career-positioning.js', 'data/investigation-cases.js', 'data/investigation-positioning.mjs',
   'src/layouts/Layout.astro', 'src/components/SiteNav.astro',
   'src/components/SiteFooter.astro', 'src/components/ApplicationCv.astro', 'src/pages/index.astro',
   'src/pages/integrity.astro', 'src/pages/cv.astro', 'src/pages/cv-resume.astro',
@@ -147,7 +147,7 @@ for (const marker of ['human-capabilities', 'human-work', 'human-documents']) {
   if (!indexSource.includes(`data-testid="${marker}"`)) fail('src/pages/index.astro', 1, `Missing homepage marker ${marker}.`);
 }
 for (const requiredText of [
-  'I test AI systems and verify scientific claims.',
+  'I test AI systems, verify scientific claims and reconstruct public evidence.',
   'Where I can contribute.',
   'Selected work, shown through the actual output.',
   'MDPI Filter now works in the browser and as a Zotero plugin.',
@@ -156,14 +156,18 @@ for (const requiredText of [
   'AI evaluation and scientific evidence roles.',
   '#75 on the Proving Ground leaderboard',
   'Fact-checking and producing scientific content before publication.',
+  'Recovering, testing and structuring evidence under dispute.',
+  'Oscar Giannino',
+  'Massimo Teodorani',
+  'syndromic-autism taxonomy',
   '80 documented published content contributions',
   '55 YouTube videos',
   '21 short-form pieces',
-  '480K+',
-  '267K',
+  '4,317',
   'designed and built entropyforlife.it',
   ENTROPY_WORK_URL,
-  'Official work record published by Entropy for Life'
+  'Official work record published by Entropy for Life',
+  '/integrity.html'
 ]) {
   if (!homepageSource.includes(requiredText)) fail('src/pages/index.astro', 1, `Homepage is missing current artifact-led portfolio content: ${requiredText}`);
 }
@@ -188,8 +192,14 @@ for (const rejectedText of [
 }
 
 const integritySource = fs.readFileSync(path.join(ROOT, 'src/pages/integrity.astro'), 'utf8');
-for (const requiredText of ['evidence trail survives scrutiny', 'Evidence boundary', 'Ethical boundary']) {
-  if (!integritySource.includes(requiredText)) fail('src/pages/integrity.astro', 1, `Integrity work sample is missing: ${requiredText}`);
+const investigationSource = fs.readFileSync(path.join(ROOT, 'data/investigation-cases.js'), 'utf8');
+const integrityRecord = `${integritySource}\n${investigationSource}`;
+for (const requiredText of [
+  'evidence trail survives scrutiny', 'Evidence boundary', 'Ethical and legal boundary',
+  'Oscar Giannino', 'Massimo Teodorani', 'Syndromic autism',
+  'Archival OSINT', 'Source-quality auditing', 'Biomedical literature synthesis'
+]) {
+  if (!integrityRecord.includes(requiredText)) fail('src/pages/integrity.astro', 1, `Integrity work sample is missing: ${requiredText}`);
 }
 
 const securitySource = fs.readFileSync(path.join(ROOT, 'src/pages/security.astro'), 'utf8');

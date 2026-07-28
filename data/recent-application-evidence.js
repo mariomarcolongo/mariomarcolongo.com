@@ -23,13 +23,7 @@ const RECENT_APPLICATION_EVIDENCE = {
     }
   },
   "knowledge-integrity": {
-    evidence: {
-      0: {
-        title: "Precision-first research-integrity tooling",
-        body: "MDPI Filter applies exact DOI, domain and public-identifier evidence across browser and Zotero workflows, prioritizing false-positive avoidance, local checks and explicit network controls.",
-        link: "https://github.com/orgs/mdpi-filter/repositories"
-      }
-    }
+    evidence: {}
   }
 };
 

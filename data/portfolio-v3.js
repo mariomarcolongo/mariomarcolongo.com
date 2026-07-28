@@ -1,12 +1,14 @@
+const C = require("./investigation-cases.js");
+
 const PORTFOLIO_V3 = {
   umbrella: "Research, Evidence & AI Operations",
   headline: "I investigate claims, test systems, and build evidence workflows.",
-  introduction: "My work sits where research, public knowledge, AI behavior and technical operations meet. I verify scientific evidence, investigate provenance, operate open research systems and test how AI products behave under pressure. The portfolio is designed for several credible role families rather than one narrow title.",
+  introduction: "My work sits where research, public knowledge, AI behavior and technical operations meet. I verify scientific evidence, recover and reconcile public records, operate open research systems and test how AI products behave under pressure. The portfolio is designed for several credible role families rather than one narrow title.",
   metrics: [
     { value: "4,317", label: "Auditable Wikimedia contributions", detail: "Eight years across Wikipedia, Wikidata and Commons" },
-    { value: "55+", label: "Scientific productions checked", detail: "Videos and documentaries plus four published articles" },
-    { value: "75", label: "Platform-confirmed model breaks", detail: "156 Gray Swan submissions across 26 listed waves" },
-    { value: "55+", label: "Research initiatives indexed", detail: "Clinical studies, biobanks, registries and donation programs" },
+    { value: "80", label: "Published content contributions", detail: "55 videos · 4 articles · 21 short-form pieces" },
+    { value: "110", label: "Platform-displayed model breaks", detail: "#75 · top 6% · 246 Arena submissions" },
+    { value: "55", label: "Research resources indexed", detail: "37 Wikidata items use the domain as a reference" },
     { value: "70+", label: "Public data visualizations", detail: "Biomedical, epidemiological and policy evidence" }
   ],
   lenses: [
@@ -24,7 +26,7 @@ const PORTFOLIO_V3 = {
         "Model-quality and adversarial QA"
       ],
       evidence: [
-        "75 platform-confirmed breaks across 156 submissions",
+        "110 platform-displayed Proving Ground breaks; #75 and top 6%",
         "Chat, image, agentic tool-use and indirect prompt-injection testing",
         "Evidence-bound public methodology and limitations"
       ],
@@ -46,7 +48,7 @@ const PORTFOLIO_V3 = {
         "Scientific communications operations"
       ],
       evidence: [
-        "Paid research and fact-checking for 55+ productions and four articles",
+        "Paid research and fact-checking across 80 published contributions",
         "Sensitive Zoom focus groups with autistic participants, structured protocols and two-person facilitation handoffs",
         "Independent ownership of a public research-participation directory"
       ],
@@ -60,7 +62,7 @@ const PORTFOLIO_V3 = {
       color: "violet",
       label: "Credible adjacent high-upside lane",
       title: "Knowledge Integrity, Trust & Investigations",
-      summary: "Open-source research, source provenance, public-record reconciliation, structured-data integrity and content-risk analysis, grounded in inspectable public work rather than a generic OSINT skills list.",
+      summary: "Archival OSINT, source-quality auditing, public-record reconciliation, structured-data integrity and content-risk analysis, grounded in attributed public work rather than a generic OSINT skills list.",
       roles: [
         "Trust & safety analyst",
         "Knowledge-integrity or content-integrity operations",
@@ -68,11 +70,11 @@ const PORTFOLIO_V3 = {
         "AI abuse and policy-analysis support"
       ],
       evidence: [
-        "Eight-year public source and structured-data record",
-        "Historical-object provenance and rights-verification case",
-        "Rapid health-information monitoring and source reconciliation"
+        "Archived legal-record reconstruction with stage-by-stage source reconciliation",
+        "Source-quality and notability review using SCImago, Scopus, Web of Science and policy criteria",
+        "Biomedical taxonomy and prevalence synthesis from peer-reviewed literature"
       ],
-      next: "Publish additional redacted investigation notes, a reproducible research methodology and a small case taxonomy to strengthen this lane.",
+      next: "Continue documenting attributed case studies with explicit legal, scientific and evidentiary boundaries.",
       cv: "/cv-integrity.html",
       cvLabel: "Trust & Integrity CV"
     },
@@ -90,7 +92,7 @@ const PORTFOLIO_V3 = {
         "Research data or knowledge operations"
       ],
       evidence: [
-        "55+ research-participation records with verification workflows",
+        "55 research-participation records with verification workflows",
         "FAIRsharing, Zenodo, Wikidata and ENA public records",
         "70+ evidence visualizations and 4,317 public contributions"
       ],
@@ -106,9 +108,39 @@ const PORTFOLIO_V3 = {
       title: "Model-behavior evaluation under ambiguous constraints",
       summary: "Repeated exploratory testing across instruction hierarchy, multimodal inputs, agentic tool use and indirect prompt injection, reported with an explicit separation between platform status and independent verification.",
       methods: ["Adversarial test design", "Behavior classification", "Evidence boundaries", "Reproduction notes"],
-      metric: "75 platform-confirmed breaks · 156 submissions",
+      metric: "110 platform-displayed breaks · #75 · top 6%",
       href: "/security.html",
       linkLabel: "Open evaluation record"
+    },
+    {
+      id: C.giannino.id,
+      eyebrow: "Archival OSINT",
+      title: C.giannino.title,
+      summary: "Recovered unstable and missing material through archives and URL reconstruction, then reconciled the original reporting with multiple judicial stages using legally cautious attribution.",
+      methods: ["Archive recovery", "URL reconstruction", "Legal chronology", "Source reconciliation"],
+      metric: "Attributed public diff · original PDF and court-stage sources",
+      href: C.giannino.links[0].href,
+      linkLabel: "Open attributed diff"
+    },
+    {
+      id: C.teodorani.id,
+      eyebrow: "Content governance",
+      title: C.teodorani.title,
+      summary: "Audited claim-to-source fit, bibliometric evidence, source independence and notability under Wikipedia policy during a contentious public moderation process.",
+      methods: ["Source-quality audit", "Scopus & Web of Science", "Policy application", "Evidence caveats"],
+      metric: "Community-reviewed process · article deleted by consensus",
+      href: C.teodorani.links[0].href,
+      linkLabel: "Open deletion discussion"
+    },
+    {
+      id: C.syndromicAutism.id,
+      eyebrow: "Biomedical evidence synthesis",
+      title: C.syndromicAutism.title,
+      summary: "Synthesized peer-reviewed literature into a structured taxonomy and sortable evidence table spanning genetic causes, prevalence estimates and clinical characteristics.",
+      methods: ["Literature synthesis", "Taxonomy design", "Prevalence extraction", "Structured evidence"],
+      metric: "Attributed principal diff · later dedicated article",
+      href: C.syndromicAutism.links[0].href,
+      linkLabel: "Open principal diff"
     },
     {
       id: "h5n1",
@@ -117,26 +149,16 @@ const PORTFOLIO_V3 = {
       summary: "Co-authored a continuously updated epidemiological tracker, organizing dated developments, comparing public-health reporting and preserving links to the underlying evidence.",
       methods: ["Source monitoring", "Chronology", "Cross-source checking", "Uncertainty communication"],
       metric: "Public rolling tracker · co-authored",
-      href: "https://entropyforlife.it/2024/10/25/influenza-aviaria-situazione-epidemiologica-aggiornata/",
+      href: C.h5n1.links[0].href,
       linkLabel: "Open published tracker"
-    },
-    {
-      id: "pencil",
-      eyebrow: "Provenance & rights",
-      title: "Turning a privately supplied historical object into a reusable public record",
-      summary: "Prepared bilingual descriptions, ownership context, inscription translations and source attribution for photographs of a Fascist-era carpenter's pencil, with permission verified through Wikimedia's Volunteer Response Team.",
-      methods: ["Provenance description", "Bilingual metadata", "Rights verification", "Historical context"],
-      metric: "VRT-verified permission · public structured record",
-      href: "https://commons.wikimedia.org/wiki/File:Pencil_Fascist_Tuberculosis_Campaign_Italy_Side_A_Angle.jpg",
-      linkLabel: "Open Wikimedia record"
     },
     {
       id: "focus-group",
       eyebrow: "Sensitive research facilitation",
       title: "Co-facilitating remote discussions where participant comfort and team reliability mattered",
-      summary: "Co-developed and co-facilitated recorded Zoom focus groups with autistic participants on sensitive sexuality and relationship topics, using structured prompts, respectful pacing, live handoffs and recovery when a facilitator missed steps or needed support. Institutional attribution is withheld pending permission.",
+      summary: "Co-developed and co-facilitated recorded Zoom focus groups with autistic participants on sensitive sexuality and relationship topics, using structured prompts, respectful pacing, live handoffs and recovery when a facilitator missed steps or needed support.",
       methods: ["Sensitive-topic moderation", "Neurodiversity-aware communication", "Two-person handoffs", "Remote-session logistics"],
-      metric: "2022–2025 collaboration · attribution pending permission",
+      metric: "2022–2025 collaboration · public institutional attribution",
       href: "/cv-editorial.html",
       linkLabel: "Open relevant CV"
     },
@@ -146,7 +168,7 @@ const PORTFOLIO_V3 = {
       title: "Verifying who can participate in research—and under what conditions",
       summary: "Designed the inclusion, source, geography, participation-type and provenance workflow for a public directory of clinical studies, biobanks, registries and donation programs.",
       methods: ["Inclusion criteria", "Entity reconciliation", "Provenance", "Structured metadata"],
-      metric: "55+ initiatives · FAIRsharing and Zenodo records",
+      metric: "55 resources · 37 Wikidata references",
       href: "https://yourselftoscience.org",
       linkLabel: "Open research directory"
     }
@@ -155,27 +177,27 @@ const PORTFOLIO_V3 = {
     {
       year: "2018 — now",
       title: "Public knowledge and source work",
-      body: "Wikipedia, Wikidata and Wikimedia Commons contributions spanning citations, structured data, scientific diagrams and public media records."
+      body: "Wikipedia, Wikidata and Wikimedia Commons contributions spanning archival recovery, source-quality review, biomedical evidence synthesis, citations, structured data, scientific diagrams and public media records."
     },
     {
       year: "2022 — 2025",
       title: "Community-facing research facilitation",
-      body: "Co-developed and co-facilitated recorded Zoom discussions with autistic participants on sensitive sexuality and relationship topics, combining participant-sensitive moderation, technical session operations and reliable two-person handoffs. Institutional attribution is withheld pending permission."
+      body: "Co-developed and co-facilitated recorded Zoom discussions with autistic participants on sensitive sexuality and relationship topics, combining participant-sensitive moderation, technical session operations and reliable two-person handoffs."
     },
     {
       year: "2023 — now",
       title: "Paid scientific editorial and web operations",
-      body: "Primary-literature research, public writing, production support and website operations for Entropy for Life."
+      body: "Primary-literature research, scientific fact-checking, content-production support and website operations for Entropy for Life."
     },
     {
       year: "2024 — now",
       title: "Open research infrastructure",
-      body: "Founded Yourself to Science, defining verification, metadata and public-participation workflows for more than 55 initiatives."
+      body: "Founded Yourself to Science, defining verification, metadata and public-participation workflows for 55 research resources."
     },
     {
       year: "2026 — now",
       title: "Structured public AI testing record",
-      body: "Gray Swan Proving Ground participation with platform-confirmed aggregate results and a public evidence-limitations page."
+      body: "Gray Swan Proving Ground participation with platform-displayed aggregate results and a public evidence-limitations page."
     }
   ],
   documents: [
@@ -197,7 +219,7 @@ const PORTFOLIO_V3 = {
       id: "integrity",
       label: "Trust & investigations",
       title: "Trust, Safety & Knowledge Integrity CV",
-      body: "For content integrity, public-record research, OSINT support, trust & safety and abuse-analysis roles.",
+      body: "For content integrity, archival and public-record research, OSINT support, trust & safety and abuse-analysis roles.",
       href: "/cv-integrity.html"
     },
     {
