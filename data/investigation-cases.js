@@ -81,7 +81,7 @@ const INVESTIGATION_CASES = {
       "Reconciled organizations and initiatives across public websites, Wikidata, FAIRsharing, Zenodo and other primary records.",
       "Created update and provenance workflows so a visible directory entry can be traced to an inspectable source."
     ],
-    demonstrates: ["Entity reconciliation", "Inclusion criteria", "Source traceability", "Structured-data quality"],
+    demonstrates: ["Entity reconciliation", "Inclusion criteria", "Source traceability", "Structured-data quality", "Wikimedia and Wikidata: auditable source and metadata work"],
     limitations: "The directory verifies public participation information at the time of review. It does not independently audit the scientific quality, privacy practices or institutional claims of every listed initiative.",
     links: [
       { label: "Inspect the directory", href: "https://yourselftoscience.org" },
@@ -100,7 +100,7 @@ const INVESTIGATION_CASES = {
       "Published the records through Wikimedia Commons; the visible file page records permission reviewed by Wikimedia's Volunteer Response Team."
     ],
     demonstrates: ["Source provenance", "Rights and authorship context", "Bilingual metadata", "Historical object documentation"],
-    limitations: "The public record verifies the uploaded media, descriptions, author attribution and VRT permission status. Private correspondence and the complete family-history verification process are not published.",
+    limitations: "Ethical boundary: the public record verifies the uploaded media, descriptions, author attribution and VRT permission status. Private correspondence and the complete family-history verification process are not published.",
     links: [
       { label: "Inspect the Commons record", href: "https://commons.wikimedia.org/wiki/File:Pencil_Fascist_Tuberculosis_Campaign_Italy_Side_A_Angle.jpg" }
     ]
