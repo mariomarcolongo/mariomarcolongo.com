@@ -21,3 +21,8 @@
   align-items: center;
   padding-block: 2px;
 }
+
+/* The longer evidence-led headline remains within the verified desktop hero budget. */
+.human-portfolio .v8-hero-gallery {
+  min-height: 716px;
+}
