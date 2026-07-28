@@ -6,7 +6,21 @@ const { D, P } = career;
 const centralAuth = "https://commons.wikimedia.org/wiki/Special:CentralAuth/Digressivo";
 const integrityPage = "/integrity.html";
 
-D.identity.buildVersion = "v2026.07.28";
+function replaceSkill(profile, currentTitle, nextTitle, detail) {
+  const index = profile?.skills?.findIndex(([title]) => title === currentTitle);
+  if (index >= 0) profile.skills[index] = [nextTitle, detail];
+}
+
+function cloneExperience(item) {
+  if (!item) return null;
+  return {
+    ...item,
+    links: Array.isArray(item.links) ? item.links.map((link) => ({ ...link })) : [],
+    bullets: Array.isArray(item.bullets) ? [...item.bullets] : []
+  };
+}
+
+D.identity.buildVersion = "v2026.07.29";
 D.summary = `Research, evidence and AI operations specialist with eight years of auditable public-source and structured-data work, including consumer-genomics privacy research, corporate-source reconciliation, archival recovery of legally sensitive records, source-quality and content-governance review, biomedical evidence synthesis, paid scientific fact-checking, research-data provenance and adversarial testing of AI systems. ${D.summary}`;
 
 const scientificPillar = D.pillars?.find((item) => item?.category === "SCIENTIFIC VERIFICATION");
@@ -39,9 +53,11 @@ if (masterWiki) {
 }
 
 if (P.aiSafety) {
+  P.aiSafety.summary = "AI evaluation and research-verification specialist with self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. The Gray Swan Proving Ground profile displayed rank #75 (top 6%) and 110 total breaks on 26 July 2026. Supporting investigation work includes consumer-genomics privacy and corporate-source reconciliation, archival source recovery, source-quality review and evidence-bound reporting across legally and scientifically sensitive records.";
+
   const sourceEvidence = P.aiSafety.evidence?.find((item) => item?.title?.includes("Auditable source-verification"));
   if (sourceEvidence) {
-    sourceEvidence.body = "4,317 public Wikimedia contributions, including consumer-genomics privacy and corporate-source reconciliation, archival recovery of a legally sensitive public record, source-quality review in a contentious moderation process and structured biomedical evidence synthesis.";
+    sourceEvidence.body = "4,317 public Wikimedia contributions, including consumer-genomics privacy and corporate-source reconciliation, archival recovery of a legally sensitive public record, source-quality review in a collaborative content-governance process and structured biomedical evidence synthesis.";
     sourceEvidence.link = integrityPage;
   }
   if (P.aiSafety.evidence?.[2]) {
@@ -51,9 +67,17 @@ if (P.aiSafety) {
       link: integrityPage
     };
   }
+  replaceSkill(
+    P.aiSafety,
+    "Research verification",
+    "OSINT and research verification",
+    "Public-source and bibliographic research, claim decomposition, web-archive recovery, source-provenance analysis, corporate and legal record reconciliation, cross-source corroboration and evidence-bound reporting"
+  );
 }
 
 if (P.researchQuality) {
+  P.researchQuality.summary = "Research-verification and data-quality specialist with eight years of auditable scientific, biomedical, public-source and structured-data work. Experience spans consumer-genomics privacy, archived corporate and legal records, scientific literature, source-quality analysis, paid fact-checking and ownership of an open research-participation directory with documented verification and metadata workflows.";
+
   const wiki = P.researchQuality.experience?.find((item) => item?.organization?.includes("Wikipedia"));
   if (wiki) {
     wiki.links = [
@@ -64,7 +88,7 @@ if (P.researchQuality) {
     wiki.bullets = [
       "Completed 4,317 auditable contributions across public knowledge and structured-data projects as of July 2026.",
       "Synthesized peer-reviewed biomedical literature into a structured syndromic-autism section and sortable table connecting conditions, genetic causes, loci, prevalence estimates, classification and clinical characteristics.",
-      "Perform citation checking, provenance review, cross-source reconciliation, taxonomy design and iterative correction across prose, structured data and scientific visualizations."
+      "Perform citation checking, archival and provenance review, corporate and public-record reconciliation, taxonomy design and iterative correction across prose, structured data and scientific visualizations."
     ];
   }
   if (P.researchQuality.evidence?.[0]) {
@@ -74,12 +98,73 @@ if (P.researchQuality) {
       link: C.syndromicAutism.links[0].href
     };
   }
+  replaceSkill(
+    P.researchQuality,
+    "Evidence verification",
+    "Evidence verification and OSINT",
+    "Primary-source and bibliographic research, web archives, public and corporate records, evidence screening, claim decomposition, source-quality assessment, provenance analysis and cross-source corroboration"
+  );
+}
+
+if (P.editorialCommunity) {
+  P.editorialCommunity.summary = "Research, editorial and community-operations specialist with paid scientific content experience, long-running public-source and structured-data work, professional writing and web operations. Work includes primary-literature verification, archival source recovery, claim-to-source review, public-health monitoring, sensitive research facilitation and end-to-end ownership of public verification workflows.";
+
+  if (P.editorialCommunity.strengths?.[2]) {
+    P.editorialCommunity.strengths[2] = {
+      value: "4,317",
+      label: "Auditable public contributions",
+      detail: "Privacy research · archives · source-quality review"
+    };
+  }
+
+  if (P.editorialCommunity.evidence?.[1]) {
+    P.editorialCommunity.evidence[1] = {
+      title: "Public-source investigation and archival verification",
+      body: "Built and maintained a consumer-genomics privacy record, recovered unavailable documents through web archives and URL reconstruction, and audited claim-to-source fit and bibliometric evidence in collaborative public content governance.",
+      link: integrityPage
+    };
+  }
+
+  replaceSkill(
+    P.editorialCommunity,
+    "Editorial operations",
+    "Editorial operations and OSINT",
+    "Evidence research, archival source recovery, claim checking, source documentation, public-record reconciliation, editorial feedback, content preparation and production troubleshooting"
+  );
 }
 
 if (P.integrity) {
-  P.integrity.summary = "Knowledge-integrity and open-source research specialist with eight years of auditable public work spanning consumer-genomics privacy, corporate-source reconciliation, archival OSINT, legally sensitive chronology, source-quality and bibliometric review, public content governance, biomedical evidence synthesis, health-information monitoring, structured metadata and adversarial AI evaluation. Public cases are linked to exact diffs or collaborative records and described with explicit legal and evidentiary boundaries.";
+  P.integrity.title = "Investigations & Knowledge Integrity Analyst";
+  P.integrity.subtitle = "OSINT · risk and evidence assessment · sensitive research · analytical reporting · data quality";
+  P.integrity.summary = "Investigations and knowledge-integrity analyst with eight years of auditable public work spanning consumer-genomics privacy, corporate-source reconciliation, archival OSINT, legally sensitive chronology, source-quality and bibliometric review, public content governance, biomedical evidence synthesis, health-information monitoring, structured metadata and adversarial AI evaluation. Public cases are linked to exact diffs or collaborative records and described with explicit legal and evidentiary boundaries.";
+  P.integrity.fit = [
+    "Investigations and content-integrity operations",
+    "OSINT research and source-provenance analysis",
+    "Trust & Safety-adjacent analytical and escalation support",
+    "Knowledge quality, risk documentation and data operations"
+  ];
+
+  if (P.integrity.strengths?.[2]) {
+    P.integrity.strengths[2] = {
+      value: "80",
+      label: "Published content contributions",
+      detail: "Scientific and health-information verification"
+    };
+  }
+  if (P.integrity.strengths?.[3]) {
+    P.integrity.strengths[3] = {
+      value: "110",
+      label: "Proving Ground breaks",
+      detail: "#75 · top 6% · supporting adversarial evidence"
+    };
+  }
 
   const wiki = P.integrity.experience?.find((item) => item?.organization?.includes("Wikipedia"));
+  const entropy = P.integrity.experience?.find((item) => item?.organization?.includes("Entropy for Life"));
+  const gray = P.integrity.experience?.find((item) => item?.role?.includes("Model-Behavior"));
+  const focusGroupSource = P.editorialCommunity?.experience?.find((item) => item?.role?.includes("Focus-Group"));
+  const focusGroup = cloneExperience(focusGroupSource);
+
   if (wiki) {
     wiki.links = [
       { label: "Investigation work samples", url: integrityPage },
@@ -96,6 +181,31 @@ if (P.integrity) {
     ];
   }
 
+  if (entropy) {
+    entropy.bullets = [
+      "Investigate scientific and health claims across 80 documented published contributions using primary-literature searches, source-quality comparison and cross-source corroboration.",
+      "Co-authored and maintain a rolling H5N1 epidemiological update, reconciling fast-changing reports, documenting source dates and separating confirmed developments from uncertainty.",
+      "Translate evidence into clear corrections and analytical summaries for a public-facing content team without overstating conclusions."
+    ];
+  }
+
+  if (focusGroup) {
+    focusGroup.role = "Sensitive Research Operations Contributor";
+    focusGroup.bullets = [
+      "Co-developed and facilitated approximately 4–5 recorded remote focus groups with autistic participants discussing sensitive sexuality and relationship topics.",
+      "Supported recruitment, explicit consent, participant privacy, pseudonymous naming, recording boundaries, structured prompts, accessibility options and two-person facilitation handoffs.",
+      "Handled participant information confidentially and coordinated with the supervising researcher and a second facilitator."
+    ];
+  }
+
+  if (gray) {
+    gray.bullets = [
+      "Conduct self-directed adversarial testing across chat, image, agentic tool-use and indirect prompt-injection scenarios, applying structured evidence capture to ambiguous system behavior.",
+      "Reached #75 on the Proving Ground leaderboard (top 6%) with 110 platform-displayed total breaks on 26 July 2026; reported as supporting analytical evidence rather than emergency-response or penetration-testing experience."
+    ];
+  }
+
+  P.integrity.experience = [wiki, entropy, focusGroup, gray].filter(Boolean);
   P.integrity.evidence = [
     {
       title: "Consumer-genomics privacy and corporate-source reconciliation",
@@ -104,7 +214,7 @@ if (P.integrity) {
     },
     {
       title: "Archival recovery and content-governance judgment",
-      body: "Recovered missing material for a legally sensitive chronology and separately audited source quality, bibliometrics and policy relevance during a contentious public moderation process, without using living-person names as promotional headings.",
+      body: "Recovered missing material for a legally sensitive chronology and separately audited source quality, bibliometrics and policy relevance during a collaborative public content-governance process, without using living-person names as promotional headings.",
       link: integrityPage
     },
     {
@@ -113,6 +223,13 @@ if (P.integrity) {
       link: C.syndromicAutism.links[0].href
     }
   ];
+
+  replaceSkill(
+    P.integrity,
+    "Trust & safety analysis",
+    "Trust & Safety-adjacent analysis",
+    "Ambiguous-case investigation, content-risk research, evidence documentation, taxonomy development, policy-boundary testing and escalation-ready analytical reporting"
+  );
 }
 
 export default career;
