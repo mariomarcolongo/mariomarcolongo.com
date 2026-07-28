@@ -1,9 +1,30 @@
 const INVESTIGATION_CASES = {
+  nebula: {
+    id: "nebula-genomics",
+    category: "Consumer-genomics privacy & corporate-source reconciliation",
+    title: "Nebula Genomics: tracing privacy, corporate and legal claims over time",
+    context: "A personal-genomics company's public record changed across a sequencing partnership, sequencing-location statements, privacy-policy language, third-party data questions, corporate restructuring and federal litigation.",
+    work: [
+      "Built and maintained a sourced privacy section using independent reporting, peer-reviewed genomic-risk analysis, archived company pages, privacy policies, SEC filings and litigation coverage.",
+      "Reconciled the historical BGI sequencing relationship with later company statements about European sequencing, preserving dates rather than presenting different operating periods as simultaneous facts.",
+      "Expanded the third-party-data analysis using a peer-reviewed risk paper and an archived privacy policy, while distinguishing documented policy language from hypotheses about downstream data use.",
+      "Added later corporate and litigation developments, removed duplicative or promotional citations and maintained neutral sourcing during a contentious public editorial process—including requesting evidence for unsupported criticism."
+    ],
+    demonstrates: ["Corporate-source reconciliation", "Privacy-policy analysis", "Archived web research", "Litigation tracking", "Content-governance judgment"],
+    limitations: "The linked records verify attributable edits and public sources. The case does not independently conclude that Nebula sold genetic data, violated the law or that any participating editor was affiliated with the company. Lawsuit allegations remain allegations, and the procedural record must be updated as the case changes.",
+    links: [
+      { label: "Inspect the current privacy section", href: "https://en.wikipedia.org/wiki/Nebula_Genomics#Privacy_concerns" },
+      { label: "Inspect attributed page-edit history", href: "https://sigma.toolforge.org/usersearch.py?name=Digressivo&page=Nebula+Genomics&server=enwiki&max=" },
+      { label: "Inspect the 2024 third-party-data diff", href: "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1232715097" },
+      { label: "Inspect the 2025 corporate-record diff", href: "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1322371890" },
+      { label: "Inspect the 2025 litigation diff", href: "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1322390519" }
+    ]
+  },
   giannino: {
-    id: "giannino",
+    id: "archival-legal-record",
     category: "Archival OSINT & legal chronology",
-    title: "Oscar Giannino: reconstructing a legally sensitive public record",
-    context: "A missing and fragmented public record concerned reporting by Oscar Giannino and other journalists on an alleged internal RAI organization chart, followed by criminal, appellate, cassation and civil proceedings.",
+    title: "Archival reconstruction of a legally sensitive public record",
+    context: "A missing and fragmented public record concerned a journalist's reporting on an alleged internal organization chart, followed by criminal, appellate, cassation and civil proceedings.",
     work: [
       "Recovered unavailable or unstable source material through web archives, URL matching and reconstruction of likely document paths.",
       "Located an archived copy of the original 2008 newspaper PDF and reconciled it with contemporary reporting, court coverage and later procedural developments.",
@@ -13,14 +34,14 @@ const INVESTIGATION_CASES = {
     demonstrates: ["Archival OSINT", "Lost-document recovery", "Legal chronology", "Source reconciliation", "Risk-aware writing"],
     limitations: "The public Wikipedia diff verifies the text, citations and edit attribution. The portfolio describes source-recovery and synthesis work; it does not provide an independent legal opinion or make claims beyond the cited public record.",
     links: [
-      { label: "Inspect the attributed Wikipedia diff", href: "https://it.wikipedia.org/w/index.php?title=Oscar_Giannino&diff=prev&oldid=133702639" }
+      { label: "Inspect the attributed archival-record diff", href: "https://it.wikipedia.org/w/index.php?title=Oscar_Giannino&diff=prev&oldid=133702639" }
     ]
   },
   teodorani: {
-    id: "teodorani",
+    id: "biographical-source-review",
     category: "Content governance & source-quality review",
-    title: "Massimo Teodorani: biographical source-quality and notability review",
-    context: "A public Wikipedia biography contained promotional language, weak or mismatched citations, heavy reliance on primary sources and disputed claims about academic, scientific and public significance. The review developed inside a contentious deletion process involving the biographical subject and multiple editors.",
+    title: "Biographical source-quality and notability review",
+    context: "A public biography contained promotional language, weak or mismatched citations, heavy reliance on primary sources and disputed claims about academic, scientific and public significance. The review developed inside a contentious deletion process involving the biographical subject and multiple editors.",
     work: [
       "Opened and checked cited sources against the claims they were used to support, identifying mismatches between article wording and the underlying records.",
       "Searched SCImago, Scopus and Web of Science; compared publication, citation and h-index evidence with official Italian academic-qualification thresholds.",
@@ -30,8 +51,8 @@ const INVESTIGATION_CASES = {
     demonstrates: ["Source-quality auditing", "Bibliometric research", "Content governance", "Policy application", "Adversarial stakeholder handling"],
     limitations: "The linked pages document a public collaborative moderation process, not a personal verdict on the subject's character or scientific work. The deletion outcome reflects community consensus under Wikipedia policy.",
     links: [
-      { label: "Inspect the deletion discussion", href: "https://it.wikipedia.org/wiki/Wikipedia:Pagine_da_cancellare/Massimo_Teodorani" },
-      { label: "Inspect the associated talk record", href: "https://it.wikipedia.org/wiki/Discussioni_Wikipedia:Pagine_da_cancellare/Massimo_Teodorani" }
+      { label: "Inspect the public deletion discussion", href: "https://it.wikipedia.org/wiki/Wikipedia:Pagine_da_cancellare/Massimo_Teodorani" },
+      { label: "Inspect the associated discussion record", href: "https://it.wikipedia.org/wiki/Discussioni_Wikipedia:Pagine_da_cancellare/Massimo_Teodorani" }
     ]
   },
   syndromicAutism: {
@@ -90,7 +111,7 @@ const INVESTIGATION_CASES = {
   },
   pencil: {
     id: "pencil",
-    category: "Supporting provenance & rights example",
+    category: "Additional provenance & rights example",
     title: "Fascist-era carpenter's pencil: provenance, description and permission",
     context: "Four photographs of a privately held historical carpenter's pencil were supplied directly by the original photographer. The object carries Fascist-era anti-tuberculosis inscriptions and belonged to Aristide Ravaglia, an Italian joiner born in 1890.",
     work: [
@@ -100,7 +121,7 @@ const INVESTIGATION_CASES = {
       "Published the records through Wikimedia Commons; the visible file page records permission reviewed by Wikimedia's Volunteer Response Team."
     ],
     demonstrates: ["Source provenance", "Rights and authorship context", "Bilingual metadata", "Historical object documentation"],
-    limitations: "Ethical boundary: the public record verifies the uploaded media, descriptions, author attribution and VRT permission status. Private correspondence and the complete family-history verification process are not published.",
+    limitations: "The public record verifies the uploaded media, descriptions, author attribution and VRT permission status. Private correspondence and the complete family-history verification process are not published.",
     links: [
       { label: "Inspect the Commons record", href: "https://commons.wikimedia.org/wiki/File:Pencil_Fascist_Tuberculosis_Campaign_Italy_Side_A_Angle.jpg" }
     ]
@@ -108,16 +129,21 @@ const INVESTIGATION_CASES = {
 };
 
 INVESTIGATION_CASES.primary = [
+  INVESTIGATION_CASES.nebula,
+  INVESTIGATION_CASES.syndromicAutism,
+  INVESTIGATION_CASES.directory,
   INVESTIGATION_CASES.giannino,
   INVESTIGATION_CASES.teodorani,
-  INVESTIGATION_CASES.syndromicAutism,
-  INVESTIGATION_CASES.h5n1,
-  INVESTIGATION_CASES.directory
+  INVESTIGATION_CASES.h5n1
+];
+
+INVESTIGATION_CASES.supporting = [
+  INVESTIGATION_CASES.pencil
 ];
 
 INVESTIGATION_CASES.all = [
   ...INVESTIGATION_CASES.primary,
-  INVESTIGATION_CASES.pencil
+  ...INVESTIGATION_CASES.supporting
 ];
 
 if (typeof module !== "undefined" && module.exports) {

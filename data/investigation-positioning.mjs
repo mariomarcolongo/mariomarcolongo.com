@@ -7,14 +7,14 @@ const centralAuth = "https://commons.wikimedia.org/wiki/Special:CentralAuth/Digr
 const integrityPage = "/integrity.html";
 
 D.identity.buildVersion = "v2026.07.28";
-D.summary = `Research, evidence and AI operations specialist with eight years of auditable public-source and structured-data work, including archival recovery of legally sensitive records, source-quality and content-governance review, biomedical evidence synthesis, paid scientific fact-checking, research-data provenance and adversarial testing of AI systems. ${D.summary}`;
+D.summary = `Research, evidence and AI operations specialist with eight years of auditable public-source and structured-data work, including consumer-genomics privacy research, corporate-source reconciliation, archival recovery of legally sensitive records, source-quality and content-governance review, biomedical evidence synthesis, paid scientific fact-checking, research-data provenance and adversarial testing of AI systems. ${D.summary}`;
 
 const scientificPillar = D.pillars?.find((item) => item?.category === "SCIENTIFIC VERIFICATION");
 if (scientificPillar) {
-  scientificPillar.lead = "Eight years of auditable claim, source and structured-evidence work spanning scientific literature, archival public records and content-governance review.";
+  scientificPillar.lead = "Eight years of auditable claim, source and structured-evidence work spanning scientific literature, consumer-genomics privacy, archival public records and content-governance review.";
   scientificPillar.highlights = [
     { label: "Auditable Contributions", detail: "4,317 publicly inspectable Wikimedia contributions as of July 2026" },
-    { label: "Selected Investigations", detail: "Archival legal chronology, source-quality review and biomedical taxonomy development" }
+    { label: "Selected Investigations", detail: "Consumer-genomics privacy, archival legal chronology, source-quality review and biomedical taxonomy development" }
   ];
 }
 
@@ -23,30 +23,31 @@ if (masterWiki) {
   masterWiki.links = {
     centralAuth,
     investigations: integrityPage,
-    giannino: C.giannino.links[0].href,
-    teodorani: C.teodorani.links[0].href,
+    consumerPrivacy: C.nebula.links[0].href,
+    archivalRecord: C.giannino.links[0].href,
+    sourceQualityReview: C.teodorani.links[0].href,
     syndromicAutism: C.syndromicAutism.links[0].href
   };
   masterWiki.bullets = [
     "Completed 4,317 auditable contributions across Wikipedia, Wikidata and Wikimedia Commons as of July 2026.",
-    "Recovered and reconciled archived sources for a legally sensitive RAI chronology; audited claim-to-source fit, bibliometrics and notability in a public content-governance process; and synthesized biomedical literature into a structured syndromic-autism taxonomy and prevalence table.",
-    "Maintain inspectable revision histories and distinguish source-supported fact, allegation, inference, collaborative editorial outcome and unresolved uncertainty."
+    "Built and maintained a sourced consumer-genomics privacy record across changing corporate, policy and litigation evidence; recovered archived sources for a separate legally sensitive chronology; audited claim-to-source fit and bibliometrics in a public content-governance process; and synthesized biomedical literature into a structured syndromic-autism taxonomy and prevalence table.",
+    "Maintain inspectable revision histories and distinguish source-supported fact, company statement, allegation, hypothesis, inference, collaborative editorial outcome and unresolved uncertainty."
   ];
   masterWiki.resumeBullets = [
-    "Completed 4,317 auditable public contributions involving archival source recovery, citation and provenance review, content-governance analysis, biomedical evidence synthesis and structured metadata."
+    "Completed 4,317 auditable public contributions involving consumer-genomics privacy research, archival source recovery, citation and provenance review, content-governance analysis, biomedical evidence synthesis and structured metadata."
   ];
 }
 
 if (P.aiSafety) {
   const sourceEvidence = P.aiSafety.evidence?.find((item) => item?.title?.includes("Auditable source-verification"));
   if (sourceEvidence) {
-    sourceEvidence.body = "4,317 public Wikimedia contributions, including archival recovery of a legally sensitive public record, source-quality review in a contentious moderation process and structured biomedical evidence synthesis.";
+    sourceEvidence.body = "4,317 public Wikimedia contributions, including consumer-genomics privacy and corporate-source reconciliation, archival recovery of a legally sensitive public record, source-quality review in a contentious moderation process and structured biomedical evidence synthesis.";
     sourceEvidence.link = integrityPage;
   }
   if (P.aiSafety.evidence?.[2]) {
     P.aiSafety.evidence[2] = {
       title: "Investigation and evidence-bound judgment",
-      body: "Attributed public cases demonstrate archive recovery, legal-stage chronology, source-quality auditing, scientific taxonomy design and explicit separation of evidence from inference.",
+      body: "Attributed public cases demonstrate privacy-policy analysis, corporate-source reconciliation, archive recovery, legal-stage chronology, source-quality auditing, scientific taxonomy design and explicit separation of evidence from inference.",
       link: integrityPage
     };
   }
@@ -76,34 +77,35 @@ if (P.researchQuality) {
 }
 
 if (P.integrity) {
-  P.integrity.summary = "Knowledge-integrity and open-source research specialist with eight years of auditable public work spanning archival OSINT, legally sensitive chronology, source-quality and bibliometric review, public content governance, biomedical evidence synthesis, health-information monitoring, structured metadata and adversarial AI evaluation. Public cases are linked to exact diffs or collaborative discussion records and described with explicit legal and evidentiary boundaries.";
+  P.integrity.summary = "Knowledge-integrity and open-source research specialist with eight years of auditable public work spanning consumer-genomics privacy, corporate-source reconciliation, archival OSINT, legally sensitive chronology, source-quality and bibliometric review, public content governance, biomedical evidence synthesis, health-information monitoring, structured metadata and adversarial AI evaluation. Public cases are linked to exact diffs or collaborative records and described with explicit legal and evidentiary boundaries.";
 
   const wiki = P.integrity.experience?.find((item) => item?.organization?.includes("Wikipedia"));
   if (wiki) {
     wiki.links = [
       { label: "Investigation work samples", url: integrityPage },
-      { label: "Oscar Giannino attributed diff", url: C.giannino.links[0].href },
-      { label: "Massimo Teodorani deletion record", url: C.teodorani.links[0].href },
+      { label: "Consumer-genomics privacy record", url: C.nebula.links[0].href },
+      { label: "Archival-record reconstruction", url: C.giannino.links[0].href },
+      { label: "Source-quality review record", url: C.teodorani.links[0].href },
       { label: "Syndromic autism principal diff", url: C.syndromicAutism.links[0].href },
       { label: "Public contribution record", url: centralAuth }
     ];
     wiki.bullets = [
-      "Recover and reconcile archived or unstable public records, construct dated legal and factual chronologies, and write with precise attribution across changing procedural stages.",
-      "Audit claim-to-source fit, source independence, bibliometric evidence and policy relevance using tools and records including web archives, SCImago, Scopus, Web of Science and official academic-threshold documents.",
-      "Synthesize peer-reviewed biomedical evidence into structured taxonomies and tables; maintain revision-level attribution and separate fact, allegation, inference, hypothesis and community outcome."
+      "Build and maintain sourced consumer-genomics privacy records across changing company statements, archived policies, corporate filings, peer-reviewed risk analysis and litigation coverage while distinguishing allegations from established facts.",
+      "Recover and reconcile archived or unstable public records, construct dated legal and factual chronologies, and audit claim-to-source fit, source independence, bibliometric evidence and policy relevance using web archives, SCImago, Scopus, Web of Science and official threshold documents.",
+      "Synthesize peer-reviewed biomedical evidence into structured taxonomies and tables; maintain revision-level attribution and separate fact, company statement, allegation, inference, hypothesis and community outcome."
     ];
   }
 
   P.integrity.evidence = [
     {
-      title: "Archival reconstruction of a legally sensitive record",
-      body: "Recovered unstable and missing material through archives and URL reconstruction, then reconciled original reporting with criminal, appellate, cassation and civil stages using cautious attribution.",
-      link: C.giannino.links[0].href
+      title: "Consumer-genomics privacy and corporate-source reconciliation",
+      body: "Built and maintained a sourced Nebula Genomics privacy record across historical sequencing relationships, changing location statements, archived privacy policies, third-party-data questions, corporate restructuring and litigation coverage.",
+      link: C.nebula.links[0].href
     },
     {
-      title: "Source-quality and content-governance review",
-      body: "Checked cited sources against article claims, searched bibliometric databases, compared evidence with official thresholds and documented caveats during a contentious public deletion process.",
-      link: C.teodorani.links[0].href
+      title: "Archival recovery and content-governance judgment",
+      body: "Recovered missing material for a legally sensitive chronology and separately audited source quality, bibliometrics and policy relevance during a contentious public moderation process, without using living-person names as promotional headings.",
+      link: integrityPage
     },
     {
       title: "Biomedical evidence synthesis and taxonomy",

@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import SiteNav from "../components/SiteNav.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import "../styles/career-v2.css";
-import career from "../../data/career-positioning.js";
+import career from "../../data/investigation-positioning.mjs";
 import { buildProfileGraph } from "../lib/structured-data.js";
 
 const { D, P } = career;
@@ -67,7 +67,13 @@ function linksFor(item) {
     tableau: "Tableau",
     flourish: "Flourish",
     doi: "Zenodo DOI",
-    fairsharing: "FAIRsharing"
+    fairsharing: "FAIRsharing",
+    centralAuth: "Wikimedia CentralAuth",
+    investigations: "Investigation work samples",
+    consumerPrivacy: "Consumer-genomics privacy record",
+    archivalRecord: "Archival-record reconstruction",
+    sourceQualityReview: "Source-quality review record",
+    syndromicAutism: "Syndromic autism evidence"
   };
   return Object.entries(item.links)
     .filter(([, url]) => typeof url === "string")

@@ -21,7 +21,7 @@ const PORTFOLIO_HUMAN = {
     {
       value: "4,317",
       label: "auditable Wikimedia contributions",
-      detail: "Archival recovery · source review · biomedical evidence · structured data",
+      detail: "Privacy research · archival recovery · source review · biomedical evidence",
       href: "/integrity.html"
     }
   ],
@@ -80,7 +80,7 @@ const PORTFOLIO_HUMAN = {
       number: "03",
       label: "Primary",
       title: "Knowledge integrity & public-source investigation",
-      body: "Archival recovery, legal chronology, source-quality auditing, content-governance review and structured biomedical evidence synthesis."
+      body: "Consumer-genomics privacy, corporate-source reconciliation, archival recovery, source-quality auditing, content-governance review and structured biomedical evidence synthesis."
     },
     {
       number: "04",
@@ -135,16 +135,16 @@ const PORTFOLIO_HUMAN = {
       id: "knowledge-integrity",
       number: "03",
       label: "Knowledge integrity & investigation",
-      title: "Recovering, testing and structuring evidence under dispute.",
-      lead: "My public Wikimedia record includes substantially different investigation surfaces rather than one generic claim of OSINT familiarity.",
-      action: "I recovered archived material and reconstructed a legally sensitive chronology for the Oscar Giannino biography; audited source quality, bibliometrics and notability during the Massimo Teodorani deletion process; and synthesized peer-reviewed literature into a syndromic-autism taxonomy and comparative prevalence table.",
-      result: "Each case is linked to an exact attributed diff or collaborative discussion record, with methods, evidence boundaries and legally or scientifically cautious wording documented on a dedicated page.",
-      boundary: "The work represents public-source research and collaborative encyclopedia governance. It is not an independent legal judgment, covert investigation or original clinical research.",
+      title: "Tracing privacy, policy and evidence changes under dispute.",
+      lead: "My public record includes consumer-genomics privacy research, corporate-source reconciliation, archival recovery, content-governance review and biomedical evidence synthesis—not a generic claim of OSINT familiarity.",
+      action: "I built and maintained the Nebula Genomics privacy record across historical sequencing relationships, changing company statements, archived privacy policies, third-party-data questions, corporate restructuring and litigation coverage. In separate cases, I recovered missing documents for a legally sensitive chronology, audited source quality and bibliometrics during a contentious moderation process, and built a syndromic-autism taxonomy from peer-reviewed literature.",
+      result: "Each case is linked to an exact attributed diff, edit history or collaborative discussion record, with methods and evidence boundaries documented on a dedicated page. Living-person names are not used as promotional headings when they add little hiring value.",
+      boundary: "The work represents public-source research and collaborative knowledge governance. It does not establish company liability, personal misconduct, editor affiliation, an independent legal judgment or original clinical research.",
       href: "/integrity.html",
       linkLabel: "Inspect the investigation records",
       image: "/media/work/wikimedia-clinical-overlap.svg",
       alt: "Scientific evidence diagram representing structured biomedical and Wikimedia work",
-      imageCaption: "Attributed public records · archival, governance and biomedical evidence cases",
+      imageCaption: "Attributed public records · privacy, archival, governance and biomedical evidence cases",
       tone: "purple"
     },
     {
@@ -272,7 +272,7 @@ const PORTFOLIO_HUMAN = {
     },
     {
       title: "Trust, Safety & Knowledge Integrity",
-      description: "Archival OSINT, source-quality review, public-record research, content governance and investigation support.",
+      description: "Consumer-genomics privacy, archival OSINT, source-quality review, public-record research, content governance and investigation support.",
       href: "/cv-integrity.html",
       recommendedFor: "Integrity and investigation roles"
     },
