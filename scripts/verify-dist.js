@@ -140,12 +140,15 @@ assertContains(index, 'https://jnton.github.io/protein-by-bodyweight-country/', 
 pass('Artifact-led homepage checked');
 
 const applicationProfiles = [
-  ['resume', P.aiSafety], ['research', P.researchQuality], ['editorial', P.editorialCommunity], ['integrityCv', P.integrity]
+  ['resume', P.aiSafety, P.aiSafety.title],
+  ['research', P.researchQuality, P.researchQuality.title],
+  ['editorial', P.editorialCommunity, P.editorialCommunity.title],
+  ['integrityCv', P.integrity, 'Investigations & Knowledge Integrity Analyst']
 ];
-for (const [name, profile] of applicationProfiles) {
+for (const [name, profile, expectedTitle] of applicationProfiles) {
   const html = pages[name];
   const text = normalizeHtmlText(html);
-  assertContains(text, profile.title, `dist/${name}.html`);
+  assertContains(text, expectedTitle, `dist/${name}.html`);
   assertContains(text, 'Page 1 of 2', `dist/${name}.html`);
   assertContains(text, 'Page 2 of 2', `dist/${name}.html`);
   assertContains(text, 'C1 overall', `dist/${name}.html`);
@@ -154,12 +157,31 @@ for (const [name, profile] of applicationProfiles) {
   assertContains(text, 'Official Entropy for Life work record', `dist/${name}.html`);
   assertContains(text, '80', `dist/${name}.html`);
 }
-assertContains(normalizeHtmlText(pages.editorial), 'Marta Panzeri', 'dist/cv-editorial.html');
-assertContains(normalizeHtmlText(pages.editorial), 'Department of Developmental Psychology and Socialisation', 'dist/cv-editorial.html');
-assertContains(normalizeHtmlText(pages.editorial), '36.5M', 'dist/cv-editorial.html');
-assertContains(normalizeHtmlText(pages.editorial), 'click-through rate', 'dist/cv-editorial.html');
-assertContains(normalizeHtmlText(pages.editorial), 'Performance-aware content packaging', 'dist/cv-editorial.html');
-pass('Four specialized application CVs checked');
+
+const resumeText = normalizeHtmlText(pages.resume);
+for (const needle of ['consumer-genomics privacy', 'archival source recovery', 'OSINT and research verification']) {
+  assertContains(resumeText, needle, 'dist/cv-resume.html');
+}
+
+const researchText = normalizeHtmlText(pages.research);
+for (const needle of ['public-source and structured-data work', 'corporate and public-record reconciliation', 'Evidence verification and OSINT']) {
+  assertContains(researchText, needle, 'dist/cv-research.html');
+}
+
+const editorialText = normalizeHtmlText(pages.editorial);
+for (const needle of ['long-running public-source and structured-data work', 'Public-source investigation and archival verification', 'Editorial operations and OSINT']) {
+  assertContains(editorialText, needle, 'dist/cv-editorial.html');
+}
+for (const needle of ['Marta Panzeri', 'Department of Developmental Psychology and Socialisation', '36.5M', 'click-through rate', 'Performance-aware content packaging']) {
+  assertContains(editorialText, needle, 'dist/cv-editorial.html');
+}
+
+const integrityCvText = normalizeHtmlText(pages.integrityCv);
+for (const needle of ['Investigations & Knowledge Integrity Analyst', 'Sensitive Research Operations Contributor', 'Trust & Safety-adjacent analysis', 'Consumer-genomics privacy and corporate-source reconciliation']) {
+  assertContains(integrityCvText, needle, 'dist/cv-integrity.html');
+}
+assertNotContains(integrityCvText, 'Trust, Safety & Knowledge Integrity Specialist', 'dist/cv-integrity.html');
+pass('Four specialized application CVs and role-specific OSINT weighting checked');
 
 const integrityText = normalizeHtmlText(pages.integrityPage);
 for (const needle of [
