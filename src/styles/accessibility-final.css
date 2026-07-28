@@ -36,38 +36,38 @@
 /* Preserve all evidence on mobile while avoiding excessive vertical dead space. */
 @media (max-width: 720px) {
   .human-portfolio .v8-hero {
-    padding-top: 28px;
-    padding-bottom: 34px;
+    padding-top: 26px;
+    padding-bottom: 30px;
   }
 
   .human-portfolio .v8-scope-band {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 36px;
+    padding-bottom: 36px;
   }
 
   .human-portfolio .v8-section {
-    padding: 50px 0;
+    padding: 46px 0;
   }
 
   .human-portfolio .v8-section-head {
-    margin-bottom: 28px;
+    margin-bottom: 26px;
   }
 
   .human-portfolio .v8-case-stack {
-    gap: 50px;
+    gap: 46px;
   }
 
   .human-portfolio .v8-case-details div {
-    padding: 14px 0;
+    padding: 13px 0;
   }
 
   .human-portfolio .v8-product {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 46px;
+    padding-bottom: 46px;
   }
 
   .human-portfolio .v8-artifact {
-    padding: 52px 0;
+    padding: 48px 0;
   }
 
   .human-portfolio .v8-document,
@@ -76,6 +76,6 @@
   }
 
   .human-portfolio .v8-contact {
-    padding: 44px 24px;
+    padding: 40px 24px;
   }
 }
