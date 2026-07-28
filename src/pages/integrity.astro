@@ -8,10 +8,14 @@ import D from "../../data/source.js";
 import C from "../../data/investigation-cases.js";
 
 const pageTitle = "Knowledge Integrity & Investigation Work Samples — Mario Marcolongo";
-const pageDescription = "Public, attributable work samples demonstrating archival OSINT, source-quality review, biomedical evidence synthesis, provenance and evidence-bound investigation methods.";
-const records = C.all.map((record, index) => ({
+const pageDescription = "Public, attributable work samples demonstrating consumer-genomics privacy research, corporate-source reconciliation, archival OSINT, source-quality review, biomedical evidence synthesis, provenance and evidence-bound investigation methods.";
+const records = C.primary.map((record, index) => ({
   ...record,
   number: String(index + 1).padStart(2, "0")
+}));
+const supportingRecords = C.supporting.map((record, index) => ({
+  ...record,
+  number: `S${index + 1}`
 }));
 
 const methods = [
@@ -20,7 +24,7 @@ const methods = [
   ["Source hierarchy", "Prioritize primary records, court or institutional documents, official datasets, scholarly literature and reputable independent reporting."],
   ["Cross-source checking", "Compare independent records, dates, wording and metadata; document unresolved disagreement rather than forcing certainty."],
   ["Taxonomy & entity reconciliation", "Resolve naming variants, organizations, identifiers, scientific categories and relationships across prose and structured records."],
-  ["Evidence-bound reporting", "Separate what a source directly supports from allegation, inference, community decision, platform label or unverified interpretation."]
+  ["Evidence-bound reporting", "Separate what a source directly supports from company statement, allegation, hypothesis, inference, community decision, platform label or unverified interpretation."]
 ];
 ---
 
@@ -34,7 +38,7 @@ const methods = [
       description: pageDescription,
       url: "https://mariomarcolongo.com/integrity.html",
       mainEntity: { "@id": "https://mariomarcolongo.com/#person" },
-      about: ["Knowledge integrity", "Open-source research", "Archival research", "Source provenance", "Trust and safety"]
+      about: ["Knowledge integrity", "Open-source research", "Consumer genomics privacy", "Archival research", "Source provenance", "Trust and safety"]
     })}></script>
   </Fragment>
 
@@ -44,7 +48,7 @@ const methods = [
     <section class="integrity-hero">
       <div class="v3-kicker v3-enter" style="--enter-delay:60ms">Knowledge integrity · public work samples</div>
       <h1 class="v3-enter" style="--enter-delay:130ms">Investigation is useful only when the evidence trail survives scrutiny.</h1>
-      <p class="v3-enter" style="--enter-delay:210ms">This page collects attributable examples of archival record recovery, legally sensitive chronology, source-quality review, biomedical evidence synthesis, health-information monitoring and research-data provenance. It shows the reasoning and records behind the work rather than relying on a generic OSINT tool list.</p>
+      <p class="v3-enter" style="--enter-delay:210ms">This page collects attributable examples of consumer-genomics privacy research, corporate-source reconciliation, archival record recovery, legally sensitive chronology, source-quality review, biomedical evidence synthesis, health-information monitoring and research-data provenance. It shows the reasoning and records behind the work rather than relying on a generic OSINT tool list.</p>
       <div class="v3-hero-actions v3-enter" style="--enter-delay:290ms">
         <a class="v3-button v3-button-primary" href="/cv-integrity.html">Trust & Integrity CV →</a>
         <a class="v3-button" href="#records">Inspect case records</a>
@@ -55,21 +59,60 @@ const methods = [
     <section class="integrity-principles v3-reveal" aria-label="Evidence principles">
       <article><strong>Public first</strong><span>Use records a reviewer can inspect directly.</span></article>
       <article><strong>Attribution exact</strong><span>Link to the revision, discussion or published work that shows the contribution.</span></article>
-      <article><strong>Scope explicit</strong><span>Separate fact, allegation, inference and collaborative outcome.</span></article>
+      <article><strong>Scope explicit</strong><span>Separate fact, company statement, allegation, hypothesis, inference and collaborative outcome.</span></article>
       <article><strong>Privacy preserved</strong><span>Do not republish unnecessary personal data or private correspondence.</span></article>
     </section>
 
     <section class="v3-section" id="records">
       <div class="v3-section-head v3-reveal">
         <div>
-          <div class="v3-kicker">Public case records</div>
+          <div class="v3-kicker">Primary public case records</div>
           <h2>Six investigation surfaces.</h2>
         </div>
-        <p>Archival legal records, disputed biographies, biomedical taxonomies, fast-moving health information, research entities and historical provenance require different tools. The common discipline is traceability.</p>
+        <p>Consumer-genomics privacy, biomedical taxonomy, research entities, archival legal records, disputed biographies and fast-moving health information require different tools. The common discipline is traceability and proportionate disclosure.</p>
       </div>
 
       <div class="integrity-records">
         {records.map((record, index) => (
+          <article class={`integrity-record ${record.id} v3-reveal`} style={`--reveal-delay:${index * 70}ms`}>
+            <div class="integrity-record-number">{record.number}</div>
+            <div class="integrity-record-main">
+              <div class="integrity-record-category">{record.category}</div>
+              <h3>{record.title}</h3>
+              <p class="integrity-context">{record.context}</p>
+              <div class="integrity-record-columns">
+                <div>
+                  <h4>Work performed</h4>
+                  <ul>{record.work.map((item) => <li>{item}</li>)}</ul>
+                </div>
+                <div>
+                  <h4>Capabilities demonstrated</h4>
+                  <div class="v3-methods">{record.demonstrates.map((item) => <span>{item}</span>)}</div>
+                  <div class="integrity-limit"><strong>Evidence boundary</strong><p>{record.limitations}</p></div>
+                </div>
+              </div>
+              <div class="v3-hero-actions">
+                {record.links.map((link) => (
+                  <a class="v3-button v3-button-small" href={link.href} target="_blank" rel="noopener noreferrer">{link.label} ↗</a>
+                ))}
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="v3-section" id="supporting-records">
+      <div class="v3-section-head v3-reveal">
+        <div>
+          <div class="v3-kicker">Supporting evidence archive</div>
+          <h2>Additional provenance and rights work.</h2>
+        </div>
+        <p>This lower-priority example remains useful because it exposes authorship, permission, licensing, bilingual metadata and the boundary between public evidence and private correspondence. It is intentionally not used as a flagship investigation.</p>
+      </div>
+
+      <div class="integrity-records">
+        {supportingRecords.map((record, index) => (
           <article class={`integrity-record ${record.id} v3-reveal`} style={`--reveal-delay:${index * 70}ms`}>
             <div class="integrity-record-number">{record.number}</div>
             <div class="integrity-record-main">
@@ -123,8 +166,8 @@ const methods = [
         <h2>Public records still require proportionate handling.</h2>
       </div>
       <div>
-        <p>The portfolio focuses on public-interest knowledge, scientific claims, systems and attributable public records. Legally sensitive cases are described as source-recovery, chronology and editorial-policy work—not as independent legal findings.</p>
-        <p>It does not publish private identifiers, doxxing material, confidential correspondence or methods designed to bypass legitimate access controls. Collection and disclosure should remain proportionate, authorized and documented under applicable privacy and safety rules.</p>
+        <p>The portfolio focuses on public-interest knowledge, scientific claims, systems and attributable public records. Corporate and legally sensitive cases are described as source recovery, policy analysis, chronology and editorial-governance work—not as independent findings of liability or misconduct.</p>
+        <p>Living-person names are omitted from promotional headings when they add little hiring value. Exact public records remain available through neutral evidence links. The portfolio does not publish private identifiers, doxxing material, confidential correspondence or methods designed to bypass legitimate access controls.</p>
       </div>
     </section>
 
