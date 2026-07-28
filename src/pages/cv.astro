@@ -224,11 +224,23 @@ function linksFor(item) {
         <ul class="master-list">
           {P.shared.education.map((item) => <li>{item}</li>)}
           <li>{P.shared.language}</li>
-          {P.shared.training.map((item) => <li>{item}</li>)}
         </ul>
       </section>
     </article>
   </div>
+
+  <script is:inline>
+    (function injectPrivateCvData() {
+      var privateData = typeof window !== "undefined" ? (window.MARIO_PRIVATE || window._privateData || {}) : {};
+      var phoneSlot = document.getElementById("cvPhoneSlot");
+      if (!phoneSlot || !privateData.phone) return;
+      phoneSlot.textContent = `· ${privateData.phone}`;
+      phoneSlot.setAttribute("href", `tel:${String(privateData.phone).replace(/\s+/g, "")}`);
+      phoneSlot.hidden = false;
+      phoneSlot.classList.add("has-phone");
+      if (!phoneSlot.nextElementSibling || phoneSlot.nextElementSibling.tagName !== "BR") phoneSlot.after(document.createElement("br"));
+    })();
+  </script>
 
   <SiteFooter version={D.identity.buildVersion} />
 </Layout>
