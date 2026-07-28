@@ -140,8 +140,7 @@ if (P.integrity) {
   P.integrity.fit = [
     "Investigations and content-integrity operations",
     "OSINT research and source-provenance analysis",
-    "Trust & Safety-adjacent analytical and escalation support",
-    "Knowledge quality, risk documentation and data operations"
+    "Trust & Safety-adjacent analysis, risk documentation and escalation support"
   ];
 
   if (P.integrity.strengths?.[2]) {
@@ -193,15 +192,13 @@ if (P.integrity) {
     focusGroup.role = "Sensitive Research Operations Contributor";
     focusGroup.bullets = [
       "Co-developed and facilitated approximately 4–5 recorded remote focus groups with autistic participants discussing sensitive sexuality and relationship topics.",
-      "Supported recruitment, explicit consent, participant privacy, pseudonymous naming, recording boundaries, structured prompts, accessibility options and two-person facilitation handoffs.",
-      "Handled participant information confidentially and coordinated with the supervising researcher and a second facilitator."
+      "Supported recruitment, explicit consent, participant privacy, pseudonymous naming, recording boundaries, structured prompts, accessibility options, confidential handling and two-person facilitation handoffs."
     ];
   }
 
   if (gray) {
     gray.bullets = [
-      "Conduct self-directed adversarial testing across chat, image, agentic tool-use and indirect prompt-injection scenarios, applying structured evidence capture to ambiguous system behavior.",
-      "Reached #75 on the Proving Ground leaderboard (top 6%) with 110 platform-displayed total breaks on 26 July 2026; reported as supporting analytical evidence rather than emergency-response or penetration-testing experience."
+      "Conduct self-directed adversarial testing across chat, image, agentic tool-use and indirect prompt-injection scenarios; reached #75 on the Proving Ground leaderboard (top 6%) with 110 platform-displayed breaks on 26 July 2026, presented as supporting analytical evidence rather than emergency-response experience."
     ];
   }
 
