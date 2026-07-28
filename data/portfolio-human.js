@@ -1,9 +1,9 @@
 const ENTROPY_WORK_URL = "https://entropyforlife.it/mario-marcolongo-entropy-for-life/";
 
 const PORTFOLIO_HUMAN = {
-  eyebrow: "AI evaluation · scientific fact-checking",
-  headline: "I test AI systems and verify scientific claims.",
-  introduction: "My primary work is AI model-behavior evaluation and scientific fact-checking. I also build and operate research-information tools when a recurring verification problem needs a practical system.",
+  eyebrow: "AI evaluation · scientific fact-checking · knowledge integrity",
+  headline: "I test AI systems, verify scientific claims and reconstruct public evidence.",
+  introduction: "My primary work is AI model-behavior evaluation, scientific fact-checking and evidence-bound public-source investigation. I also build and operate research-information tools when a recurring verification problem needs a practical system.",
 
   proofMoments: [
     {
@@ -19,10 +19,10 @@ const PORTFOLIO_HUMAN = {
       href: ENTROPY_WORK_URL
     },
     {
-      value: "480K+",
-      label: "combined public platform following",
-      detail: "Entropy for Life brand audience · 267K YouTube subscribers · non-unique",
-      href: ENTROPY_WORK_URL
+      value: "4,317",
+      label: "auditable Wikimedia contributions",
+      detail: "Archival recovery · source review · biomedical evidence · structured data",
+      href: "/integrity.html"
     }
   ],
 
@@ -78,6 +78,12 @@ const PORTFOLIO_HUMAN = {
     },
     {
       number: "03",
+      label: "Primary",
+      title: "Knowledge integrity & public-source investigation",
+      body: "Archival recovery, legal chronology, source-quality auditing, content-governance review and structured biomedical evidence synthesis."
+    },
+    {
+      number: "04",
       label: "Supporting",
       title: "Research information systems",
       body: "Structured records, provenance rules and maintained tools for recurring research-information problems."
@@ -126,13 +132,29 @@ const PORTFOLIO_HUMAN = {
       tone: "red"
     },
     {
-      id: "research-system",
+      id: "knowledge-integrity",
       number: "03",
+      label: "Knowledge integrity & investigation",
+      title: "Recovering, testing and structuring evidence under dispute.",
+      lead: "My public Wikimedia record includes substantially different investigation surfaces rather than one generic claim of OSINT familiarity.",
+      action: "I recovered archived material and reconstructed a legally sensitive chronology for the Oscar Giannino biography; audited source quality, bibliometrics and notability during the Massimo Teodorani deletion process; and synthesized peer-reviewed literature into a syndromic-autism taxonomy and comparative prevalence table.",
+      result: "Each case is linked to an exact attributed diff or collaborative discussion record, with methods, evidence boundaries and legally or scientifically cautious wording documented on a dedicated page.",
+      boundary: "The work represents public-source research and collaborative encyclopedia governance. It is not an independent legal judgment, covert investigation or original clinical research.",
+      href: "/integrity.html",
+      linkLabel: "Inspect the investigation records",
+      image: "/media/work/wikimedia-clinical-overlap.svg",
+      alt: "Scientific evidence diagram representing structured biomedical and Wikimedia work",
+      imageCaption: "Attributed public records · archival, governance and biomedical evidence cases",
+      tone: "purple"
+    },
+    {
+      id: "research-system",
+      number: "04",
       label: "Supporting research system",
       title: "Building a maintained directory of research opportunities.",
       lead: "Yourself to Science turns scattered institutional opportunities into a public catalogue with explicit inclusion and update rules.",
       action: "I defined the inclusion criteria, verification fields, provenance model, licensing boundaries, update workflow and public-data requirements, then coordinated AI-assisted implementation and ongoing operation.",
-      result: "More than 55 opportunities indexed, with FAIRsharing and Zenodo records and human- and machine-readable interfaces.",
+      result: "55 resources indexed; 37 unique Wikidata items use yourselftoscience.org as a reference URL, with FAIRsharing and Zenodo records and human- and machine-readable interfaces.",
       boundary: "My contribution covers requirements, information architecture, verification, functional testing, deployment diagnosis and operations—not unaided software development.",
       href: "https://yourselftoscience.org/",
       linkLabel: "Explore Yourself to Science",
@@ -197,6 +219,10 @@ const PORTFOLIO_HUMAN = {
 
   moreWork: [
     {
+      title: "Knowledge integrity & investigation records",
+      href: "/integrity.html"
+    },
+    {
       title: "Protein by bodyweight by country",
       href: "https://jnton.github.io/protein-by-bodyweight-country/"
     },
@@ -246,7 +272,7 @@ const PORTFOLIO_HUMAN = {
     },
     {
       title: "Trust, Safety & Knowledge Integrity",
-      description: "Source provenance, public-record research, content integrity and investigation support.",
+      description: "Archival OSINT, source-quality review, public-record research, content governance and investigation support.",
       href: "/cv-integrity.html",
       recommendedFor: "Integrity and investigation roles"
     },
