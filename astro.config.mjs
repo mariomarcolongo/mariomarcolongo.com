@@ -6,7 +6,8 @@ const legacyDataDefaultExports = new Map([
   ['/data/portfolio-human.js', 'PORTFOLIO_HUMAN'],
   ['/data/portfolio-v3.js', 'PORTFOLIO_V3'],
   ['/data/application-profiles.js', 'APPLICATION_PROFILES'],
-  ['/data/recent-application-evidence.js', 'RECENT_APPLICATION_EVIDENCE']
+  ['/data/recent-application-evidence.js', 'RECENT_APPLICATION_EVIDENCE'],
+  ['/data/investigation-cases.js', 'INVESTIGATION_CASES']
 ]);
 
 function escapeRegExp(value) {
