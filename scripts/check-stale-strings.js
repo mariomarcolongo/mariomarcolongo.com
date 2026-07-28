@@ -156,9 +156,8 @@ for (const requiredText of [
   'AI evaluation and scientific evidence roles.',
   '#75 on the Proving Ground leaderboard',
   'Fact-checking and producing scientific content before publication.',
-  'Recovering, testing and structuring evidence under dispute.',
-  'Oscar Giannino',
-  'Massimo Teodorani',
+  'Tracing privacy, policy and evidence changes under dispute.',
+  'Nebula Genomics',
   'syndromic-autism taxonomy',
   '80 documented published content contributions',
   '55 YouTube videos',
@@ -186,7 +185,8 @@ for (const rejectedText of [
   '/media/work/model-behavior-record.svg',
   '/media/work/entropy-dashboard-800.webp', '/evidence/gray-swan-metrics-2026-07-25.svg',
   'PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh', 'PLUXju4zC0Sks',
-  'Official Entropy for Life website'
+  'Official Entropy for Life website',
+  'Oscar Giannino', 'Massimo Teodorani'
 ]) {
   if (homepageSource.includes(rejectedText)) fail('src/pages/index.astro', 1, `Homepage still contains rejected content: ${rejectedText}`);
 }
@@ -196,8 +196,10 @@ const investigationSource = fs.readFileSync(path.join(ROOT, 'data/investigation-
 const integrityRecord = `${integritySource}\n${investigationSource}`;
 for (const requiredText of [
   'evidence trail survives scrutiny', 'Evidence boundary', 'Ethical and legal boundary',
-  'Oscar Giannino', 'Massimo Teodorani', 'Syndromic autism',
-  'Archival OSINT', 'Source-quality auditing', 'Biomedical literature synthesis'
+  'Nebula Genomics', 'Archival reconstruction of a legally sensitive public record',
+  'Biographical source-quality and notability review', 'Syndromic autism',
+  'Additional provenance and rights work', 'Archival OSINT', 'Source-quality auditing',
+  'Biomedical literature synthesis', 'Consumer-genomics privacy'
 ]) {
   if (!integrityRecord.includes(requiredText)) fail('src/pages/integrity.astro', 1, `Integrity work sample is missing: ${requiredText}`);
 }
