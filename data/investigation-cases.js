@@ -120,4 +120,6 @@ INVESTIGATION_CASES.all = [
   INVESTIGATION_CASES.pencil
 ];
 
-module.exports = INVESTIGATION_CASES;
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = INVESTIGATION_CASES;
+}
