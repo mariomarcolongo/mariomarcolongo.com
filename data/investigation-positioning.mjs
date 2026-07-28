@@ -192,13 +192,13 @@ if (P.integrity) {
     focusGroup.role = "Sensitive Research Operations Contributor";
     focusGroup.bullets = [
       "Co-developed and facilitated approximately 4–5 recorded remote focus groups with autistic participants discussing sensitive sexuality and relationship topics.",
-      "Supported recruitment, explicit consent, participant privacy, pseudonymous naming, recording boundaries, structured prompts, accessibility options, confidential handling and two-person facilitation handoffs."
+      "Supported recruitment, consent, participant privacy, pseudonymous naming, recording boundaries, structured prompts, accessibility options and two-person facilitation handoffs."
     ];
   }
 
   if (gray) {
     gray.bullets = [
-      "Conduct self-directed adversarial testing across chat, image, agentic tool-use and indirect prompt-injection scenarios; reached #75 on the Proving Ground leaderboard (top 6%) with 110 platform-displayed breaks on 26 July 2026, presented as supporting analytical evidence rather than emergency-response experience."
+      "Test chat, image, agentic tool-use and indirect prompt-injection scenarios; #75 on the Proving Ground (top 6%) with 110 platform-displayed breaks on 26 July 2026. Supporting analytical evidence, not emergency-response experience."
     ];
   }
 
@@ -225,7 +225,7 @@ if (P.integrity) {
     P.integrity,
     "Trust & safety analysis",
     "Trust & Safety-adjacent analysis",
-    "Ambiguous-case investigation, content-risk research, evidence documentation, taxonomy development, policy-boundary testing and escalation-ready analytical reporting"
+    "Ambiguous-case investigation, content-risk research, evidence documentation, taxonomy development and escalation-ready reporting"
   );
 }
 
