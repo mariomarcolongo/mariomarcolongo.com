@@ -107,7 +107,7 @@ if (P.researchQuality) {
 }
 
 if (P.editorialCommunity) {
-  P.editorialCommunity.summary = "Research, editorial and community-operations specialist with paid scientific content experience, long-running public-source and structured-data work, professional writing and web operations. Work includes primary-literature verification, archival source recovery, claim-to-source review, public-health monitoring, sensitive research facilitation and end-to-end ownership of public verification workflows.";
+  P.editorialCommunity.summary = "Research, editorial and community-operations specialist with paid scientific content experience inside an established science-communication brand with 267K YouTube subscribers and 36.5M channel views, plus long-running public-source and structured-data work, professional writing and web operations. Work includes primary-literature verification, archival source recovery, claim-to-source review, public-health monitoring, sensitive research facilitation and end-to-end ownership of public verification workflows; audience metrics describe the production environment, not a personal audience.";
 
   if (P.editorialCommunity.strengths?.[2]) {
     P.editorialCommunity.strengths[2] = {
