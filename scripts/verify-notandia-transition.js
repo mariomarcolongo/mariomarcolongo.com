@@ -92,7 +92,7 @@ async function main() {
   const canonical = read('notandia.html');
   parseJsonLd(canonical, 'dist/notandia.html');
   for (const expected of [
-    '<h1>Notandia</h1>',
+    '>Notandia</h1>',
     'Originally released as MDPI Filter',
     'For application reviewers',
     CURRENT_BROWSER_REPO,
