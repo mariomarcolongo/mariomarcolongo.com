@@ -147,6 +147,9 @@ if (P.researchQuality) {
 }
 
 if (P.editorialCommunity) {
+  if (P.editorialCommunity.fit?.[0]) {
+    P.editorialCommunity.fit[0] = 'Editorial operations and OSINT with multilingual scientific localization';
+  }
   const item = findEntropy(P.editorialCommunity);
   if (item) {
     item.bullets = [
