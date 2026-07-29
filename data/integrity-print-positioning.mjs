@@ -21,7 +21,8 @@ const multilingualSkill = integrity.skills?.find(
   ([title]) => title === 'Knowledge integrity and multilingual quality'
 );
 if (multilingualSkill) {
-  multilingualSkill[1] = 'Citation checking, cross-language adaptation, terminology consistency, structured metadata, rights context and evidence-bound reporting';
+  multilingualSkill[0] = 'Multilingual knowledge quality';
+  multilingualSkill[1] = 'Cross-language citation, terminology, metadata and evidence-quality review';
 }
 
 export default {
