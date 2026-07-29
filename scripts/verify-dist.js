@@ -129,6 +129,11 @@ assertContains(index, 'class="v8-case-stack"', 'dist/index.html');
 assertContains(index, 'class="v8-product"', 'dist/index.html');
 assertContains(index, 'v10-entropy-panel', 'dist/index.html');
 assertContains(index, 'v12-platform-proof', 'dist/index.html');
+const currentGraySwanCaption = '<span class="v10-gs-caption"><span><strong>#74</strong><small>Proving Ground</small></span><span><strong>Top 6%</strong><small>Global percentile</small></span><span><strong>113</strong><small>Total breaks</small></span><span><strong>#365</strong><small>Arena rank</small></span></span>';
+assertContains(index, currentGraySwanCaption, 'dist/index.html Gray Swan caption');
+for (const staleCaption of ['<span class="v10-gs-caption"><span><strong>#75</strong>', '<span><strong>110</strong><small>Total breaks</small></span>', '<span><strong>#371</strong><small>Arena rank</small></span>']) {
+  assertNotContains(index, staleCaption, 'dist/index.html Gray Swan caption');
+}
 for (const media of [
   '/media/work/gray-swan-profile-2026-07-29-1600.webp', '/media/work/entropy-h5n1.png',
   '/media/work/yourself-to-science-800.webp', '/media/work/mdpi-filter-1-800.webp',
