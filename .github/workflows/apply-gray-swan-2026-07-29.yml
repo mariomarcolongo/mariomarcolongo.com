@@ -58,7 +58,7 @@ jobs:
           p = Path('scripts/verify-dist.js')
           s = p.read_text()
           s = s.replace('/evidence/gray-swan-2026-07-25/', '/evidence/gray-swan-2026-07-29/')
-          s = s.replace('/evidence/gray-swan-profile-2026-07-26.html', '/evidence/gray-swan-profile-2026-07-29.html')
+          s = s.replace("'/evidence/gray-swan-profile-2026-07-26.html',\n", '')
           s = s.replace('/media/work/gray-swan-profile-2026-07-26.svg', '/media/work/gray-swan-profile-2026-07-29-1600.webp')
           s = s.replace("'Open live Gray Swan profile', '109'", "'Open live Gray Swan profile', '112'")
           p.write_text(s)
