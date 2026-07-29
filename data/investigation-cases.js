@@ -74,6 +74,26 @@ const INVESTIGATION_CASES = {
       { label: "Open the current dedicated article", href: "https://en.wikipedia.org/wiki/Syndromic_autism" }
     ]
   },
+  freedomCities: {
+    id: "freedom-cities",
+    category: "Policy research & contested-source synthesis",
+    title: "Freedom Cities: creating a neutral English-language policy article",
+    context: "An emerging US political and urban-development proposal was documented across campaign material, academic analysis, think-tank plans, draft legislation and independent reporting, without an existing English Wikipedia article that brought the evidence together.",
+    work: [
+      "Researched, structured and created an 18,351-byte English Wikipedia article, then moved it from userspace into mainspace on 16 August 2025.",
+      "Synthesized the original proposal, technological and social vision, supporting organizations, legal pathways, regulatory exemptions, infrastructure feasibility, governance concerns and ideological analysis.",
+      "Balanced primary advocacy material with academic research and independent reporting, attributing contested interpretations and separating proposal details from criticism.",
+      "Expanded and categorized the article after publication; its original structure and most of its initial content remain visible in the current collaborative version, which is assessed as B-Class by several WikiProjects."
+    ],
+    demonstrates: ["Policy research", "Neutral explanatory writing", "Contested-source synthesis", "Information architecture", "Citation management"],
+    limitations: "Wikipedia is collaborative and the current article includes later edits by other contributors. The exact creation revision verifies the initial 18,351-byte contribution. B-Class is a WikiProject assessment, not academic peer review, independent publication approval or endorsement of the proposal.",
+    links: [
+      { label: "Inspect the 18,351-byte creation revision", href: "https://en.wikipedia.org/w/index.php?oldid=1306119107&title=Freedom_Cities" },
+      { label: "Open the current article", href: "https://en.wikipedia.org/wiki/Freedom_Cities" },
+      { label: "Inspect the complete revision history", href: "https://en.wikipedia.org/w/index.php?title=Freedom_Cities&action=history" },
+      { label: "Inspect WikiProject assessments", href: "https://en.wikipedia.org/wiki/Talk:Freedom_Cities" }
+    ]
+  },
   h5n1: {
     id: "h5n1",
     category: "Rapid health-information monitoring",
@@ -130,6 +150,7 @@ const INVESTIGATION_CASES = {
 
 INVESTIGATION_CASES.primary = [
   INVESTIGATION_CASES.nebula,
+  INVESTIGATION_CASES.freedomCities,
   INVESTIGATION_CASES.syndromicAutism,
   INVESTIGATION_CASES.directory,
   INVESTIGATION_CASES.giannino,
