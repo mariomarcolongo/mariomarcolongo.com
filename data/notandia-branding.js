@@ -27,15 +27,20 @@ function rewriteLegacyLinks(value) {
 
 function applyNotandiaBranding({ D, H, P } = {}) {
   if (D?.identity) D.identity.notandiaUrl = NOTANDIA.canonicalUrl;
+  if (D?.summary && !D.summary.includes("Notandia")) {
+    D.summary += " Current open-source product work includes Notandia (formerly MDPI Filter), a continuing browser and Zotero research-integrity tool.";
+  }
 
   const project = D?.projects?.find((item) => item?.id === "mdpi-filter");
   if (project) {
     project.title = "Notandia — formerly MDPI Filter | Browser Extension & Zotero Plugin";
     project.oneLiner = "An independent open-source research tool for explainable publisher context, publication detection and post-publication integrity signals across browser and Zotero workflows.";
-    project.description = "Created and maintain Notandia, the public-facing continuation of MDPI Filter. Defined product requirements, identifier- and domain-based matching behavior, false-positive boundaries and cross-surface workflows; test browser and Zotero releases, inspect API and implementation behavior, reproduce issues, guide AI-assisted changes, and manage documentation, deployment and maintenance. Existing store identities and compatibility-sensitive identifiers are retained so the same product lineage can continue receiving updates.";
+    project.description = `Created and maintain Notandia, the public-facing continuation of MDPI Filter. Defined product requirements, identifier- and domain-based matching behavior, false-positive boundaries and cross-surface workflows; test browser and Zotero releases, inspect API and implementation behavior, reproduce issues, guide AI-assisted changes, and manage documentation, deployment and maintenance. Existing store identities and compatibility-sensitive identifiers are retained so the same product lineage can continue receiving updates. Current source repositories: ${NOTANDIA.browserRepository} and ${NOTANDIA.zoteroRepository}.`;
     project.role = "Creator & AI-Assisted Technical Product Operator";
     project.tech = ["Product Requirements", "Functional Testing", "Manifest V3", "Zotero", "NCBI E-utilities", "Crossref", "Browser Extension Operations"];
     project.links = {
+      website: NOTANDIA.canonicalUrl,
+      github: NOTANDIA.browserRepository,
       canonical: NOTANDIA.canonicalUrl,
       browserRepository: NOTANDIA.browserRepository,
       zoteroRepository: NOTANDIA.zoteroRepository,
