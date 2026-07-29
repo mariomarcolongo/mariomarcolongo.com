@@ -9,7 +9,7 @@ const ROOT = path.resolve(__dirname, '..');
 const DIST = path.join(ROOT, 'dist');
 const OUTPUT = path.join(ROOT, 'audit-output');
 const MAX_HOMEPAGE_HEIGHT = 16500;
-const NOTANDIA_HOMEPAGE_TITLE = 'Notandia (formerly MDPI Filter) for browsers and Zotero.';
+const NOTANDIA_HOMEPAGE_TITLE = 'Notandia works across browser and Zotero research workflows.';
 const ROUTES = [
   'index.html', 'integrity.html', 'cv.html', 'cv-resume.html',
   'cv-research.html', 'cv-editorial.html', 'cv-integrity.html', 'cv-orcid.html', 'security.html'

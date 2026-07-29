@@ -1,6 +1,8 @@
 import career from "./investigation-positioning.mjs";
+import notandiaBranding from "./notandia-branding.js";
 
-const { D, P } = career;
+const { D, H, P } = career;
+const { applyNotandiaBranding } = notandiaBranding;
 const researchOperationsPage = "/research-operations.html";
 const supervisorUrl = "https://dpss.unipd.it/en/node/239";
 const departmentUrl = "https://www.unipd.it/en/dpss";
@@ -42,5 +44,7 @@ if (P.integrity) {
     ];
   }
 }
+
+applyNotandiaBranding({ D, H, P });
 
 export default career;

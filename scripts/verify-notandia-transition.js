@@ -10,9 +10,11 @@ const OUTPUT = path.join(ROOT, 'audit-output');
 const RETIRED_URL = 'https://github.com/orgs/mdpi-filter/repositories';
 const CURRENT_BROWSER_REPO = 'https://github.com/notandia/browser-extension';
 const CURRENT_ZOTERO_REPO = 'https://github.com/notandia/zotero-plugin';
-const CONTINUITY_ROUTE = '/mdpi-filter.html';
+const CANONICAL_ROUTE = '/notandia.html';
+const LEGACY_ROUTE = '/mdpi-filter.html';
+const CANONICAL_URL = 'https://mariomarcolongo.com/notandia.html';
 const HTML_FILES = [
-  'index.html', 'mdpi-filter.html', 'cv.html', 'cv-resume.html', 'cv-research.html',
+  'index.html', 'notandia.html', 'mdpi-filter.html', 'cv.html', 'cv-resume.html', 'cv-research.html',
   'cv-editorial.html', 'cv-integrity.html', 'cv-orcid.html', 'integrity.html', 'security.html'
 ];
 
@@ -26,8 +28,12 @@ function assertContains(value, expected, label) {
   if (!value.includes(expected)) throw new Error(`${label} is missing: ${expected}`);
 }
 
+function assertNotContains(value, prohibited, label) {
+  if (value.includes(prohibited)) throw new Error(`${label} contains prohibited text: ${prohibited}`);
+}
+
 function parseJsonLd(html, label) {
-  const blocks = [...html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
+  const blocks = [...html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script\s*>/gi)];
   if (!blocks.length) throw new Error(`${label} has no JSON-LD`);
   for (const [, block] of blocks) JSON.parse(block.trim());
 }
@@ -48,7 +54,7 @@ async function verifyRendering() {
         await page.evaluateOnNewDocument((selectedTheme) => {
           try { localStorage.setItem('theme', selectedTheme); } catch (error) {}
         }, theme);
-        await page.goto(`${server.origin}${CONTINUITY_ROUTE}`, { waitUntil: 'networkidle0', timeout: 45000 });
+        await page.goto(`${server.origin}${CANONICAL_ROUTE}`, { waitUntil: 'networkidle0', timeout: 45000 });
         const model = await page.evaluate(() => ({
           h1Count: document.querySelectorAll('h1').length,
           scrollWidth: document.documentElement.scrollWidth,
@@ -57,12 +63,14 @@ async function verifyRendering() {
           retiredClickableLinks: document.querySelectorAll('a[href="https://github.com/orgs/mdpi-filter/repositories"]').length,
           currentLinks: Array.from(document.querySelectorAll('a[href]')).map((item) => item.href)
         }));
-        if (model.h1Count !== 1) throw new Error(`Continuity page ${theme}/${viewport.name} must have one H1`);
-        if (model.scrollWidth > model.clientWidth + 1) throw new Error(`Continuity page ${theme}/${viewport.name} overflows horizontally`);
-        if (!model.text.includes('MDPI Filter is becoming Notandia.')) throw new Error(`Continuity page ${theme}/${viewport.name} is missing the transition heading`);
-        if (model.retiredClickableLinks !== 0) throw new Error('Continuity page renders the retired organization URL as a clickable link');
+        if (model.h1Count !== 1) throw new Error(`Notandia page ${theme}/${viewport.name} must have one H1`);
+        if (model.scrollWidth > model.clientWidth + 1) throw new Error(`Notandia page ${theme}/${viewport.name} overflows horizontally`);
+        if (!model.text.includes('Notandia') || !model.text.includes('Originally released as MDPI Filter')) {
+          throw new Error(`Notandia page ${theme}/${viewport.name} is missing the current-brand continuity statement`);
+        }
+        if (model.retiredClickableLinks !== 0) throw new Error('Notandia page renders the retired organization URL as a clickable link');
         if (!model.currentLinks.includes(CURRENT_BROWSER_REPO) || !model.currentLinks.includes(CURRENT_ZOTERO_REPO)) {
-          throw new Error(`Continuity page ${theme}/${viewport.name} is missing current repository links`);
+          throw new Error(`Notandia page ${theme}/${viewport.name} is missing current repository links`);
         }
         await page.screenshot({ path: path.join(OUTPUT, `notandia-${theme}-${viewport.name}.png`), fullPage: true });
         await page.close();
@@ -77,35 +85,51 @@ async function verifyRendering() {
 async function main() {
   for (const relativePath of HTML_FILES) {
     const html = read(relativePath);
-    if (new RegExp(`href=["']${RETIRED_URL.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["']`).test(html)) {
-      throw new Error(`dist/${relativePath} still exposes the retired organization URL as a clickable link`);
-    }
+    const retiredLink = new RegExp(`href=["']${RETIRED_URL.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["']`);
+    if (retiredLink.test(html)) throw new Error(`dist/${relativePath} still exposes the retired organization URL as a clickable link`);
   }
 
-  const continuity = read('mdpi-filter.html');
-  parseJsonLd(continuity, 'dist/mdpi-filter.html');
+  const canonical = read('notandia.html');
+  parseJsonLd(canonical, 'dist/notandia.html');
   for (const expected of [
-    'MDPI Filter is becoming Notandia.',
+    '>Notandia</h1>',
+    'Originally released as MDPI Filter',
     'For application reviewers',
     CURRENT_BROWSER_REPO,
     CURRENT_ZOTERO_REPO,
-    'Existing browser-store identities are retained',
     'Stable evidence URL'
-  ]) assertContains(continuity, expected, 'dist/mdpi-filter.html');
+  ]) assertContains(canonical, expected, 'dist/notandia.html');
+
+  const legacy = read('mdpi-filter.html');
+  assertContains(legacy, 'noindex,follow', 'dist/mdpi-filter.html');
+  assertContains(legacy, CANONICAL_URL, 'dist/mdpi-filter.html');
+  assertContains(legacy, CANONICAL_ROUTE, 'dist/mdpi-filter.html');
+
+  const redirects = read('_redirects');
+  assertContains(redirects, '/mdpi-filter.html', 'dist/_redirects');
+  assertContains(redirects, CANONICAL_ROUTE, 'dist/_redirects');
 
   const index = read('index.html');
-  assertContains(index, `href="${CONTINUITY_ROUTE}"`, 'dist/index.html');
-  assertContains(index, 'Notandia (formerly MDPI Filter)', 'dist/index.html');
+  assertContains(index, `href="${CANONICAL_ROUTE}"`, 'dist/index.html');
+  assertContains(index, 'Notandia', 'dist/index.html');
 
   const orcid = read('cv-orcid.html');
-  assertContains(orcid, 'Notandia (formerly MDPI Filter)', 'dist/cv-orcid.html');
-  assertContains(orcid, `href="${CONTINUITY_ROUTE}"`, 'dist/cv-orcid.html');
+  assertContains(orcid, 'Notandia', 'dist/cv-orcid.html');
+  assertContains(orcid, `href="${CANONICAL_ROUTE}"`, 'dist/cv-orcid.html');
 
   const sitemap = read('sitemap.xml');
-  assertContains(sitemap, 'https://mariomarcolongo.com/mdpi-filter.html', 'dist/sitemap.xml');
+  assertContains(sitemap, CANONICAL_URL, 'dist/sitemap.xml');
+  assertNotContains(sitemap, 'https://mariomarcolongo.com/mdpi-filter.html', 'dist/sitemap.xml');
+
+  for (const dossier of ['llms.txt', 'llms-full.txt', 'cv-llm.txt', 'data/source.js']) {
+    const value = read(dossier);
+    assertContains(value, 'Notandia', `dist/${dossier}`);
+    assertNotContains(value, RETIRED_URL, `dist/${dossier}`);
+    assertNotContains(value, LEGACY_ROUTE, `dist/${dossier}`);
+  }
 
   await verifyRendering();
-  console.log('Notandia continuity page, current repository links and retired-URL boundary verified.');
+  console.log('Canonical Notandia page, legacy redirects, CV links, dossiers and retired-URL boundary verified.');
 }
 
 main().catch((error) => {

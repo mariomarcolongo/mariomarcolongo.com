@@ -41,11 +41,11 @@ profile.experience = [
     organization: "Notandia (formerly MDPI Filter) · English Wikipedia Link Converter · Independent open-source projects",
     period: "2024 — Present",
     links: [
-      { label: "Notandia / MDPI Filter continuity record", url: "/mdpi-filter.html" },
+      { label: "Canonical Notandia project record", url: "/notandia.html" },
       { label: "Wikipedia API service repository", url: "https://github.com/jnton/english-wikipedia-link-converter-telegram-bot" }
     ],
     bullets: [
-      "Define and verify Notandia/MDPI Filter behavior across five released targets for Google Scholar, PubMed, Europe PMC and article references, using DOI, domain and identifier evidence.",
+      "Define and verify Notandia behavior across five released browser and Zotero targets for Google Scholar, PubMed, Europe PMC and article references, using DOI, domain and identifier evidence; the product was originally released as MDPI Filter.",
       "Operate an AWS service processing Wikipedia links through HTTP webhooks and REST APIs, with Lambda, SQS, DynamoDB, monitoring, retries, dead-letter handling and rate limits.",
       "Reproduce failures, inspect request and response behavior, document issues and releases, guide AI-assisted changes and turn user needs into testable behavior."
     ]
