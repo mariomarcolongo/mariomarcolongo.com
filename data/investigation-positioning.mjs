@@ -37,9 +37,9 @@ if (masterWiki) {
   masterWiki.links = {
     centralAuth,
     investigations: integrityPage,
-    freedomCities: C.freedomCities.links[0].href,
-    danielaBortoletto: C.danielaBortoletto.links[1].href,
-    shadowLibrary: C.shadowLibrary.links[1].href,
+    "Freedom Cities creation revision": C.freedomCities.links[0].href,
+    "Daniela Bortoletto revision history": C.danielaBortoletto.links[1].href,
+    "Biblioteca ombra revision history": C.shadowLibrary.links[1].href,
     consumerPrivacy: C.nebula.links[0].href,
     archivalRecord: C.giannino.links[0].href,
     sourceQualityReview: C.teodorani.links[0].href,
