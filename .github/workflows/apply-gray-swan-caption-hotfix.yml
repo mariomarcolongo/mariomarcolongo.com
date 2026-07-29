@@ -1,0 +1,113 @@
+name: Apply Gray Swan current caption hotfix
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  hotfix:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Patch current Gray Swan presentation values
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          presentation = Path('scripts/apply-portfolio-presentation.js')
+          text = presentation.read_text()
+          old_current = """const CURRENT = Object.freeze({
+            graySwanDate: '26 July 2026',
+            arenaRank: 371,
+            screenshot: '/media/work/gray-swan-profile-2026-07-26.svg',
+            evidence: '/evidence/gray-swan-profile-2026-07-26.html',"""
+          new_current = """const CURRENT = Object.freeze({
+            graySwanDate: '29 July 2026',
+            provingGroundRank: 74,
+            percentile: 'Top 6%',
+            totalBreaks: 113,
+            arenaRank: 365,
+            screenshot: '/media/work/gray-swan-profile-2026-07-29-1600.webp',
+            evidence: '/evidence/gray-swan-2026-07-29/',"""
+          if old_current not in text:
+              raise SystemExit('Current Gray Swan presentation constants were not found')
+          text = text.replace(old_current, new_current)
+
+          old_caption = '<span class="v10-gs-caption"><span><strong>#75</strong><small>Proving Ground</small></span><span><strong>Top 6%</strong><small>Global percentile</small></span><span><strong>110</strong><small>Total breaks</small></span><span><strong>#371</strong><small>Arena rank</small></span></span>'
+          new_caption = '<span class="v10-gs-caption"><span><strong>#${CURRENT.provingGroundRank}</strong><small>Proving Ground</small></span><span><strong>${CURRENT.percentile}</strong><small>Global percentile</small></span><span><strong>${CURRENT.totalBreaks}</strong><small>Total breaks</small></span><span><strong>#${CURRENT.arenaRank}</strong><small>Arena rank</small></span></span>'
+          if old_caption not in text:
+              raise SystemExit('Stale Gray Swan caption template was not found')
+          text = text.replace(old_caption, new_caption)
+          text = text.replace(
+              "html = html.replaceAll('/media/work/model-behavior-profile.jpg', CURRENT.screenshot);",
+              "html = html.replaceAll('/media/work/model-behavior-profile.jpg', CURRENT.screenshot);\n  html = html.replaceAll('/media/work/gray-swan-profile-2026-07-26.svg', CURRENT.screenshot);"
+          )
+          text = text.replace(
+              "html = html.replaceAll('/evidence/gray-swan-profile-2026-07-25.html', CURRENT.evidence);",
+              "html = html.replaceAll('/evidence/gray-swan-profile-2026-07-25.html', CURRENT.evidence);\n  html = html.replaceAll('/evidence/gray-swan-profile-2026-07-26.html', CURRENT.evidence);"
+          )
+          presentation.write_text(text)
+
+          postbuild = Path('scripts/postbuild.js')
+          text = postbuild.read_text()
+          old_required = """  'media/work/gray-swan-profile-2026-07-26.svg',
+            'evidence/gray-swan-profile-2026-07-26.html',
+            'evidence/gray-swan-profile-2026-07-26.json'"""
+          new_required = """  'media/work/gray-swan-profile-2026-07-29-800.webp',
+            'media/work/gray-swan-profile-2026-07-29-1600.webp',
+            'evidence/gray-swan-arena-mario-marcolongo-2026-07-29-033550-CEST.png',
+            'evidence/gray-swan-profile-2026-07-29.html',
+            'evidence/gray-swan-profile-2026-07-29.json'"""
+          if old_required not in text:
+              raise SystemExit('Stale post-build evidence requirements were not found')
+          text = text.replace(old_required, new_required)
+          text = text.replace(".replaceAll('25 July 2026', '26 July 2026')\n      .replaceAll('#370', '#371')", ".replaceAll('25 July 2026', '29 July 2026')\n      .replaceAll('#370', '#365')")
+          postbuild.write_text(text)
+
+          verify = Path('scripts/verify-dist.js')
+          text = verify.read_text()
+          marker = "assertContains(index, 'v12-platform-proof', 'dist/index.html');\n"
+          addition = marker + "const currentGraySwanCaption = '<span class=\"v10-gs-caption\"><span><strong>#74</strong><small>Proving Ground</small></span><span><strong>Top 6%</strong><small>Global percentile</small></span><span><strong>113</strong><small>Total breaks</small></span><span><strong>#365</strong><small>Arena rank</small></span></span>';\nassertContains(index, currentGraySwanCaption, 'dist/index.html Gray Swan caption');\nfor (const staleCaption of ['<span class=\"v10-gs-caption\"><span><strong>#75</strong>', '<span><strong>110</strong><small>Total breaks</small></span>', '<span><strong>#371</strong><small>Arena rank</small></span>']) {\n  assertNotContains(index, staleCaption, 'dist/index.html Gray Swan caption');\n}\n"
+          if marker not in text:
+              raise SystemExit('Index presentation assertion insertion point was not found')
+          verify.write_text(text.replace(marker, addition))
+          PY
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Build and verify website
+        run: npm run build
+
+      - name: Verify responsive rendering
+        run: npm run verify:render
+
+      - name: Generate current CV PDFs
+        run: npm run pdf
+
+      - name: Remove one-time workflow
+        run: rm .github/workflows/apply-gray-swan-caption-hotfix.yml
+
+      - name: Commit synchronized source and outputs
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Fix current Gray Swan homepage caption'
+          git push origin HEAD:fix/gray-swan-current-caption
