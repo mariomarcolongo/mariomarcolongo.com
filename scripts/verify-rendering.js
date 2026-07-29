@@ -9,6 +9,7 @@ const ROOT = path.resolve(__dirname, '..');
 const DIST = path.join(ROOT, 'dist');
 const OUTPUT = path.join(ROOT, 'audit-output');
 const MAX_HOMEPAGE_HEIGHT = 16500;
+const NOTANDIA_HOMEPAGE_TITLE = 'Notandia (formerly MDPI Filter) for browsers and Zotero.';
 const ROUTES = [
   'index.html', 'integrity.html', 'cv.html', 'cv-resume.html',
   'cv-research.html', 'cv-editorial.html', 'cv-integrity.html', 'cv-orcid.html', 'security.html'
@@ -72,7 +73,7 @@ async function verifyHomepage(page, viewport) {
     throw new Error(`Homepage must provide visual evidence for all ${H.cases.length} cases`);
   }
   if (result.entropyPanelCount !== 1) throw new Error('Homepage must render exactly one recruiter-facing Entropy evidence panel');
-  if (result.productImageCount !== H.mdpiFilter.images.length) throw new Error(`Homepage must render ${H.mdpiFilter.images.length} MDPI Filter screenshots`);
+  if (result.productImageCount !== H.mdpiFilter.images.length) throw new Error(`Homepage must render ${H.mdpiFilter.images.length} product screenshots`);
   if (result.visualArtifactCount < 1 + H.visualArtifacts.length) throw new Error('Homepage must render the featured visualization and secondary visual artifacts');
   if (result.principleCount !== H.workingPrinciples.length) throw new Error(`Homepage must render ${H.workingPrinciples.length} working principles`);
   if (result.documentCount !== H.applicationDocuments.length) throw new Error(`Homepage must render ${H.applicationDocuments.length} application documents`);
@@ -98,7 +99,7 @@ async function verifyNoJavaScript(browser, staticServer, route) {
         ...H.proofMoments.map((item) => item.label),
         ...H.scopes.map((item) => item.title),
         ...H.cases.map((item) => item.title),
-        H.mdpiFilter.title,
+        NOTANDIA_HOMEPAGE_TITLE,
         H.featuredArtifact.title,
         ...H.visualArtifacts.map((item) => item.title),
         H.workingStyle.title,
