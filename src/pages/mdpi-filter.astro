@@ -1,0 +1,154 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SiteNav from "../components/SiteNav.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import "../styles/portfolio-v3.css";
+import career from "../../data/research-operations-positioning.mjs";
+
+const { D } = career;
+const pageTitle = "Notandia — formerly MDPI Filter | Mario Marcolongo";
+const pageDescription = "Canonical continuity record for the rebrand of MDPI Filter to Notandia, with current repositories, store identities, historical sources and evidence boundaries.";
+const canonical = "https://mariomarcolongo.com/mdpi-filter.html";
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={canonical}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: pageTitle,
+      description: pageDescription,
+      url: canonical,
+      dateModified: "2026-07-29",
+      mainEntity: {
+        "@type": "SoftwareApplication",
+        name: "Notandia",
+        alternateName: "MDPI Filter",
+        applicationCategory: "ResearchApplication",
+        operatingSystem: "Chrome, Microsoft Edge, Firefox, Safari, Zotero",
+        codeRepository: [
+          "https://github.com/notandia/browser-extension",
+          "https://github.com/notandia/zotero-plugin"
+        ]
+      }
+    })}></script>
+  </Fragment>
+
+  <SiteNav activePage="work" />
+
+  <main class="transition-page">
+    <section class="transition-hero">
+      <div class="transition-kicker">Project continuity · updated 29 July 2026</div>
+      <h1>MDPI Filter is becoming Notandia.</h1>
+      <p class="transition-lead"><strong>Notandia is the public-facing rebrand and continuation of MDPI Filter.</strong> The underlying project, technical lineage and my documented role remain continuous. Existing browser-store identities are retained so installed copies can continue receiving updates.</p>
+      <div class="transition-notice">
+        <strong>For application reviewers</strong>
+        <p>CVs or applications sent before this transition may use the name <em>MDPI Filter</em> or link to its former GitHub organization. Those references describe the same project lineage documented here. This page is the stable, canonical record for future repository or branding changes.</p>
+      </div>
+      <div class="transition-actions">
+        <a class="btn btn-primary" href="https://github.com/notandia/browser-extension" target="_blank" rel="noopener noreferrer">Canonical browser-extension repository ↗</a>
+        <a class="btn" href="https://github.com/notandia/zotero-plugin" target="_blank" rel="noopener noreferrer">Zotero plugin repository ↗</a>
+        <a class="btn" href="/cv.html">Master CV</a>
+      </div>
+    </section>
+
+    <section class="transition-section">
+      <div class="transition-section-head">
+        <div>
+          <div class="transition-kicker">Current project structure</div>
+          <h2>One product lineage, consolidated under Notandia.</h2>
+        </div>
+        <p>The current repositories separate the shared browser-extension product from the Zotero integration while preserving historical technical identities where compatibility requires them.</p>
+      </div>
+      <div class="transition-grid">
+        <article>
+          <span>01</span>
+          <h3>Browser extension</h3>
+          <p>Canonical shared source for Chrome, Microsoft Edge, Firefox and Safari. It preserves the original MDPI-detection features and adds explainable publisher and research-integrity context.</p>
+          <a href="https://github.com/notandia/browser-extension" target="_blank" rel="noopener noreferrer">notandia/browser-extension ↗</a>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Zotero plugin</h3>
+          <p>Reference-management integration for identifying relevant publisher and integrity signals inside Zotero workflows.</p>
+          <a href="https://github.com/notandia/zotero-plugin" target="_blank" rel="noopener noreferrer">notandia/zotero-plugin ↗</a>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Store continuity</h3>
+          <p>The existing Chrome extension ID and Microsoft Edge Product ID remain the technical identities used for updates during the rebrand.</p>
+          <div class="transition-links">
+            <a href="https://chromewebstore.google.com/detail/mdpi-filter/comknkeimaaadpiopddjoknflbmjeccp" target="_blank" rel="noopener noreferrer">Chrome Web Store ↗</a>
+            <a href="https://microsoftedge.microsoft.com/addons/detail/mdpi-filter/efonlkldplkaeekpiajloajjmkappjgi" target="_blank" rel="noopener noreferrer">Microsoft Edge Add-ons ↗</a>
+          </div>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>Historical sources</h3>
+          <p>Older repositories remain useful for establishing pre-consolidation development history and the transition from browser-specific MDPI Filter packages.</p>
+          <div class="transition-links">
+            <a href="https://github.com/jnton/mdpi-filter-chrome" target="_blank" rel="noopener noreferrer">Historical Chrome source ↗</a>
+            <a href="https://github.com/notandia/microsoft-edge" target="_blank" rel="noopener noreferrer">Legacy Edge migration source ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="transition-section transition-role">
+      <div>
+        <div class="transition-kicker">My documented contribution</div>
+        <h2>Product requirements, behavioral verification and release operations.</h2>
+      </div>
+      <div>
+        <p>I defined product behavior and evidence-matching requirements, tested browser and Zotero workflows, reproduced failures, inspected implementation behavior, guided AI-assisted changes, and maintained release and store operations.</p>
+        <p>The work is presented as code-literate, AI-assisted technical and product operations—not as unaided professional software engineering.</p>
+      </div>
+    </section>
+
+    <section class="transition-boundaries">
+      <article>
+        <strong>Brand continuity</strong>
+        <p>“MDPI Filter” and “Notandia” refer to the same continuing project lineage; the name changed while compatibility-sensitive identifiers were retained.</p>
+      </article>
+      <article>
+        <strong>Independent project</strong>
+        <p>Notandia is not affiliated with, authorized by or endorsed by MDPI AG, Crossref, Retraction Watch, NCBI, browser vendors or any publisher.</p>
+      </article>
+      <article>
+        <strong>Stable evidence URL</strong>
+        <p>This page remains the canonical portfolio record even if repository ownership, names or store-facing branding change again.</p>
+      </article>
+    </section>
+  </main>
+
+  <SiteFooter version={D.identity.buildVersion} />
+</Layout>
+
+<style>
+  .transition-page { width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 72px 0 96px; }
+  .transition-hero, .transition-section, .transition-role, .transition-boundaries { margin-bottom: 64px; }
+  .transition-kicker { font-size: .76rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; opacity: .7; }
+  .transition-hero h1 { max-width: 850px; margin: 12px 0 18px; font-size: clamp(2.6rem, 7vw, 5.6rem); line-height: .98; letter-spacing: -.055em; }
+  .transition-lead { max-width: 850px; font-size: clamp(1.05rem, 2vw, 1.35rem); line-height: 1.65; }
+  .transition-notice { max-width: 850px; margin: 28px 0; padding: 20px 22px; border: 1px solid var(--border, #d7d7d7); border-left: 5px solid currentColor; border-radius: 12px; background: var(--surface, rgba(127,127,127,.06)); }
+  .transition-notice p { margin: 8px 0 0; line-height: 1.6; }
+  .transition-actions, .transition-links { display: flex; flex-wrap: wrap; gap: 10px; }
+  .transition-section-head, .transition-role { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 44px; align-items: start; }
+  .transition-section h2, .transition-role h2 { margin: 10px 0 0; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.08; letter-spacing: -.035em; }
+  .transition-section-head > p, .transition-role p { margin-top: 0; line-height: 1.7; }
+  .transition-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 30px; }
+  .transition-grid article, .transition-boundaries article { padding: 24px; border: 1px solid var(--border, #d7d7d7); border-radius: 16px; background: var(--surface, rgba(127,127,127,.045)); }
+  .transition-grid article > span { display: block; font-size: .78rem; font-weight: 800; opacity: .55; }
+  .transition-grid h3 { margin: 12px 0 8px; font-size: 1.3rem; }
+  .transition-grid p, .transition-boundaries p { line-height: 1.62; }
+  .transition-grid a { font-weight: 700; }
+  .transition-role { padding: 34px; border-radius: 18px; background: var(--surface, rgba(127,127,127,.07)); }
+  .transition-boundaries { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .transition-boundaries strong { font-size: 1.05rem; }
+  @media (max-width: 760px) {
+    .transition-page { padding-top: 42px; }
+    .transition-section-head, .transition-role { grid-template-columns: 1fr; gap: 18px; }
+    .transition-grid, .transition-boundaries { grid-template-columns: 1fr; }
+    .transition-role { padding: 24px; }
+  }
+</style>
