@@ -5,6 +5,7 @@ const { PDFDocument } = require('pdf-lib');
 const { startStaticServer } = require('./lib/static-server.js');
 const { launchBrowser } = require('./lib/browser.js');
 const { resolveCvPhone } = require('./lib/private-contact.js');
+const { rewriteLoopbackLinksForPdf, assertNoLoopbackPdfLinks } = require('./lib/pdf-links.js');
 
 const DOCUMENTS = [
   {
@@ -62,6 +63,7 @@ async function generateResumePdfs() {
           phoneSlot.hidden = false;
         }
       }, phone);
+      await rewriteLoopbackLinksForPdf(page);
 
       const fit = await page.evaluate(() => Array.from(document.querySelectorAll('.application-page')).map((applicationPage, index) => {
         const pageRect = applicationPage.getBoundingClientRect();
@@ -97,7 +99,9 @@ async function generateResumePdfs() {
         path: outPath
       });
 
-      const pdf = await PDFDocument.load(fs.readFileSync(outPath));
+      const pdfBytes = fs.readFileSync(outPath);
+      assertNoLoopbackPdfLinks(pdfBytes, document.label);
+      const pdf = await PDFDocument.load(pdfBytes);
       const pageCount = pdf.getPageCount();
       console.log(`${document.label} PDF page count: ${pageCount}`);
       console.log(`${document.label} PDF path: ${outPath}`);

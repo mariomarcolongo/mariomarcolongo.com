@@ -5,6 +5,7 @@ const { PDFDocument } = require('pdf-lib');
 const { startStaticServer } = require('./lib/static-server.js');
 const { launchBrowser } = require('./lib/browser.js');
 const { resolveCvPhone } = require('./lib/private-contact.js');
+const { rewriteLoopbackLinksForPdf, assertNoLoopbackPdfLinks } = require('./lib/pdf-links.js');
 
 async function generateCvPdf() {
   const distDir = path.resolve(process.cwd(), 'dist');
@@ -30,6 +31,7 @@ async function generateCvPdf() {
         if (phoneSlot.nextElementSibling?.tagName !== 'BR') phoneSlot.after(document.createElement('br'));
       }
     }, phone);
+    await rewriteLoopbackLinksForPdf(page);
 
     const outPath = path.resolve(process.cwd(), 'Mario Marcolongo — Curriculum Vitae.pdf');
     await page.pdf({
@@ -43,7 +45,9 @@ async function generateCvPdf() {
       path: outPath
     });
 
-    const pdf = await PDFDocument.load(fs.readFileSync(outPath));
+    const pdfBytes = fs.readFileSync(outPath);
+    assertNoLoopbackPdfLinks(pdfBytes, 'Full CV');
+    const pdf = await PDFDocument.load(pdfBytes);
     console.log(`Full CV PDF page count: ${pdf.getPageCount()}`);
     console.log(`Full CV PDF path: ${outPath}`);
   } finally {
