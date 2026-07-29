@@ -7,7 +7,7 @@ profile.id = "orcid-member-support";
 profile.documentLabel = "ORCID Application CV";
 profile.title = "Scholarly Infrastructure & API Operations Specialist";
 profile.subtitle = "Research workflows · API troubleshooting · metadata quality · remote stakeholder communication";
-profile.summary = "Open-research infrastructure and technical-operations specialist with eight years of auditable work across scholarly information, structured metadata, publication discovery and public-facing documentation. Founded and operate Yourself to Science, a directory of 55 research-participation resources with FAIRsharing and Zenodo records and machine-readable interfaces. Maintain API-connected research tools and an AWS service by reproducing issues, inspecting requests and responses, testing releases, documenting behavior and coordinating AI-assisted changes. Experienced in explaining complex scientific and technical material to non-specialist audiences and facilitating structured remote sessions.";
+profile.summary = "Open-research infrastructure and technical-operations specialist with eight years of auditable work across scholarly information, structured metadata, publication discovery and public documentation. Founded and operate Yourself to Science, a directory of 55 research-participation resources with FAIRsharing, Zenodo and machine-readable interfaces. Maintain API-connected research tools and an AWS service through issue reproduction, request/response inspection, release testing and behavior documentation. Explain complex scientific and technical material to non-specialist audiences and facilitate structured remote sessions.";
 profile.strengthsTitle = "Role-relevant evidence";
 profile.evidenceTitle = "Supporting evidence";
 profile.fitTitle = "Role-aligned strengths";
@@ -34,7 +34,7 @@ profile.experience = [
       { label: "Zenodo record", url: "https://doi.org/10.5281/zenodo.15109359" }
     ],
     bullets: [
-      "Founded and operate an open-source directory indexing 55 clinical studies, biobanks, donation programs, registries and other research-participation resources; maintain public FAIRsharing and Zenodo records.",
+      "Founded and operate an open-source directory of 55 research-participation resources; maintain public FAIRsharing and Zenodo records.",
       "Define inclusion and update workflows, provenance and metadata fields, licensing boundaries, public documentation and machine-readable interfaces including JSON-LD, RDF/VoID and OpenAPI.",
       "Investigate issues, specify expected behavior, inspect API and implementation outputs, test releases, diagnose deployments and document decisions for users and maintainers."
     ]
@@ -48,8 +48,8 @@ profile.experience = [
       { label: "Wikipedia API service repository", url: "https://github.com/jnton/english-wikipedia-link-converter-telegram-bot" }
     ],
     bullets: [
-      "Define and verify browser and Zotero workflows for Google Scholar, PubMed, Europe PMC and publisher pages using DOI, PMID/PMCID, domain and other identifier evidence.",
-      "Operate an AWS service using HTTP webhooks and REST APIs, Lambda, SQS and DynamoDB; inspect request/response behavior, status codes, monitoring, retries, dead-letter handling and rate limits.",
+      "Define and verify browser and Zotero workflows for Google Scholar, PubMed, Europe PMC and publisher pages using DOI, PMID/PMCID, domain and identifier evidence.",
+      "Operate an AWS service using HTTP webhooks and REST APIs, Lambda, SQS and DynamoDB; inspect status codes, requests, responses, monitoring, retries, dead-letter handling and rate limits.",
       "Reproduce failures, write issue and release documentation, prioritize fixes, test changes and coordinate AI-assisted implementation while retaining final verification and release decisions."
     ]
   },
