@@ -11,9 +11,10 @@ export interface Props {
   canonical: string;
   alternateHref: string;
   alternateLabel: string;
+  noIndex?: boolean;
 }
 
-const { profile, shared, canonical, alternateHref, alternateLabel } = Astro.props;
+const { profile, shared, canonical, alternateHref, alternateLabel, noIndex = false } = Astro.props;
 const firstPageExperience = profile.experience.slice(0, 2);
 const secondPageExperience = profile.experience.slice(2);
 const recentEvidence = RECENT_APPLICATION_EVIDENCE[profile.id]?.evidence || {};
@@ -24,6 +25,7 @@ const pageDescription = `Specialized two-page application CV for ${profile.title
 
 <Layout title={pageTitle} description={pageDescription} canonical={canonical}>
   <Fragment slot="head">
+    {noIndex && <meta name="robots" content="noindex,nofollow" />}
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "ProfilePage",
