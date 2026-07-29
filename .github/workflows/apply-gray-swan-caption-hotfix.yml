@@ -50,10 +50,10 @@ jobs:
           text = text.replace(old_current, new_current)
 
           old_caption = '<span class="v10-gs-caption"><span><strong>#75</strong><small>Proving Ground</small></span><span><strong>Top 6%</strong><small>Global percentile</small></span><span><strong>110</strong><small>Total breaks</small></span><span><strong>#371</strong><small>Arena rank</small></span></span>'
-          new_caption = '<span class="v10-gs-caption"><span><strong>#${CURRENT.provingGroundRank}</strong><small>Proving Ground</small></span><span><strong>${CURRENT.percentile}</strong><small>Global percentile</small></span><span><strong>${CURRENT.totalBreaks}</strong><small>Total breaks</small></span><span><strong>#${CURRENT.arenaRank}</strong><small>Arena rank</small></span></span>'
+          new_caption = '`<span class="v10-gs-caption"><span><strong>#${CURRENT.provingGroundRank}</strong><small>Proving Ground</small></span><span><strong>${CURRENT.percentile}</strong><small>Global percentile</small></span><span><strong>${CURRENT.totalBreaks}</strong><small>Total breaks</small></span><span><strong>#${CURRENT.arenaRank}</strong><small>Arena rank</small></span></span>`'
           if old_caption not in text:
               raise SystemExit('Stale Gray Swan caption template was not found')
-          text = text.replace(old_caption, new_caption)
+          text = text.replace("'" + old_caption + "'", new_caption)
           text = text.replace(
               "html = html.replaceAll('/media/work/model-behavior-profile.jpg', CURRENT.screenshot);",
               "html = html.replaceAll('/media/work/model-behavior-profile.jpg', CURRENT.screenshot);\n  html = html.replaceAll('/media/work/gray-swan-profile-2026-07-26.svg', CURRENT.screenshot);"
