@@ -93,7 +93,7 @@ async function main() {
   parseJsonLd(canonical, 'dist/notandia.html');
   for (const expected of [
     '<h1>Notandia</h1>',
-    'Originally released as <em>MDPI Filter</em>',
+    'Originally released as MDPI Filter',
     'For application reviewers',
     CURRENT_BROWSER_REPO,
     CURRENT_ZOTERO_REPO,
