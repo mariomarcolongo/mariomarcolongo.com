@@ -83,7 +83,7 @@ const INVESTIGATION_CASES = {
       "Researched, structured and created an 18,351-byte English Wikipedia article, then moved it from userspace into mainspace on 16 August 2025.",
       "Synthesized the original proposal, technological and social vision, supporting organizations, legal pathways, regulatory exemptions, infrastructure feasibility, governance concerns and ideological analysis.",
       "Balanced primary advocacy material with academic research and independent reporting, attributing contested interpretations and separating proposal details from criticism.",
-      "Expanded and categorized the article after publication; its original structure and most of its initial content remain visible in the current collaborative version, which is assessed as B-Class by several WikiProjects."
+      "Continued categorization and maintenance after publication; the current collaborative article is assessed as B-Class by several WikiProjects."
     ],
     demonstrates: ["Policy research", "Neutral explanatory writing", "Contested-source synthesis", "Information architecture", "Citation management"],
     limitations: "Wikipedia is collaborative and the current article includes later edits by other contributors. The exact creation revision verifies the initial 18,351-byte contribution. B-Class is a WikiProject assessment, not academic peer review, independent publication approval or endorsement of the proposal.",
@@ -129,6 +129,42 @@ const INVESTIGATION_CASES = {
       { label: "Inspect public statistics", href: "https://yourselftoscience.org/stats" }
     ]
   },
+  danielaBortoletto: {
+    id: "daniela-bortoletto",
+    category: "Scientific localization & source enrichment",
+    title: "Daniela Bortoletto: developing an Italian particle-physics biography",
+    context: "An English biography of the Italian particle physicist Daniela Bortoletto was translated and adapted for Italian readers, then expanded and prepared for publication through terminology, sourcing and structure work.",
+    work: [
+      "Created an 8,721-byte Italian draft through Content Translation on 30 August 2021.",
+      "Reworked the article structure, corrected specialist terminology and added or repaired sources covering Oxford, CERN, detector development and the discoveries of the top quark and Higgs boson.",
+      "Consulted the Italian Wikipedia physics and biography projects about notability, then moved the completed draft into mainspace on 26 February 2022.",
+      "Continued post-publication corrections, categorization, authority control and link maintenance."
+    ],
+    demonstrates: ["Scientific localization", "Physics terminology", "Source enrichment", "Cross-language adaptation", "Iterative editorial quality"],
+    limitations: "The article began as a translation and is now collaborative. The history verifies the attributed creation and later revisions; this is not original particle-physics research or an independently commissioned biography.",
+    links: [
+      { label: "Open the current Italian article", href: "https://it.wikipedia.org/wiki/Daniela_Bortoletto" },
+      { label: "Inspect the complete revision history", href: "https://it.wikipedia.org/w/index.php?title=Daniela_Bortoletto&action=history" }
+    ]
+  },
+  shadowLibrary: {
+    id: "shadow-library",
+    category: "Technical-policy translation & terminology",
+    title: "Biblioteca ombra: translating research-access infrastructure",
+    context: "The English article on shadow libraries was adapted into Italian across scholarly communication, copyright, open access and distributed technical infrastructure.",
+    work: [
+      "Created a 9,713-byte Italian article through Content Translation on 26 July 2023 and moved the completed draft into mainspace the same day.",
+      "Adapted terminology spanning academic publishing, copyright, open access, databases, BitTorrent, the dark web and IPFS.",
+      "Removed unsupported source-language templates, repaired citations and links, added Italian sources and refined legal and technical terminology after publication.",
+      "Maintained the article through subsequent terminology and source corrections."
+    ],
+    demonstrates: ["Technical localization", "Scholarly-communication research", "Legal-risk framing", "Terminology adaptation", "Citation repair"],
+    limitations: "The article is a translated and collaborative encyclopedia entry, not original legal analysis. Its present maintenance notices and broad legal claims mean the attributable creation history is a stronger work sample than the current page alone.",
+    links: [
+      { label: "Open the current Italian article", href: "https://it.wikipedia.org/wiki/Biblioteca_ombra" },
+      { label: "Inspect the complete revision history", href: "https://it.wikipedia.org/w/index.php?title=Biblioteca_ombra&action=history" }
+    ]
+  },
   pencil: {
     id: "pencil",
     category: "Additional provenance & rights example",
@@ -159,6 +195,8 @@ INVESTIGATION_CASES.primary = [
 ];
 
 INVESTIGATION_CASES.supporting = [
+  INVESTIGATION_CASES.danielaBortoletto,
+  INVESTIGATION_CASES.shadowLibrary,
   INVESTIGATION_CASES.pencil
 ];
 
