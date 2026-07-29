@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "subject": {
+    "name": "Mario Marcolongo",
+    "platform": "Gray Swan Arena",
+    "profileUrl": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf"
+  },
+  "snapshot": {
+    "displayDate": "29 July 2026",
+    "capturedLocal": "2026-07-29T03:35:50+02:00",
+    "capturedUtc": "2026-07-29T01:35:50Z",
+    "timezone": "CEST (UTC+02:00)",
+    "originalScreenshot": {
+      "filename": "gray-swan-arena-mario-marcolongo-2026-07-29-033550-CEST.png",
+      "publicPath": "/evidence/gray-swan-arena-mario-marcolongo-2026-07-29-033550-CEST.png",
+      "pixelDimensions": "2940x1660",
+      "mediaType": "image/png",
+      "sha256": "4ef9c376f16269e243eb1e620378053abe5faac7ccee8445cf507550c2f6f99d"
+    },
+    "responsivePreviews": [
+      "/media/work/gray-swan-profile-2026-07-29-800.webp",
+      "/media/work/gray-swan-profile-2026-07-29-1600.webp"
+    ]
+  },
+  "metrics": {
+    "provingGround": {
+      "globalRank": 74,
+      "percentileLabel": "top 6%",
+      "totalBreaks": 113,
+      "progressByArea": {
+        "chat": {
+          "breaks": 39,
+          "available": 552,
+          "displayedPercent": 7
+        },
+        "image": {
+          "breaks": 32,
+          "available": 387,
+          "displayedPercent": 8
+        },
+        "agent": {
+          "breaks": 28,
+          "available": 593,
+          "displayedPercent": 5
+        },
+        "indirect": {
+          "breaks": 13,
+          "available": 547,
+          "displayedPercent": 2
+        }
+      },
+      "displayedAreaTotal": 112
+    },
+    "arenaProfile": {
+      "globalRank": 365,
+      "globalUniqueBreaks": 28,
+      "globalPoints": 1120,
+      "submissions": 255,
+      "maximumStreakWeeks": 3
+    }
+  },
+  "notes": [
+    "The four displayed Proving Ground area counters sum to 112 while the profile displays 113 Total Breaks. Both values are transcribed exactly; no internal aggregation rule is inferred.",
+    "Rankings, percentiles, points and totals are dynamic. Claims cite this snapshot date and capture time.",
+    "The original PNG is retained unchanged as the evidence object. Responsive WebP derivatives are used for website performance and are not presented as independent evidence.",
+    "This is account-holder-preserved platform evidence, not an attestation issued by Gray Swan and not independent reproduction of every adjudicated result."
+  ],
+  "previousSnapshots": [
+    "https://mariomarcolongo.com/evidence/gray-swan-2026-07-25/",
+    "https://perma.cc/U8TY-PWYA"
+  ]
+}

@@ -7,9 +7,9 @@ const PORTFOLIO_HUMAN = {
 
   proofMoments: [
     {
-      value: "110",
+      value: "113",
       label: "platform-recorded Proving Ground breaks",
-      detail: "#75 · top 6% · 25 July 2026",
+      detail: "#74 · top 6% · 29 July 2026",
       href: "/security.html"
     },
     {
@@ -31,7 +31,8 @@ const PORTFOLIO_HUMAN = {
       id: "model-record",
       label: "AI evaluation",
       title: "Gray Swan Arena profile",
-      image: "/media/work/model-behavior-profile.jpg",
+      image: "/media/work/gray-swan-profile-2026-07-29-1600.webp",
+      imageSet: "/media/work/gray-swan-profile-2026-07-29-800.webp 800w, /media/work/gray-swan-profile-2026-07-29-1600.webp 1600w",
       alt: "Screenshot of Mario Marcolongo's Gray Swan Arena and Proving Ground profile showing the dated public ranking and activity record",
       href: "/security.html"
     },
@@ -98,11 +99,12 @@ const PORTFOLIO_HUMAN = {
       title: "Finding model failures across four evaluation surfaces.",
       lead: "I tested chat, image, agent and indirect prompt-injection behavior and preserved dated public evidence that keeps Proving Ground and Arena metrics separate.",
       action: "I vary the interaction path, preserve reproduction notes and distinguish direct observations from platform labels, independent verification and model-wide conclusions.",
-      result: "#75 on the Proving Ground leaderboard, top 6%, with 110 platform-recorded total breaks on 25 July 2026; the same screenshot shows Arena rank #370, 27 global unique breaks, 1,090 points and 246 submissions.",
+      result: "#74 on the Proving Ground leaderboard, top 6%, with 113 platform-recorded total breaks on 29 July 2026; the same screenshot shows Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions.",
       boundary: "This supports model-evaluation and adversarial-QA work. It is not presented as penetration testing or senior red-team engineering.",
       href: "/security.html",
       linkLabel: "Open the evaluation record",
-      image: "/media/work/model-behavior-profile.jpg",
+      image: "/media/work/gray-swan-profile-2026-07-29-1600.webp",
+      imageSet: "/media/work/gray-swan-profile-2026-07-29-800.webp 800w, /media/work/gray-swan-profile-2026-07-29-1600.webp 1600w",
       alt: "Screenshot of the dated Gray Swan Arena profile showing Proving Ground rank, percentile, breaks and separate Arena activity metrics",
       imageCaption: "Original Gray Swan profile screenshot · dated public platform record",
       tone: "blue"

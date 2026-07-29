@@ -7,8 +7,8 @@ import D from "../../data/source.js";
 
 const title = "AI Evaluation & Model Behavior Record — Mario Marcolongo";
 const description = "Concise public record of self-directed model-behavior evaluation on the Gray Swan Proving Ground, including scope, methodology, platform-reported activity, archived evidence and limitations.";
-const asOf = D.redTeamActivity.asOf || "25 July 2026";
-const archiveUrl = D.identity.grayswanArchiveUrl || "/evidence/gray-swan-profile-2026-07-25.html";
+const asOf = D.redTeamActivity.asOf || "29 July 2026";
+const archiveUrl = D.identity.grayswanArchiveUrl || "/evidence/gray-swan-2026-07-29/";
 
 const areas = [
   {
@@ -55,7 +55,7 @@ const evaluationJsonLd = {
   name: title,
   description,
   url: "https://mariomarcolongo.com/security.html",
-  dateModified: "2026-07-26",
+  dateModified: "2026-07-29",
   author: { "@id": "https://mariomarcolongo.com/#person" },
   about: { "@type": "Thing", name: "AI evaluation and model behavior" },
   citation: [D.identity.grayswanUrl, archiveUrl]
@@ -94,12 +94,12 @@ const evaluationJsonLd = {
       <article class="evaluation-metric">
         <strong>{D.redTeamActivity.platformReportedBreaks}</strong>
         <span>Proving Ground total breaks</span>
-        <small>#75 · top 6% · {asOf}</small>
+        <small>#74 · top 6% · {asOf}</small>
       </article>
       <article class="evaluation-metric">
         <strong>{D.redTeamActivity.totalArenaSubmissions}</strong>
         <span>Arena submissions</span>
-        <small>#370 Arena rank · 27 unique breaks · 1,090 points</small>
+        <small>#365 Arena rank · 28 unique breaks · 1,120 points</small>
       </article>
       <article class="evaluation-metric">
         <strong>{D.redTeamActivity.rankBand}</strong>
@@ -143,16 +143,16 @@ const evaluationJsonLd = {
     <section class="evaluation-section" id="public-evidence">
       <div class="evaluation-section-head">
         <h2>Publicly inspectable evidence</h2>
-        <p>The live Gray Swan profile is the primary source. The latest dated evidence page records the later 25 July metrics, the original screenshot hash and capture metadata, while keeping Proving Ground and Arena figures separate. It also records that the four visible area counters sum to 109 rather than silently inferring an aggregation rule.</p>
+        <p>The live Gray Swan profile is the primary source. The latest dated evidence page records the 29 July metrics, the original screenshot hash and capture metadata, while keeping Proving Ground and Arena figures separate. It also records that the four visible area counters sum to 112 rather than silently inferring an aggregation rule.</p>
       </div>
 
       <div class="evaluation-grid">
         <article class="evaluation-card">
           <div class="evaluation-step">DATED PROFILE EVIDENCE</div>
-          <h3>25 July 2026 Gray Swan profile screenshot</h3>
-          <p>Dated public profile record for #75, top 6%, 110 Proving Ground total breaks, Arena rank #370, 27 global unique breaks, 1,090 points and 246 submissions.</p>
-          <a href="/media/work/model-behavior-profile.jpg" aria-label="Open the Gray Swan profile screenshot at full size">
-            <img src="/media/work/model-behavior-profile.jpg" width="800" height="350" alt="Screenshot of Mario Marcolongo's dated Gray Swan Arena and Proving Ground profile" style="display:block;width:100%;height:auto;margin-top:1rem;border-radius:.75rem;background:#090b0d" />
+          <h3>29 July 2026 Gray Swan profile screenshot</h3>
+          <p>Dated public profile record for #74, top 6%, 113 Proving Ground total breaks, Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions.</p>
+          <a href="/evidence/gray-swan-arena-mario-marcolongo-2026-07-29-033550-CEST.png" aria-label="Open the original Gray Swan profile screenshot at full size">
+            <img src="/media/work/gray-swan-profile-2026-07-29-1600.webp" srcset="/media/work/gray-swan-profile-2026-07-29-800.webp 800w, /media/work/gray-swan-profile-2026-07-29-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 800px" width="1600" height="903" alt="Screenshot of Mario Marcolongo's dated Gray Swan Arena and Proving Ground profile" style="display:block;width:100%;height:auto;margin-top:1rem;border-radius:.75rem;background:#090b0d" />
           </a>
           <p><a class="p5-link" href={archiveUrl}>Open the dated evidence and preservation record →</a></p>
         </article>
@@ -196,8 +196,8 @@ const evaluationJsonLd = {
         <p>This record supports applications to AI evaluation, safeguards operations, trust & safety and adversarial QA roles. It does not yet establish the application-security, independent Python development or automated-framework experience expected from senior AI red-team engineers.</p>
       </div>
       <ul class="evaluation-list">
-        <li>The 25 July screenshot displays 110 Total Breaks while its four visible category counters sum to 109; both values are reported exactly and no internal aggregation rule is inferred.</li>
-        <li>The historical 24 July record remains available separately and documented a 105/106 discrepancy before the later profile update.</li>
+        <li>The 29 July screenshot displays 113 Total Breaks while its four visible category counters sum to 112; both values are reported exactly and no internal aggregation rule is inferred.</li>
+        <li>The 25 July and 24 July records remain available as historical snapshots, preserving earlier totals and aggregation discrepancies.</li>
         <li>The public source does not expose complete prompts, outputs, model versions or adjudication materials for every result.</li>
         <li>Counts and rankings are snapshots and may change after {asOf}.</li>
         <li>No claim is made that every recorded result represents a security vulnerability or model-wide failure.</li>

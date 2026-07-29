@@ -74,9 +74,9 @@ Generated outputs include:
 
 ## Gray Swan evidence
 
-The live Gray Swan participant profile is the primary external destination. The current dated evidence page preserves the 25 July 2026 screenshot showing Proving Ground rank #75, top 6%, and 110 platform-recorded total breaks, alongside the separate Arena metrics (#370 rank, 27 global unique breaks, 1,090 points and 246 submissions).
+The live Gray Swan participant profile is the primary external destination. The current dated evidence page preserves the original 29 July 2026 screenshot showing Proving Ground rank #74, top 6%, and 113 platform-displayed total breaks, alongside the separate Arena metrics (#365 rank, 28 global unique breaks, 1,120 points and 255 submissions). The portfolio uses responsive WebP previews derived from that original PNG rather than the now-outdated synthetic SVG.
 
-A locally retained same-day WACZ capture records the immediately preceding state at 17:09 UTC: the same #75/top-6% position with 109 total breaks, Arena rank #372, 26 unique breaks, 1,080 points and 245 submissions. Its hash and scope are documented without publishing potentially sensitive archive-request data. The independently preserved 24 July snapshot remains available through Perma.cc. All counts are presented as time-stamped platform records, not independent vulnerability reproduction or certification.
+A locally retained same-day WACZ capture records the immediately preceding state at 17:09 UTC: the same #75/top-6% position with 109 total breaks, Arena rank #372, 26 unique breaks, 1,080 points and 245 submissions. Its hash and scope are documented without publishing potentially sensitive archive-request data. The 25 July account-holder snapshot and independently preserved 24 July Perma.cc record remain available as historical evidence. All counts are presented as time-stamped platform records, not independent vulnerability reproduction or certification.
 
 ## Private phone number in local PDFs
 
@@ -114,7 +114,8 @@ The workflow archives the complete Lighthouse JSON reports and diagnostic opport
 
 - [ORCID 0000-0003-2846-7115](https://orcid.org/0000-0003-2846-7115)
 - [Gray Swan Proving Ground profile](https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf)
-- [Gray Swan evidence — 25 July 2026](https://mariomarcolongo.com/evidence/gray-swan-profile-2026-07-25.html)
+- [Gray Swan evidence — 29 July 2026](https://mariomarcolongo.com/evidence/gray-swan-2026-07-29/)
+- [Historical Gray Swan evidence — 25 July 2026](https://mariomarcolongo.com/evidence/gray-swan-2026-07-25/)
 - [Historical Gray Swan capture — 24 July 2026](https://perma.cc/U8TY-PWYA)
 - [Wikimedia CentralAuth record](https://commons.wikimedia.org/wiki/Special:CentralAuth/Digressivo)
 - [ENA accession PRJEB109744](https://www.ebi.ac.uk/ena/browser/view/PRJEB109744)

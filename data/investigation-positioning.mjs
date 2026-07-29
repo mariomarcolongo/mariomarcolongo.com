@@ -53,7 +53,7 @@ if (masterWiki) {
 }
 
 if (P.aiSafety) {
-  P.aiSafety.summary = "AI evaluation and research-verification specialist with self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. The Gray Swan Proving Ground profile displayed rank #75 (top 6%) and 110 total breaks on 26 July 2026. Supporting work includes multilingual scientific content quality, consumer-genomics privacy and corporate-source reconciliation, archival source recovery, source-quality review and evidence-bound reporting across legally and scientifically sensitive records.";
+  P.aiSafety.summary = "AI evaluation and research-verification specialist with self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. The Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks on 29 July 2026. Supporting work includes multilingual scientific content quality, consumer-genomics privacy and corporate-source reconciliation, archival source recovery, source-quality review and evidence-bound reporting across legally and scientifically sensitive records.";
 
   const sourceEvidence = P.aiSafety.evidence?.find((item) => item?.title?.includes("Auditable source-verification"));
   if (sourceEvidence) {
@@ -152,9 +152,9 @@ if (P.integrity) {
   }
   if (P.integrity.strengths?.[3]) {
     P.integrity.strengths[3] = {
-      value: "110",
+      value: "113",
       label: "Proving Ground breaks",
-      detail: "#75 · top 6% · supporting adversarial evidence"
+      detail: "#74 · top 6% · supporting adversarial evidence"
     };
   }
 
@@ -198,7 +198,7 @@ if (P.integrity) {
 
   if (gray) {
     gray.bullets = [
-      "Test chat, image, agentic tool-use and indirect prompt-injection scenarios; #75 on the Proving Ground (top 6%) with 110 platform-displayed breaks on 26 July 2026. Supporting analytical evidence, not emergency-response experience."
+      "Test chat, image, agentic tool-use and indirect prompt-injection scenarios; #74 on the Proving Ground (top 6%) with 113 platform-displayed breaks on 29 July 2026. Supporting analytical evidence, not emergency-response experience."
     ];
   }
 

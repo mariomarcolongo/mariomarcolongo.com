@@ -4,7 +4,7 @@ const APPLICATION_PROFILES = {
     documentLabel: "Specialized Application CV",
     title: "AI Evaluation & Model Behavior Specialist",
     subtitle: "Model behavior testing · adversarial QA · evidence-bound reporting · evaluation operations",
-    summary: "AI evaluation and research-verification specialist with sustained self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. Gray Swan Proving Ground participant ranked #75 (top 6%) on 25 July 2026, with 110 platform-recorded total breaks; the same profile showed Arena rank #370, 27 global unique breaks, 1,090 points and 246 submissions. Brings eight years of auditable claim verification, paid scientific fact-checking, structured research workflows and clear evidence-bound reporting.",
+    summary: "AI evaluation and research-verification specialist with sustained self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. Gray Swan Proving Ground participant ranked #74 (top 6%) on 29 July 2026, with 113 platform-recorded total breaks; the same profile showed Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions. Brings eight years of auditable claim verification, paid scientific fact-checking, structured research workflows and clear evidence-bound reporting.",
     fit: [
       "AI evaluation and safeguards operations",
       "AI content red teaming and adversarial QA",
@@ -12,8 +12,8 @@ const APPLICATION_PROFILES = {
       "Human-data quality, grading and evaluation operations"
     ],
     strengths: [
-      { value: "110", label: "Platform-recorded Proving Ground breaks", detail: "#75 · top 6% · 25 July 2026" },
-      { value: "246", label: "Arena submissions", detail: "#370 rank · 27 unique breaks · 1,090 points" },
+      { value: "113", label: "Platform-recorded Proving Ground breaks", detail: "#74 · top 6% · 29 July 2026" },
+      { value: "255", label: "Arena submissions", detail: "#365 rank · 28 unique breaks · 1,120 points" },
       { value: "59+", label: "Published projects supported", detail: "55+ YouTube video projects · 4 co-authored articles" },
       { value: "4,317", label: "Auditable Wikimedia contributions", detail: "Eight years of inspectable claim and source work" }
     ],
@@ -28,7 +28,7 @@ const APPLICATION_PROFILES = {
         ],
         bullets: [
           "Conduct self-directed testing of LLM instruction handling, policy boundaries and edge cases across chat, image, agentic tool-use and indirect prompt-injection settings.",
-          "Reached #75 on the Proving Ground leaderboard (top 6%) with 110 platform-recorded total breaks on 25 July 2026; the same profile showed Arena rank #370, 27 global unique breaks, 1,090 points and 246 submissions.",
+          "Reached #74 on the Proving Ground leaderboard (top 6%) with 113 platform-recorded total breaks on 29 July 2026; the same profile showed Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions.",
           "Document public evidence conservatively, separating platform-reported outcomes from independent verification, model-wide conclusions or security certification."
         ]
       },

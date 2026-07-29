@@ -98,7 +98,7 @@ for (const needle of [
   'data-testid="human-capabilities"', 'data-testid="human-work"', 'data-testid="human-documents"',
   'Where I can contribute.', 'Selected work, shown through the actual output.',
   'Start with the role you are hiring for.', 'AI evaluation and scientific evidence roles.',
-  'Zotero plugin', 'Protein by bodyweight by country', '#75 on the Proving Ground,',
+  'Zotero plugin', 'Protein by bodyweight by country', '#74 on the Proving Ground,',
   '267K', '36.5M', '80', '55 YouTube videos', '21 short-form pieces',
   'Research, content and website work', 'Official evidence index',
   'Platform metrics describe the production environment',
@@ -130,7 +130,7 @@ assertContains(index, 'class="v8-product"', 'dist/index.html');
 assertContains(index, 'v10-entropy-panel', 'dist/index.html');
 assertContains(index, 'v12-platform-proof', 'dist/index.html');
 for (const media of [
-  '/media/work/model-behavior-profile.jpg', '/media/work/gray-swan-profile-2026-07-26.svg', '/media/work/entropy-h5n1.png',
+  '/media/work/gray-swan-profile-2026-07-29-1600.webp', '/media/work/entropy-h5n1.png',
   '/media/work/yourself-to-science-800.webp', '/media/work/mdpi-filter-1-800.webp',
   '/media/work/mdpi-filter-2-800.webp', '/media/work/wikimedia-clinical-overlap.svg',
   '/media/work/tableau-mortality-800.webp', '/media/work/flourish-oesophageal-cancer.svg'
@@ -209,8 +209,7 @@ const securityText = normalizeHtmlText(pages.security);
 for (const needle of [
   'AI evaluation and model-behavior record.', 'What the record demonstrates', 'Evaluation approach',
   'Limitations and interpretation', 'Proving Ground total breaks', 'historical 24 July 26-wave activity table',
-  '/evidence/gray-swan-2026-07-25/', '/evidence/gray-swan-profile-2026-07-26.html',
-  '/media/work/gray-swan-profile-2026-07-26.svg', 'Open live Gray Swan profile', '109'
+  '/evidence/gray-swan-2026-07-29/',   '/media/work/gray-swan-profile-2026-07-29-1600.webp', 'Open live Gray Swan profile', '112'
 ]) assertContains(securityText, needle, 'dist/security.html');
 for (const needle of [
   'independently verified policy or alignment boundary failure',
