@@ -1,0 +1,15 @@
+---
+import ApplicationCv from "../components/ApplicationCv.astro";
+import career from "../../data/orcid-positioning.mjs";
+
+const { P } = career;
+---
+
+<ApplicationCv
+  profile={P.orcidMemberSupport}
+  shared={P.orcidShared}
+  canonical="https://mariomarcolongo.com/cv-orcid.html"
+  alternateHref="/cv-research.html"
+  alternateLabel="Research & Data Quality CV"
+  noIndex={true}
+/>
