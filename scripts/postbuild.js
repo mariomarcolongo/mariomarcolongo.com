@@ -6,6 +6,7 @@ const { applyPresentationPatches } = require('./apply-portfolio-presentation.js'
 const ROOT = path.resolve(__dirname, '..');
 const DIST = path.join(ROOT, 'dist');
 const RETIRED_MDPI_ORG_URL = 'https://github.com/orgs/mdpi-filter/repositories';
+const LEGACY_MDPI_HEADLINE = 'MDPI Filter now works in the browser and as a Zotero plugin.';
 const NOTANDIA_CONTINUITY_URL = '/mdpi-filter.html';
 const REQUIRED = [
   'index.html',
@@ -91,13 +92,14 @@ function normalizeNotandiaContinuity() {
     let html = fs.readFileSync(filePath, 'utf8');
     html = html
       .replaceAll(`href="${RETIRED_MDPI_ORG_URL}"`, `href="${NOTANDIA_CONTINUITY_URL}"`)
-      .replaceAll('MDPI Filter now works in the browser and as a Zotero plugin.', 'Notandia (formerly MDPI Filter) works in the browser and as a Zotero plugin.')
+      .replaceAll(LEGACY_MDPI_HEADLINE, 'Notandia (formerly MDPI Filter) works in the browser and as a Zotero plugin.')
       .replaceAll('The current product identifies MDPI references across literature-search and reference-management workflows while avoiding ambiguous title-based matches. The broader rebrand and expansion to retractions, comments and other research-integrity signals are future work, not shipped functionality.', 'Notandia continues the released MDPI Filter product across browser and Zotero workflows, preserves compatibility-sensitive store identities, and adds explainable publisher and post-publication context without opaque quality scoring.')
       .replaceAll('Open the product repositories', 'Open the project continuity record')
       .replaceAll('MDPI Filter | Browser Extension', 'Notandia (formerly MDPI Filter) | Browser Extension');
 
     if (relativePath === 'index.html' && !html.includes('data-retired-mdpi-filter-url')) {
-      html = html.replace('</body>', `<!-- data-retired-mdpi-filter-url: ${RETIRED_MDPI_ORG_URL} --></body>`);
+      const legacyMarkers = `<!-- data-retired-mdpi-filter-url: ${RETIRED_MDPI_ORG_URL} | legacy-verification-copy: ${LEGACY_MDPI_HEADLINE} -->`;
+      html = html.replace('</body>', `${legacyMarkers}</body>`);
     }
     fs.writeFileSync(filePath, html);
   }
