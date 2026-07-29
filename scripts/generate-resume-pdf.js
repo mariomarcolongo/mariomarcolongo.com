@@ -26,6 +26,11 @@ const DOCUMENTS = [
     route: 'cv-integrity.html',
     output: 'Mario Marcolongo — Trust Safety & Knowledge Integrity CV.pdf',
     label: 'Trust, Safety & Knowledge Integrity CV'
+  },
+  {
+    route: 'cv-orcid.html',
+    output: 'Mario Marcolongo — ORCID Member Support Technical Specialist CV.pdf',
+    label: 'ORCID Member Support Technical Specialist CV'
   }
 ];
 
