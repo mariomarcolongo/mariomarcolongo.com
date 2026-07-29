@@ -1,4 +1,4 @@
-import career from './investigation-positioning.mjs';
+import career from './research-operations-positioning.mjs';
 
 const integrity = structuredClone(career.P.integrity);
 
