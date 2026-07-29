@@ -5,19 +5,19 @@
 const MARIO_DOSSIER = {
   "identity": {
     "name": "Mario Marcolongo",
-    "buildVersion": "v2026.07.27",
+    "buildVersion": "v2026.07.29",
     "enaAccession": "PRJEB109744",
     "enaUrl": "https://www.ebi.ac.uk/ena/browser/view/PRJEB109744",
     "centralAuth": "https://commons.wikimedia.org/wiki/Special:CentralAuth/Digressivo",
     "grayswanId": "6a57be70d15e123775a1e9cf",
     "grayswanUrl": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
-    "grayswanArchiveUrl": "/evidence/gray-swan-profile-2026-07-26.html",
-    "evaluationAsOf": "26 July 2026",
+    "grayswanArchiveUrl": "/evidence/gray-swan-2026-07-29/",
+    "evaluationAsOf": "29 July 2026",
     "jobTitle": "AI Evaluation & Research Operations Specialist",
     "secondaryTitle": "Model Behavior · Scientific Evidence · Knowledge Integrity · Open Science & Data Quality",
     "headline": "I evaluate model behavior, verify scientific evidence, and operate research systems.",
     "authorshipStatement": "My technical work is code-literate and AI-assisted: I define requirements and workflows, inspect implementation behavior, test releases, diagnose functional problems, guide iterations, deploy releases and maintain services.",
-    "role": "AI evaluation and research operations specialist. Gray Swan Proving Ground snapshot: #75 (top 6%) with 110 platform-displayed total breaks on 25 July 2026.",
+    "role": "AI evaluation and research operations specialist. Gray Swan Proving Ground snapshot: #74 (top 6%) with 113 platform-displayed total breaks on 29 July 2026.",
     "heroStatement": "Evaluating model behavior, verifying scientific evidence and operating research workflows and public technical products.",
     "location": "Based in Italy · Italian/EU citizen · Open to worldwide relocation · International B2B contracting available",
     "relocation": "EU/EEA work-authorized; Swiss EU/EFTA permit eligible; open to employer-sponsored work authorization elsewhere; self-funded relocation considered for exceptional opportunities.",
@@ -51,18 +51,18 @@ const MARIO_DOSSIER = {
       "com"
     ]
   },
-  "summary": "Research, evidence and AI operations specialist with eight years of auditable public-source and structured-data work, paid scientific fact-checking and editorial production, community-facing research facilitation, ownership of an open research-participation directory, and sustained adversarial testing of AI systems. On 26 July 2026, the Gray Swan Proving Ground profile displayed rank #75 (top 6%) and 110 total breaks. Entropy for Life work covers 80 documented published content contributions: 55 YouTube videos · 4 articles · 21 short-form pieces. Technical work is code-literate and AI-assisted, with personal ownership of requirements, verification, deployment and maintenance.",
+  "summary": "Research, evidence and AI operations specialist with eight years of auditable public-source and structured-data work, paid scientific fact-checking and editorial production, community-facing research facilitation, ownership of an open research-participation directory, and sustained adversarial testing of AI systems. On 29 July 2026, the Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks. Entropy for Life work covers 80 documented published content contributions: 55 YouTube videos · 4 articles · 21 short-form pieces. Technical work is code-literate and AI-assisted, with personal ownership of requirements, verification, deployment and maintenance.",
   "pillars": [
     {
       "category": "AI EVALUATION & SAFETY OPERATIONS",
       "icon": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"></path></svg>",
       "title": "Model Behavior & Adversarial Testing",
       "lead": "Structured, self-directed probing of LLM and multimodal-system behavior across chat, image, tool-use and indirect prompt-injection challenges.",
-      "desc": "The dated Gray Swan profile snapshot shows #75 on the Proving Ground (top 6%) with 110 platform-displayed total breaks on 25 July 2026. The four visible area counters sum to 109; both values are reported without inferring the platform’s aggregation rules.",
+      "desc": "The dated Gray Swan profile snapshot shows #74 on the Proving Ground (top 6%) with 113 platform-displayed total breaks on 29 July 2026. The four visible area counters sum to 112; both values are reported without inferring the platform’s aggregation rules.",
       "highlights": [
         {
           "label": "Dated Proving Ground Result",
-          "detail": "#75 · top 6% · 110 total breaks · 25 July 2026"
+          "detail": "#74 · top 6% · 113 total breaks · 29 July 2026"
         },
         {
           "label": "Testing Surfaces",
@@ -124,14 +124,14 @@ const MARIO_DOSSIER = {
   ],
   "stats": [
     {
-      "value": "110",
+      "value": "113",
       "label": "Platform-Displayed Proving Ground Breaks",
-      "detail": "#75 · top 6% · 25 July 2026"
+      "detail": "#74 · top 6% · 29 July 2026"
     },
     {
-      "value": "246",
+      "value": "255",
       "label": "Arena Submissions Shown",
-      "detail": "27 global unique breaks · 1,090 points · Arena rank #370"
+      "detail": "28 global unique breaks · 1,120 points · Arena rank #365"
     },
     {
       "value": "55",
@@ -154,7 +154,7 @@ const MARIO_DOSSIER = {
       "id": "ai-red-teaming",
       "title": "Model Behavior & Adversarial Evaluation",
       "oneLiner": "Dated public record of self-directed model-behavior evaluation across chat, multimodal, agentic tool-use and indirect prompt-injection challenges.",
-      "description": "Self-directed model-behavior evaluation conducted through the Gray Swan Proving Ground. The 25 July 2026 profile snapshot displays rank #75, top 6%, and 110 total breaks. The same snapshot shows 246 Arena submissions, 27 global unique breaks, 1,090 points and Arena rank #370. Aggregate counts are presented with explicit evidence limitations; complete prompts, outputs, model versions and adjudication materials are not reproduced.",
+      "description": "Self-directed model-behavior evaluation conducted through the Gray Swan Proving Ground. The 29 July 2026 profile snapshot displays rank #74, top 6%, and 113 total breaks. The same snapshot shows 255 Arena submissions, 28 global unique breaks, 1,120 points and Arena rank #365. Aggregate counts are presented with explicit evidence limitations; complete prompts, outputs, model versions and adjudication materials are not reproduced.",
       "role": "Model-Behavior Evaluator",
       "tech": [
         "Adversarial Evaluation",
@@ -166,12 +166,12 @@ const MARIO_DOSSIER = {
       "links": {
         "caseStudy": "/security.html",
         "profile": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
-        "evidence": "/evidence/gray-swan-2026-07-25/"
+        "evidence": "/evidence/gray-swan-2026-07-29/"
       },
       "highlights": [
-        "Current Snapshot: #75, top 6% and 110 platform-displayed Proving Ground breaks",
-        "Arena Activity: 246 submissions, 27 global unique breaks and 1,090 points",
-        "Evidence Boundary: The visible area counters sum to 109; the platform displays 110 total breaks"
+        "Current Snapshot: #74, top 6% and 113 platform-displayed Proving Ground breaks",
+        "Arena Activity: 255 submissions, 28 global unique breaks and 1,120 points",
+        "Evidence Boundary: The visible area counters sum to 112; the platform displays 113 total breaks"
       ]
     },
     {
@@ -372,25 +372,25 @@ const MARIO_DOSSIER = {
   },
   "redTeamActivity": {
     "platform": "Gray Swan AI Proving Ground",
-    "asOf": "26 July 2026",
-    "rankBand": "#75 · Top 6%",
-    "leaderboardRank": 75,
-    "platformReportedBreaks": 110,
+    "asOf": "29 July 2026",
+    "rankBand": "#74 · Top 6%",
+    "leaderboardRank": 74,
+    "platformReportedBreaks": 113,
     "areaBreaks": {
-      "chat": 36,
+      "chat": 39,
       "image": 32,
       "agent": 28,
       "indirect": 13
     },
-    "areaBreaksTotal": 109,
-    "arenaRank": 371,
-    "globalUniqueBreaks": 27,
-    "globalPoints": 1090,
-    "submissions": 246,
-    "totalArenaSubmissions": 246,
+    "areaBreaksTotal": 112,
+    "arenaRank": 365,
+    "globalUniqueBreaks": 28,
+    "globalPoints": 1120,
+    "submissions": 255,
+    "totalArenaSubmissions": 255,
     "previousChats": 953,
-    "confirmedBreaks": 110,
-    "profileReportedBreaks": 110,
+    "confirmedBreaks": 113,
+    "profileReportedBreaks": 113,
     "publicLabels": [
       "damage-property",
       "toxic-plant",
@@ -528,13 +528,13 @@ const MARIO_DOSSIER = {
         "available": 56
       }
     ],
-    "displayedAreaBreaks": 109,
-    "arenaUniqueBreaks": 27,
-    "arenaPoints": 1090,
+    "displayedAreaBreaks": 112,
+    "arenaUniqueBreaks": 28,
+    "arenaPoints": 1120,
     "areas": [
       {
         "name": "Chat",
-        "breaks": 36,
+        "breaks": 39,
         "available": 552,
         "percent": 7
       },
@@ -594,16 +594,16 @@ const MARIO_DOSSIER = {
       "links": {
         "caseStudy": "/security.html",
         "profile": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
-        "evidence": "/evidence/gray-swan-profile-2026-07-26.html"
+        "evidence": "/evidence/gray-swan-2026-07-29/"
       },
       "bullets": [
         "Conduct self-directed testing of LLM instruction handling, policy boundaries and edge cases across chat, image, agentic tool-use and indirect prompt-injection settings.",
-        "Reached #75 on the Proving Ground (top 6%) with 110 platform-displayed total breaks on 26 July 2026; the same profile displayed Arena rank #371, 27 global unique breaks, 1,090 points and 246 submissions.",
-        "Document the visible 109/110 discrepancy and separate platform-reported outcomes from independent verification, security certification or model-wide conclusions."
+        "Reached #74 on the Proving Ground (top 6%) with 113 platform-displayed total breaks on 29 July 2026; the same profile displayed Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions.",
+        "Document the visible 112/113 discrepancy and separate platform-reported outcomes from independent verification, security certification or model-wide conclusions."
       ],
       "resumeBullets": [
         "Conduct self-directed adversarial testing across chat, multimodal, agentic tool-use and indirect prompt-injection settings.",
-        "Reached #75 (top 6%) with 110 platform-displayed Proving Ground breaks on 26 July 2026."
+        "Reached #74 (top 6%) with 113 platform-displayed Proving Ground breaks on 29 July 2026."
       ]
     },
     {

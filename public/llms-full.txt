@@ -2,7 +2,7 @@
 > Model Behavior · Scientific Evidence · Knowledge Integrity · Open Science & Data Quality
 
 ## Overview
-Research, evidence and AI operations specialist with eight years of auditable public-source and structured-data work, paid scientific fact-checking and editorial production, community-facing research facilitation, ownership of an open research-participation directory, and sustained adversarial testing of AI systems. On 26 July 2026, the Gray Swan Proving Ground profile displayed rank #75 (top 6%) and 110 total breaks. Entropy for Life work covers 80 documented published content contributions: 55 YouTube videos · 4 articles · 21 short-form pieces. Technical work is code-literate and AI-assisted, with personal ownership of requirements, verification, deployment and maintenance.
+Research, evidence and AI operations specialist with eight years of auditable public-source and structured-data work, paid scientific fact-checking and editorial production, community-facing research facilitation, ownership of an open research-participation directory, and sustained adversarial testing of AI systems. On 29 July 2026, the Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks. Entropy for Life work covers 80 documented published content contributions: 55 YouTube videos · 4 articles · 21 short-form pieces. Technical work is code-literate and AI-assisted, with personal ownership of requirements, verification, deployment and maintenance.
 
 > **My technical work is code-literate and AI-assisted: I define requirements and workflows, inspect implementation behavior, test releases, diagnose functional problems, guide iterations, deploy releases and maintain services.**
 
@@ -11,7 +11,7 @@ Research, evidence and AI operations specialist with eight years of auditable pu
 ### 1. Model Behavior & Adversarial Testing
 Structured, self-directed probing of LLM and multimodal-system behavior across chat, image, tool-use and indirect prompt-injection challenges.
 
-- **Dated Proving Ground Result**: #75 · top 6% · 110 total breaks · 25 July 2026
+- **Dated Proving Ground Result**: #74 · top 6% · 113 total breaks · 29 July 2026
 - **Testing Surfaces**: Chat, multimodal/image, agentic tool-use and indirect prompt injection
 
 ### 2. Evidence Synthesis & Primary-Source Fact-Checking
@@ -41,8 +41,8 @@ Defining requirements, inspecting code structure and behavior, testing implement
 
 ### Model-Behavior Evaluator — Independent practice · Gray Swan Proving Ground participant (Jul 2026 — Present) [Independent practice]
 - Conduct self-directed testing of LLM instruction handling, policy boundaries and edge cases across chat, image, agentic tool-use and indirect prompt-injection settings.
-- Reached #75 on the Proving Ground (top 6%) with 110 platform-displayed total breaks on 26 July 2026; the same profile displayed Arena rank #371, 27 global unique breaks, 1,090 points and 246 submissions.
-- Document the visible 109/110 discrepancy and separate platform-reported outcomes from independent verification, security certification or model-wide conclusions.
+- Reached #74 on the Proving Ground (top 6%) with 113 platform-displayed total breaks on 29 July 2026; the same profile displayed Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions.
+- Document the visible 112/113 discrepancy and separate platform-reported outcomes from independent verification, security certification or model-wide conclusions.
 
 ### Scientific Content Quality & Operations Contractor — Entropy for Life — Italy (Jun 2023 — Present) [Independent contractor]
 - Delivered 80 documented published content contributions: 55 YouTube videos, 4 co-authored articles and 21 short-form pieces.
@@ -79,11 +79,11 @@ Defining requirements, inspecting code structure and behavior, testing implement
 **Role**: Model-Behavior Evaluator
 **Tech Stack**: Adversarial Evaluation, Prompt Injection, Agentic Tool-Use, Multimodal Safety, Evidence-Bound Reporting
 
-Self-directed model-behavior evaluation conducted through the Gray Swan Proving Ground. The 25 July 2026 profile snapshot displays rank #75, top 6%, and 110 total breaks. The same snapshot shows 246 Arena submissions, 27 global unique breaks, 1,090 points and Arena rank #370. Aggregate counts are presented with explicit evidence limitations; complete prompts, outputs, model versions and adjudication materials are not reproduced.
+Self-directed model-behavior evaluation conducted through the Gray Swan Proving Ground. The 29 July 2026 profile snapshot displays rank #74, top 6%, and 113 total breaks. The same snapshot shows 255 Arena submissions, 28 global unique breaks, 1,120 points and Arena rank #365. Aggregate counts are presented with explicit evidence limitations; complete prompts, outputs, model versions and adjudication materials are not reproduced.
 
-- Current Snapshot: #75, top 6% and 110 platform-displayed Proving Ground breaks
-- Arena Activity: 246 submissions, 27 global unique breaks and 1,090 points
-- Evidence Boundary: The visible area counters sum to 109; the platform displays 110 total breaks
+- Current Snapshot: #74, top 6% and 113 platform-displayed Proving Ground breaks
+- Arena Activity: 255 submissions, 28 global unique breaks and 1,120 points
+- Evidence Boundary: The visible area counters sum to 112; the platform displays 113 total breaks
 
 ### Yourself to Science™ | Open Research-Participation Directory (Website: https://yourselftoscience.org | GitHub: https://github.com/yourselftoscience/yourselftoscience.org | DOI: https://doi.org/10.5281/zenodo.15109359 | FAIRsharing: https://doi.org/10.25504/FAIRsharing.d3d487)
 **Role**: Founder & Research-Workflow Owner

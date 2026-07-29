@@ -11,7 +11,7 @@ const EXPECTED = {
   email: 'me@mariomarcolongo.com',
   orcid: '0000-0003-2846-7115',
   ena: 'PRJEB109744',
-  version: 'v2026.07.25',
+  version: 'v2026.07.29',
   graySwanId: '6a57be70d15e123775a1e9cf'
 };
 
@@ -32,8 +32,9 @@ const REQUIRED = [
   'scripts/verify-rendering.js', 'public/.well-known/api-catalog',
   'public/.well-known/agent-card.json', 'public/.well-known/mcp/server-card.json',
   'public/robots.txt', 'public/sitemap.xml', 'public/site.webmanifest',
-  'public/evidence/gray-swan-profile-2026-07-25.html', 'public/evidence/gray-swan-profile-2026-07-25.json',
-  'public/media/work/model-behavior-profile.jpg', 'public/media/work/entropy-h5n1.png',
+  'public/evidence/gray-swan-profile-2026-07-29.html', 'public/evidence/gray-swan-profile-2026-07-29.json',
+  'public/evidence/gray-swan-arena-mario-marcolongo-2026-07-29-033550-CEST.png',
+  'public/media/work/gray-swan-profile-2026-07-29-800.webp', 'public/media/work/gray-swan-profile-2026-07-29-1600.webp', 'public/media/work/entropy-h5n1.png',
   'public/media/work/yourself-to-science-800.webp', 'public/media/work/mdpi-filter-1-800.webp',
   'public/media/work/mdpi-filter-2-800.webp', 'public/media/work/wikimedia-clinical-overlap.svg'
 ];
@@ -112,12 +113,12 @@ for (const [field, actual, expected] of identityChecks) {
 }
 
 const currentGraySwanChecks = [
-  ['redTeamActivity.asOf', D.redTeamActivity?.asOf, '25 July 2026'],
-  ['redTeamActivity.leaderboardRank', D.redTeamActivity?.leaderboardRank, 75],
-  ['redTeamActivity.platformReportedBreaks', D.redTeamActivity?.platformReportedBreaks, 110],
-  ['redTeamActivity.totalArenaSubmissions', D.redTeamActivity?.totalArenaSubmissions, 246],
-  ['redTeamActivity.globalUniqueBreaks', D.redTeamActivity?.globalUniqueBreaks, 27],
-  ['redTeamActivity.globalPoints', D.redTeamActivity?.globalPoints, 1090]
+  ['redTeamActivity.asOf', D.redTeamActivity?.asOf, '29 July 2026'],
+  ['redTeamActivity.leaderboardRank', D.redTeamActivity?.leaderboardRank, 74],
+  ['redTeamActivity.platformReportedBreaks', D.redTeamActivity?.platformReportedBreaks, 113],
+  ['redTeamActivity.totalArenaSubmissions', D.redTeamActivity?.totalArenaSubmissions, 255],
+  ['redTeamActivity.globalUniqueBreaks', D.redTeamActivity?.globalUniqueBreaks, 28],
+  ['redTeamActivity.globalPoints', D.redTeamActivity?.globalPoints, 1120]
 ];
 for (const [field, actual, expected] of currentGraySwanChecks) {
   if (actual !== expected) fail('data/source.js', 1, `${field} must equal ${JSON.stringify(expected)}; found ${JSON.stringify(actual)}.`);
@@ -154,7 +155,7 @@ for (const requiredText of [
   'A diagram that became a reusable public reference.',
   'Start with the role you are hiring for.',
   'AI evaluation and scientific evidence roles.',
-  '#75 on the Proving Ground leaderboard',
+  '#74 on the Proving Ground leaderboard',
   'Fact-checking and producing scientific content before publication.',
   'Tracing privacy, policy and evidence changes under dispute.',
   'Nebula Genomics',
@@ -171,7 +172,7 @@ for (const requiredText of [
   if (!homepageSource.includes(requiredText)) fail('src/pages/index.astro', 1, `Homepage is missing current artifact-led portfolio content: ${requiredText}`);
 }
 for (const requiredMedia of [
-  '/media/work/model-behavior-profile.jpg', '/media/work/entropy-h5n1.png',
+   '/media/work/gray-swan-profile-2026-07-29-1600.webp', '/media/work/entropy-h5n1.png',
   '/media/work/yourself-to-science-800.webp', '/media/work/mdpi-filter-1-800.webp',
   '/media/work/mdpi-filter-2-800.webp', '/media/work/wikimedia-clinical-overlap.svg'
 ]) {

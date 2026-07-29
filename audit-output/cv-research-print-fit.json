@@ -4,17 +4,17 @@
   "pages": [
     {
       "page": 1,
-      "contentBottom": 923,
-      "footerTop": 1077,
-      "clearance": 154,
-      "pageHeight": 1123
+      "contentBottom": 924,
+      "footerTop": 1013,
+      "clearance": 89,
+      "pageHeight": 1058
     },
     {
       "page": 2,
-      "contentBottom": 853,
-      "footerTop": 1077,
-      "clearance": 224,
-      "pageHeight": 1123
+      "contentBottom": 881,
+      "footerTop": 1013,
+      "clearance": 132,
+      "pageHeight": 1058
     }
   ]
 }

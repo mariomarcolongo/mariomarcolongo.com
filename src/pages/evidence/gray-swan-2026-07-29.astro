@@ -1,0 +1,78 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SiteNav from "../../components/SiteNav.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+import "../../styles/career-v2.css";
+import D from "../../../data/source.js";
+
+const title = "Gray Swan Proving Ground Evidence — 29 July 2026";
+const description = "Dated Gray Swan evidence record for Mario Marcolongo: original profile screenshot, Proving Ground rank 74, top 6%, 113 total breaks and separate Arena metrics.";
+const original = "/evidence/gray-swan-arena-mario-marcolongo-2026-07-29-033550-CEST.png";
+const preview = "/media/work/gray-swan-profile-2026-07-29-1600.webp";
+const previewSet = "/media/work/gray-swan-profile-2026-07-29-800.webp 800w, /media/work/gray-swan-profile-2026-07-29-1600.webp 1600w";
+const evidenceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "DigitalDocument",
+  name: title,
+  description,
+  url: "https://mariomarcolongo.com/evidence/gray-swan-2026-07-29/",
+  dateCreated: "2026-07-29T01:35:50Z",
+  dateModified: "2026-07-29",
+  author: { "@id": "https://mariomarcolongo.com/#person" },
+  isBasedOn: D.identity.grayswanUrl,
+  encoding: [
+    { "@type": "MediaObject", contentUrl: "https://mariomarcolongo.com/evidence/gray-swan-arena-mario-marcolongo-2026-07-29-033550-CEST.png", encodingFormat: "image/png", width: 2940, height: 1660 },
+    { "@type": "MediaObject", contentUrl: "https://mariomarcolongo.com/evidence/gray-swan-profile-2026-07-29.json", encodingFormat: "application/json" }
+  ]
+};
+---
+
+<Layout title={title} description={description} canonical="https://mariomarcolongo.com/evidence/gray-swan-2026-07-29/">
+  <Fragment slot="head"><script type="application/ld+json" set:html={JSON.stringify(evidenceJsonLd)}></script></Fragment>
+  <SiteNav activePage="security" />
+  <main class="evaluation-shell">
+    <section class="evaluation-hero">
+      <div>
+        <div class="evaluation-eyebrow">Dated platform record · 29 July 2026 · 03:35:50 CEST</div>
+        <h1 class="evaluation-title">Gray Swan profile evidence.</h1>
+        <p class="evaluation-lede">The account-holder capture displayed Proving Ground rank #74, top 6% and 113 Total Breaks. The separate Arena profile displayed rank #365, 28 global unique breaks, 1,120 points and 255 submissions.</p>
+        <div class="career-actions">
+          <a class="btn btn-primary" href={D.identity.grayswanUrl} target="_blank" rel="noopener noreferrer">Open live Gray Swan profile ↗</a>
+          <a class="btn" href="/security.html">Read the evaluation record</a>
+          <a class="btn" href="/evidence/gray-swan-profile-2026-07-29.html">Preservation manifest</a>
+          <a class="btn" href="/evidence/gray-swan-2026-07-25/">Previous snapshot</a>
+        </div>
+      </div>
+      <aside class="evaluation-scope-note"><strong>Evidence boundary</strong><p>The original PNG is retained unchanged. Responsive WebP derivatives are used on the website. Counts and rankings are platform-reported, time-sensitive and not independent reproduction of every adjudicated result.</p></aside>
+    </section>
+
+    <section class="evaluation-metrics" aria-label="Dated Gray Swan metrics">
+      <article class="evaluation-metric"><strong>#74</strong><span>Proving Ground rank</span><small>Top 6% · time-sensitive snapshot</small></article>
+      <article class="evaluation-metric"><strong>113</strong><span>Platform-displayed total breaks</span><small>Visible area counters sum to 112</small></article>
+      <article class="evaluation-metric"><strong>255</strong><span>Arena submissions shown</span><small>28 unique breaks · 1,120 points</small></article>
+    </section>
+
+    <section class="evaluation-section">
+      <div class="evaluation-section-head"><h2>Original public profile screenshot</h2><p>The image is shown directly rather than replaced with a synthetic metric graphic. Select it to open the exact committed PNG.</p></div>
+      <figure style="margin:0">
+        <a href={original} aria-label="Open the original Gray Swan profile screenshot at full size"><img src={preview} srcset={previewSet} sizes="(max-width: 900px) 100vw, 1200px" alt="Screenshot of Mario Marcolongo's Gray Swan profile showing Proving Ground rank 74, top 6%, 113 total breaks and separate Arena activity on 29 July 2026" width="1600" height="903" style="display:block;width:100%;height:auto;border:1px solid rgba(127,127,127,.3);border-radius:18px;background:#090b0d" /></a>
+        <figcaption style="margin-top:12px;line-height:1.6">Original capture: 2940 × 1660 PNG · captured 29 July 2026 at 03:35:50 CEST.</figcaption>
+      </figure>
+      <div class="career-actions" style="margin-top:18px"><a class="btn" href="/evidence/gray-swan-profile-2026-07-29.html">Preservation manifest and SHA-256</a><a class="btn" href="/evidence/gray-swan-profile-2026-07-29.json">Machine-readable evidence JSON</a></div>
+    </section>
+
+    <section class="evaluation-section">
+      <div class="evaluation-section-head"><h2>Values transcribed from the capture</h2><p>Arena and Proving Ground are separate ranking and activity systems.</p></div>
+      <div class="evaluation-grid">
+        <article class="evaluation-card"><div class="evaluation-step">PROVING GROUND</div><h3>#74 · Top 6%</h3><p>113 Total Breaks displayed.</p></article>
+        <article class="evaluation-card"><div class="evaluation-step">ARENA PROFILE</div><h3>#365 global rank</h3><p>28 global unique breaks · 1,120 points · 255 submissions.</p></article>
+        <article class="evaluation-card"><div class="evaluation-step">CHAT</div><h3>39 / 552</h3><p>7% displayed.</p></article>
+        <article class="evaluation-card"><div class="evaluation-step">IMAGE</div><h3>32 / 387</h3><p>8% displayed.</p></article>
+        <article class="evaluation-card"><div class="evaluation-step">AGENT</div><h3>28 / 593</h3><p>5% displayed.</p></article>
+        <article class="evaluation-card"><div class="evaluation-step">INDIRECT</div><h3>13 / 547</h3><p>2% displayed.</p></article>
+      </div>
+      <aside class="evaluation-scope-note" style="margin-top:24px"><strong>Visible aggregation discrepancy</strong><p>The four visible area counters total 112, while the profile displays 113 Total Breaks. Both are preserved exactly; no internal aggregation rule is inferred.</p></aside>
+    </section>
+  </main>
+  <SiteFooter version={D.identity.buildVersion} />
+</Layout>

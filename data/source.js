@@ -8,14 +8,14 @@
 const MARIO_DOSSIER = {
   identity: {
     name: "Mario Marcolongo",
-    buildVersion: "v2026.07.25",
+    buildVersion: "v2026.07.29",
     enaAccession: "PRJEB109744",
     enaUrl: "https://www.ebi.ac.uk/ena/browser/view/PRJEB109744",
     centralAuth: "https://commons.wikimedia.org/wiki/Special:CentralAuth/Digressivo",
     grayswanId: "6a57be70d15e123775a1e9cf",
     grayswanUrl: "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
-    grayswanArchiveUrl: "/evidence/gray-swan-profile-2026-07-25.html",
-    evaluationAsOf: "25 July 2026",
+    grayswanArchiveUrl: "/evidence/gray-swan-2026-07-29/",
+    evaluationAsOf: "29 July 2026",
     jobTitle: "AI Evaluation & Research Operations Specialist",
     secondaryTitle: "Model Behavior · Scientific Evidence · Knowledge Integrity · Open Science & Data Quality",
     headline: "I evaluate model behavior, verify scientific evidence, and operate research systems.",
@@ -59,9 +59,9 @@ const MARIO_DOSSIER = {
       icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>`,
       title: "Model Behavior & Adversarial Testing",
       lead: "Structured, self-directed probing of LLM and multimodal-system behavior across chat, image, tool-use and indirect prompt-injection challenges.",
-      desc: "The dated Gray Swan profile shows Proving Ground rank #75 (top 6%) with 110 platform-recorded total breaks on 25 July 2026. The same screenshot shows Arena rank #370, 27 global unique breaks, 1,090 points and 246 submissions. The record demonstrates sustained evaluation activity; it is not an independent security audit or certification.",
+      desc: "The dated Gray Swan profile shows Proving Ground rank #74 (top 6%) with 113 platform-recorded total breaks on 29 July 2026. The same screenshot shows Arena rank #370, 27 global unique breaks, 1,090 points and 246 submissions. The record demonstrates sustained evaluation activity; it is not an independent security audit or certification.",
       highlights: [
-        { label: "Leaderboard-Counted Activity", detail: "#75 · top 6% · 110 platform-recorded breaks on 25 July 2026" },
+        { label: "Leaderboard-Counted Activity", detail: "#74 · top 6% · 113 platform-recorded breaks on 29 July 2026" },
         { label: "Testing Surfaces", detail: "Chat, multimodal/image, agentic tool-use and indirect prompt injection" }
       ]
     },
@@ -101,8 +101,8 @@ const MARIO_DOSSIER = {
   ],
 
   stats: [
-    { value: "110", label: "Platform-Recorded Proving Ground Breaks", detail: "#75 · top 6% · 25 July 2026" },
-    { value: "246", label: "Arena Submissions", detail: "Arena rank #370 · 27 global unique breaks · 1,090 points" },
+    { value: "113", label: "Platform-Recorded Proving Ground Breaks", detail: "#74 · top 6% · 29 July 2026" },
+    { value: "255", label: "Arena Submissions", detail: "Arena rank #365 · 28 global unique breaks · 1,120 points" },
     { value: "55+", label: "Research Initiatives Indexed", detail: "Clinical studies, biobanks, donation programs, registries and other research initiatives" },
     { value: "55+ Videos & 4 Articles", label: "Paid Scientific Verification", detail: "Primary-source research and fact-checking for Entropy for Life" },
     { value: "4,317", label: "Auditable Wikimedia Contributions", detail: "Public contributions across Wikipedia, Wikidata and Wikimedia Commons as of July 2026" }
@@ -113,7 +113,7 @@ const MARIO_DOSSIER = {
       id: "ai-red-teaming",
       title: "Model Behavior & Adversarial Evaluation",
       oneLiner: "Public aggregate record of self-directed model-behavior evaluation across chat, multimodal, agentic tool-use and indirect prompt-injection challenges.",
-      description: "Self-directed model-behavior evaluation conducted through the Gray Swan Proving Ground. The dated 25 July 2026 screenshot shows Proving Ground rank #75, top 6%, with 110 platform-recorded total breaks; the same profile shows Arena rank #370, 27 global unique breaks, 1,090 points and 246 submissions. Aggregate counts and selected public labels are presented with explicit evidence limitations; complete prompts, outputs, model versions and adjudication materials are not reproduced.",
+      description: "Self-directed model-behavior evaluation conducted through the Gray Swan Proving Ground. The dated 29 July 2026 screenshot shows Proving Ground rank #74, top 6%, with 113 platform-recorded total breaks; the same profile shows Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions. Aggregate counts and selected public labels are presented with explicit evidence limitations; complete prompts, outputs, model versions and adjudication materials are not reproduced.",
       role: "Model-Behavior Evaluator",
       tech: ["Adversarial Evaluation", "Prompt Injection", "Agentic Tool-Use", "Multimodal Safety", "Evidence-Bound Reporting"],
       links: {
@@ -121,8 +121,8 @@ const MARIO_DOSSIER = {
         profile: "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf"
       },
       highlights: [
-        "110 Platform-Recorded Proving Ground Breaks: #75 and top 6% on the dated 25 July 2026 snapshot",
-        "Arena Profile Context: #370 rank, 27 global unique breaks, 1,090 points and 246 submissions",
+        "113 Platform-Recorded Proving Ground Breaks: #74 and top 6% on the dated 29 July 2026 snapshot",
+        "Arena Profile Context: #365 rank, 28 global unique breaks, 1,120 points and 255 submissions",
         "Evidence Boundary: Platform-reported outcomes are separated from independent verification or security-certification claims"
       ]
     },
@@ -277,20 +277,20 @@ const MARIO_DOSSIER = {
 
   redTeamActivity: {
     platform: "Gray Swan AI Proving Ground",
-    asOf: "25 July 2026",
-    rankBand: "#75 · Top 6%",
-    leaderboardRank: 75,
-    platformReportedBreaks: 110,
-    areaBreaks: { chat: 36, image: 32, agent: 28, indirect: 13 },
-    areaBreaksTotal: 109,
-    arenaRank: 370,
-    globalUniqueBreaks: 27,
-    globalPoints: 1090,
-    submissions: 232,
-    totalArenaSubmissions: 246,
+    asOf: "29 July 2026",
+    rankBand: "#74 · Top 6%",
+    leaderboardRank: 74,
+    platformReportedBreaks: 113,
+    areaBreaks: { chat: 39, image: 32, agent: 28, indirect: 13 },
+    areaBreaksTotal: 112,
+    arenaRank: 365,
+    globalUniqueBreaks: 28,
+    globalPoints: 1120,
+    submissions: 255,
+    totalArenaSubmissions: 255,
     previousChats: 953,
     confirmedBreaks: 105,
-    profileReportedBreaks: 110,
+    profileReportedBreaks: 113,
     publicLabels: ["damage-property", "toxic-plant", "package-theft-image"],
     waves: [
       { wave: 1, breaks: 14, available: 67 },
@@ -354,12 +354,12 @@ const MARIO_DOSSIER = {
       },
       bullets: [
         "Conduct self-directed testing of LLM instruction handling, policy boundaries and edge cases across chat, image, agentic tool-use and indirect prompt-injection settings.",
-        "Reached #75 on the Proving Ground leaderboard (top 6%) with 110 platform-recorded total breaks on 25 July 2026; the same profile showed Arena rank #370, 27 global unique breaks, 1,090 points and 246 submissions.",
+        "Reached #74 on the Proving Ground leaderboard (top 6%) with 113 platform-recorded total breaks on 29 July 2026; the same profile showed Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions.",
         "Document platform-reported outcomes conservatively, separating public evidence from independent verification, security certification or model-wide conclusions."
       ],
       resumeBullets: [
         "Conduct self-directed adversarial testing across chat, multimodal, agentic tool-use and indirect prompt-injection settings.",
-        "Reached #75 on the Proving Ground leaderboard (top 6%) with 110 platform-recorded total breaks on 25 July 2026; the same profile showed Arena rank #370, 27 global unique breaks, 1,090 points and 246 submissions."
+        "Reached #74 on the Proving Ground leaderboard (top 6%) with 113 platform-recorded total breaks on 29 July 2026; the same profile showed Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions."
       ]
     },
     {

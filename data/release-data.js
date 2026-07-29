@@ -11,16 +11,16 @@ const H = require("./portfolio-human.js");
 const P = require("./application-profiles.js");
 
 const GS = Object.freeze({
-  asOf: "25 July 2026",
-  rank: 75,
+  asOf: "29 July 2026",
+  rank: 74,
   percentile: "Top 6%",
-  totalBreaks: 110,
-  displayedAreaTotal: 109,
-  arenaRank: 370,
-  arenaUniqueBreaks: 27,
-  arenaPoints: 1090,
-  arenaSubmissions: 246,
-  evidencePath: "/evidence/gray-swan-2026-07-25/",
+  totalBreaks: 113,
+  displayedAreaTotal: 112,
+  arenaRank: 365,
+  arenaUniqueBreaks: 28,
+  arenaPoints: 1120,
+  arenaSubmissions: 255,
+  evidencePath: "/evidence/gray-swan-2026-07-29/",
   profileUrl: "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf"
 });
 
@@ -69,7 +69,7 @@ function updateEntropyExperience(item) {
 }
 
 /* Shared master record */
-D.identity.buildVersion = "v2026.07.26";
+D.identity.buildVersion = "v2026.07.29";
 D.identity.grayswanArchiveUrl = GS.evidencePath;
 D.identity.evaluationAsOf = GS.asOf;
 D.identity.role =
@@ -155,7 +155,7 @@ Object.assign(D.redTeamActivity, {
   arenaUniqueBreaks: GS.arenaUniqueBreaks,
   arenaPoints: GS.arenaPoints,
   areas: [
-    { name: "Chat", breaks: 36, available: 552, percent: 7 },
+    { name: "Chat", breaks: 39, available: 552, percent: 7 },
     { name: "Image", breaks: 32, available: 387, percent: 8 },
     { name: "Agent", breaks: 28, available: 593, percent: 5 },
     { name: "Indirect", breaks: 13, available: 547, percent: 2 }
@@ -203,8 +203,8 @@ H.proofMoments[1] = {
 const grayHero = findById(H.heroMedia, "model-record");
 if (grayHero) {
   grayHero.title = `#${GS.rank} · ${GS.percentile} · ${GS.totalBreaks} breaks`;
-  grayHero.image = "/media/work/gray-swan-summary-2026-07-25.svg";
-  delete grayHero.imageSet;
+  grayHero.image = "/media/work/gray-swan-profile-2026-07-29-1600.webp";
+  grayHero.imageSet = "/media/work/gray-swan-profile-2026-07-29-800.webp 800w, /media/work/gray-swan-profile-2026-07-29-1600.webp 1600w";
   grayHero.alt =
     `Dated Gray Swan evaluation summary showing Proving Ground rank ${GS.rank}, ${GS.percentile.toLowerCase()}, ${GS.totalBreaks} total breaks and separate Arena activity metrics`;
   grayHero.href = "/security.html";
@@ -227,7 +227,8 @@ if (modelCase) {
   modelCase.boundary =
     `The four visible area counters sum to ${GS.displayedAreaTotal} while the profile displays ${GS.totalBreaks} total breaks. Both are reported without inferring the platform’s internal aggregation. This supports evaluation and adversarial-QA applications, not penetration-testing or senior red-team engineering claims.`;
   modelCase.href = "/security.html";
-  modelCase.image = "/media/work/gray-swan-summary-2026-07-25.svg";
+  modelCase.image = "/media/work/gray-swan-profile-2026-07-29-1600.webp";
+  modelCase.imageSet = "/media/work/gray-swan-profile-2026-07-29-800.webp 800w, /media/work/gray-swan-profile-2026-07-29-1600.webp 1600w";
   modelCase.alt =
     `Dated Gray Swan evaluation summary showing Proving Ground rank ${GS.rank}, ${GS.percentile.toLowerCase()}, ${GS.totalBreaks} total breaks and separate Arena metrics`;
   modelCase.imageCaption = `Dated platform summary · #${GS.rank} · ${GS.percentile.toLowerCase()} · ${GS.asOf}`;

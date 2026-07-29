@@ -11,17 +11,18 @@ const { D, H, P } = release;
 const ENTROPY_WORK_URL = 'https://entropyforlife.it/mario-marcolongo-entropy-for-life/';
 
 const graySwan = Object.freeze({
-  asOf: '26 July 2026',
-  rank: 75,
+  asOf: '29 July 2026',
+  rank: 74,
   percentile: 'Top 6%',
-  totalBreaks: 110,
-  displayedAreaTotal: 109,
-  arenaRank: 371,
-  uniqueBreaks: 27,
-  points: 1090,
-  submissions: 246,
-  evidencePath: '/evidence/gray-swan-profile-2026-07-26.html',
-  screenshotPath: '/media/work/gray-swan-profile-2026-07-26.svg'
+  totalBreaks: 113,
+  displayedAreaTotal: 112,
+  arenaRank: 365,
+  uniqueBreaks: 28,
+  points: 1120,
+  submissions: 255,
+  evidencePath: '/evidence/gray-swan-2026-07-29/',
+  screenshotPath: '/media/work/gray-swan-profile-2026-07-29-1600.webp',
+  screenshotSet: '/media/work/gray-swan-profile-2026-07-29-800.webp 800w, /media/work/gray-swan-profile-2026-07-29-1600.webp 1600w'
 });
 
 const audience = Object.freeze({
@@ -77,7 +78,7 @@ function wikidataReferenceStatement() {
   return `${yourselfToScience.wikidataReferences} unique Wikidata items use yourselftoscience.org as a reference URL (P854)`;
 }
 
-D.identity.buildVersion = 'v2026.07.27';
+D.identity.buildVersion = 'v2026.07.29';
 D.identity.grayswanArchiveUrl = graySwan.evidencePath;
 D.identity.evaluationAsOf = graySwan.asOf;
 D.identity.authorshipStatement =
@@ -257,6 +258,7 @@ if (modelCase) {
   modelCase.result = `#${graySwan.rank} on the Proving Ground, ${graySwan.percentile.toLowerCase()}, with ${graySwan.totalBreaks} platform-displayed total breaks on ${graySwan.asOf}; the Arena profile displayed rank #${graySwan.arenaRank}, ${graySwan.submissions} submissions, ${graySwan.uniqueBreaks} global unique breaks and ${graySwan.points.toLocaleString('en-US')} points.`;
   modelCase.boundary = `The four visible area counters sum to ${graySwan.displayedAreaTotal} while the profile displays ${graySwan.totalBreaks} total breaks. Both are reported without inferring the platform's internal aggregation, and the record is presented as dated evaluation evidence rather than a model-wide conclusion.`;
   modelCase.image = graySwan.screenshotPath;
+  modelCase.imageSet = graySwan.screenshotSet;
   modelCase.imageCaption = `Full dated profile · #${graySwan.rank} · ${graySwan.percentile.toLowerCase()} · ${graySwan.totalBreaks} breaks`;
 }
 

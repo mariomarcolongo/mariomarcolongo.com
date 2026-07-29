@@ -1,9 +1,10 @@
 {
   "proofCount": 3,
   "heroMediaCount": 4,
-  "scopeCount": 3,
-  "caseCount": 3,
-  "caseMediaCount": 3,
+  "scopeCount": 4,
+  "caseCount": 4,
+  "caseImageCount": 3,
+  "entropyPanelCount": 1,
   "productImageCount": 2,
   "visualArtifactCount": 3,
   "principleCount": 3,
@@ -15,6 +16,6 @@
     "CV",
     "Contact"
   ],
-  "heroHeight": 1385.3125,
-  "documentHeight": 13415
+  "heroHeight": 1507.625,
+  "documentHeight": 15752
 }
