@@ -1,9 +1,13 @@
 name: Deploy to Cloudflare Pages
 
 # Production deployment for the application-ready portfolio.
+# pull_request_target checks out only the resulting main-branch merge commit,
+# never untrusted pull-request code, so production secrets remain isolated.
 on:
   push:
     branches: [main]
+  pull_request_target:
+    types: [closed]
   workflow_dispatch:
 
 permissions:
@@ -16,6 +20,7 @@ concurrency:
 
 jobs:
   deploy:
+    if: github.event_name != 'pull_request_target' || github.event.pull_request.merged == true
     name: Build and deploy production site
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -24,8 +29,10 @@ jobs:
       url: ${{ steps.deploy.outputs.deployment-url }}
 
     steps:
-      - name: Check out repository
+      - name: Check out resulting production commit
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.merge_commit_sha || github.sha }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -48,5 +55,5 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=mariomarcolongo-pages --branch=main --commit-hash=${{ github.sha }}
+          command: pages deploy dist --project-name=mariomarcolongo-pages --branch=main --commit-hash=${{ github.event.pull_request.merge_commit_sha || github.sha }}
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
