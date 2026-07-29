@@ -33,7 +33,7 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Correct one-time public screenshot path
+      - name: Correct one-time migration template
         run: |
           python - <<'PY'
           from pathlib import Path
@@ -41,6 +41,7 @@ jobs:
           s = p.read_text()
           s = s.replace("const screenshotPublicPath = `/${ORIGINAL}`;", "const screenshotPublicPath = `/${ORIGINAL.replace(/^public\\//, '')}`;")
           s = s.replace('`<a href="/${ORIGINAL}" aria-label="Open the original Gray Swan profile screenshot at full size">', '`<a href="/${ORIGINAL.replace(/^public\\//, \'\')}" aria-label="Open the original Gray Swan profile screenshot at full size">')
+          s = s.replace('contentUrl: `https://mariomarcolongo.com${screenshotPublicPath}`', 'contentUrl: "https://mariomarcolongo.com${screenshotPublicPath}"')
           p.write_text(s)
           PY
 
