@@ -59,6 +59,7 @@ The collaboration is retained as named experience and in the relevant CV; it is 
 - `scripts/postbuild.js` — generated root mirrors and post-build outputs.
 - `scripts/verify-dist.js` — generated-output, metadata and evidence assertions.
 - `scripts/verify-rendering.js` — desktop, tablet, mobile, light/dark and no-JavaScript rendering checks.
+- `scripts/verify-live-release.js` — post-deployment checks for the public homepage, evaluation record and current dated evidence route.
 - `scripts/lighthouse-static-server.js` — production-like compressed static server used by the Lighthouse gate.
 
 Generated outputs include:
@@ -97,9 +98,12 @@ npm ci
 npm run build
 npm run verify:render
 npm run pdf
+npm run verify:live
 ```
 
-The build fails closed on stale positioning, unsupported claims, missing generated files, invalid structured data and inconsistent dossier mirrors.
+The build fails closed on stale positioning, unsupported claims, missing generated files, invalid structured data and inconsistent dossier mirrors. `npm run verify:live` separately checks the deployed homepage, AI-evaluation record and current dated evidence page, including rejection of the superseded Gray Swan caption.
+
+Production normally deploys from pushes or merged pull requests. A deliberately named `deploy/production-*` pull request can safely refresh production from the trusted current `main` commit; the workflow never checks out code from that deployment-trigger branch while using production secrets.
 
 The permanent `Lighthouse 100 audit` workflow is read-only. It builds the repository, runs the complete rendering and PDF suites, serves the production output with compression and cache behavior, and requires exact category scores of 100 for mobile and desktop in:
 
