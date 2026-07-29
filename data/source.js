@@ -59,7 +59,7 @@ const MARIO_DOSSIER = {
       icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>`,
       title: "Model Behavior & Adversarial Testing",
       lead: "Structured, self-directed probing of LLM and multimodal-system behavior across chat, image, tool-use and indirect prompt-injection challenges.",
-      desc: "The dated Gray Swan profile shows Proving Ground rank #74 (top 6%) with 113 platform-recorded total breaks on 29 July 2026. The same screenshot shows Arena rank #370, 27 global unique breaks, 1,090 points and 246 submissions. The record demonstrates sustained evaluation activity; it is not an independent security audit or certification.",
+      desc: "The dated Gray Swan profile shows Proving Ground rank #74 (top 6%) with 113 platform-recorded total breaks on 29 July 2026. The same screenshot shows Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions. The record demonstrates sustained evaluation activity; it is not an independent security audit or certification.",
       highlights: [
         { label: "Leaderboard-Counted Activity", detail: "#74 · top 6% · 113 platform-recorded breaks on 29 July 2026" },
         { label: "Testing Surfaces", detail: "Chat, multimodal/image, agentic tool-use and indirect prompt injection" }

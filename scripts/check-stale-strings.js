@@ -124,6 +124,17 @@ for (const [field, actual, expected] of currentGraySwanChecks) {
   if (actual !== expected) fail('data/source.js', 1, `${field} must equal ${JSON.stringify(expected)}; found ${JSON.stringify(actual)}.`);
 }
 
+const currentAiPillar = (D.pillars || []).find((item) => item?.category === 'AI EVALUATION & SAFETY OPERATIONS');
+for (const required of ['#74', 'top 6%', '113 platform-recorded total breaks', 'Arena rank #365', '28 global unique breaks', '1,120 points', '255 submissions', '29 July 2026']) {
+  if (!String(currentAiPillar?.desc || '').includes(required)) fail('data/source.js', 1, `Current AI-evaluation pillar is missing: ${required}`);
+}
+
+const packageVersion = JSON.parse(fs.readFileSync(path.join(ROOT, 'package.json'), 'utf8')).version;
+const packageLock = JSON.parse(fs.readFileSync(path.join(ROOT, 'package-lock.json'), 'utf8'));
+if (packageLock.version !== packageVersion || packageLock.packages?.['']?.version !== packageVersion) {
+  fail('package-lock.json', 1, `Package version must match package.json (${packageVersion}).`);
+}
+
 const focusGroup = (D.experience || []).find((item) => String(item.role || '').includes('Focus-Group'));
 if (!focusGroup) fail('data/source.js', 1, 'Named focus-group research experience is missing.');
 else {
