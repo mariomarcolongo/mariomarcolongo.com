@@ -16,6 +16,7 @@ const departmentUrl = "https://www.unipd.it/en/dpss";
 
 <Layout title={pageTitle} description={pageDescription} canonical="https://mariomarcolongo.com/research-operations.html">
   <Fragment slot="head">
+    <meta name="robots" content="noindex,follow" />
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "ProfilePage",
