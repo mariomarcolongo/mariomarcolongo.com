@@ -11,9 +11,9 @@ const OUTPUT = path.join(ROOT, 'audit-output');
 const MAX_HOMEPAGE_HEIGHT = 16500;
 const ROUTES = [
   'index.html', 'integrity.html', 'cv.html', 'cv-resume.html',
-  'cv-research.html', 'cv-editorial.html', 'cv-integrity.html', 'security.html'
+  'cv-research.html', 'cv-editorial.html', 'cv-integrity.html', 'cv-orcid.html', 'security.html'
 ];
-const APPLICATION_ROUTES = new Set(['cv-resume.html', 'cv-research.html', 'cv-editorial.html', 'cv-integrity.html']);
+const APPLICATION_ROUTES = new Set(['cv-resume.html', 'cv-research.html', 'cv-editorial.html', 'cv-integrity.html', 'cv-orcid.html']);
 const VIEWPORTS = [
   { name: 'desktop', width: 1440, height: 1000 },
   { name: 'tablet', width: 768, height: 1024 },
