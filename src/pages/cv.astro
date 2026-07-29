@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import SiteNav from "../components/SiteNav.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import "../styles/career-v2.css";
-import career from "../../data/investigation-positioning.mjs";
+import career from "../../data/research-operations-positioning.mjs";
 import { buildProfileGraph } from "../lib/structured-data.js";
 
 const { D, P } = career;
@@ -56,6 +56,9 @@ function linksFor(item) {
     website: "Website",
     workRecord: "Official Entropy for Life work record",
     caseStudy: "Evaluation record",
+    researchOperations: "Research-operations case study",
+    supervisor: "Marta Panzeri",
+    department: "University department",
     profile: "Public profile",
     github: "Repository",
     chromeStore: "Chrome Web Store",
