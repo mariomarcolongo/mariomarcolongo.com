@@ -33,12 +33,13 @@ const text = html
   .trim();
 
 for (const expected of [
-  'Scholarly Infrastructure & Technical Support Specialist',
-  'API troubleshooting · research workflows · metadata quality · stakeholder support',
-  'Member integration and API support',
-  'Scholarly infrastructure implementation and workflow guidance',
-  'API troubleshooting and technical operations',
-  'Available to relocate to Spain before start',
+  'Scholarly Infrastructure & API Operations Specialist',
+  'Research workflows · API troubleshooting · metadata quality · remote stakeholder communication',
+  'Role-relevant evidence',
+  'Role-aligned strengths',
+  'API standards and troubleshooting',
+  'Authorized to work in Spain',
+  'Available to relocate before start',
   'European business hours',
   'Page 1 of 2',
   'Page 2 of 2',
@@ -50,7 +51,8 @@ for (const expected of [
   'Zenodo',
   'HTTP',
   'REST',
-  'JSON'
+  'JSON',
+  'Basic familiarity: XML and RDF/VoID'
 ]) {
   if (!text.includes(expected)) fail(`ORCID CV is missing expected content: ${expected}`);
 }
@@ -58,6 +60,8 @@ for (const expected of [
 for (const prohibited of [
   'Zendesk experience',
   'Salesforce experience',
+  'ORCID member integration experience',
+  'implemented OAuth',
   'independent software developer',
   'bachelor’s degree',
   "bachelor's degree",
