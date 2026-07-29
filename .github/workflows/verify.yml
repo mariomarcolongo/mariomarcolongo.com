@@ -50,6 +50,9 @@ jobs:
           set -o pipefail
           npm run verify:render 2>&1 | tee audit-output/render.log
 
+      - name: Verify Notandia continuity and legacy-link safety
+        run: node scripts/verify-notandia-transition.js
+
       - name: Generate five specialized application PDFs
         run: npm run pdf:resume
 
@@ -76,6 +79,7 @@ jobs:
             public/cv-llm.txt
             public/data/source.js
             index.html
+            mdpi-filter.html
             integrity.html
             cv.html
             cv-resume.html
