@@ -42,6 +42,8 @@ jobs:
           s = s.replace("const screenshotPublicPath = `/${ORIGINAL}`;", "const screenshotPublicPath = `/${ORIGINAL.replace(/^public\\//, '')}`;")
           s = s.replace('`<a href="/${ORIGINAL}" aria-label="Open the original Gray Swan profile screenshot at full size">', '`<a href="/${ORIGINAL.replace(/^public\\//, \'\')}" aria-label="Open the original Gray Swan profile screenshot at full size">')
           s = s.replace('contentUrl: `https://mariomarcolongo.com${screenshotPublicPath}`', 'contentUrl: "https://mariomarcolongo.com${screenshotPublicPath}"')
+          duplicate = '''\n  ['image: "/media/work/model-behavior-profile.jpg",\\n      imageSet: undefined,\\n      alt: "Screenshot of the dated Gray Swan Arena profile', `image: "${PREVIEW_1600}",\\n      imageSet: "${PREVIEW_SET}",\\n      alt: "Screenshot of the dated Gray Swan Arena profile`]'''
+          s = s.replace(duplicate, '')
           p.write_text(s)
           PY
 
