@@ -10,7 +10,8 @@ const CV_PAGES = new Set([
   'cv-resume.html',
   'cv-research.html',
   'cv-editorial.html',
-  'cv-integrity.html'
+  'cv-integrity.html',
+  'cv-orcid.html'
 ]);
 const MIME_TYPES = {
   '.avif': 'image/avif',
