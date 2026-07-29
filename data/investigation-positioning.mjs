@@ -56,7 +56,7 @@ if (masterWiki) {
 }
 
 if (P.aiSafety) {
-  P.aiSafety.summary = "AI evaluation and research-verification specialist with self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. The Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks on 29 July 2026. Supporting work demonstrates multilingual content quality, public-source verification, source-provenance analysis, archival recovery, claim-to-source auditing and evidence-bound reporting across sensitive records.";
+  P.aiSafety.summary = "AI evaluation and research-verification specialist with self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. The Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks on 29 July 2026. Supporting work demonstrates multilingual content quality, consumer-genomics privacy research, corporate-source reconciliation, archival source recovery, claim-to-source auditing and evidence-bound reporting across sensitive records.";
 
   const sourceEvidence = P.aiSafety.evidence?.find((item) => item?.title?.includes("Auditable source-verification"));
   if (sourceEvidence) {
