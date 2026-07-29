@@ -56,7 +56,7 @@ if (masterWiki) {
 }
 
 if (P.aiSafety) {
-  P.aiSafety.summary = "AI evaluation and research-verification specialist with self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. The Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks on 29 July 2026. Supporting work includes multilingual scientific content quality, consumer-genomics privacy and corporate-source reconciliation, archival source recovery, source-quality review and evidence-bound reporting across legally and scientifically sensitive records.";
+  P.aiSafety.summary = "AI evaluation and research-verification specialist with self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. The Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks on 29 July 2026. Supporting work demonstrates multilingual content quality, public-source verification, source-provenance analysis, archival recovery, claim-to-source auditing and evidence-bound reporting across sensitive records.";
 
   const sourceEvidence = P.aiSafety.evidence?.find((item) => item?.title?.includes("Auditable source-verification"));
   if (sourceEvidence) {
@@ -141,7 +141,7 @@ if (P.editorialCommunity) {
 if (P.integrity) {
   P.integrity.title = "Investigations & Knowledge Integrity Analyst";
   P.integrity.subtitle = "OSINT · risk and evidence assessment · sensitive research · analytical reporting · data quality";
-  P.integrity.summary = "Investigations and knowledge-integrity analyst with eight years of auditable public work across original article creation, contested-source synthesis, scientific and technical localization, consumer-genomics privacy, archival OSINT, source-quality review, biomedical evidence synthesis, health-information monitoring, structured metadata and adversarial AI evaluation. Public cases link to exact diffs and state explicit evidence boundaries.";
+  P.integrity.summary = "Investigations and knowledge-integrity analyst with eight years of auditable public work across original article creation, contested-source synthesis, consumer-genomics privacy, archival OSINT, source-quality review, biomedical evidence synthesis, health-information monitoring, structured metadata and adversarial AI evaluation. Public cases link to exact diffs and state explicit evidence boundaries.";
   P.integrity.fit = [
     "Investigations and content-integrity operations",
     "OSINT research and source-provenance analysis",
@@ -173,8 +173,6 @@ if (P.integrity) {
     wiki.links = [
       { label: "Investigation work samples", url: integrityPage },
       { label: "Freedom Cities creation revision", url: C.freedomCities.links[0].href },
-      { label: "Daniela Bortoletto revision history", url: C.danielaBortoletto.links[1].href },
-      { label: "Biblioteca ombra revision history", url: C.shadowLibrary.links[1].href },
       { label: "Consumer-genomics privacy record", url: C.nebula.links[0].href },
       { label: "Archival-record reconstruction", url: C.giannino.links[0].href },
       { label: "Source-quality review record", url: C.teodorani.links[0].href },
@@ -183,7 +181,7 @@ if (P.integrity) {
     ];
     wiki.bullets = [
       "Created the 18,351-byte English Wikipedia article Freedom Cities by reconciling academic analysis, campaign material, draft legislation, think-tank plans and independent reporting into a neutral account of a contested proposal.",
-      "Developed Italian articles on particle physics and research-access infrastructure through translation, terminology correction and source enrichment; maintain consumer-genomics privacy records and recover archived corporate and legal sources.",
+      "Maintain consumer-genomics privacy records and recover archived corporate and legal sources, distinguishing allegations from established facts and constructing dated chronologies.",
       "Audit claim-to-source fit and bibliometrics; synthesize biomedical evidence into structured taxonomies; preserve terminology, citations and attribution across languages."
     ];
   }
@@ -213,9 +211,9 @@ if (P.integrity) {
   P.integrity.experience = [wiki, entropy, focusGroup, gray].filter(Boolean);
   P.integrity.evidence = [
     {
-      title: "Article creation and cross-language evidence synthesis",
-      body: "Created the 18,351-byte English Freedom Cities article and developed Italian articles on particle physics and research-access infrastructure through translation, terminology adaptation and source enrichment.",
-      link: integrityPage
+      title: "Contested-source policy synthesis and article creation",
+      body: "Created an 18,351-byte English Wikipedia article on Freedom Cities from academic, campaign, legal, institutional and journalistic sources while separating proposal details, advocacy and criticism.",
+      link: C.freedomCities.links[0].href
     },
     {
       title: "Privacy, corporate records and archival recovery",
@@ -228,6 +226,13 @@ if (P.integrity) {
       link: C.syndromicAutism.links[0].href
     }
   ];
+
+  replaceSkill(
+    P.integrity,
+    "Knowledge integrity",
+    "Knowledge integrity",
+    "Claim-to-source auditing, source provenance, cross-language citation, terminology and metadata review"
+  );
 
   replaceSkill(
     P.integrity,
