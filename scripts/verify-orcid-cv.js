@@ -44,7 +44,7 @@ for (const expected of [
   'Page 2 of 2',
   'C1 overall',
   'Yourself to Science',
-  'MDPI Filter',
+  'Notandia (formerly MDPI Filter)',
   'English Wikipedia Link Converter',
   'FAIRsharing',
   'Zenodo',
@@ -70,6 +70,10 @@ for (const prohibited of [
 if (/\+39[\s\d()-]{8,}/.test(html) || /tel:\+39[\d-]{8,}/.test(html)) {
   fail('ORCID public HTML contains an injected Italian phone number.');
 }
+if (html.includes('href="https://github.com/orgs/mdpi-filter/repositories"')) {
+  fail('ORCID public HTML contains the retired MDPI Filter organization URL as a clickable link.');
+}
+if (!html.includes('href="/mdpi-filter.html"')) fail('ORCID CV is missing the stable Notandia continuity link.');
 if (!html.includes('content="noindex,nofollow"')) fail('ORCID CV must remain unlisted with noindex,nofollow.');
 if (!html.includes('id="cvPhoneSlot"')) fail('ORCID CV is missing the private phone-injection slot.');
 if ((html.match(/class="application-page"/g) || []).length !== 2) fail('ORCID CV must render exactly two application pages.');
@@ -85,4 +89,4 @@ for (const [, block] of jsonLdBlocks) {
   }
 }
 
-if (!process.exitCode) pass('ORCID application CV content, privacy boundary and structure verified.');
+if (!process.exitCode) pass('ORCID application CV content, privacy boundary, Notandia continuity and structure verified.');
