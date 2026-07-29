@@ -43,10 +43,9 @@ if (masterWiki) {
     syndromicAutism: C.syndromicAutism.links[0].href
   };
   masterWiki.bullets = [
-    "Completed 4,317 auditable contributions across Wikipedia, Wikidata and Wikimedia Commons as of July 2026.",
-    "Researched, structured and created the 18,351-byte English Wikipedia article Freedom Cities, synthesizing campaign material, academic analysis, draft legislation, think-tank plans and independent reporting into a neutral account of the proposal, legal framework, feasibility, governance and criticism.",
-    "Built and maintained a sourced consumer-genomics privacy record across changing corporate, policy and litigation evidence; recovered archived sources for a separate legally sensitive chronology; audited claim-to-source fit and bibliometrics in a public content-governance process; and synthesized biomedical literature into a structured syndromic-autism taxonomy and prevalence table.",
-    "Perform cross-language translation and adaptation across English and Italian Wikipedia while preserving terminology, citations and edition-specific conventions; maintain inspectable revision histories and distinguish source-supported fact, company statement, allegation, hypothesis, inference, collaborative editorial outcome and unresolved uncertainty."
+    "Completed 4,317 auditable contributions across Wikipedia, Wikidata and Wikimedia Commons; researched, structured and created the 18,351-byte English Wikipedia article Freedom Cities from campaign, academic, legal, institutional and journalistic sources.",
+    "Built a sourced consumer-genomics privacy record, recovered archived material for a legally sensitive chronology, audited claim-to-source fit and bibliometrics, and synthesized biomedical literature into a syndromic-autism taxonomy and prevalence table.",
+    "Perform cross-language adaptation while preserving terminology, citations and edition-specific conventions; distinguish source-supported fact, company statement, allegation, hypothesis, inference, collaborative outcome and unresolved uncertainty."
   ];
   masterWiki.resumeBullets = [
     "Completed 4,317 auditable public contributions, including creation of an 18,351-byte English policy article and work involving consumer-genomics privacy research, archival source recovery, cross-language adaptation, citation and provenance review, content-governance analysis, biomedical evidence synthesis and structured metadata."
@@ -109,7 +108,7 @@ if (P.researchQuality) {
 }
 
 if (P.editorialCommunity) {
-  P.editorialCommunity.summary = "Research, editorial and community-operations specialist with paid scientific content and English-to-Italian localization experience inside an established science-communication brand with 267K YouTube subscribers and 36.5M channel views, plus long-running public-source and structured-data work, professional writing and web operations. Work includes primary-literature verification, creation of a sourced 18,351-byte English policy article, source-faithful localization, archival source recovery, claim-to-source review, public-health monitoring, sensitive research facilitation and end-to-end ownership of public verification workflows; audience metrics describe the production environment, not a personal audience.";
+  P.editorialCommunity.summary = "Research, editorial and community-operations specialist with paid scientific content and English-to-Italian localization experience inside an established science-communication brand, plus long-running public-source and structured-data work. Work includes primary-literature verification, creation of a sourced 18,351-byte English policy article, archival recovery, claim review, public-health monitoring, sensitive research facilitation and public verification workflows; audience metrics describe the production environment, not a personal audience.";
 
   if (P.editorialCommunity.strengths?.[2]) {
     P.editorialCommunity.strengths[2] = {
@@ -122,7 +121,7 @@ if (P.editorialCommunity) {
   if (P.editorialCommunity.evidence?.[1]) {
     P.editorialCommunity.evidence[1] = {
       title: "Public-source investigation and archival verification",
-      body: "Created an 18,351-byte English Wikipedia article from academic, legal, institutional and journalistic sources; separately built a consumer-genomics privacy record, recovered unavailable documents and audited claim-to-source fit in collaborative public content governance.",
+      body: "Created an 18,351-byte English Wikipedia article from academic, legal and journalistic sources; separately maintained a consumer-genomics privacy record and recovered unavailable public documents.",
       link: integrityPage
     };
   }
@@ -138,7 +137,7 @@ if (P.editorialCommunity) {
 if (P.integrity) {
   P.integrity.title = "Investigations & Knowledge Integrity Analyst";
   P.integrity.subtitle = "OSINT · risk and evidence assessment · sensitive research · analytical reporting · data quality";
-  P.integrity.summary = "Investigations and knowledge-integrity analyst with eight years of auditable public work spanning contested-source policy synthesis, consumer-genomics privacy, corporate-source reconciliation, archival OSINT, legally sensitive chronology, multilingual content quality, source-quality and bibliometric review, public content governance, biomedical evidence synthesis, health-information monitoring, structured metadata and adversarial AI evaluation. Public cases are linked to exact diffs or collaborative records and described with explicit legal and evidentiary boundaries.";
+  P.integrity.summary = "Investigations and knowledge-integrity analyst with eight years of auditable public work across contested-source policy synthesis, consumer-genomics privacy, archival OSINT, source-quality review, biomedical evidence synthesis, health-information monitoring, structured metadata and adversarial AI evaluation. Public cases link to exact diffs and state explicit evidence boundaries.";
   P.integrity.fit = [
     "Investigations and content-integrity operations",
     "OSINT research and source-provenance analysis",
@@ -177,10 +176,9 @@ if (P.integrity) {
       { label: "Public contribution record", url: centralAuth }
     ];
     wiki.bullets = [
-      "Researched, structured and created the 18,351-byte English Wikipedia article Freedom Cities, reconciling academic analysis, campaign material, draft legislation, think-tank plans and independent reporting into a neutral account of a politically contested proposal.",
-      "Build and maintain sourced consumer-genomics privacy records across changing company statements, archived policies, corporate filings, peer-reviewed risk analysis and litigation coverage while distinguishing allegations from established facts.",
-      "Recover and reconcile archived or unstable public records, construct dated legal and factual chronologies, and audit claim-to-source fit, source independence, bibliometric evidence and policy relevance using web archives, SCImago, Scopus, Web of Science and official threshold documents.",
-      "Synthesize peer-reviewed biomedical evidence into structured taxonomies and tables; perform cross-language translation and adaptation while preserving terminology, citations and revision-level attribution; separate fact, company statement, allegation, inference, hypothesis and community outcome."
+      "Created the 18,351-byte English Wikipedia article Freedom Cities by reconciling academic analysis, campaign material, draft legislation, think-tank plans and independent reporting into a neutral account of a contested proposal.",
+      "Maintain consumer-genomics privacy records and recover archived corporate and legal sources, distinguishing allegations from established facts and constructing dated chronologies.",
+      "Audit claim-to-source fit and bibliometrics; synthesize biomedical evidence into structured taxonomies; preserve terminology, citations and attribution across languages."
     ];
   }
 
@@ -210,17 +208,12 @@ if (P.integrity) {
   P.integrity.evidence = [
     {
       title: "Contested-source policy synthesis and article creation",
-      body: "Researched, structured and created an 18,351-byte English Wikipedia article on Freedom Cities, integrating academic analysis, campaign material, draft legislation, think-tank work and independent reporting while separating proposal details, advocacy and criticism.",
+      body: "Created an 18,351-byte English Wikipedia article on Freedom Cities from academic, campaign, legal, institutional and journalistic sources while separating proposal details, advocacy and criticism.",
       link: C.freedomCities.links[0].href
     },
     {
-      title: "Consumer-genomics privacy and corporate-source reconciliation",
-      body: "Built and maintained a sourced Nebula Genomics privacy record across historical sequencing relationships, changing location statements, archived privacy policies, third-party-data questions, corporate restructuring and litigation coverage.",
-      link: C.nebula.links[0].href
-    },
-    {
-      title: "Archival recovery and content-governance judgment",
-      body: "Recovered missing material for a legally sensitive chronology and separately audited source quality, bibliometrics and policy relevance during a collaborative public content-governance process, without using living-person names as promotional headings.",
+      title: "Privacy, corporate records and archival recovery",
+      body: "Maintained a sourced consumer-genomics privacy record and recovered missing material for a separate legally sensitive chronology, preserving dates and evidence boundaries.",
       link: integrityPage
     },
     {
