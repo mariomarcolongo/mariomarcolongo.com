@@ -1,0 +1,44 @@
+name: Check live Gray Swan release
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  verify-live:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Check out source branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Verify current public release
+        env:
+          LIVE_RELEASE_ID: gray-swan-2026-07-29-${{ github.run_id }}
+          LIVE_VERIFY_ATTEMPTS: '12'
+          LIVE_VERIFY_DELAY_MS: '10000'
+        run: node scripts/verify-live-release.js
+
+      - name: Remove one-time workflow
+        run: rm .github/workflows/check-live-gray-swan.yml
+
+      - name: Commit successful verification cleanup
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Confirm live Gray Swan release'
+          git push origin HEAD:ops/check-live-gray-swan
