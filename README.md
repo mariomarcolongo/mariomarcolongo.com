@@ -33,7 +33,7 @@ Longer-term targets include automated evaluation, AI-safety program or technical
 - **Research, Editorial & Community Operations CV (`/cv-editorial.html`)** — two-page bridge document.
 - **Master CV (`/cv.html`)** — comprehensive evidence archive; not the default application attachment.
 
-All four specialized application CVs are verified as exactly two A4 pages. The master CV is intentionally comprehensive and may be longer.
+The four general application CVs above are verified as exactly two A4 pages. Job-specific application routes may also be generated without adding them to the homepage, navigation or sitemap. The ORCID Member Support Technical Specialist application uses `/cv-orcid.html`, is marked `noindex,nofollow`, and is verified and exported through the same rendering and PDF gates.
 
 ## Focus-group research attribution
 
@@ -52,12 +52,14 @@ The collaboration is retained as named experience and in the relevant CV; it is 
 
 - `data/source.js` — canonical factual dossier and public evidence boundaries.
 - `data/application-profiles.js` — role-specific CV selection and wording.
+- `data/orcid-positioning.mjs` — unlisted ORCID application profile, derived from the research and research-operations layers without changing general public positioning.
 - `data/portfolio-human.js` — homepage hierarchy, evidence cards, explicit link destinations, working-profile language and application routes.
 - `src/pages/` — Astro source pages.
 - `src/styles/portfolio-v6-overrides.css` — readable evidence-card system and corrected contact contrast layered over the established portfolio layout.
 - `scripts/generate-llm-dossiers.js` — canonical machine-readable dossiers.
 - `scripts/postbuild.js` — generated root mirrors and post-build outputs.
 - `scripts/verify-dist.js` — generated-output, metadata and evidence assertions.
+- `scripts/verify-orcid-cv.js` — fail-closed checks for ORCID-specific wording, structure, noindex status and private-contact exclusion.
 - `scripts/verify-rendering.js` — desktop, tablet, mobile, light/dark and no-JavaScript rendering checks.
 - `scripts/verify-live-release.js` — post-deployment checks for the public homepage, evaluation record and current dated evidence route.
 - `scripts/lighthouse-static-server.js` — production-like compressed static server used by the Lighthouse gate.
@@ -67,8 +69,8 @@ Generated outputs include:
 - `llms.txt`
 - `llms-full.txt`
 - `cv-llm.txt`
-- static HTML mirrors for all public routes
-- four specialized two-page PDFs
+- static HTML mirrors for all generated routes
+- four general specialized two-page PDFs plus any job-specific two-page application PDFs
 - a comprehensive master-CV PDF
 - responsive WebP portfolio previews
 - page-specific Open Graph images and favicon assets
@@ -89,7 +91,7 @@ CV_PHONE="+39 ..." npm run pdf
 
 The generator injects the value at render time without writing it into tracked source files or public HTML. `CV_PHONE` takes precedence over the ignored local config.
 
-After building, `npm run preview` serves a loopback-only local preview that injects the phone into the five CV responses without modifying `dist/`. Use `npm run preview:public` when you need to inspect the exact public output without private contact data.
+After building, `npm run preview` serves a loopback-only local preview that injects the phone into the master CV, the four general application CVs and the unlisted ORCID application CV without modifying `dist/`. Use `npm run preview:public` when you need to inspect the exact public output without private contact data.
 
 ## Verification and release gates
 
