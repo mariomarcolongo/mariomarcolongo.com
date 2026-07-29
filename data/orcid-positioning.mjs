@@ -7,7 +7,7 @@ profile.id = "orcid-member-support";
 profile.documentLabel = "ORCID Application CV";
 profile.title = "Scholarly Infrastructure & Technical Support Specialist";
 profile.subtitle = "API troubleshooting · research workflows · metadata quality · stakeholder support";
-profile.summary = "Scholarly-infrastructure and technical-operations specialist with hands-on experience operating open-research information services, troubleshooting API-connected workflows, documenting system behavior and explaining technical concepts to mixed audiences. Founded and maintain Yourself to Science, a public research-participation directory with FAIRsharing and Zenodo records, structured metadata and machine-readable interfaces; also own requirements, functional testing and release operations for cross-platform research tooling and an AWS-based Wikipedia API service. Experienced in independent remote work, evidence-bound communication and public-service-oriented open infrastructure.";
+profile.summary = "Scholarly-infrastructure and technical-operations specialist experienced in operating open-research services, troubleshooting API-connected workflows, documenting system behavior and explaining technical concepts to mixed audiences. Founded and maintain Yourself to Science, with FAIRsharing and Zenodo records, structured metadata and machine-readable interfaces; also own requirements, functional testing and release operations for cross-platform research tooling and an AWS-based Wikipedia API service.";
 profile.fit = [
   "Member integration and API support",
   "Scholarly infrastructure implementation and workflow guidance",
@@ -26,15 +26,14 @@ profile.experience = [
     organization: "Yourself to Science™ · Open research infrastructure",
     period: "Aug 2024 — Present",
     links: [
-      { label: "Website", url: "https://yourselftoscience.org" },
       { label: "Project statistics", url: "https://yourselftoscience.org/stats" },
       { label: "FAIRsharing record", url: "https://doi.org/10.25504/FAIRsharing.d3d487" },
       { label: "Zenodo record", url: "https://doi.org/10.5281/zenodo.15109359" }
     ],
     bullets: [
       "Founded and operate an open-source directory indexing 55 research-participation resources; 37 unique Wikidata items use yourselftoscience.org as a reference URL (P854).",
-      "Defined scholarly workflow and inclusion rules, provenance fields, metadata structure, licensing boundaries, update procedures, public documentation and machine-readable interfaces including JSON-LD, RDF/VoID and OpenAPI.",
-      "Investigate issues, specify expected behavior, inspect code and API outputs, test releases, diagnose deployment problems, coordinate AI-assisted implementation and maintain the live service without claiming unaided software development."
+      "Defined inclusion and update workflows, provenance and metadata fields, licensing boundaries, public documentation and machine-readable interfaces: JSON-LD, RDF/VoID and OpenAPI.",
+      "Investigate issues, specify expected behavior, inspect code and API outputs, test releases and diagnose deployments while coordinating AI-assisted implementation."
     ]
   },
   {
@@ -46,9 +45,9 @@ profile.experience = [
       { label: "Wikipedia API service repository", url: "https://github.com/jnton/english-wikipedia-link-converter-telegram-bot" }
     ],
     bullets: [
-      "Define and verify MDPI Filter behavior across Chrome, Edge, Firefox, Safari and Zotero for scholarly-discovery workflows spanning Google Scholar, PubMed, Europe PMC and article reference lists, using DOI, domain and identifier evidence while avoiding ambiguous matches.",
-      "Operate an AWS-based service that processes Wikipedia links through HTTP webhooks and REST APIs, with Lambda, SQS, DynamoDB, monitoring, retries, dead-letter handling, rate limits and documented recovery behavior.",
-      "Reproduce failures, inspect request and response behavior, maintain issue and release documentation, guide AI-assisted code changes and translate user-facing requirements into testable implementation behavior."
+      "Define and verify MDPI Filter behavior across five released targets for Google Scholar, PubMed, Europe PMC and article references, using DOI, domain and identifier evidence.",
+      "Operate an AWS service processing Wikipedia links through HTTP webhooks and REST APIs, with Lambda, SQS, DynamoDB, monitoring, retries, dead-letter handling and rate limits.",
+      "Reproduce failures, inspect request and response behavior, document issues and releases, guide AI-assisted changes and turn user needs into testable behavior."
     ]
   },
   {
