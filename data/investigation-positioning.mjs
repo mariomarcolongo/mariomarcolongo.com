@@ -90,7 +90,7 @@ if (P.researchQuality) {
     wiki.bullets = [
       "Completed 4,317 auditable contributions across public knowledge and structured-data projects as of July 2026.",
       "Researched, structured and created an 18,351-byte English Wikipedia policy article by reconciling academic analysis, campaign material, draft legislation, think-tank plans and independent reporting; separately synthesized peer-reviewed biomedical literature into a structured syndromic-autism section and sortable comparative table.",
-      "Perform citation checking, cross-language translation and adaptation, archival and provenance review, corporate, policy and public-record reconciliation, taxonomy design and iterative correction across prose, structured data and scientific visualizations."
+      "Perform citation checking, cross-language translation and adaptation, archival and provenance review, corporate and public-record reconciliation, policy-source analysis, taxonomy design and iterative correction across prose, structured data and scientific visualizations."
     ];
   }
   if (P.researchQuality.evidence?.[0]) {
@@ -121,7 +121,7 @@ if (P.editorialCommunity) {
 
   if (P.editorialCommunity.evidence?.[1]) {
     P.editorialCommunity.evidence[1] = {
-      title: "Long-form policy synthesis and public-source investigation",
+      title: "Public-source investigation and archival verification",
       body: "Created an 18,351-byte English Wikipedia article from academic, legal, institutional and journalistic sources; separately built a consumer-genomics privacy record, recovered unavailable documents and audited claim-to-source fit in collaborative public content governance.",
       link: integrityPage
     };
