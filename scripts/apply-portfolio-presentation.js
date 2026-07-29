@@ -3,10 +3,13 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const CURRENT = Object.freeze({
-  graySwanDate: '26 July 2026',
-  arenaRank: 371,
-  screenshot: '/media/work/gray-swan-profile-2026-07-26.svg',
-  evidence: '/evidence/gray-swan-profile-2026-07-26.html',
+  graySwanDate: '29 July 2026',
+  provingGroundRank: 74,
+  percentile: 'Top 6%',
+  totalBreaks: 113,
+  arenaRank: 365,
+  screenshot: '/media/work/gray-swan-profile-2026-07-29-1600.webp',
+  evidence: '/evidence/gray-swan-2026-07-29/',
   entropyWorkUrl: 'https://entropyforlife.it/mario-marcolongo-entropy-for-life/',
   documentedOutputs: '80',
   youtubeContributions: '55',
@@ -48,6 +51,7 @@ const entropyCaseHtml = `<article class="v8-case v8-case-red is-reversed" data-c
 
 function patchIndex(html) {
   html = html.replaceAll('/media/work/model-behavior-profile.jpg', CURRENT.screenshot);
+  html = html.replaceAll('/media/work/gray-swan-profile-2026-07-26.svg', CURRENT.screenshot);
   html = html.replaceAll('25 July 2026', CURRENT.graySwanDate);
   html = html.replaceAll('#370', `#${CURRENT.arenaRank}`);
   html = html.replaceAll('250K+', CURRENT.youtubeSubscribers);
@@ -65,7 +69,7 @@ function patchIndex(html) {
   html = replaceRequired(
     html,
     '<span>Original Gray Swan profile screenshot · dated public platform record</span>',
-    '<span class="v10-gs-caption"><span><strong>#75</strong><small>Proving Ground</small></span><span><strong>Top 6%</strong><small>Global percentile</small></span><span><strong>110</strong><small>Total breaks</small></span><span><strong>#371</strong><small>Arena rank</small></span></span>',
+    `<span class="v10-gs-caption"><span><strong>#${CURRENT.provingGroundRank}</strong><small>Proving Ground</small></span><span><strong>${CURRENT.percentile}</strong><small>Global percentile</small></span><span><strong>${CURRENT.totalBreaks}</strong><small>Total breaks</small></span><span><strong>#${CURRENT.arenaRank}</strong><small>Arena rank</small></span></span>`,
     'Gray Swan evidence caption'
   );
   html = replaceRegexRequired(
@@ -85,9 +89,11 @@ function patchIndex(html) {
 
 function patchSecurity(html) {
   html = html.replaceAll('/media/work/model-behavior-profile.jpg', CURRENT.screenshot);
+  html = html.replaceAll('/media/work/gray-swan-profile-2026-07-26.svg', CURRENT.screenshot);
   html = html.replaceAll('25 July 2026', CURRENT.graySwanDate);
   html = html.replaceAll('#370', `#${CURRENT.arenaRank}`);
   html = html.replaceAll('/evidence/gray-swan-profile-2026-07-25.html', CURRENT.evidence);
+  html = html.replaceAll('/evidence/gray-swan-profile-2026-07-26.html', CURRENT.evidence);
   html = html.replaceAll('width="800" height="350"', 'width="1200" height="680"');
   html = html.replaceAll('width="1200" height="760"', 'width="1200" height="680"');
   html = replaceRequired(

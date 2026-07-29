@@ -27,9 +27,11 @@ const REQUIRED = [
   'styles/portfolio-presentation-v10-mobile-fix.css',
   'styles/portfolio-presentation-v11.css',
   'styles/portfolio-presentation-v12.css',
-  'media/work/gray-swan-profile-2026-07-26.svg',
-  'evidence/gray-swan-profile-2026-07-26.html',
-  'evidence/gray-swan-profile-2026-07-26.json'
+  'media/work/gray-swan-profile-2026-07-29-800.webp',
+  'media/work/gray-swan-profile-2026-07-29-1600.webp',
+  'evidence/gray-swan-arena-mario-marcolongo-2026-07-29-033550-CEST.png',
+  'evidence/gray-swan-profile-2026-07-29.html',
+  'evidence/gray-swan-profile-2026-07-29.json'
 ];
 const ROOT_HTML_MIRRORS = [
   'index.html',
@@ -61,8 +63,8 @@ function normalizeCurrentCvMetrics() {
     const filePath = path.join(DIST, relativePath);
     const current = fs.readFileSync(filePath, 'utf8');
     const normalized = current
-      .replaceAll('25 July 2026', '26 July 2026')
-      .replaceAll('#370', '#371')
+      .replaceAll('25 July 2026', '29 July 2026')
+      .replaceAll('#370', '#365')
       .replaceAll('250K+', '267K')
       .replaceAll('460K+', '480K+')
       .replaceAll('250,000+', '267,000+')
