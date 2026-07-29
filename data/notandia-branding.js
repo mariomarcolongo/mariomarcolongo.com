@@ -26,6 +26,8 @@ function rewriteLegacyLinks(value) {
 }
 
 function applyNotandiaBranding({ D, H, P } = {}) {
+  if (D?.identity) D.identity.notandiaUrl = NOTANDIA.canonicalUrl;
+
   const project = D?.projects?.find((item) => item?.id === "mdpi-filter");
   if (project) {
     project.title = "Notandia — formerly MDPI Filter | Browser Extension & Zotero Plugin";
@@ -34,7 +36,7 @@ function applyNotandiaBranding({ D, H, P } = {}) {
     project.role = "Creator & AI-Assisted Technical Product Operator";
     project.tech = ["Product Requirements", "Functional Testing", "Manifest V3", "Zotero", "NCBI E-utilities", "Crossref", "Browser Extension Operations"];
     project.links = {
-      canonical: NOTANDIA.canonicalPath,
+      canonical: NOTANDIA.canonicalUrl,
       browserRepository: NOTANDIA.browserRepository,
       zoteroRepository: NOTANDIA.zoteroRepository,
       chromeStore: NOTANDIA.chromeStore,
