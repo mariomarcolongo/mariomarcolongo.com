@@ -2,11 +2,14 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { D, H, P } = require('../data/career-positioning.js');
+const { applyNotandiaBranding } = require('../data/notandia-branding.js');
 const {
   generateLlmsTxt,
   generateLlmsFullTxt,
   generateCvLlmTxt
 } = require('./lib/dossier-generators.js');
+
+applyNotandiaBranding({ D, H, P });
 
 const ROOT = path.resolve(__dirname, '..');
 const ENTROPY_WORK_URL = 'https://entropyforlife.it/mario-marcolongo-entropy-for-life/';
@@ -65,7 +68,7 @@ for (const [name, expected] of Object.entries(canonical)) {
 pass('Canonical dossier mirrors checked');
 
 const pages = {
-  index: read('dist/index.html'), integrityPage: read('dist/integrity.html'), cv: read('dist/cv.html'),
+  index: read('dist/index.html'), notandia: read('dist/notandia.html'), integrityPage: read('dist/integrity.html'), cv: read('dist/cv.html'),
   resume: read('dist/cv-resume.html'), research: read('dist/cv-research.html'), editorial: read('dist/cv-editorial.html'),
   integrityCv: read('dist/cv-integrity.html'), security: read('dist/security.html')
 };
@@ -140,7 +143,8 @@ for (const media of [
   '/media/work/mdpi-filter-2-800.webp', '/media/work/wikimedia-clinical-overlap.svg',
   '/media/work/tableau-mortality-800.webp', '/media/work/flourish-oesophageal-cancer.svg'
 ]) assertContains(index, media, 'dist/index.html');
-assertContains(index, 'https://github.com/orgs/mdpi-filter/repositories', 'dist/index.html');
+assertContains(index, 'href="/notandia.html"', 'dist/index.html');
+assertContains(indexText, 'Notandia', 'dist/index.html');
 assertContains(index, 'https://jnton.github.io/protein-by-bodyweight-country/', 'dist/index.html');
 pass('Artifact-led homepage checked');
 
@@ -206,7 +210,8 @@ for (const needle of [
   'Research & Data Quality', 'Editorial & Community', 'Trust & Knowledge Integrity', 'Marta Panzeri',
   '36.5M', '80', 'Scientific Content Quality & Operations Contractor',
   'Consumer-genomics privacy record', 'Investigation work samples',
-  'Official Entropy for Life work record', ENTROPY_WORK_URL
+  'Official Entropy for Life work record', ENTROPY_WORK_URL,
+  'Notandia — formerly MDPI Filter'
 ]) assertContains(masterText, needle, 'dist/cv.html');
 pass('Master CV positioning checked');
 
@@ -214,10 +219,9 @@ const securityText = normalizeHtmlText(pages.security);
 for (const needle of [
   'AI evaluation and model-behavior record.', 'What the record demonstrates', 'Evaluation approach',
   'Limitations and interpretation', 'Proving Ground total breaks', 'historical 24 July 26-wave activity table',
-  '/evidence/gray-swan-2026-07-29/',   '/media/work/gray-swan-profile-2026-07-29-1600.webp', 'Open live Gray Swan profile', '112'
+  '/evidence/gray-swan-2026-07-29/', '/media/work/gray-swan-profile-2026-07-29-1600.webp', 'Open live Gray Swan profile', '112'
 ]) assertContains(securityText, needle, 'dist/security.html');
 for (const needle of [
-  'independently verified policy or alignment boundary failure',
   'tracking boundary resilience across major model architecture updates',
   'ensuring research directories and data pipelines are resilient', 'Model Behavior & Safety Case Study'
 ]) assertNotContains(securityText, needle, 'dist/security.html');
@@ -227,6 +231,7 @@ const allGenerated = normalizeHtmlText(Object.values(pages).join('\n')) + Object
 assertContains(allGenerated, D.identity.jobTitle, 'Generated outputs');
 assertContains(allGenerated, D.identity.secondaryTitle, 'Generated outputs');
 assertContains(allGenerated, ENTROPY_WORK_URL, 'Generated outputs');
+assertContains(allGenerated, 'Notandia', 'Generated outputs');
 for (const needle of [
   'AI Safety Evaluation & Research Verification Specialist', 'AI Evaluation & Research Verification Specialist',
   'Founder & Technical Product Builder', 'Product Owner & Technical Builder', 'Creator & Systems Builder'
