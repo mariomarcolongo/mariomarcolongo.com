@@ -5,20 +5,23 @@ const shared = structuredClone(career.P.shared);
 
 profile.id = "orcid-member-support";
 profile.documentLabel = "ORCID Application CV";
-profile.title = "Scholarly Infrastructure & Technical Support Specialist";
-profile.subtitle = "API troubleshooting · research workflows · metadata quality · stakeholder support";
-profile.summary = "Scholarly-infrastructure and technical-operations specialist experienced in operating open-research services, troubleshooting API-connected workflows, documenting system behavior and explaining technical concepts to mixed audiences. Founded and maintain Yourself to Science, with FAIRsharing and Zenodo records, structured metadata and machine-readable interfaces; also own requirements, functional testing and release operations for cross-platform research tooling and an AWS-based Wikipedia API service.";
+profile.title = "Scholarly Infrastructure & API Operations Specialist";
+profile.subtitle = "Research workflows · API troubleshooting · metadata quality · remote stakeholder communication";
+profile.summary = "Open-research infrastructure and technical-operations specialist with eight years of auditable work across scholarly information, structured metadata, publication discovery and public documentation. Founded and operate Yourself to Science, a directory of 55 research-participation resources with FAIRsharing, Zenodo and machine-readable interfaces. Maintain API-connected research tools and an AWS service through issue reproduction, request/response inspection, release testing and behavior documentation. Explain complex scientific and technical material to non-specialist audiences and facilitate structured remote sessions.";
+profile.strengthsTitle = "Role-relevant evidence";
+profile.evidenceTitle = "Supporting evidence";
+profile.fitTitle = "Role-aligned strengths";
 profile.fit = [
-  "Member integration and API support",
-  "Scholarly infrastructure implementation and workflow guidance",
-  "Technical documentation, training and stakeholder communication",
-  "Research metadata and open-science operations"
+  "Translate stakeholder questions into reproducible technical issues and testable behavior",
+  "Explain APIs and scholarly workflows to technical and non-technical audiences",
+  "Document support cases, release behavior and escalation-ready handoffs",
+  "Identify data-quality, integration and operational-process improvements"
 ];
 profile.strengths = [
-  { value: "55", label: "Research resources indexed", detail: "FAIRsharing · Zenodo · public verification workflows" },
+  { value: "8 years", label: "Scholarly information and metadata work", detail: "Public source, citation and structured-data record" },
+  { value: "55", label: "Research resources indexed", detail: "FAIRsharing · Zenodo · verification workflows" },
   { value: "5", label: "Released research-tool targets", detail: "Chrome · Edge · Firefox · Safari · Zotero" },
-  { value: "80", label: "Published scientific content contributions", detail: "Evidence review · localization · explanatory production" },
-  { value: "4,317", label: "Auditable public contributions", detail: "Claims · citations · metadata · structured knowledge" }
+  { value: "80", label: "Published scientific content contributions", detail: "Technical explanation · evidence review · localization" }
 ];
 profile.experience = [
   {
@@ -31,23 +34,23 @@ profile.experience = [
       { label: "Zenodo record", url: "https://doi.org/10.5281/zenodo.15109359" }
     ],
     bullets: [
-      "Founded and operate an open-source directory indexing 55 research-participation resources; 37 unique Wikidata items use yourselftoscience.org as a reference URL (P854).",
-      "Defined inclusion and update workflows, provenance and metadata fields, licensing boundaries, public documentation and machine-readable interfaces: JSON-LD, RDF/VoID and OpenAPI.",
-      "Investigate issues, specify expected behavior, inspect code and API outputs, test releases and diagnose deployments while coordinating AI-assisted implementation."
+      "Founded and operate an open-source directory of 55 research-participation resources; maintain public FAIRsharing and Zenodo records.",
+      "Define inclusion and update workflows, provenance and metadata fields, licensing boundaries, public documentation and machine-readable interfaces including JSON-LD, RDF/VoID and OpenAPI.",
+      "Investigate issues, specify expected behavior, inspect API and implementation outputs, test releases, diagnose deployments and document decisions for users and maintainers."
     ]
   },
   {
-    role: "Research Tooling & API Operations Owner",
-    organization: "Notandia (formerly MDPI Filter) · English Wikipedia Link Converter · Independent open-source projects",
+    role: "Open-Source Research Tooling & API Operations Owner",
+    organization: "Notandia (formerly MDPI Filter) · English Wikipedia Link Converter",
     period: "2024 — Present",
     links: [
-      { label: "Canonical Notandia project record", url: "/notandia.html" },
+      { label: "Notandia project record", url: "/notandia.html" },
       { label: "Wikipedia API service repository", url: "https://github.com/jnton/english-wikipedia-link-converter-telegram-bot" }
     ],
     bullets: [
-      "Define and verify Notandia behavior across five released browser and Zotero targets for Google Scholar, PubMed, Europe PMC and article references, using DOI, domain and identifier evidence; the product was originally released as MDPI Filter.",
-      "Operate an AWS service processing Wikipedia links through HTTP webhooks and REST APIs, with Lambda, SQS, DynamoDB, monitoring, retries, dead-letter handling and rate limits.",
-      "Reproduce failures, inspect request and response behavior, document issues and releases, guide AI-assisted changes and turn user needs into testable behavior."
+      "Define and verify browser and Zotero workflows for Google Scholar, PubMed, Europe PMC and publisher pages using DOI, PMID/PMCID, domain and identifier evidence.",
+      "Operate an AWS service using HTTP webhooks and REST APIs, Lambda, SQS and DynamoDB; inspect status codes, requests, responses, monitoring, retries, dead-letter handling and rate limits.",
+      "Reproduce failures, write issue and release documentation, prioritize fixes, test changes and coordinate AI-assisted implementation while retaining final verification and release decisions."
     ]
   },
   {
@@ -59,38 +62,38 @@ profile.experience = [
       { label: "Website", url: "https://entropyforlife.it" }
     ],
     bullets: [
-      "Research, verify and localize predominantly English-language scientific evidence across 80 documented published contributions, turning complex material into clear Italian scripts, articles, visual explanations and correction notes.",
-      "Communicate technical and scientific concepts to non-specialist audiences while preserving terminology, source context, uncertainty and disagreements between sources.",
-      "Designed and built entropyforlife.it in WordPress and manage publishing, OVHcloud hosting, DNS, SSL, technical SEO and day-to-day functional troubleshooting in a small remote team."
+      "Research, verify and localize predominantly English-language scientific evidence across 80 documented published contributions, translating complex material into clear Italian scripts, articles, visual explanations and correction notes.",
+      "Explain technical and scientific concepts to non-specialist audiences while preserving terminology, source context, uncertainty and disagreements between sources.",
+      "Manage WordPress publishing, OVHcloud hosting, DNS, SSL, technical SEO and routine functional troubleshooting in a small remote team."
     ]
   }
 ];
 profile.evidence = [
   {
-    title: "Open research identity and metadata record",
-    body: "Public ORCID, FAIRsharing, Zenodo, Wikidata, Wikimedia and ENA records demonstrate practical work with persistent identifiers, provenance, structured metadata, open licensing and scholarly-information quality.",
+    title: "Scholarly identifier and metadata ecosystem",
+    body: "Public ORCID, FAIRsharing, Zenodo, Wikidata, Wikimedia and ENA records demonstrate practical work with persistent identifiers, provenance, open repositories, structured metadata and licensing boundaries.",
     link: "https://orcid.org/0000-0003-2846-7115"
   },
   {
     title: "Remote facilitation and live stakeholder communication",
-    body: "Co-developed and facilitated approximately 4–5 recorded Zoom focus groups with autistic participants, using structured prompts, consent and privacy procedures, accessibility options and two-person handoffs.",
+    body: "Lead or co-facilitated approximately 4–5 recorded Zoom focus groups, typically lasting 1–2 hours, using structured prompts, consent and privacy procedures, captions or written-chat options and two-person handoffs.",
     link: "/research-operations.html"
   },
   {
-    title: "Auditable technical operations architecture",
-    body: "The public Wikipedia-link service documents HTTP webhook handling, external API calls, queue-based processing, deduplication, monitoring, retry and recovery behavior, and security controls.",
+    title: "Auditable API and service-troubleshooting record",
+    body: "The public Wikipedia-link service documents HTTP webhooks, external API calls, queue-based processing, deduplication, monitoring, retries, dead-letter handling, rate limits and security controls.",
     link: "https://github.com/jnton/english-wikipedia-link-converter-telegram-bot"
   }
 ];
 profile.skills = [
-  ["Scholarly infrastructure and workflows", "Research-participation directories, publication discovery, FAIRsharing, Zenodo, Wikidata, Wikimedia, ENA, persistent identifiers, repositories, provenance and open-science documentation"],
-  ["API troubleshooting and technical operations", "HTTP, REST, JSON, webhooks, OpenAPI, request/response inspection, status and error analysis, issue reproduction, functional testing, Git/GitHub, AWS Lambda, SQS and DynamoDB"],
-  ["Metadata and data quality", "Structured metadata, entity reconciliation, taxonomy and validation rules, identifier-based matching, provenance review, licensing boundaries and quality-control workflows"],
-  ["Technical communication and stakeholder support", "Clear explanations for technical and non-technical audiences, email and issue documentation, live video facilitation, troubleshooting notes, training-oriented materials and escalation-ready handoffs"],
-  ["Remote collaboration and languages", "Independent prioritization and follow-through in distributed work; Italian native and English C1 overall, with advanced technical reading and professional writing"]
+  ["Scholarly infrastructure and workflows", "Research-participation directories, publication discovery, repositories, Zotero, FAIRsharing, Zenodo, Wikidata, Wikimedia, ENA, persistent identifiers, provenance and open-science documentation"],
+  ["API standards and troubleshooting", "Hands-on: HTTP, REST, JSON, OpenAPI, webhooks, request/response inspection, status and error analysis, logs, rate limits, retries and functional testing. Basic familiarity: XML and RDF/VoID. Git/GitHub, AWS Lambda, SQS and DynamoDB"],
+  ["Metadata and identifiers", "DOI, PMID, PMCID, ORCID iD, Wikidata identifiers, structured metadata, entity reconciliation, taxonomy, validation rules and data-quality checks"],
+  ["Technical communication and support", "Issue documentation, email-based explanations, live Zoom facilitation, user-facing guidance, training-oriented materials, escalation-ready handoffs and communication with mixed technical and non-technical audiences"],
+  ["Remote operations and languages", "Independent prioritization, asynchronous documentation, remote team coordination, Italian native, English C1 overall and availability during European business hours"]
 ];
 
-shared.location = "Italy · Italian/EU citizen · Available to relocate to Spain before start · European business hours";
+shared.location = "Italy · Italian/EU citizen · Authorized to work in Spain · Available to relocate before start · European business hours";
 shared.education = [
   "GALENOS Crowd Evidence Synthesis Training — Cochrane Crowd & GALENOS, 2026",
   "EF SET English Certificate — 68/100, C1 overall, 2024",
