@@ -74,7 +74,7 @@ const pageDescription = `Specialized two-page application CV for ${profile.title
         </header>
 
         <section class="application-section">
-          <h2 class="application-section-title">Selected evidence</h2>
+          <h2 class="application-section-title">{profile.strengthsTitle || "Selected evidence"}</h2>
           <div class="application-metrics">
             {profile.strengths.map((item) => (
               <div class="application-metric">
@@ -142,7 +142,7 @@ const pageDescription = `Specialized two-page application CV for ${profile.title
         )}
 
         <section class="application-section">
-          <h2 class="application-section-title">Additional evidence</h2>
+          <h2 class="application-section-title">{profile.evidenceTitle || "Additional evidence"}</h2>
           <div class="application-evidence">
             {evidence.map((item) => (
               <article>
@@ -165,7 +165,7 @@ const pageDescription = `Specialized two-page application CV for ${profile.title
 
         <div class="application-two-col">
           <section class="application-section">
-            <h2 class="application-section-title">Best-fit role families</h2>
+            <h2 class="application-section-title">{profile.fitTitle || "Best-fit role families"}</h2>
             <ul class="application-list">
               {profile.fit.map((item) => <li>{item}</li>)}
             </ul>
