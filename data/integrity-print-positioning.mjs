@@ -18,11 +18,11 @@ if (entropy?.bullets?.[2]) {
 }
 
 const multilingualSkill = integrity.skills?.find(
-  ([title]) => title === 'Knowledge integrity and multilingual quality'
+  ([title]) => title === 'Knowledge integrity and multilingual quality' || title === 'Knowledge integrity'
 );
 if (multilingualSkill) {
   multilingualSkill[0] = 'Knowledge integrity';
-  multilingualSkill[1] = 'Cross-language citation, terminology and metadata review';
+  multilingualSkill[1] = 'Claim-to-source auditing, provenance, citation, terminology and metadata review';
 }
 
 export default {
