@@ -108,7 +108,7 @@ if (P.researchQuality) {
 }
 
 if (P.editorialCommunity) {
-  P.editorialCommunity.summary = "Research, editorial and community-operations specialist with paid scientific content and English-to-Italian localization experience inside an established science-communication brand, plus long-running public-source and structured-data work. Work includes primary-literature verification, creation of a sourced 18,351-byte English policy article, archival recovery, claim review, public-health monitoring, sensitive research facilitation and public verification workflows; audience metrics describe the production environment, not a personal audience.";
+  P.editorialCommunity.summary = "Research, editorial and community-operations specialist with paid scientific content and English-to-Italian localization experience inside a 36.5M-view science-communication brand, plus long-running public-source and structured-data work. Work includes primary-literature verification, creation of a sourced 18,351-byte English policy article, archival recovery, claim review, public-health monitoring, sensitive research facilitation and public verification workflows; audience metrics describe the production environment, not a personal audience.";
 
   if (P.editorialCommunity.strengths?.[2]) {
     P.editorialCommunity.strengths[2] = {
@@ -213,7 +213,7 @@ if (P.integrity) {
     },
     {
       title: "Privacy, corporate records and archival recovery",
-      body: "Maintained a sourced consumer-genomics privacy record and recovered missing material for a separate legally sensitive chronology, preserving dates and evidence boundaries.",
+      body: "Consumer-genomics privacy and corporate-source reconciliation across changing records; recovered missing material for a separate legal chronology.",
       link: integrityPage
     },
     {
