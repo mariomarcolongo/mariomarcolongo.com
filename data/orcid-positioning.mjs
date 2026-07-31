@@ -45,7 +45,7 @@ profile.experience = [
     period: "2024 — Present",
     links: [
       { label: "Notandia project record", url: "/notandia.html" },
-      { label: "Wikipedia API service repository", url: "https://github.com/jnton/english-wikipedia-link-converter-telegram-bot" }
+      { label: "Link Converter repository", url: "https://github.com/jnton/english-wikipedia-link-converter-telegram-bot" }
     ],
     bullets: [
       "Define and verify browser and Zotero workflows for Google Scholar, PubMed, Europe PMC and publisher pages using DOI, PMID/PMCID, domain and identifier evidence.",
