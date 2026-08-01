@@ -14,6 +14,11 @@ const DOCUMENTS = [
     label: 'AI Evaluation & Model Behavior CV'
   },
   {
+    route: 'cv-giskard.html',
+    output: 'Mario Marcolongo — Giskard AI Safety & Security Researcher CV.pdf',
+    label: 'Giskard AI Safety & Security Researcher CV'
+  },
+  {
     route: 'cv-research.html',
     output: 'Mario Marcolongo — Scientific AI Quality & Research Data CV.pdf',
     label: 'Scientific AI Quality & Research Data CV'
