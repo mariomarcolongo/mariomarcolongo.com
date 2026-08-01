@@ -21,6 +21,7 @@ const recentEvidence = RECENT_APPLICATION_EVIDENCE[profile.id]?.evidence || {};
 const evidence = profile.evidence.map((item, index) => recentEvidence[index] || item);
 const pageTitle = `Mario Marcolongo — ${profile.title}`;
 const pageDescription = `Specialized two-page application CV for ${profile.title.toLowerCase()} roles.`;
+const buildVersion = shared.buildVersion || "v2026.07.29";
 ---
 
 <Layout title={pageTitle} description={pageDescription} canonical={canonical}>
@@ -199,5 +200,5 @@ const pageDescription = `Specialized two-page application CV for ${profile.title
     })();
   </script>
 
-  <SiteFooter version="v2026.07.21" />
+  <SiteFooter version={buildVersion} />
 </Layout>
