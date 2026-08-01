@@ -1,0 +1,15 @@
+---
+import ApplicationCvAts from "../components/ApplicationCvAts.astro";
+import career from "../../data/giskard-positioning.mjs";
+
+const { P } = career;
+---
+
+<ApplicationCvAts
+  profile={P.giskardAiSafety}
+  shared={P.giskardShared}
+  canonical="https://mariomarcolongo.com/cv-giskard.html"
+  alternateHref="/cv-resume.html"
+  alternateLabel="General AI Evaluation CV"
+  noIndex={true}
+/>

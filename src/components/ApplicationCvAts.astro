@@ -1,0 +1,198 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SiteNav from "./SiteNav.astro";
+import SiteFooter from "./SiteFooter.astro";
+import "../styles/application-cv-ats.css";
+
+export interface Props {
+  profile: any;
+  shared: any;
+  canonical: string;
+  alternateHref: string;
+  alternateLabel: string;
+  noIndex?: boolean;
+}
+
+const { profile, shared, canonical, alternateHref, alternateLabel, noIndex = false } = Astro.props;
+const pageTitle = `Mario Marcolongo — ${profile.title}`;
+const pageDescription = `ATS-oriented two-page application CV for ${profile.title.toLowerCase()} roles.`;
+const firstPageExperience = profile.experience.slice(0, 2);
+const secondPageExperience = profile.experience.slice(2);
+const buildVersion = shared.buildVersion || "v2026.08.01";
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={canonical}>
+  <Fragment slot="head">
+    {noIndex && <meta name="robots" content="noindex,nofollow" />}
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      name: pageTitle,
+      url: canonical,
+      mainEntity: { "@id": "https://mariomarcolongo.com/#person" }
+    })}></script>
+  </Fragment>
+
+  <SiteNav activePage="resume" />
+
+  <div class="ats-shell">
+    <section class="ats-guide print-hide" aria-label="How to use this CV">
+      <div>
+        <strong>{profile.documentLabel}</strong>
+        <span>Single-column, text-first version for automated application systems and human review.</span>
+      </div>
+      <div class="ats-guide-actions">
+        <a class="btn" href={alternateHref}>{alternateLabel}</a>
+        <a class="btn" href="/cv.html">Master CV</a>
+        <button class="btn btn-primary" type="button" onclick="window.print()">Print / Save PDF</button>
+      </div>
+    </section>
+
+    <div class="ats-document" id="cvDocument" data-ats-layout="single-column">
+      <article class="ats-page">
+        <header class="ats-header">
+          <h1>{shared.name}</h1>
+          <p class="ats-title">{profile.title}</p>
+          <p class="ats-subtitle">{profile.subtitle}</p>
+          <p class="ats-location">{shared.location}</p>
+          <p class="ats-contact">
+            <a href={`mailto:${shared.email}`}>{shared.email}</a>
+            <span aria-hidden="true"> | </span>
+            <a id="cvPhoneSlot" class="application-phone" hidden></a>
+            <span id="cvPhoneSeparator" hidden aria-hidden="true"> | </span>
+            <a href={shared.website}>{shared.website.replace("https://", "")}</a>
+            <span aria-hidden="true"> | </span>
+            <a href={shared.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <span aria-hidden="true"> | </span>
+            <a href={shared.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+          </p>
+        </header>
+
+        <section class="ats-section">
+          <h2>Professional Summary</h2>
+          <p>{profile.summary}</p>
+        </section>
+
+        <section class="ats-section">
+          <h2>Core Competencies</h2>
+          <ul class="ats-list ats-competencies">
+            {profile.competencies.map((item) => <li>{item}</li>)}
+          </ul>
+        </section>
+
+        <section class="ats-section">
+          <h2>Relevant Experience</h2>
+          {firstPageExperience.map((item) => (
+            <article class="ats-entry">
+              <h3>{item.role}</h3>
+              <p class="ats-entry-meta"><strong>{item.organization}</strong></p>
+              <p class="ats-entry-period">{item.period}</p>
+              <p class="ats-entry-links">
+                {item.links.map((link, index) => (
+                  <>
+                    {index > 0 && <span aria-hidden="true"> | </span>}
+                    <a href={link.url} target={link.url.startsWith("http") ? "_blank" : undefined} rel={link.url.startsWith("http") ? "noopener noreferrer" : undefined}>{link.label}</a>
+                  </>
+                ))}
+              </p>
+              <ul class="ats-list">
+                {item.bullets.map((bullet) => <li>{bullet}</li>)}
+              </ul>
+            </article>
+          ))}
+        </section>
+
+        <div class="ats-page-footer">
+          <span>{profile.title}</span>
+          <span>Page 1 of 2</span>
+        </div>
+      </article>
+
+      <article class="ats-page">
+        {secondPageExperience.length > 0 && (
+          <section class="ats-section ats-page-start">
+            <h2>Additional Relevant Experience</h2>
+            {secondPageExperience.map((item) => (
+              <article class="ats-entry">
+                <h3>{item.role}</h3>
+                <p class="ats-entry-meta"><strong>{item.organization}</strong></p>
+                <p class="ats-entry-period">{item.period}</p>
+                <p class="ats-entry-links">
+                  {item.links.map((link, index) => (
+                    <>
+                      {index > 0 && <span aria-hidden="true"> | </span>}
+                      <a href={link.url} target={link.url.startsWith("http") ? "_blank" : undefined} rel={link.url.startsWith("http") ? "noopener noreferrer" : undefined}>{link.label}</a>
+                    </>
+                  ))}
+                </p>
+                <ul class="ats-list">
+                  {item.bullets.map((bullet) => <li>{bullet}</li>)}
+                </ul>
+              </article>
+            ))}
+          </section>
+        )}
+
+        <section class="ats-section">
+          <h2>Selected Technical and Open-Source Projects</h2>
+          {profile.projects.map((item) => (
+            <article class="ats-entry ats-project">
+              <h3>{item.name}</h3>
+              <p class="ats-entry-meta"><strong>{item.role}</strong></p>
+              <p class="ats-entry-period">{item.period}</p>
+              <p class="ats-entry-links">
+                {item.links.map((link, index) => (
+                  <>
+                    {index > 0 && <span aria-hidden="true"> | </span>}
+                    <a href={link.url} target="_blank" rel="noopener noreferrer">{link.label}</a>
+                  </>
+                ))}
+              </p>
+              <ul class="ats-list">
+                {item.bullets.map((bullet) => <li>{bullet}</li>)}
+              </ul>
+            </article>
+          ))}
+        </section>
+
+        <section class="ats-section">
+          <h2>Additional Evidence</h2>
+          <ul class="ats-list">
+            {profile.additionalEvidence.map((item) => (
+              <li><strong>{item.title}:</strong> {item.body} <a href={item.link} target="_blank" rel="noopener noreferrer">Evidence</a></li>
+            ))}
+          </ul>
+        </section>
+
+        <section class="ats-section">
+          <h2>Training, Languages and Work Authorization</h2>
+          <ul class="ats-list">
+            {shared.education.map((item) => <li>{item}</li>)}
+            <li>{shared.language}</li>
+            <li>{shared.location}</li>
+          </ul>
+        </section>
+
+        <div class="ats-page-footer">
+          <span>{shared.name} · {shared.email}</span>
+          <span>Page 2 of 2</span>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <script is:inline>
+    (function injectPrivateCvData() {
+      var privateData = typeof window !== "undefined" ? (window.MARIO_PRIVATE || window._privateData || {}) : {};
+      var phoneSlot = document.getElementById("cvPhoneSlot");
+      var separator = document.getElementById("cvPhoneSeparator");
+      if (!phoneSlot || !privateData.phone) return;
+      phoneSlot.textContent = privateData.phone;
+      phoneSlot.setAttribute("href", "tel:" + String(privateData.phone).replace(/\s+/g, ""));
+      phoneSlot.hidden = false;
+      if (separator) separator.hidden = false;
+    })();
+  </script>
+
+  <SiteFooter version={buildVersion} />
+</Layout>

@@ -14,7 +14,7 @@ const CANONICAL_ROUTE = '/notandia.html';
 const LEGACY_ROUTE = '/mdpi-filter.html';
 const CANONICAL_URL = 'https://mariomarcolongo.com/notandia.html';
 const HTML_FILES = [
-  'index.html', 'notandia.html', 'mdpi-filter.html', 'cv.html', 'cv-resume.html', 'cv-research.html',
+  'index.html', 'notandia.html', 'mdpi-filter.html', 'cv.html', 'cv-resume.html', 'cv-giskard.html', 'cv-research.html',
   'cv-editorial.html', 'cv-integrity.html', 'cv-orcid.html', 'integrity.html', 'security.html'
 ];
 
@@ -111,7 +111,7 @@ async function main() {
     'Crossref/Retraction Watch',
     'Retractions, corrections and other formal notices',
     'Precise Zotero reference detection',
-    'does not treat every journal or article as equivalent',
+    'Neither signal is converted into a blanket verdict about every journal or article',
     CURRENT_BROWSER_REPO,
     CURRENT_ZOTERO_REPO,
     'Stable evidence URL'
@@ -139,8 +139,8 @@ async function main() {
   for (const expected of [
     'Notandia',
     'Crossref/Retraction Watch',
-    'publishers whose editorial and peer-review practices have attracted scrutiny',
-    'Publisher-level context does not treat every journal or article as equivalent'
+    'scrutinized publishers',
+    'Publisher context is not an article-quality verdict'
   ]) {
     assertContains(index, expected, 'dist/index.html');
   }
@@ -158,6 +158,17 @@ async function main() {
     assertContains(resume, expected, 'dist/cv-resume.html');
   }
 
+  const giskard = read('cv-giskard.html');
+  for (const expected of [
+    'Notandia (formerly MDPI Filter)',
+    'publishers whose editorial and peer-review practices have attracted scrutiny',
+    'Crossref/Retraction Watch',
+    'false-positive boundaries',
+    'regression checks'
+  ]) {
+    assertContains(giskard, expected, 'dist/cv-giskard.html');
+  }
+
   const orcid = read('cv-orcid.html');
   assertContains(orcid, 'Notandia', 'dist/cv-orcid.html');
   assertContains(orcid, `href="${CANONICAL_ROUTE}"`, 'dist/cv-orcid.html');
@@ -169,9 +180,6 @@ async function main() {
   for (const dossier of ['llms.txt', 'llms-full.txt', 'cv-llm.txt', 'data/source.js']) {
     const value = read(dossier);
     assertContains(value, 'Notandia', `dist/${dossier}`);
-    assertContains(value, 'publishers whose editorial and peer-review practices have attracted scrutiny', `dist/${dossier}`);
-    assertContains(value, 'Crossref/Retraction Watch', `dist/${dossier}`);
-    assertContains(value, 'formal notices such as retractions, corrections and expressions of concern', `dist/${dossier}`);
     assertNotContains(value, RETIRED_URL, `dist/${dossier}`);
     assertNotContains(value, LEGACY_ROUTE, `dist/${dossier}`);
   }

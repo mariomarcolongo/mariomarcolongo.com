@@ -8,6 +8,7 @@ const DIST = path.resolve(process.cwd(), 'dist');
 const CV_PAGES = new Set([
   'cv.html',
   'cv-resume.html',
+  'cv-giskard.html',
   'cv-research.html',
   'cv-editorial.html',
   'cv-integrity.html',
