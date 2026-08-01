@@ -40,11 +40,13 @@ async function generateBmjPdf() {
     }, phone);
     await rewriteLoopbackLinksForPdf(page);
 
-    const fit = await page.evaluate(() => Array.from(document.querySelectorAll('.ats-page')).map((cvPage, index) => {
+    const fit = await page.evaluate(() => Array.from(document.querySelectorAll('.application-page, .ats-page')).map((cvPage, index) => {
       const pageRect = cvPage.getBoundingClientRect();
-      const footer = cvPage.querySelector('.ats-page-footer');
+      const footer = cvPage.querySelector('.application-footer-note, .ats-page-footer');
       const footerRect = footer?.getBoundingClientRect();
-      const flowChildren = Array.from(cvPage.children).filter((child) => !child.classList.contains('ats-page-footer'));
+      const flowChildren = Array.from(cvPage.children).filter((child) =>
+        !child.classList.contains('application-footer-note') && !child.classList.contains('ats-page-footer')
+      );
       const contentBottom = Math.max(...flowChildren.map((child) => child.getBoundingClientRect().bottom), pageRect.top);
       const footerTop = footerRect?.top ?? pageRect.bottom;
       return {
