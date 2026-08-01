@@ -65,8 +65,16 @@ async function verifyRendering() {
         }));
         if (model.h1Count !== 1) throw new Error(`Notandia page ${theme}/${viewport.name} must have one H1`);
         if (model.scrollWidth > model.clientWidth + 1) throw new Error(`Notandia page ${theme}/${viewport.name} overflows horizontally`);
-        if (!model.text.includes('Notandia') || !model.text.includes('Originally released as MDPI Filter')) {
-          throw new Error(`Notandia page ${theme}/${viewport.name} is missing the current-brand continuity statement`);
+        for (const requiredText of [
+          'Notandia',
+          'Originally released as MDPI Filter',
+          'Configurable publisher context',
+          'Crossref/Retraction Watch',
+          'Precision-first Zotero workflow'
+        ]) {
+          if (!model.text.includes(requiredText)) {
+            throw new Error(`Notandia page ${theme}/${viewport.name} is missing current capability text: ${requiredText}`);
+          }
         }
         if (model.retiredClickableLinks !== 0) throw new Error('Notandia page renders the retired organization URL as a clickable link');
         if (!model.currentLinks.includes(CURRENT_BROWSER_REPO) || !model.currentLinks.includes(CURRENT_ZOTERO_REPO)) {
@@ -95,10 +103,19 @@ async function main() {
     '>Notandia</h1>',
     'Originally released as MDPI Filter',
     'For application reviewers',
+    'Configurable publisher context',
+    'Crossref/Retraction Watch',
+    'retractions, corrections, expressions of concern',
+    'Precision-first Zotero workflow',
+    'not a quality judgment',
     CURRENT_BROWSER_REPO,
     CURRENT_ZOTERO_REPO,
     'Stable evidence URL'
   ]) assertContains(canonical, expected, 'dist/notandia.html');
+  for (const prohibited of [
+    'expanding toward explainable publisher context',
+    'future work, not shipped functionality'
+  ]) assertNotContains(canonical, prohibited, 'dist/notandia.html');
 
   const legacy = read('mdpi-filter.html');
   assertContains(legacy, 'noindex,follow', 'dist/mdpi-filter.html');
@@ -111,7 +128,15 @@ async function main() {
 
   const index = read('index.html');
   assertContains(index, `href="${CANONICAL_ROUTE}"`, 'dist/index.html');
-  assertContains(index, 'Notandia', 'dist/index.html');
+  for (const expected of ['Notandia', 'Crossref/Retraction Watch', 'MDPI and Frontiers profiles']) {
+    assertContains(index, expected, 'dist/index.html');
+  }
+  assertNotContains(index, 'future work, not shipped functionality', 'dist/index.html');
+
+  const resume = read('cv-resume.html');
+  for (const expected of ['Notandia (formerly MDPI Filter)', 'Crossref/Retraction Watch', 'formal update relationships']) {
+    assertContains(resume, expected, 'dist/cv-resume.html');
+  }
 
   const orcid = read('cv-orcid.html');
   assertContains(orcid, 'Notandia', 'dist/cv-orcid.html');
@@ -124,12 +149,13 @@ async function main() {
   for (const dossier of ['llms.txt', 'llms-full.txt', 'cv-llm.txt', 'data/source.js']) {
     const value = read(dossier);
     assertContains(value, 'Notandia', `dist/${dossier}`);
+    assertContains(value, 'Crossref/Retraction Watch', `dist/${dossier}`);
     assertNotContains(value, RETIRED_URL, `dist/${dossier}`);
     assertNotContains(value, LEGACY_ROUTE, `dist/${dossier}`);
   }
 
   await verifyRendering();
-  console.log('Canonical Notandia page, legacy redirects, CV links, dossiers and retired-URL boundary verified.');
+  console.log('Canonical Notandia scope, legacy redirects, CV evidence, dossiers and retired-URL boundary verified.');
 }
 
 main().catch((error) => {
