@@ -34,8 +34,8 @@ function applyNotandiaBranding({ D, H, P } = {}) {
   const project = D?.projects?.find((item) => item?.id === "mdpi-filter");
   if (project) {
     project.title = "Notandia — formerly MDPI Filter | Browser Extension & Zotero Plugin";
-    project.oneLiner = "An independent open-source research-integrity tool combining configurable publisher context, formal post-publication signals and precision-first reference detection across browser and Zotero workflows.";
-    project.description = `Created and maintain Notandia, the public continuation and expansion of MDPI Filter. Define product requirements and evidence hierarchies, test cross-browser and Zotero behavior, inspect API and implementation logic, reproduce failures, guide AI-assisted changes, and manage documentation, release verification and deployment. Current browser-source capabilities include user-controlled MDPI and Frontiers profiles, validated custom domain and DOI-prefix profiles, and optional Crossref/Retraction Watch checks for direct and reverse formal update relationships. The Zotero plugin applies precision-first MDPI item and reference detection, including structured PMC evidence and exact citation highlighting. Publisher matches are contextual signals, not quality scores. Existing store identities and compatibility-sensitive identifiers are retained so the same product lineage can continue receiving updates. Current source repositories: ${NOTANDIA.browserRepository} and ${NOTANDIA.zoteroRepository}.`;
+    project.oneLiner = "An independent open-source browser and Zotero tool that lets researchers flag articles from selected publishers and check for formal notices such as retractions, corrections and expressions of concern.";
+    project.description = `Created and maintain Notandia, the public continuation and expansion of MDPI Filter. The browser extension lets users choose which publishers to flag and whether to show context, badges, highlights, dimming or hiding. It also uses Crossref/Retraction Watch data to check for formal notices such as retractions, corrections, expressions of concern, withdrawals, duplicate-publication findings and reinstatements. I define product requirements and evidence hierarchies, test cross-browser and Zotero behavior, inspect API and implementation logic, reproduce failures, guide AI-assisted changes, and manage documentation, release verification and deployment. The Zotero plugin currently focuses on precise MDPI item and reference detection, including structured PubMed Central evidence and exact citation highlighting. Publisher flags are user-selected context, not quality scores. Existing store identities and compatibility-sensitive identifiers are retained so the same product lineage can continue receiving updates. Current source repositories: ${NOTANDIA.browserRepository} and ${NOTANDIA.zoteroRepository}.`;
     project.role = "Creator & AI-Assisted Technical Product Operator";
     project.tech = [
       "Product Requirements",
@@ -58,9 +58,9 @@ function applyNotandiaBranding({ D, H, P } = {}) {
       screenshots: project.links?.screenshots || []
     };
     project.highlights = [
-      "Configurable Publisher Context: Built-in MDPI and Frontiers profiles plus validated custom domain and DOI-prefix profiles",
-      "Explainable Integrity Signals: Optional direct and reverse Crossref/Retraction Watch update checks with provenance and chronology",
-      "Precision-First Zotero Workflows: Exact identifier and structured-reference evidence, ambiguity skipping and verified citation highlighting"
+      "User-Controlled Publisher Flags: Built-in MDPI and Frontiers profiles plus validated custom domain and DOI-prefix profiles",
+      "Formal Article Notices: Optional Crossref/Retraction Watch checks for retractions, corrections and other documented updates",
+      "Precise Zotero Detection: Exact identifier and structured-reference evidence, ambiguity skipping and verified citation highlighting"
     ];
   }
 
@@ -68,13 +68,13 @@ function applyNotandiaBranding({ D, H, P } = {}) {
   if (hero) {
     hero.title = "Notandia";
     hero.href = NOTANDIA.canonicalPath;
-    hero.alt = "Notandia, formerly MDPI Filter, adding publisher and post-publication context to a literature-search workflow";
+    hero.alt = "Notandia, formerly MDPI Filter, flagging a selected publisher and showing post-publication information in a literature-search workflow";
   }
 
   if (H?.mdpiFilter) {
     H.mdpiFilter.label = "Current product";
     H.mdpiFilter.title = "Notandia works across browser and Zotero research workflows.";
-    H.mdpiFilter.body = "Originally released as MDPI Filter, Notandia now combines configurable publisher context with explainable post-publication integrity checks. Current browser-source work includes user-controlled MDPI and Frontiers profiles and optional Crossref/Retraction Watch checks for formal update relationships; the Zotero plugin applies precision-first MDPI item and reference detection.";
+    H.mdpiFilter.body = "Originally released as MDPI Filter, Notandia now lets researchers flag articles from publishers they choose to monitor and check Crossref/Retraction Watch data for formal notices such as retractions, corrections and expressions of concern. The Zotero plugin currently focuses on precise MDPI item and reference detection. Publisher flags are user-selected context, not a quality verdict.";
     H.mdpiFilter.href = NOTANDIA.canonicalPath;
     H.mdpiFilter.linkLabel = "Open the Notandia project record";
     H.mdpiFilter.images = (H.mdpiFilter.images || []).map((image) => ({
