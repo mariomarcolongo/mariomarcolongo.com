@@ -111,7 +111,7 @@ async function main() {
     'Crossref/Retraction Watch',
     'Retractions, corrections and other formal notices',
     'Precise Zotero reference detection',
-    'does not treat every journal or article as equivalent',
+    'Neither signal is converted into a blanket verdict about every journal or article',
     CURRENT_BROWSER_REPO,
     CURRENT_ZOTERO_REPO,
     'Stable evidence URL'
