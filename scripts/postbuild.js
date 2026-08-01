@@ -7,6 +7,8 @@ const ROOT = path.resolve(__dirname, '..');
 const DIST = path.join(ROOT, 'dist');
 const RETIRED_MDPI_ORG_URL = 'https://github.com/orgs/mdpi-filter/repositories';
 const LEGACY_MDPI_HEADLINE = 'MDPI Filter now works in the browser and as a Zotero plugin.';
+const LEGACY_MDPI_BODY = 'The current product identifies MDPI references across literature-search and reference-management workflows while avoiding ambiguous title-based matches. The broader rebrand and expansion to retractions, comments and other research-integrity signals are future work, not shipped functionality.';
+const CURRENT_NOTANDIA_BODY = 'Originally released as MDPI Filter, Notandia now combines configurable publisher context with explainable post-publication integrity checks. Current browser-source work includes user-controlled MDPI and Frontiers profiles and optional Crossref/Retraction Watch checks for formal update relationships; the Zotero plugin applies precision-first MDPI item and reference detection.';
 const LEGACY_MDPI_ROUTE = '/mdpi-filter.html';
 const NOTANDIA_CANONICAL_ROUTE = '/notandia.html';
 const REQUIRED = [
@@ -99,7 +101,7 @@ function normalizeNotandiaBranding() {
         .replaceAll(`href="${RETIRED_MDPI_ORG_URL}"`, `href="${NOTANDIA_CANONICAL_ROUTE}"`)
         .replaceAll(`href="${LEGACY_MDPI_ROUTE}"`, `href="${NOTANDIA_CANONICAL_ROUTE}"`)
         .replaceAll(LEGACY_MDPI_HEADLINE, 'Notandia works across browser and Zotero research workflows.')
-        .replaceAll('The current product identifies MDPI references across literature-search and reference-management workflows while avoiding ambiguous title-based matches. The broader rebrand and expansion to retractions, comments and other research-integrity signals are future work, not shipped functionality.', 'Originally released as MDPI Filter, Notandia preserves the publication-detection functionality and compatible store identities while expanding toward explainable publisher context and post-publication research-integrity signals.')
+        .replaceAll(LEGACY_MDPI_BODY, CURRENT_NOTANDIA_BODY)
         .replaceAll('Open the product repositories', 'Open the Notandia project record')
         .replaceAll('MDPI Filter | Browser Extension', 'Notandia — formerly MDPI Filter | Browser Extension & Zotero Plugin')
         .replaceAll('Research tooling</div><div class="v8-hero-shot-title">MDPI Filter', 'Research tooling</div><div class="v8-hero-shot-title">Notandia');
