@@ -7,7 +7,7 @@ import career from "../../data/research-operations-positioning.mjs";
 
 const { D } = career;
 const pageTitle = "Notandia | Research-integrity tooling | Mario Marcolongo";
-const pageDescription = "Canonical project record for Notandia, formerly MDPI Filter: configurable publisher context, Crossref/Retraction Watch update signals, browser and Zotero workflows, product continuity and Mario Marcolongo's documented contribution.";
+const pageDescription = "Canonical project record for Notandia, formerly MDPI Filter: user-selected publisher flags, Crossref/Retraction Watch notices, browser and Zotero workflows, product continuity and Mario Marcolongo's documented contribution.";
 const canonical = "https://mariomarcolongo.com/notandia.html";
 ---
 
@@ -46,7 +46,7 @@ const canonical = "https://mariomarcolongo.com/notandia.html";
     <section class="transition-hero">
       <div class="transition-kicker">Current product · one continuous project lineage</div>
       <h1>Notandia</h1>
-      <p class="transition-lead"><strong>Originally released as MDPI Filter, Notandia is the current public identity and expanded scope of the same continuing open-source project.</strong> Current source combines configurable publisher context, explainable formal post-publication signals and precision-first reference detection across browser and Zotero workflows.</p>
+      <p class="transition-lead"><strong>Originally released as MDPI Filter, Notandia is the current public identity and expanded scope of the same continuing open-source project.</strong> It helps researchers flag articles from publishers they choose to monitor, check whether a paper has a formal notice such as a retraction or correction, and detect references precisely across browser and Zotero workflows.</p>
       <div class="transition-notice">
         <strong>For application reviewers</strong>
         <p>CVs and applications sent before the rebrand may use the name <em>MDPI Filter</em> or link to its former GitHub organization. Those references document the same project and contribution history presented here. Existing Chrome and Microsoft Edge store identities are retained for update continuity; the current source repositories and this page document the broader Notandia scope.</p>
@@ -62,30 +62,30 @@ const canonical = "https://mariomarcolongo.com/notandia.html";
       <div class="transition-section-head">
         <div>
           <div class="transition-kicker">Current capabilities</div>
-          <h2>Publisher context and formal integrity events remain separate, explainable signals.</h2>
+          <h2>Publisher flags and formal article notices are separate signals.</h2>
         </div>
-        <p>Notandia does not turn a publisher match or the absence of a warning into a quality verdict. It exposes the evidence, source and limits behind each signal so the user can interpret it in context.</p>
+        <p>Users decide which publishers they want Notandia to flag and how those flags should appear. Separately, the product can check external records for formal notices about an individual paper. Neither signal is converted into a blanket quality verdict.</p>
       </div>
       <div class="transition-grid">
         <article>
           <span>01</span>
-          <h3>Configurable publisher context</h3>
-          <p>The browser source includes independently controlled MDPI and Frontiers profiles, per-publisher actions, and validated custom profiles based on publisher domains and DOI prefixes. A match records user-selected context; it is not an objective score of an article or publisher.</p>
+          <h3>Publisher flags chosen by the user</h3>
+          <p>The browser source includes independently controlled MDPI and Frontiers profiles, per-publisher actions, and validated custom profiles based on publisher domains and DOI prefixes. A flag means that the publisher matches the user’s settings; it does not mean that every article from that publisher is unreliable.</p>
         </article>
         <article>
           <span>02</span>
-          <h3>Formal post-publication events</h3>
-          <p>Optional Crossref/Retraction Watch checks inspect both direct work metadata and reverse update relationships. Notandia can surface retractions, corrections, expressions of concern, withdrawals or removals, duplicate-publication findings and reinstatements.</p>
+          <h3>Retractions, corrections and other formal notices</h3>
+          <p>Optional Crossref/Retraction Watch checks inspect both a paper’s own metadata and notices registered separately about it. Notandia can surface retractions, corrections, expressions of concern, withdrawals or removals, duplicate-publication findings and reinstatements.</p>
         </article>
         <article>
           <span>03</span>
-          <h3>Evidence-oriented output</h3>
-          <p>Integrity results expose event type, chronology, provenance and coverage, including deferred, failed or unresolved checks. The product avoids an opaque quality score, and the absence of a detected signal is never presented as proof that a work is reliable.</p>
+          <h3>Clear evidence and uncertainty</h3>
+          <p>Results show the notice type, date sequence, source and coverage, including deferred, failed or unresolved checks. The product avoids an opaque quality score, and the absence of a detected notice is never presented as proof that a paper is reliable.</p>
         </article>
         <article>
           <span>04</span>
-          <h3>Precision-first Zotero workflow</h3>
-          <p>The Zotero plugin currently focuses on MDPI item and reference detection through exact DOI, domain, metadata, PMID/PMCID and structured PMC evidence. It maps verified references to exact citation markers and deliberately skips ambiguous matches rather than guessing.</p>
+          <h3>Precise Zotero reference detection</h3>
+          <p>The Zotero plugin currently focuses on MDPI item and reference detection through exact DOI, domain, metadata, PMID/PMCID and structured PubMed Central evidence. It maps verified references to exact citation markers and skips uncertain matches rather than guessing.</p>
         </article>
       </div>
     </section>
@@ -102,13 +102,13 @@ const canonical = "https://mariomarcolongo.com/notandia.html";
         <article>
           <span>01</span>
           <h3>Browser extension</h3>
-          <p>Canonical shared source for Chrome, Microsoft Edge, Firefox and Safari. It combines configurable publisher profiles with optional Crossref/Retraction Watch integrity checks and produces verified release packages from the same source commit.</p>
+          <p>Canonical shared source for Chrome, Microsoft Edge, Firefox and Safari. It combines user-selected publisher flags with optional Crossref/Retraction Watch checks and produces verified release packages from the same source commit.</p>
           <a href="https://github.com/notandia/browser-extension" target="_blank" rel="noopener noreferrer">notandia/browser-extension ↗</a>
         </article>
         <article>
           <span>02</span>
           <h3>Zotero plugin</h3>
-          <p>Reference-management integration for precision-first MDPI item and reference detection, structured PMC retrieval and exact citation highlighting in Zotero 7–9 workflows.</p>
+          <p>Reference-management integration for precise MDPI item and reference detection, structured PubMed Central retrieval and exact citation highlighting in Zotero 7–9 workflows.</p>
           <a href="https://github.com/notandia/zotero-plugin" target="_blank" rel="noopener noreferrer">notandia/zotero-plugin ↗</a>
         </article>
         <article>
@@ -135,10 +135,10 @@ const canonical = "https://mariomarcolongo.com/notandia.html";
     <section class="transition-section transition-role">
       <div>
         <div class="transition-kicker">My documented contribution</div>
-        <h2>Requirements, evidence hierarchies, behavioral verification and release operations.</h2>
+        <h2>Requirements, evidence rules, behavioral verification and release operations.</h2>
       </div>
       <div>
-        <p>I define product behavior and evidence boundaries; specify publisher-profile, identifier-resolution and formal-update logic; test browser and Zotero workflows; prioritize false-positive avoidance; reproduce failures; inspect API and implementation behavior; guide AI-assisted changes; and maintain documentation, privacy controls, regression checks, deployment and store operations.</p>
+        <p>I define product behavior and evidence boundaries; specify publisher-identification, identifier-resolution and formal-notice logic; test browser and Zotero workflows; prioritize false-positive avoidance; reproduce failures; inspect API and implementation behavior; guide AI-assisted changes; and maintain documentation, privacy controls, regression checks, deployment and store operations.</p>
         <p>The work is presented as code-literate, AI-assisted technical product operations—not as unaided professional software engineering. The contribution is strongest in translating research-integrity requirements into testable product behavior and verifying that behavior across real workflows.</p>
       </div>
     </section>
@@ -150,7 +150,7 @@ const canonical = "https://mariomarcolongo.com/notandia.html";
       </article>
       <article>
         <strong>Interpretation boundary</strong>
-        <p>A publisher-profile match is contextual metadata selected by the user. It is not a quality judgment, and the absence of an integrity event is not a guarantee that a work is correct.</p>
+        <p>A publisher flag is context selected by the user. It is not a quality judgment, and the absence of a formal notice is not a guarantee that a paper is correct.</p>
       </article>
       <article>
         <strong>Independent project</strong>
