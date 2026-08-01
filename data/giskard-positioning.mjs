@@ -49,8 +49,7 @@ profile.experience = [
     bullets: [
       "Created and operate a browser and Zotero research-integrity product that identifies articles from publishers whose editorial and peer-review practices have attracted scrutiny and checks Crossref/Retraction Watch records for retractions, corrections and expressions of concern.",
       "Define evidence rules, identifier-resolution logic, privacy safeguards, ambiguity handling, false-positive boundaries and deterministic behavior; inspect API and implementation outputs, reproduce failures and convert research requirements into testable product behavior.",
-      "Direct and review AI-assisted implementation, maintain documentation and regression checks, and verify releases across Chrome, Edge, Firefox, Safari and Zotero while distinguishing current-source capabilities from published-store versions.",
-      "Use the project as an applied quality system: incomplete external evidence, conflicting states and uncertain matches are handled through provenance, explicit boundaries, conservative defaults and repeatable verification."
+      "Direct and review AI-assisted implementation, maintain documentation and regression checks, and verify releases across Chrome, Edge, Firefox, Safari and Zotero while distinguishing current-source capabilities from published-store versions."
     ]
   },
   {
