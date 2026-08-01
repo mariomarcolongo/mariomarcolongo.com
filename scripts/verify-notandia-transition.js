@@ -68,9 +68,9 @@ async function verifyRendering() {
         for (const requiredText of [
           'Notandia',
           'Originally released as MDPI Filter',
-          'Configurable publisher context',
+          'Publisher flags chosen by the user',
           'Crossref/Retraction Watch',
-          'Precision-first Zotero workflow'
+          'Precise Zotero reference detection'
         ]) {
           if (!model.text.includes(requiredText)) {
             throw new Error(`Notandia page ${theme}/${viewport.name} is missing current capability text: ${requiredText}`);
@@ -103,10 +103,10 @@ async function main() {
     '>Notandia</h1>',
     'Originally released as MDPI Filter',
     'For application reviewers',
-    'Configurable publisher context',
+    'Publisher flags chosen by the user',
     'Crossref/Retraction Watch',
-    'retractions, corrections, expressions of concern',
-    'Precision-first Zotero workflow',
+    'Retractions, corrections and other formal notices',
+    'Precise Zotero reference detection',
     'not a quality judgment',
     CURRENT_BROWSER_REPO,
     CURRENT_ZOTERO_REPO,
@@ -114,7 +114,9 @@ async function main() {
   ]) assertContains(canonical, expected, 'dist/notandia.html');
   for (const prohibited of [
     'expanding toward explainable publisher context',
-    'future work, not shipped functionality'
+    'future work, not shipped functionality',
+    'Configurable publisher context',
+    'formal update relationships'
   ]) assertNotContains(canonical, prohibited, 'dist/notandia.html');
 
   const legacy = read('mdpi-filter.html');
@@ -128,13 +130,18 @@ async function main() {
 
   const index = read('index.html');
   assertContains(index, `href="${CANONICAL_ROUTE}"`, 'dist/index.html');
-  for (const expected of ['Notandia', 'Crossref/Retraction Watch', 'MDPI and Frontiers profiles']) {
+  for (const expected of ['Notandia', 'Crossref/Retraction Watch', 'publishers they choose to monitor', 'not a quality verdict']) {
     assertContains(index, expected, 'dist/index.html');
   }
   assertNotContains(index, 'future work, not shipped functionality', 'dist/index.html');
 
   const resume = read('cv-resume.html');
-  for (const expected of ['Notandia (formerly MDPI Filter)', 'Crossref/Retraction Watch', 'formal update relationships']) {
+  for (const expected of [
+    'Notandia (formerly MDPI Filter)',
+    'Crossref/Retraction Watch',
+    'formal notices such as retractions, corrections and expressions of concern',
+    'false-positive boundaries and release tests'
+  ]) {
     assertContains(resume, expected, 'dist/cv-resume.html');
   }
 
@@ -150,12 +157,13 @@ async function main() {
     const value = read(dossier);
     assertContains(value, 'Notandia', `dist/${dossier}`);
     assertContains(value, 'Crossref/Retraction Watch', `dist/${dossier}`);
+    assertContains(value, 'formal notices such as retractions, corrections and expressions of concern', `dist/${dossier}`);
     assertNotContains(value, RETIRED_URL, `dist/${dossier}`);
     assertNotContains(value, LEGACY_ROUTE, `dist/${dossier}`);
   }
 
   await verifyRendering();
-  console.log('Canonical Notandia scope, legacy redirects, CV evidence, dossiers and retired-URL boundary verified.');
+  console.log('Plain-language Notandia scope, legacy redirects, CV evidence, dossiers and retired-URL boundary verified.');
 }
 
 main().catch((error) => {
