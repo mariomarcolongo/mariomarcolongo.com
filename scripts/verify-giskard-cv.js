@@ -35,16 +35,20 @@ const text = html
 for (const expected of [
   'Giskard Application CV',
   'AI Evaluation & Model Behavior Specialist',
-  'AI-agent red teaming',
+  'Generative AI and LLM evaluation',
+  'Machine Learning / Artificial Intelligence concepts',
+  'Cybersecurity fundamentals: threat modeling, vulnerability assessment',
   '#74 globally',
   '113 platform-recorded total breaks',
-  'attacker goals, trust boundaries, preconditions and potential impact',
+  'attacker goal, system context, trust boundary, required preconditions and plausible impact',
   'Creator & Research-Integrity Product Operator',
   'Crossref/Retraction Watch',
-  'Python and API operations',
+  'English Wikipedia Link Converter',
+  'Operate a deployed Python service on AWS Lambda',
+  'Selected Technical and Open-Source Projects',
+  'Training, Languages and Work Authorization',
   'Open to relocating to Paris',
   'No sponsorship required',
-  'Role-aligned contribution',
   'Page 1 of 2',
   'Page 2 of 2'
 ]) {
@@ -61,9 +65,16 @@ for (const prohibited of [
   'master’s degree',
   "master's degree",
   'worldwide relocation',
-  'International B2B contracting'
+  'International B2B contracting',
+  'Role-aligned contribution',
+  'Passionate about building robust solutions',
+  'Hungry for learning',
+  'Empathetic team player',
+  'Salary:',
+  '60 K€',
+  '0.1 - 0.3%'
 ]) {
-  if (text.toLowerCase().includes(prohibited.toLowerCase())) fail(`Giskard CV contains prohibited overclaim or generic copy: ${prohibited}`);
+  if (text.toLowerCase().includes(prohibited.toLowerCase())) fail(`Giskard CV contains prohibited overclaim, generic copy or cover-letter content: ${prohibited}`);
 }
 
 if (/\+39[\s\d()-]{8,}/.test(html) || /tel:\+39[\d-]{8,}/.test(html)) {
@@ -71,8 +82,40 @@ if (/\+39[\s\d()-]{8,}/.test(html) || /tel:\+39[\d-]{8,}/.test(html)) {
 }
 if (!html.includes('content="noindex,nofollow"')) fail('Giskard CV must remain unlisted with noindex,nofollow.');
 if (!html.includes('id="cvPhoneSlot"')) fail('Giskard CV is missing the private phone-injection slot.');
-if ((html.match(/class="application-page"/g) || []).length !== 2) fail('Giskard CV must render exactly two application pages.');
-if ((html.match(/class="application-footer-note"/g) || []).length !== 2) fail('Giskard CV must render exactly two internal page labels.');
+if (!html.includes('data-ats-layout="single-column"')) fail('Giskard CV is missing the explicit single-column ATS layout marker.');
+if ((html.match(/class="ats-page"/g) || []).length !== 2) fail('Giskard CV must render exactly two ATS pages.');
+if ((html.match(/class="ats-page-footer"/g) || []).length !== 2) fail('Giskard CV must render exactly two internal page labels.');
+
+const documentMatch = html.match(/<div class="ats-document"[\s\S]*?<\/div>\s*<\/div>\s*<script/);
+if (!documentMatch) {
+  fail('Unable to isolate the ATS CV document for structural checks.');
+} else {
+  const documentHtml = documentMatch[0];
+  if (/<table\b/i.test(documentHtml)) fail('ATS CV document must not use layout tables.');
+  for (const prohibitedClass of ['application-metrics', 'application-evidence', 'application-two-col']) {
+    if (documentHtml.includes(prohibitedClass)) fail(`ATS CV document contains multi-column/card structure: ${prohibitedClass}`);
+  }
+}
+
+const headingOrder = [
+  'Professional Summary',
+  'Core Competencies',
+  'Relevant Experience',
+  'Additional Relevant Experience',
+  'Selected Technical and Open-Source Projects',
+  'Additional Evidence',
+  'Training, Languages and Work Authorization'
+];
+let previousIndex = -1;
+for (const heading of headingOrder) {
+  const index = text.indexOf(heading);
+  if (index === -1) {
+    fail(`ATS CV is missing standard heading: ${heading}`);
+  } else if (index <= previousIndex) {
+    fail(`ATS CV heading order is not linear at: ${heading}`);
+  }
+  previousIndex = index;
+}
 
 const jsonLdBlocks = [...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)];
 if (!jsonLdBlocks.length) fail('Giskard CV is missing JSON-LD.');
@@ -84,4 +127,4 @@ for (const [, block] of jsonLdBlocks) {
   }
 }
 
-if (!process.exitCode) pass('Giskard application CV content, evidence boundaries, privacy and two-page structure verified.');
+if (!process.exitCode) pass('Giskard CV ATS structure, role evidence, cover-letter separation, privacy and two-page format verified.');
