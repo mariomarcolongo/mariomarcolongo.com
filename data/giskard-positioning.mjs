@@ -15,9 +15,7 @@ profile.competencies = [
   "Cybersecurity fundamentals: threat modeling, vulnerability assessment, attacker goals, trust boundaries, preconditions and impact",
   "Attack-scenario planning, evidence capture, reproducibility, issue classification, remediation paths and mitigation retesting",
   "Applied research methods, benchmark and regression thinking, failure taxonomies, scientific watch and primary-source review",
-  "Python, Git/GitHub, JSON, REST APIs, AWS Lambda, API Gateway, SQS, DynamoDB and GitHub Actions",
-  "Functional testing, codebase and API behavior inspection, release verification and review of AI-assisted implementation workflows",
-  "Clear written and oral English, technical findings, presentations, explanatory assets and communication for mixed audiences"
+  "Python, Git/GitHub, JSON, REST APIs, AWS Lambda, API Gateway, SQS, DynamoDB, GitHub Actions, functional testing, release verification and review of AI-assisted implementation workflows"
 ];
 
 profile.experience = [
