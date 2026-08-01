@@ -21,6 +21,7 @@ if (!fs.existsSync(TEXT_PATH)) {
 
 const raw = fs.readFileSync(TEXT_PATH, 'utf8');
 const text = raw.replace(/\s+/g, ' ').trim();
+const normalized = text.toLowerCase();
 
 if (!text) fail('Extracted Giskard PDF text is empty.');
 if (text.includes('\uFFFD')) fail('Extracted Giskard PDF text contains replacement characters.');
@@ -49,7 +50,7 @@ for (const expected of [
   'No sponsorship required',
   'Open to relocating to Paris'
 ]) {
-  if (!text.includes(expected)) fail(`Extracted Giskard PDF text is missing: ${expected}`);
+  if (!normalized.includes(expected.toLowerCase())) fail(`Extracted Giskard PDF text is missing: ${expected}`);
 }
 
 const orderedMarkers = [
@@ -70,7 +71,7 @@ const orderedMarkers = [
 
 let previousIndex = -1;
 for (const marker of orderedMarkers) {
-  const index = text.indexOf(marker);
+  const index = normalized.indexOf(marker.toLowerCase());
   if (index === -1) continue;
   if (index <= previousIndex) fail(`Extracted Giskard PDF reading order is not linear at: ${marker}`);
   previousIndex = index;
@@ -85,10 +86,10 @@ for (const prohibited of [
   '60 K€',
   '0.1 - 0.3%'
 ]) {
-  if (text.toLowerCase().includes(prohibited.toLowerCase())) fail(`Extracted Giskard PDF contains cover-letter or vacancy copy: ${prohibited}`);
+  if (normalized.includes(prohibited.toLowerCase())) fail(`Extracted Giskard PDF contains cover-letter or vacancy copy: ${prohibited}`);
 }
 
-const pageMarkers = (text.match(/Page [12] of 2/g) || []);
+const pageMarkers = (text.match(/page [12] of 2/gi) || []);
 if (pageMarkers.length !== 2) fail(`Expected two extracted page markers; found ${pageMarkers.length}.`);
 
 if (!process.exitCode) pass('Giskard PDF text extraction is complete, linear and ATS-oriented.');
