@@ -74,7 +74,7 @@ function applyNotandiaBranding({ D, H, P } = {}) {
   if (H?.mdpiFilter) {
     H.mdpiFilter.label = "Current product";
     H.mdpiFilter.title = "Notandia works across browser and Zotero research workflows.";
-    H.mdpiFilter.body = "Originally released as MDPI Filter, Notandia now helps researchers identify articles from publishers whose editorial and peer-review practices have attracted scrutiny—including MDPI and Frontiers—and uses Crossref/Retraction Watch data to check for formal notices such as retractions, corrections and expressions of concern. The Zotero plugin currently focuses on precise MDPI item and reference detection. Publisher-level context does not treat every journal or article as equivalent.";
+    H.mdpiFilter.body = "Notandia identifies articles from scrutinized publishers—including MDPI and Frontiers—and checks Crossref/Retraction Watch records for retractions, corrections and expressions of concern. Its Zotero plugin provides precise MDPI reference detection. Publisher context is not an article-quality verdict.";
     H.mdpiFilter.href = NOTANDIA.canonicalPath;
     H.mdpiFilter.linkLabel = "Open the Notandia project record";
     H.mdpiFilter.images = (H.mdpiFilter.images || []).map((image) => ({
