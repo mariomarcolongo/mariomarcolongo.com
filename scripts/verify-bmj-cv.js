@@ -36,14 +36,13 @@ for (const expected of [
   'BMJ Insights Manager Application CV',
   'Publishing Data & Insights Specialist',
   'Scholarly metadata',
-  'Crossref and Retraction Watch data',
+  'Crossref and Retraction Watch',
   'Tableau Public',
-  'more than 70 analytical visualizations',
-  'Data quality and process ownership',
+  '70+',
+  'Role-relevant evidence',
+  'Creator & Research-Integrity Product Operator',
   'Founder & Research-Workflow Owner',
   'Scientific Content Quality, Analysis & Publishing Operations Contractor',
-  'Creator & Research-Integrity Product Operator',
-  'Scientific Data Visualizer & Structured-Data Editor',
   '37 unique Wikidata items',
   '80 documented published contributions',
   'retractions, corrections and expressions of concern',
@@ -77,18 +76,18 @@ if (/\+39[\s\d()-]{8,}/.test(html) || /tel:\+39[\d-]{8,}/.test(html)) {
 }
 if (!html.includes('content="noindex,nofollow"')) fail('BMJ CV must remain unlisted with noindex,nofollow.');
 if (!html.includes('id="cvPhoneSlot"')) fail('BMJ CV is missing the private phone-injection slot.');
-if (!html.includes('data-ats-layout="single-column"')) fail('BMJ CV is missing the single-column ATS layout marker.');
-if ((html.match(/class="ats-page"/g) || []).length !== 2) fail('BMJ CV must render exactly two ATS pages.');
-if ((html.match(/class="ats-page-footer"/g) || []).length !== 2) fail('BMJ CV must render exactly two internal page labels.');
+if ((html.match(/class="application-page"/g) || []).length !== 2) fail('BMJ CV must render exactly two standard application pages.');
+if ((html.match(/class="application-footer-note"/g) || []).length !== 2) fail('BMJ CV must render exactly two internal page labels.');
+if (html.includes('data-ats-layout="single-column"')) fail('BMJ CV should use the standard application design, not the separate ATS-only layout.');
 
 const headingOrder = [
-  'Professional Summary',
-  'Core Competencies',
-  'Relevant Experience',
-  'Additional Relevant Experience',
-  'Selected Technical and Open-Source Projects',
-  'Additional Evidence',
-  'Training, Languages and Work Authorization'
+  'Role-relevant evidence',
+  'Relevant experience',
+  'Additional relevant experience',
+  'Publishing data evidence',
+  'Capabilities',
+  'Role-aligned strengths',
+  'Credentials & language'
 ];
 let previousIndex = -1;
 for (const heading of headingOrder) {
@@ -98,4 +97,4 @@ for (const heading of headingOrder) {
   previousIndex = index;
 }
 
-if (!process.exitCode) pass('BMJ CV content, evidence boundaries, privacy, ATS structure and two-page format verified.');
+if (!process.exitCode) pass('BMJ CV content, evidence boundaries, privacy, standard design and two-page format verified.');
