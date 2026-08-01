@@ -7,7 +7,7 @@ import career from "../../data/research-operations-positioning.mjs";
 
 const { D } = career;
 const pageTitle = "Notandia | Research-integrity tooling | Mario Marcolongo";
-const pageDescription = "Canonical project record for Notandia, formerly MDPI Filter: current repositories, product continuity, store identities, technical scope and Mario Marcolongo's documented contribution.";
+const pageDescription = "Canonical project record for Notandia, formerly MDPI Filter: configurable publisher context, Crossref/Retraction Watch update signals, browser and Zotero workflows, product continuity and Mario Marcolongo's documented contribution.";
 const canonical = "https://mariomarcolongo.com/notandia.html";
 ---
 
@@ -19,7 +19,7 @@ const canonical = "https://mariomarcolongo.com/notandia.html";
       name: pageTitle,
       description: pageDescription,
       url: canonical,
-      dateModified: "2026-07-29",
+      dateModified: "2026-08-01",
       mainEntity: {
         "@type": "SoftwareApplication",
         name: "Notandia",
@@ -46,10 +46,10 @@ const canonical = "https://mariomarcolongo.com/notandia.html";
     <section class="transition-hero">
       <div class="transition-kicker">Current product · one continuous project lineage</div>
       <h1>Notandia</h1>
-      <p class="transition-lead"><strong>Originally released as MDPI Filter, Notandia is the current public identity of the same continuing open-source project.</strong> It preserves the original publication and reference-detection functionality and compatibility-sensitive store identities while expanding toward explainable publisher context and post-publication research-integrity signals.</p>
+      <p class="transition-lead"><strong>Originally released as MDPI Filter, Notandia is the current public identity and expanded scope of the same continuing open-source project.</strong> Current source combines configurable publisher context, explainable formal post-publication signals and precision-first reference detection across browser and Zotero workflows.</p>
       <div class="transition-notice">
         <strong>For application reviewers</strong>
-        <p>CVs and applications sent before the rebrand may use the name <em>MDPI Filter</em> or link to its former GitHub organization. Those references document the same project and contribution history presented here. This is the canonical destination for current and future applications.</p>
+        <p>CVs and applications sent before the rebrand may use the name <em>MDPI Filter</em> or link to its former GitHub organization. Those references document the same project and contribution history presented here. Existing Chrome and Microsoft Edge store identities are retained for update continuity; the current source repositories and this page document the broader Notandia scope.</p>
       </div>
       <div class="transition-actions">
         <a class="btn btn-primary" href="https://github.com/notandia/browser-extension" target="_blank" rel="noopener noreferrer">Browser-extension repository ↗</a>
@@ -61,28 +61,60 @@ const canonical = "https://mariomarcolongo.com/notandia.html";
     <section class="transition-section">
       <div class="transition-section-head">
         <div>
+          <div class="transition-kicker">Current capabilities</div>
+          <h2>Publisher context and formal integrity events remain separate, explainable signals.</h2>
+        </div>
+        <p>Notandia does not turn a publisher match or the absence of a warning into a quality verdict. It exposes the evidence, source and limits behind each signal so the user can interpret it in context.</p>
+      </div>
+      <div class="transition-grid">
+        <article>
+          <span>01</span>
+          <h3>Configurable publisher context</h3>
+          <p>The browser source includes independently controlled MDPI and Frontiers profiles, per-publisher actions, and validated custom profiles based on publisher domains and DOI prefixes. A match records user-selected context; it is not an objective score of an article or publisher.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Formal post-publication events</h3>
+          <p>Optional Crossref/Retraction Watch checks inspect both direct work metadata and reverse update relationships. Notandia can surface retractions, corrections, expressions of concern, withdrawals or removals, duplicate-publication findings and reinstatements.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Evidence-oriented output</h3>
+          <p>Integrity results expose event type, chronology, provenance and coverage, including deferred, failed or unresolved checks. The product avoids an opaque quality score, and no detected signal is never presented as proof that a work is reliable.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>Precision-first Zotero workflow</h3>
+          <p>The Zotero plugin currently focuses on MDPI item and reference detection through exact DOI, domain, metadata, PMID/PMCID and structured PMC evidence. It maps verified references to exact citation markers and deliberately skips ambiguous matches rather than guessing.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="transition-section">
+      <div class="transition-section-head">
+        <div>
           <div class="transition-kicker">Current project structure</div>
           <h2>One product, distributed across browser and Zotero workflows.</h2>
         </div>
-        <p>The current repositories separate the shared browser-extension product from the Zotero integration. Historical technical identities remain only where compatibility or update continuity requires them.</p>
+        <p>The repositories separate the shared multi-browser product from the Zotero integration. Their capabilities overlap where the evidence model is portable, but the browser and Zotero surfaces are described separately rather than implying feature parity.</p>
       </div>
       <div class="transition-grid">
         <article>
           <span>01</span>
           <h3>Browser extension</h3>
-          <p>Canonical shared source for Chrome, Microsoft Edge, Firefox and Safari. It preserves MDPI publication detection and adds explainable publisher and post-publication context.</p>
+          <p>Canonical shared source for Chrome, Microsoft Edge, Firefox and Safari. It combines configurable publisher profiles with optional Crossref/Retraction Watch integrity checks and produces independently verified packages from the same source commit.</p>
           <a href="https://github.com/notandia/browser-extension" target="_blank" rel="noopener noreferrer">notandia/browser-extension ↗</a>
         </article>
         <article>
           <span>02</span>
           <h3>Zotero plugin</h3>
-          <p>Reference-management integration for applying identifier-based publisher and integrity checks inside Zotero workflows.</p>
+          <p>Reference-management integration for precision-first MDPI item and reference detection, structured PMC retrieval and exact citation highlighting in Zotero 7–9 workflows.</p>
           <a href="https://github.com/notandia/zotero-plugin" target="_blank" rel="noopener noreferrer">notandia/zotero-plugin ↗</a>
         </article>
         <article>
           <span>03</span>
           <h3>Store continuity</h3>
-          <p>The existing Chrome extension ID and Microsoft Edge Product ID remain the technical identities used for updates during the rebrand.</p>
+          <p>The existing Chrome extension ID and Microsoft Edge Product ID remain the technical identities used for updates during the rebrand. Current source capabilities and published store versions are kept distinct until store updates complete their manual review and release process.</p>
           <div class="transition-links">
             <a href="https://chromewebstore.google.com/detail/mdpi-filter/comknkeimaaadpiopddjoknflbmjeccp" target="_blank" rel="noopener noreferrer">Chrome Web Store ↗</a>
             <a href="https://microsoftedge.microsoft.com/addons/detail/mdpi-filter/efonlkldplkaeekpiajloajjmkappjgi" target="_blank" rel="noopener noreferrer">Microsoft Edge Add-ons ↗</a>
@@ -103,26 +135,30 @@ const canonical = "https://mariomarcolongo.com/notandia.html";
     <section class="transition-section transition-role">
       <div>
         <div class="transition-kicker">My documented contribution</div>
-        <h2>Product requirements, evidence matching, behavioral verification and release operations.</h2>
+        <h2>Requirements, evidence hierarchies, behavioral verification and release operations.</h2>
       </div>
       <div>
-        <p>I defined product behavior and identifier- and domain-based matching requirements, tested browser and Zotero workflows, prioritized false-positive avoidance, reproduced failures, inspected API and implementation behavior, guided AI-assisted changes, and maintained documentation, deployment and store operations.</p>
-        <p>The work is presented as code-literate, AI-assisted technical product operations—not as unaided professional software engineering.</p>
+        <p>I define product behavior and evidence boundaries; specify publisher-profile, identifier-resolution and formal-update logic; test browser and Zotero workflows; prioritize false-positive avoidance; reproduce failures; inspect API and implementation behavior; guide AI-assisted changes; and maintain documentation, privacy controls, regression checks, deployment and store operations.</p>
+        <p>The work is presented as code-literate, AI-assisted technical product operations—not as unaided professional software engineering. The contribution is strongest in translating research-integrity requirements into testable product behavior and verifying that behavior across real workflows.</p>
       </div>
     </section>
 
     <section class="transition-boundaries">
       <article>
         <strong>Continuous project</strong>
-        <p>Notandia and MDPI Filter are two names for one continuing product lineage, not two separate portfolio projects.</p>
+        <p>Notandia and MDPI Filter are two names and scopes within one continuing product lineage, not two separate portfolio projects.</p>
+      </article>
+      <article>
+        <strong>Interpretation boundary</strong>
+        <p>A publisher-profile match is contextual metadata selected by the user. It is not a quality judgment, and the absence of an integrity event is not a guarantee that a work is correct.</p>
       </article>
       <article>
         <strong>Independent project</strong>
-        <p>Notandia is not affiliated with, authorized by or endorsed by MDPI AG, Crossref, Retraction Watch, NCBI, browser vendors or any publisher.</p>
+        <p>Notandia is not affiliated with, authorized by or endorsed by MDPI AG, Frontiers Media, Crossref, Retraction Watch, NCBI, Zotero, browser vendors or any publisher or data provider.</p>
       </article>
       <article>
         <strong>Stable evidence URL</strong>
-        <p>This personal-domain page is the canonical application record even if repositories, organizations or store-facing identifiers change again.</p>
+        <p>This personal-domain page is the canonical application record even if repositories, organizations, store-facing names or compatibility identifiers change again.</p>
       </article>
     </section>
   </main>
@@ -149,7 +185,7 @@ const canonical = "https://mariomarcolongo.com/notandia.html";
   .transition-grid p, .transition-boundaries p { line-height: 1.62; }
   .transition-grid a { font-weight: 700; }
   .transition-role { padding: 34px; border-radius: 18px; background: var(--surface, rgba(127,127,127,.07)); }
-  .transition-boundaries { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .transition-boundaries { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
   .transition-boundaries strong { font-size: 1.05rem; }
   @media (max-width: 760px) {
     .transition-page { padding-top: 42px; }
