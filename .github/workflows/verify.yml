@@ -32,8 +32,10 @@ jobs:
           set -o pipefail
           npm run build 2>&1 | tee audit-output/build.log
 
-      - name: Verify ORCID application CV
-        run: node scripts/verify-orcid-cv.js
+      - name: Verify application-specific CVs
+        run: |
+          node scripts/verify-orcid-cv.js
+          node scripts/verify-giskard-cv.js
 
       - name: Diagnose mobile layout
         run: node scripts/diagnose-mobile-overflow.js | tee audit-output/mobile-overflow.json
@@ -53,7 +55,7 @@ jobs:
       - name: Verify Notandia continuity and legacy-link safety
         run: node scripts/verify-notandia-transition.js
 
-      - name: Generate five specialized application PDFs
+      - name: Generate six specialized application PDFs
         run: npm run pdf:resume
 
       - name: Generate master CV PDF
@@ -83,12 +85,14 @@ jobs:
             integrity.html
             cv.html
             cv-resume.html
+            cv-giskard.html
             cv-research.html
             cv-editorial.html
             cv-integrity.html
             cv-orcid.html
             security.html
             Mario Marcolongo — AI Evaluation & Model Behavior CV.pdf
+            Mario Marcolongo — Giskard AI Safety & Security Researcher CV.pdf
             Mario Marcolongo — Scientific AI Quality & Research Data CV.pdf
             Mario Marcolongo — Research Editorial & Community Operations CV.pdf
             Mario Marcolongo — Trust Safety & Knowledge Integrity CV.pdf
