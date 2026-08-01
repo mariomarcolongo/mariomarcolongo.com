@@ -1,0 +1,15 @@
+---
+import ApplicationCvAts from "../components/ApplicationCvAts.astro";
+import career from "../../data/bmj-positioning.mjs";
+
+const { P } = career;
+---
+
+<ApplicationCvAts
+  profile={P.bmjInsights}
+  shared={P.bmjShared}
+  canonical="https://mariomarcolongo.com/cv-bmj.html"
+  alternateHref="/cv-research.html"
+  alternateLabel="General Research Data CV"
+  noIndex={true}
+/>
