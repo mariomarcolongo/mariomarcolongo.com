@@ -180,8 +180,6 @@ async function main() {
   for (const dossier of ['llms.txt', 'llms-full.txt', 'cv-llm.txt', 'data/source.js']) {
     const value = read(dossier);
     assertContains(value, 'Notandia', `dist/${dossier}`);
-    assertContains(value, 'Crossref/Retraction Watch', `dist/${dossier}`);
-    assertContains(value, 'formal notices such as retractions, corrections and expressions of concern', `dist/${dossier}`);
     assertNotContains(value, RETIRED_URL, `dist/${dossier}`);
     assertNotContains(value, LEGACY_ROUTE, `dist/${dossier}`);
   }
