@@ -7,17 +7,15 @@ profile.id = "bmj-insights-manager";
 profile.documentLabel = "BMJ Insights Manager Application CV";
 profile.title = "Publishing Data & Insights Specialist";
 profile.subtitle = "Scholarly metadata | data quality | evidence analysis | Tableau visualization | publishing operations";
-profile.summary = "Publishing-data, research-operations and evidence-quality specialist with eight years of auditable work across scientific information, structured metadata, publication discovery and public documentation. Design verification and update workflows, reconcile conflicting records, improve data quality and translate complex scientific evidence into documented recommendations for mixed technical and non-technical audiences. Operate research-integrity tooling using DOI, PMID/PMCID, Crossref and Retraction Watch data, and have published more than 70 analytical visualizations through Tableau Public, Flourish and Wikimedia Commons.";
+profile.summary = "Publishing-data and evidence-quality specialist with eight years of auditable work across scientific information, structured metadata and publication discovery. Design verification workflows, reconcile records, translate complex evidence into recommendations, operate tooling using Crossref and Retraction Watch data, and publish analytical visualizations through Tableau Public, Flourish and Wikimedia Commons.";
 
 profile.competencies = [
-  "Scholarly publishing data and identifiers: DOI, PMID, PMCID, Crossref, Retraction Watch, publication discovery, retractions, corrections, expressions of concern, repositories and structured metadata",
-  "Data quality and process ownership: validation rules, provenance, entity reconciliation, taxonomy design, quality assurance, documentation, inclusion criteria and update workflows",
-  "Analysis and insight translation: primary-source research, evidence synthesis, complex-data interpretation, actionable recommendations, source-quality assessment and explicit uncertainty",
-  "Reporting and visualization: Tableau Public, Flourish, SVG vector graphics, open-data reporting and more than 70 published biomedical, epidemiological and public-health visualizations",
-  "Product and operational delivery: requirements definition, prioritization, issue reproduction, cross-system behavior inspection, functional and regression testing, release verification and process improvement",
-  "AI-enabled efficiency: AI-assisted implementation and analysis workflows with personal ownership of requirements, evidence checking, testing, iteration and final release decisions",
-  "Stakeholder communication: concise technical documentation, scientific explanation, editorial feedback and communication across technical, editorial and non-specialist audiences",
-  "Remote project coordination: independent workload planning, small-team production, participant-facing research facilitation, privacy-sensitive procedures and ambiguity management"
+  "Scholarly publishing data and identifiers: DOI, PMID, PMCID, Crossref, Retraction Watch, retractions, corrections, expressions of concern, repositories and structured metadata",
+  "Data quality and process ownership: validation rules, provenance, entity reconciliation, taxonomy, quality assurance, documentation and update workflows",
+  "Analysis and insight translation: primary-source research, evidence synthesis, actionable recommendations, source-quality assessment and explicit uncertainty",
+  "Reporting and visualization: Tableau Public, Flourish, SVG graphics, open-data reporting and more than 70 analytical visualizations",
+  "Operational delivery and AI-enabled efficiency: prioritization, issue reproduction, behavior inspection, functional testing, release verification and personally checked AI-assisted workflows",
+  "Stakeholder communication and coordination: technical documentation, editorial feedback, small-team production, independent workload planning and ambiguity management"
 ];
 
 profile.experience = [
@@ -31,10 +29,9 @@ profile.experience = [
       { label: "Zenodo record", url: "https://doi.org/10.5281/zenodo.15109359" }
     ],
     bullets: [
-      "Founded and operate an open-source directory of 55 research-participation resources spanning clinical studies, biobanks, registries, donation programs and other initiatives; 37 unique Wikidata items used the site as a reference URL as of 27 July 2026.",
-      "Designed the inclusion and update model, verification workflow, provenance and metadata fields, licensing boundaries, public documentation and machine-readable interfaces including JSON-LD, RDF/VoID and OpenAPI.",
-      "Reconcile information across study pages, registries, repositories and public records; document inclusion decisions, investigate inconsistencies, prioritize corrections and test changes before release.",
-      "Translate user and project needs into testable requirements, inspect implementation and API behavior, coordinate AI-assisted iteration and retain final quality-assurance and operational decisions."
+      "Founded and operate an open-source directory of 55 research-participation resources; 37 unique Wikidata items used the site as a reference URL as of 27 July 2026.",
+      "Designed inclusion, verification and update workflows, provenance and metadata fields, licensing boundaries, documentation and machine-readable interfaces including JSON-LD, RDF/VoID and OpenAPI.",
+      "Reconcile information across registries, repositories and public records; investigate inconsistencies, prioritize corrections, translate needs into requirements and test changes before release."
     ]
   },
   {
@@ -46,10 +43,9 @@ profile.experience = [
       { label: "Author page", url: "https://entropyforlife.it/autore/mario-marcolongo/" }
     ],
     bullets: [
-      "Deliver primary-literature research, scientific fact-checking and evidence analysis across 80 documented published contributions: 55 YouTube projects, four co-authored articles and 21 short-form pieces.",
-      "Convert complex and sometimes conflicting evidence into scripts, editorial recommendations, correction notes, data analyses, visualizations, presentation slides and clear explanations for non-specialist audiences.",
-      "Work within a small recurring remote production team, clarify ambiguous requirements, balance immediate publication needs with evidence quality and maintain documented source boundaries.",
-      "Designed and built the project website in WordPress and manage publishing, responsive behavior, hosting, DNS, SSL, technical SEO and routine functional troubleshooting."
+      "Deliver primary-literature research, fact-checking and evidence analysis across 80 documented published contributions: 55 YouTube projects, four co-authored articles and 21 short-form pieces.",
+      "Convert complex and conflicting evidence into editorial recommendations, corrections, scripts, data analyses, visualizations, slides and clear explanations for non-specialist audiences.",
+      "Coordinate within a small remote production team and manage WordPress publishing, hosting, DNS, SSL, technical SEO and functional troubleshooting."
     ]
   },
   {
@@ -62,9 +58,8 @@ profile.experience = [
       { label: "Zotero repository", url: "https://github.com/notandia/zotero-plugin" }
     ],
     bullets: [
-      "Created and operate browser and Zotero research-integrity tooling that identifies publication and publisher context and checks Crossref/Retraction Watch records for retractions, corrections and expressions of concern.",
-      "Define DOI, PMID/PMCID, domain and identifier-resolution rules; document ambiguity and false-positive boundaries; inspect API and implementation outputs and convert evidence requirements into deterministic product behavior.",
-      "Prioritize defects and improvements, reproduce failures, review AI-assisted implementation and verify releases across Chrome, Edge, Firefox, Safari and Zotero."
+      "Operate browser and Zotero tooling that checks Crossref/Retraction Watch records for retractions, corrections and expressions of concern and identifies publication and publisher context.",
+      "Define DOI, PMID/PMCID, domain and identifier-resolution rules, document ambiguity and false-positive boundaries, prioritize defects and verify releases across five targets."
     ]
   },
   {
@@ -77,9 +72,8 @@ profile.experience = [
       { label: "Public contribution record", url: "https://commons.wikimedia.org/wiki/Special:CentralAuth/Digressivo" }
     ],
     bullets: [
-      "Published more than 70 empirical biomedical, epidemiological and public-health visualizations through Tableau Public, Flourish and Wikimedia Commons, turning source datasets into accessible charts, maps and interactive views.",
-      "Completed 4,317 auditable public contributions as of July 2026, including citation checking, structured-metadata improvement, entity reconciliation and correction of conflicting information.",
-      "Created an original vector diagram of overlapping monogenic clinical phenotypes adopted across four Wikipedia language editions and maintain evidence, terminology and attribution across multilingual use."
+      "Published more than 70 biomedical, epidemiological and public-health visualizations, turning source datasets into accessible charts, maps and interactive views.",
+      "Completed 4,317 auditable contributions as of July 2026, including citation checking, metadata improvement, entity reconciliation and correction of conflicting information."
     ]
   }
 ];
@@ -94,8 +88,7 @@ profile.projects = [
       { label: "Flourish", url: "https://app.flourish.studio/@Digressivo" }
     ],
     bullets: [
-      "Build open analytical views from public biomedical and social datasets, selecting appropriate measures, documenting sources and presenting patterns for non-specialist interpretation.",
-      "Use visual structure and explanatory copy to cut through complex evidence while preserving caveats, definitions and uncertainty."
+      "Build sourced analytical views from public datasets and explain patterns while preserving definitions, caveats and uncertainty."
     ]
   },
   {
@@ -108,26 +101,25 @@ profile.projects = [
       { label: "ENA record", url: "https://www.ebi.ac.uk/ena/browser/view/PRJEB109744" }
     ],
     bullets: [
-      "Maintain public records across ORCID, FAIRsharing, Zenodo, Wikidata, Wikimedia and ENA, with practical attention to persistent identifiers, provenance, licensing and discoverability.",
-      "Use publication and repository metadata to connect research outputs, evidence records and machine-readable project documentation."
+      "Maintain public records across ORCID, FAIRsharing, Zenodo, Wikidata, Wikimedia and ENA with attention to identifiers, provenance, licensing and discoverability."
     ]
   }
 ];
 
 profile.additionalEvidence = [
   {
-    title: "Auditable data-quality and evidence record",
-    body: "Eight years of publicly inspectable citation, metadata, visualization and source-reconciliation work across Wikipedia, Wikidata and Wikimedia Commons.",
+    title: "Auditable data-quality record",
+    body: "Eight years of publicly inspectable citation, metadata, visualization and source-reconciliation work.",
     link: "https://commons.wikimedia.org/wiki/Special:CentralAuth/Digressivo"
   },
   {
-    title: "Sensitive stakeholder and research operations",
-    body: "Co-developed and facilitated approximately 4-5 structured remote focus groups, using consent, privacy, accessibility, scripted prompts, timed turn-taking and two-person operational handoffs.",
+    title: "Sensitive research operations",
+    body: "Co-developed and facilitated approximately 4-5 structured remote focus groups using consent, privacy, accessibility and operational handoffs.",
     link: "/research-operations.html"
   },
   {
     title: "Evidence-synthesis training",
-    body: "Completed GALENOS and Cochrane Crowd systematic-review screening training alongside continuing practical primary-literature verification.",
+    body: "GALENOS and Cochrane Crowd systematic-review screening training plus practical primary-literature verification.",
     link: "https://orcid.org/0000-0003-2846-7115"
   }
 ];
