@@ -68,7 +68,7 @@ async function verifyRendering() {
         for (const requiredText of [
           'Notandia',
           'Originally released as MDPI Filter',
-          'Publisher flags chosen by the user',
+          'Publishers selected by the user',
           'Crossref/Retraction Watch',
           'Precise Zotero reference detection'
         ]) {
@@ -103,7 +103,7 @@ async function main() {
     '>Notandia</h1>',
     'Originally released as MDPI Filter',
     'For application reviewers',
-    'Publisher flags chosen by the user',
+    'Publishers selected by the user',
     'Crossref/Retraction Watch',
     'Retractions, corrections and other formal notices',
     'Precise Zotero reference detection',
@@ -116,7 +116,8 @@ async function main() {
     'expanding toward explainable publisher context',
     'future work, not shipped functionality',
     'Configurable publisher context',
-    'formal update relationships'
+    'formal update relationships',
+    'Publisher flags chosen by the user'
   ]) assertNotContains(canonical, prohibited, 'dist/notandia.html');
 
   const legacy = read('mdpi-filter.html');
@@ -163,7 +164,7 @@ async function main() {
   }
 
   await verifyRendering();
-  console.log('Plain-language Notandia scope, legacy redirects, CV evidence, dossiers and retired-URL boundary verified.');
+  console.log('Neutral plain-language Notandia scope, legacy redirects, CV evidence, dossiers and retired-URL boundary verified.');
 }
 
 main().catch((error) => {
