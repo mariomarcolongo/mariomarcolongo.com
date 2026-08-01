@@ -11,10 +11,12 @@ const OUTPUT = path.join(ROOT, 'audit-output');
 const MAX_HOMEPAGE_HEIGHT = 16500;
 const NOTANDIA_HOMEPAGE_TITLE = 'Notandia works across browser and Zotero research workflows.';
 const ROUTES = [
-  'index.html', 'integrity.html', 'cv.html', 'cv-resume.html',
+  'index.html', 'integrity.html', 'cv.html', 'cv-resume.html', 'cv-giskard.html',
   'cv-research.html', 'cv-editorial.html', 'cv-integrity.html', 'cv-orcid.html', 'security.html'
 ];
-const APPLICATION_ROUTES = new Set(['cv-resume.html', 'cv-research.html', 'cv-editorial.html', 'cv-integrity.html', 'cv-orcid.html']);
+const APPLICATION_ROUTES = new Set([
+  'cv-resume.html', 'cv-giskard.html', 'cv-research.html', 'cv-editorial.html', 'cv-integrity.html', 'cv-orcid.html'
+]);
 const VIEWPORTS = [
   { name: 'desktop', width: 1440, height: 1000 },
   { name: 'tablet', width: 768, height: 1024 },
@@ -185,11 +187,11 @@ async function main() {
 
           if (APPLICATION_ROUTES.has(route)) {
             const model = await page.evaluate(() => ({
-              applicationPages: document.querySelectorAll('.application-page').length,
-              internalPageLabels: document.querySelectorAll('.application-footer-note').length,
+              cvPages: document.querySelectorAll('.application-page, .ats-page').length,
+              internalPageLabels: document.querySelectorAll('.application-footer-note, .ats-page-footer').length,
               phoneSlot: Boolean(document.getElementById('cvPhoneSlot'))
             }));
-            if (model.applicationPages !== 2 || model.internalPageLabels !== 2) throw new Error(`${route} must render exactly two visible application pages`);
+            if (model.cvPages !== 2 || model.internalPageLabels !== 2) throw new Error(`${route} must render exactly two visible CV pages`);
             if (!model.phoneSlot) throw new Error(`${route} is missing the private phone injection slot`);
           }
 
