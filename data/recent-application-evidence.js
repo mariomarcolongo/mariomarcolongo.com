@@ -3,7 +3,7 @@ const RECENT_APPLICATION_EVIDENCE = {
     evidence: {
       0: {
         title: "Research-integrity product operations",
-        body: "Defined and verified cross-surface behavior for Notandia (formerly MDPI Filter) across browser targets and Zotero, with exact-evidence matching, false-positive avoidance, privacy controls and reproducible release checks.",
+        body: "Created and operate Notandia (formerly MDPI Filter) across multi-browser and Zotero workflows. Current browser-source work combines configurable MDPI and Frontiers profiles with optional Crossref/Retraction Watch checks for formal update relationships; product testing emphasizes evidence provenance, privacy controls, ambiguity handling, false-positive avoidance and reproducible releases.",
         link: "/notandia.html"
       }
     }
@@ -12,7 +12,7 @@ const RECENT_APPLICATION_EVIDENCE = {
     evidence: {
       1: {
         title: "Cross-surface research-integrity tooling",
-        body: "Notandia, the continuation of MDPI Filter, spans a multi-browser extension and Zotero plugin, using DOI, domain and identifier evidence while deliberately skipping ambiguous matches.",
+        body: "Notandia combines configurable publisher context and explainable Crossref/Retraction Watch signals in the browser with precision-first MDPI item and reference detection in Zotero, using DOI, domain, metadata, PMID/PMCID and structured PMC evidence while deliberately skipping ambiguous matches.",
         link: "/notandia.html"
       },
       2: {
