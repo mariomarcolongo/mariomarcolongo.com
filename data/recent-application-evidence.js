@@ -3,7 +3,7 @@ const RECENT_APPLICATION_EVIDENCE = {
     evidence: {
       0: {
         title: "Research-integrity product operations",
-        body: "Created and operate Notandia (formerly MDPI Filter) across multi-browser and Zotero workflows. Current browser-source work combines configurable MDPI and Frontiers profiles with optional Crossref/Retraction Watch checks for formal update relationships; product testing emphasizes evidence provenance, privacy controls, ambiguity handling, false-positive avoidance and reproducible releases.",
+        body: "Created and operate Notandia (formerly MDPI Filter), a browser and Zotero research-integrity tool that lets researchers flag articles from selected publishers and check Crossref/Retraction Watch data for formal notices such as retractions, corrections and expressions of concern. I define the evidence rules, privacy safeguards, ambiguity handling, false-positive boundaries and release tests.",
         link: "/notandia.html"
       }
     }
@@ -12,7 +12,7 @@ const RECENT_APPLICATION_EVIDENCE = {
     evidence: {
       1: {
         title: "Cross-surface research-integrity tooling",
-        body: "Notandia combines configurable publisher context and explainable Crossref/Retraction Watch signals in the browser with precision-first MDPI item and reference detection in Zotero, using DOI, domain, metadata, PMID/PMCID and structured PMC evidence while deliberately skipping ambiguous matches.",
+        body: "Notandia helps researchers identify articles from selected publishers and check for formal post-publication notices in the browser, while its Zotero plugin currently focuses on precise MDPI item and reference detection. It uses DOI, domain, metadata, PMID/PMCID and structured PubMed Central evidence, and skips uncertain matches rather than guessing.",
         link: "/notandia.html"
       },
       2: {
