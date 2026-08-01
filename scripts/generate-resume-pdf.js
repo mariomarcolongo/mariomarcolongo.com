@@ -66,15 +66,19 @@ async function generateResumePdfs() {
           phoneSlot.textContent = phone;
           phoneSlot.setAttribute('href', `tel:${String(phone).replace(/\s+/g, '')}`);
           phoneSlot.hidden = false;
+          const separator = document.getElementById('cvPhoneSeparator');
+          if (separator) separator.hidden = false;
         }
       }, phone);
       await rewriteLoopbackLinksForPdf(page);
 
-      const fit = await page.evaluate(() => Array.from(document.querySelectorAll('.application-page')).map((applicationPage, index) => {
-        const pageRect = applicationPage.getBoundingClientRect();
-        const footer = applicationPage.querySelector('.application-footer-note');
+      const fit = await page.evaluate(() => Array.from(document.querySelectorAll('.application-page, .ats-page')).map((cvPage, index) => {
+        const pageRect = cvPage.getBoundingClientRect();
+        const footer = cvPage.querySelector('.application-footer-note, .ats-page-footer');
         const footerRect = footer?.getBoundingClientRect();
-        const flowChildren = Array.from(applicationPage.children).filter((child) => !child.classList.contains('application-footer-note'));
+        const flowChildren = Array.from(cvPage.children).filter((child) =>
+          !child.classList.contains('application-footer-note') && !child.classList.contains('ats-page-footer')
+        );
         const contentBottom = Math.max(...flowChildren.map((child) => child.getBoundingClientRect().bottom), pageRect.top);
         const footerTop = footerRect?.top ?? pageRect.bottom;
         const clearance = footerTop - contentBottom;
@@ -89,6 +93,7 @@ async function generateResumePdfs() {
 
       const fitPath = path.join(auditDir, `${document.route.replace(/\.html$/, '')}-print-fit.json`);
       fs.writeFileSync(fitPath, JSON.stringify({ label: document.label, route: document.route, pages: fit }, null, 2));
+      if (fit.length !== 2) failures.push(`${document.label} print-fit inspection found ${fit.length} pages instead of 2.`);
       const collisions = fit.filter((item) => item.clearance < 6);
       console.log(`${document.label} print-fit: ${JSON.stringify(fit)}`);
       if (collisions.length) {
