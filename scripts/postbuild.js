@@ -18,6 +18,7 @@ const REQUIRED = [
   'integrity.html',
   'cv.html',
   'cv-resume.html',
+  'cv-giskard.html',
   'cv-research.html',
   'cv-editorial.html',
   'cv-integrity.html',
@@ -49,13 +50,14 @@ const ROOT_HTML_MIRRORS = [
   'integrity.html',
   'cv.html',
   'cv-resume.html',
+  'cv-giskard.html',
   'cv-research.html',
   'cv-editorial.html',
   'cv-integrity.html',
   'cv-orcid.html',
   'security.html'
 ];
-const CV_FILES = ['cv.html', 'cv-resume.html', 'cv-research.html', 'cv-editorial.html', 'cv-integrity.html', 'cv-orcid.html'];
+const CV_FILES = ['cv.html', 'cv-resume.html', 'cv-giskard.html', 'cv-research.html', 'cv-editorial.html', 'cv-integrity.html', 'cv-orcid.html'];
 const INDEX_PRESENTATION_STYLES = [
   '/styles/portfolio-presentation-v10.css',
   '/styles/portfolio-presentation-v10-mobile-fix.css',
