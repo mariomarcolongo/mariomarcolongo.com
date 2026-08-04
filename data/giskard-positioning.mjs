@@ -45,7 +45,7 @@ profile.experience = [
       { label: "Zotero repository", url: "https://github.com/notandia/zotero-plugin" }
     ],
     bullets: [
-      "Created and operate Notandia, formerly MDPI Filter, an open-source research-integrity project spanning a browser extension and Zotero plugin. Current browser source supports user-selected publisher identification, including MDPI and Frontiers, and optional Crossref/Retraction Watch checks for formal notices; the Zotero plugin currently focuses on precise MDPI item and reference detection.",
+      "Created and operate Notandia, formerly MDPI Filter, an open-source research-integrity project spanning a browser extension and Zotero plugin. Current browser source supports identification of user-selected publishers whose editorial and peer-review practices have attracted scrutiny, including MDPI and Frontiers, plus optional Crossref/Retraction Watch checks for formal notices; the Zotero plugin currently focuses on precise MDPI item and reference detection.",
       "Define evidence rules, identifier-resolution logic, privacy safeguards, ambiguity handling, false-positive boundaries and deterministic behavior; inspect API and implementation outputs, reproduce failures and convert research requirements into testable product behavior.",
       "Direct and review AI-assisted implementation, maintain documentation and regression checks, and verify releases across Chrome, Edge, Firefox, Safari and Zotero while distinguishing current-source capabilities from published-store versions."
     ]
