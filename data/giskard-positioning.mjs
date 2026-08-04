@@ -38,16 +38,16 @@ profile.experience = [
   {
     role: "Creator & Research-Integrity Product Operator",
     organization: "Notandia (formerly MDPI Filter) - Independent open-source project",
-    period: "2024 - Present",
+    period: "May 2025 - Present",
     links: [
       { label: "Project record", url: "/notandia.html" },
       { label: "Browser repository", url: "https://github.com/notandia/browser-extension" },
       { label: "Zotero repository", url: "https://github.com/notandia/zotero-plugin" }
     ],
     bullets: [
-      "Created and operate a browser and Zotero research-integrity product that identifies articles from publishers whose editorial and peer-review practices have attracted scrutiny and checks Crossref/Retraction Watch records for retractions, corrections and expressions of concern.",
-      "Define evidence rules, identifier-resolution logic, privacy safeguards, ambiguity handling, false-positive boundaries and deterministic behavior; inspect API and implementation outputs, reproduce failures and convert research requirements into testable product behavior.",
-      "Direct and review AI-assisted implementation, maintain documentation and regression checks, and verify releases across Chrome, Edge, Firefox, Safari and Zotero while distinguishing current-source capabilities from published-store versions."
+      "Created and operate Notandia, formerly MDPI Filter. Its current browser source identifies user-selected publishers whose editorial and peer-review practices have attracted scrutiny, including MDPI and Frontiers, and checks Crossref/Retraction Watch for formal notices; its Zotero plugin focuses on precise MDPI item and reference detection.",
+      "Define evidence and identifier rules, privacy safeguards, ambiguity handling, false-positive boundaries and deterministic behavior; reproduce failures and turn requirements into testable product behavior.",
+      "Review AI-assisted implementation, maintain documentation and regression checks, and verify releases across Chrome, Edge, Firefox, Safari and Zotero while distinguishing source capabilities from store releases."
     ]
   },
   {
