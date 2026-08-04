@@ -38,14 +38,14 @@ profile.experience = [
   {
     role: "Creator & Research-Integrity Product Operator",
     organization: "Notandia (formerly MDPI Filter) - Independent open-source project",
-    period: "2024 - Present",
+    period: "May 2025 - Present",
     links: [
       { label: "Project record", url: "/notandia.html" },
       { label: "Browser repository", url: "https://github.com/notandia/browser-extension" },
       { label: "Zotero repository", url: "https://github.com/notandia/zotero-plugin" }
     ],
     bullets: [
-      "Created and operate a browser and Zotero research-integrity product that identifies articles from publishers whose editorial and peer-review practices have attracted scrutiny and checks Crossref/Retraction Watch records for retractions, corrections and expressions of concern.",
+      "Created and operate Notandia, formerly MDPI Filter, an open-source research-integrity project spanning a browser extension and Zotero plugin. Current browser source supports user-selected publisher identification, including MDPI and Frontiers, and optional Crossref/Retraction Watch checks for formal notices; the Zotero plugin currently focuses on precise MDPI item and reference detection.",
       "Define evidence rules, identifier-resolution logic, privacy safeguards, ambiguity handling, false-positive boundaries and deterministic behavior; inspect API and implementation outputs, reproduce failures and convert research requirements into testable product behavior.",
       "Direct and review AI-assisted implementation, maintain documentation and regression checks, and verify releases across Chrome, Edge, Firefox, Safari and Zotero while distinguishing current-source capabilities from published-store versions."
     ]
