@@ -19,6 +19,11 @@ const pageDescription = `ATS-oriented two-page application CV for ${profile.titl
 const firstPageExperience = profile.experience.slice(0, 2);
 const secondPageExperience = profile.experience.slice(2);
 const buildVersion = shared.buildVersion || "v2026.08.01";
+const productionOrigin = "https://mariomarcolongo.com";
+
+function publicHref(value: string) {
+  return typeof value === "string" && value.startsWith("/") ? `${productionOrigin}${value}` : value;
+}
 ---
 
 <Layout title={pageTitle} description={pageDescription} canonical={canonical}>
@@ -91,7 +96,7 @@ const buildVersion = shared.buildVersion || "v2026.08.01";
                 {item.links.map((link, index) => (
                   <>
                     {index > 0 && <span aria-hidden="true"> | </span>}
-                    <a href={link.url} target={link.url.startsWith("http") ? "_blank" : undefined} rel={link.url.startsWith("http") ? "noopener noreferrer" : undefined}>{link.label}</a>
+                    <a href={publicHref(link.url)} target="_blank" rel="noopener noreferrer">{link.label}</a>
                   </>
                 ))}
               </p>
@@ -121,7 +126,7 @@ const buildVersion = shared.buildVersion || "v2026.08.01";
                   {item.links.map((link, index) => (
                     <>
                       {index > 0 && <span aria-hidden="true"> | </span>}
-                      <a href={link.url} target={link.url.startsWith("http") ? "_blank" : undefined} rel={link.url.startsWith("http") ? "noopener noreferrer" : undefined}>{link.label}</a>
+                      <a href={publicHref(link.url)} target="_blank" rel="noopener noreferrer">{link.label}</a>
                     </>
                   ))}
                 </p>
@@ -144,7 +149,7 @@ const buildVersion = shared.buildVersion || "v2026.08.01";
                 {item.links.map((link, index) => (
                   <>
                     {index > 0 && <span aria-hidden="true"> | </span>}
-                    <a href={link.url} target="_blank" rel="noopener noreferrer">{link.label}</a>
+                    <a href={publicHref(link.url)} target="_blank" rel="noopener noreferrer">{link.label}</a>
                   </>
                 ))}
               </p>
@@ -159,7 +164,7 @@ const buildVersion = shared.buildVersion || "v2026.08.01";
           <h2>Additional Evidence</h2>
           <ul class="ats-list">
             {profile.additionalEvidence.map((item) => (
-              <li><strong>{item.title}:</strong> {item.body} <a href={item.link} target="_blank" rel="noopener noreferrer">Evidence</a></li>
+              <li><strong>{item.title}:</strong> {item.body} <a href={publicHref(item.link)} target="_blank" rel="noopener noreferrer">Evidence</a></li>
             ))}
           </ul>
         </section>
