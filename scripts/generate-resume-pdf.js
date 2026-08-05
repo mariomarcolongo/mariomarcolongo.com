@@ -5,7 +5,11 @@ const { PDFDocument } = require('pdf-lib');
 const { startStaticServer } = require('./lib/static-server.js');
 const { launchBrowser } = require('./lib/browser.js');
 const { resolveCvPhone } = require('./lib/private-contact.js');
-const { rewriteLoopbackLinksForPdf, assertNoLoopbackPdfLinks } = require('./lib/pdf-links.js');
+const {
+  rewriteLoopbackLinksForPdf,
+  rewriteLoopbackPdfLinks,
+  assertNoLoopbackPdfLinks
+} = require('./lib/pdf-links.js');
 
 const DOCUMENTS = [
   {
@@ -109,8 +113,10 @@ async function generateResumePdfs() {
         path: outPath
       });
 
-      const pdfBytes = fs.readFileSync(outPath);
-      assertNoLoopbackPdfLinks(pdfBytes, document.label);
+      let pdfBytes = fs.readFileSync(outPath);
+      pdfBytes = await rewriteLoopbackPdfLinks(pdfBytes, document.label);
+      fs.writeFileSync(outPath, pdfBytes);
+      await assertNoLoopbackPdfLinks(pdfBytes, document.label);
       const pdf = await PDFDocument.load(pdfBytes);
       const pageCount = pdf.getPageCount();
       console.log(`${document.label} PDF page count: ${pageCount}`);
