@@ -54,6 +54,7 @@ if (!fs.existsSync(file)) {
     'Standards-based evaluation',
     'Italian-market content quality',
     'Sensitive-content and policy awareness',
+    'Evaluation record ↗ | Public profile ↗',
     'Page 1 of 2',
     'Page 2 of 2'
   ]) assertContains(text, needle, 'TikTok search-evaluator CV');
@@ -64,6 +65,7 @@ if (!fs.existsSync(file)) {
     'https://mariomarcolongo.com/integrity.html',
     'https://mariomarcolongo.com/security.html',
     'id="cvPhoneSlot"',
+    'class="application-link-separator"',
     '<meta name="robots" content="noindex,nofollow"'
   ]) assertContains(html, needle, 'TikTok search-evaluator CV HTML');
 
