@@ -101,8 +101,11 @@ function publicHref(value: string) {
                   <h3>{item.role}</h3>
                   <div class="application-organization">{item.organization}</div>
                   <div class="application-links">
-                    {item.links.map((link) => (
-                      <a href={publicHref(link.url)} target={publicHref(link.url).startsWith("http") ? "_blank" : undefined} rel={publicHref(link.url).startsWith("http") ? "noopener noreferrer" : undefined}>{link.label} ↗</a>
+                    {item.links.map((link, index) => (
+                      <span class="application-link-item">
+                        {index > 0 && <span class="application-link-separator" aria-hidden="true">| </span>}
+                        <a href={publicHref(link.url)} target={publicHref(link.url).startsWith("http") ? "_blank" : undefined} rel={publicHref(link.url).startsWith("http") ? "noopener noreferrer" : undefined}>{link.label} ↗</a>
+                      </span>
                     ))}
                   </div>
                 </div>
@@ -132,8 +135,11 @@ function publicHref(value: string) {
                     <h3>{item.role}</h3>
                     <div class="application-organization">{item.organization}</div>
                     <div class="application-links">
-                      {item.links.map((link) => (
-                        <a href={publicHref(link.url)} target={publicHref(link.url).startsWith("http") ? "_blank" : undefined} rel={publicHref(link.url).startsWith("http") ? "noopener noreferrer" : undefined}>{link.label} ↗</a>
+                      {item.links.map((link, index) => (
+                        <span class="application-link-item">
+                          {index > 0 && <span class="application-link-separator" aria-hidden="true">| </span>}
+                          <a href={publicHref(link.url)} target={publicHref(link.url).startsWith("http") ? "_blank" : undefined} rel={publicHref(link.url).startsWith("http") ? "noopener noreferrer" : undefined}>{link.label} ↗</a>
+                        </span>
                       ))}
                     </div>
                   </div>
