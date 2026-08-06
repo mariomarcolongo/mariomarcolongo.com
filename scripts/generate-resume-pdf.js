@@ -18,6 +18,11 @@ const DOCUMENTS = [
     label: 'AI Evaluation & Model Behavior CV'
   },
   {
+    route: 'cv-tiktok-safety-operations.html',
+    output: 'Mario Marcolongo — TikTok Safety Model Data Operations CV.pdf',
+    label: 'TikTok Safety Model Data Operations CV'
+  },
+  {
     route: 'cv-giskard.html',
     output: 'Mario Marcolongo — Giskard AI Safety & Security Researcher CV.pdf',
     label: 'Giskard AI Safety & Security Researcher CV'
