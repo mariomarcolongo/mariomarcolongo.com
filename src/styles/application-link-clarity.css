@@ -1,0 +1,25 @@
+/* Make adjacent evidence links visibly distinct in targeted application CVs without adding ATS text. */
+.application-links a {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.16em;
+}
+
+.application-links a + a {
+  padding-left: 12px;
+  border-left: 1px solid var(--career-line-strong);
+}
+
+@media print {
+  .application-links {
+    column-gap: 8px !important;
+  }
+
+  .application-links a + a {
+    padding-left: 8px;
+    border-left-width: 0.75pt;
+  }
+}
