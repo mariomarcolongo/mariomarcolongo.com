@@ -1,0 +1,15 @@
+---
+import ApplicationCv from "../components/ApplicationCv.astro";
+import career from "../../data/tiktok-safety-operations-positioning.mjs";
+
+const { P } = career;
+---
+
+<ApplicationCv
+  profile={P.tiktokSafetyOperations}
+  shared={P.shared}
+  canonical="https://mariomarcolongo.com/cv-tiktok-safety-operations.html"
+  alternateHref="/cv-resume.html"
+  alternateLabel="AI Evaluation CV"
+  noIndex={true}
+/>
