@@ -45,6 +45,10 @@ entropy.bullets = [
   "Translate predominantly English-language scientific evidence into clear Italian scripts, analyses and short-form content while preserving terminology, meaning and source context; also support website publishing and technical operations."
 ];
 
+modelBehavior.links = [
+  { label: "Evaluation record", url: "/security.html" },
+  { label: "Public profile", url: "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf" }
+];
 modelBehavior.bullets = [
   "Conduct self-directed evaluation of model outputs across chat, image, agentic tool-use and indirect prompt-injection scenarios, including ambiguous cases, policy boundaries and sensitive content.",
   "Reached #74 on the Gray Swan Proving Ground leaderboard (top 6%) with 113 platform-displayed breaks on 29 July 2026; the same profile displayed 255 submissions, 28 global unique breaks and 1,120 points.",
