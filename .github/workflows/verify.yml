@@ -36,6 +36,7 @@ jobs:
         run: |
           node scripts/verify-orcid-cv.js
           node scripts/verify-giskard-cv.js
+          node scripts/verify-tiktok-search-qa-cv.js
 
       - name: Diagnose mobile layout
         run: node scripts/diagnose-mobile-overflow.js | tee audit-output/mobile-overflow.json
@@ -58,7 +59,10 @@ jobs:
       - name: Generate six specialized application PDFs
         run: npm run pdf:resume
 
-      - name: Verify Giskard PDF ATS text extraction
+      - name: Generate TikTok Search Operations QA PDF
+        run: node scripts/generate-tiktok-search-qa-pdf.js
+
+      - name: Verify PDF ATS text extraction
         shell: bash
         run: |
           if ! command -v pdftotext >/dev/null 2>&1; then
@@ -67,6 +71,8 @@ jobs:
           fi
           pdftotext -layout "Mario Marcolongo — Giskard AI Safety & Security Researcher CV.pdf" audit-output/giskard-cv-extracted.txt
           node scripts/verify-giskard-pdf-text.js
+          pdftotext -layout "Mario Marcolongo — TikTok Search Operations QA Italian CV.pdf" audit-output/tiktok-search-qa-extracted.txt
+          node scripts/verify-tiktok-search-qa-pdf-text.js
 
       - name: Generate master CV PDF
         run: npm run pdf:cv
@@ -99,6 +105,7 @@ jobs:
             cv-editorial.html
             cv-integrity.html
             cv-orcid.html
+            cv-tiktok-search-qa.html
             security.html
             Mario Marcolongo — AI Evaluation & Model Behavior CV.pdf
             Mario Marcolongo — Giskard AI Safety & Security Researcher CV.pdf
@@ -106,6 +113,7 @@ jobs:
             Mario Marcolongo — Research Editorial & Community Operations CV.pdf
             Mario Marcolongo — Trust Safety & Knowledge Integrity CV.pdf
             Mario Marcolongo — ORCID Member Support Technical Specialist CV.pdf
+            Mario Marcolongo — TikTok Search Operations QA Italian CV.pdf
             Mario Marcolongo — Curriculum Vitae.pdf
           if-no-files-found: ignore
           retention-days: 7
