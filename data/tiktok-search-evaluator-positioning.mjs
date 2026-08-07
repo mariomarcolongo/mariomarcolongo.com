@@ -1,6 +1,8 @@
 import career from "./investigation-positioning.mjs";
+import notandiaModule from "./notandia-branding.js";
 
 const { P } = career;
+const { NOTANDIA } = notandiaModule;
 const ENTROPY_WORK_URL = "https://entropyforlife.it/mario-marcolongo-entropy-for-life/";
 const CENTRAL_AUTH_URL = "https://commons.wikimedia.org/wiki/Special:CentralAuth/Digressivo";
 
@@ -70,25 +72,35 @@ modelBehavior.bullets = [
   "Compare outcomes across varied interaction paths, preserve reproduction notes, classify bad cases and document feedback without overstating what a single result or platform metric establishes."
 ];
 
-researchWorkflow.bullets = [
-  "Founded and operate an open-source research-participation directory indexing 55 verified resources across studies, registries, biobanks and data-donation initiatives.",
-  "Defined inclusion and exclusion criteria, classification fields, provenance requirements, validation rules and update workflows; review candidate records against documented standards before publication.",
-  "Own requirements, issue tracking, functional testing, release verification, public documentation, deployment and maintenance across an AI-assisted technical workflow."
-];
+const notandia = {
+  role: "Creator & AI-Assisted Technical Product Operator",
+  organization: "Notandia (formerly MDPI Filter) · Browser extension & Zotero plugin",
+  period: "May 2025 — Present",
+  links: [
+    { label: "Product record", url: NOTANDIA.canonicalUrl },
+    { label: "Browser repository", url: NOTANDIA.browserRepository },
+    { label: "Zotero repository", url: NOTANDIA.zoteroRepository }
+  ],
+  bullets: [
+    "Created and maintain an independent open-source browser extension and Zotero plugin for scholarly-reference analysis across search and citation workflows.",
+    "The browser product identifies articles from publishers users choose to monitor, supports contextual display choices, and can check Crossref/Retraction Watch data for formal notices such as retractions, corrections and expressions of concern.",
+    "Define product requirements and evidence hierarchies; test cross-browser and Zotero behavior using exact identifier and structured-reference evidence, ambiguity skipping, false-positive boundaries, privacy controls and reproducible release checks."
+  ]
+};
 
 P.tiktokSearchEvaluator = {
   id: "tiktok-search-evaluator-italian",
   documentLabel: "Targeted Application CV",
   title: "Italian Search Quality & Content Evaluation Specialist",
   subtitle: "Search relevance · intent and source analysis · standards-based evaluation · Italian-market expertise",
-  summary: "Native Italian and English-C1 evaluation, content-quality and research-operations specialist with more than three years of paid work inside a recurring digital-media production team and eight years of auditable source, relevance and structured-data verification. Entropy for Life work covers 80 documented published contributions—55 YouTube videos, 4 co-authored articles and 21 short-form pieces—requiring primary-source search, claim-to-source assessment, Italian localization and clear correction feedback. Additional work includes classification and provenance review across 4,317 Wikimedia contributions, evaluation of ambiguous AI outputs across 255 Gray Swan submissions, and ownership of documented inclusion and validation workflows for an open research directory. Italian/EU citizen open to relocating to Bucharest. This record is search-evaluation-adjacent and does not claim prior formal employment as a production search evaluator.",
+  summary: "Native Italian and English-C1 evaluation, content-quality and research-operations specialist with more than three years of paid work inside a recurring digital-media production team and eight years of auditable source, relevance and structured-data verification. Entropy for Life work covers 80 documented published contributions—55 YouTube videos, 4 co-authored articles and 21 short-form pieces—requiring primary-source search, claim-to-source assessment, Italian localization and clear correction feedback. Additional work includes classification and provenance review across 4,317 Wikimedia contributions, evaluation of ambiguous AI outputs across 255 Gray Swan submissions, and ownership of Notandia, a browser and Zotero research-integrity tool built around evidence hierarchies, exact matching, ambiguity handling and false-positive controls. Italian/EU citizen open to relocating to Bucharest. This record is search-evaluation-adjacent and does not claim prior formal employment as a production search evaluator.",
   strengths: [
     { value: "3+ years", label: "Paid content-quality operations", detail: "Entropy for Life · Jun 2023 — Present" },
     { value: "80", label: "Published content contributions", detail: "55 YouTube videos · 4 articles · 21 short-form pieces" },
     { value: "4,317", label: "Auditable source and data contributions", detail: "Claims · citations · metadata · multilingual content" },
     { value: "255", label: "Documented evaluation submissions", detail: "Chat · image · agent · indirect scenarios" }
   ],
-  experience: [entropy, wikimedia, modelBehavior, researchWorkflow],
+  experience: [entropy, wikimedia, modelBehavior, notandia],
   evidence: [
     {
       title: "Italian-language and short-form platform context",
@@ -96,9 +108,9 @@ P.tiktokSearchEvaluator = {
       link: ENTROPY_WORK_URL
     },
     {
-      title: "Search, relevance and source-quality judgment",
-      body: "Eight years of inspectable work evaluating whether claims are supported by candidate sources, reconciling conflicting records, recovering archives, checking provenance and organizing structured classifications.",
-      link: "/integrity.html"
+      title: "Documented standards and validation workflow",
+      body: "Yourself to Science applies explicit inclusion and exclusion criteria, classification fields, provenance requirements, validation rules and update workflows to 55 verified research-participation resources before publication.",
+      link: "https://yourselftoscience.org/stats"
     },
     {
       title: "Sensitive and ambiguous evaluation settings",
@@ -107,7 +119,7 @@ P.tiktokSearchEvaluator = {
     }
   ],
   skills: [
-    ["Search and relevance analysis", "User-intent interpretation, query and claim decomposition, candidate-source comparison, relevance and quality judgment, ideal-answer reasoning and explicit evidence boundaries"],
+    ["Search and relevance analysis", "User-intent interpretation, query and claim decomposition, candidate-source comparison, publisher and identifier matching, relevance and quality judgment, ambiguity skipping, false-positive boundaries and explicit evidence limits"],
     ["Standards-based evaluation", "Applying documented criteria, comparative assessment, quality rating, bad-case identification, taxonomy development, reproducibility notes and actionable feedback"],
     ["Italian-market content quality", "Native Italian judgment, English-C1 research and communication, English-to-Italian localization, terminology consistency, cultural context and social-media content familiarity"],
     ["Data quality and classification", "Structured metadata, inclusion and exclusion rules, entity reconciliation, provenance, validation rules, documentation and update workflows"],
