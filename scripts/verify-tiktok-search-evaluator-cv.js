@@ -46,6 +46,14 @@ if (!fs.existsSync(file)) {
     '21 short-form pieces',
     '4,317 auditable contributions',
     '255 submissions',
+    'Notandia (formerly MDPI Filter)',
+    'Creator & AI-Assisted Technical Product Operator',
+    'May 2025 — Present',
+    'Crossref/Retraction Watch',
+    'ambiguity skipping',
+    'false-positive boundaries',
+    'Documented standards and validation workflow',
+    '55 verified research-participation resources',
     'Italian/EU citizen',
     'Open to relocating to Bucharest',
     'degree not completed',
@@ -55,6 +63,7 @@ if (!fs.existsSync(file)) {
     'Italian-market content quality',
     'Sensitive-content and policy awareness',
     'Evaluation record ↗ | Public profile ↗',
+    'Product record ↗ | Browser repository ↗ | Zotero repository ↗',
     'Page 1 of 2',
     'Page 2 of 2'
   ]) assertContains(text, needle, 'TikTok search-evaluator CV');
@@ -64,6 +73,10 @@ if (!fs.existsSync(file)) {
     'https://commons.wikimedia.org/wiki/Special:CentralAuth/Digressivo',
     'https://mariomarcolongo.com/integrity.html',
     'https://mariomarcolongo.com/security.html',
+    'https://mariomarcolongo.com/notandia.html',
+    'https://github.com/notandia/browser-extension',
+    'https://github.com/notandia/zotero-plugin',
+    'https://yourselftoscience.org/stats',
     'id="cvPhoneSlot"',
     'class="application-link-separator"',
     '<meta name="robots" content="noindex,nofollow"'
@@ -79,7 +92,8 @@ if (!fs.existsSync(file)) {
     'Search Evaluation Team Lead',
     'managed a QA team',
     'hiring authority',
-    'production labeling leadership'
+    'production labeling leadership',
+    'independent software developer'
   ]) assertNotContains(text, prohibited, 'TikTok search-evaluator CV');
 
   const pageCount = (html.match(/class="application-page"/g) || []).length;
