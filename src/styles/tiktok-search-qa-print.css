@@ -1,0 +1,142 @@
+/* Additional print compaction for the content-dense TikTok Search Operations QA application CV. */
+@media print {
+  .application-page {
+    padding: 7mm 12mm 12mm !important;
+  }
+
+  .application-header {
+    padding-bottom: 10px !important;
+  }
+
+  .application-name {
+    font-size: 2.25rem !important;
+  }
+
+  .application-title {
+    margin-top: 5px !important;
+    font-size: 0.92rem !important;
+  }
+
+  .application-subtitle {
+    margin-top: 3px !important;
+    font-size: 0.74rem !important;
+    line-height: 1.28 !important;
+  }
+
+  .application-contact {
+    font-size: 0.63rem !important;
+    gap: 0 !important;
+  }
+
+  .application-summary {
+    margin-top: 10px !important;
+    font-size: 0.74rem !important;
+    line-height: 1.32 !important;
+  }
+
+  .application-section {
+    margin-top: 12px !important;
+  }
+
+  .application-section-title {
+    margin-bottom: 6px !important;
+    padding-bottom: 3px !important;
+    font-size: 0.64rem !important;
+  }
+
+  .application-metrics {
+    gap: 5px !important;
+  }
+
+  .application-metric {
+    padding: 7px !important;
+  }
+
+  .application-metric strong {
+    font-size: 1.08rem !important;
+  }
+
+  .application-metric span,
+  .application-metric small {
+    font-size: 0.6rem !important;
+    line-height: 1.23 !important;
+  }
+
+  .application-entry {
+    margin-top: 7px !important;
+  }
+
+  .application-entry h3 {
+    font-size: 0.81rem !important;
+    line-height: 1.22 !important;
+  }
+
+  .application-organization {
+    margin-top: 1px !important;
+    font-size: 0.66rem !important;
+  }
+
+  .application-period {
+    font-size: 0.61rem !important;
+  }
+
+  .application-links {
+    margin-top: 1px !important;
+    gap: 2px 7px !important;
+    font-size: 0.58rem !important;
+  }
+
+  .application-list {
+    margin-top: 3px !important;
+  }
+
+  .application-list li {
+    margin: 0 !important;
+    padding-left: 10px !important;
+    font-size: 0.62rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .application-evidence {
+    gap: 5px !important;
+  }
+
+  .application-evidence article {
+    padding: 7px !important;
+  }
+
+  .application-evidence h3 {
+    font-size: 0.65rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .application-evidence p {
+    margin-top: 2px !important;
+    font-size: 0.54rem !important;
+    line-height: 1.18 !important;
+  }
+
+  .application-skill {
+    grid-template-columns: 100px minmax(0, 1fr) !important;
+    gap: 7px !important;
+    padding: 3px 0 !important;
+    font-size: 0.59rem !important;
+    line-height: 1.18 !important;
+  }
+
+  .application-two-col {
+    gap: 14px !important;
+  }
+
+  .application-two-col .application-section {
+    margin-top: 9px !important;
+  }
+
+  .application-footer-note {
+    right: 12mm !important;
+    left: 12mm !important;
+    bottom: 5mm !important;
+    padding-top: 4px !important;
+    font-size: 0.55rem !important;
+  }
+}
