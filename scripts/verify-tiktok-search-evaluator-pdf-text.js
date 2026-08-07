@@ -37,7 +37,14 @@ if (!fs.existsSync(extracted)) {
     '4,317 auditable contributions',
     'Model-Behavior Evaluator',
     '255 submissions',
-    'Founder & Research-Workflow Owner',
+    'Creator & AI-Assisted Technical Product Operator',
+    'Notandia (formerly MDPI Filter)',
+    'May 2025',
+    'Crossref/Retraction Watch',
+    'ambiguity skipping',
+    'false-positive boundaries',
+    'Documented standards and validation workflow',
+    '55 verified research-participation resources',
     'degree not completed',
     '+39 000 000 0000',
     'Search and relevance analysis',
@@ -52,7 +59,8 @@ if (!fs.existsSync(extracted)) {
     'production search evaluator',
     'formal search evaluator experience',
     'managed a QA team',
-    'hiring authority'
+    'hiring authority',
+    'independent software developer'
   ]) assertNotContains(text, prohibited);
 }
 
