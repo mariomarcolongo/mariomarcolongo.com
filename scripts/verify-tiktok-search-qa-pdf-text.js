@@ -41,7 +41,6 @@ if (!fs.existsSync(extracted)) {
     'Scientific Contributor & Structured-Data Editor',
     '4,317 auditable contributions',
     'Documented standards and validation workflow',
-    'bad-case analysis',
     'Standards alignment',
     'case calibration',
     'degree not completed',
