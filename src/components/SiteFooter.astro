@@ -1,9 +1,11 @@
 ---
+import D from "../../data/source.js";
+
 export interface Props {
   version?: string;
 }
 
-const { version = 'v2026.07.21' } = Astro.props;
+const { version = D.identity.buildVersion } = Astro.props;
 ---
 
 <footer class="site-footer print-hide">
@@ -13,10 +15,10 @@ const { version = 'v2026.07.21' } = Astro.props;
         <p><strong>© 2026 Mario Marcolongo.</strong> Project datasets, code and site content retain the licences stated in their respective repositories and records. Active Build: {version}</p>
       </div>
       <div class="footer-links">
-        <a href="https://orcid.org/0000-0003-2846-7115" target="_blank" rel="noopener noreferrer">ORCID: 0000-0003-2846-7115</a>
-        <a href="https://www.ebi.ac.uk/ena/browser/view/PRJEB109744" target="_blank" rel="noopener noreferrer">ENA: PRJEB109744</a>
-        <a href="https://github.com/jnton" target="_blank" rel="noopener noreferrer">GitHub: jnton</a>
-        <a href="https://www.linkedin.com/in/mario-marcolongo" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href={D.identity.orcidUrl} target="_blank" rel="me noopener noreferrer">ORCID: {D.identity.orcid}</a>
+        <a href={D.identity.enaUrl} target="_blank" rel="noopener noreferrer">ENA: {D.identity.enaAccession}</a>
+        <a href={D.identity.github} target="_blank" rel="me noopener noreferrer">GitHub: jnton</a>
+        <a href={D.identity.linkedin} target="_blank" rel="me noopener noreferrer" aria-label="Mario Marcolongo on LinkedIn">LinkedIn</a>
       </div>
     </div>
     <div class="footer-content footer-dossiers">
