@@ -37,7 +37,12 @@ function publicHref(value: string) {
       "@type": "ProfilePage",
       name: pageTitle,
       url: canonical,
-      mainEntity: { "@id": "https://mariomarcolongo.com/#person" }
+      mainEntity: {
+        "@type": "Person",
+        "@id": "https://mariomarcolongo.com/#person",
+        name: shared.name,
+        url: shared.website
+      }
     })}></script>
   </Fragment>
 

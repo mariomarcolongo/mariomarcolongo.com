@@ -37,7 +37,12 @@ const methods = [
       name: pageTitle,
       description: pageDescription,
       url: "https://mariomarcolongo.com/integrity.html",
-      mainEntity: { "@id": "https://mariomarcolongo.com/#person" },
+      mainEntity: {
+        "@type": "Person",
+        "@id": "https://mariomarcolongo.com/#person",
+        name: D.identity.name,
+        url: "https://mariomarcolongo.com/"
+      },
       about: ["Knowledge integrity", "Open-source research", "Article creation", "Scientific localization", "Technical localization", "Consumer genomics privacy", "Archival research", "Source provenance", "Trust and safety"]
     })}></script>
   </Fragment>
