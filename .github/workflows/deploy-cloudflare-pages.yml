@@ -15,8 +15,16 @@ permissions:
   contents: read
   deployments: write
 
+# Only runs that can actually deploy share the production concurrency group.
+# Ordinary PR events are skipped by the job condition below and use a per-PR
+# group so they cannot cancel an in-flight production deployment before skipping.
 concurrency:
-  group: cloudflare-pages-production
+  group: >-
+    ${{ github.event_name == 'pull_request_target' &&
+        github.event.pull_request.merged != true &&
+        startsWith(github.event.pull_request.head.ref, 'deploy/production-') == false &&
+        format('cloudflare-pages-skip-pr-{0}', github.event.pull_request.number) ||
+        'cloudflare-pages-production' }}
   cancel-in-progress: true
 
 jobs:
