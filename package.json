@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "node scripts/check-stale-strings.js",
     "dev": "node scripts/check-stale-strings.js && node scripts/generate-llm-dossiers.js && astro dev",
-    "build": "npm run lint && node scripts/generate-llm-dossiers.js && astro build && node scripts/postbuild.js && npm run verify:dist",
+    "build": "npm run lint && node scripts/generate-llm-dossiers.js && astro build && node scripts/postbuild.js && node scripts/verify-dist.js && node scripts/verify-structured-data.js",
     "deploy": "npm run build && npm run verify:render && npx wrangler pages deploy dist --project-name=mariomarcolongo-pages",
     "preview": "node scripts/private-preview.js",
     "preview:public": "astro preview",
