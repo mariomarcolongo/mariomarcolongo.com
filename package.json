@@ -27,6 +27,6 @@
     "pdf-lib": "^1.17.1",
     "puppeteer": "^25.3.0",
     "turndown": "^7.2.4",
-    "wrangler": "^4.110.0"
+    "wrangler": "^4.122.0"
   }
 }
