@@ -15,24 +15,17 @@ permissions:
   contents: read
   deployments: write
 
-# Only runs that can actually deploy share the production concurrency group.
-# Ordinary PR events are skipped by the job condition below and use a per-PR
-# group so they cannot cancel an in-flight production deployment before skipping.
-concurrency:
-  group: >-
-    ${{ github.event_name == 'pull_request_target' &&
-        github.event.pull_request.merged != true &&
-        startsWith(github.event.pull_request.head.ref, 'deploy/production-') == false &&
-        format('cloudflare-pages-skip-pr-{0}', github.event.pull_request.number) ||
-        'cloudflare-pages-production' }}
-  cancel-in-progress: true
-
 jobs:
   deploy:
     if: >-
       github.event_name != 'pull_request_target' ||
       github.event.pull_request.merged == true ||
       startsWith(github.event.pull_request.head.ref, 'deploy/production-')
+    # Keep the lock at job level so skipped ordinary PR events never acquire
+    # production concurrency and therefore cannot cancel a real deployment.
+    concurrency:
+      group: cloudflare-pages-production
+      cancel-in-progress: true
     name: Build, deploy and verify production site
     runs-on: ubuntu-latest
     timeout-minutes: 30
