@@ -15,16 +15,17 @@ permissions:
   contents: read
   deployments: write
 
-concurrency:
-  group: cloudflare-pages-production
-  cancel-in-progress: true
-
 jobs:
   deploy:
     if: >-
       github.event_name != 'pull_request_target' ||
       github.event.pull_request.merged == true ||
       startsWith(github.event.pull_request.head.ref, 'deploy/production-')
+    # Keep the lock at job level so skipped ordinary PR events never acquire
+    # production concurrency and therefore cannot cancel a real deployment.
+    concurrency:
+      group: cloudflare-pages-production
+      cancel-in-progress: true
     name: Build, deploy and verify production site
     runs-on: ubuntu-latest
     timeout-minutes: 30
