@@ -62,6 +62,8 @@ function buildProfileGraph(d, pageUrl, pageName) {
           {
             '@type': 'Dataset',
             name: 'Yourself to Science dataset',
+            description: 'Structured public directory data describing research-participation opportunities, including studies, biobanks, registries, donation programmes and related initiatives.',
+            creator: { '@id': `${SITE}/#person` },
             license: 'https://creativecommons.org/publicdomain/zero/1.0/'
           },
           {
