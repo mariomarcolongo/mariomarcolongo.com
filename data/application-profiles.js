@@ -98,7 +98,7 @@ const APPLICATION_PROFILES = {
       "Scientific and biomedical AI quality",
       "Research operations and evidence verification",
       "Knowledge, metadata and data-provenance quality",
-      "Human-data operations and domain-expert evaluation"
+      "Human-data operations and scientific-content evaluation"
     ],
     strengths: [
       { value: "8 years", label: "Auditable verification work", detail: "Public source, citation and structured-data record" },
@@ -366,8 +366,7 @@ const APPLICATION_PROFILES = {
       "Information Technology — Open UAS Path Studies (120 ECTS) — Metropolia University of Applied Sciences, Aug 2026–Present; bachelor's-level ICT studies in software development, databases, Unix/Linux, data structures and algorithms, networking, cloud computing, cybersecurity and applied AI",
       "GALENOS Crowd Evidence Synthesis Training — Cochrane Crowd & GALENOS, 2026",
       "Career Essentials in Generative AI — Microsoft & LinkedIn, 2024",
-      "EF SET English Certificate — 68/100, C1 overall, 2024",
-      "Coursework in Medicine and Surgery — Università degli Studi della Campania Luigi Vanvitelli, 2020; degree not completed"
+      "EF SET English Certificate — 68/100, C1 overall, 2024"
     ]
   }
 };
