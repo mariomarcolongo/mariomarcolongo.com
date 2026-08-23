@@ -1,0 +1,69 @@
+name: Education URL semantics
+
+on:
+  push:
+    branches:
+      - cleanup-education-positioning
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: cleanup-education-positioning
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Distinguish programme URLs from earned credentials
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          def replace_once(path, old, new):
+              p = Path(path)
+              text = p.read_text()
+              count = text.count(old)
+              if count != 1:
+                  raise SystemExit(f"Expected exactly one match in {path}, found {count}: {old[:120]!r}")
+              p.write_text(text.replace(old, new, 1))
+
+          replace_once(
+              'data/source.js',
+              '''      credentialUrl: "https://www.metropolia.fi/en/study-at-metropolia/open-university/path-studies/it-online"''',
+              '''      programUrl: "https://www.metropolia.fi/en/study-at-metropolia/open-university/path-studies/it-online"'''
+          )
+
+          replace_once(
+              'src/lib/structured-data.js',
+              '''  return (d.education || [])\n    .filter((item) => {\n      const isOngoingStudy = /present/i.test(item.period || '') && /stud/i.test(`${item.title} ${item.status || ''}`);\n      return !isOngoingStudy && (item.credentialUrl || /certificate|certification|training/i.test(`${item.title} ${item.status || ''}`));\n    })\n''',
+              '''  return (d.education || [])\n    .filter((item) => item.credentialUrl || /certificate|certification|training/i.test(`${item.title} ${item.status || ''}`))\n'''
+          )
+
+          replace_once(
+              'scripts/lib/dossier-generators.js',
+              '''  if (e.status) parts.push(e.status);\n  if (e.credentialUrl) parts.push(`Credential: ${e.credentialUrl}`);\n''',
+              '''  if (e.status) parts.push(e.status);\n  if (e.programUrl) parts.push(`Programme: ${e.programUrl}`);\n  if (e.credentialUrl) parts.push(`Credential: ${e.credentialUrl}`);\n'''
+          )
+          PY
+
+          node scripts/generate-llm-dossiers.js
+          node scripts/check-stale-strings.js
+
+          if grep -R -n -F 'Credential: https://www.metropolia.fi/en/study-at-metropolia/open-university/path-studies/it-online' cv-llm.txt llms-full.txt public/cv-llm.txt public/llms-full.txt; then
+            echo 'Metropolia is still labelled as an earned credential.' >&2
+            exit 1
+          fi
+          grep -R -n -F 'Programme: https://www.metropolia.fi/en/study-at-metropolia/open-university/path-studies/it-online' cv-llm.txt llms-full.txt public/cv-llm.txt public/llms-full.txt >/dev/null
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/source.js src/lib/structured-data.js scripts/lib/dossier-generators.js cv-llm.txt llms-full.txt public/cv-llm.txt public/llms-full.txt public/data/source.js
+          git commit -m 'Distinguish programme links from earned credentials'
+          git push origin HEAD:cleanup-education-positioning
