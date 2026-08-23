@@ -466,6 +466,13 @@ const MARIO_DOSSIER = {
 
   education: [
     {
+      title: "Information Technology — Open UAS Path Studies (120 ECTS)",
+      institution: "Metropolia University of Applied Sciences",
+      period: "Aug 2026 — Present",
+      status: "Bachelor's-level ICT path studies · Curriculum: software development, SQL and relational databases, Unix/Linux, data structures and algorithms, CCNA networking, cloud computing, cybersecurity, ethical hacking, engineering mathematics and applied AI",
+      credentialUrl: "https://www.metropolia.fi/en/study-at-metropolia/open-university/path-studies/it-online"
+    },
+    {
       title: "Coursework in Medicine and Surgery",
       institution: "Università degli Studi della Campania ‘Luigi Vanvitelli’",
       period: "2020",
