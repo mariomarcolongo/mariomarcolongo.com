@@ -122,7 +122,7 @@ Developed the concept, narrative structure, interaction requirements and behavio
 
 ## Education & Certifications
 
-- **Information Technology — Open UAS Path Studies (120 ECTS)** (Aug 2026 — Present) — Metropolia University of Applied Sciences · Bachelor's-level ICT path studies · Curriculum: software development, SQL and relational databases, Unix/Linux, data structures and algorithms, CCNA networking, cloud computing, cybersecurity, ethical hacking, engineering mathematics and applied AI · Credential: https://www.metropolia.fi/en/study-at-metropolia/open-university/path-studies/it-online
+- **Information Technology — Open UAS Path Studies (120 ECTS)** (Aug 2026 — Present) — Metropolia University of Applied Sciences · Bachelor's-level ICT path studies · Curriculum: software development, SQL and relational databases, Unix/Linux, data structures and algorithms, CCNA networking, cloud computing, cybersecurity, ethical hacking, engineering mathematics and applied AI · Programme: https://www.metropolia.fi/en/study-at-metropolia/open-university/path-studies/it-online
 - **EF SET English Certificate 68/100 (C1 overall)** (Mar 2024) — EF Standard English Test · Credential: https://cert.efset.org/en/eJz39v
 - **Career Essentials in Generative AI** (Mar 2024) — Microsoft and LinkedIn · Credential: https://www.linkedin.com/learning/certificates/c4f1f59578e3ac2567787e262e3b2ec55debf96bbbced4d34d5edaa821d9e6d9
 - **GALENOS Crowd Evidence Synthesis Training** (May 2026) — Cochrane Crowd & GALENOS · Systematic-review screening training

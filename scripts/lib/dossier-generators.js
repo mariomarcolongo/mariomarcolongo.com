@@ -32,6 +32,7 @@ function formatEducationText(e) {
   const parts = [];
   if (e.institution) parts.push(e.institution);
   if (e.status) parts.push(e.status);
+  if (e.programUrl) parts.push(`Programme: ${e.programUrl}`);
   if (e.credentialUrl) parts.push(`Credential: ${e.credentialUrl}`);
   const period = e.period ? ` (${e.period})` : '';
   const details = parts.length ? ` — ${parts.join(' · ')}` : '';

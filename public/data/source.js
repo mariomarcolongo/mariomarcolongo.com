@@ -717,7 +717,7 @@ const MARIO_DOSSIER = {
       "institution": "Metropolia University of Applied Sciences",
       "period": "Aug 2026 — Present",
       "status": "Bachelor's-level ICT path studies · Curriculum: software development, SQL and relational databases, Unix/Linux, data structures and algorithms, CCNA networking, cloud computing, cybersecurity, ethical hacking, engineering mathematics and applied AI",
-      "credentialUrl": "https://www.metropolia.fi/en/study-at-metropolia/open-university/path-studies/it-online"
+      "programUrl": "https://www.metropolia.fi/en/study-at-metropolia/open-university/path-studies/it-online"
     },
     {
       "title": "EF SET English Certificate 68/100 (C1 overall)",
