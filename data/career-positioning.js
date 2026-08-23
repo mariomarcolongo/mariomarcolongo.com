@@ -165,13 +165,6 @@ if (masterYourselfToScience) {
   }
 }
 
-const medicineEducation = D.education?.find((item) => item?.title?.includes('Medicine and Surgery'));
-if (medicineEducation) {
-  medicineEducation.title = 'Medicine and Surgery studies';
-  medicineEducation.period = 'Enrolled 2020 — Present';
-  medicineEducation.status = 'Studies currently inactive';
-}
-
 const researchDirectoryStat = D.stats?.find((item) => item?.label?.includes('Research Initiatives'));
 if (researchDirectoryStat) {
   researchDirectoryStat.value = String(yourselfToScience.resources);

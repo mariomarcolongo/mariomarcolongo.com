@@ -62,7 +62,11 @@ const PROHIBITED = [
   ['I am autistic.', 'Diagnosis disclosure should not appear on the public homepage'],
   ['The hard part is rarely finding a paper.', 'Rejected aphoristic scientific-verification copy'],
   ['Evidence for the next role—and the path after it.', 'Rejected repetitive portfolio-v5 heading'],
-  ['Discuss a difficult problem.', 'Rejected generic portfolio-v5 contact heading']
+  ['Discuss a difficult problem.', 'Rejected generic portfolio-v5 contact heading'],
+  ['Coursework in Medicine and Surgery', 'Abandoned Medicine programme should not appear in public CV/site data'],
+  ['Medicine and Surgery studies', 'Abandoned Medicine programme should not be presented as current study'],
+  ['Studies currently inactive', 'Administrative Medicine enrollment status should not appear publicly'],
+  ['domain-expert evaluation', 'Avoid implying formal biomedical domain expertise']
 ];
 
 let failures = 0;

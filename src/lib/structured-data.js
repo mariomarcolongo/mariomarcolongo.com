@@ -2,7 +2,10 @@ const SITE = 'https://mariomarcolongo.com';
 
 function buildCredentials(d) {
   return (d.education || [])
-    .filter((item) => item.credentialUrl || /certificate|certification|training/i.test(`${item.title} ${item.status || ''}`))
+    .filter((item) => {
+      const isOngoingStudy = /present/i.test(item.period || '') && /stud/i.test(`${item.title} ${item.status || ''}`);
+      return !isOngoingStudy && (item.credentialUrl || /certificate|certification|training/i.test(`${item.title} ${item.status || ''}`));
+    })
     .map((item) => ({
       '@type': 'EducationalOccupationalCredential',
       name: item.title,

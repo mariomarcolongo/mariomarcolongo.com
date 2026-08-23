@@ -473,12 +473,6 @@ const MARIO_DOSSIER = {
       credentialUrl: "https://www.metropolia.fi/en/study-at-metropolia/open-university/path-studies/it-online"
     },
     {
-      title: "Coursework in Medicine and Surgery",
-      institution: "Università degli Studi della Campania ‘Luigi Vanvitelli’",
-      period: "2020",
-      status: "Degree not completed"
-    },
-    {
       title: "EF SET English Certificate 68/100 (C1 overall)",
       institution: "EF Standard English Test",
       period: "Mar 2024",
