@@ -363,6 +363,7 @@ const APPLICATION_PROFILES = {
     orcid: "https://orcid.org/0000-0003-2846-7115",
     language: "Italian — native. English — C1 overall (EF SET 68/100); advanced technical reading and professional/technical writing.",
     education: [
+      "Information Technology — Open UAS Path Studies (120 ECTS) — Metropolia University of Applied Sciences, Aug 2026–Present; bachelor's-level ICT studies in software development, databases, Unix/Linux, data structures and algorithms, networking, cloud computing, cybersecurity and applied AI",
       "GALENOS Crowd Evidence Synthesis Training — Cochrane Crowd & GALENOS, 2026",
       "Career Essentials in Generative AI — Microsoft & LinkedIn, 2024",
       "EF SET English Certificate — 68/100, C1 overall, 2024",
