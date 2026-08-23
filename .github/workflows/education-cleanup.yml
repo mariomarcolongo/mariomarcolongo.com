@@ -1,0 +1,93 @@
+name: Education cleanup
+
+on:
+  push:
+    branches:
+      - cleanup-education-positioning
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: cleanup-education-positioning
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Apply education positioning cleanup
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          def replace_once(path, old, new):
+              p = Path(path)
+              text = p.read_text()
+              count = text.count(old)
+              if count != 1:
+                  raise SystemExit(f"Expected exactly one match in {path}, found {count}: {old[:120]!r}")
+              p.write_text(text.replace(old, new, 1))
+
+          # Remove the abandoned Medicine programme from the canonical public dossier.
+          replace_once(
+              'data/source.js',
+              '''    {\n      title: "Coursework in Medicine and Surgery",\n      institution: "Università degli Studi della Campania ‘Luigi Vanvitelli’",\n      period: "2020",\n      status: "Degree not completed"\n    },\n''',
+              ''
+          )
+
+          # Remove Medicine from shared application-CV education data.
+          replace_once(
+              'data/application-profiles.js',
+              '''      "EF SET English Certificate — 68/100, C1 overall, 2024",\n      "Coursework in Medicine and Surgery — Università degli Studi della Campania Luigi Vanvitelli, 2020; degree not completed"\n''',
+              '''      "EF SET English Certificate — 68/100, C1 overall, 2024"\n'''
+          )
+
+          # Avoid implying formal biomedical domain expertise in the research CV.
+          replace_once(
+              'data/application-profiles.js',
+              '"Human-data operations and domain-expert evaluation"',
+              '"Human-data operations and scientific-content evaluation"'
+          )
+
+          # Delete the old downstream override that re-labelled Medicine as current/inactive.
+          replace_once(
+              'data/career-positioning.js',
+              '''const medicineEducation = D.education?.find((item) => item?.title?.includes('Medicine and Surgery'));\nif (medicineEducation) {\n  medicineEducation.title = 'Medicine and Surgery studies';\n  medicineEducation.period = 'Enrolled 2020 — Present';\n  medicineEducation.status = 'Studies currently inactive';\n}\n\n''',
+              ''
+          )
+
+          # Ongoing studies with a programme URL are not earned credentials.
+          replace_once(
+              'src/lib/structured-data.js',
+              '''function buildCredentials(d) {\n  return (d.education || [])\n    .filter((item) => item.credentialUrl || /certificate|certification|training/i.test(`${item.title} ${item.status || ''}`))\n''',
+              '''function buildCredentials(d) {\n  return (d.education || [])\n    .filter((item) => {\n      const isOngoingStudy = /present/i.test(item.period || '') && /stud/i.test(`${item.title} ${item.status || ''}`);\n      return !isOngoingStudy && (item.credentialUrl || /certificate|certification|training/i.test(`${item.title} ${item.status || ''}`));\n    })\n'''
+          )
+
+          # Add regression guards against the misleading/stale public wording.
+          replace_once(
+              'scripts/check-stale-strings.js',
+              '''  ['Discuss a difficult problem.', 'Rejected generic portfolio-v5 contact heading']\n];''',
+              '''  ['Discuss a difficult problem.', 'Rejected generic portfolio-v5 contact heading'],\n  ['Coursework in Medicine and Surgery', 'Abandoned Medicine programme should not appear in public CV/site data'],\n  ['Medicine and Surgery studies', 'Abandoned Medicine programme should not be presented as current study'],\n  ['Studies currently inactive', 'Administrative Medicine enrollment status should not appear publicly'],\n  ['domain-expert evaluation', 'Avoid implying formal biomedical domain expertise']\n];'''
+          )
+          PY
+
+          node scripts/generate-llm-dossiers.js
+          node scripts/check-stale-strings.js
+
+          # Ensure generated public-facing dossiers contain no Medicine education entry.
+          if grep -R -n -E 'Medicine and Surgery|Studies currently inactive' cv-llm.txt llms-full.txt public/cv-llm.txt public/llms-full.txt public/data/source.js; then
+            echo 'Stale Medicine education wording remains in generated public outputs.' >&2
+            exit 1
+          fi
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/source.js data/application-profiles.js data/career-positioning.js src/lib/structured-data.js scripts/check-stale-strings.js cv-llm.txt llms-full.txt public/cv-llm.txt public/llms-full.txt public/data/source.js
+          git commit -m 'Clean up education positioning and credential metadata'
+          git push origin HEAD:cleanup-education-positioning
