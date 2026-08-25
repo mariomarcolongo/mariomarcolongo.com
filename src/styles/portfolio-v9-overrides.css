@@ -265,38 +265,4 @@
     display: grid;
     gap: 12px;
   }
-
-  /* Preserve the full evidence set while keeping the long-form portfolio compact on phones. */
-  .portfolio-v8 .v8-scope-band {
-    padding-top: 56px;
-    padding-bottom: 56px;
-  }
-
-  .portfolio-v8 .v8-section {
-    padding-top: 68px;
-    padding-bottom: 68px;
-  }
-
-  .portfolio-v8 .v8-section-head {
-    margin-bottom: 34px;
-  }
-
-  .portfolio-v8 .v8-case-stack {
-    gap: 68px;
-  }
-
-  .portfolio-v8 .v8-product {
-    padding-top: 64px;
-    padding-bottom: 64px;
-  }
-
-  .portfolio-v8 .v8-artifact {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
-
-  .portfolio-v8 .v8-contact {
-    padding-top: 56px;
-    padding-bottom: 56px;
-  }
 }
