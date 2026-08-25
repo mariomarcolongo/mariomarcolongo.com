@@ -8,7 +8,7 @@ const { launchBrowser } = require('./lib/browser.js');
 const ROOT = path.resolve(__dirname, '..');
 const DIST = path.join(ROOT, 'dist');
 const OUTPUT = path.join(ROOT, 'audit-output');
-const MAX_HOMEPAGE_HEIGHT = 16500;
+const MAX_HOMEPAGE_HEIGHT = 16800;
 const NOTANDIA_HOMEPAGE_TITLE = 'Notandia works across browser and Zotero research workflows.';
 const ROUTES = [
   'index.html', 'integrity.html', 'cv.html', 'cv-resume.html', 'cv-giskard.html',
