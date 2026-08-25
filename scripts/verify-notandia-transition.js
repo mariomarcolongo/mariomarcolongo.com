@@ -171,7 +171,7 @@ async function main() {
 
   const orcid = read('cv-orcid.html');
   assertContains(orcid, 'Notandia', 'dist/cv-orcid.html');
-  assertContains(orcid, `href="${CANONICAL_ROUTE}"`, 'dist/cv-orcid.html');
+  assertContains(orcid, `href="${CANONICAL_URL}"`, 'dist/cv-orcid.html');
 
   const sitemap = read('sitemap.xml');
   assertContains(sitemap, CANONICAL_URL, 'dist/sitemap.xml');
