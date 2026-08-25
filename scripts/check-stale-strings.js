@@ -6,8 +6,8 @@ const D = require('../data/source.js');
 const ROOT = path.resolve(__dirname, '..');
 const ENTROPY_WORK_URL = 'https://entropyforlife.it/mario-marcolongo-entropy-for-life/';
 const EXPECTED = {
-  jobTitle: 'AI Evaluation & Research Operations Specialist',
-  secondaryTitle: 'Model Behavior · Scientific Evidence · Knowledge Integrity · Open Science & Data Quality',
+  jobTitle: 'Data Quality, Information Retrieval & AI Evaluation Specialist',
+  secondaryTitle: 'Information Verification · Model Behavior · Scientific Evidence · Knowledge Integrity · Data Visualization',
   email: 'me@mariomarcolongo.com',
   orcid: '0000-0003-2846-7115',
   ena: 'PRJEB109744',
@@ -163,7 +163,7 @@ for (const marker of ['human-capabilities', 'human-work', 'human-documents']) {
   if (!indexSource.includes(`data-testid="${marker}"`)) fail('src/pages/index.astro', 1, `Missing homepage marker ${marker}.`);
 }
 for (const requiredText of [
-  'I test AI systems, verify scientific claims and reconstruct public evidence.',
+  'I find and verify information, investigate data and evidence quality and test AI systems.',
   'Where I can contribute.',
   'Selected work, shown through the actual output.',
   'MDPI Filter now works in the browser and as a Zotero plugin.',
