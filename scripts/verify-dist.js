@@ -173,7 +173,7 @@ for (const needle of ['consumer-genomics privacy', 'archival source recovery', '
 }
 
 const researchText = normalizeHtmlText(pages.research);
-for (const needle of ['public-source and structured-data work', 'corporate and public-record reconciliation', 'Evidence verification and OSINT']) {
+for (const needle of ['public-source and structured-data work', 'corporate and public-record reconciliation', 'Information retrieval']) {
   assertContains(researchText, needle, 'dist/cv-research.html');
 }
 
