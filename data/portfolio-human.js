@@ -1,9 +1,9 @@
 const ENTROPY_WORK_URL = "https://entropyforlife.it/mario-marcolongo-entropy-for-life/";
 
 const PORTFOLIO_HUMAN = {
-  eyebrow: "AI evaluation · scientific fact-checking · knowledge integrity",
-  headline: "I test AI systems, verify scientific claims and reconstruct public evidence.",
-  introduction: "My primary work is AI model-behavior evaluation, scientific fact-checking and evidence-bound public-source investigation. I also build and operate research-information tools when a recurring verification problem needs a practical system.",
+  eyebrow: "Information retrieval · data & knowledge quality · AI evaluation · scientific fact-checking",
+  headline: "I find and verify information, investigate data and evidence quality and test AI systems.",
+  introduction: "I work across information retrieval, data and knowledge quality, AI model-behavior evaluation and scientific fact-checking. I also build and operate research-information tools when a recurring verification problem needs a practical system.",
 
   proofMoments: [
     {
@@ -67,27 +67,27 @@ const PORTFOLIO_HUMAN = {
   scopes: [
     {
       number: "01",
-      label: "Primary",
+      label: "Distinctive specialist",
       title: "AI model-behavior evaluation",
       body: "Adversarial and edge-case testing across chat, multimodal inputs, tool use and indirect prompt injection."
     },
     {
       number: "02",
-      label: "Primary",
-      title: "Scientific fact-checking",
-      body: "Primary-literature review for scripts, articles and public scientific communication."
+      label: "Core",
+      title: "Information retrieval & scientific verification",
+      body: "Finding primary sources, tracing claims and verifying scientific evidence for public-facing work."
     },
     {
       number: "03",
-      label: "Primary",
-      title: "Knowledge integrity & public-source investigation",
-      body: "Consumer-genomics privacy, corporate-source reconciliation, archival recovery, source-quality auditing, content-governance review and structured biomedical evidence synthesis."
+      label: "Core",
+      title: "Data & knowledge quality",
+      body: "Provenance, metadata, source reconciliation, validation, public-source investigation and information-quality review."
     },
     {
       number: "04",
       label: "Supporting",
-      title: "Research information systems",
-      body: "Structured records, provenance rules and maintained tools for recurring research-information problems."
+      title: "Research information systems & visualization",
+      body: "Structured records, provenance rules, maintained tools and data visualizations for recurring research-information problems."
     }
   ],
 
@@ -261,22 +261,22 @@ const PORTFOLIO_HUMAN = {
 
   applicationDocuments: [
     {
+      title: "Data Quality & Research Analysis",
+      description: "Information retrieval, data quality, evidence verification, data visualization and research operations.",
+      href: "/cv-research.html",
+      recommendedFor: "Recommended general CV for analytical, data-quality and research roles"
+    },
+    {
       title: "AI Evaluation & Model Behavior",
       description: "Model-behavior testing, adversarial QA, evaluation operations and evidence-bound reporting.",
       href: "/cv-resume.html",
-      recommendedFor: "Recommended for AI evaluation and safeguards roles"
-    },
-    {
-      title: "Scientific AI Quality & Research Data",
-      description: "Scientific evidence review, research-data quality, provenance, metadata and research operations.",
-      href: "/cv-research.html",
-      recommendedFor: "Scientific AI and research-data roles"
+      recommendedFor: "Specialist CV for AI evaluation and safeguards roles"
     },
     {
       title: "Trust, Safety & Knowledge Integrity",
       description: "Consumer-genomics privacy, archival OSINT, source-quality review, public-record research, content governance and investigation support.",
       href: "/cv-integrity.html",
-      recommendedFor: "Integrity and investigation roles"
+      recommendedFor: "Integrity, trust & safety and investigation roles"
     },
     {
       title: "Research, Editorial & Content Operations",
