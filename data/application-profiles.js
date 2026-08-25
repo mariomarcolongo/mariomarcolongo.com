@@ -29,7 +29,7 @@ const APPLICATION_PROFILES = {
         bullets: [
           "Conduct self-directed testing of LLM instruction handling, policy boundaries and edge cases across chat, image, agentic tool-use and indirect prompt-injection settings.",
           "Reached #74 on the Proving Ground leaderboard (top 6%) with 113 platform-recorded total breaks on 29 July 2026; the same profile showed Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions.",
-          "Document public evidence conservatively, separating platform-reported outcomes from independent verification, model-wide conclusions or security certification."
+          "Document reproduction steps, observed behavior and platform-reported outcomes without inflating them into model-wide conclusions or security-certification claims."
         ]
       },
       {
@@ -91,14 +91,14 @@ const APPLICATION_PROFILES = {
   researchQuality: {
     id: "research-quality",
     documentLabel: "Specialized Application CV",
-    title: "Scientific AI Quality & Research Data Specialist",
-    subtitle: "Scientific evidence review · structured-data quality · provenance verification · research operations",
-    summary: "Research-verification and data-quality specialist with eight years of auditable work checking scientific, biomedical and structured-data claims. Paid fact-checker and writer for Entropy for Life, founder of an open research-participation directory with documented verification and metadata workflows, and public contributor across Wikipedia, Wikidata and Wikimedia Commons. Combines primary-source research, provenance discipline, structured-data literacy and practical technical operations.",
+    title: "Data Quality & Research Analyst",
+    subtitle: "Information retrieval · data quality · evidence verification · data visualization · research operations",
+    summary: "Information-retrieval, evidence-verification and data-quality specialist with eight years of auditable work across scientific sources, structured data and public knowledge systems. Paid fact-checker and writer for Entropy for Life, founder of an open research-participation directory with documented verification and metadata workflows, and public contributor across Wikipedia, Wikidata and Wikimedia Commons. Combines source retrieval, provenance discipline, data-quality thinking, scientific visualization and practical technical operations.",
     fit: [
-      "Scientific and biomedical AI quality",
-      "Research operations and evidence verification",
-      "Knowledge, metadata and data-provenance quality",
-      "Human-data operations and scientific-content evaluation"
+      "Data quality and information-quality analysis",
+      "Research analysis and evidence verification",
+      "Data visualization and research operations",
+      "Scientific, biomedical and AI-content quality"
     ],
     strengths: [
       { value: "8 years", label: "Auditable verification work", detail: "Public source, citation and structured-data record" },
@@ -107,6 +107,20 @@ const APPLICATION_PROFILES = {
       { value: "70+", label: "Scientific visualizations", detail: "Biomedical, epidemiological and public-health evidence" }
     ],
     experience: [
+      {
+        role: "Scientific Research, Fact-Checking & Website Operations Contractor",
+        organization: "Entropy for Life · Independent contractor",
+        period: "Jun 2023 — Present",
+        links: [
+          { label: "Author page", url: "https://entropyforlife.it/autore/mario-marcolongo/" },
+          { label: "Website", url: "https://entropyforlife.it" }
+        ],
+        bullets: [
+          "Retrieve and verify primary literature for 55+ published YouTube video projects and four co-authored articles across biology, medicine and public health.",
+          "Compare sources, identify unsupported claims and conflicting evidence, and translate findings into clear editorial recommendations with explicit uncertainty where needed.",
+          "Produce or support data analyses and visualizations and manage hosting, DNS, SSL, WordPress configuration, technical SEO and functional site changes."
+        ]
+      },
       {
         role: "Founder & Research-Workflow Owner",
         organization: "Yourself to Science™",
@@ -117,22 +131,8 @@ const APPLICATION_PROFILES = {
         ],
         bullets: [
           "Founded and operate an open-source research-participation directory indexing more than 55 clinical studies, biobanks, donation programs, registries and other initiatives.",
-          "Defined the inclusion model, verification workflow, provenance fields, licensing structure and machine-readable metadata requirements.",
+          "Defined inclusion and verification rules, provenance fields, licensing requirements, metadata structure and update workflows across heterogeneous institutional sources.",
           "Maintain public records through FAIRsharing and Zenodo and coordinate AI-assisted technical implementation through requirements, testing and behavior inspection."
-        ]
-      },
-      {
-        role: "Scientific Research, Fact-Checking & Website Operations Contractor",
-        organization: "Entropy for Life · Independent contractor",
-        period: "Jun 2023 — Present",
-        links: [
-          { label: "Author page", url: "https://entropyforlife.it/autore/mario-marcolongo/" },
-          { label: "Website", url: "https://entropyforlife.it" }
-        ],
-        bullets: [
-          "Verify primary literature and conduct bibliographic research for 55+ published YouTube video projects and four co-authored articles across biology, medicine and public health.",
-          "Translate complex evidence into clear editorial recommendations, identify unsupported claims and document uncertainty or disagreement between sources.",
-          "Manage hosting, DNS, SSL, WordPress configuration, technical SEO and functional site changes."
         ]
       },
       {
@@ -156,9 +156,9 @@ const APPLICATION_PROFILES = {
         link: "https://yourselftoscience.org"
       },
       {
-        title: "Public genomic data contribution",
-        body: "Personal 41× whole-genome sequencing reads and derived files released under CC0 through ENA accession PRJEB109744.",
-        link: "https://www.ebi.ac.uk/ena/browser/view/PRJEB109744"
+        title: "Scientific visualization record",
+        body: "More than 70 published biomedical, epidemiological and public-health visualizations, including interactive Tableau Public and Flourish work.",
+        link: "https://public.tableau.com/app/profile/mario.marcolongo/vizzes"
       },
       {
         title: "Evidence-synthesis training",
@@ -167,11 +167,11 @@ const APPLICATION_PROFILES = {
       }
     ],
     skills: [
-      ["Evidence verification", "Primary-source research, bibliographic search, evidence screening, claim decomposition, source-quality assessment and cross-source corroboration"],
+      ["Information retrieval", "Primary-source and bibliographic search, claim tracing, source discovery, query refinement, source-quality assessment and cross-source corroboration"],
       ["Data quality", "Structured metadata, provenance, entity reconciliation, taxonomy design, validation rules, documentation and quality-control workflows"],
-      ["Open science", "FAIRsharing, Zenodo, Wikimedia, Wikidata, ENA records, JSON-LD, RDF Turtle/VoID, OpenAPI and licensing boundaries"],
-      ["Technical operations", "Codebase reading and behavior inspection, requirements definition, functional testing, AI-assisted implementation workflows, Git/GitHub, JSON, REST APIs, WordPress, DNS/SSL and cloud deployment operations"],
-      ["Communication", "Technical and professional English writing, scientific explanation, editorial feedback and documentation for mixed audiences"]
+      ["Data visualization", "70+ published biomedical, epidemiological and public-health visualizations across Wikimedia Commons, Tableau Public and Flourish"],
+      ["Research analysis", "Claim decomposition, evidence screening, conflicting-source reconciliation, uncertainty documentation and synthesis for decision-ready outputs"],
+      ["Technical operations", "Codebase reading and behavior inspection, requirements definition, functional testing, AI-assisted implementation workflows, Git/GitHub, JSON, REST APIs, WordPress, DNS/SSL and cloud deployment operations"]
     ]
   },
 
@@ -221,7 +221,7 @@ const APPLICATION_PROFILES = {
         bullets: [
           "Served as lead or co-facilitator across approximately 4–5 recorded Zoom focus-group sessions, typically lasting 1–2 hours, with autistic participants discussing sensitive sexuality and relationship topics.",
           "Co-developed the protocol, including pseudonymous naming, explicit recorded consent, optional captions and written-chat participation, timed turn-taking, scripted prompts, recording boundaries and two-person facilitation handoffs.",
-          "Supported participant recruitment, bibliographic research, technical preparation and protocol feedback from an autistic perspective; coordinated with Marta Panzeri, researchers and a second autistic volunteer facilitator. Participant information remains confidential."
+          "Supported participant recruitment, bibliographic research and technical preparation; contributed to structuring participant experience and accessibility considerations and coordinated with Marta Panzeri, researchers and a second volunteer facilitator. Participant information remains confidential."
         ]
       },
       {
@@ -252,14 +252,14 @@ const APPLICATION_PROFILES = {
       },
       {
         title: "Sensitive remote research facilitation",
-        body: "Structured moderation, recruitment and Zoom-session procedures for autistic participants discussing sensitive topics; attribution remains private pending permission.",
+        body: "Structured moderation, recruitment and Zoom-session procedures for autistic participants discussing sensitive topics, with public attribution to Marta Panzeri and the University of Padua DPSS; participant information remains confidential.",
         link: "/cv-editorial.html"
       }
     ],
     skills: [
       ["Editorial operations", "Evidence research, claim checking, source documentation, editorial feedback, content preparation and production troubleshooting"],
       ["Project coordination", "Independent prioritization, overlapping workstreams, issue tracking, progress documentation, release coordination and follow-through"],
-      ["Community engagement", "Participant recruitment, sensitive-topic moderation, neurodiversity-aware communication, two-person facilitation handoffs and support for distributed communities"],
+      ["Community engagement", "Participant recruitment, sensitive-topic moderation, accessibility-aware communication, two-person facilitation handoffs and support for distributed communities"],
       ["Digital communications", "Professional and technical writing, WordPress publishing, website operations, technical SEO and content presentation"],
       ["AI-enabled workflows", "Experimenting with AI for research, drafting, implementation support, quality checks and workflow acceleration while retaining human verification"]
     ]
@@ -280,7 +280,7 @@ const APPLICATION_PROFILES = {
     strengths: [
       { value: "8 years", label: "Public source-work record", detail: "Wikipedia, Wikidata and Wikimedia Commons" },
       { value: "4,317", label: "Auditable contributions", detail: "Claims, citations, metadata and media records" },
-      { value: "110", label: "Platform-recorded Proving Ground breaks", detail: "#75 · top 6% · four evaluation surfaces" },
+      { value: "113", label: "Platform-recorded Proving Ground breaks", detail: "#74 · top 6% · 29 July 2026" },
       { value: "55+", label: "Scientific productions checked", detail: "Health and biology evidence verification" }
     ],
     experience: [
@@ -322,7 +322,7 @@ const APPLICATION_PROFILES = {
         ],
         bullets: [
           "Test instruction hierarchy, policy boundaries, indirect prompt injection and agentic tool-use behavior across repeated adversarial scenarios.",
-          "Reached #75 on the Proving Ground leaderboard (top 6%) with 110 platform-recorded total breaks, while documenting that the four visible area counters sum to 109 and keeping Arena metrics separate.",
+          "Reached #74 on the Proving Ground leaderboard (top 6%) with 113 platform-recorded total breaks on 29 July 2026; the same profile showed Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions.",
           "Apply threat-oriented thinking and evidence capture to ambiguous system behavior without claiming application-security or penetration-testing expertise."
         ]
       }
