@@ -267,35 +267,35 @@
   }
 
   /* Preserve the full evidence set while keeping the long-form portfolio compact on phones. */
-  .v8-scope-band {
+  .portfolio-v8 .v8-scope-band {
     padding-top: 56px;
     padding-bottom: 56px;
   }
 
-  .v8-section {
+  .portfolio-v8 .v8-section {
     padding-top: 68px;
     padding-bottom: 68px;
   }
 
-  .v8-section-head {
+  .portfolio-v8 .v8-section-head {
     margin-bottom: 34px;
   }
 
-  .v8-case-stack {
+  .portfolio-v8 .v8-case-stack {
     gap: 68px;
   }
 
-  .v8-product {
+  .portfolio-v8 .v8-product {
     padding-top: 64px;
     padding-bottom: 64px;
   }
 
-  .v8-artifact {
+  .portfolio-v8 .v8-artifact {
     padding-top: 70px;
     padding-bottom: 70px;
   }
 
-  .v8-contact {
+  .portfolio-v8 .v8-contact {
     padding-top: 56px;
     padding-bottom: 56px;
   }
