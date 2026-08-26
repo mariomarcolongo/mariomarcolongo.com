@@ -6,8 +6,8 @@ const D = require('../data/source.js');
 const ROOT = path.resolve(__dirname, '..');
 const ENTROPY_WORK_URL = 'https://entropyforlife.it/mario-marcolongo-entropy-for-life/';
 const EXPECTED = {
-  jobTitle: 'AI & Knowledge Quality Analyst',
-  secondaryTitle: 'Information Retrieval · Evidence Systems · Model Evaluation · Scientific Verification · Data Quality',
+  jobTitle: 'Data & Knowledge Quality Analyst',
+  secondaryTitle: 'Information Retrieval · Evidence Synthesis · AI Evaluation',
   email: 'me@mariomarcolongo.com',
   orcid: '0000-0003-2846-7115',
   ena: 'PRJEB109744',
@@ -67,7 +67,16 @@ const PROHIBITED = [
   ['Coursework in Medicine and Surgery', 'Abandoned Medicine programme should not appear in public CV/site data'],
   ['Medicine and Surgery studies', 'Abandoned Medicine programme should not be presented as current study'],
   ['Studies currently inactive', 'Administrative Medicine enrollment status should not appear publicly'],
-  ['domain-expert evaluation', 'Avoid implying formal biomedical domain expertise']
+  ['domain-expert evaluation', 'Avoid implying formal biomedical domain expertise'],
+  ['Founder & Research-Workflow Owner', 'Replace the invented founder title with Founder & Project Lead'],
+  ['Research-Workflow Owner', 'Replace the invented workflow-owner title'],
+  ['AI Evaluation & Model Behavior Specialist', 'Use the clearer AI Evaluation & Model Behavior Analyst title'],
+  ['Research, Editorial & Community Operations Specialist', 'Use the clearer Research, Editorial & Community Coordinator title'],
+  ['Trust, Safety & Knowledge Integrity Specialist', 'Use the clearer Trust, Safety & Source Quality Analyst title'],
+  ['Investigations & Knowledge Integrity Analyst', 'Use the clearer Investigations & Source Quality Analyst title'],
+  ['evidence-bound reporting', 'Use reporting that separates evidence from inference'],
+  ['evaluation operations', 'Use a concrete evaluation activity such as test planning or reporting'],
+  ['AI-enabled workflows', 'Use a concrete description of AI-assisted tools']
 ];
 
 let failures = 0;
@@ -182,7 +191,7 @@ for (const requiredText of [
   'Start with the role you are hiring for.',
   'Data quality, information retrieval and AI evaluation roles.',
   '#74 on the Proving Ground leaderboard',
-  'Evidence quality, localization and content operations at creator scale.',
+  'Fact-checking and producing scientific content before publication.',
   'Tracing privacy, policy and evidence changes under dispute.',
   'Nebula Genomics',
   'syndromic-autism taxonomy',

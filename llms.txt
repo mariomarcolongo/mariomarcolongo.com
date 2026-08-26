@@ -1,9 +1,9 @@
-# Mario Marcolongo — AI & Knowledge Quality Analyst
-> Information Retrieval · Evidence Systems · Model Evaluation · Scientific Verification · Data Quality
+# Mario Marcolongo — Data & Knowledge Quality Analyst
+> Information Retrieval · Evidence Synthesis · AI Evaluation
 
-> Information-retrieval, data-quality, scientific-verification and AI-evaluation specialist with eight years of auditable public-source and structured-data work. The public record includes paid scientific fact-checking and editorial production, a maintained research-participation directory, and self-directed model-behavior evaluation. On 29 July 2026, the Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks. Entropy for Life work covers 80 documented published content contributions: 55 YouTube videos · 4 articles · 21 short-form pieces. Technical work is code-literate and AI-assisted, with personal ownership of requirements, verification, deployment and maintenance. Current open-source product work includes Notandia (formerly MDPI Filter), a continuing browser and Zotero research-integrity tool.
+> Data and knowledge-quality analyst with eight years of auditable public-source and structured-data work. The public record includes paid scientific fact-checking and editorial production, a maintained research-participation directory and self-directed model-behavior testing. On 29 July 2026, the Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks. Entropy for Life work covers 80 documented published content contributions: 55 YouTube videos · 4 articles · 21 short-form pieces. Technical delivery is AI-assisted, with personal ownership of requirements, verification, deployment and maintenance. Current open-source product work includes Notandia (formerly MDPI Filter), a continuing browser and Zotero research-integrity tool.
 
-> **My technical work is code-literate and AI-assisted: I define requirements and workflows, inspect implementation behavior, test releases, diagnose functional problems, guide iterations, deploy releases and maintain services.**
+> **My technical work uses AI-assisted implementation: I define requirements, inspect implementation behavior, test releases, diagnose functional problems, guide iterations, deploy releases and maintain services.**
 
 ## Quick Facts & Key Metrics
 - **113** (Platform-Displayed Proving Ground Breaks): #74 · top 6% · 29 July 2026
@@ -20,9 +20,9 @@
 - AI Safety Evaluation & Adversarial Testing: Exploratory model-behavior testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection.
 - Scientific Verification & Evidence Synthesis: Primary-source fact-checking, bibliographic research, claim decomposition, evidence screening, source-quality assessment and cross-source corroboration.
 - Data Visualization: SVG vector diagrams, Tableau Public, Flourish and open-data publication.
-- Evaluation Operations: Test planning, evidence capture, reproducibility notes, taxonomy thinking, issue classification, evidence-bound reporting and mitigation-retesting concepts.
-- Code-Literate Technical Operations: Requirements definition, codebase reading and behavior inspection, functional testing, issue diagnosis, deployment operations and service maintenance.
-- AI-Assisted Technical Workflow: Uses coding agents for implementation support while personally defining requirements, inspecting structure and behavior, testing results, guiding revisions, deploying releases and maintaining services.
+- Evaluation Planning & Reporting: Test planning, evidence capture, reproducibility notes, taxonomy thinking, issue classification, reporting that separates evidence from inference and mitigation-retesting concepts.
+- Technical Delivery: Requirements definition, codebase reading and behavior inspection, functional testing, issue diagnosis, deployment and service maintenance.
+- AI-Assisted Implementation: Uses coding agents for implementation support while personally defining requirements, inspecting structure and behavior, testing results, guiding revisions, deploying releases and maintaining services.
 - Open Science & Structured Data: Wikimedia, Wikidata, FAIRsharing, Zenodo, ENA records, JSON-LD, RDF Turtle/VoID, OpenAPI and MCP interfaces.
 - Web & Cloud Operations: WordPress, HTML/CSS modification, Git/GitHub, JSON, REST APIs, AWS Lambda, Cloudflare Pages, DNS/SSL and CI/CD operations.
 - Languages: Italian — native. English — C1 overall (EF SET 68/100), with advanced technical reading and professional/technical writing.

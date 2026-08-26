@@ -2,7 +2,7 @@
  * SINGLE SOURCE OF TRUTH (SSOT) — Mario Marcolongo
  *
  * Public portfolio, master CV, application CVs and machine-readable dossiers
- * are generated from this evidence-bound record.
+ * are generated from this source-backed record.
  */
 
 function createMarioDossier() {
@@ -17,12 +17,12 @@ function createMarioDossier() {
     grayswanUrl: "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
     grayswanArchiveUrl: "/evidence/gray-swan-2026-07-29/",
     evaluationAsOf: "29 July 2026",
-    jobTitle: "AI & Knowledge Quality Analyst",
-    secondaryTitle: "Information Retrieval · Evidence Systems · Model Evaluation · Scientific Verification · Data Quality",
+    jobTitle: "Data & Knowledge Quality Analyst",
+    secondaryTitle: "Information Retrieval · Evidence Synthesis · AI Evaluation",
     headline: "I make information and AI systems more reliable.",
     authorshipStatement: "I use AI-assisted implementation extensively. I define requirements and workflows, inspect code structure and behavior, test implementations, diagnose functional problems, guide iterative changes, deploy releases, and maintain services. I do not present myself as an independent software developer.",
-    role: "AI and knowledge-quality analyst working across information retrieval, data quality, AI evaluation, scientific verification and knowledge integrity.",
-    heroStatement: "Making information and AI systems more reliable through retrieval, verification, data-quality review, model testing and research workflows.",
+    role: "Data and knowledge-quality analyst who retrieves and verifies information, reviews data quality and tests AI behavior.",
+    heroStatement: "Making information and AI systems more reliable through retrieval, verification, data-quality review and model testing.",
     location: "Based in Italy · EU/EEA work-authorised · Open to sponsored international relocation and B2B engagements",
     relocation: "EU/EEA work-authorised; Switzerland: EU/EFTA employment route once an offer is secured; open to employer-sponsored work authorisation elsewhere. International B2B engagements are available where the contracting arrangement is compliant.",
     relocationVisible: "Based in Italy · EU/EEA work-authorised · Open to sponsored international relocation and B2B engagements",
@@ -52,7 +52,7 @@ function createMarioDossier() {
     contactObfuscated: ["me", "mariomarcolongo", "com"]
   },
 
-  summary: "Information-retrieval, data-quality, scientific-verification and AI-evaluation specialist with eight years of auditable public-source and structured-data work, paid scientific fact-checking and writing, community-facing research facilitation, ownership of an open research-participation directory, and sustained adversarial testing of AI systems. The profile supports four application lanes: data quality and research analysis; AI evaluation and model behavior; knowledge integrity, trust and investigations; and research, editorial and community operations. Public claims are reported with explicit evidence boundaries, while technical implementation is described accurately as code-literate, AI-assisted operations rather than independent software development.",
+  summary: "Data and knowledge-quality analyst with eight years of auditable public-source and structured-data work, paid scientific fact-checking and writing, community-facing research facilitation, leadership of an open research-participation directory and sustained AI model testing. The profile supports four application lanes: data quality and research analysis; AI evaluation and model behavior; source quality, trust and investigations; and research, editorial and community coordination. Public claims distinguish evidence from inference, while technical work is described accurately as AI-assisted delivery rather than independent software development.",
 
   pillars: [
     {
@@ -89,13 +89,13 @@ function createMarioDossier() {
       ]
     },
     {
-      category: "TECHNICAL OPERATIONS",
+      category: "TECHNICAL DELIVERY",
       icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>`,
-      title: "Code-Literate, AI-Assisted Technical Operations",
+      title: "Requirements, Testing & Technical Delivery",
       lead: "Defining requirements, inspecting code structure and behavior, testing implementations, diagnosing functional problems and operating deployed services.",
       desc: "Uses coding agents for implementation support while personally defining requirements and workflows, reading code structure, testing behavior, identifying functional issues, coordinating revisions, deploying releases and maintaining services. This is not presented as independent software development.",
       highlights: [
-        { label: "Technical Operations", detail: "Requirements, code reading, functional testing, deployment and maintenance" },
+        { label: "Technical delivery", detail: "Requirements, code reading, functional testing, deployment and maintenance" },
         { label: "Delivery Model", detail: "AI-assisted implementation with explicit ownership of verification and operational behavior" }
       ]
     }
@@ -116,7 +116,7 @@ function createMarioDossier() {
       oneLiner: "Public aggregate record of self-directed model-behavior evaluation across chat, multimodal, agentic tool-use and indirect prompt-injection challenges.",
       description: "Self-directed model-behavior evaluation conducted through the Gray Swan Proving Ground. The dated 29 July 2026 screenshot shows Proving Ground rank #74, top 6%, with 113 platform-recorded total breaks; the same profile shows Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions. Aggregate counts and selected public labels are presented with explicit evidence limitations; complete prompts, outputs, model versions and adjudication materials are not reproduced.",
       role: "Model-Behavior Evaluator",
-      tech: ["Adversarial Evaluation", "Prompt Injection", "Agentic Tool-Use", "Multimodal Safety", "Evidence-Bound Reporting"],
+      tech: ["Adversarial Evaluation", "Prompt Injection", "Agentic Tool-Use", "Multimodal Safety", "Evidence Limits & Reporting"],
       links: {
         caseStudy: "/security",
         profile: "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf"
@@ -132,7 +132,7 @@ function createMarioDossier() {
       title: "Yourself to Science™ | Open Research-Participation Directory",
       oneLiner: "An open-source directory indexing more than 55 clinical studies, biobanks, donation programs, registries and other research initiatives.",
       description: "Founded, designed and operate an open-source research-participation directory indexing more than 55 initiatives. Defined the inclusion model, verification workflow, provenance fields, licensing structure and machine-readable metadata requirements, including JSON-LD, RDF Turtle/VoID, OpenAPI and an MCP interface. Technical implementation is AI-assisted and personally verified through requirements, code reading, functional testing and operational maintenance.",
-      role: "Founder & Research-Workflow Owner",
+      role: "Founder & Project Lead",
       tech: ["Research Verification", "Metadata & Provenance", "JSON-LD", "FAIRsharing", "Zenodo", "OpenAPI", "MCP"],
       links: {
         website: "https://yourselftoscience.org",
@@ -325,7 +325,7 @@ function createMarioDossier() {
 
   experience: [
     {
-      role: "Founder & Research-Workflow Owner",
+      role: "Founder & Project Lead",
       org: "Yourself to Science™",
       tag: "Independent project",
       period: "Aug 2024 — Present",
@@ -499,9 +499,9 @@ function createMarioDossier() {
     "AI Safety Evaluation & Adversarial Testing: Exploratory model-behavior testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection.",
     "Scientific Verification & Evidence Synthesis: Primary-source fact-checking, bibliographic research, claim decomposition, evidence screening, source-quality assessment and cross-source corroboration.",
     "Data Visualization: SVG vector diagrams, Tableau Public, Flourish and open-data publication.",
-    "Evaluation Operations: Test planning, evidence capture, reproducibility notes, taxonomy thinking, issue classification, evidence-bound reporting and mitigation-retesting concepts.",
-    "Code-Literate Technical Operations: Requirements definition, codebase reading and behavior inspection, functional testing, issue diagnosis, deployment operations and service maintenance.",
-    "AI-Assisted Technical Workflow: Uses coding agents for implementation support while personally inspecting structure and behavior, testing results and coordinating revisions; not independent software development.",
+    "Evaluation Planning & Reporting: Test planning, evidence capture, reproducibility notes, taxonomy thinking, issue classification, reporting that separates evidence from inference and mitigation-retesting concepts.",
+    "Technical Delivery: Requirements definition, codebase reading and behavior inspection, functional testing, issue diagnosis, deployment and service maintenance.",
+    "AI-Assisted Implementation: Uses coding agents for implementation support while personally inspecting structure and behavior, testing results and coordinating revisions; not independent software development.",
     "Open Science & Structured Data: Wikimedia, Wikidata, FAIRsharing, Zenodo, ENA records, JSON-LD, RDF Turtle/VoID, OpenAPI and MCP interfaces.",
     "Web & Cloud Operations: WordPress, HTML/CSS modification, Git/GitHub, JSON, REST APIs, AWS Lambda, Cloudflare Pages, DNS/SSL and CI/CD operations.",
     "Languages: Italian — native. English — C1 overall (EF SET 68/100), with advanced technical reading and professional/technical writing."
@@ -513,7 +513,7 @@ function createMarioDossier() {
     "AI Safety Evaluation & Adversarial Testing: Exploratory model-behavior testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection.",
     "Scientific Verification & Evidence Synthesis: Primary-source fact-checking, bibliographic research, claim decomposition, evidence screening and cross-source corroboration.",
     "Data Visualization: SVG vector diagrams, Tableau Public, Flourish and open-data publication.",
-    "Code-Literate Technical Operations: Requirements definition, codebase reading and behavior inspection, functional testing, issue diagnosis, deployment operations and AI-assisted implementation workflows.",
+    "Technical Delivery: Requirements definition, codebase reading and behavior inspection, functional testing, issue diagnosis, deployment and AI-assisted implementation.",
     "Languages: Italian — native. English — C1 overall (EF SET 68/100), with advanced technical reading and professional/technical writing."
   ]
   };

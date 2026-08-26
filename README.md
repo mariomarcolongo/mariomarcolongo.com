@@ -1,7 +1,7 @@
 # Mario Marcolongo — Portfolio & Application CV System
 
-> **Data Quality, Information Retrieval & AI Evaluation Specialist**<br>
-> Evidence Verification · Model Behavior · Knowledge Integrity · Research Operations
+> **Data & Knowledge Quality Analyst**<br>
+> Information Retrieval · Evidence Synthesis · AI Evaluation · Source Verification
 
 Live website: [mariomarcolongo.com](https://mariomarcolongo.com)
 
@@ -9,30 +9,30 @@ Live website: [mariomarcolongo.com](https://mariomarcolongo.com)
 
 This repository generates Mario Marcolongo's public portfolio, evidence record, work-sample pages, machine-readable dossiers and role-specific application CVs.
 
-The public positioning is intentionally ambitious but evidence-bound. It presents current strengths in exploratory AI evaluation, paid scientific verification, research/product operations and knowledge integrity without claiming independent software-development, penetration-testing or senior red-team-engineering experience that has not yet been demonstrated.
+The public positioning is intentionally ambitious and source-backed. It presents current strengths in exploratory AI evaluation, paid scientific verification, research and product delivery, and source-quality investigation without claiming independent software-development, penetration-testing or senior red-team-engineering experience that has not yet been demonstrated.
 
 ## Career hierarchy
 
 The homepage prioritizes the evidence most relevant to higher-upside roles and to realistic paths toward them:
 
-1. **AI evaluation and model behavior** — exploratory adversarial testing, safeguards support, evaluation operations and evidence-bound reporting.
-2. **Scientific AI quality and research data** — primary-source verification, provenance, metadata, domain-expert review and research operations.
-3. **Trust, safety and knowledge integrity** — source provenance, public-record investigation, structured-data integrity and OSINT support.
-4. **Research, editorial and community operations** — a credible bridge path for evidence-synthesis, editorial-production and participant-facing roles.
+1. **AI evaluation and model behavior** — exploratory adversarial testing, safeguards support, test planning and evidence reporting.
+2. **Scientific AI quality and research data** — primary-source verification, provenance, metadata, domain-expert review and research support.
+3. **Trust, safety and source quality** — source provenance, public-record investigation, structured-data review and public-source research support.
+4. **Research, editorial and community coordination** — a credible bridge path for evidence synthesis, editorial production and participant-facing roles.
 
-Longer-term targets include automated evaluation, AI-safety program or technical operations, evaluation infrastructure and higher-responsibility trust/integrity work. Engineering-heavy roles remain a development target requiring independently understood Python, software-testing and security experience.
+Longer-term targets include automated evaluation, AI-safety programs, evaluation infrastructure and higher-responsibility trust and safety work. Engineering-heavy roles remain a development target requiring independently understood Python, software-testing and security experience.
 
 ## Public routes
 
 - **Portfolio (`/`)** — readable metric-led evidence cards, three principal cases, supporting products and curated data artifacts, an explicit high-autonomy working profile, concise experience and targeted CV selection.
 - **Notandia / MDPI Filter continuity (`/mdpi-filter.html`)** — stable canonical record connecting the former MDPI Filter branding and repositories to the current Notandia browser-extension and Zotero projects.
 - **AI Evaluation Record (`/security.html`)** — scope, methodology, platform-reported Gray Swan activity, the live participant profile as the primary destination, dated evidence and explicit limitations.
-- **Knowledge Integrity Work Samples (`/integrity.html`)** — provenance, health-information monitoring, entity reconciliation and structured-data cases.
-- **Research Operations Record (`/research-operations.html`)** — evidence-bound public case study of accessibility-aware qualitative research support and facilitation.
+- **Source Verification Work Samples (`/integrity.html`)** — provenance, health-information monitoring, entity reconciliation and structured-data cases.
+- **Research Operations Record (`/research-operations.html`)** — source-backed public case study of accessibility-aware qualitative research support and facilitation.
 - **AI Evaluation & Model Behavior CV (`/cv-resume.html`)** — two-page application document.
 - **Scientific AI Quality & Research Data CV (`/cv-research.html`)** — two-page application document.
-- **Trust, Safety & Knowledge Integrity CV (`/cv-integrity.html`)** — two-page application document.
-- **Research, Editorial & Community Operations CV (`/cv-editorial.html`)** — two-page bridge document.
+- **Trust, Safety & Source Quality CV (`/cv-integrity.html`)** — two-page application document.
+- **Research, Editorial & Community Coordinator CV (`/cv-editorial.html`)** — two-page bridge document.
 - **Master CV (`/cv.html`)** — comprehensive evidence archive; not the default application attachment.
 
 All four role-based application CVs are verified as exactly two A4 pages. The master CV is intentionally comprehensive and may be longer. Former company-specific CV URLs redirect to the closest durable role-based document rather than remaining independently maintained.

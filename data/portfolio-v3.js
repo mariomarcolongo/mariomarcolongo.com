@@ -1,9 +1,9 @@
 const C = require("./investigation-cases.js");
 
 const PORTFOLIO_V3 = {
-  umbrella: "Research, Evidence & AI Operations",
-  headline: "I investigate claims, test systems, and build evidence workflows.",
-  introduction: "My work sits where research, public knowledge, AI behavior and technical operations meet. I verify scientific evidence, recover and reconcile public records, operate open research systems and test how AI products behave under pressure. The portfolio is designed for several credible role families rather than one narrow title.",
+  umbrella: "Data Quality, Evidence Research & AI Evaluation",
+  headline: "I investigate claims, test systems, and build evidence-based processes.",
+  introduction: "My work sits where research, public knowledge, AI behavior and technical delivery meet. I verify scientific evidence, recover and reconcile public records, maintain open research systems and test how AI products behave under pressure. The portfolio is designed for several credible role families rather than one narrow title.",
   metrics: [
     { value: "4,317", label: "Auditable Wikimedia contributions", detail: "Eight years across Wikipedia, Wikidata and Commons" },
     { value: "80", label: "Published content contributions", detail: "55 videos · 4 articles · 21 short-form pieces" },
@@ -22,13 +22,13 @@ const PORTFOLIO_V3 = {
       roles: [
         "AI safety evaluator",
         "AI content red-team analyst",
-        "Safeguards or evaluation operations",
+        "Safeguards or evaluation support",
         "Model-quality and adversarial QA"
       ],
       evidence: [
         "110 platform-displayed Proving Ground breaks; #75 and top 6%",
         "Chat, image, agentic tool-use and indirect prompt-injection testing",
-        "Evidence-bound public methodology and limitations"
+        "Public methodology and explicit evidence limits"
       ],
       next: "The engineering ceiling rises after independently verifiable Python automation, application-security practice and paid team experience.",
       cv: "/cv-resume",
@@ -39,7 +39,7 @@ const PORTFOLIO_V3 = {
       number: "02",
       color: "coral",
       label: "Strong immediate bridge lane",
-      title: "Research, Editorial & Community Operations",
+      title: "Research, Editorial & Community Coordination",
       summary: "Evidence synthesis, editorial production, research coordination and sensitive community-facing work, including remote facilitation with autistic participants. This is the best lens for Campbell-style roles and mission-driven evidence organizations.",
       roles: [
         "Assistant editor or editorial coordinator",
@@ -61,11 +61,11 @@ const PORTFOLIO_V3 = {
       number: "03",
       color: "violet",
       label: "Credible adjacent high-upside lane",
-      title: "Knowledge Integrity, Trust & Investigations",
+      title: "Source Quality, Trust & Investigations",
       summary: "Archival OSINT, source-quality auditing, public-record reconciliation, structured-data integrity and content-risk analysis, grounded in attributed public work rather than a generic OSINT skills list.",
       roles: [
         "Trust & safety analyst",
-        "Knowledge-integrity or content-integrity operations",
+        "Source-quality or content-integrity support",
         "OSINT and public-record researcher",
         "AI abuse and policy-analysis support"
       ],
@@ -218,7 +218,7 @@ const PORTFOLIO_V3 = {
     {
       id: "integrity",
       label: "Trust & investigations",
-      title: "Trust, Safety & Knowledge Integrity CV",
+      title: "Trust, Safety & Source Quality CV",
       body: "For content integrity, archival and public-record research, OSINT support, trust & safety and abuse-analysis roles.",
       href: "/cv-integrity"
     },

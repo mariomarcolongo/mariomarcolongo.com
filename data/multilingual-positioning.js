@@ -61,7 +61,7 @@ if (masterEntropy) {
   ];
   masterEntropy.resumeBullets = [
     `Delivered ${career.audience.projects} documented published content contributions—${career.audience.videoProjects} YouTube videos, ${career.audience.articles} articles and ${career.audience.shortForm} short-form pieces—through evidence review, English-to-Italian scientific localization, content production and publishing operations.`,
-    'Designed and built entropyforlife.it in WordPress and manage its responsive design, publishing and OVHcloud technical operations.'
+    'Designed and built entropyforlife.it in WordPress and manage its responsive design, publishing, OVHcloud hosting, DNS, SSL and technical SEO.'
   ];
 }
 
@@ -91,7 +91,7 @@ if (entropyProject) {
     `Conduct recurring primary-literature research, scientific fact-checking and English-to-Italian scientific localization across ${career.audience.projects} documented published content contributions: ${career.audience.videoProjects} YouTube videos, ${career.audience.articles} co-authored articles and ${career.audience.shortForm} short-form pieces. Predominantly English-language evidence is adapted into accurate Italian scripts, articles, visualizations and short-form content with attention to terminology, source meaning, cultural context and audience comprehension. Entropy for Life is an Italian science-communication brand with ${career.audience.youtubeSubscribers} YouTube subscribers and ${career.audience.youtubeViewsExact} channel views as of ${career.audience.asOf}. Depending on the assignment, work also includes data analysis, slides, on-screen assets, short-form content and selected thumbnail concepts or production. Designed and built entropyforlife.it in WordPress and operate its responsive design, publishing and OVHcloud technical stack. Platform metrics describe the production environment, not a personal audience.`;
   entropyProject.tech = [
     'Scientific Evidence Review', 'English-to-Italian Localization', 'Terminology & Content Quality',
-    'Script Development', 'Data Visualization', 'Presentation Assets', 'WordPress', 'Technical Operations'
+    'Script Development', 'Data Visualization', 'Presentation Assets', 'WordPress', 'Website Delivery'
   ];
   entropyProject.highlights = [
     `Production Scale: ${career.audience.youtubeViews} YouTube views · ${career.audience.youtubeSubscribers} subscribers · ${career.audience.youtubeVideos} published videos`,
@@ -155,7 +155,7 @@ if (P.editorialCommunity) {
     item.bullets = [
       `Support a small recurring science-communication team across ${career.audience.projects} documented published contributions: ${career.audience.videoProjects} YouTube videos · ${career.audience.articles} articles · ${career.audience.shortForm} short-form pieces.`,
       'Research, fact-check and localize predominantly English-language scientific evidence into accurate Italian scripts, articles, data visualizations, slides, on-screen assets and short-form materials, adapting terminology and explanatory structure for the audience.',
-      'Designed and built entropyforlife.it in WordPress and manage its responsive design, publishing and OVHcloud technical operations.'
+      'Designed and built entropyforlife.it in WordPress and manage its responsive design, publishing, OVHcloud hosting, DNS, SSL and technical SEO.'
     ];
   }
   replaceSkill(
@@ -169,9 +169,9 @@ if (P.editorialCommunity) {
 if (P.integrity) {
   replaceSkill(
     P.integrity,
-    'Knowledge integrity',
-    'Knowledge integrity and multilingual quality',
-    'Claim decomposition, citation checking, cross-language translation and adaptation, terminology consistency, entity reconciliation, structured metadata, rights context and evidence-bound reporting'
+    'Source verification & integrity',
+    'Source verification & multilingual quality',
+    'Claim decomposition, citation checking, cross-language translation and adaptation, terminology consistency, entity reconciliation, structured metadata, rights context and reporting that separates evidence from inference'
   );
 }
 

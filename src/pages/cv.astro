@@ -12,11 +12,11 @@ const pageDescription = "Comprehensive master CV and evidence record for Mario M
 const profileJsonLd = buildProfileGraph(D, "https://mariomarcolongo.com/cv", pageTitle);
 
 const roleAliases = {
-  "Founder & Technical Product Builder": "Founder & Research-Workflow Owner",
+  "Founder & Technical Product Builder": "Founder & Project Lead",
   "Independent Model-Behavior Evaluator": "Model-Behavior Evaluator",
-  "Product Owner & Technical Builder": "Product Owner & AI-Assisted Technical Operator",
-  "Creator & Systems Builder": "Creator & Technical Operator",
-  "Creator & Systems Designer": "Creator & Concept and Requirements Designer"
+  "Product Owner & Technical Builder": "Product Owner & Technical Delivery Lead",
+  "Creator & Systems Builder": "Creator & Product Lead",
+  "Creator & Systems Designer": "Creator & Product Requirements Lead"
 };
 
 const tagAliases = {
@@ -37,17 +37,17 @@ function cleanTag(tag) {
 
 function cleanText(value) {
   return String(value || "")
-    .replaceAll("Founder and technical builder", "Founder and research-workflow owner")
-    .replaceAll("Founder & Technical Product Builder", "Founder & Research-Workflow Owner")
-    .replaceAll("Product Owner & Technical Builder", "Product Owner & AI-Assisted Technical Operator")
-    .replaceAll("Creator & Systems Builder", "Creator & Technical Operator")
+    .replaceAll("Founder and technical builder", "Founder and project lead")
+    .replaceAll("Founder & Technical Product Builder", "Founder & Project Lead")
+    .replaceAll("Product Owner & Technical Builder", "Product Owner & Technical Delivery Lead")
+    .replaceAll("Creator & Systems Builder", "Creator & Product Lead")
     .replaceAll("Designed and iteratively validated a local downstream bioinformatics workflow", "Specified requirements for and iteratively validated a local downstream bioinformatics workflow")
     .replaceAll("custom Python VEP extraction scripts", "AI-assisted Python VEP extraction scripts")
     .replaceAll("Designed the analytical requirements and processed", "Defined the analytical requirements and used Terra.bio workflows to process")
     .replaceAll("codebase navigation and modification", "codebase reading and behavior inspection")
     .replaceAll("generated-code review", "code structure and behavior inspection")
     .replaceAll("debugging", "functional issue diagnosis")
-    .replaceAll("technical builder", "research-workflow owner");
+    .replaceAll("technical builder", "project lead");
 }
 
 function linksFor(item) {
@@ -101,7 +101,7 @@ function linksFor(item) {
       <div class="application-guide-actions">
         <a class="btn btn-primary" href="/cv-resume">AI Safety CV</a>
         <a class="btn" href="/cv-editorial">Editorial & Community CV</a>
-        <a class="btn" href="/cv-integrity">Trust & Knowledge Integrity CV</a>
+        <a class="btn" href="/cv-integrity">Trust & Source Quality CV</a>
         <a class="btn" href="/cv-research">Research & Data Quality CV</a>
         <button class="btn" type="button" onclick="window.print()">Print / Save PDF</button>
       </div>
@@ -112,9 +112,9 @@ function linksFor(item) {
         <div>
           <div class="master-eyebrow">Master CV · updated July 2026</div>
           <h1 class="master-name">{P.shared.name}</h1>
-          <div class="master-title">Research · Evidence · Knowledge Integrity · AI Operations</div>
+          <div class="master-title">Data Quality · Evidence Research · AI Evaluation</div>
           <p class="master-summary">
-            Evidence-focused specialist combining paid scientific fact-checking and writing, content and research operations, audience-focused visual packaging, public-source and provenance work, open research workflows, structured-data quality and adversarial model testing. Code-literate and able to inspect structure and behavior, define requirements, test implementations and guide AI-assisted technical iteration; not presented as an independent software developer.
+            Data and knowledge-quality analyst combining paid scientific fact-checking and writing, research support, content production, public-source and provenance work, open research directories, structured-data quality and adversarial model testing. Able to inspect structure and behavior, define requirements, test implementations and guide AI-assisted technical delivery; not presented as an independent software developer.
           </p>
         </div>
         <div class="master-contact">

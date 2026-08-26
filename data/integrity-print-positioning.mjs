@@ -36,10 +36,10 @@ if (integrity.evidence?.[2]) {
 }
 
 const multilingualSkill = integrity.skills?.find(
-  ([title]) => title === 'Knowledge integrity and multilingual quality' || title === 'Knowledge integrity'
+  ([title]) => title === 'Source verification & multilingual quality' || title === 'Source verification & integrity'
 );
 if (multilingualSkill) {
-  multilingualSkill[0] = 'Knowledge integrity';
+  multilingualSkill[0] = 'Source verification & integrity';
   multilingualSkill[1] = 'Claim-to-source auditing, provenance, citation, terminology and metadata review';
 }
 

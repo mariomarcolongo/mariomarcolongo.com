@@ -6,7 +6,7 @@
         {
           "href": "https://mariomarcolongo.com/llms.txt",
           "type": "text/markdown",
-          "title": "Mario Marcolongo — Evidence-Bound Professional Summary"
+          "title": "Mario Marcolongo — Source-Backed Professional Summary"
         },
         {
           "href": "https://mariomarcolongo.com/llms-full.txt",
@@ -33,12 +33,12 @@
         {
           "href": "https://mariomarcolongo.com/cv-editorial",
           "type": "text/html",
-          "title": "Research, Editorial & Content Operations Application CV"
+          "title": "Research, Editorial & Community Coordinator Application CV"
         },
         {
           "href": "https://mariomarcolongo.com/cv-integrity",
           "type": "text/html",
-          "title": "Trust, Safety & Knowledge Integrity Application CV"
+          "title": "Trust, Safety & Source Quality Application CV"
         },
         {
           "href": "https://mariomarcolongo.com/cv",
@@ -53,12 +53,12 @@
         {
           "href": "https://mariomarcolongo.com/integrity",
           "type": "text/html",
-          "title": "Knowledge Integrity Work Samples"
+          "title": "Source Verification Work Samples"
         },
         {
           "href": "https://mariomarcolongo.com/research-operations",
           "type": "text/html",
-          "title": "Evidence-Bound Research Operations Case Study"
+          "title": "Source-Backed Research Support Case Study"
         },
         {
           "href": "https://mariomarcolongo.com/.well-known/agent-card.json",
@@ -73,7 +73,7 @@
         {
           "href": "https://mariomarcolongo.com/.well-known/agent-skills/index.json",
           "type": "application/json",
-          "title": "Evidence-Bound Skills Index"
+          "title": "Source-Backed Skills Index"
         }
       ],
       "service-doc": [

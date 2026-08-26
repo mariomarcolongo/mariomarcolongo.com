@@ -2,14 +2,14 @@ const APPLICATION_PROFILES = {
   aiSafety: {
     id: "ai-safety",
     documentLabel: "Role-family application CV",
-    title: "AI Evaluation & Model Behavior Specialist",
-    subtitle: "Model behavior testing · adversarial QA · evidence-bound reporting · evaluation operations",
-    summary: "AI evaluation and research-verification specialist with sustained self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. Gray Swan Proving Ground participant ranked #74 (top 6%) on 29 July 2026, with 113 platform-recorded total breaks; the same profile showed Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions. Brings eight years of auditable claim verification, paid scientific fact-checking, structured research workflows and clear evidence-bound reporting.",
+    title: "AI Evaluation & Model Behavior Analyst",
+    subtitle: "Model testing · adversarial QA · evidence reporting · test planning",
+    summary: "AI evaluation and research-verification analyst with sustained self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. Gray Swan Proving Ground participant ranked #74 (top 6%) on 29 July 2026, with 113 platform-recorded total breaks; the same profile showed Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions. Brings eight years of auditable claim verification, paid scientific fact-checking, structured research processes and reporting that separates evidence from inference.",
     fit: [
       "AI evaluation and safeguards operations",
       "AI content red teaming and adversarial QA",
       "Model behavior, trust & safety and policy testing",
-      "Human-data quality, grading and evaluation operations"
+      "Human-data quality, grading and evaluation support"
     ],
     strengths: [
       { value: "113", label: "Platform-recorded Proving Ground breaks", detail: "#74 · top 6% · 29 July 2026" },
@@ -48,7 +48,7 @@ const APPLICATION_PROFILES = {
         ]
       },
       {
-        role: "Founder & Research-Workflow Owner",
+        role: "Founder & Project Lead",
         organization: "Yourself to Science™",
         period: "Aug 2024 — Present",
         links: [
@@ -81,9 +81,9 @@ const APPLICATION_PROFILES = {
     ],
     skills: [
       ["AI safety testing", "Exploratory adversarial testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection"],
-      ["Evaluation operations", "Test planning, evidence capture, reproducibility notes, taxonomy thinking, issue classification, severity-oriented reporting and mitigation-retesting concepts"],
+      ["Evaluation planning & reporting", "Test planning, evidence capture, reproducibility notes, taxonomy thinking, issue classification, severity-oriented reporting and mitigation-retesting concepts"],
       ["Research verification", "Primary-source fact-checking, bibliographic research, claim decomposition, source-quality assessment, cross-source corroboration and evidence screening"],
-      ["Technical operations", "Codebase reading and behavior inspection, requirements definition, functional testing, AI-assisted implementation workflows, Git/GitHub, JSON, REST APIs, WordPress, Cloudflare Pages and AWS Lambda deployment"],
+      ["Technical delivery", "Codebase reading and behavior inspection, requirements definition, functional testing, AI-assisted implementation, Git/GitHub, JSON, REST APIs, WordPress, Cloudflare Pages and AWS Lambda deployment"],
       ["Communication", "Technical and professional English writing, concise findings, evidence limitations and explanations for mixed technical/non-technical audiences"]
     ]
   },
@@ -92,8 +92,8 @@ const APPLICATION_PROFILES = {
     id: "research-quality",
     documentLabel: "Role-family application CV",
     title: "Data Quality & Research Analyst",
-    subtitle: "Information retrieval · data quality · evidence verification · data visualization · research operations",
-    summary: "Information-retrieval, evidence-verification and data-quality specialist with eight years of auditable work across scientific sources, structured data and public knowledge systems. Paid fact-checker and writer for Entropy for Life, founder of an open research-participation directory with documented verification and metadata workflows, and public contributor across Wikipedia, Wikidata and Wikimedia Commons. Combines source retrieval, provenance discipline, data-quality thinking, scientific visualization and practical technical operations.",
+    subtitle: "Information retrieval · data quality · source verification · data visualization · research support",
+    summary: "Information-retrieval, evidence-verification and data-quality analyst with eight years of auditable work across scientific sources, structured data and public knowledge systems. Paid fact-checker and writer for Entropy for Life, founder of an open research-participation directory with documented verification and metadata workflows, and public contributor across Wikipedia, Wikidata and Wikimedia Commons. Combines source retrieval, provenance discipline, data-quality thinking, scientific visualization and practical technical delivery.",
     fit: [
       "Data quality and information-quality analysis",
       "Research analysis and evidence verification",
@@ -122,7 +122,7 @@ const APPLICATION_PROFILES = {
         ]
       },
       {
-        role: "Founder & Research-Workflow Owner",
+        role: "Founder & Project Lead",
         organization: "Yourself to Science™",
         period: "Aug 2024 — Present",
         links: [
@@ -171,16 +171,16 @@ const APPLICATION_PROFILES = {
       ["Data quality", "Structured metadata, provenance, entity reconciliation, taxonomy design, validation rules, documentation and quality-control workflows"],
       ["Data visualization", "70+ published biomedical, epidemiological and public-health visualizations across Wikimedia Commons, Tableau Public and Flourish"],
       ["Research analysis", "Claim decomposition, evidence screening, conflicting-source reconciliation, uncertainty documentation and synthesis for decision-ready outputs"],
-      ["Technical operations", "Codebase reading and behavior inspection, requirements definition, functional testing, AI-assisted implementation workflows, Git/GitHub, JSON, REST APIs, WordPress, DNS/SSL and cloud deployment operations"]
+      ["Technical delivery", "Codebase reading and behavior inspection, requirements definition, functional testing, AI-assisted implementation, Git/GitHub, JSON, REST APIs, WordPress, DNS/SSL and cloud deployment"]
     ]
   },
 
   editorialCommunity: {
     id: "editorial-community",
     documentLabel: "Role-family application CV",
-    title: "Research, Editorial & Community Operations Specialist",
-    subtitle: "Evidence synthesis · editorial coordination · research programs · community engagement · AI-enabled workflows",
-    summary: "Research, editorial and community-operations specialist with paid experience supporting scientific content production, primary-source fact-checking, professional writing and web operations. Co-developed and facilitated approximately 4–5 structured remote focus-group sessions, typically lasting 1–2 hours, with autistic participants discussing sensitive sexuality and relationship topics under Marta Panzeri at the University of Padua DPSS. Also contributed evidence research to 55+ published YouTube video projects and four co-authored articles and founded an open research-participation directory covering more than 55 initiatives.",
+    title: "Research, Editorial & Community Coordinator",
+    subtitle: "Evidence synthesis · editorial coordination · research participation · community engagement · AI-assisted tools",
+    summary: "Research, editorial and community coordinator with paid experience supporting scientific content production, primary-source fact-checking, professional writing and website delivery. Co-developed and facilitated approximately 4–5 structured remote focus-group sessions, typically lasting 1–2 hours, with autistic participants discussing sensitive sexuality and relationship topics under Marta Panzeri at the University of Padua DPSS. Also contributed evidence research to 55+ published YouTube video projects and four co-authored articles and founded an open research-participation directory covering more than 55 initiatives.",
     fit: [
       "Assistant editor and editorial operations",
       "Evidence-synthesis program coordination",
@@ -225,7 +225,7 @@ const APPLICATION_PROFILES = {
         ]
       },
       {
-        role: "Founder & Research-Workflow Owner",
+        role: "Founder & Project Lead",
         organization: "Yourself to Science™",
         period: "Aug 2024 — Present",
         links: [
@@ -261,19 +261,19 @@ const APPLICATION_PROFILES = {
       ["Project coordination", "Independent prioritization, overlapping workstreams, issue tracking, progress documentation, release coordination and follow-through"],
       ["Community engagement", "Participant recruitment, sensitive-topic moderation, accessibility-aware communication, two-person facilitation handoffs and support for distributed communities"],
       ["Digital communications", "Professional and technical writing, WordPress publishing, website operations, technical SEO and content presentation"],
-      ["AI-enabled workflows", "Experimenting with AI for research, drafting, implementation support, quality checks and workflow acceleration while retaining human verification"]
+      ["AI-assisted tools", "Use AI for research, drafting, implementation support and quality checks, with human verification of results"]
     ]
   },
 
   integrity: {
     id: "knowledge-integrity",
     documentLabel: "Role-family application CV",
-    title: "Trust, Safety & Knowledge Integrity Specialist",
-    subtitle: "Open-source research · source provenance · content integrity · structured-data verification · adversarial analysis",
-    summary: "Knowledge-integrity and open-source research specialist with eight years of auditable public work across Wikipedia, Wikidata and Wikimedia Commons, paid scientific fact-checking for a large science-communication project, and sustained adversarial testing of AI systems. Experience includes source provenance, rights and authorship verification, public-record reconciliation, health-information monitoring, structured metadata and evidence-bound reporting. Best suited to analyst and operations roles in trust & safety, content integrity, investigations, knowledge quality and abuse-risk research rather than penetration-testing engineering.",
+    title: "Trust, Safety & Source Quality Analyst",
+    subtitle: "Public-source research · source verification · content integrity · structured-data review · adversarial analysis",
+    summary: "Trust, safety and source-quality analyst with eight years of auditable public work across Wikipedia, Wikidata and Wikimedia Commons, paid scientific fact-checking for a large science-communication project, and sustained adversarial testing of AI systems. Experience includes source provenance, rights and authorship verification, public-record reconciliation, health-information monitoring, structured metadata and reporting that separates evidence from inference. Best suited to analyst and support roles in trust & safety, content integrity, investigations, knowledge quality and abuse-risk research rather than penetration-testing engineering.",
     fit: [
       "Trust & safety and content-integrity operations",
-      "Knowledge integrity and public-record investigations",
+      "Source quality and public-record investigations",
       "OSINT research and source-provenance analysis",
       "AI abuse, policy and adversarial-analysis support"
     ],
@@ -345,8 +345,8 @@ const APPLICATION_PROFILES = {
       }
     ],
     skills: [
-      ["Open-source research", "Advanced web and scholarly search, public-record triangulation, archival comparison, source provenance and cross-source corroboration"],
-      ["Knowledge integrity", "Claim decomposition, citation checking, entity reconciliation, structured metadata, rights context and evidence-bound reporting"],
+      ["Public-source research", "Advanced web and scholarly search, public-record triangulation, archival comparison, source provenance and cross-source corroboration"],
+      ["Source verification & integrity", "Claim decomposition, citation checking, entity reconciliation, structured metadata, rights context and reporting that separates evidence from inference"],
       ["Trust & safety analysis", "Content-risk thinking, ambiguous-case investigation, taxonomy development, policy-boundary testing and escalation-ready documentation"],
       ["AI adversarial analysis", "Prompt and jailbreak analysis, indirect prompt injection, multi-turn behavior, multimodal inputs and agentic tool-use testing"],
       ["Communication", "Concise investigative writing, uncertainty communication, reproducibility notes and explanations for technical and non-technical audiences"]

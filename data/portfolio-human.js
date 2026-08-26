@@ -87,7 +87,7 @@ function createPortfolioHuman() {
     {
       number: "04",
       label: "Supporting",
-      title: "Research information systems & visualization",
+      title: "Research directories, tools & visualization",
       body: "Structured records, provenance rules, maintained tools and data visualizations for recurring research-information problems."
     }
   ],
@@ -116,7 +116,7 @@ function createPortfolioHuman() {
       label: "Scientific fact-checking",
       title: "Fact-checking and producing scientific content before publication.",
       lead: "Entropy for Life is an Italian science-communication brand with 267K YouTube subscribers and 480K+ combined public following across YouTube, Instagram and TikTok.",
-      action: "Primary-literature research and scientific fact-checking are recurring. Depending on the assignment, I also contribute to script development, data analysis and visualization, slides and on-screen assets, short-form content and selected thumbnail concepts or production. I designed and built entropyforlife.it in WordPress and manage its responsive design, publishing and OVHcloud technical operations.",
+      action: "Primary-literature research and scientific fact-checking are recurring. Depending on the assignment, I also contribute to script development, data analysis and visualization, slides and on-screen assets, short-form content and selected thumbnail concepts or production. I designed and built entropyforlife.it in WordPress and manage responsive design, publishing, hosting, DNS, SSL and technical SEO.",
       result: "80 documented published content contributions: 55 YouTube videos, four co-authored articles and 21 short-form pieces. The official work record also indexes selected thumbnail work; thumbnail contributions overlap with video projects and are not added to the 80.",
       boundary: "The audience belongs to Entropy for Life, not to me, and the combined platform total is not a count of unique people. Quantified CTR or watch-time lift should only be claimed when comparable channel analytics can be published.",
       href: ENTROPY_WORK_URL,
@@ -137,7 +137,7 @@ function createPortfolioHuman() {
     {
       id: "knowledge-integrity",
       number: "03",
-      label: "Knowledge integrity & investigation",
+      label: "Source verification & investigation",
       title: "Tracing privacy, policy and evidence changes under dispute.",
       lead: "My public record includes consumer-genomics privacy research, corporate-source reconciliation, archival recovery, content-governance review and biomedical evidence synthesis—not a generic claim of OSINT familiarity.",
       action: "I built and maintained the Nebula Genomics privacy record across historical sequencing relationships, changing company statements, archived privacy policies, third-party-data questions, corporate restructuring and litigation coverage. In separate cases, I recovered missing documents for a legally sensitive chronology, audited source quality and bibliometrics during a contentious moderation process, and built a syndromic-autism taxonomy from peer-reviewed literature.",
@@ -222,7 +222,7 @@ function createPortfolioHuman() {
 
   moreWork: [
     {
-      title: "Knowledge integrity & investigation records",
+      title: "Source verification & investigation records",
       href: "/integrity"
     },
     {
@@ -263,27 +263,27 @@ function createPortfolioHuman() {
   applicationDocuments: [
     {
       title: "Data Quality & Research Analysis",
-      description: "Information retrieval, data quality, evidence verification, data visualization and research operations.",
+      description: "Information retrieval, data quality, source verification, data visualization and research support.",
       href: "/cv-research",
       recommendedFor: "Recommended general CV for analytical, data-quality and research roles"
     },
     {
       title: "AI Evaluation & Model Behavior",
-      description: "Model-behavior testing, adversarial QA, evaluation operations and evidence-bound reporting.",
+      description: "Model testing, adversarial QA, test planning and evidence reporting.",
       href: "/cv-resume",
       recommendedFor: "Specialist CV for AI evaluation and safeguards roles"
     },
     {
-      title: "Trust, Safety & Knowledge Integrity",
+      title: "Trust, Safety & Source Quality",
       description: "Consumer-genomics privacy, archival OSINT, source-quality review, public-record research, content governance and investigation support.",
       href: "/cv-integrity",
       recommendedFor: "Integrity, trust & safety and investigation roles"
     },
     {
-      title: "Research, Editorial & Content Operations",
-      description: "Scientific fact-checking, editorial coordination, audience packaging, evidence synthesis and content operations.",
+      title: "Research, Editorial & Community Coordination",
+      description: "Scientific fact-checking, editorial coordination, research participation, community engagement and content production.",
       href: "/cv-editorial",
-      recommendedFor: "Editorial, content-operations and audience-quality roles"
+      recommendedFor: "Editorial, community-coordination and content-quality roles"
     }
   ]
   };

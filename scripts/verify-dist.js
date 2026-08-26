@@ -205,7 +205,7 @@ const applicationProfiles = [
   ['resume', P.aiSafety, P.aiSafety.title],
   ['research', P.researchQuality, P.researchQuality.title],
   ['editorial', P.editorialCommunity, P.editorialCommunity.title],
-  ['integrityCv', P.integrity, 'Investigations & Knowledge Integrity Analyst']
+  ['integrityCv', P.integrity, 'Investigations & Source Quality Analyst']
 ];
 for (const [name, profile, expectedTitle] of applicationProfiles) {
   const html = pages[name];
@@ -245,10 +245,10 @@ for (const needle of ['Marta Panzeri', 'Department of Developmental Psychology a
 }
 
 const integrityCvText = normalizeHtmlText(pages.integrityCv);
-for (const needle of ['Investigations & Knowledge Integrity Analyst', 'Sensitive Research Operations Contributor', 'Trust & Safety-adjacent analysis', 'Consumer-genomics privacy and corporate-source reconciliation']) {
+for (const needle of ['Investigations & Source Quality Analyst', 'Sensitive Research Operations Contributor', 'Trust & Safety-adjacent analysis', 'Consumer-genomics privacy and corporate-source reconciliation']) {
   assertContains(integrityCvText, needle, 'dist/cv-integrity.html');
 }
-assertNotContains(integrityCvText, 'Trust, Safety & Knowledge Integrity Specialist', 'dist/cv-integrity.html');
+assertNotContains(integrityCvText, 'Trust, Safety & Source Quality Analyst', 'dist/cv-integrity.html');
 pass('Four specialized application CVs and role-specific OSINT weighting checked');
 
 const integrityText = normalizeHtmlText(pages.integrityPage);
@@ -266,8 +266,8 @@ pass('Knowledge-integrity work sample checked');
 const masterText = normalizeHtmlText(pages.cv);
 for (const needle of [
   'Master CV & Evidence Record', 'not presented as an independent software developer', 'AI Safety',
-  'Research & Data Quality', 'Editorial & Community', 'Trust & Knowledge Integrity', 'Marta Panzeri',
-  '36.5M', '80', 'Scientific Content Quality & Operations Contractor',
+  'Research & Data Quality', 'Editorial & Community', 'Trust & Source Quality', 'Marta Panzeri',
+  '36.5M', '80', 'Scientific Research, Fact-Checking & Website Operations Contractor',
   'Consumer-genomics privacy record', 'Investigation work samples',
   'Official Entropy for Life work record', ENTROPY_WORK_URL,
   'Notandia — formerly MDPI Filter'

@@ -24,13 +24,13 @@ const DOCUMENTS = [
   },
   {
     route: 'cv-editorial.html',
-    output: 'Mario Marcolongo — Research Editorial & Community Operations CV.pdf',
-    label: 'Research, Editorial & Community Operations CV'
+    output: 'Mario Marcolongo — Research Editorial & Community Coordinator CV.pdf',
+    label: 'Research, Editorial & Community Coordinator CV'
   },
   {
     route: 'cv-integrity.html',
-    output: 'Mario Marcolongo — Trust Safety & Knowledge Integrity CV.pdf',
-    label: 'Trust, Safety & Knowledge Integrity CV'
+    output: 'Mario Marcolongo — Trust Safety & Source Quality CV.pdf',
+    label: 'Trust, Safety & Source Quality CV'
   },
 ];
 

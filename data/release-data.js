@@ -73,9 +73,9 @@ D.identity.buildVersion = "v2026.07.29";
 D.identity.grayswanArchiveUrl = GS.evidencePath;
 D.identity.evaluationAsOf = GS.asOf;
 D.identity.role =
-  `AI evaluation and research operations specialist. Gray Swan Proving Ground snapshot: #${GS.rank} (${GS.percentile.toLowerCase()}) with ${GS.totalBreaks} platform-displayed total breaks on ${GS.asOf}.`;
+  `Data and knowledge-quality analyst. Gray Swan Proving Ground snapshot: #${GS.rank} (${GS.percentile.toLowerCase()}) with ${GS.totalBreaks} platform-displayed total breaks on ${GS.asOf}.`;
 D.summary =
-  `Research, evidence and AI operations specialist with eight years of auditable public-source and structured-data work, paid scientific fact-checking and editorial production, community-facing research facilitation, ownership of an open research-participation directory, and sustained adversarial testing of AI systems. On ${GS.asOf}, the Gray Swan Proving Ground profile displayed rank #${GS.rank} (${GS.percentile.toLowerCase()}) and ${GS.totalBreaks} total breaks. Entropy for Life work covers ${ENTROPY.totalProjects} documented published projects: ${ENTROPY.videoProjects} YouTube video projects and ${ENTROPY.articles} co-authored articles. Technical implementation is described accurately as code-literate, AI-assisted operations rather than independent software development.`;
+  `Data and knowledge-quality analyst with eight years of auditable public-source and structured-data work, paid scientific fact-checking and editorial production, community-facing research facilitation, leadership of an open research-participation directory and sustained adversarial testing of AI systems. On ${GS.asOf}, the Gray Swan Proving Ground profile displayed rank #${GS.rank} (${GS.percentile.toLowerCase()}) and ${GS.totalBreaks} total breaks. Entropy for Life work covers ${ENTROPY.totalProjects} documented published projects: ${ENTROPY.videoProjects} YouTube video projects and ${ENTROPY.articles} co-authored articles. Technical implementation is described accurately as AI-assisted delivery rather than independent software development.`;
 
 const aiPillar = D.pillars?.[0];
 if (aiPillar) {
@@ -263,7 +263,7 @@ if (entropyCase) {
 const ai = P.aiSafety;
 if (ai) {
   ai.summary =
-    `AI evaluation and research-verification specialist with self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. The Gray Swan Proving Ground profile displayed rank #${GS.rank} (${GS.percentile.toLowerCase()}) and ${GS.totalBreaks} total breaks on ${GS.asOf}. Brings eight years of auditable claim verification, ${ENTROPY.totalProjects} documented Entropy for Life projects, structured research workflows and evidence-bound reporting.`;
+    `AI evaluation and research-verification analyst with self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. The Gray Swan Proving Ground profile displayed rank #${GS.rank} (${GS.percentile.toLowerCase()}) and ${GS.totalBreaks} total breaks on ${GS.asOf}. Brings eight years of auditable claim verification, ${ENTROPY.totalProjects} documented Entropy for Life projects, structured research processes and reporting that separates evidence from inference.`;
   replaceStrength(ai, 0, String(GS.totalBreaks), "Platform-displayed Proving Ground breaks", `#${GS.rank} · ${GS.percentile.toLowerCase()} · ${GS.asOf}`);
   replaceStrength(ai, 1, String(GS.arenaSubmissions), "Arena submissions shown", `${GS.arenaUniqueBreaks} global unique breaks · ${GS.arenaPoints.toLocaleString("en-US")} points`);
   replaceStrength(ai, 2, ENTROPY.totalProjects, "Scientific projects supported", `${ENTROPY.videoProjects} YouTube projects · ${ENTROPY.articles} articles`);
@@ -321,7 +321,7 @@ if (research) {
 const editorial = P.editorialCommunity;
 if (editorial) {
   editorial.summary =
-    `Research, editorial and community-operations specialist with paid experience across ${ENTROPY.totalProjects} documented Entropy for Life projects—${ENTROPY.videoProjects} YouTube video projects and ${ENTROPY.articles} co-authored articles—covering primary-source fact-checking, script and visual production, professional writing and web operations. Co-developed and facilitated approximately 4–5 structured remote focus-group sessions with autistic participants under Marta Panzeri at the University of Padua DPSS.`;
+    `Research, editorial and community coordinator with paid experience across ${ENTROPY.totalProjects} documented Entropy for Life projects—${ENTROPY.videoProjects} YouTube video projects and ${ENTROPY.articles} co-authored articles—covering primary-source fact-checking, script and visual production, professional writing and website delivery. Co-developed and facilitated approximately 4–5 structured remote focus-group sessions with autistic participants under Marta Panzeri at the University of Padua DPSS.`;
   replaceStrength(editorial, 0, ENTROPY.totalProjects, "Documented published projects", `${ENTROPY.videoProjects} YouTube projects · ${ENTROPY.articles} articles`);
   const entExp = editorial.experience?.find((item) => item?.organization?.includes("Entropy for Life"));
   if (entExp) {
@@ -342,7 +342,7 @@ if (editorial) {
 const integrity = P.integrity;
 if (integrity) {
   integrity.summary =
-    `Knowledge-integrity and open-source research specialist with eight years of auditable Wikimedia work, paid scientific verification across ${ENTROPY.totalProjects} documented Entropy for Life projects, and self-directed adversarial testing of AI systems. The ${GS.asOf} Gray Swan snapshot displayed rank #${GS.rank} (${GS.percentile.toLowerCase()}) and ${GS.totalBreaks} Proving Ground total breaks.`;
+    `Trust, safety and source-quality analyst with eight years of auditable Wikimedia work, paid scientific verification across ${ENTROPY.totalProjects} documented Entropy for Life projects, and self-directed adversarial testing of AI systems. The ${GS.asOf} Gray Swan snapshot displayed rank #${GS.rank} (${GS.percentile.toLowerCase()}) and ${GS.totalBreaks} Proving Ground total breaks.`;
   replaceStrength(integrity, 2, String(GS.totalBreaks), "Platform-displayed Proving Ground breaks", `#${GS.rank} · ${GS.percentile.toLowerCase()} · four evaluation surfaces`);
   replaceStrength(integrity, 3, ENTROPY.totalProjects, "Scientific projects checked", `${ENTROPY.videoProjects} YouTube projects · ${ENTROPY.articles} articles`);
   const gsExp = integrity.experience?.find((item) => item?.role?.includes("Model-Behavior"));

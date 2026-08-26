@@ -1,6 +1,6 @@
 {
   "$schema": "https://agent-skills.org/schema/v0.2.0/index.json",
-  "name": "Mario Marcolongo Evidence-Bound Professional Skills",
+  "name": "Mario Marcolongo Source-Backed Professional Skills",
   "version": "2026.08.26",
   "skills": [
     {
@@ -11,17 +11,17 @@
       "referenceUrl": "https://mariomarcolongo.com/security"
     },
     {
-      "id": "research-editorial-community-operations",
-      "name": "Research, Editorial & Community Operations",
-      "description": "Scientific editorial support, public writing, evidence-synthesis preparation, research facilitation, community-facing protocols and technical publishing operations.",
-      "category": "research-operations",
+      "id": "research-editorial-community-coordination",
+      "name": "Research, Editorial & Community Coordination",
+      "description": "Scientific editorial support, public writing, evidence-synthesis preparation, research facilitation, community-facing protocols and website delivery.",
+      "category": "research-support",
       "referenceUrl": "https://mariomarcolongo.com/research-operations"
     },
     {
-      "id": "knowledge-integrity-investigations",
-      "name": "Knowledge Integrity, Trust & Investigations",
-      "description": "Source provenance, public-record research, cross-source corroboration, entity reconciliation, rights context and evidence-bound investigative reporting.",
-      "category": "trust-integrity",
+      "id": "source-quality-investigations",
+      "name": "Source Quality, Trust & Investigations",
+      "description": "Source provenance, public-record research, cross-source corroboration, entity reconciliation, rights context and reporting that separates evidence from inference.",
+      "category": "source-quality",
       "referenceUrl": "https://mariomarcolongo.com/integrity"
     },
     {
@@ -32,10 +32,10 @@
       "referenceUrl": "https://mariomarcolongo.com/cv-research"
     },
     {
-      "id": "code-literate-technical-operations",
-      "name": "Code-Literate Technical Operations",
-      "description": "Requirements definition, codebase reading and behavior inspection, functional testing, issue diagnosis, deployment operations and AI-assisted implementation workflows; not independent software development.",
-      "category": "technical-operations",
+      "id": "technical-delivery",
+      "name": "Requirements, Testing & Technical Delivery",
+      "description": "Requirements definition, codebase reading and behavior inspection, functional testing, issue diagnosis, deployment and AI-assisted implementation; not independent software development.",
+      "category": "technical-delivery",
       "referenceUrl": "https://mariomarcolongo.com/cv"
     }
   ]

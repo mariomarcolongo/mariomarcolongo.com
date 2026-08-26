@@ -40,12 +40,12 @@ function buildProfileGraph(d, pageUrl, pageName) {
         knowsAbout: [
           'Model behavior evaluation',
           'Scientific evidence review',
-          'Evaluation operations',
+          'Evaluation planning and reporting',
           'Primary-source fact-checking',
           'Open science metadata',
           'Research-participation directories',
           'Public personal-genomics workflows',
-          'Technical product delivery'
+          'Technical delivery'
         ],
         hasCredential: buildCredentials(d)
       },

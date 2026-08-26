@@ -9,8 +9,8 @@ import { buildProfileGraph } from "../lib/structured-data.js";
 
 const D = createMarioDossier();
 const { H, audience, graySwan } = homepage;
-const pageTitle = "Mario Marcolongo — AI & Knowledge Quality Analyst";
-const pageDescription = "AI and knowledge-quality analyst working across information retrieval, evidence systems, data quality, model evaluation and scientific verification.";
+const pageTitle = "Mario Marcolongo — Data & Knowledge Quality Analyst";
+const pageDescription = "Data and knowledge-quality analyst working across information retrieval, evidence synthesis, data quality, AI evaluation and scientific verification.";
 const profileJsonLd = buildProfileGraph(D, "https://mariomarcolongo.com/", pageTitle);
 
 const heroMedia = H.heroMedia.map((item) => {
@@ -64,9 +64,9 @@ const selectedExperience = [
   entropyExperience
     ? {
         ...entropyExperience,
-        role: "Scientific Fact-Checking, Content Operations & Audience Optimization Contractor",
+        role: "Scientific Research, Fact-Checking & Website Operations Contractor",
         resumeBullets: [
-          `Delivered ${audience.projects} documented published content contributions for an Italian science-communication brand with ${audience.youtubeSubscribers} YouTube subscribers and ${audience.combinedFollowers} combined platform following; recurring evidence review, selected visual packaging and website operations.`
+          `Delivered ${audience.projects} documented published content contributions for an Italian science-communication brand with ${audience.youtubeSubscribers} YouTube subscribers and ${audience.combinedFollowers} combined platform following; recurring evidence review, selected visual packaging and website delivery.`
         ]
       }
     : undefined,

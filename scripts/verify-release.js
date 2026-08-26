@@ -185,7 +185,7 @@ for (const expected of [
   "not presented as an independent software developer",
   String(GS.totalBreaks),
   ENTROPY.projects,
-  "Scientific Content Quality & Operations Contractor",
+  "Scientific Research, Fact-Checking & Website Operations Contractor",
   ENTROPY_WORK_URL
 ]) contains(master, expected, "Master CV");
 pass("Master CV checked");

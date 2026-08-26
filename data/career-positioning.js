@@ -46,12 +46,12 @@ D.identity.buildVersion = 'v2026.07.29';
 D.identity.grayswanArchiveUrl = graySwan.evidencePath;
 D.identity.evaluationAsOf = graySwan.asOf;
 D.identity.authorshipStatement =
-  'My technical work is code-literate and AI-assisted: I define requirements and workflows, inspect implementation behavior, test releases, diagnose functional problems, guide iterations, deploy releases and maintain services.';
+  'My technical work uses AI-assisted implementation: I define requirements, inspect implementation behavior, test releases, diagnose functional problems, guide iterations, deploy releases and maintain services.';
 D.identity.location =
   'Based in Italy · EU/EEA work-authorised · Open to sponsored international relocation and B2B engagements';
 D.identity.relocationVisible = D.identity.location;
 D.summary =
-  `Information-retrieval, data-quality, scientific-verification and AI-evaluation specialist with eight years of auditable public-source and structured-data work. The public record includes paid scientific fact-checking and editorial production, a maintained research-participation directory, and self-directed model-behavior evaluation. On ${graySwan.asOf}, the Gray Swan Proving Ground profile displayed rank #${graySwan.rank} (${graySwan.percentile.toLowerCase()}) and ${graySwan.totalBreaks} total breaks. Entropy for Life work covers ${audience.projects} documented published content contributions: ${contributionBreakdown()}. Technical work is code-literate and AI-assisted, with personal ownership of requirements, verification, deployment and maintenance.`;
+  `Data and knowledge-quality analyst with eight years of auditable public-source and structured-data work. The public record includes paid scientific fact-checking and editorial production, a maintained research-participation directory and self-directed model-behavior testing. On ${graySwan.asOf}, the Gray Swan Proving Ground profile displayed rank #${graySwan.rank} (${graySwan.percentile.toLowerCase()}) and ${graySwan.totalBreaks} total breaks. Entropy for Life work covers ${audience.projects} documented published content contributions: ${contributionBreakdown()}. Technical delivery is AI-assisted, with personal ownership of requirements, verification, deployment and maintenance.`;
 
 Object.assign(D.redTeamActivity || {}, {
   asOf: graySwan.asOf,
@@ -66,7 +66,7 @@ Object.assign(D.redTeamActivity || {}, {
   totalArenaSubmissions: graySwan.submissions
 });
 
-const technicalPillar = D.pillars?.find((item) => item?.category === 'TECHNICAL OPERATIONS');
+const technicalPillar = D.pillars?.find((item) => item?.category === 'TECHNICAL DELIVERY');
 if (technicalPillar) {
   technicalPillar.desc =
     'Uses coding agents for implementation support while personally defining requirements and workflows, inspecting code structure and behavior, testing releases, diagnosing functional problems, guiding revisions, deploying releases and maintaining services.';
@@ -99,7 +99,7 @@ if (masterGray) {
 
 const masterEntropy = D.experience?.find((item) => item?.org?.includes('Entropy for Life'));
 if (masterEntropy) {
-  masterEntropy.role = 'Scientific Content Quality & Operations Contractor';
+  masterEntropy.role = 'Scientific Research, Fact-Checking & Website Operations Contractor';
   masterEntropy.links = { workRecord: ENTROPY_WORK_URL };
   masterEntropy.bullets = [
     `Delivered ${audience.projects} documented published content contributions: ${audience.videoProjects} YouTube videos, ${audience.articles} co-authored articles and ${audience.shortForm} short-form pieces.`,
@@ -109,7 +109,7 @@ if (masterEntropy) {
   ];
   masterEntropy.resumeBullets = [
     `Delivered ${audience.projects} documented published content contributions—${audience.videoProjects} YouTube videos, ${audience.articles} articles and ${audience.shortForm} short-form pieces—through evidence review, content production and publishing operations.`,
-    'Designed and built entropyforlife.it in WordPress and manage its responsive design, publishing and OVHcloud technical operations.'
+    'Designed and built entropyforlife.it in WordPress and manage its responsive design, publishing, OVHcloud hosting, DNS, SSL and technical SEO.'
   ];
 }
 
@@ -136,10 +136,10 @@ if (researchDirectoryStat) {
   researchDirectoryStat.detail = `${yourselfToScience.wikidataReferences} unique Wikidata items use the domain as a P854 reference URL`;
 }
 
-const aiWorkflowSkill = D.skills?.findIndex((item) => item.startsWith('AI-Assisted Technical Workflow:'));
+const aiWorkflowSkill = D.skills?.findIndex((item) => item.startsWith('AI-Assisted Implementation:'));
 if (aiWorkflowSkill >= 0) {
   D.skills[aiWorkflowSkill] =
-    'AI-Assisted Technical Workflow: Uses coding agents for implementation support while personally defining requirements, inspecting structure and behavior, testing results, guiding revisions, deploying releases and maintaining services.';
+    'AI-Assisted Implementation: Uses coding agents for implementation support while personally defining requirements, inspecting structure and behavior, testing results, guiding revisions, deploying releases and maintaining services.';
 }
 
 const yourselfToScienceProject = D.projects?.find((item) => item?.id === 'yourself-to-science');
@@ -161,11 +161,11 @@ if (yourselfToScienceProject) {
 
 const entropyProject = D.projects?.find((item) => item?.id === 'entropy-for-life');
 if (entropyProject) {
-  entropyProject.title = 'Entropy for Life — Scientific Content Quality & Operations';
+  entropyProject.title = 'Entropy for Life — Scientific Research, Fact-Checking & Website Operations';
   entropyProject.oneLiner = `${audience.projects} documented published content contributions inside a creator brand with ${audience.youtubeSubscribers} YouTube subscribers and ${audience.youtubeViews} channel views.`;
   entropyProject.description =
     `Conduct recurring primary-literature research and scientific fact-checking across ${audience.projects} documented published content contributions: ${audience.videoProjects} YouTube videos, ${audience.articles} co-authored articles and ${audience.shortForm} short-form pieces. Entropy for Life is an Italian science-communication brand with ${audience.youtubeSubscribers} YouTube subscribers, ${audience.youtubeViewsExact} channel views, ${audience.instagramFollowers} Instagram followers and ${audience.tiktokFollowers} TikTok followers as of ${audience.asOf}. Depending on the assignment, also translate evidence into scripts, data analyses, visualizations, slides, on-screen assets, short-form content and selected thumbnail concepts or production. Designed and built entropyforlife.it in WordPress and operate its responsive design, publishing and OVHcloud technical stack. The audience belongs to the brand, and cross-platform totals are not counts of unique people.`;
-  entropyProject.role = 'Scientific Content Quality & Operations Contractor';
+  entropyProject.role = 'Scientific Research, Fact-Checking & Website Operations Contractor';
   entropyProject.links = { workRecord: ENTROPY_WORK_URL };
   entropyProject.highlights = [
     `Production Scale: ${audience.youtubeViews} YouTube views · ${audience.youtubeSubscribers} subscribers · ${audience.youtubeVideos} published videos`,
@@ -221,9 +221,9 @@ if (modelCase) {
 
 const entropyCase = H?.cases?.find((item) => item?.id === 'scientific-verification');
 if (entropyCase) {
-  entropyCase.title = 'Evidence quality and content operations at creator scale.';
-  entropyCase.lead = 'Paid contractor supporting an established Italian science-communication brand across evidence review, content production and website operations.';
-  entropyCase.action = 'Own recurring primary-literature research and scientific fact-checking. Depending on the assignment, also develop scripts, data analyses, visualizations, slides, on-screen assets, short-form content and selected thumbnails. Designed and built entropyforlife.it in WordPress and manage its responsive design, publishing and OVHcloud technical operations.';
+  entropyCase.title = 'Fact-checking and producing scientific content before publication.';
+  entropyCase.lead = 'Paid contractor supporting an established Italian science-communication brand through evidence review, content production and website delivery.';
+  entropyCase.action = 'Conduct recurring primary-literature research and scientific fact-checking. Depending on the assignment, also develop scripts, data analyses, visualizations, slides, on-screen assets, short-form content and selected thumbnails. Designed and built entropyforlife.it in WordPress and manage responsive design, publishing, hosting, DNS, SSL and technical SEO.';
   entropyCase.result = `${audience.projects} documented published content contributions: ${audience.videoProjects} YouTube videos, ${audience.articles} co-authored articles and ${audience.shortForm} short-form pieces. The official work record also indexes selected thumbnail work, which overlaps with video projects and is not added to the total.`;
   entropyCase.boundary = 'Platform metrics describe the production environment, not a personal audience. Quantified thumbnail lift is stated only when comparable analytics are available.';
   entropyCase.href = ENTROPY_WORK_URL;
@@ -253,11 +253,11 @@ if (P.shared) {
 }
 
 if (P.aiSafety) {
-  P.aiSafety.summary = `AI evaluation and research-verification specialist with self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. The Gray Swan Proving Ground profile displayed rank #${graySwan.rank} (${graySwan.percentile.toLowerCase()}) and ${graySwan.totalBreaks} total breaks on ${graySwan.asOf}. Brings eight years of auditable claim verification and ${audience.projects} published-content contributions inside a ${audience.youtubeSubscribers}-subscriber, ${audience.youtubeViews}-view science-communication environment.`;
+  P.aiSafety.summary = `AI evaluation and research-verification analyst with self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. The Gray Swan Proving Ground profile displayed rank #${graySwan.rank} (${graySwan.percentile.toLowerCase()}) and ${graySwan.totalBreaks} total breaks on ${graySwan.asOf}. Brings eight years of auditable claim verification and ${audience.projects} published-content contributions inside a ${audience.youtubeSubscribers}-subscriber, ${audience.youtubeViews}-view science-communication environment.`;
   replaceStrength(P.aiSafety, 2, audience.projects, 'Published content contributions', contributionBreakdown());
   const item = useOfficialEntropyRecord(P.aiSafety);
   if (item) {
-    item.role = 'Scientific Content Quality & Operations Contractor';
+    item.role = 'Scientific Research, Fact-Checking & Website Operations Contractor';
     item.bullets = [
       `Delivered ${audience.projects} documented published content contributions: ${contributionBreakdown()}.`,
       'Conduct recurring primary-literature review and scientific fact-checking; contribute assignment-specific scripts, data analyses, visualizations, slides/on-screen assets, short-form content and selected thumbnail or visual-packaging work.',
@@ -272,7 +272,7 @@ if (P.aiSafety) {
 }
 
 if (P.researchQuality) {
-  P.researchQuality.summary = `Research-verification and data-quality specialist with eight years of auditable scientific, biomedical and structured-data work. Paid contractor across ${audience.projects} documented Entropy for Life content contributions inside a science-communication brand with ${audience.youtubeSubscribers} YouTube subscribers and ${audience.youtubeViews} channel views, plus founder of an open research-participation directory with documented verification and metadata workflows.`;
+  P.researchQuality.summary = `Research-verification and data-quality analyst with eight years of auditable scientific, biomedical and structured-data work. Paid contractor across ${audience.projects} documented Entropy for Life content contributions inside a science-communication brand with ${audience.youtubeSubscribers} YouTube subscribers and ${audience.youtubeViews} channel views, plus founder of an open research-participation directory with documented verification and metadata workflows.`;
   replaceStrength(
     P.researchQuality,
     1,
@@ -303,7 +303,7 @@ if (P.researchQuality) {
 }
 
 if (P.editorialCommunity) {
-  P.editorialCommunity.summary = `Research, editorial and content-operations specialist with paid experience across ${audience.projects} documented Entropy for Life content contributions inside an Italian science-communication brand with ${audience.youtubeSubscribers} YouTube subscribers and ${audience.youtubeViews} channel views. Work spans primary-source fact-checking, scripts and visual production, short-form content, performance-aware packaging, selected thumbnails, professional writing and web operations.`;
+  P.editorialCommunity.summary = `Research, editorial and community coordinator with paid experience across ${audience.projects} documented Entropy for Life content contributions inside an Italian science-communication brand with ${audience.youtubeSubscribers} YouTube subscribers and ${audience.youtubeViews} channel views. Work spans primary-source fact-checking, scripts and visual production, short-form content, performance-aware packaging, selected thumbnails, professional writing and website delivery.`;
   replaceStrength(P.editorialCommunity, 0, audience.projects, 'Published content contributions', contributionBreakdown());
   addSkill(P.editorialCommunity, 'Performance-aware content packaging', 'Thumbnail concepts, visual hierarchy and attention structure informed by click-through rate, watch time, retention and current platform best practices.');
   const item = useOfficialEntropyRecord(P.editorialCommunity);
@@ -311,13 +311,13 @@ if (P.editorialCommunity) {
     item.bullets = [
       `Support a small recurring science-communication team across ${audience.projects} documented published contributions: ${contributionBreakdown()}.`,
       'Create or support scripts, data analyses, visualizations, presentation slides, on-screen assets, short-form materials and selected thumbnails, with roles attributed per project.',
-      'Designed and built entropyforlife.it in WordPress and manage its responsive design, publishing and OVHcloud technical operations.'
+      'Designed and built entropyforlife.it in WordPress and manage its responsive design, publishing, OVHcloud hosting, DNS, SSL and technical SEO.'
     ];
   }
 }
 
 if (P.integrity) {
-  P.integrity.summary = `Knowledge-integrity and open-source research specialist with eight years of auditable Wikimedia work, paid scientific verification across ${audience.projects} documented Entropy for Life content contributions inside a ${audience.youtubeSubscribers}-subscriber science-communication brand, and self-directed adversarial testing of AI systems. The ${graySwan.asOf} Gray Swan snapshot displayed rank #${graySwan.rank} (${graySwan.percentile.toLowerCase()}) and ${graySwan.totalBreaks} Proving Ground total breaks.`;
+  P.integrity.summary = `Trust, safety and source-quality analyst with eight years of auditable Wikimedia work, paid scientific verification across ${audience.projects} documented Entropy for Life content contributions inside a ${audience.youtubeSubscribers}-subscriber science-communication brand, and self-directed adversarial testing of AI systems. The ${graySwan.asOf} Gray Swan snapshot displayed rank #${graySwan.rank} (${graySwan.percentile.toLowerCase()}) and ${graySwan.totalBreaks} Proving Ground total breaks.`;
   const item = useOfficialEntropyRecord(P.integrity);
   if (item) {
     item.bullets = [
