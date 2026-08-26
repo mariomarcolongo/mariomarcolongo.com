@@ -4,7 +4,7 @@ function createPortfolioHuman() {
   return {
   eyebrow: "Information retrieval · data & knowledge quality · AI evaluation · scientific fact-checking",
   headline: "Evidence first. AI systems tested.",
-  introduction: "I retrieve and verify information, investigate data quality and test model behavior. When recurring verification needs a practical system, I define and operate the research workflow around it.",
+  introduction: "I retrieve and verify information, investigate data quality and test model behavior. When recurring verification needs a practical system, I define its requirements, validation rules and maintenance process.",
 
   proofMoments: [
     {
@@ -141,7 +141,7 @@ function createPortfolioHuman() {
       title: "Tracing privacy, policy and evidence changes under dispute.",
       lead: "My public record includes consumer-genomics privacy research, corporate-source reconciliation, archival recovery, content-governance review and biomedical evidence synthesis—not a generic claim of OSINT familiarity.",
       action: "I built and maintained the Nebula Genomics privacy record across historical sequencing relationships, changing company statements, archived privacy policies, third-party-data questions, corporate restructuring and litigation coverage. In separate cases, I recovered missing documents for a legally sensitive chronology, audited source quality and bibliometrics during a contentious moderation process, and built a syndromic-autism taxonomy from peer-reviewed literature.",
-      result: "Each case is linked to an exact attributed diff, edit history or collaborative discussion record, with methods and evidence boundaries documented on a dedicated page. Living-person names are not used as promotional headings when they add little hiring value.",
+      result: "Each case is linked to an exact attributed diff, edit history or collaborative discussion record, with methods and stated limits documented on a dedicated page. Living-person names are not used as promotional headings when they add little hiring value.",
       boundary: "The work represents public-source research and collaborative knowledge governance. It does not establish company liability, personal misconduct, editor affiliation, an independent legal judgment or original clinical research.",
       href: "/integrity",
       linkLabel: "Inspect the investigation records",
@@ -156,9 +156,9 @@ function createPortfolioHuman() {
       label: "Supporting research system",
       title: "Building a maintained directory of research opportunities.",
       lead: "Yourself to Science turns scattered institutional opportunities into a public catalogue with explicit inclusion and update rules.",
-      action: "I defined the inclusion criteria, verification fields, provenance model, licensing boundaries, update workflow and public-data requirements, then coordinated AI-assisted implementation and ongoing operation.",
+      action: "I defined the inclusion criteria, verification fields, provenance model, licensing boundaries, update process and public-data requirements, then coordinated AI-assisted implementation and maintenance.",
       result: "55 resources indexed; 37 unique Wikidata items use yourselftoscience.org as a reference URL, with FAIRsharing and Zenodo records and human- and machine-readable interfaces.",
-      boundary: "My contribution covers requirements, information architecture, verification, functional testing, deployment diagnosis and operations—not unaided software development.",
+      boundary: "My contribution covers requirements, information architecture, verification, functional testing, deployment diagnosis and maintenance—not unaided software development.",
       href: "https://yourselftoscience.org/",
       linkLabel: "Explore Yourself to Science",
       image: "/media/work/yourself-to-science-800.webp",
@@ -256,7 +256,7 @@ function createPortfolioHuman() {
     },
     {
       title: "Plan for maintenance",
-      body: "Treat updates, provenance and operational recovery as part of the work."
+      body: "Treat updates, provenance and recovery from problems as part of the work."
     }
   ],
 

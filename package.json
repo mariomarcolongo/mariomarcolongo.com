@@ -2,7 +2,7 @@
   "name": "mariomarcolongo",
   "version": "2026.07.29",
   "private": true,
-  "description": "AI evaluation, scientific evidence and research operations portfolio with role-specific CVs and evidence-bound public records",
+  "description": "AI evaluation, scientific evidence and research-support portfolio with role-specific CVs and public evidence records",
   "scripts": {
     "lint": "node scripts/check-stale-strings.js",
     "dev": "node scripts/check-stale-strings.js && node scripts/generate-llm-dossiers.js && astro dev",

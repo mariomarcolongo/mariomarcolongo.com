@@ -6,7 +6,7 @@ const APPLICATION_PROFILES = {
     subtitle: "Model testing · adversarial QA · evidence reporting · test planning",
     summary: "AI evaluation and research-verification analyst with sustained self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. Gray Swan Proving Ground participant ranked #74 (top 6%) on 29 July 2026, with 113 platform-recorded total breaks; the same profile showed Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions. Brings eight years of auditable claim verification, paid scientific fact-checking, structured research processes and reporting that separates evidence from inference.",
     fit: [
-      "AI evaluation and safeguards operations",
+      "AI evaluation and safeguard testing",
       "AI content red teaming and adversarial QA",
       "Model behavior, trust & safety and policy testing",
       "Human-data quality, grading and evaluation support"
@@ -33,7 +33,7 @@ const APPLICATION_PROFILES = {
         ]
       },
       {
-        role: "Scientific Research, Fact-Checking & Website Operations Contractor",
+        role: "Scientific Research, Fact-Checking & Website Maintenance Contractor",
         organization: "Entropy for Life · Independent contractor",
         period: "Jun 2023 — Present",
         links: [
@@ -74,7 +74,7 @@ const APPLICATION_PROFILES = {
         link: "/security"
       },
       {
-        title: "Human-subject research operations",
+        title: "Human-subject research support",
         body: "Co-developed and co-facilitated structured remote focus groups with autistic participants on sexuality and relationships, supervised by Marta Panzeri at the University of Padua DPSS.",
         link: "/cv-editorial"
       }
@@ -97,7 +97,7 @@ const APPLICATION_PROFILES = {
     fit: [
       "Data quality and information-quality analysis",
       "Research analysis and evidence verification",
-      "Data visualization and research operations",
+      "Data visualization and research support",
       "Scientific, biomedical and AI-content quality"
     ],
     strengths: [
@@ -108,7 +108,7 @@ const APPLICATION_PROFILES = {
     ],
     experience: [
       {
-        role: "Scientific Research, Fact-Checking & Website Operations Contractor",
+        role: "Scientific Research, Fact-Checking & Website Maintenance Contractor",
         organization: "Entropy for Life · Independent contractor",
         period: "Jun 2023 — Present",
         links: [
@@ -182,9 +182,9 @@ const APPLICATION_PROFILES = {
     subtitle: "Evidence synthesis · editorial coordination · research participation · community engagement · AI-assisted tools",
     summary: "Research, editorial and community coordinator with paid experience supporting scientific content production, primary-source fact-checking, professional writing and website delivery. Co-developed and facilitated approximately 4–5 structured remote focus-group sessions, typically lasting 1–2 hours, with autistic participants discussing sensitive sexuality and relationship topics under Marta Panzeri at the University of Padua DPSS. Also contributed evidence research to 55+ published YouTube video projects and four co-authored articles and founded an open research-participation directory covering more than 55 initiatives.",
     fit: [
-      "Assistant editor and editorial operations",
+      "Assistant editor and editorial-production support",
       "Evidence-synthesis program coordination",
-      "Research community engagement and learning operations",
+      "Research community engagement and learning-program support",
       "Scientific communications and publication support"
     ],
     strengths: [
@@ -195,7 +195,7 @@ const APPLICATION_PROFILES = {
     ],
     experience: [
       {
-        role: "Scientific Research, Fact-Checking & Website Operations Contractor",
+        role: "Scientific Research, Fact-Checking & Website Maintenance Contractor",
         organization: "Entropy for Life · Independent contractor",
         period: "Jun 2023 — Present",
         links: [
@@ -210,7 +210,7 @@ const APPLICATION_PROFILES = {
         ]
       },
       {
-        role: "Volunteer Focus-Group Co-Facilitator & Research Operations Contributor",
+        role: "Volunteer Focus-Group Co-Facilitator & Research Support Contributor",
         organization: "Department of Developmental Psychology and Socialisation (DPSS), University of Padua · supervised by Marta Panzeri",
         period: "Nov 2022 — 2025",
         links: [
@@ -257,10 +257,10 @@ const APPLICATION_PROFILES = {
       }
     ],
     skills: [
-      ["Editorial operations", "Evidence research, claim checking, source documentation, editorial feedback, content preparation and production troubleshooting"],
+      ["Editorial production support", "Evidence research, claim checking, source documentation, editorial feedback, content preparation and production troubleshooting"],
       ["Project coordination", "Independent prioritization, overlapping workstreams, issue tracking, progress documentation, release coordination and follow-through"],
       ["Community engagement", "Participant recruitment, sensitive-topic moderation, accessibility-aware communication, two-person facilitation handoffs and support for distributed communities"],
-      ["Digital communications", "Professional and technical writing, WordPress publishing, website operations, technical SEO and content presentation"],
+      ["Digital communications", "Professional and technical writing, WordPress publishing, website maintenance, technical SEO and content presentation"],
       ["AI-assisted tools", "Use AI for research, drafting, implementation support and quality checks, with human verification of results"]
     ]
   },
@@ -272,7 +272,7 @@ const APPLICATION_PROFILES = {
     subtitle: "Public-source research · source verification · content integrity · structured-data review · adversarial analysis",
     summary: "Trust, safety and source-quality analyst with eight years of auditable public work across Wikipedia, Wikidata and Wikimedia Commons, paid scientific fact-checking for a large science-communication project, and sustained adversarial testing of AI systems. Experience includes source provenance, rights and authorship verification, public-record reconciliation, health-information monitoring, structured metadata and reporting that separates evidence from inference. Best suited to analyst and support roles in trust & safety, content integrity, investigations, knowledge quality and abuse-risk research rather than penetration-testing engineering.",
     fit: [
-      "Trust & safety and content-integrity operations",
+      "Trust & safety and content-integrity analysis",
       "Source quality and public-record investigations",
       "OSINT research and source-provenance analysis",
       "AI abuse, policy and adversarial-analysis support"
@@ -299,7 +299,7 @@ const APPLICATION_PROFILES = {
         ]
       },
       {
-        role: "Scientific Research, Fact-Checking & Website Operations Contractor",
+        role: "Scientific Research, Fact-Checking & Website Maintenance Contractor",
         organization: "Entropy for Life · Independent contractor",
         period: "Jun 2023 — Present",
         links: [

@@ -77,7 +77,7 @@ if (entropyCase) {
 const researchSystemCase = H.cases.find((item) => item.id === 'research-system');
 if (researchSystemCase) {
   researchSystemCase.result = `${yourselfToScience.resources} resources indexed; as of ${yourselfToScience.asOf}, ${yourselfToScience.wikidataReferences} unique Wikidata items use yourselftoscience.org as a reference URL (P854). FAIRsharing, Zenodo and human- and machine-readable interfaces provide additional public records.`;
-  researchSystemCase.boundary = 'Technical ownership covers requirements, information architecture, verification, functional testing, deployment diagnosis and ongoing operations; implementation is AI-assisted.';
+  researchSystemCase.boundary = 'My technical responsibilities cover requirements, information architecture, verification, functional testing, deployment diagnosis and ongoing maintenance; implementation is AI-assisted.';
   researchSystemCase.links = [{ label: 'View project statistics and Wikidata references', href: yourselfToScience.statsUrl }];
 }
 

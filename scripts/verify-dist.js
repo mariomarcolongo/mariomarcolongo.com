@@ -156,7 +156,7 @@ for (const needle of [
   'Start with the role you are hiring for.', 'Data quality, information retrieval and AI evaluation roles.',
   'Zotero research workflows', 'Protein by bodyweight by country', '#74 on the Proving Ground,',
   '267K', '36.5M', '80', '55 YouTube videos', '21 short-form pieces',
-  'Research, content & website operations', 'Official work record published by Entropy for Life',
+  'Research, content & website maintenance', 'Official work record published by Entropy for Life',
   'Platform metrics describe the production environment',
   'Primary literature and scientific fact-checking', 'Scripts, visuals, slides and selected packaging', 'WordPress, responsive design, publishing and hosting',
   'Nebula Genomics', 'consumer-genomics privacy',
@@ -237,7 +237,7 @@ for (const needle of ['public-source and structured-data work', 'corporate and p
 }
 
 const editorialText = normalizeHtmlText(pages.editorial);
-for (const needle of ['long-running public-source and structured-data work', 'Public-source investigation and archival verification', 'Editorial operations and OSINT']) {
+for (const needle of ['long-running public-source and structured-data work', 'Public-source investigation and archival verification', 'Editorial production, localization & public-source research']) {
   assertContains(editorialText, needle, 'dist/cv-editorial.html');
 }
 for (const needle of ['Marta Panzeri', 'Department of Developmental Psychology and Socialisation', '36.5M', 'click-through rate', 'Performance-aware content packaging']) {
@@ -245,7 +245,7 @@ for (const needle of ['Marta Panzeri', 'Department of Developmental Psychology a
 }
 
 const integrityCvText = normalizeHtmlText(pages.integrityCv);
-for (const needle of ['Investigations & Source Quality Analyst', 'Sensitive Research Operations Contributor', 'Trust & Safety-adjacent analysis', 'Consumer-genomics privacy and corporate-source reconciliation']) {
+for (const needle of ['Investigations & Source Quality Analyst', 'Focus-Group Co-Facilitator & Research Support Contributor', 'Trust & Safety-adjacent analysis', 'Consumer-genomics privacy and corporate-source reconciliation']) {
   assertContains(integrityCvText, needle, 'dist/cv-integrity.html');
 }
 assertNotContains(integrityCvText, 'Trust, Safety & Source Quality Analyst', 'dist/cv-integrity.html');
@@ -259,7 +259,7 @@ for (const needle of [
   'Biographical source-quality and notability review',
   "Fascist-era carpenter's pencil", 'Additional provenance and rights work.',
   'H5N1 situation tracker', 'Yourself to Science: verifying participation opportunities',
-  'Wikimedia and Wikidata: auditable source and metadata work', 'Evidence boundary', 'Ethical and legal boundary'
+  'Wikimedia and Wikidata: auditable source and metadata work', 'Evidence limits', 'Ethical and legal boundary'
 ]) assertContains(integrityText, needle, 'dist/integrity.html');
 pass('Knowledge-integrity work sample checked');
 
@@ -267,7 +267,7 @@ const masterText = normalizeHtmlText(pages.cv);
 for (const needle of [
   'Master CV & Evidence Record', 'not presented as an independent software developer', 'AI Safety',
   'Research & Data Quality', 'Editorial & Community', 'Trust & Source Quality', 'Marta Panzeri',
-  '36.5M', '80', 'Scientific Research, Fact-Checking & Website Operations Contractor',
+  '36.5M', '80', 'Scientific Research, Fact-Checking & Website Maintenance Contractor',
   'Consumer-genomics privacy record', 'Investigation work samples',
   'Official Entropy for Life work record', ENTROPY_WORK_URL,
   'Notandia — formerly MDPI Filter'
@@ -284,7 +284,7 @@ for (const needle of [
   'tracking boundary resilience across major model architecture updates',
   'ensuring research directories and data pipelines are resilient', 'Model Behavior & Safety Case Study'
 ]) assertNotContains(securityText, needle, 'dist/security.html');
-pass('Evaluation record evidence boundary checked');
+pass('Evaluation record evidence limits checked');
 
 const allGenerated = normalizeHtmlText(Object.values(pages).join('\n')) + Object.values(canonical).join('\n');
 assertContains(allGenerated, D.identity.jobTitle, 'Generated outputs');

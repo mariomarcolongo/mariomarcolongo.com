@@ -185,14 +185,14 @@ for (const expected of [
   "not presented as an independent software developer",
   String(GS.totalBreaks),
   ENTROPY.projects,
-  "Scientific Research, Fact-Checking & Website Operations Contractor",
+  "Scientific Research, Fact-Checking & Website Maintenance Contractor",
   ENTROPY_WORK_URL
 ]) contains(master, expected, "Master CV");
 pass("Master CV checked");
 
 if (D.identity.buildVersion !== "v2026.07.26") fail("Release build version is not current.");
 if (D.redTeamActivity.platformReportedBreaks !== GS.totalBreaks) fail("Current Gray Swan total is inconsistent.");
-if (D.redTeamActivity.areaBreaksTotal !== GS.displayedAreaTotal) fail("Area-total evidence boundary is inconsistent.");
+if (D.redTeamActivity.areaBreaksTotal !== GS.displayedAreaTotal) fail("Area-total evidence limit is inconsistent.");
 
 if (failures) {
   console.error(`\nApplication-release verification failed with ${failures} issue(s).`);

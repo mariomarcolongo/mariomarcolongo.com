@@ -2,7 +2,7 @@ const RECENT_APPLICATION_EVIDENCE = {
   "ai-safety": {
     evidence: {
       0: {
-        title: "Research-integrity product operations",
+        title: "Research-integrity product requirements and testing",
         body: "Created and operate Notandia (formerly MDPI Filter), a browser and Zotero research-integrity tool. It helps researchers identify articles from publishers whose editorial and peer-review practices have attracted scrutiny—including MDPI and Frontiers—and checks Crossref/Retraction Watch records for formal notices such as retractions, corrections and expressions of concern. I define the evidence rules, privacy safeguards, ambiguity handling, false-positive boundaries and release tests.",
         link: "/notandia"
       }

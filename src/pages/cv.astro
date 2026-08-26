@@ -14,7 +14,9 @@ const profileJsonLd = buildProfileGraph(D, "https://mariomarcolongo.com/cv", pag
 const roleAliases = {
   "Founder & Technical Product Builder": "Founder & Project Lead",
   "Independent Model-Behavior Evaluator": "Model-Behavior Evaluator",
-  "Product Owner & Technical Builder": "Product Owner & Technical Delivery Lead",
+  "Product Owner & Technical Builder": "Product Lead & Technical Maintainer",
+  "Product Owner & AI-Assisted Technical Operator": "Product Lead & Technical Maintainer",
+  "Creator & Technical Operator": "Creator & Technical Maintainer",
   "Creator & Systems Builder": "Creator & Product Lead",
   "Creator & Systems Designer": "Creator & Product Requirements Lead"
 };
@@ -39,7 +41,9 @@ function cleanText(value) {
   return String(value || "")
     .replaceAll("Founder and technical builder", "Founder and project lead")
     .replaceAll("Founder & Technical Product Builder", "Founder & Project Lead")
-    .replaceAll("Product Owner & Technical Builder", "Product Owner & Technical Delivery Lead")
+    .replaceAll("Product Owner & Technical Builder", "Product Lead & Technical Maintainer")
+    .replaceAll("Product Owner & AI-Assisted Technical Operator", "Product Lead & Technical Maintainer")
+    .replaceAll("Creator & Technical Operator", "Creator & Technical Maintainer")
     .replaceAll("Creator & Systems Builder", "Creator & Product Lead")
     .replaceAll("Designed and iteratively validated a local downstream bioinformatics workflow", "Specified requirements for and iteratively validated a local downstream bioinformatics workflow")
     .replaceAll("custom Python VEP extraction scripts", "AI-assisted Python VEP extraction scripts")
@@ -56,7 +60,7 @@ function linksFor(item) {
     website: "Website",
     workRecord: "Official Entropy for Life work record",
     caseStudy: "Evaluation record",
-    researchOperations: "Research-operations case study",
+    researchOperations: "Research-support case study",
     supervisor: "Marta Panzeri",
     department: "University department",
     profile: "Public profile",

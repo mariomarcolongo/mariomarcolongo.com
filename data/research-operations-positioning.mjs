@@ -18,29 +18,38 @@ if (masterFocusGroup) {
 
 if (P.editorialCommunity) {
   const focusGroup = P.editorialCommunity.experience?.find((item) => item?.role?.includes("Focus-Group"));
+  const entropy = P.editorialCommunity.experience?.find((item) => item?.organization?.includes("Entropy for Life"));
+  const projectLead = P.editorialCommunity.experience?.find((item) => item?.organization?.includes("Yourself to Science"));
   if (focusGroup) {
     focusGroup.links = [
-      { label: "Research-operations case study", url: researchOperationsPage },
+      { label: "Research-support case study", url: researchOperationsPage },
       { label: "Marta Panzeri", url: supervisorUrl },
       { label: "University department", url: departmentUrl }
     ];
+  }
+
+  // Put the paid role and the founder role in the first-page scan path. The
+  // detailed sensitive-research contribution remains prominent on page two,
+  // where it can be read without crowding the footer.
+  if (entropy && projectLead && focusGroup) {
+    P.editorialCommunity.experience = [entropy, projectLead, focusGroup];
   }
 
   const sensitiveEvidence = P.editorialCommunity.evidence?.find((item) =>
     item?.title?.includes("Sensitive remote research facilitation")
   );
   if (sensitiveEvidence) {
-    sensitiveEvidence.title = "Sensitive research-operations case";
+    sensitiveEvidence.title = "Sensitive research-support case";
     sensitiveEvidence.body = "Self-reported facilitation and protocol work in a University of Padua project. The public thesis corroborates the project and methodology but does not identify the individual facilitators.";
     sensitiveEvidence.link = researchOperationsPage;
   }
 }
 
 if (P.integrity) {
-  const focusGroup = P.integrity.experience?.find((item) => item?.role?.includes("Sensitive Research Operations"));
+  const focusGroup = P.integrity.experience?.find((item) => item?.role?.includes("Research Support"));
   if (focusGroup) {
     focusGroup.links = [
-      { label: "Research-operations case study", url: researchOperationsPage }
+      { label: "Research-support case study", url: researchOperationsPage }
     ];
   }
 }

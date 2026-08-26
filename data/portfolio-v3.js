@@ -18,7 +18,7 @@ const PORTFOLIO_V3 = {
       color: "blue",
       label: "Highest-upside emerging lane",
       title: "AI Safety & Model Behavior",
-      summary: "Adversarial testing, safeguards operations, trust & safety and model-quality work built on sustained exploratory testing plus unusually strong evidence discipline.",
+      summary: "Adversarial testing, safeguard testing, trust & safety and model-quality work built on sustained exploratory testing plus unusually strong evidence discipline.",
       roles: [
         "AI safety evaluator",
         "AI content red-team analyst",
@@ -45,14 +45,14 @@ const PORTFOLIO_V3 = {
         "Assistant editor or editorial coordinator",
         "Evidence-synthesis program officer",
         "Research community engagement",
-        "Scientific communications operations"
+        "Scientific communications support"
       ],
       evidence: [
         "Paid research and fact-checking across 80 published contributions",
         "Sensitive Zoom focus groups with autistic participants, structured protocols and two-person facilitation handoffs",
-        "Independent ownership of a public research-participation directory"
+        "Founder and project lead for a public research-participation directory"
       ],
-      next: "This route is credible now, but the highest compensation usually comes later through program leadership, technical program management or senior AI/research operations.",
+      next: "This route is credible now, but the highest compensation usually comes later through program leadership, technical program management or senior AI-evaluation and research-program roles.",
       cv: "/cv-editorial",
       cvLabel: "Editorial & Community CV"
     },
@@ -88,15 +88,15 @@ const PORTFOLIO_V3 = {
       roles: [
         "Research verification specialist",
         "Scientific or biomedical AI quality",
-        "Metadata and data-provenance operations",
-        "Research data or knowledge operations"
+        "Metadata and data-provenance work",
+        "Research data or knowledge-quality support"
       ],
       evidence: [
         "55 research-participation records with verification workflows",
         "FAIRsharing, Zenodo, Wikidata and ENA public records",
         "70+ evidence visualizations and 4,317 public contributions"
       ],
-      next: "The revenue ceiling improves through enterprise AI/data programs, domain-expert model quality and technical program ownership rather than remaining in junior cataloguing work.",
+      next: "The revenue ceiling improves through enterprise AI/data programs, domain-expert model quality and technical program leadership rather than remaining in junior cataloguing work.",
       cv: "/cv-research",
       cvLabel: "Research & Data Quality CV"
     }
@@ -107,7 +107,7 @@ const PORTFOLIO_V3 = {
       eyebrow: "AI systems",
       title: "Model-behavior evaluation under ambiguous constraints",
       summary: "Repeated exploratory testing across instruction hierarchy, multimodal inputs, agentic tool use and indirect prompt injection, reported with an explicit separation between platform status and independent verification.",
-      methods: ["Adversarial test design", "Behavior classification", "Evidence boundaries", "Reproduction notes"],
+      methods: ["Adversarial test design", "Behavior classification", "Evidence limits", "Reproduction notes"],
       metric: "110 platform-displayed breaks · #75 · top 6%",
       href: "/security",
       linkLabel: "Open evaluation record"
@@ -182,12 +182,12 @@ const PORTFOLIO_V3 = {
     {
       year: "2022 — 2025",
       title: "Community-facing research facilitation",
-      body: "Co-developed and co-facilitated recorded Zoom discussions with autistic participants on sensitive sexuality and relationship topics, combining participant-sensitive moderation, technical session operations and reliable two-person handoffs."
+      body: "Co-developed and co-facilitated recorded Zoom discussions with autistic participants on sensitive sexuality and relationship topics, combining participant-sensitive moderation, technical session support and reliable two-person handoffs."
     },
     {
       year: "2023 — now",
-      title: "Paid scientific editorial and web operations",
-      body: "Primary-literature research, scientific fact-checking, content-production support and website operations for Entropy for Life."
+      title: "Paid scientific editorial work and website maintenance",
+      body: "Primary-literature research, scientific fact-checking, content-production support and website maintenance for Entropy for Life."
     },
     {
       year: "2024 — now",
@@ -205,13 +205,13 @@ const PORTFOLIO_V3 = {
       id: "ai",
       label: "AI systems",
       title: "AI Safety & Adversarial Testing CV",
-      body: "For safeguards, model behavior, adversarial QA, trust & safety and evaluation-operations roles.",
+      body: "For safeguard testing, model behavior, adversarial QA, trust & safety and evaluation-support roles.",
       href: "/cv-resume"
     },
     {
       id: "editorial",
       label: "Research organizations",
-      title: "Editorial & Community Operations CV",
+      title: "Editorial & Community Coordination CV",
       body: "For assistant editor, evidence-synthesis coordination, research programs and community-engagement roles.",
       href: "/cv-editorial"
     },
@@ -226,7 +226,7 @@ const PORTFOLIO_V3 = {
       id: "data",
       label: "Research and data",
       title: "Research Verification & Data Quality CV",
-      body: "For scientific evidence, provenance, metadata, research operations and domain-expert AI quality roles.",
+      body: "For scientific evidence, provenance, metadata, research support and domain-expert AI quality roles.",
       href: "/cv-research"
     },
     {

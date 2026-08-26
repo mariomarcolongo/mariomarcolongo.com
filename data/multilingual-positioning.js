@@ -60,7 +60,7 @@ if (masterEntropy) {
     'Designed and built entropyforlife.it in WordPress and manage responsive design, publishing, OVHcloud hosting, DNS, SSL and technical SEO; formally acknowledged in the Mondadori book Italiani veri for scientific-literature research and error detection.'
   ];
   masterEntropy.resumeBullets = [
-    `Delivered ${career.audience.projects} documented published content contributions—${career.audience.videoProjects} YouTube videos, ${career.audience.articles} articles and ${career.audience.shortForm} short-form pieces—through evidence review, English-to-Italian scientific localization, content production and publishing operations.`,
+    `Delivered ${career.audience.projects} documented published content contributions—${career.audience.videoProjects} YouTube videos, ${career.audience.articles} articles and ${career.audience.shortForm} short-form pieces—through evidence review, English-to-Italian scientific localization, content production and publishing.`,
     'Designed and built entropyforlife.it in WordPress and manage its responsive design, publishing, OVHcloud hosting, DNS, SSL and technical SEO.'
   ];
 }
@@ -86,7 +86,7 @@ replaceStringSkill(D.resumeSkills, 'Languages:', multilingualMasterSkill);
 
 const entropyProject = D.projects?.find((item) => item?.id === 'entropy-for-life');
 if (entropyProject) {
-  entropyProject.title = 'Entropy for Life — Scientific Content Quality, Localization & Operations';
+  entropyProject.title = 'Entropy for Life — Scientific Content Quality, Localization & Website Maintenance';
   entropyProject.description =
     `Conduct recurring primary-literature research, scientific fact-checking and English-to-Italian scientific localization across ${career.audience.projects} documented published content contributions: ${career.audience.videoProjects} YouTube videos, ${career.audience.articles} co-authored articles and ${career.audience.shortForm} short-form pieces. Predominantly English-language evidence is adapted into accurate Italian scripts, articles, visualizations and short-form content with attention to terminology, source meaning, cultural context and audience comprehension. Entropy for Life is an Italian science-communication brand with ${career.audience.youtubeSubscribers} YouTube subscribers and ${career.audience.youtubeViewsExact} channel views as of ${career.audience.asOf}. Depending on the assignment, work also includes data analysis, slides, on-screen assets, short-form content and selected thumbnail concepts or production. Designed and built entropyforlife.it in WordPress and operate its responsive design, publishing and OVHcloud technical stack. Platform metrics describe the production environment, not a personal audience.`;
   entropyProject.tech = [
@@ -102,8 +102,8 @@ if (entropyProject) {
 
 const entropyCase = H?.cases?.find((item) => item?.id === 'scientific-verification');
 if (entropyCase) {
-  entropyCase.title = 'Evidence quality, localization and content operations at creator scale.';
-  entropyCase.lead = 'Paid contractor supporting an established Italian science-communication brand across evidence review, English-to-Italian scientific localization, content production and website operations.';
+  entropyCase.title = 'Evidence quality, localization and content production at creator scale.';
+  entropyCase.lead = 'Paid contractor supporting an established Italian science-communication brand across evidence review, English-to-Italian scientific localization, content production and website maintenance.';
   entropyCase.action = 'Own recurring primary-literature research, scientific fact-checking and source-faithful English-to-Italian localization. Adapt evidence into Italian scripts, articles, data analyses, visualizations, slides, on-screen assets and short-form content while preserving meaning, terminology and source context; also support selected thumbnails and operate entropyforlife.it.';
 }
 
@@ -148,7 +148,7 @@ if (P.researchQuality) {
 
 if (P.editorialCommunity) {
   if (P.editorialCommunity.fit?.[0]) {
-    P.editorialCommunity.fit[0] = 'Editorial operations and OSINT with multilingual scientific localization';
+    P.editorialCommunity.fit[0] = 'Editorial-production support and public-source research with multilingual scientific localization';
   }
   const item = findEntropy(P.editorialCommunity);
   if (item) {
@@ -162,7 +162,7 @@ if (P.editorialCommunity) {
     P.editorialCommunity,
     'Digital communications',
     'Localization and digital communications',
-    'English-to-Italian scientific localization, terminology and contextual review, professional writing, WordPress publishing, website operations, technical SEO and content presentation'
+    'English-to-Italian scientific localization, terminology and contextual review, professional writing, WordPress publishing, website maintenance, technical SEO and content presentation'
   );
 }
 

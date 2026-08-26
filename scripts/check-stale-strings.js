@@ -76,7 +76,10 @@ const PROHIBITED = [
   ['Investigations & Knowledge Integrity Analyst', 'Use the clearer Investigations & Source Quality Analyst title'],
   ['evidence-bound reporting', 'Use reporting that separates evidence from inference'],
   ['evaluation operations', 'Use a concrete evaluation activity such as test planning or reporting'],
-  ['AI-enabled workflows', 'Use a concrete description of AI-assisted tools']
+  ['AI-enabled workflows', 'Use a concrete description of AI-assisted tools'],
+  ['Website Operations Contractor', 'Use the clearer Website Maintenance Contractor role title'],
+  ['Research Operations Contributor', 'Use the clearer Research Support Contributor role title'],
+  ['Research-integrity product operations', 'Name the product work as requirements and testing']
 ];
 
 let failures = 0;
@@ -138,7 +141,7 @@ for (const [field, actual, expected] of currentGraySwanChecks) {
   if (actual !== expected) fail('data/source.js', 1, `${field} must equal ${JSON.stringify(expected)}; found ${JSON.stringify(actual)}.`);
 }
 
-const currentAiPillar = (D.pillars || []).find((item) => item?.category === 'AI EVALUATION & SAFETY OPERATIONS');
+const currentAiPillar = (D.pillars || []).find((item) => item?.category === 'AI EVALUATION & SAFEGUARD TESTING');
 for (const required of ['#74', 'top 6%', '113 platform-recorded total breaks', 'Arena rank #365', '28 global unique breaks', '1,120 points', '255 submissions', '29 July 2026']) {
   if (!String(currentAiPillar?.desc || '').includes(required)) fail('data/source.js', 1, `Current AI-evaluation pillar is missing: ${required}`);
 }
@@ -231,7 +234,7 @@ const integritySource = fs.readFileSync(path.join(ROOT, 'src/pages/integrity.ast
 const investigationSource = fs.readFileSync(path.join(ROOT, 'data/investigation-cases.js'), 'utf8');
 const integrityRecord = `${integritySource}\n${investigationSource}`;
 for (const requiredText of [
-  'evidence trail survives scrutiny', 'Evidence boundary', 'Ethical and legal boundary',
+  'evidence trail survives scrutiny', 'Evidence limits', 'Ethical and legal boundary',
   'Nebula Genomics', 'Archival reconstruction of a legally sensitive public record',
   'Biographical source-quality and notability review', 'Syndromic autism',
   'Additional provenance and rights work', 'Archival OSINT', 'Source-quality auditing',

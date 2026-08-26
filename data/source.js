@@ -56,7 +56,7 @@ function createMarioDossier() {
 
   pillars: [
     {
-      category: "AI EVALUATION & SAFETY OPERATIONS",
+      category: "AI EVALUATION & SAFEGUARD TESTING",
       icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>`,
       title: "Model Behavior & Adversarial Testing",
       lead: "Structured, self-directed probing of LLM and multimodal-system behavior across chat, image, tool-use and indirect prompt-injection challenges.",
@@ -96,7 +96,7 @@ function createMarioDossier() {
       desc: "Uses coding agents for implementation support while personally defining requirements and workflows, reading code structure, testing behavior, identifying functional issues, coordinating revisions, deploying releases and maintaining services. This is not presented as independent software development.",
       highlights: [
         { label: "Technical delivery", detail: "Requirements, code reading, functional testing, deployment and maintenance" },
-        { label: "Delivery Model", detail: "AI-assisted implementation with explicit ownership of verification and operational behavior" }
+        { label: "Delivery Model", detail: "AI-assisted implementation with personal responsibility for verification, release checks and maintenance" }
       ]
     }
   ],
@@ -124,14 +124,14 @@ function createMarioDossier() {
       highlights: [
         "113 Platform-Recorded Proving Ground Breaks: #74 and top 6% on the dated 29 July 2026 snapshot",
         "Arena Profile Context: #365 rank, 28 global unique breaks, 1,120 points and 255 submissions",
-        "Evidence Boundary: Metrics are scoped to the dated Gray Swan Proving Ground and Arena record"
+        "Evidence limits: Metrics are scoped to the dated Gray Swan Proving Ground and Arena record"
       ]
     },
     {
       id: "yourself-to-science",
       title: "Yourself to Science™ | Open Research-Participation Directory",
       oneLiner: "An open-source directory indexing more than 55 clinical studies, biobanks, donation programs, registries and other research initiatives.",
-      description: "Founded, designed and operate an open-source research-participation directory indexing more than 55 initiatives. Defined the inclusion model, verification workflow, provenance fields, licensing structure and machine-readable metadata requirements, including JSON-LD, RDF Turtle/VoID, OpenAPI and an MCP interface. Technical implementation is AI-assisted and personally verified through requirements, code reading, functional testing and operational maintenance.",
+      description: "Founded, designed and operate an open-source research-participation directory indexing more than 55 initiatives. Defined the inclusion model, verification workflow, provenance fields, licensing structure and machine-readable metadata requirements, including JSON-LD, RDF Turtle/VoID, OpenAPI and an MCP interface. Technical implementation is AI-assisted and personally verified through requirements, code reading, functional testing and maintenance.",
       role: "Founder & Project Lead",
       tech: ["Research Verification", "Metadata & Provenance", "JSON-LD", "FAIRsharing", "Zenodo", "OpenAPI", "MCP"],
       links: {
@@ -148,10 +148,10 @@ function createMarioDossier() {
     },
     {
       id: "entropy-for-life",
-      title: "Entropy for Life — Scientific Verification & Web Operations",
-      oneLiner: "Paid scientific research, fact-checking, script-development, visual-production and website-operations work across 59+ published projects.",
+      title: "Entropy for Life — Scientific Verification & Website Maintenance",
+      oneLiner: "Paid scientific research, fact-checking, script-development, visual-production and website-maintenance work across 59+ published projects.",
       description: "Paid contractor for Entropy for Life across 59+ publicly indexed projects: 55+ published YouTube video projects and four co-authored articles. Most video assignments combine primary-literature research, scientific fact-checking and script development; selected assignments focus on fact-checking and/or data visualization. Also produce data visualizations, presentation slides, on-screen assets, short-form materials and selected thumbnails independently or with video editor Alessandro Lanzoni. Additional Instagram and TikTok work is not yet fully indexed. Manage OVHCloud hosting, DNS, SSL, WordPress configuration, layout and functionality changes, and technical SEO. Formally acknowledged in Giacomo Moro Mauretto’s Mondadori book Italiani veri.",
-      role: "Scientific Research, Fact-Checking & Website Operations Contractor",
+      role: "Scientific Research, Fact-Checking & Website Maintenance Contractor",
       tech: ["Primary-Literature Research", "Scientific Fact-Checking", "Script Development", "Data Visualization & Presentation Design", "WordPress", "DNS/SSL", "Technical SEO"],
       links: {
         website: "https://entropyforlife.it",
@@ -162,7 +162,7 @@ function createMarioDossier() {
       highlights: [
         "55+ Published YouTube Projects: Primary literature researched, checked and developed into scripts",
         "Four Co-Authored Articles: Scientific writing and evidence verification",
-        "Visual & Website Operations: Slides, on-screen assets, selected thumbnails, hosting, DNS/SSL, WordPress and technical SEO"
+        "Visual production & website maintenance: Slides, on-screen assets, selected thumbnails, hosting, DNS/SSL, WordPress and technical SEO"
       ]
     },
     {
@@ -170,8 +170,8 @@ function createMarioDossier() {
       title: "MDPI Filter | Browser Extension",
       oneLiner: "An open-source browser extension that helps researchers identify and manage MDPI publications across search and citation workflows.",
       description: "Conceived product requirements and specified DOM-targeting behavior for a browser extension that highlights or hides MDPI publications across Google, Google Scholar, PubMed and Europe PMC and identifies citations on publisher pages. Coordinated AI-assisted implementation, inspected behavior, tested releases and maintained public store deployments.",
-      role: "Product Owner & AI-Assisted Technical Operator",
-      tech: ["Product Requirements", "Functional Testing", "Manifest V3", "NCBI E-utilities", "Browser Extension Operations"],
+      role: "Product Lead & Technical Maintainer",
+      tech: ["Product Requirements", "Functional Testing", "Manifest V3", "NCBI E-utilities", "Browser Extension Maintenance"],
       links: {
         chromeStore: "https://chromewebstore.google.com/detail/mdpi-filter/comknkeimaaadpiopddjoknflbmjeccp",
         edgeStore: "https://microsoftedge.microsoft.com/addons/detail/mdpi-filter/efonlkldplkaeekpiajloajjmkappjgi",
@@ -183,7 +183,7 @@ function createMarioDossier() {
       },
       highlights: [
         "Multi-Surface Filtering: Google Scholar, PubMed, Europe PMC and publisher pages",
-        "Product Ownership: Requirements, behavioral testing and release maintenance",
+        "Product scope: Requirements, behavioral testing and release maintenance",
         "Implementation Boundary: AI-assisted implementation rather than independent software development"
       ]
     },
@@ -192,8 +192,8 @@ function createMarioDossier() {
       title: "English Wikipedia Link Converter | Telegram Bot",
       oneLiner: "An open-source Telegram bot that converts non-English Wikipedia links to their English equivalents.",
       description: "Specified the behavior and deployment requirements for a Telegram bot running on AWS Lambda and API Gateway. Used AI-assisted implementation, tested private, group and inline workflows, diagnosed deployment problems and maintained GitHub Actions releases.",
-      role: "Creator & Technical Operator",
-      tech: ["Requirements", "Functional Testing", "AWS Lambda", "API Gateway", "GitHub Actions", "Serverless Operations"],
+      role: "Creator & Technical Maintainer",
+      tech: ["Requirements", "Functional Testing", "AWS Lambda", "API Gateway", "GitHub Actions", "Serverless Deployment & Maintenance"],
       links: {
         bot: "https://t.me/ToEnWikipediaBot",
         github: "https://github.com/jnton/english-wikipedia-link-converter-telegram-bot"
@@ -201,7 +201,7 @@ function createMarioDossier() {
       highlights: [
         "Serverless Deployment: AWS Lambda and API Gateway",
         "Behavioral Coverage: Private chats, groups and inline usage",
-        "Operational Ownership: Testing, deployment diagnosis and release maintenance"
+        "Testing & release maintenance: Deployment diagnosis and release maintenance"
       ]
     },
     {
@@ -364,7 +364,7 @@ function createMarioDossier() {
       ]
     },
     {
-      role: "Scientific Research, Fact-Checking & Website Operations Contractor",
+      role: "Scientific Research, Fact-Checking & Website Maintenance Contractor",
       org: "Entropy for Life — Italy",
       tag: "Independent contractor",
       period: "Jun 2023 — Present",
@@ -377,7 +377,7 @@ function createMarioDossier() {
       bullets: [
         "Deliver primary-literature research, scientific fact-checking and script development across 55+ published YouTube video projects and four co-authored articles; most video assignments combine all three functions, while selected work focuses on fact-checking and/or data visualization.",
         "Produce data visualizations, presentation slides and on-screen assets, short-form materials and selected thumbnails independently or with video editor Alessandro Lanzoni; additional Instagram and TikTok work is not yet fully indexed.",
-        "Manage OVHCloud hosting, DNS, SSL, WordPress configuration, layout and functionality changes, and technical SEO as website operations rather than conventional independent software development.",
+        "Manage OVHCloud hosting, DNS, SSL, WordPress configuration, layout and functionality changes, and technical SEO as website maintenance rather than conventional independent software development.",
         "Formally acknowledged in Giacomo Moro Mauretto’s Mondadori book Italiani veri for scientific-literature research and error detection."
       ],
       resumeBullets: [
@@ -386,7 +386,7 @@ function createMarioDossier() {
       ]
     },
     {
-      role: "Volunteer Focus-Group Co-Facilitator & Research Operations Contributor",
+      role: "Volunteer Focus-Group Co-Facilitator & Research Support Contributor",
       org: "Department of Developmental Psychology and Socialisation (DPSS), University of Padua",
       tag: "Volunteer research collaboration supervised by Marta Panzeri",
       period: "Nov 2022 — 2025",
@@ -503,7 +503,7 @@ function createMarioDossier() {
     "Technical Delivery: Requirements definition, codebase reading and behavior inspection, functional testing, issue diagnosis, deployment and service maintenance.",
     "AI-Assisted Implementation: Uses coding agents for implementation support while personally inspecting structure and behavior, testing results and coordinating revisions; not independent software development.",
     "Open Science & Structured Data: Wikimedia, Wikidata, FAIRsharing, Zenodo, ENA records, JSON-LD, RDF Turtle/VoID, OpenAPI and MCP interfaces.",
-    "Web & Cloud Operations: WordPress, HTML/CSS modification, Git/GitHub, JSON, REST APIs, AWS Lambda, Cloudflare Pages, DNS/SSL and CI/CD operations.",
+    "Web & Cloud Delivery: WordPress, HTML/CSS modification, Git/GitHub, JSON, REST APIs, AWS Lambda, Cloudflare Pages, DNS/SSL and CI/CD maintenance.",
     "Languages: Italian — native. English — C1 overall (EF SET 68/100), with advanced technical reading and professional/technical writing."
   ],
 

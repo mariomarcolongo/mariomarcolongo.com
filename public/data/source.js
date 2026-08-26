@@ -52,10 +52,10 @@ const MARIO_DOSSIER = {
     ],
     "notandiaUrl": "https://mariomarcolongo.com/notandia"
   },
-  "summary": "Data and knowledge-quality analyst with eight years of auditable public-source and structured-data work. The public record includes paid scientific fact-checking and editorial production, a maintained research-participation directory and self-directed model-behavior testing. On 29 July 2026, the Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks. Entropy for Life work covers 80 documented published content contributions: 55 YouTube videos · 4 articles · 21 short-form pieces. Technical delivery is AI-assisted, with personal ownership of requirements, verification, deployment and maintenance. Current open-source product work includes Notandia (formerly MDPI Filter), a continuing browser and Zotero research-integrity tool.",
+  "summary": "Data and knowledge-quality analyst with eight years of auditable public-source and structured-data work. The public record includes paid scientific fact-checking and editorial production, a maintained research-participation directory and self-directed model-behavior testing. On 29 July 2026, the Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks. Entropy for Life work covers 80 documented published content contributions: 55 YouTube videos · 4 articles · 21 short-form pieces. Technical delivery is AI-assisted, with personal responsibility for requirements, verification, deployment and maintenance. Current open-source product work includes Notandia (formerly MDPI Filter), a continuing browser and Zotero research-integrity tool.",
   "pillars": [
     {
-      "category": "AI EVALUATION & SAFETY OPERATIONS",
+      "category": "AI EVALUATION & SAFEGUARD TESTING",
       "icon": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"></path></svg>",
       "title": "Model Behavior & Adversarial Testing",
       "lead": "Structured, self-directed probing of LLM and multimodal-system behavior across chat, image, tool-use and indirect prompt-injection challenges.",
@@ -118,7 +118,7 @@ const MARIO_DOSSIER = {
         },
         {
           "label": "Delivery Model",
-          "detail": "AI-assisted implementation with explicit ownership of verification and operational behavior"
+          "detail": "AI-assisted implementation with personal responsibility for verification, release checks and maintenance"
         }
       ]
     }
@@ -172,14 +172,14 @@ const MARIO_DOSSIER = {
       "highlights": [
         "Current Snapshot: #74, top 6% and 113 platform-displayed Proving Ground breaks",
         "Arena Activity: 255 submissions, 28 global unique breaks and 1,120 points",
-        "Evidence Boundary: The visible area counters sum to 112; the platform displays 113 total breaks"
+        "Evidence limits: The visible area counters sum to 112; the platform displays 113 total breaks"
       ]
     },
     {
       "id": "yourself-to-science",
       "title": "Yourself to Science™ | Open Research-Participation Directory",
       "oneLiner": "An open-source directory indexing 55 research-participation resources, with 37 unique Wikidata items using the domain as a reference URL.",
-      "description": "Founded, designed and operate an open-source research-participation directory indexing 55 resources. As of 27 July 2026, 37 unique Wikidata items use yourselftoscience.org as a reference URL (P854). Defined the inclusion model, verification workflow, provenance fields, licensing structure and machine-readable metadata requirements, including JSON-LD, RDF Turtle/VoID, OpenAPI and an MCP interface. Technical implementation is AI-assisted and personally verified through requirements, code reading, functional testing and operational maintenance.",
+      "description": "Founded, designed and operate an open-source research-participation directory indexing 55 resources. As of 27 July 2026, 37 unique Wikidata items use yourselftoscience.org as a reference URL (P854). Defined the inclusion model, verification workflow, provenance fields, licensing structure and machine-readable metadata requirements, including JSON-LD, RDF Turtle/VoID, OpenAPI and an MCP interface. Technical implementation is AI-assisted and personally verified through requirements, code reading, functional testing and maintenance.",
       "role": "Founder & Project Lead",
       "tech": [
         "Research Verification",
@@ -205,10 +205,10 @@ const MARIO_DOSSIER = {
     },
     {
       "id": "entropy-for-life",
-      "title": "Entropy for Life — Scientific Research, Fact-Checking & Website Operations",
+      "title": "Entropy for Life — Scientific Research, Fact-Checking & Website Maintenance",
       "oneLiner": "80 documented published content contributions inside a creator brand with 267K YouTube subscribers and 36.5M channel views.",
       "description": "Conduct recurring primary-literature research and scientific fact-checking across 80 documented published content contributions: 55 YouTube videos, 4 co-authored articles and 21 short-form pieces. Entropy for Life is an Italian science-communication brand with 267K YouTube subscribers, 36,524,137 channel views, 159K Instagram followers and 54K TikTok followers as of 26 July 2026. Depending on the assignment, also translate evidence into scripts, data analyses, visualizations, slides, on-screen assets, short-form content and selected thumbnail concepts or production. Designed and built entropyforlife.it in WordPress and operate its responsive design, publishing and OVHcloud technical stack. The audience belongs to the brand, and cross-platform totals are not counts of unique people.",
-      "role": "Scientific Research, Fact-Checking & Website Operations Contractor",
+      "role": "Scientific Research, Fact-Checking & Website Maintenance Contractor",
       "tech": [
         "Primary-Source Research",
         "Scientific Fact-Checking",
@@ -226,7 +226,7 @@ const MARIO_DOSSIER = {
       "highlights": [
         "Production Scale: 36.5M YouTube views · 267K subscribers · 592 published videos",
         "Documented Work: 80 contributions · 55 YouTube videos · 4 articles · 21 short-form pieces",
-        "Cross-Functional Scope: Evidence quality, content production, visual packaging and website design and operations"
+        "Work performed: Evidence review, content production, visual packaging and website design and maintenance"
       ]
     },
     {
@@ -242,7 +242,7 @@ const MARIO_DOSSIER = {
         "Crossref/Retraction Watch",
         "Zotero",
         "NCBI/Europe PMC",
-        "Multi-Browser Release Operations"
+        "Multi-Browser Release Maintenance"
       ],
       "links": {
         "website": "https://mariomarcolongo.com/notandia",
@@ -269,14 +269,14 @@ const MARIO_DOSSIER = {
       "title": "English Wikipedia Link Converter | Telegram Bot",
       "oneLiner": "An open-source Telegram bot that converts non-English Wikipedia links to their English equivalents.",
       "description": "Specified the behavior and deployment requirements for a Telegram bot running on AWS Lambda and API Gateway. Used AI-assisted implementation, tested private, group and inline workflows, diagnosed deployment problems and maintained GitHub Actions releases.",
-      "role": "Creator & Technical Operator",
+      "role": "Creator & Technical Maintainer",
       "tech": [
         "Requirements",
         "Functional Testing",
         "AWS Lambda",
         "API Gateway",
         "GitHub Actions",
-        "Serverless Operations"
+        "Serverless Deployment & Maintenance"
       ],
       "links": {
         "bot": "https://t.me/ToEnWikipediaBot",
@@ -285,7 +285,7 @@ const MARIO_DOSSIER = {
       "highlights": [
         "Serverless Deployment: AWS Lambda and API Gateway",
         "Behavioral Coverage: Private chats, groups and inline usage",
-        "Operational Ownership: Testing, deployment diagnosis and release maintenance"
+        "Testing & release maintenance: Deployment diagnosis and release maintenance"
       ]
     },
     {
@@ -615,7 +615,7 @@ const MARIO_DOSSIER = {
       ]
     },
     {
-      "role": "Scientific Research, Fact-Checking & Website Operations Contractor",
+      "role": "Scientific Research, Fact-Checking & Website Maintenance Contractor",
       "org": "Entropy for Life — Italy",
       "tag": "Independent contractor",
       "period": "Jun 2023 — Present",
@@ -629,12 +629,12 @@ const MARIO_DOSSIER = {
         "Designed and built entropyforlife.it in WordPress and manage responsive design, publishing, OVHcloud hosting, DNS, SSL and technical SEO; formally acknowledged in the Mondadori book Italiani veri for scientific-literature research and error detection."
       ],
       "resumeBullets": [
-        "Delivered 80 documented published content contributions—55 YouTube videos, 4 articles and 21 short-form pieces—through evidence review, content production and publishing operations.",
+        "Delivered 80 documented published content contributions—55 YouTube videos, 4 articles and 21 short-form pieces—through evidence review, content production and publishing.",
         "Designed and built entropyforlife.it in WordPress and manage its responsive design, publishing, OVHcloud hosting, DNS, SSL and technical SEO."
       ]
     },
     {
-      "role": "Volunteer Focus-Group Co-Facilitator & Research Operations Contributor",
+      "role": "Volunteer Focus-Group Co-Facilitator & Research Support Contributor",
       "org": "Department of Developmental Psychology and Socialisation (DPSS), University of Padua",
       "tag": "Volunteer research collaboration supervised by Marta Panzeri",
       "period": "Nov 2022 — 2025",
@@ -748,7 +748,7 @@ const MARIO_DOSSIER = {
     "Technical Delivery: Requirements definition, codebase reading and behavior inspection, functional testing, issue diagnosis, deployment and service maintenance.",
     "AI-Assisted Implementation: Uses coding agents for implementation support while personally defining requirements, inspecting structure and behavior, testing results, guiding revisions, deploying releases and maintaining services.",
     "Open Science & Structured Data: Wikimedia, Wikidata, FAIRsharing, Zenodo, ENA records, JSON-LD, RDF Turtle/VoID, OpenAPI and MCP interfaces.",
-    "Web & Cloud Operations: WordPress, HTML/CSS modification, Git/GitHub, JSON, REST APIs, AWS Lambda, Cloudflare Pages, DNS/SSL and CI/CD operations.",
+    "Web & Cloud Delivery: WordPress, HTML/CSS modification, Git/GitHub, JSON, REST APIs, AWS Lambda, Cloudflare Pages, DNS/SSL and CI/CD maintenance.",
     "Languages: Italian — native. English — C1 overall (EF SET 68/100), with advanced technical reading and professional/technical writing."
   ],
   "resumeSkills": [

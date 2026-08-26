@@ -133,8 +133,8 @@ if (P.editorialCommunity) {
 
   replaceSkill(
     P.editorialCommunity,
-    "Editorial operations",
-    "Editorial operations, localization and OSINT",
+    "Editorial production support",
+    "Editorial production, localization & public-source research",
     "Evidence research, long-form explanatory writing, English-to-Italian scientific and technical localization, archival source recovery, claim checking, source documentation, public-record reconciliation, editorial feedback, content preparation and production troubleshooting"
   );
 }
@@ -196,7 +196,7 @@ if (P.integrity) {
   }
 
   if (focusGroup) {
-    focusGroup.role = "Sensitive Research Operations Contributor";
+    focusGroup.role = "Focus-Group Co-Facilitator & Research Support Contributor";
     focusGroup.bullets = [
       "Co-developed and facilitated approximately 4–5 recorded remote focus groups with autistic participants discussing sensitive sexuality and relationship topics.",
       "Supported recruitment, consent, participant privacy, pseudonymous naming, recording boundaries, structured prompts, accessibility options and two-person facilitation handoffs."

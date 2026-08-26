@@ -7,7 +7,7 @@
 ---
 
 ## Executive Summary
-Data and knowledge-quality analyst with eight years of auditable public-source and structured-data work. The public record includes paid scientific fact-checking and editorial production, a maintained research-participation directory and self-directed model-behavior testing. On 29 July 2026, the Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks. Entropy for Life work covers 80 documented published content contributions: 55 YouTube videos · 4 articles · 21 short-form pieces. Technical delivery is AI-assisted, with personal ownership of requirements, verification, deployment and maintenance. Current open-source product work includes Notandia (formerly MDPI Filter), a continuing browser and Zotero research-integrity tool.
+Data and knowledge-quality analyst with eight years of auditable public-source and structured-data work. The public record includes paid scientific fact-checking and editorial production, a maintained research-participation directory and self-directed model-behavior testing. On 29 July 2026, the Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks. Entropy for Life work covers 80 documented published content contributions: 55 YouTube videos · 4 articles · 21 short-form pieces. Technical delivery is AI-assisted, with personal responsibility for requirements, verification, deployment and maintenance. Current open-source product work includes Notandia (formerly MDPI Filter), a continuing browser and Zotero research-integrity tool.
 
 > **My technical work uses AI-assisted implementation: I define requirements, inspect implementation behavior, test releases, diagnose functional problems, guide iterations, deploy releases and maintain services.**
 
@@ -23,7 +23,7 @@ Data and knowledge-quality analyst with eight years of auditable public-source a
 - Technical Delivery: Requirements definition, codebase reading and behavior inspection, functional testing, issue diagnosis, deployment and service maintenance.
 - AI-Assisted Implementation: Uses coding agents for implementation support while personally defining requirements, inspecting structure and behavior, testing results, guiding revisions, deploying releases and maintaining services.
 - Open Science & Structured Data: Wikimedia, Wikidata, FAIRsharing, Zenodo, ENA records, JSON-LD, RDF Turtle/VoID, OpenAPI and MCP interfaces.
-- Web & Cloud Operations: WordPress, HTML/CSS modification, Git/GitHub, JSON, REST APIs, AWS Lambda, Cloudflare Pages, DNS/SSL and CI/CD operations.
+- Web & Cloud Delivery: WordPress, HTML/CSS modification, Git/GitHub, JSON, REST APIs, AWS Lambda, Cloudflare Pages, DNS/SSL and CI/CD maintenance.
 - Languages: Italian — native. English — C1 overall (EF SET 68/100), with advanced technical reading and professional/technical writing.
 
 ---
@@ -44,7 +44,7 @@ Data and knowledge-quality analyst with eight years of auditable public-source a
 - Reached #74 on the Proving Ground (top 6%) with 113 platform-displayed total breaks on 29 July 2026; the same profile displayed Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions.
 - Document the visible 112/113 discrepancy and separate platform-reported outcomes from independent verification, security certification or model-wide conclusions.
 
-### Scientific Research, Fact-Checking & Website Operations Contractor — Entropy for Life — Italy
+### Scientific Research, Fact-Checking & Website Maintenance Contractor — Entropy for Life — Italy
 *Jun 2023 — Present* · **[Independent contractor]**
 
 - Delivered 80 documented published content contributions: 55 YouTube videos, 4 co-authored articles and 21 short-form pieces.
@@ -52,7 +52,7 @@ Data and knowledge-quality analyst with eight years of auditable public-source a
 - Develop selected thumbnail concepts and visual packaging independently or with the video editor, using click-through rate, watch time, retention and immediate attention capture as explicit design criteria.
 - Designed and built entropyforlife.it in WordPress and manage responsive design, publishing, OVHcloud hosting, DNS, SSL and technical SEO; formally acknowledged in the Mondadori book Italiani veri for scientific-literature research and error detection.
 
-### Volunteer Focus-Group Co-Facilitator & Research Operations Contributor — Department of Developmental Psychology and Socialisation (DPSS), University of Padua
+### Volunteer Focus-Group Co-Facilitator & Research Support Contributor — Department of Developmental Psychology and Socialisation (DPSS), University of Padua
 *Nov 2022 — 2025* · **[Volunteer research collaboration supervised by Marta Panzeri]**
 
 - Served as lead or co-facilitator across approximately 4–5 recorded Zoom focus-group sessions, typically lasting 1–2 hours, with autistic participants discussing sensitive sexuality and relationship topics.
@@ -97,10 +97,10 @@ Self-directed model-behavior evaluation conducted through the Gray Swan Proving 
 ### Yourself to Science™ | Open Research-Participation Directory
 **Founder & Project Lead** | Website: https://yourselftoscience.org | GitHub: https://github.com/yourselftoscience/yourselftoscience.org | DOI: https://doi.org/10.5281/zenodo.15109359 | FAIRsharing: https://doi.org/10.25504/FAIRsharing.d3d487
 
-Founded, designed and operate an open-source research-participation directory indexing 55 resources. As of 27 July 2026, 37 unique Wikidata items use yourselftoscience.org as a reference URL (P854). Defined the inclusion model, verification workflow, provenance fields, licensing structure and machine-readable metadata requirements, including JSON-LD, RDF Turtle/VoID, OpenAPI and an MCP interface. Technical implementation is AI-assisted and personally verified through requirements, code reading, functional testing and operational maintenance.
+Founded, designed and operate an open-source research-participation directory indexing 55 resources. As of 27 July 2026, 37 unique Wikidata items use yourselftoscience.org as a reference URL (P854). Defined the inclusion model, verification workflow, provenance fields, licensing structure and machine-readable metadata requirements, including JSON-LD, RDF Turtle/VoID, OpenAPI and an MCP interface. Technical implementation is AI-assisted and personally verified through requirements, code reading, functional testing and maintenance.
 
-### Entropy for Life — Scientific Research, Fact-Checking & Website Operations
-**Scientific Research, Fact-Checking & Website Operations Contractor**
+### Entropy for Life — Scientific Research, Fact-Checking & Website Maintenance
+**Scientific Research, Fact-Checking & Website Maintenance Contractor**
 
 Conduct recurring primary-literature research and scientific fact-checking across 80 documented published content contributions: 55 YouTube videos, 4 co-authored articles and 21 short-form pieces. Entropy for Life is an Italian science-communication brand with 267K YouTube subscribers, 36,524,137 channel views, 159K Instagram followers and 54K TikTok followers as of 26 July 2026. Depending on the assignment, also translate evidence into scripts, data analyses, visualizations, slides, on-screen assets, short-form content and selected thumbnail concepts or production. Designed and built entropyforlife.it in WordPress and operate its responsive design, publishing and OVHcloud technical stack. The audience belongs to the brand, and cross-platform totals are not counts of unique people.
 
@@ -110,7 +110,7 @@ Conduct recurring primary-literature research and scientific fact-checking acros
 Created and maintain Notandia, the public continuation and expansion of MDPI Filter. The browser extension helps users identify articles from publishers whose editorial and peer-review practices have attracted scrutiny—including MDPI and Frontiers—and choose how matching articles should appear, including context, badges, highlights, dimming or hiding. It also uses Crossref/Retraction Watch data to check for formal notices such as retractions, corrections, expressions of concern, withdrawals, duplicate-publication findings and reinstatements. I define product requirements and evidence hierarchies, test cross-browser and Zotero behavior, inspect API and implementation logic, reproduce failures, guide AI-assisted changes, and manage documentation, release verification and deployment. The Zotero plugin currently focuses on precise MDPI item and reference detection, including structured PubMed Central evidence and exact citation highlighting. Publisher-level context is controlled by the user and does not treat every journal or article as equivalent. Existing store identities and compatibility-sensitive identifiers are retained so the same product lineage can continue receiving updates. Current source repositories: https://github.com/notandia/browser-extension and https://github.com/notandia/zotero-plugin.
 
 ### English Wikipedia Link Converter | Telegram Bot
-**Creator & Technical Operator** | GitHub: https://github.com/jnton/english-wikipedia-link-converter-telegram-bot | Bot: https://t.me/ToEnWikipediaBot
+**Creator & Technical Maintainer** | GitHub: https://github.com/jnton/english-wikipedia-link-converter-telegram-bot | Bot: https://t.me/ToEnWikipediaBot
 
 Specified the behavior and deployment requirements for a Telegram bot running on AWS Lambda and API Gateway. Used AI-assisted implementation, tested private, group and inline workflows, diagnosed deployment problems and maintained GitHub Actions releases.
 

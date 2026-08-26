@@ -74,6 +74,23 @@
     margin-top: 12px !important;
   }
 
+  /* Give the experience-led first page a little extra breathing room without
+   * making its type smaller than the rest of the document. */
+  .application-page:first-child .application-section {
+    margin-top: 10px !important;
+  }
+
+  .application-page:first-child .application-entry {
+    margin-top: 8px !important;
+  }
+
+  /* The linked work samples stay available in the web CV. In a two-page PDF,
+   * repeating them after the experience links makes the second page dense and
+   * risks hiding the actual education and capability sections behind the footer. */
+  .application-evidence-section {
+    display: none !important;
+  }
+
   .application-section-title {
     margin-bottom: 8px !important;
     padding-bottom: 4px !important;
@@ -175,7 +192,8 @@
 
   .application-footer-note {
     right: 13mm !important;
-    bottom: 6mm !important;
+    /* The 280 mm page box leaves a generous physical A4 bottom margin. */
+    bottom: 2mm !important;
     left: 13mm !important;
     padding-top: 6px !important;
     font-size: 0.59rem !important;

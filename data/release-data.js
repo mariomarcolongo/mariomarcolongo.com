@@ -49,7 +49,7 @@ function replaceStrength(profile, index, value, label, detail) {
 
 function updateEntropyExperience(item) {
   if (!item) return;
-  item.role = "Scientific Research, Fact-Checking & Website Operations Contractor";
+  item.role = "Scientific Research, Fact-Checking & Website Maintenance Contractor";
   item.links = {
     website: ENTROPY.websiteUrl,
     playlist: ENTROPY.videosUrl,
@@ -112,18 +112,18 @@ if (aiProject) {
   aiProject.highlights = [
     `Current Snapshot: #${GS.rank}, ${GS.percentile.toLowerCase()} and ${GS.totalBreaks} platform-displayed Proving Ground breaks`,
     `Arena Activity: ${GS.arenaSubmissions} submissions, ${GS.arenaUniqueBreaks} global unique breaks and ${GS.arenaPoints.toLocaleString("en-US")} points`,
-    `Evidence Boundary: The visible area counters sum to ${GS.displayedAreaTotal}; the platform displays ${GS.totalBreaks} total breaks`
+    `Evidence limits: The visible area counters sum to ${GS.displayedAreaTotal}; the platform displays ${GS.totalBreaks} total breaks`
   ];
 }
 
 const entropyProject = findById(D.projects, "entropy-for-life");
 if (entropyProject) {
-  entropyProject.title = "Entropy for Life — Scientific Editorial Production & Web Operations";
+  entropyProject.title = "Entropy for Life — Scientific Editorial Production & Website Maintenance";
   entropyProject.oneLiner =
     `${ENTROPY.totalProjects} documented published projects: ${ENTROPY.videoProjects} YouTube video projects and ${ENTROPY.articles} co-authored articles.`;
   entropyProject.description =
     `Conduct primary-literature research and scientific fact-checking across ${ENTROPY.totalProjects} documented published projects: ${ENTROPY.videoProjects} YouTube video projects and ${ENTROPY.articles} co-authored articles. Most video assignments combine research, fact-checking and script development; selected assignments focus on fact-checking and/or visualization. Depending on the project, also create data visualizations, presentation slides, on-screen assets and selected thumbnails independently or in collaboration with video editor Alessandro Lanzoni. Manage OVHCloud hosting, DNS, SSL, WordPress configuration, layout and functionality changes, and technical SEO.`;
-  entropyProject.role = "Scientific Research, Fact-Checking & Website Operations Contractor";
+  entropyProject.role = "Scientific Research, Fact-Checking & Website Maintenance Contractor";
   entropyProject.tech = [
     "Primary-Source Research", "Scientific Fact-Checking", "Script Development",
     "Data Visualization", "Presentation Assets", "Thumbnail Production",
@@ -283,7 +283,7 @@ if (ai) {
   }
   const entExp = ai.experience?.find((item) => item?.organization?.includes("Entropy for Life"));
   if (entExp) {
-    entExp.role = "Scientific Research, Fact-Checking & Website Operations Contractor";
+    entExp.role = "Scientific Research, Fact-Checking & Website Maintenance Contractor";
     entExp.links = [
       { label: `${ENTROPY.videoProjects} YouTube projects`, url: ENTROPY.videosUrl },
       { label: `${ENTROPY.articles} articles`, url: ENTROPY.articlesUrl },
@@ -304,7 +304,7 @@ if (research) {
   replaceStrength(research, 2, ENTROPY.totalProjects, "Published scientific projects", `${ENTROPY.videoProjects} YouTube projects · ${ENTROPY.articles} articles`);
   const entExp = research.experience?.find((item) => item?.organization?.includes("Entropy for Life"));
   if (entExp) {
-    entExp.role = "Scientific Research, Fact-Checking & Website Operations Contractor";
+    entExp.role = "Scientific Research, Fact-Checking & Website Maintenance Contractor";
     entExp.links = [
       { label: `${ENTROPY.videoProjects} YouTube projects`, url: ENTROPY.videosUrl },
       { label: `${ENTROPY.articles} articles`, url: ENTROPY.articlesUrl },
@@ -325,7 +325,7 @@ if (editorial) {
   replaceStrength(editorial, 0, ENTROPY.totalProjects, "Documented published projects", `${ENTROPY.videoProjects} YouTube projects · ${ENTROPY.articles} articles`);
   const entExp = editorial.experience?.find((item) => item?.organization?.includes("Entropy for Life"));
   if (entExp) {
-    entExp.role = "Scientific Research, Fact-Checking & Website Operations Contractor";
+    entExp.role = "Scientific Research, Fact-Checking & Website Maintenance Contractor";
     entExp.links = [
       { label: `${ENTROPY.videoProjects} YouTube projects`, url: ENTROPY.videosUrl },
       { label: `${ENTROPY.articles} articles`, url: ENTROPY.articlesUrl },

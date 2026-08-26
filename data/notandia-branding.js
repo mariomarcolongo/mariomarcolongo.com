@@ -44,7 +44,7 @@ function applyNotandiaBranding({ D, H, P } = {}) {
       "Crossref/Retraction Watch",
       "Zotero",
       "NCBI/Europe PMC",
-      "Multi-Browser Release Operations"
+      "Multi-Browser Release Maintenance"
     ];
     project.links = {
       website: NOTANDIA.canonicalUrl,
