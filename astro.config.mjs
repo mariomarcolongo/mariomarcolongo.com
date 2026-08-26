@@ -66,6 +66,12 @@ const legacyDataInterop = {
     if (code.includes(defaultExport)) return null;
 
     const transformed = stripConditionalCommonJsExport(code, identifier);
+    if (cleanId.endsWith('/data/source.js')) {
+      return `${transformed}\nexport { createMarioDossier };\n${defaultExport};\n`;
+    }
+    if (cleanId.endsWith('/data/portfolio-human.js')) {
+      return `${transformed}\nexport { createPortfolioHuman };\n${defaultExport};\n`;
+    }
     return `${transformed}\n${defaultExport};\n`;
   }
 };

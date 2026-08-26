@@ -1,28 +1,29 @@
-# Mario Marcolongo — AI Evaluation & Research Operations Specialist (AI / LLM Compatible Markdown)
-> Model Behavior · Scientific Evidence · Knowledge Integrity · Open Science & Data Quality
-> I evaluate model behavior, verify scientific evidence, and operate research systems.
+# Mario Marcolongo — Data Quality, Information Retrieval & AI Evaluation Specialist (AI / LLM Compatible Markdown)
+> Information Verification · Model Behavior · Scientific Evidence · Knowledge Integrity · Data Visualization
+> I retrieve and verify information, investigate data and evidence quality, and test AI systems.
 > Work Authorization: EU/EEA work-authorized; Swiss EU/EFTA permit eligible; open to employer-sponsored work authorization elsewhere; self-funded relocation considered for exceptional opportunities.
 > Email: me@mariomarcolongo.com | Web: https://mariomarcolongo.com | ORCID: 0000-0003-2846-7115
 
 ---
 
 ## Executive Summary
-Research, evidence and AI operations specialist with eight years of auditable public-source and structured-data work, paid scientific fact-checking and editorial production, community-facing research facilitation, ownership of an open research-participation directory, and sustained adversarial testing of AI systems. On 29 July 2026, the Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks. Entropy for Life work covers 80 documented published content contributions: 55 YouTube videos · 4 articles · 21 short-form pieces. Technical work is code-literate and AI-assisted, with personal ownership of requirements, verification, deployment and maintenance. Current open-source product work includes Notandia (formerly MDPI Filter), a continuing browser and Zotero research-integrity tool.
+Information-retrieval, data-quality, scientific-verification and AI-evaluation specialist with eight years of auditable public-source and structured-data work. The public record includes paid scientific fact-checking and editorial production, a maintained research-participation directory, and self-directed model-behavior evaluation. On 29 July 2026, the Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks. Entropy for Life work covers 80 documented published content contributions: 55 YouTube videos · 4 articles · 21 short-form pieces. Technical work is code-literate and AI-assisted, with personal ownership of requirements, verification, deployment and maintenance. Current open-source product work includes Notandia (formerly MDPI Filter), a continuing browser and Zotero research-integrity tool.
 
 > **My technical work is code-literate and AI-assisted: I define requirements and workflows, inspect implementation behavior, test releases, diagnose functional problems, guide iterations, deploy releases and maintain services.**
 
 ---
 
 ## Core Competencies & Technical Skills
-- AI Safety Evaluation & Adversarial Testing: Exploratory model-behavior testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection.
-- Evaluation Operations: Test planning, evidence capture, reproducibility notes, taxonomy thinking, issue classification, evidence-bound reporting and mitigation-retesting concepts.
-- Scientific Verification & Evidence Synthesis: Primary-source fact-checking, bibliographic research, claim decomposition, evidence screening, source-quality assessment and cross-source corroboration.
+- Information Retrieval & Verification: Primary-source and bibliographic search, claim tracing, source discovery, query refinement, source-quality assessment and cross-source corroboration.
 - Data Quality & Provenance: Structured metadata, entity reconciliation, validation rules, documentation, taxonomy design and public-record verification.
+- AI Safety Evaluation & Adversarial Testing: Exploratory model-behavior testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection.
+- Scientific Verification & Evidence Synthesis: Primary-source fact-checking, bibliographic research, claim decomposition, evidence screening, source-quality assessment and cross-source corroboration.
+- Data Visualization: SVG vector diagrams, Tableau Public, Flourish and open-data publication.
+- Evaluation Operations: Test planning, evidence capture, reproducibility notes, taxonomy thinking, issue classification, evidence-bound reporting and mitigation-retesting concepts.
 - Code-Literate Technical Operations: Requirements definition, codebase reading and behavior inspection, functional testing, issue diagnosis, deployment operations and service maintenance.
 - AI-Assisted Technical Workflow: Uses coding agents for implementation support while personally defining requirements, inspecting structure and behavior, testing results, guiding revisions, deploying releases and maintaining services.
 - Open Science & Structured Data: Wikimedia, Wikidata, FAIRsharing, Zenodo, ENA records, JSON-LD, RDF Turtle/VoID, OpenAPI and MCP interfaces.
 - Web & Cloud Operations: WordPress, HTML/CSS modification, Git/GitHub, JSON, REST APIs, AWS Lambda, Cloudflare Pages, DNS/SSL and CI/CD operations.
-- Data Visualization: SVG vector diagrams, Tableau Public, Flourish and open-data publication.
 - Languages: Italian — native. English — C1 overall (EF SET 68/100), with advanced technical reading and professional/technical writing.
 
 ---
@@ -56,7 +57,7 @@ Research, evidence and AI operations specialist with eight years of auditable pu
 
 - Served as lead or co-facilitator across approximately 4–5 recorded Zoom focus-group sessions, typically lasting 1–2 hours, with autistic participants discussing sensitive sexuality and relationship topics.
 - Co-developed the protocol, including pseudonymous naming, explicit recorded consent, optional captions and written-chat participation, timed turn-taking, scripted prompts, recording boundaries and two-person facilitation handoffs.
-- Supported participant recruitment, bibliographic research, technical preparation and protocol feedback from an autistic perspective; coordinated with Marta Panzeri, researchers and a second autistic volunteer facilitator.
+- Supported participant recruitment, bibliographic research and technical preparation; contributed to structuring participant experience and accessibility considerations and coordinated with Marta Panzeri, researchers and a second volunteer facilitator.
 - Public attribution to Marta Panzeri and the Department of Developmental Psychology and Socialisation is included with permission; no participant information or confidential session content is disclosed.
 
 ### Scientific Contributor & Structured-Data Editor — Wikipedia, Wikidata & Wikimedia Commons

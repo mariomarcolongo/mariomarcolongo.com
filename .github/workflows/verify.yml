@@ -32,11 +32,6 @@ jobs:
           set -o pipefail
           npm run build 2>&1 | tee audit-output/build.log
 
-      - name: Verify application-specific CVs
-        run: |
-          node scripts/verify-orcid-cv.js
-          node scripts/verify-giskard-cv.js
-
       - name: Diagnose mobile layout
         run: node scripts/diagnose-mobile-overflow.js | tee audit-output/mobile-overflow.json
 
@@ -55,18 +50,8 @@ jobs:
       - name: Verify Notandia continuity and legacy-link safety
         run: node scripts/verify-notandia-transition.js
 
-      - name: Generate six specialized application PDFs
+      - name: Generate four specialized application PDFs
         run: npm run pdf:resume
-
-      - name: Verify Giskard PDF ATS text extraction
-        shell: bash
-        run: |
-          if ! command -v pdftotext >/dev/null 2>&1; then
-            sudo apt-get update
-            sudo apt-get install -y poppler-utils
-          fi
-          pdftotext -layout "Mario Marcolongo — Giskard AI Safety & Security Researcher CV.pdf" audit-output/giskard-cv-extracted.txt
-          node scripts/verify-giskard-pdf-text.js
 
       - name: Generate master CV PDF
         run: npm run pdf:cv
@@ -94,18 +79,14 @@ jobs:
             integrity.html
             cv.html
             cv-resume.html
-            cv-giskard.html
             cv-research.html
             cv-editorial.html
             cv-integrity.html
-            cv-orcid.html
             security.html
             Mario Marcolongo — AI Evaluation & Model Behavior CV.pdf
-            Mario Marcolongo — Giskard AI Safety & Security Researcher CV.pdf
             Mario Marcolongo — Scientific AI Quality & Research Data CV.pdf
             Mario Marcolongo — Research Editorial & Community Operations CV.pdf
             Mario Marcolongo — Trust Safety & Knowledge Integrity CV.pdf
-            Mario Marcolongo — ORCID Member Support Technical Specialist CV.pdf
             Mario Marcolongo — Curriculum Vitae.pdf
           if-no-files-found: ignore
           retention-days: 7

@@ -3,22 +3,15 @@ import Layout from "../layouts/Layout.astro";
 import SiteNav from "../components/SiteNav.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import "../styles/portfolio-v8.css";
-import D from "../../data/source.js";
-import H from "../../data/portfolio-human.js";
+import { createMarioDossier } from "../../data/source.js";
+import homepage from "../../data/homepage-positioning.js";
 import { buildProfileGraph } from "../lib/structured-data.js";
 
-const pageTitle = "Mario Marcolongo — AI Evaluation & Scientific Fact-Checking";
-const pageDescription = "Portfolio focused on AI model-behavior evaluation, scientific fact-checking, audience-focused scientific content operations and supporting research-information systems.";
+const D = createMarioDossier();
+const { H, audience, graySwan } = homepage;
+const pageTitle = "Mario Marcolongo — Data Quality, Information Retrieval & AI Evaluation";
+const pageDescription = "Data-quality, information-retrieval and AI-evaluation specialist. Evidence verification, model-behavior testing, research operations and public-source investigation.";
 const profileJsonLd = buildProfileGraph(D, "https://mariomarcolongo.com/", pageTitle);
-
-const entropyAudience = {
-  combinedFollowing: "460K+",
-  youtubeSubscribers: "250K+",
-  projects: "59+",
-  videoProjects: "55+",
-  articles: "4",
-  note: "Combined public platform following is non-unique and time-sensitive."
-};
 
 const heroMedia = H.heroMedia.map((item) => {
   if (item.id === "model-record") {
@@ -55,14 +48,9 @@ const portfolioCases = H.cases.map((item) => {
   if (item.id === "scientific-verification") {
     return {
       ...item,
-      mediaKind: "audience-proof",
+      mediaKind: "entropy-proof",
       image: "/media/work/entropy-h5n1.png",
-      lead: `Entropy for Life is an Italian science-communication brand with ${entropyAudience.youtubeSubscribers} YouTube subscribers and ${entropyAudience.combinedFollowing} combined public following across YouTube, Instagram and TikTok.`,
-      action: "Primary-literature research and scientific fact-checking are recurring. Depending on the assignment, I also develop scripts, data visualizations, presentation slides and on-screen assets, and selected thumbnails independently or with the video editor. For audience packaging, I follow current platform guidance and optimize concepts for click-through rate, watch time, retention and immediate attention capture.",
-      result: `${entropyAudience.projects} documented published projects supported: ${entropyAudience.videoProjects} YouTube video projects and ${entropyAudience.articles} co-authored articles, delivered inside a science-communication operation with substantial public reach.`,
-      boundary: "The audience belongs to Entropy for Life, not to me, and the combined platform total is not a count of unique people. Thumbnail and packaging work is presented as an evidence-based optimization practice; a quantified CTR or watch-time lift should only be claimed when comparable channel analytics can be published.",
-      imageCaption: "Audience scale, published work and optimization responsibilities",
-      audience: entropyAudience
+      imageCaption: "Official work record · public production context"
     };
   }
   return item;
@@ -78,7 +66,7 @@ const selectedExperience = [
         ...entropyExperience,
         role: "Scientific Fact-Checking, Content Operations & Audience Optimization Contractor",
         resumeBullets: [
-          `Supported ${entropyAudience.projects} published projects for an Italian science-communication brand with ${entropyAudience.youtubeSubscribers} YouTube subscribers and ${entropyAudience.combinedFollowing} combined platform following; recurring evidence review plus audience-focused visual packaging, selected thumbnails and web operations.`
+          `Delivered ${audience.projects} documented published content contributions for an Italian science-communication brand with ${audience.youtubeSubscribers} YouTube subscribers and ${audience.combinedFollowers} combined platform following; recurring evidence review, selected visual packaging and website operations.`
         ]
       }
     : undefined,
@@ -180,34 +168,34 @@ const isExternal = (href) => href.startsWith("http");
       <div class="v8-case-stack" data-testid="human-capabilities">
         {portfolioCases.map((item, index) => (
           <article class={`v8-case v8-case-${item.tone} ${index % 2 ? "is-reversed" : ""}`} data-case={item.id} data-reveal>
-            {item.mediaKind === "audience-proof" ? (
+            {item.mediaKind === "entropy-proof" ? (
               <a
-                class="v8-case-media v8-audience-proof"
+                class="v8-case-media v8-entropy-panel"
                 href={item.mediaHref || item.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={item.mediaLinkLabel || item.linkLabel}
               >
-                <img class="v8-audience-backdrop" src={item.image} alt="" width="1200" height="760" loading="lazy" decoding="async" aria-hidden="true" />
-                <div class="v8-audience-proof-inner">
-                  <div class="v8-audience-eyebrow">Italian science communication platform</div>
-                  <div class="v8-audience-main">
-                    <strong>{item.audience.combinedFollowing}</strong>
-                    <p>combined public following across YouTube, Instagram and TikTok</p>
-                  </div>
-                  <div class="v8-audience-metrics" aria-label="Audience and work metrics">
-                    <div><strong>{item.audience.youtubeSubscribers}</strong><span>YouTube subscribers</span></div>
-                    <div><strong>{item.audience.projects}</strong><span>projects supported</span></div>
-                    <div><strong>{item.audience.videoProjects}</strong><span>YouTube projects</span></div>
-                    <div><strong>{item.audience.articles}</strong><span>co-authored articles</span></div>
-                  </div>
-                  <div class="v8-audience-focus">
-                    <strong>Audience optimization</strong>
-                    <p>Thumbnail concepts and production, visual packaging, slides and on-screen assets informed by CTR, watch-time, retention and attention-capture best practices.</p>
-                  </div>
-                  <small>{item.audience.note}</small>
+                <header class="v8-entropy-panel-head">
+                  <span>Entropy for Life · paid contractor</span>
+                  <h4>Research, content &amp; website operations</h4>
+                  <p>Public work record across evidence review, production and publishing operations.</p>
+                </header>
+                <div class="v8-entropy-panel-impact">
+                  <strong>{audience.projects}</strong>
+                  <span>documented published contributions</span>
+                  <small>{audience.videoProjects} YouTube videos · {audience.articles} articles · {audience.shortForm} short-form pieces</small>
                 </div>
-                <span>{item.imageCaption}</span>
+                <dl class="v8-entropy-panel-roles" aria-label="Mario's work at Entropy for Life">
+                  <div><dt>Research</dt><dd>Primary literature and scientific fact-checking</dd></div>
+                  <div><dt>Production</dt><dd>Scripts, visuals, slides and selected packaging</dd></div>
+                  <div><dt>Operations</dt><dd>WordPress, responsive design, publishing and hosting</dd></div>
+                </dl>
+                <div class="v8-entropy-panel-context">
+                  <span><strong>{audience.youtubeViews}</strong> public YouTube views in the production environment</span>
+                  <small>{audience.scopeNote}</small>
+                </div>
+                <span class="v8-entropy-panel-link">View the official Entropy for Life work record <i aria-hidden="true">↗</i></span>
               </a>
             ) : (
               <a
@@ -221,7 +209,14 @@ const isExternal = (href) => href.startsWith("http");
                   {item.imageSet && <source srcset={item.imageSet} sizes="(max-width: 760px) 92vw, 720px" />}
                   <img src={item.image} alt={item.alt} width="1200" height="760" loading="lazy" decoding="async" />
                 </picture>
-                <span>{item.imageCaption}</span>
+                {item.id === "model-behavior" ? (
+                  <span class="v8-gs-caption">
+                    <span><strong>#{graySwan.rank}</strong><small>Proving Ground</small></span>
+                    <span><strong>{graySwan.percentile}</strong><small>Global percentile</small></span>
+                    <span><strong>{graySwan.totalBreaks}</strong><small>Total breaks</small></span>
+                    <span><strong>#{graySwan.arenaRank}</strong><small>Arena rank</small></span>
+                  </span>
+                ) : <span>{item.imageCaption}</span>}
               </a>
             )}
 
@@ -367,7 +362,7 @@ const isExternal = (href) => href.startsWith("http");
           <div class="v8-kicker">Application documents</div>
           <h2 id="applications-title">Start with the role you are hiring for.</h2>
         </div>
-        <p>The AI evaluation CV is the recommended default. The others are deliberately tailored alternatives.</p>
+        <p>Use the data-quality and research-analysis CV as the general default; the others are focused specialist documents.</p>
       </header>
 
       <div class="v8-documents">
@@ -385,8 +380,8 @@ const isExternal = (href) => href.startsWith("http");
     <section class="v8-contact" id="contact" aria-labelledby="contact-title" data-reveal>
       <div>
         <span>Current focus</span>
-        <h2 id="contact-title">AI evaluation and scientific evidence roles.</h2>
-        <p>Especially model-behavior evaluation, scientific fact-checking, research-data quality and knowledge-integrity work.</p>
+        <h2 id="contact-title">Data quality, information retrieval and AI evaluation roles.</h2>
+        <p>Especially research analysis, scientific verification, model-behavior evaluation and knowledge-integrity work.</p>
       </div>
       <div class="v8-actions">
         <a class="v8-button v8-button-light" href={`mailto:${D.identity.email}`}>Email Mario</a>
@@ -400,25 +395,6 @@ const isExternal = (href) => href.startsWith("http");
   <script is:inline>
     (() => {
       document.documentElement.classList.add("v8-js");
-
-      const gallery = document.querySelector("[data-hero-gallery]");
-      if (gallery && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        let frame = 0;
-        gallery.addEventListener("pointermove", (event) => {
-          cancelAnimationFrame(frame);
-          frame = requestAnimationFrame(() => {
-            const rect = gallery.getBoundingClientRect();
-            const x = ((event.clientX - rect.left) / rect.width - 0.5) * 2;
-            const y = ((event.clientY - rect.top) / rect.height - 0.5) * 2;
-            gallery.style.setProperty("--gallery-x", x.toFixed(3));
-            gallery.style.setProperty("--gallery-y", y.toFixed(3));
-          });
-        });
-        gallery.addEventListener("pointerleave", () => {
-          gallery.style.setProperty("--gallery-x", "0");
-          gallery.style.setProperty("--gallery-y", "0");
-        });
-      }
 
       if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
         const observer = new IntersectionObserver((entries) => {

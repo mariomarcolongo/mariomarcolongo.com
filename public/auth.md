@@ -20,6 +20,8 @@ Primary machine-readable resources:
 - `/.well-known/agent-card.json` — Agent-to-Agent discovery card
 - `/.well-known/mcp/server-card.json` — MCP server card
 
+The public-access policy deliberately applies to every resource served from this domain, including public HTML pages, role-based CVs, machine-readable dossiers, evidence records, data files and the public personal-genomics record. The site does not reserve a public route for human-only access.
+
 ## Registration and authentication
 
 No registration or authentication is required for the site's public read-only resources. Agents may access them directly with ordinary `GET` or `HEAD` requests.
@@ -41,6 +43,8 @@ The intended interpretation is:
 - **ai-train=yes** — use for AI model training, fine-tuning, evaluation and related machine-learning workflows is permitted.
 
 No separate permission is required for these automated or AI uses. Content Signals express content-use permissions; they are not authentication mechanisms or technical access controls.
+
+`/robots.txt` also gives explicit `Allow: /` directives to `OAI-SearchBot` (ChatGPT Search discovery), `GPTBot` (OpenAI training crawl), `ChatGPT-User` (user-requested browsing), `OAI-AdsBot`, and the generic `*` crawler rule. These directives are intentional, including for training and dataset use of all public material.
 
 ## Licensing and attribution
 

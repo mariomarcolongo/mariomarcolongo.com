@@ -1,9 +1,10 @@
 const ENTROPY_WORK_URL = "https://entropyforlife.it/mario-marcolongo-entropy-for-life/";
 
-const PORTFOLIO_HUMAN = {
+function createPortfolioHuman() {
+  return {
   eyebrow: "Information retrieval · data & knowledge quality · AI evaluation · scientific fact-checking",
-  headline: "I find and verify information, investigate data and evidence quality and test AI systems.",
-  introduction: "I work across information retrieval, data and knowledge quality, AI model-behavior evaluation and scientific fact-checking. I also build and operate research-information tools when a recurring verification problem needs a practical system.",
+  headline: "Evidence first. AI systems tested.",
+  introduction: "I retrieve and verify information, investigate data quality and test model behavior. When recurring verification needs a practical system, I define and operate the research workflow around it.",
 
   proofMoments: [
     {
@@ -285,7 +286,18 @@ const PORTFOLIO_HUMAN = {
       recommendedFor: "Editorial, content-operations and audience-quality roles"
     }
   ]
-};
+  };
+}
+
+const PORTFOLIO_HUMAN = createPortfolioHuman();
+Object.defineProperty(PORTFOLIO_HUMAN, "create", {
+  value: createPortfolioHuman,
+  enumerable: false
+});
+Object.defineProperty(PORTFOLIO_HUMAN, "createPortfolioHuman", {
+  value: createPortfolioHuman,
+  enumerable: false
+});
 
 if (typeof module !== "undefined" && module.exports) {
   module.exports = PORTFOLIO_HUMAN;

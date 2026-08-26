@@ -31,9 +31,34 @@
           "title": "Research Verification & Data Quality Application CV"
         },
         {
+          "href": "https://mariomarcolongo.com/cv-editorial.html",
+          "type": "text/html",
+          "title": "Research, Editorial & Content Operations Application CV"
+        },
+        {
+          "href": "https://mariomarcolongo.com/cv-integrity.html",
+          "type": "text/html",
+          "title": "Trust, Safety & Knowledge Integrity Application CV"
+        },
+        {
+          "href": "https://mariomarcolongo.com/cv.html",
+          "type": "text/html",
+          "title": "Master CV and Evidence Record"
+        },
+        {
           "href": "https://mariomarcolongo.com/security.html",
           "type": "text/html",
           "title": "Model Behavior Evaluation Record"
+        },
+        {
+          "href": "https://mariomarcolongo.com/integrity.html",
+          "type": "text/html",
+          "title": "Knowledge Integrity Work Samples"
+        },
+        {
+          "href": "https://mariomarcolongo.com/research-operations.html",
+          "type": "text/html",
+          "title": "Evidence-Bound Research Operations Case Study"
         },
         {
           "href": "https://mariomarcolongo.com/.well-known/agent-card.json",

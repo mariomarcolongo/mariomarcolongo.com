@@ -5,7 +5,8 @@
  * are generated from this evidence-bound record.
  */
 
-const MARIO_DOSSIER = {
+function createMarioDossier() {
+  return {
   identity: {
     name: "Mario Marcolongo",
     buildVersion: "v2026.07.29",
@@ -515,7 +516,18 @@ const MARIO_DOSSIER = {
     "Code-Literate Technical Operations: Requirements definition, codebase reading and behavior inspection, functional testing, issue diagnosis, deployment operations and AI-assisted implementation workflows.",
     "Languages: Italian — native. English — C1 overall (EF SET 68/100), with advanced technical reading and professional/technical writing."
   ]
-};
+  };
+}
+
+const MARIO_DOSSIER = createMarioDossier();
+Object.defineProperty(MARIO_DOSSIER, "create", {
+  value: createMarioDossier,
+  enumerable: false
+});
+Object.defineProperty(MARIO_DOSSIER, "createMarioDossier", {
+  value: createMarioDossier,
+  enumerable: false
+});
 
 const computedBreaks = MARIO_DOSSIER.redTeamActivity.waves.reduce(
   (total, wave) => total + wave.breaks,

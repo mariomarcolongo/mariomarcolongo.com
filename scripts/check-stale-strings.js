@@ -18,7 +18,8 @@ const EXPECTED = {
 const REQUIRED = [
   'package.json', 'package-lock.json', 'data/source.js', 'data/application-profiles.js',
   'data/portfolio-human.js', 'data/recent-application-evidence.js',
-  'data/career-positioning.js', 'data/investigation-cases.js', 'data/investigation-positioning.mjs',
+  'data/career-positioning.js', 'data/homepage-positioning.js', 'data/public-evidence.js',
+  'data/investigation-cases.js', 'data/investigation-positioning.mjs',
   'src/layouts/Layout.astro', 'src/components/SiteNav.astro',
   'src/components/SiteFooter.astro', 'src/components/ApplicationCv.astro', 'src/pages/index.astro',
   'src/pages/integrity.astro', 'src/pages/cv.astro', 'src/pages/cv-resume.astro',
@@ -156,22 +157,32 @@ if (!String(packageJson.scripts?.deploy || '').startsWith('npm run build')) fail
 if (!String(packageJson.scripts?.build || '').includes('verify-dist.js')) fail('package.json', 1, 'Production build must run generated-output verification.');
 if (!String(packageJson.scripts?.deploy || '').includes('--project-name=mariomarcolongo-pages')) fail('package.json', 1, 'Deployment must target the production Cloudflare Pages project.');
 
+const robots = fs.readFileSync(path.join(ROOT, 'public/robots.txt'), 'utf8');
+for (const crawler of ['OAI-SearchBot', 'GPTBot', 'ChatGPT-User', 'OAI-AdsBot', 'User-agent: *']) {
+  if (!robots.includes(crawler)) fail('public/robots.txt', 1, `Explicit public crawl policy is missing ${crawler}.`);
+}
+for (const directive of ['Content-Signal: ai-train=yes, search=yes, ai-input=yes', 'Allow: /']) {
+  if (!robots.includes(directive)) fail('public/robots.txt', 1, `Explicit public crawl policy is missing ${directive}.`);
+}
+
 const indexSource = fs.readFileSync(path.join(ROOT, 'src/pages/index.astro'), 'utf8');
 const portfolioSource = fs.readFileSync(path.join(ROOT, 'data/portfolio-human.js'), 'utf8');
-const homepageSource = `${indexSource}\n${portfolioSource}`;
+const homepagePositioning = fs.readFileSync(path.join(ROOT, 'data/homepage-positioning.js'), 'utf8');
+const notandiaBranding = fs.readFileSync(path.join(ROOT, 'data/notandia-branding.js'), 'utf8');
+const homepageSource = `${indexSource}\n${portfolioSource}\n${homepagePositioning}\n${notandiaBranding}`;
 for (const marker of ['human-capabilities', 'human-work', 'human-documents']) {
   if (!indexSource.includes(`data-testid="${marker}"`)) fail('src/pages/index.astro', 1, `Missing homepage marker ${marker}.`);
 }
 for (const requiredText of [
-  'I find and verify information, investigate data and evidence quality and test AI systems.',
+  'I test AI systems, verify evidence and improve research.',
   'Where I can contribute.',
   'Selected work, shown through the actual output.',
-  'MDPI Filter now works in the browser and as a Zotero plugin.',
+  'Notandia works across browser and Zotero research workflows.',
   'A diagram that became a reusable public reference.',
   'Start with the role you are hiring for.',
-  'AI evaluation and scientific evidence roles.',
+  'Data quality, information retrieval and AI evaluation roles.',
   '#74 on the Proving Ground leaderboard',
-  'Fact-checking and producing scientific content before publication.',
+  'Evidence quality, localization and content operations at creator scale.',
   'Tracing privacy, policy and evidence changes under dispute.',
   'Nebula Genomics',
   'syndromic-autism taxonomy',

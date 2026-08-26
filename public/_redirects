@@ -2,3 +2,5 @@
 /resume              /cv               301
 /mdpi-filter          /notandia.html    301
 /mdpi-filter.html     /notandia.html    301
+/cv-giskard.html      /cv-resume.html   301
+/cv-orcid.html        /cv-research.html 301

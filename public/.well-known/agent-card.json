@@ -1,8 +1,8 @@
 {
   "$schema": "https://a2a-card.org/schema/v1.json",
   "name": "Mario Marcolongo Professional Evidence Interface",
-  "version": "2026.07.21",
-  "description": "Agent-to-Agent discovery interface for Mario Marcolongo's evidence-bound professional dossier spanning AI safety, research and editorial operations, knowledge integrity, scientific verification, open science and data quality.",
+  "version": "2026.08.26",
+  "description": "Public discovery interface for Mario Marcolongo's evidence-bound professional dossier spanning information retrieval, data quality, AI evaluation, scientific verification, research operations, knowledge integrity and open science.",
   "url": "https://mariomarcolongo.com",
   "documentationUrl": "https://mariomarcolongo.com/llms-full.txt",
   "capabilities": {
@@ -19,6 +19,11 @@
     "queryIntegrityRecord": {
       "description": "Access public knowledge-integrity, provenance and investigation work samples.",
       "endpoint": "https://mariomarcolongo.com/integrity.html",
+      "method": "GET"
+    },
+    "queryResearchOperations": {
+      "description": "Access the evidence-bound qualitative research-operations and accessibility-facilitation case study.",
+      "endpoint": "https://mariomarcolongo.com/research-operations.html",
       "method": "GET"
     }
   },
@@ -56,6 +61,11 @@
       "id": "open-science-data-quality",
       "name": "Open Science & Data Quality",
       "description": "Scientific verification, structured metadata, provenance workflows and public records across Wikimedia, Wikidata, FAIRsharing, Zenodo and ENA."
+    },
+    {
+      "id": "information-retrieval-research-analysis",
+      "name": "Information Retrieval & Research Analysis",
+      "description": "Primary-source discovery, claim tracing, source reconciliation, evidence synthesis and maintained research-information workflows."
     },
     {
       "id": "technical-operations",

@@ -16,14 +16,19 @@ const departmentUrl = "https://www.unipd.it/en/dpss";
 
 <Layout title={pageTitle} description={pageDescription} canonical="https://mariomarcolongo.com/research-operations.html">
   <Fragment slot="head">
-    <meta name="robots" content="noindex,follow" />
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "ProfilePage",
       name: pageTitle,
       description: pageDescription,
       url: "https://mariomarcolongo.com/research-operations.html",
-      mainEntity: { "@id": "https://mariomarcolongo.com/#person" },
+      mainEntity: {
+        "@type": "Person",
+        "@id": "https://mariomarcolongo.com/#person",
+        name: D.identity.name,
+        url: D.identity.domain,
+        sameAs: D.identity.sameAs
+      },
       about: ["Qualitative research operations", "Focus-group facilitation", "Accessible research", "Participant privacy", "Autism research"]
     })}></script>
   </Fragment>

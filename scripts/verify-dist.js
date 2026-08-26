@@ -1,7 +1,11 @@
 #!/usr/bin/env node
 const fs = require('node:fs');
 const path = require('node:path');
-const { D, H, P } = require('../data/career-positioning.js');
+const { D, P } = require('../data/career-positioning.js');
+const homepage = require('../data/homepage-positioning.js');
+const { H } = homepage;
+const sourceDossier = require('../data/source.js');
+const baseHomepage = require('../data/portfolio-human.js');
 const { applyNotandiaBranding } = require('../data/notandia-branding.js');
 const {
   generateLlmsTxt,
@@ -9,7 +13,7 @@ const {
   generateCvLlmTxt
 } = require('./lib/dossier-generators.js');
 
-applyNotandiaBranding({ D, H, P });
+applyNotandiaBranding({ D, P });
 
 const ROOT = path.resolve(__dirname, '..');
 const ENTROPY_WORK_URL = 'https://entropyforlife.it/mario-marcolongo-entropy-for-life/';
@@ -19,6 +23,10 @@ function fail(message) {
   failures += 1;
   console.error(`FAIL: ${message}`);
 }
+
+if (homepage.D === sourceDossier || H === baseHomepage) {
+  fail('Homepage positioning must use fresh source records rather than mutable CV-route singletons.');
+}
 function pass(message) { console.log(`PASS: ${message}`); }
 function read(relativePath) {
   const full = path.join(ROOT, relativePath);
@@ -26,6 +34,9 @@ function read(relativePath) {
   const value = fs.readFileSync(full, 'utf8');
   if (!value.length) fail(`Empty file: ${relativePath}`);
   return value;
+}
+function assertMissing(relativePath, label) {
+  if (fs.existsSync(path.join(ROOT, relativePath))) fail(`${label} must not exist: ${relativePath}`);
 }
 function normalizeHtmlText(content) {
   const entities = new Map([
@@ -67,8 +78,28 @@ for (const [name, expected] of Object.entries(canonical)) {
 }
 pass('Canonical dossier mirrors checked');
 
+const robots = read('dist/robots.txt');
+for (const crawler of ['OAI-SearchBot', 'GPTBot', 'ChatGPT-User', 'OAI-AdsBot', 'User-agent: *']) {
+  assertContains(robots, crawler, 'dist/robots.txt');
+}
+assertContains(robots, 'Content-Signal: ai-train=yes, search=yes, ai-input=yes', 'dist/robots.txt');
+assertContains(robots, 'Allow: /', 'dist/robots.txt');
+
+const discoveryCatalog = read('dist/.well-known/api-catalog');
+for (const route of [
+  '/cv-resume.html', '/cv-research.html', '/cv-editorial.html', '/cv-integrity.html', '/cv.html',
+  '/integrity.html', '/research-operations.html', '/llms.txt', '/llms-full.txt', '/cv-llm.txt'
+]) assertContains(discoveryCatalog, route, 'dist/.well-known/api-catalog');
+
+const redirects = read('dist/_redirects');
+assertContains(redirects, '/cv-giskard.html      /cv-resume.html   301', 'dist/_redirects');
+assertContains(redirects, '/cv-orcid.html        /cv-research.html 301', 'dist/_redirects');
+assertMissing('dist/cv-giskard.html', 'Company-specific CV route');
+assertMissing('dist/cv-orcid.html', 'Company-specific CV route');
+pass('Explicit crawler access and durable CV discovery checked');
+
 const pages = {
-  index: read('dist/index.html'), notandia: read('dist/notandia.html'), integrityPage: read('dist/integrity.html'), cv: read('dist/cv.html'),
+  index: read('dist/index.html'), notandia: read('dist/notandia.html'), integrityPage: read('dist/integrity.html'), researchOperations: read('dist/research-operations.html'), cv: read('dist/cv.html'),
   resume: read('dist/cv-resume.html'), research: read('dist/cv-research.html'), editorial: read('dist/cv-editorial.html'),
   integrityCv: read('dist/cv-integrity.html'), security: read('dist/security.html')
 };
@@ -100,12 +131,12 @@ for (const needle of [
   ...H.applicationDocuments.map((item) => item.title),
   'data-testid="human-capabilities"', 'data-testid="human-work"', 'data-testid="human-documents"',
   'Where I can contribute.', 'Selected work, shown through the actual output.',
-  'Start with the role you are hiring for.', 'AI evaluation and scientific evidence roles.',
-  'Zotero plugin', 'Protein by bodyweight by country', '#74 on the Proving Ground,',
+  'Start with the role you are hiring for.', 'Data quality, information retrieval and AI evaluation roles.',
+  'Zotero research workflows', 'Protein by bodyweight by country', '#74 on the Proving Ground,',
   '267K', '36.5M', '80', '55 YouTube videos', '21 short-form pieces',
-  'Research, content and website work', 'Official evidence index',
+  'Research, content & website operations', 'Official work record published by Entropy for Life',
   'Platform metrics describe the production environment',
-  'Research and fact-checking', 'Content production', 'Website design and management',
+  'Primary literature and scientific fact-checking', 'Scripts, visuals, slides and selected packaging', 'WordPress, responsive design, publishing and hosting',
   'Nebula Genomics', 'consumer-genomics privacy',
   ENTROPY_WORK_URL, 'Official work record published by Entropy for Life'
 ]) assertContains(indexText, needle, 'dist/index.html');
@@ -130,9 +161,9 @@ assertContains(index, 'class="portfolio-v8"', 'dist/index.html');
 assertContains(index, 'class="v8-hero-gallery"', 'dist/index.html');
 assertContains(index, 'class="v8-case-stack"', 'dist/index.html');
 assertContains(index, 'class="v8-product"', 'dist/index.html');
-assertContains(index, 'v10-entropy-panel', 'dist/index.html');
-assertContains(index, 'v12-platform-proof', 'dist/index.html');
-const currentGraySwanCaption = '<span class="v10-gs-caption"><span><strong>#74</strong><small>Proving Ground</small></span><span><strong>Top 6%</strong><small>Global percentile</small></span><span><strong>113</strong><small>Total breaks</small></span><span><strong>#365</strong><small>Arena rank</small></span></span>';
+assertContains(index, 'v8-entropy-panel', 'dist/index.html');
+assertContains(index, 'v8-gs-caption', 'dist/index.html');
+const currentGraySwanCaption = '<span class="v8-gs-caption"><span><strong>#74</strong><small>Proving Ground</small></span><span><strong>Top 6%</strong><small>Global percentile</small></span><span><strong>113</strong><small>Total breaks</small></span><span><strong>#365</strong><small>Arena rank</small></span></span>';
 assertContains(index, currentGraySwanCaption, 'dist/index.html Gray Swan caption');
 for (const staleCaption of ['<span class="v10-gs-caption"><span><strong>#75</strong>', '<span><strong>110</strong><small>Total breaks</small></span>', '<span><strong>#371</strong><small>Arena rank</small></span>']) {
   assertNotContains(index, staleCaption, 'dist/index.html Gray Swan caption');

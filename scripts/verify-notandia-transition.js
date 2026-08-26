@@ -14,8 +14,8 @@ const CANONICAL_ROUTE = '/notandia.html';
 const LEGACY_ROUTE = '/mdpi-filter.html';
 const CANONICAL_URL = 'https://mariomarcolongo.com/notandia.html';
 const HTML_FILES = [
-  'index.html', 'notandia.html', 'mdpi-filter.html', 'cv.html', 'cv-resume.html', 'cv-giskard.html', 'cv-research.html',
-  'cv-editorial.html', 'cv-integrity.html', 'cv-orcid.html', 'integrity.html', 'security.html'
+  'index.html', 'notandia.html', 'mdpi-filter.html', 'cv.html', 'cv-resume.html', 'cv-research.html',
+  'cv-editorial.html', 'cv-integrity.html', 'integrity.html', 'security.html'
 ];
 
 function read(relativePath) {
@@ -157,21 +157,6 @@ async function main() {
   ]) {
     assertContains(resume, expected, 'dist/cv-resume.html');
   }
-
-  const giskard = read('cv-giskard.html');
-  for (const expected of [
-    'Notandia (formerly MDPI Filter)',
-    'publishers whose editorial and peer-review practices have attracted scrutiny',
-    'Crossref/Retraction Watch',
-    'false-positive boundaries',
-    'regression checks'
-  ]) {
-    assertContains(giskard, expected, 'dist/cv-giskard.html');
-  }
-
-  const orcid = read('cv-orcid.html');
-  assertContains(orcid, 'Notandia', 'dist/cv-orcid.html');
-  assertContains(orcid, `href="${CANONICAL_URL}"`, 'dist/cv-orcid.html');
 
   const sitemap = read('sitemap.xml');
   assertContains(sitemap, CANONICAL_URL, 'dist/sitemap.xml');

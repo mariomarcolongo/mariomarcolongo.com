@@ -1,6 +1,27 @@
 # Public portfolio and machine-readable professional dossier.
-# Crawling, indexing, query-time AI use and AI training are permitted.
+# Crawling, indexing, query-time AI use and model training are deliberately permitted.
 
+# ChatGPT Search discovery
+User-agent: OAI-SearchBot
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+Allow: /
+
+# OpenAI foundation-model training crawl
+User-agent: GPTBot
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+Allow: /
+
+# User-requested ChatGPT browsing
+User-agent: ChatGPT-User
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+Allow: /
+
+# ChatGPT advertising crawl, if applicable
+User-agent: OAI-AdsBot
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+Allow: /
+
+# Every other compliant crawler and agent
 User-agent: *
 Content-Signal: ai-train=yes, search=yes, ai-input=yes
 Allow: /

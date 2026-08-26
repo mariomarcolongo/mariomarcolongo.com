@@ -8,48 +8,12 @@
 const release = require('./release-data.js');
 const { D, H, P } = release;
 
-const ENTROPY_WORK_URL = 'https://entropyforlife.it/mario-marcolongo-entropy-for-life/';
-
-const graySwan = Object.freeze({
-  asOf: '29 July 2026',
-  rank: 74,
-  percentile: 'Top 6%',
-  totalBreaks: 113,
-  displayedAreaTotal: 112,
-  arenaRank: 365,
-  uniqueBreaks: 28,
-  points: 1120,
-  submissions: 255,
-  evidencePath: '/evidence/gray-swan-2026-07-29/',
-  screenshotPath: '/media/work/gray-swan-profile-2026-07-29-1600.webp',
-  screenshotSet: '/media/work/gray-swan-profile-2026-07-29-800.webp 800w, /media/work/gray-swan-profile-2026-07-29-1600.webp 1600w'
-});
-
-const audience = Object.freeze({
-  asOf: '26 July 2026',
-  combinedFollowers: '480K+',
-  youtubeSubscribers: '267K',
-  youtubeVideos: 592,
-  youtubeViews: '36.5M',
-  youtubeViewsExact: '36,524,137',
-  instagramFollowers: '159K',
-  tiktokFollowers: '54K',
-  tiktokLikes: '528K',
-  projects: '80',
-  videoProjects: '55',
-  articles: 4,
-  shortForm: 21,
-  selectedThumbnails: '15+',
-  workRecordUrl: ENTROPY_WORK_URL,
-  scopeNote: 'Brand audience; cross-platform follower totals are non-unique and time-sensitive.'
-});
-
-const yourselfToScience = Object.freeze({
-  asOf: '27 July 2026',
-  resources: 55,
-  wikidataReferences: 37,
-  statsUrl: 'https://yourselftoscience.org/stats'
-});
+const {
+  ENTROPY_WORK_URL,
+  graySwan,
+  audience,
+  yourselfToScience
+} = require('./public-evidence.js');
 
 function findEntropyExperience(profile) {
   return profile?.experience?.find((item) => item?.organization?.includes('Entropy for Life'));
@@ -87,7 +51,7 @@ D.identity.location =
   'Based in Italy · Italian/EU citizen · Open to worldwide relocation · International B2B contracting available';
 D.identity.relocationVisible = D.identity.location;
 D.summary =
-  `Research, evidence and AI operations specialist with eight years of auditable public-source and structured-data work, paid scientific fact-checking and editorial production, community-facing research facilitation, ownership of an open research-participation directory, and sustained adversarial testing of AI systems. On ${graySwan.asOf}, the Gray Swan Proving Ground profile displayed rank #${graySwan.rank} (${graySwan.percentile.toLowerCase()}) and ${graySwan.totalBreaks} total breaks. Entropy for Life work covers ${audience.projects} documented published content contributions: ${contributionBreakdown()}. Technical work is code-literate and AI-assisted, with personal ownership of requirements, verification, deployment and maintenance.`;
+  `Information-retrieval, data-quality, scientific-verification and AI-evaluation specialist with eight years of auditable public-source and structured-data work. The public record includes paid scientific fact-checking and editorial production, a maintained research-participation directory, and self-directed model-behavior evaluation. On ${graySwan.asOf}, the Gray Swan Proving Ground profile displayed rank #${graySwan.rank} (${graySwan.percentile.toLowerCase()}) and ${graySwan.totalBreaks} total breaks. Entropy for Life work covers ${audience.projects} documented published content contributions: ${contributionBreakdown()}. Technical work is code-literate and AI-assisted, with personal ownership of requirements, verification, deployment and maintenance.`;
 
 Object.assign(D.redTeamActivity || {}, {
   asOf: graySwan.asOf,

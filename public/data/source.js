@@ -13,12 +13,12 @@ const MARIO_DOSSIER = {
     "grayswanUrl": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
     "grayswanArchiveUrl": "/evidence/gray-swan-2026-07-29/",
     "evaluationAsOf": "29 July 2026",
-    "jobTitle": "AI Evaluation & Research Operations Specialist",
-    "secondaryTitle": "Model Behavior · Scientific Evidence · Knowledge Integrity · Open Science & Data Quality",
-    "headline": "I evaluate model behavior, verify scientific evidence, and operate research systems.",
+    "jobTitle": "Data Quality, Information Retrieval & AI Evaluation Specialist",
+    "secondaryTitle": "Information Verification · Model Behavior · Scientific Evidence · Knowledge Integrity · Data Visualization",
+    "headline": "I retrieve and verify information, investigate data and evidence quality, and test AI systems.",
     "authorshipStatement": "My technical work is code-literate and AI-assisted: I define requirements and workflows, inspect implementation behavior, test releases, diagnose functional problems, guide iterations, deploy releases and maintain services.",
     "role": "AI evaluation and research operations specialist. Gray Swan Proving Ground snapshot: #74 (top 6%) with 113 platform-displayed total breaks on 29 July 2026.",
-    "heroStatement": "Evaluating model behavior, verifying scientific evidence and operating research workflows and public technical products.",
+    "heroStatement": "Retrieving and verifying information, improving data and evidence quality, testing AI systems and operating research workflows.",
     "location": "Based in Italy · Italian/EU citizen · Open to worldwide relocation · International B2B contracting available",
     "relocation": "EU/EEA work-authorized; Swiss EU/EFTA permit eligible; open to employer-sponsored work authorization elsewhere; self-funded relocation considered for exceptional opportunities.",
     "relocationVisible": "Based in Italy · Italian/EU citizen · Open to worldwide relocation · International B2B contracting available",
@@ -52,7 +52,7 @@ const MARIO_DOSSIER = {
     ],
     "notandiaUrl": "https://mariomarcolongo.com/notandia.html"
   },
-  "summary": "Research, evidence and AI operations specialist with eight years of auditable public-source and structured-data work, paid scientific fact-checking and editorial production, community-facing research facilitation, ownership of an open research-participation directory, and sustained adversarial testing of AI systems. On 29 July 2026, the Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks. Entropy for Life work covers 80 documented published content contributions: 55 YouTube videos · 4 articles · 21 short-form pieces. Technical work is code-literate and AI-assisted, with personal ownership of requirements, verification, deployment and maintenance. Current open-source product work includes Notandia (formerly MDPI Filter), a continuing browser and Zotero research-integrity tool.",
+  "summary": "Information-retrieval, data-quality, scientific-verification and AI-evaluation specialist with eight years of auditable public-source and structured-data work. The public record includes paid scientific fact-checking and editorial production, a maintained research-participation directory, and self-directed model-behavior evaluation. On 29 July 2026, the Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks. Entropy for Life work covers 80 documented published content contributions: 55 YouTube videos · 4 articles · 21 short-form pieces. Technical work is code-literate and AI-assisted, with personal ownership of requirements, verification, deployment and maintenance. Current open-source product work includes Notandia (formerly MDPI Filter), a continuing browser and Zotero research-integrity tool.",
   "pillars": [
     {
       "category": "AI EVALUATION & SAFETY OPERATIONS",
@@ -89,11 +89,11 @@ const MARIO_DOSSIER = {
       ]
     },
     {
-      "category": "DATA QUALITY & OPEN SCIENCE",
+      "category": "DATA & KNOWLEDGE QUALITY",
       "icon": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"></ellipse><path d=\"M21 12c0 1.66-4 3-9 3s-9-1.34-9-3\"></path><path d=\"M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5\"></path></svg>",
-      "title": "Research Workflows, Metadata & Provenance",
-      "lead": "Operating an open research-participation directory and maintaining structured, publicly inspectable research and data records.",
-      "desc": "Founded and operate Yourself to Science™, an open-source research-participation directory indexing 55 resources with documented inclusion, verification, provenance, metadata and licensing workflows. As of 27 July 2026, 37 unique Wikidata items use yourselftoscience.org as a reference URL (P854).",
+      "title": "Information Retrieval, Metadata & Provenance",
+      "lead": "Retrieving, verifying and reconciling information across scientific sources, structured records and public research systems.",
+      "desc": "Founded and operate Yourself to Science™, an open-source research-participation directory indexing more than 55 initiatives, with documented inclusion, verification, provenance, metadata and licensing workflows. Public records include FAIRsharing, Zenodo, Wikidata and ENA entries.",
       "highlights": [
         {
           "label": "Research Directory",
@@ -646,7 +646,7 @@ const MARIO_DOSSIER = {
       "bullets": [
         "Served as lead or co-facilitator across approximately 4–5 recorded Zoom focus-group sessions, typically lasting 1–2 hours, with autistic participants discussing sensitive sexuality and relationship topics.",
         "Co-developed the protocol, including pseudonymous naming, explicit recorded consent, optional captions and written-chat participation, timed turn-taking, scripted prompts, recording boundaries and two-person facilitation handoffs.",
-        "Supported participant recruitment, bibliographic research, technical preparation and protocol feedback from an autistic perspective; coordinated with Marta Panzeri, researchers and a second autistic volunteer facilitator.",
+        "Supported participant recruitment, bibliographic research and technical preparation; contributed to structuring participant experience and accessibility considerations and coordinated with Marta Panzeri, researchers and a second volunteer facilitator.",
         "Public attribution to Marta Panzeri and the Department of Developmental Psychology and Socialisation is included with permission; no participant information or confidential session content is disclosed."
       ],
       "resumeBullets": [
@@ -739,22 +739,24 @@ const MARIO_DOSSIER = {
     }
   ],
   "skills": [
-    "AI Safety Evaluation & Adversarial Testing: Exploratory model-behavior testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection.",
-    "Evaluation Operations: Test planning, evidence capture, reproducibility notes, taxonomy thinking, issue classification, evidence-bound reporting and mitigation-retesting concepts.",
-    "Scientific Verification & Evidence Synthesis: Primary-source fact-checking, bibliographic research, claim decomposition, evidence screening, source-quality assessment and cross-source corroboration.",
+    "Information Retrieval & Verification: Primary-source and bibliographic search, claim tracing, source discovery, query refinement, source-quality assessment and cross-source corroboration.",
     "Data Quality & Provenance: Structured metadata, entity reconciliation, validation rules, documentation, taxonomy design and public-record verification.",
+    "AI Safety Evaluation & Adversarial Testing: Exploratory model-behavior testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection.",
+    "Scientific Verification & Evidence Synthesis: Primary-source fact-checking, bibliographic research, claim decomposition, evidence screening, source-quality assessment and cross-source corroboration.",
+    "Data Visualization: SVG vector diagrams, Tableau Public, Flourish and open-data publication.",
+    "Evaluation Operations: Test planning, evidence capture, reproducibility notes, taxonomy thinking, issue classification, evidence-bound reporting and mitigation-retesting concepts.",
     "Code-Literate Technical Operations: Requirements definition, codebase reading and behavior inspection, functional testing, issue diagnosis, deployment operations and service maintenance.",
     "AI-Assisted Technical Workflow: Uses coding agents for implementation support while personally defining requirements, inspecting structure and behavior, testing results, guiding revisions, deploying releases and maintaining services.",
     "Open Science & Structured Data: Wikimedia, Wikidata, FAIRsharing, Zenodo, ENA records, JSON-LD, RDF Turtle/VoID, OpenAPI and MCP interfaces.",
     "Web & Cloud Operations: WordPress, HTML/CSS modification, Git/GitHub, JSON, REST APIs, AWS Lambda, Cloudflare Pages, DNS/SSL and CI/CD operations.",
-    "Data Visualization: SVG vector diagrams, Tableau Public, Flourish and open-data publication.",
     "Languages: Italian — native. English — C1 overall (EF SET 68/100), with advanced technical reading and professional/technical writing."
   ],
   "resumeSkills": [
-    "AI Safety Evaluation & Adversarial Testing: Exploratory model-behavior testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection.",
-    "Evaluation Operations: Test planning, evidence capture, reproducibility notes, taxonomy thinking, issue classification and evidence-bound reporting.",
-    "Scientific Verification & Evidence Synthesis: Primary-source fact-checking, bibliographic research, claim decomposition, evidence screening and cross-source corroboration.",
+    "Information Retrieval & Verification: Primary-source and bibliographic search, claim tracing, source discovery, query refinement and cross-source corroboration.",
     "Data Quality & Provenance: Structured metadata, entity reconciliation, validation rules, documentation and public-record verification.",
+    "AI Safety Evaluation & Adversarial Testing: Exploratory model-behavior testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection.",
+    "Scientific Verification & Evidence Synthesis: Primary-source fact-checking, bibliographic research, claim decomposition, evidence screening and cross-source corroboration.",
+    "Data Visualization: SVG vector diagrams, Tableau Public, Flourish and open-data publication.",
     "Code-Literate Technical Operations: Requirements definition, codebase reading and behavior inspection, functional testing, issue diagnosis, deployment operations and AI-assisted implementation workflows.",
     "Languages: Italian — native. English — C1 overall (EF SET 68/100), with advanced technical reading and professional/technical writing."
   ]
