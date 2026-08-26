@@ -1018,18 +1018,6 @@
   line-height: 1.65;
 }
 
-/* Reveal behavior */
-.v8-js [data-reveal] {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 650ms ease, transform 650ms cubic-bezier(.2,.75,.2,1);
-}
-
-.v8-js [data-reveal].is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* Tablet */
 @media (max-width: 1080px) {
   .portfolio-v8 {
@@ -1363,8 +1351,4 @@
     transition-duration: 0.01ms !important;
   }
 
-  .v8-js [data-reveal] {
-    opacity: 1;
-    transform: none;
-  }
 }

@@ -85,7 +85,7 @@ const isExternal = (href) => href.startsWith("http");
 
   <main class="portfolio-v8" id="content">
     <section class="v8-hero" aria-labelledby="portfolio-title">
-      <div class="v8-hero-copy" data-reveal>
+      <div class="v8-hero-copy">
         <div class="v8-kicker">{H.eyebrow}</div>
         <h1 id="portfolio-title">{H.headline}</h1>
         <p class="v8-hero-lede">{H.introduction}</p>
@@ -110,7 +110,7 @@ const isExternal = (href) => href.startsWith("http");
         </div>
       </div>
 
-      <div class="v8-hero-gallery" data-hero-gallery data-reveal aria-label="Selected work previews">
+      <div class="v8-hero-gallery" data-hero-gallery aria-label="Selected work previews">
         {heroMedia.map((item, index) => (
           <a
             class={`v8-hero-shot v8-hero-shot-${index + 1}`}
@@ -126,8 +126,8 @@ const isExternal = (href) => href.startsWith("http");
                 alt={item.alt}
                 width="800"
                 height="520"
-                loading={index < 2 ? "eager" : "lazy"}
-                fetchpriority={index < 2 ? "high" : "auto"}
+                loading={index === 0 ? "eager" : "lazy"}
+                fetchpriority={index === 0 ? "high" : "auto"}
                 decoding="async"
               />
             </picture>
@@ -392,23 +392,4 @@ const isExternal = (href) => href.startsWith("http");
 
   <SiteFooter version={D.identity.buildVersion} />
 
-  <script is:inline>
-    (() => {
-      document.documentElement.classList.add("v8-js");
-
-      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.08 });
-        document.querySelectorAll("[data-reveal]").forEach((element) => observer.observe(element));
-      } else {
-        document.querySelectorAll("[data-reveal]").forEach((element) => element.classList.add("is-visible"));
-      }
-    })();
-  </script>
 </Layout>
