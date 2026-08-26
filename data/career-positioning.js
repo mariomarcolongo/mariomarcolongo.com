@@ -48,7 +48,7 @@ D.identity.evaluationAsOf = graySwan.asOf;
 D.identity.authorshipStatement =
   'My technical work is code-literate and AI-assisted: I define requirements and workflows, inspect implementation behavior, test releases, diagnose functional problems, guide iterations, deploy releases and maintain services.';
 D.identity.location =
-  'Based in Italy · Italian/EU citizen · Open to worldwide relocation · International B2B contracting available';
+  'Based in Italy · EU/EEA work-authorised · Open to sponsored international relocation and B2B engagements';
 D.identity.relocationVisible = D.identity.location;
 D.summary =
   `Information-retrieval, data-quality, scientific-verification and AI-evaluation specialist with eight years of auditable public-source and structured-data work. The public record includes paid scientific fact-checking and editorial production, a maintained research-participation directory, and self-directed model-behavior evaluation. On ${graySwan.asOf}, the Gray Swan Proving Ground profile displayed rank #${graySwan.rank} (${graySwan.percentile.toLowerCase()}) and ${graySwan.totalBreaks} total breaks. Entropy for Life work covers ${audience.projects} documented published content contributions: ${contributionBreakdown()}. Technical work is code-literate and AI-assisted, with personal ownership of requirements, verification, deployment and maintenance.`;
@@ -246,7 +246,7 @@ if (researchSystemCase) {
 
 if (P.shared) {
   P.shared.location =
-    'Italy · Italian/EU citizen · Open to worldwide relocation · International B2B contracting';
+    'Italy · EU/EEA work-authorised · Open to sponsored international relocation and B2B engagements';
   if (Array.isArray(P.shared.education)) {
     P.shared.education = P.shared.education.filter((item) => !item.includes('Medicine and Surgery'));
   }

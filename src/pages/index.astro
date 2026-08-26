@@ -9,8 +9,8 @@ import { buildProfileGraph } from "../lib/structured-data.js";
 
 const D = createMarioDossier();
 const { H, audience, graySwan } = homepage;
-const pageTitle = "Mario Marcolongo — Data Quality, Information Retrieval & AI Evaluation";
-const pageDescription = "Data-quality, information-retrieval and AI-evaluation specialist. Evidence verification, model-behavior testing, research operations and public-source investigation.";
+const pageTitle = "Mario Marcolongo — AI & Knowledge Quality Analyst";
+const pageDescription = "AI and knowledge-quality analyst working across information retrieval, evidence systems, data quality, model evaluation and scientific verification.";
 const profileJsonLd = buildProfileGraph(D, "https://mariomarcolongo.com/", pageTitle);
 
 const heroMedia = H.heroMedia.map((item) => {
@@ -91,9 +91,9 @@ const isExternal = (href) => href.startsWith("http");
         <p class="v8-hero-lede">{H.introduction}</p>
         <div class="v8-actions">
           <a class="v8-button v8-button-primary" href="#selected-work">See the work</a>
-          <a class="v8-button" href="/cv-resume">Open the AI evaluation CV</a>
+          <a class="v8-button" href="/cv">Choose a role-fit CV</a>
         </div>
-        <p class="v8-availability">Italy · EU work authorization · worldwide relocation · international contracting</p>
+        <p class="v8-availability">Italy · EU/EEA work-authorised · sponsored international relocation · B2B engagements</p>
 
         <div class="v8-proof-strip" aria-label="Selected public evidence">
           {H.proofMoments.map((item) => (

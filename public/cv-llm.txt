@@ -1,7 +1,7 @@
-# Mario Marcolongo — Data Quality, Information Retrieval & AI Evaluation Specialist (AI / LLM Compatible Markdown)
-> Information Verification · Model Behavior · Scientific Evidence · Knowledge Integrity · Data Visualization
-> I retrieve and verify information, investigate data and evidence quality, and test AI systems.
-> Work Authorization: EU/EEA work-authorized; Swiss EU/EFTA permit eligible; open to employer-sponsored work authorization elsewhere; self-funded relocation considered for exceptional opportunities.
+# Mario Marcolongo — AI & Knowledge Quality Analyst (AI / LLM Compatible Markdown)
+> Information Retrieval · Evidence Systems · Model Evaluation · Scientific Verification · Data Quality
+> I make information and AI systems more reliable.
+> Work Authorization: EU/EEA work-authorised; Switzerland: EU/EFTA employment route once an offer is secured; open to employer-sponsored work authorisation elsewhere. International B2B engagements are available where the contracting arrangement is compliant.
 > Email: me@mariomarcolongo.com | Web: https://mariomarcolongo.com | ORCID: 0000-0003-2846-7115
 
 ---
@@ -123,7 +123,7 @@ Developed the concept, narrative structure, interaction requirements and behavio
 
 ## Education & Certifications
 
-- **Information Technology — Open UAS Path Studies (120 ECTS)** (Aug 2026 — Present) — Metropolia University of Applied Sciences · Bachelor's-level ICT path studies · Curriculum: software development, SQL and relational databases, Unix/Linux, data structures and algorithms, CCNA networking, cloud computing, cybersecurity, ethical hacking, engineering mathematics and applied AI · Programme: https://www.metropolia.fi/en/study-at-metropolia/open-university/path-studies/it-online
+- **Information Technology — Open UAS Path Studies (120 ECTS)** (Aug 2026 — Present) — Metropolia University of Applied Sciences · Bachelor's-level ICT path studies · After completing 120 ECTS, eligible to apply to the BEng IT programme (admission not yet granted) · Curriculum: software development, SQL and relational databases, Unix/Linux, data structures and algorithms, CCNA networking, cloud computing, cybersecurity, ethical hacking, engineering mathematics and applied AI · Programme: https://www.metropolia.fi/en/study-at-metropolia/open-university/path-studies/it-online
 - **EF SET English Certificate 68/100 (C1 overall)** (Mar 2024) — EF Standard English Test · Credential: https://cert.efset.org/en/eJz39v
 - **Career Essentials in Generative AI** (Mar 2024) — Microsoft and LinkedIn · Credential: https://www.linkedin.com/learning/certificates/c4f1f59578e3ac2567787e262e3b2ec55debf96bbbced4d34d5edaa821d9e6d9
 - **GALENOS Crowd Evidence Synthesis Training** (May 2026) — Cochrane Crowd & GALENOS · Systematic-review screening training

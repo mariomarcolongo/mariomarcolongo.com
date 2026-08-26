@@ -21,8 +21,8 @@ const H = portfolio.createPortfolioHuman();
 applyNotandiaBranding({ D, H });
 
 H.eyebrow = 'Information retrieval · data & knowledge quality · AI evaluation';
-H.headline = 'I test AI systems, verify evidence and improve research.';
-H.introduction = 'I retrieve and verify information, investigate data quality and test model behavior. When recurring verification needs a practical system, I define and operate the research workflow around it.';
+H.headline = 'I make information and AI systems more reliable.';
+H.introduction = 'I retrieve and verify information, investigate data and evidence quality, and test model behavior. When the work needs a durable system, I design and run the research workflow behind it.';
 
 H.proofMoments = [
   {

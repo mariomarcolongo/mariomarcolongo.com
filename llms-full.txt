@@ -1,5 +1,5 @@
-# Mario Marcolongo — Data Quality, Information Retrieval & AI Evaluation Specialist
-> Information Verification · Model Behavior · Scientific Evidence · Knowledge Integrity · Data Visualization
+# Mario Marcolongo — AI & Knowledge Quality Analyst
+> Information Retrieval · Evidence Systems · Model Evaluation · Scientific Verification · Data Quality
 
 ## Overview
 Information-retrieval, data-quality, scientific-verification and AI-evaluation specialist with eight years of auditable public-source and structured-data work. The public record includes paid scientific fact-checking and editorial production, a maintained research-participation directory, and self-directed model-behavior evaluation. On 29 July 2026, the Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks. Entropy for Life work covers 80 documented published content contributions: 55 YouTube videos · 4 articles · 21 short-form pieces. Technical work is code-literate and AI-assisted, with personal ownership of requirements, verification, deployment and maintenance. Current open-source product work includes Notandia (formerly MDPI Filter), a continuing browser and Zotero research-integrity tool.
@@ -159,7 +159,7 @@ Source: https://commons.wikimedia.org/wiki/File:Oesophageal_Cancer,_Age-Standard
 
 ## Education & Certifications
 
-- **Information Technology — Open UAS Path Studies (120 ECTS)** (Aug 2026 — Present) — Metropolia University of Applied Sciences · Bachelor's-level ICT path studies · Curriculum: software development, SQL and relational databases, Unix/Linux, data structures and algorithms, CCNA networking, cloud computing, cybersecurity, ethical hacking, engineering mathematics and applied AI · Programme: https://www.metropolia.fi/en/study-at-metropolia/open-university/path-studies/it-online
+- **Information Technology — Open UAS Path Studies (120 ECTS)** (Aug 2026 — Present) — Metropolia University of Applied Sciences · Bachelor's-level ICT path studies · After completing 120 ECTS, eligible to apply to the BEng IT programme (admission not yet granted) · Curriculum: software development, SQL and relational databases, Unix/Linux, data structures and algorithms, CCNA networking, cloud computing, cybersecurity, ethical hacking, engineering mathematics and applied AI · Programme: https://www.metropolia.fi/en/study-at-metropolia/open-university/path-studies/it-online
 - **EF SET English Certificate 68/100 (C1 overall)** (Mar 2024) — EF Standard English Test · Credential: https://cert.efset.org/en/eJz39v
 - **Career Essentials in Generative AI** (Mar 2024) — Microsoft and LinkedIn · Credential: https://www.linkedin.com/learning/certificates/c4f1f59578e3ac2567787e262e3b2ec55debf96bbbced4d34d5edaa821d9e6d9
 - **GALENOS Crowd Evidence Synthesis Training** (May 2026) — Cochrane Crowd & GALENOS · Systematic-review screening training

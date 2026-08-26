@@ -6,8 +6,8 @@ const D = require('../data/source.js');
 const ROOT = path.resolve(__dirname, '..');
 const ENTROPY_WORK_URL = 'https://entropyforlife.it/mario-marcolongo-entropy-for-life/';
 const EXPECTED = {
-  jobTitle: 'Data Quality, Information Retrieval & AI Evaluation Specialist',
-  secondaryTitle: 'Information Verification · Model Behavior · Scientific Evidence · Knowledge Integrity · Data Visualization',
+  jobTitle: 'AI & Knowledge Quality Analyst',
+  secondaryTitle: 'Information Retrieval · Evidence Systems · Model Evaluation · Scientific Verification · Data Quality',
   email: 'me@mariomarcolongo.com',
   orcid: '0000-0003-2846-7115',
   ena: 'PRJEB109744',
@@ -174,7 +174,7 @@ for (const marker of ['human-capabilities', 'human-work', 'human-documents']) {
   if (!indexSource.includes(`data-testid="${marker}"`)) fail('src/pages/index.astro', 1, `Missing homepage marker ${marker}.`);
 }
 for (const requiredText of [
-  'I test AI systems, verify evidence and improve research.',
+  'I make information and AI systems more reliable.',
   'Where I can contribute.',
   'Selected work, shown through the actual output.',
   'Notandia works across browser and Zotero research workflows.',
