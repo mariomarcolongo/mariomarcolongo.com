@@ -3,7 +3,7 @@ import notandiaBranding from "./notandia-branding.js";
 
 const { D, H, P } = career;
 const { applyNotandiaBranding } = notandiaBranding;
-const researchOperationsPage = "/research-operations.html";
+const researchOperationsPage = "/research-operations";
 const supervisorUrl = "https://dpss.unipd.it/en/node/239";
 const departmentUrl = "https://www.unipd.it/en/dpss";
 

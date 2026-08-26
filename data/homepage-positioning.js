@@ -29,7 +29,7 @@ H.proofMoments = [
     value: String(graySwan.totalBreaks),
     label: 'platform-displayed Proving Ground breaks',
     detail: `#${graySwan.rank} · ${graySwan.percentile.toLowerCase()} · ${graySwan.asOf}`,
-    href: '/security.html'
+    href: '/security'
   },
   {
     value: audience.projects,
@@ -41,7 +41,7 @@ H.proofMoments = [
     value: '4,317',
     label: 'auditable Wikimedia contributions',
     detail: 'Privacy research · archival recovery · source review · biomedical evidence',
-    href: '/integrity.html'
+    href: '/integrity'
   }
 ];
 

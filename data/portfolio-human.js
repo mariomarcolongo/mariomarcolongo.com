@@ -11,7 +11,7 @@ function createPortfolioHuman() {
       value: "113",
       label: "platform-recorded Proving Ground breaks",
       detail: "#74 · top 6% · 29 July 2026",
-      href: "/security.html"
+      href: "/security"
     },
     {
       value: "80",
@@ -23,7 +23,7 @@ function createPortfolioHuman() {
       value: "4,317",
       label: "auditable Wikimedia contributions",
       detail: "Privacy research · archival recovery · source review · biomedical evidence",
-      href: "/integrity.html"
+      href: "/integrity"
     }
   ],
 
@@ -35,7 +35,7 @@ function createPortfolioHuman() {
       image: "/media/work/gray-swan-profile-2026-07-29-1600.webp",
       imageSet: "/media/work/gray-swan-profile-2026-07-29-800.webp 800w, /media/work/gray-swan-profile-2026-07-29-1600.webp 1600w",
       alt: "Screenshot of Mario Marcolongo's Gray Swan Arena and Proving Ground profile showing the dated public ranking and activity record",
-      href: "/security.html"
+      href: "/security"
     },
     {
       id: "entropy",
@@ -102,7 +102,7 @@ function createPortfolioHuman() {
       action: "I vary the interaction path, preserve reproduction notes and distinguish direct observations from platform labels, independent verification and model-wide conclusions.",
       result: "#74 on the Proving Ground leaderboard, top 6%, with 113 platform-recorded total breaks on 29 July 2026; the same screenshot shows Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions.",
       boundary: "This supports model-evaluation and adversarial-QA work. It is not presented as penetration testing or senior red-team engineering.",
-      href: "/security.html",
+      href: "/security",
       linkLabel: "Open the evaluation record",
       image: "/media/work/gray-swan-profile-2026-07-29-1600.webp",
       imageSet: "/media/work/gray-swan-profile-2026-07-29-800.webp 800w, /media/work/gray-swan-profile-2026-07-29-1600.webp 1600w",
@@ -143,7 +143,7 @@ function createPortfolioHuman() {
       action: "I built and maintained the Nebula Genomics privacy record across historical sequencing relationships, changing company statements, archived privacy policies, third-party-data questions, corporate restructuring and litigation coverage. In separate cases, I recovered missing documents for a legally sensitive chronology, audited source quality and bibliometrics during a contentious moderation process, and built a syndromic-autism taxonomy from peer-reviewed literature.",
       result: "Each case is linked to an exact attributed diff, edit history or collaborative discussion record, with methods and evidence boundaries documented on a dedicated page. Living-person names are not used as promotional headings when they add little hiring value.",
       boundary: "The work represents public-source research and collaborative knowledge governance. It does not establish company liability, personal misconduct, editor affiliation, an independent legal judgment or original clinical research.",
-      href: "/integrity.html",
+      href: "/integrity",
       linkLabel: "Inspect the investigation records",
       image: "/media/work/wikimedia-clinical-overlap.svg",
       alt: "Scientific evidence diagram representing structured biomedical and Wikimedia work",
@@ -223,7 +223,7 @@ function createPortfolioHuman() {
   moreWork: [
     {
       title: "Knowledge integrity & investigation records",
-      href: "/integrity.html"
+      href: "/integrity"
     },
     {
       title: "Protein by bodyweight by country",
@@ -264,25 +264,25 @@ function createPortfolioHuman() {
     {
       title: "Data Quality & Research Analysis",
       description: "Information retrieval, data quality, evidence verification, data visualization and research operations.",
-      href: "/cv-research.html",
+      href: "/cv-research",
       recommendedFor: "Recommended general CV for analytical, data-quality and research roles"
     },
     {
       title: "AI Evaluation & Model Behavior",
       description: "Model-behavior testing, adversarial QA, evaluation operations and evidence-bound reporting.",
-      href: "/cv-resume.html",
+      href: "/cv-resume",
       recommendedFor: "Specialist CV for AI evaluation and safeguards roles"
     },
     {
       title: "Trust, Safety & Knowledge Integrity",
       description: "Consumer-genomics privacy, archival OSINT, source-quality review, public-record research, content governance and investigation support.",
-      href: "/cv-integrity.html",
+      href: "/cv-integrity",
       recommendedFor: "Integrity, trust & safety and investigation roles"
     },
     {
       title: "Research, Editorial & Content Operations",
       description: "Scientific fact-checking, editorial coordination, audience packaging, evidence synthesis and content operations.",
-      href: "/cv-editorial.html",
+      href: "/cv-editorial",
       recommendedFor: "Editorial, content-operations and audience-quality roles"
     }
   ]

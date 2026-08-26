@@ -51,10 +51,10 @@ const method = [
 const evaluationJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://mariomarcolongo.com/security.html#webpage",
+  "@id": "https://mariomarcolongo.com/security#webpage",
   name: title,
   description,
-  url: "https://mariomarcolongo.com/security.html",
+  url: "https://mariomarcolongo.com/security",
   dateModified: "2026-07-29",
   author: { "@id": "https://mariomarcolongo.com/#person" },
   about: { "@type": "Thing", name: "AI evaluation and model behavior" },
@@ -62,7 +62,7 @@ const evaluationJsonLd = {
 };
 ---
 
-<Layout title={title} description={description} canonical="https://mariomarcolongo.com/security.html">
+<Layout title={title} description={description} canonical="https://mariomarcolongo.com/security">
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(evaluationJsonLd)}></script>
   </Fragment>
@@ -80,7 +80,7 @@ const evaluationJsonLd = {
         <div class="career-actions">
           <a class="btn btn-primary" href={D.identity.grayswanUrl} target="_blank" rel="noopener noreferrer">Open live Gray Swan profile ↗</a>
           <a class="btn" href={archiveUrl} target="_blank" rel="noopener noreferrer">Open verification snapshot ↗</a>
-          <a class="btn" href="/cv-resume.html">AI Evaluation Application CV</a>
+          <a class="btn" href="/cv-resume">AI Evaluation Application CV</a>
         </div>
       </div>
 

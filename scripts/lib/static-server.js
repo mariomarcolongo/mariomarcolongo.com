@@ -25,6 +25,7 @@ function resolveRequestPath(rootDir, requestUrl) {
   const resolved = path.resolve(rootDir, relative);
   const root = path.resolve(rootDir) + path.sep;
   if (resolved !== path.resolve(rootDir) && !resolved.startsWith(root)) return null;
+  if (!path.extname(resolved) && fs.existsSync(`${resolved}.html`)) return `${resolved}.html`;
   return resolved;
 }
 

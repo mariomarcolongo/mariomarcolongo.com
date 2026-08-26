@@ -18,12 +18,12 @@
     },
     "queryIntegrityRecord": {
       "description": "Access public knowledge-integrity, provenance and investigation work samples.",
-      "endpoint": "https://mariomarcolongo.com/integrity.html",
+      "endpoint": "https://mariomarcolongo.com/integrity",
       "method": "GET"
     },
     "queryResearchOperations": {
       "description": "Access the evidence-bound qualitative research-operations and accessibility-facilitation case study.",
-      "endpoint": "https://mariomarcolongo.com/research-operations.html",
+      "endpoint": "https://mariomarcolongo.com/research-operations",
       "method": "GET"
     }
   },

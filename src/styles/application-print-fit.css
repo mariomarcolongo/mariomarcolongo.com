@@ -133,7 +133,7 @@
   .application-list li {
     margin: 1px 0 !important;
     padding-left: 12px !important;
-    font-size: 0.68rem !important;
+    font-size: 0.7rem !important;
     line-height: 1.31 !important;
   }
 
@@ -151,7 +151,7 @@
 
   .application-evidence p {
     margin-top: 3px !important;
-    font-size: 0.6rem !important;
+    font-size: 0.65rem !important;
     line-height: 1.31 !important;
   }
 
@@ -159,7 +159,7 @@
     grid-template-columns: 108px minmax(0, 1fr) !important;
     gap: 9px !important;
     padding: 5px 0 !important;
-    font-size: 0.66rem !important;
+    font-size: 0.68rem !important;
     line-height: 1.3 !important;
   }
 

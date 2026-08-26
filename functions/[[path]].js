@@ -1,4 +1,16 @@
 // functions/[[path]].js
+function markdownVariantPath(pathname) {
+    if (pathname === "/") return "/index.md";
+    if (pathname.endsWith(".html")) return `${pathname.slice(0, -5)}.md`;
+    if (pathname.startsWith("/.well-known/")) return null;
+
+    const normalizedPath = pathname.replace(/\/+$/, "");
+    const leaf = normalizedPath.split("/").pop() || "";
+    if (!normalizedPath || leaf.includes(".")) return null;
+
+    return `${normalizedPath}.md`;
+}
+
 export async function onRequest(context) {
     const { request, next } = context;
     const url = new URL(request.url);
@@ -19,11 +31,11 @@ export async function onRequest(context) {
     }
 
     // 1. Markdown Negotiation
-    if (wantsMarkdown) {
-        let path = url.pathname === "/" ? "/index.md" : url.pathname.replace(".html", ".md");
+    const markdownPath = wantsMarkdown ? markdownVariantPath(url.pathname) : null;
+    if (markdownPath) {
         
         // Fetch the file using the Pages internal fetch
-        const response = await fetch(new Request(new URL(path, url.origin), request));
+        const response = await fetch(new Request(new URL(markdownPath, url.origin), request));
         
         if (response.status === 200) {
             return new Response(response.body, {
@@ -41,9 +53,13 @@ export async function onRequest(context) {
     
     // Inject Discovery Links
     if (headers.get("Content-Type")?.includes("text/html")) {
+        const alternateMarkdownPath = markdownVariantPath(url.pathname);
         headers.append("Link", '<https://mariomarcolongo.com/.well-known/api-catalog>; rel="api-catalog"');
         headers.append("Link", '<https://mariomarcolongo.com/llms.txt>; rel="describedby"; type="text/plain"');
         headers.append("Link", '<https://mariomarcolongo.com/llms-full.txt>; rel="describedby"; type="text/plain"');
+        if (alternateMarkdownPath) {
+            headers.append("Link", `<https://mariomarcolongo.com${alternateMarkdownPath}>; rel="alternate"; type="text/markdown"`);
+        }
     }
     
     headers.set("X-Worker-Active", "true");

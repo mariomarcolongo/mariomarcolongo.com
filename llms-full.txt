@@ -105,7 +105,7 @@ Conduct recurring primary-literature research and scientific fact-checking acros
 - Documented Work: 80 contributions · 55 YouTube videos · 4 articles · 21 short-form pieces
 - Cross-Functional Scope: Evidence quality, content production, visual packaging and website design and operations
 
-### Notandia — formerly MDPI Filter | Browser Extension & Zotero Plugin (Website: https://mariomarcolongo.com/notandia.html | Chrome Store: https://chromewebstore.google.com/detail/mdpi-filter/comknkeimaaadpiopddjoknflbmjeccp | Edge Store: https://microsoftedge.microsoft.com/addons/detail/mdpi-filter/efonlkldplkaeekpiajloajjmkappjgi | GitHub: https://github.com/notandia/browser-extension)
+### Notandia — formerly MDPI Filter | Browser Extension & Zotero Plugin (Website: https://mariomarcolongo.com/notandia | Chrome Store: https://chromewebstore.google.com/detail/mdpi-filter/comknkeimaaadpiopddjoknflbmjeccp | Edge Store: https://microsoftedge.microsoft.com/addons/detail/mdpi-filter/efonlkldplkaeekpiajloajjmkappjgi | GitHub: https://github.com/notandia/browser-extension)
 **Role**: Creator & AI-Assisted Technical Product Operator
 **Tech Stack**: Product Requirements, Functional Testing, Publisher Watchlists, Crossref/Retraction Watch, Zotero, NCBI/Europe PMC, Multi-Browser Release Operations
 

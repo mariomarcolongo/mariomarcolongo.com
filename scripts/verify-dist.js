@@ -87,13 +87,13 @@ assertContains(robots, 'Allow: /', 'dist/robots.txt');
 
 const discoveryCatalog = read('dist/.well-known/api-catalog');
 for (const route of [
-  '/cv-resume.html', '/cv-research.html', '/cv-editorial.html', '/cv-integrity.html', '/cv.html',
-  '/integrity.html', '/research-operations.html', '/llms.txt', '/llms-full.txt', '/cv-llm.txt'
+  '/cv-resume', '/cv-research', '/cv-editorial', '/cv-integrity', '/cv',
+  '/integrity', '/research-operations', '/llms.txt', '/llms-full.txt', '/cv-llm.txt'
 ]) assertContains(discoveryCatalog, route, 'dist/.well-known/api-catalog');
 
 const redirects = read('dist/_redirects');
-assertContains(redirects, '/cv-giskard.html      /cv-resume.html   301', 'dist/_redirects');
-assertContains(redirects, '/cv-orcid.html        /cv-research.html 301', 'dist/_redirects');
+assertContains(redirects, '/cv-giskard.html      /cv-resume         301', 'dist/_redirects');
+assertContains(redirects, '/cv-orcid.html        /cv-research       301', 'dist/_redirects');
 assertMissing('dist/cv-giskard.html', 'Company-specific CV route');
 assertMissing('dist/cv-orcid.html', 'Company-specific CV route');
 pass('Explicit crawler access and durable CV discovery checked');
@@ -103,6 +103,28 @@ const pages = {
   resume: read('dist/cv-resume.html'), research: read('dist/cv-research.html'), editorial: read('dist/cv-editorial.html'),
   integrityCv: read('dist/cv-integrity.html'), security: read('dist/security.html')
 };
+
+const canonicalRoutes = {
+  index: 'https://mariomarcolongo.com/',
+  notandia: 'https://mariomarcolongo.com/notandia',
+  integrityPage: 'https://mariomarcolongo.com/integrity',
+  researchOperations: 'https://mariomarcolongo.com/research-operations',
+  cv: 'https://mariomarcolongo.com/cv',
+  resume: 'https://mariomarcolongo.com/cv-resume',
+  research: 'https://mariomarcolongo.com/cv-research',
+  editorial: 'https://mariomarcolongo.com/cv-editorial',
+  integrityCv: 'https://mariomarcolongo.com/cv-integrity',
+  security: 'https://mariomarcolongo.com/security'
+};
+
+for (const [name, canonicalUrl] of Object.entries(canonicalRoutes)) {
+  const html = pages[name];
+  const markdownUrl = canonicalUrl.endsWith('/') ? `${canonicalUrl}index.md` : `${canonicalUrl}.md`;
+  assertContains(html, `<link rel="canonical" href="${canonicalUrl}"`, `dist/${name}.html`);
+  assertContains(html, `<link rel="alternate" type="text/markdown" href="${markdownUrl}"`, `dist/${name}.html`);
+  assertNotContains(html, `rel="canonical" href="${canonicalUrl}.html"`, `dist/${name}.html`);
+}
+pass('Canonical and Markdown-alternate routes checked');
 
 for (const [name, html] of Object.entries(pages)) {
   if (!html) continue;
@@ -174,7 +196,7 @@ for (const media of [
   '/media/work/mdpi-filter-2-800.webp', '/media/work/wikimedia-clinical-overlap.svg',
   '/media/work/tableau-mortality-800.webp', '/media/work/flourish-oesophageal-cancer.svg'
 ]) assertContains(index, media, 'dist/index.html');
-assertContains(index, 'href="/notandia.html"', 'dist/index.html');
+assertContains(index, 'href="/notandia"', 'dist/index.html');
 assertContains(indexText, 'Notandia', 'dist/index.html');
 assertContains(index, 'https://jnton.github.io/protein-by-bodyweight-country/', 'dist/index.html');
 pass('Artifact-led homepage checked');
@@ -196,6 +218,12 @@ for (const [name, profile, expectedTitle] of applicationProfiles) {
   assertContains(html, ENTROPY_WORK_URL, `dist/${name}.html`);
   assertContains(text, 'Official Entropy for Life work record', `dist/${name}.html`);
   assertContains(text, '80', `dist/${name}.html`);
+  assertContains(html, 'data-ats-layout="semantic-two-page"', `dist/${name}.html`);
+  assertContains(html, 'aria-label=', `dist/${name}.html`);
+  for (const heading of ['Relevant experience', 'Capabilities', 'Education & credentials']) {
+    assertContains(text, heading, `dist/${name}.html ATS structure`);
+  }
+  assertContains(html, '<ul class="application-list">', `dist/${name}.html ATS structure`);
 }
 
 const resumeText = normalizeHtmlText(pages.resume);

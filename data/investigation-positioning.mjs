@@ -4,7 +4,7 @@ import C from "./investigation-cases.js";
 const { D, P } = career;
 
 const centralAuth = "https://commons.wikimedia.org/wiki/Special:CentralAuth/Digressivo";
-const integrityPage = "/integrity.html";
+const integrityPage = "/integrity";
 
 function replaceSkill(profile, currentTitle, nextTitle, detail) {
   const index = profile?.skills?.findIndex(([title]) => title === currentTitle);
@@ -113,6 +113,7 @@ if (P.researchQuality) {
 
 if (P.editorialCommunity) {
   P.editorialCommunity.summary = "Research, editorial and community-operations specialist with paid scientific content and English-to-Italian localization experience inside a 36.5M-view science-communication brand, plus long-running public-source and structured-data work. Work includes primary-literature verification, original long-form article creation, scientific and technical localization, archival recovery, claim review, public-health monitoring, sensitive research facilitation and public verification workflows; audience metrics describe the production environment, not a personal audience.";
+  P.editorialCommunity.firstPageExperienceCount = 2;
 
   if (P.editorialCommunity.strengths?.[2]) {
     P.editorialCommunity.strengths[2] = {

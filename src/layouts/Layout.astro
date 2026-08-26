@@ -28,6 +28,10 @@ const socialImagePath = canonical.includes('/security')
       ? '/og/cv.png'
       : '/og/home.png';
 const socialImage = `https://mariomarcolongo.com${socialImagePath}`;
+const canonicalUrl = new URL(canonical);
+const markdownAlternative = canonicalUrl.pathname === "/"
+  ? `${canonicalUrl.origin}/index.md`
+  : `${canonicalUrl.origin}${canonicalUrl.pathname.replace(/\/$/, "")}.md`;
 ---
 
 <!DOCTYPE html>
@@ -39,6 +43,7 @@ const socialImage = `https://mariomarcolongo.com${socialImagePath}`;
   <title>{title}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonical} />
+  <link rel="alternate" type="text/markdown" href={markdownAlternative} title={`${title} — Markdown`} />
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />

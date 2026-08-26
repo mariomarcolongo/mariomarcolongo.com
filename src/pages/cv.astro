@@ -8,8 +8,8 @@ import { buildProfileGraph } from "../lib/structured-data.js";
 
 const { D, P } = career;
 const pageTitle = "Mario Marcolongo — Master CV & Evidence Record";
-const pageDescription = "Comprehensive master CV and evidence record for Mario Marcolongo. Use the specialized two-page CVs for most applications.";
-const profileJsonLd = buildProfileGraph(D, "https://mariomarcolongo.com/cv.html", pageTitle);
+const pageDescription = "Comprehensive master CV and evidence record for Mario Marcolongo. Use the role-family two-page CVs for most applications.";
+const profileJsonLd = buildProfileGraph(D, "https://mariomarcolongo.com/cv", pageTitle);
 
 const roleAliases = {
   "Founder & Technical Product Builder": "Founder & Research-Workflow Owner",
@@ -84,7 +84,7 @@ function linksFor(item) {
 }
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical="https://mariomarcolongo.com/cv.html">
+<Layout title={pageTitle} description={pageDescription} canonical="https://mariomarcolongo.com/cv">
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(profileJsonLd)}></script>
   </Fragment>
@@ -96,13 +96,13 @@ function linksFor(item) {
       <div>
         <div class="master-eyebrow">Master source document</div>
         <h2>Comprehensive CV & evidence archive</h2>
-        <p>This preserves the complete record used to create tailored applications. For most jobs, send one of the four specialized two-page CVs instead.</p>
+        <p>This preserves the complete record used to create tailored applications. For most jobs, send one of the four role-family two-page CVs instead.</p>
       </div>
       <div class="application-guide-actions">
-        <a class="btn btn-primary" href="/cv-resume.html">AI Safety CV</a>
-        <a class="btn" href="/cv-editorial.html">Editorial & Community CV</a>
-        <a class="btn" href="/cv-integrity.html">Trust & Knowledge Integrity CV</a>
-        <a class="btn" href="/cv-research.html">Research & Data Quality CV</a>
+        <a class="btn btn-primary" href="/cv-resume">AI Safety CV</a>
+        <a class="btn" href="/cv-editorial">Editorial & Community CV</a>
+        <a class="btn" href="/cv-integrity">Trust & Knowledge Integrity CV</a>
+        <a class="btn" href="/cv-research">Research & Data Quality CV</a>
         <button class="btn" type="button" onclick="window.print()">Print / Save PDF</button>
       </div>
     </section>

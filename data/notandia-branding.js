@@ -1,8 +1,8 @@
 const NOTANDIA = Object.freeze({
   name: "Notandia",
   formerName: "MDPI Filter",
-  canonicalPath: "/notandia.html",
-  canonicalUrl: "https://mariomarcolongo.com/notandia.html",
+  canonicalPath: "/notandia",
+  canonicalUrl: "https://mariomarcolongo.com/notandia",
   browserRepository: "https://github.com/notandia/browser-extension",
   zoteroRepository: "https://github.com/notandia/zotero-plugin",
   legacyOrganization: "https://github.com/mdpi-filter",

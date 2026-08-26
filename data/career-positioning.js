@@ -91,7 +91,7 @@ if (masterGray) {
   ];
   masterGray.links = {
     ...(masterGray.links || {}),
-    caseStudy: '/security.html',
+    caseStudy: '/security',
     profile: D.identity.grayswanUrl,
     evidence: graySwan.evidencePath
   };
@@ -188,7 +188,7 @@ if (Array.isArray(H?.proofMoments)) {
     value: String(graySwan.totalBreaks),
     label: 'platform-displayed Proving Ground breaks',
     detail: `#${graySwan.rank} · ${graySwan.percentile.toLowerCase()} · ${graySwan.asOf}`,
-    href: '/security.html'
+    href: '/security'
   };
   H.proofMoments[1] = {
     value: audience.projects,

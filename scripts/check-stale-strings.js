@@ -193,7 +193,7 @@ for (const requiredText of [
   'designed and built entropyforlife.it',
   ENTROPY_WORK_URL,
   'Official work record published by Entropy for Life',
-  '/integrity.html'
+  '/integrity'
 ]) {
   if (!homepageSource.includes(requiredText)) fail('src/pages/index.astro', 1, `Homepage is missing current artifact-led portfolio content: ${requiredText}`);
 }

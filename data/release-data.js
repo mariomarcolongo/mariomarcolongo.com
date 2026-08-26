@@ -108,7 +108,7 @@ if (aiProject) {
     "Dated public record of self-directed model-behavior evaluation across chat, multimodal, agentic tool-use and indirect prompt-injection challenges.";
   aiProject.description =
     `Self-directed model-behavior evaluation conducted through the Gray Swan Proving Ground. The ${GS.asOf} profile snapshot displays rank #${GS.rank}, ${GS.percentile.toLowerCase()}, and ${GS.totalBreaks} total breaks. The same snapshot shows ${GS.arenaSubmissions} Arena submissions, ${GS.arenaUniqueBreaks} global unique breaks, ${GS.arenaPoints.toLocaleString("en-US")} points and Arena rank #${GS.arenaRank}. Aggregate counts are presented with explicit evidence limitations; complete prompts, outputs, model versions and adjudication materials are not reproduced.`;
-  aiProject.links = { caseStudy: "/security.html", profile: GS.profileUrl, evidence: GS.evidencePath };
+  aiProject.links = { caseStudy: "/security", profile: GS.profileUrl, evidence: GS.evidencePath };
   aiProject.highlights = [
     `Current Snapshot: #${GS.rank}, ${GS.percentile.toLowerCase()} and ${GS.totalBreaks} platform-displayed Proving Ground breaks`,
     `Arena Activity: ${GS.arenaSubmissions} submissions, ${GS.arenaUniqueBreaks} global unique breaks and ${GS.arenaPoints.toLocaleString("en-US")} points`,
@@ -173,7 +173,7 @@ const grayExperience = findExperience(D.experience, (item) => item?.role?.includ
 if (grayExperience) {
   grayExperience.org = "Independent practice · Gray Swan Proving Ground participant";
   grayExperience.period = "Jul 2026 — Present";
-  grayExperience.links = { caseStudy: "/security.html", profile: GS.profileUrl, evidence: GS.evidencePath };
+  grayExperience.links = { caseStudy: "/security", profile: GS.profileUrl, evidence: GS.evidencePath };
   grayExperience.bullets = [
     "Conduct self-directed testing of LLM instruction handling, policy boundaries and edge cases across chat, image, agentic tool-use and indirect prompt-injection settings.",
     `Reached #${GS.rank} on the Proving Ground (${GS.percentile.toLowerCase()}) with ${GS.totalBreaks} platform-displayed total breaks in the ${GS.asOf} snapshot; the Arena profile also displayed ${GS.arenaUniqueBreaks} global unique breaks, ${GS.arenaPoints.toLocaleString("en-US")} points and ${GS.arenaSubmissions} submissions.`,
@@ -191,7 +191,7 @@ H.proofMoments[0] = {
   value: String(GS.totalBreaks),
   label: "platform-displayed Proving Ground breaks",
   detail: `#${GS.rank} · ${GS.percentile.toLowerCase()} · ${GS.asOf}`,
-  href: "/security.html"
+  href: "/security"
 };
 H.proofMoments[1] = {
   value: ENTROPY.totalProjects,
@@ -207,7 +207,7 @@ if (grayHero) {
   grayHero.imageSet = "/media/work/gray-swan-profile-2026-07-29-800.webp 800w, /media/work/gray-swan-profile-2026-07-29-1600.webp 1600w";
   grayHero.alt =
     `Dated Gray Swan evaluation summary showing Proving Ground rank ${GS.rank}, ${GS.percentile.toLowerCase()}, ${GS.totalBreaks} total breaks and separate Arena activity metrics`;
-  grayHero.href = "/security.html";
+  grayHero.href = "/security";
 }
 const entropyHero = findById(H.heroMedia, "entropy");
 if (entropyHero) {
@@ -226,7 +226,7 @@ if (modelCase) {
     `#${GS.rank} on the Proving Ground, ${GS.percentile.toLowerCase()}, with ${GS.totalBreaks} platform-displayed total breaks on ${GS.asOf}; the Arena profile displayed ${GS.arenaSubmissions} submissions, ${GS.arenaUniqueBreaks} global unique breaks and ${GS.arenaPoints.toLocaleString("en-US")} points.`;
   modelCase.boundary =
     `The four visible area counters sum to ${GS.displayedAreaTotal} while the profile displays ${GS.totalBreaks} total breaks. Both are reported without inferring the platform’s internal aggregation. This supports evaluation and adversarial-QA applications, not penetration-testing or senior red-team engineering claims.`;
-  modelCase.href = "/security.html";
+  modelCase.href = "/security";
   modelCase.image = "/media/work/gray-swan-profile-2026-07-29-1600.webp";
   modelCase.imageSet = "/media/work/gray-swan-profile-2026-07-29-800.webp 800w, /media/work/gray-swan-profile-2026-07-29-1600.webp 1600w";
   modelCase.alt =
@@ -271,7 +271,7 @@ if (ai) {
   if (gsExp) {
     gsExp.period = "Jul 2026 — Present";
     gsExp.links = [
-      { label: "Evaluation record", url: "/security.html" },
+      { label: "Evaluation record", url: "/security" },
       { label: "Dated evidence", url: GS.evidencePath },
       { label: "Public profile", url: GS.profileUrl }
     ];
@@ -349,7 +349,7 @@ if (integrity) {
   if (gsExp) {
     gsExp.period = "Jul 2026 — Present";
     gsExp.links = [
-      { label: "Evaluation record", url: "/security.html" },
+      { label: "Evaluation record", url: "/security" },
       { label: "Dated evidence", url: GS.evidencePath },
       { label: "Public profile", url: GS.profileUrl }
     ];

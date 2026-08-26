@@ -46,7 +46,7 @@ function createMarioDossier() {
     subjectOf: [
       {
         "@type": "WebPage",
-        "@id": "https://mariomarcolongo.com/security.html#webpage"
+        "@id": "https://mariomarcolongo.com/security#webpage"
       }
     ],
     contactObfuscated: ["me", "mariomarcolongo", "com"]
@@ -118,7 +118,7 @@ function createMarioDossier() {
       role: "Model-Behavior Evaluator",
       tech: ["Adversarial Evaluation", "Prompt Injection", "Agentic Tool-Use", "Multimodal Safety", "Evidence-Bound Reporting"],
       links: {
-        caseStudy: "/security.html",
+        caseStudy: "/security",
         profile: "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf"
       },
       highlights: [
@@ -349,7 +349,7 @@ function createMarioDossier() {
       tag: "Independent practice",
       period: "Jul 2026 — Present",
       links: {
-        caseStudy: "/security.html",
+        caseStudy: "/security",
         profile: "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
         website: "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf"
       },

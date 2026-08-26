@@ -31,7 +31,7 @@ const PORTFOLIO_V3 = {
         "Evidence-bound public methodology and limitations"
       ],
       next: "The engineering ceiling rises after independently verifiable Python automation, application-security practice and paid team experience.",
-      cv: "/cv-resume.html",
+      cv: "/cv-resume",
       cvLabel: "AI Safety CV"
     },
     {
@@ -53,7 +53,7 @@ const PORTFOLIO_V3 = {
         "Independent ownership of a public research-participation directory"
       ],
       next: "This route is credible now, but the highest compensation usually comes later through program leadership, technical program management or senior AI/research operations.",
-      cv: "/cv-editorial.html",
+      cv: "/cv-editorial",
       cvLabel: "Editorial & Community CV"
     },
     {
@@ -75,7 +75,7 @@ const PORTFOLIO_V3 = {
         "Biomedical taxonomy and prevalence synthesis from peer-reviewed literature"
       ],
       next: "Continue documenting attributed case studies with explicit legal, scientific and evidentiary boundaries.",
-      cv: "/cv-integrity.html",
+      cv: "/cv-integrity",
       cvLabel: "Trust & Integrity CV"
     },
     {
@@ -97,7 +97,7 @@ const PORTFOLIO_V3 = {
         "70+ evidence visualizations and 4,317 public contributions"
       ],
       next: "The revenue ceiling improves through enterprise AI/data programs, domain-expert model quality and technical program ownership rather than remaining in junior cataloguing work.",
-      cv: "/cv-research.html",
+      cv: "/cv-research",
       cvLabel: "Research & Data Quality CV"
     }
   ],
@@ -109,7 +109,7 @@ const PORTFOLIO_V3 = {
       summary: "Repeated exploratory testing across instruction hierarchy, multimodal inputs, agentic tool use and indirect prompt injection, reported with an explicit separation between platform status and independent verification.",
       methods: ["Adversarial test design", "Behavior classification", "Evidence boundaries", "Reproduction notes"],
       metric: "110 platform-displayed breaks · #75 · top 6%",
-      href: "/security.html",
+      href: "/security",
       linkLabel: "Open evaluation record"
     },
     {
@@ -159,7 +159,7 @@ const PORTFOLIO_V3 = {
       summary: "Co-developed and co-facilitated recorded Zoom focus groups with autistic participants on sensitive sexuality and relationship topics, using structured prompts, respectful pacing, live handoffs and recovery when a facilitator missed steps or needed support.",
       methods: ["Sensitive-topic moderation", "Neurodiversity-aware communication", "Two-person handoffs", "Remote-session logistics"],
       metric: "2022–2025 collaboration · public institutional attribution",
-      href: "/cv-editorial.html",
+      href: "/cv-editorial",
       linkLabel: "Open relevant CV"
     },
     {
@@ -206,35 +206,35 @@ const PORTFOLIO_V3 = {
       label: "AI systems",
       title: "AI Safety & Adversarial Testing CV",
       body: "For safeguards, model behavior, adversarial QA, trust & safety and evaluation-operations roles.",
-      href: "/cv-resume.html"
+      href: "/cv-resume"
     },
     {
       id: "editorial",
       label: "Research organizations",
       title: "Editorial & Community Operations CV",
       body: "For assistant editor, evidence-synthesis coordination, research programs and community-engagement roles.",
-      href: "/cv-editorial.html"
+      href: "/cv-editorial"
     },
     {
       id: "integrity",
       label: "Trust & investigations",
       title: "Trust, Safety & Knowledge Integrity CV",
       body: "For content integrity, archival and public-record research, OSINT support, trust & safety and abuse-analysis roles.",
-      href: "/cv-integrity.html"
+      href: "/cv-integrity"
     },
     {
       id: "data",
       label: "Research and data",
       title: "Research Verification & Data Quality CV",
       body: "For scientific evidence, provenance, metadata, research operations and domain-expert AI quality roles.",
-      href: "/cv-research.html"
+      href: "/cv-research"
     },
     {
       id: "master",
       label: "Complete archive",
       title: "Master CV & Evidence Record",
       body: "The comprehensive source document for due diligence and future tailored applications—not the default attachment.",
-      href: "/cv.html"
+      href: "/cv"
     }
   ]
 };

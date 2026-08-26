@@ -1,7 +1,7 @@
 const APPLICATION_PROFILES = {
   aiSafety: {
     id: "ai-safety",
-    documentLabel: "Specialized Application CV",
+    documentLabel: "Role-family application CV",
     title: "AI Evaluation & Model Behavior Specialist",
     subtitle: "Model behavior testing · adversarial QA · evidence-bound reporting · evaluation operations",
     summary: "AI evaluation and research-verification specialist with sustained self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. Gray Swan Proving Ground participant ranked #74 (top 6%) on 29 July 2026, with 113 platform-recorded total breaks; the same profile showed Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions. Brings eight years of auditable claim verification, paid scientific fact-checking, structured research workflows and clear evidence-bound reporting.",
@@ -23,7 +23,7 @@ const APPLICATION_PROFILES = {
         organization: "Independent practice · Gray Swan Proving Ground",
         period: "Jul 2026 — Present",
         links: [
-          { label: "Evaluation record", url: "/security.html" },
+          { label: "Evaluation record", url: "/security" },
           { label: "Public profile", url: "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf" }
         ],
         bullets: [
@@ -71,12 +71,12 @@ const APPLICATION_PROFILES = {
       {
         title: "Structured evaluation practice",
         body: "Repeated adversarial testing across instruction hierarchy, multimodal inputs, tool-use behavior and untrusted external context.",
-        link: "/security.html"
+        link: "/security"
       },
       {
         title: "Human-subject research operations",
         body: "Co-developed and co-facilitated structured remote focus groups with autistic participants on sexuality and relationships, supervised by Marta Panzeri at the University of Padua DPSS.",
-        link: "/cv-editorial.html"
+        link: "/cv-editorial"
       }
     ],
     skills: [
@@ -90,7 +90,7 @@ const APPLICATION_PROFILES = {
 
   researchQuality: {
     id: "research-quality",
-    documentLabel: "Specialized Application CV",
+    documentLabel: "Role-family application CV",
     title: "Data Quality & Research Analyst",
     subtitle: "Information retrieval · data quality · evidence verification · data visualization · research operations",
     summary: "Information-retrieval, evidence-verification and data-quality specialist with eight years of auditable work across scientific sources, structured data and public knowledge systems. Paid fact-checker and writer for Entropy for Life, founder of an open research-participation directory with documented verification and metadata workflows, and public contributor across Wikipedia, Wikidata and Wikimedia Commons. Combines source retrieval, provenance discipline, data-quality thinking, scientific visualization and practical technical operations.",
@@ -177,7 +177,7 @@ const APPLICATION_PROFILES = {
 
   editorialCommunity: {
     id: "editorial-community",
-    documentLabel: "Specialized Application CV",
+    documentLabel: "Role-family application CV",
     title: "Research, Editorial & Community Operations Specialist",
     subtitle: "Evidence synthesis · editorial coordination · research programs · community engagement · AI-enabled workflows",
     summary: "Research, editorial and community-operations specialist with paid experience supporting scientific content production, primary-source fact-checking, professional writing and web operations. Co-developed and facilitated approximately 4–5 structured remote focus-group sessions, typically lasting 1–2 hours, with autistic participants discussing sensitive sexuality and relationship topics under Marta Panzeri at the University of Padua DPSS. Also contributed evidence research to 55+ published YouTube video projects and four co-authored articles and founded an open research-participation directory covering more than 55 initiatives.",
@@ -253,7 +253,7 @@ const APPLICATION_PROFILES = {
       {
         title: "Sensitive remote research facilitation",
         body: "Structured moderation, recruitment and Zoom-session procedures for autistic participants discussing sensitive topics, with public attribution to Marta Panzeri and the University of Padua DPSS; participant information remains confidential.",
-        link: "/cv-editorial.html"
+        link: "/cv-editorial"
       }
     ],
     skills: [
@@ -267,7 +267,7 @@ const APPLICATION_PROFILES = {
 
   integrity: {
     id: "knowledge-integrity",
-    documentLabel: "Specialized Application CV",
+    documentLabel: "Role-family application CV",
     title: "Trust, Safety & Knowledge Integrity Specialist",
     subtitle: "Open-source research · source provenance · content integrity · structured-data verification · adversarial analysis",
     summary: "Knowledge-integrity and open-source research specialist with eight years of auditable public work across Wikipedia, Wikidata and Wikimedia Commons, paid scientific fact-checking for a large science-communication project, and sustained adversarial testing of AI systems. Experience includes source provenance, rights and authorship verification, public-record reconciliation, health-information monitoring, structured metadata and evidence-bound reporting. Best suited to analyst and operations roles in trust & safety, content integrity, investigations, knowledge quality and abuse-risk research rather than penetration-testing engineering.",
@@ -290,7 +290,7 @@ const APPLICATION_PROFILES = {
         period: "Mar 2018 — Present",
         links: [
           { label: "Public contribution record", url: "https://commons.wikimedia.org/wiki/Special:CentralAuth/Digressivo" },
-          { label: "Integrity work samples", url: "/integrity.html" }
+          { label: "Integrity work samples", url: "/integrity" }
         ],
         bullets: [
           "Check claims and citations, reconcile conflicting public sources, improve structured metadata and document provenance across public knowledge projects.",
@@ -317,7 +317,7 @@ const APPLICATION_PROFILES = {
         organization: "Independent practice · Gray Swan Proving Ground",
         period: "Jul 2026 — Present",
         links: [
-          { label: "Evaluation record", url: "/security.html" },
+          { label: "Evaluation record", url: "/security" },
           { label: "Public profile", url: "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf" }
         ],
         bullets: [

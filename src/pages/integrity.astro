@@ -28,7 +28,7 @@ const methods = [
 ];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical="https://mariomarcolongo.com/integrity.html">
+<Layout title={pageTitle} description={pageDescription} canonical="https://mariomarcolongo.com/integrity">
   <Fragment slot="head">
     <script is:inline>document.documentElement.classList.add("v3-js");</script>
     <script type="application/ld+json" set:html={JSON.stringify({
@@ -36,7 +36,7 @@ const methods = [
       "@type": "ProfilePage",
       name: pageTitle,
       description: pageDescription,
-      url: "https://mariomarcolongo.com/integrity.html",
+      url: "https://mariomarcolongo.com/integrity",
       mainEntity: {
         "@type": "Person",
         "@id": "https://mariomarcolongo.com/#person",
@@ -55,7 +55,7 @@ const methods = [
       <h1 class="v3-enter" style="--enter-delay:130ms">Investigation is useful only when the evidence trail survives scrutiny.</h1>
       <p class="v3-enter" style="--enter-delay:210ms">This page collects attributable examples of original article creation, scientific and technical localization, contested-source policy synthesis, consumer-genomics privacy research, corporate-source reconciliation, archival record recovery, legally sensitive chronology, source-quality review, biomedical evidence synthesis, health-information monitoring and research-data provenance. It shows the reasoning and records behind the work rather than relying on a generic OSINT tool list.</p>
       <div class="v3-hero-actions v3-enter" style="--enter-delay:290ms">
-        <a class="v3-button v3-button-primary" href="/cv-integrity.html">Trust & Integrity CV →</a>
+        <a class="v3-button v3-button-primary" href="/cv-integrity">Trust & Integrity CV →</a>
         <a class="v3-button" href="#records">Inspect case records</a>
         <a class="v3-button v3-button-quiet" href="/">Back to portfolio</a>
       </div>
@@ -183,8 +183,8 @@ const methods = [
         <p>The current evidence supports analyst, research and operations roles involving public-source investigation, content governance, data quality and evidence-bound reporting. It does not support presenting the profile as an application-security engineer, penetration tester or covert investigator.</p>
       </div>
       <div class="v3-contact-links">
-        <a href="/cv-integrity.html"><span>CV</span><strong>Trust & Knowledge Integrity</strong><span aria-hidden="true">↗</span></a>
-        <a href="/security.html"><span>AI</span><strong>Model-behavior evaluation</strong><span aria-hidden="true">↗</span></a>
+        <a href="/cv-integrity"><span>CV</span><strong>Trust & Knowledge Integrity</strong><span aria-hidden="true">↗</span></a>
+        <a href="/security"><span>AI</span><strong>Model-behavior evaluation</strong><span aria-hidden="true">↗</span></a>
         <a href={D.identity.centralAuth} target="_blank" rel="noopener noreferrer"><span>Record</span><strong>Wikimedia CentralAuth</strong><span aria-hidden="true">↗</span></a>
         <a href={`mailto:${D.identity.email}`}><span>Email</span><strong>{D.identity.email}</strong><span aria-hidden="true">↗</span></a>
       </div>

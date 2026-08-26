@@ -42,7 +42,7 @@ const MARIO_DOSSIER = {
     "subjectOf": [
       {
         "@type": "WebPage",
-        "@id": "https://mariomarcolongo.com/security.html#webpage"
+        "@id": "https://mariomarcolongo.com/security#webpage"
       }
     ],
     "contactObfuscated": [
@@ -50,7 +50,7 @@ const MARIO_DOSSIER = {
       "mariomarcolongo",
       "com"
     ],
-    "notandiaUrl": "https://mariomarcolongo.com/notandia.html"
+    "notandiaUrl": "https://mariomarcolongo.com/notandia"
   },
   "summary": "Information-retrieval, data-quality, scientific-verification and AI-evaluation specialist with eight years of auditable public-source and structured-data work. The public record includes paid scientific fact-checking and editorial production, a maintained research-participation directory, and self-directed model-behavior evaluation. On 29 July 2026, the Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks. Entropy for Life work covers 80 documented published content contributions: 55 YouTube videos · 4 articles · 21 short-form pieces. Technical work is code-literate and AI-assisted, with personal ownership of requirements, verification, deployment and maintenance. Current open-source product work includes Notandia (formerly MDPI Filter), a continuing browser and Zotero research-integrity tool.",
   "pillars": [
@@ -165,7 +165,7 @@ const MARIO_DOSSIER = {
         "Evidence-Bound Reporting"
       ],
       "links": {
-        "caseStudy": "/security.html",
+        "caseStudy": "/security",
         "profile": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
         "evidence": "/evidence/gray-swan-2026-07-29/"
       },
@@ -245,9 +245,9 @@ const MARIO_DOSSIER = {
         "Multi-Browser Release Operations"
       ],
       "links": {
-        "website": "https://mariomarcolongo.com/notandia.html",
+        "website": "https://mariomarcolongo.com/notandia",
         "github": "https://github.com/notandia/browser-extension",
-        "canonical": "https://mariomarcolongo.com/notandia.html",
+        "canonical": "https://mariomarcolongo.com/notandia",
         "browserRepository": "https://github.com/notandia/browser-extension",
         "zoteroRepository": "https://github.com/notandia/zotero-plugin",
         "chromeStore": "https://chromewebstore.google.com/detail/mdpi-filter/comknkeimaaadpiopddjoknflbmjeccp",
@@ -600,7 +600,7 @@ const MARIO_DOSSIER = {
       "tag": "Independent practice",
       "period": "Jul 2026 — Present",
       "links": {
-        "caseStudy": "/security.html",
+        "caseStudy": "/security",
         "profile": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
         "evidence": "/evidence/gray-swan-2026-07-29/"
       },

@@ -8,35 +8,35 @@
       "name": "AI Safety & Model Behavior",
       "description": "Self-directed adversarial testing across chat, image, agentic tool-use and indirect prompt-injection challenges, with conservative interpretation of platform-reported outcomes.",
       "category": "ai-safety",
-      "referenceUrl": "https://mariomarcolongo.com/security.html"
+      "referenceUrl": "https://mariomarcolongo.com/security"
     },
     {
       "id": "research-editorial-community-operations",
       "name": "Research, Editorial & Community Operations",
       "description": "Scientific editorial support, public writing, evidence-synthesis preparation, research facilitation, community-facing protocols and technical publishing operations.",
       "category": "research-operations",
-      "referenceUrl": "https://mariomarcolongo.com/research-operations.html"
+      "referenceUrl": "https://mariomarcolongo.com/research-operations"
     },
     {
       "id": "knowledge-integrity-investigations",
       "name": "Knowledge Integrity, Trust & Investigations",
       "description": "Source provenance, public-record research, cross-source corroboration, entity reconciliation, rights context and evidence-bound investigative reporting.",
       "category": "trust-integrity",
-      "referenceUrl": "https://mariomarcolongo.com/integrity.html"
+      "referenceUrl": "https://mariomarcolongo.com/integrity"
     },
     {
       "id": "open-science-data-quality",
       "name": "Open Science & Data Quality",
       "description": "Scientific evidence verification, structured metadata, provenance, taxonomy and validation workflows across Wikimedia, Wikidata, FAIRsharing, Zenodo and ENA records.",
       "category": "data-quality",
-      "referenceUrl": "https://mariomarcolongo.com/cv-research.html"
+      "referenceUrl": "https://mariomarcolongo.com/cv-research"
     },
     {
       "id": "code-literate-technical-operations",
       "name": "Code-Literate Technical Operations",
       "description": "Requirements definition, codebase reading and behavior inspection, functional testing, issue diagnosis, deployment operations and AI-assisted implementation workflows; not independent software development.",
       "category": "technical-operations",
-      "referenceUrl": "https://mariomarcolongo.com/cv.html"
+      "referenceUrl": "https://mariomarcolongo.com/cv"
     }
   ]
 }

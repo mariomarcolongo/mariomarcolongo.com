@@ -15,12 +15,16 @@ export interface Props {
 }
 
 const { profile, shared, canonical, alternateHref, alternateLabel, noIndex = false } = Astro.props;
-const firstPageExperience = profile.experience.slice(0, 2);
-const secondPageExperience = profile.experience.slice(2);
+// Most profiles fit their three strongest entries on page one. A profile can
+// opt into two when its evidence needs more prose, keeping both printable pages
+// comfortably readable rather than shrinking type to make a rigid split fit.
+const firstPageExperienceCount = profile.firstPageExperienceCount ?? 3;
+const firstPageExperience = profile.experience.slice(0, firstPageExperienceCount);
+const secondPageExperience = profile.experience.slice(firstPageExperienceCount);
 const recentEvidence = RECENT_APPLICATION_EVIDENCE[profile.id]?.evidence || {};
 const evidence = profile.evidence.map((item, index) => recentEvidence[index] || item);
 const pageTitle = `Mario Marcolongo — ${profile.title}`;
-const pageDescription = `Specialized two-page application CV for ${profile.title.toLowerCase()} roles.`;
+const pageDescription = `Two-page role-family application CV for ${profile.title.toLowerCase()} roles.`;
 const buildVersion = shared.buildVersion || "v2026.07.29";
 const productionOrigin = "https://mariomarcolongo.com";
 
@@ -53,17 +57,17 @@ function publicHref(value: string) {
       <div>
         <div class="application-eyebrow">{profile.documentLabel}</div>
         <h2>{profile.title}</h2>
-        <p>This is the concise document to send for this role family. The master CV is a comprehensive evidence archive; it is normally not attached unless requested.</p>
+        <p>This is the concise, role-family document to send for this role. The master CV is a comprehensive evidence archive; it is normally not attached unless requested.</p>
       </div>
       <div class="application-guide-actions">
         <a class="btn" href={alternateHref}>{alternateLabel}</a>
         <a class="btn" href="/#applications">All application CVs</a>
-        <a class="btn" href="/cv.html">Master CV</a>
+        <a class="btn" href="/cv">Master CV</a>
         <button class="btn btn-primary" type="button" onclick="window.print()">Print / Save PDF</button>
       </div>
     </section>
 
-    <div class="application-pages" id="cvDocument">
+    <div class="application-pages" id="cvDocument" data-ats-layout="semantic-two-page" aria-label={`${profile.title} application CV`}>
       <article class="application-page">
         <header class="application-header">
           <div class="application-header-row">
