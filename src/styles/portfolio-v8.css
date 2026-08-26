@@ -9,6 +9,9 @@
   --v8-muted: #60635d;
   --v8-line: rgba(17, 17, 15, 0.16);
   --v8-red: #bd2f1e;
+  --v8-red-on-dark: #ff765d;
+  --v8-featured-surface: #11110f;
+  --v8-featured-text: #fffdf8;
   --v8-blue: #2855ff;
   --v8-green: #0b6d4d;
   --v8-acid: #d8ff4f;
@@ -32,6 +35,8 @@
   --v8-green: #67c9a4;
   --v8-acid: #d8ff4f;
   --v8-black: #060706;
+  --v8-featured-surface: #060706;
+  --v8-featured-text: #f5f0e7;
   --v8-shadow: 0 28px 85px rgba(0, 0, 0, 0.42);
 }
 
@@ -63,6 +68,12 @@
   font: 760 0.72rem/1.35 var(--v8-mono);
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.v8-scope-band .v8-kicker,
+.v8-product .v8-kicker,
+.v8-document.is-recommended > span {
+  color: var(--v8-red-on-dark);
 }
 
 .v8-actions {
@@ -925,8 +936,8 @@
 .v8-document.is-recommended {
   grid-row: span 3;
   min-height: 842px;
-  background: var(--v8-ink);
-  color: var(--v8-bg);
+  background: var(--v8-featured-surface);
+  color: var(--v8-featured-text);
 }
 
 .v8-document > span {

@@ -174,7 +174,6 @@ const isExternal = (href) => href.startsWith("http");
                 href={item.mediaHref || item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={item.mediaLinkLabel || item.linkLabel}
               >
                 <header class="v8-entropy-panel-head">
                   <span>Entropy for Life · paid contractor</span>
@@ -203,7 +202,6 @@ const isExternal = (href) => href.startsWith("http");
                 href={item.mediaHref || item.href}
                 target={isExternal(item.mediaHref || item.href) ? "_blank" : undefined}
                 rel={isExternal(item.mediaHref || item.href) ? "noopener noreferrer" : undefined}
-                aria-label={item.mediaLinkLabel || item.linkLabel}
               >
                 <picture>
                   {item.imageSet && <source srcset={item.imageSet} sizes="(max-width: 760px) 92vw, 720px" />}
