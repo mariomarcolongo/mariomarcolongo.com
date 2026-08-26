@@ -38,7 +38,7 @@ async function capture(browser, server, name, width, height, theme) {
     const contact = document.querySelector('.v8-contact');
     const contactStyle = contact ? getComputedStyle(contact) : null;
     const caseImages = document.querySelectorAll('.v8-case-media img').length;
-    const entropyPanels = document.querySelectorAll('.v10-entropy-panel').length;
+    const entropyPanels = document.querySelectorAll('.v8-entropy-panel').length;
     const totalPortfolioImages = document.querySelectorAll('.portfolio-v8 img').length;
     return {
       scrollWidth: document.documentElement.scrollWidth,
