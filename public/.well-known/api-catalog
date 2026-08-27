@@ -6,7 +6,7 @@
         {
           "href": "https://mariomarcolongo.com/llms.txt",
           "type": "text/markdown",
-          "title": "Mario Marcolongo — Evidence-Bound Professional Summary"
+          "title": "Mario Marcolongo — Source-Backed Professional Summary"
         },
         {
           "href": "https://mariomarcolongo.com/llms-full.txt",
@@ -21,19 +21,44 @@
       ],
       "item": [
         {
-          "href": "https://mariomarcolongo.com/cv-resume.html",
+          "href": "https://mariomarcolongo.com/cv-resume",
           "type": "text/html",
           "title": "AI Safety Evaluation Application CV"
         },
         {
-          "href": "https://mariomarcolongo.com/cv-research.html",
+          "href": "https://mariomarcolongo.com/cv-research",
           "type": "text/html",
           "title": "Research Verification & Data Quality Application CV"
         },
         {
-          "href": "https://mariomarcolongo.com/security.html",
+          "href": "https://mariomarcolongo.com/cv-editorial",
+          "type": "text/html",
+          "title": "Research, Editorial & Community Coordinator Application CV"
+        },
+        {
+          "href": "https://mariomarcolongo.com/cv-integrity",
+          "type": "text/html",
+          "title": "Trust, Safety & Source Quality Application CV"
+        },
+        {
+          "href": "https://mariomarcolongo.com/cv",
+          "type": "text/html",
+          "title": "Master CV and Evidence Record"
+        },
+        {
+          "href": "https://mariomarcolongo.com/security",
           "type": "text/html",
           "title": "Model Behavior Evaluation Record"
+        },
+        {
+          "href": "https://mariomarcolongo.com/integrity",
+          "type": "text/html",
+          "title": "Source Verification Work Samples"
+        },
+        {
+          "href": "https://mariomarcolongo.com/research-operations",
+          "type": "text/html",
+          "title": "Source-Backed Research Support Case Study"
         },
         {
           "href": "https://mariomarcolongo.com/.well-known/agent-card.json",
@@ -48,7 +73,7 @@
         {
           "href": "https://mariomarcolongo.com/.well-known/agent-skills/index.json",
           "type": "application/json",
-          "title": "Evidence-Bound Skills Index"
+          "title": "Source-Backed Skills Index"
         }
       ],
       "service-doc": [

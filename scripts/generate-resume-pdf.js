@@ -18,30 +18,20 @@ const DOCUMENTS = [
     label: 'AI Evaluation & Model Behavior CV'
   },
   {
-    route: 'cv-giskard.html',
-    output: 'Mario Marcolongo — Giskard AI Safety & Security Researcher CV.pdf',
-    label: 'Giskard AI Safety & Security Researcher CV'
-  },
-  {
     route: 'cv-research.html',
     output: 'Mario Marcolongo — Scientific AI Quality & Research Data CV.pdf',
     label: 'Scientific AI Quality & Research Data CV'
   },
   {
     route: 'cv-editorial.html',
-    output: 'Mario Marcolongo — Research Editorial & Community Operations CV.pdf',
-    label: 'Research, Editorial & Community Operations CV'
+    output: 'Mario Marcolongo — Research Editorial & Community Coordinator CV.pdf',
+    label: 'Research, Editorial & Community Coordinator CV'
   },
   {
     route: 'cv-integrity.html',
-    output: 'Mario Marcolongo — Trust Safety & Knowledge Integrity CV.pdf',
-    label: 'Trust, Safety & Knowledge Integrity CV'
+    output: 'Mario Marcolongo — Trust Safety & Source Quality CV.pdf',
+    label: 'Trust, Safety & Source Quality CV'
   },
-  {
-    route: 'cv-orcid.html',
-    output: 'Mario Marcolongo — ORCID Member Support Technical Specialist CV.pdf',
-    label: 'ORCID Member Support Technical Specialist CV'
-  }
 ];
 
 async function generateResumePdfs() {

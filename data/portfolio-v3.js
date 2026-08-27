@@ -1,9 +1,9 @@
 const C = require("./investigation-cases.js");
 
 const PORTFOLIO_V3 = {
-  umbrella: "Research, Evidence & AI Operations",
-  headline: "I investigate claims, test systems, and build evidence workflows.",
-  introduction: "My work sits where research, public knowledge, AI behavior and technical operations meet. I verify scientific evidence, recover and reconcile public records, operate open research systems and test how AI products behave under pressure. The portfolio is designed for several credible role families rather than one narrow title.",
+  umbrella: "Data Quality, Evidence Research & AI Evaluation",
+  headline: "I investigate claims, test systems, and build evidence-based processes.",
+  introduction: "My work sits where research, public knowledge, AI behavior and technical delivery meet. I verify scientific evidence, recover and reconcile public records, maintain open research systems and test how AI products behave under pressure. The portfolio is designed for several credible role families rather than one narrow title.",
   metrics: [
     { value: "4,317", label: "Auditable Wikimedia contributions", detail: "Eight years across Wikipedia, Wikidata and Commons" },
     { value: "80", label: "Published content contributions", detail: "55 videos · 4 articles · 21 short-form pieces" },
@@ -18,20 +18,20 @@ const PORTFOLIO_V3 = {
       color: "blue",
       label: "Highest-upside emerging lane",
       title: "AI Safety & Model Behavior",
-      summary: "Adversarial testing, safeguards operations, trust & safety and model-quality work built on sustained exploratory testing plus unusually strong evidence discipline.",
+      summary: "Adversarial testing, AI evaluation, trust & safety and model-quality work built on sustained exploratory testing plus unusually strong evidence discipline.",
       roles: [
         "AI safety evaluator",
         "AI content red-team analyst",
-        "Safeguards or evaluation operations",
+        "AI evaluation support",
         "Model-quality and adversarial QA"
       ],
       evidence: [
         "110 platform-displayed Proving Ground breaks; #75 and top 6%",
         "Chat, image, agentic tool-use and indirect prompt-injection testing",
-        "Evidence-bound public methodology and limitations"
+        "Public methodology and explicit evidence limits"
       ],
       next: "The engineering ceiling rises after independently verifiable Python automation, application-security practice and paid team experience.",
-      cv: "/cv-resume.html",
+      cv: "/cv-resume",
       cvLabel: "AI Safety CV"
     },
     {
@@ -39,21 +39,21 @@ const PORTFOLIO_V3 = {
       number: "02",
       color: "coral",
       label: "Strong immediate bridge lane",
-      title: "Research, Editorial & Community Operations",
+      title: "Research, Editorial & Community Coordination",
       summary: "Evidence synthesis, editorial production, research coordination and sensitive community-facing work, including remote facilitation with autistic participants. This is the best lens for Campbell-style roles and mission-driven evidence organizations.",
       roles: [
         "Assistant editor or editorial coordinator",
         "Evidence-synthesis program officer",
         "Research community engagement",
-        "Scientific communications operations"
+        "Scientific communications support"
       ],
       evidence: [
         "Paid research and fact-checking across 80 published contributions",
         "Sensitive Zoom focus groups with autistic participants, structured protocols and two-person facilitation handoffs",
-        "Independent ownership of a public research-participation directory"
+        "Founder and project lead for a public research-participation directory"
       ],
-      next: "This route is credible now, but the highest compensation usually comes later through program leadership, technical program management or senior AI/research operations.",
-      cv: "/cv-editorial.html",
+      next: "This route is credible now, but the highest compensation usually comes later through program leadership, technical program management or senior AI-evaluation and research-program roles.",
+      cv: "/cv-editorial",
       cvLabel: "Editorial & Community CV"
     },
     {
@@ -61,11 +61,11 @@ const PORTFOLIO_V3 = {
       number: "03",
       color: "violet",
       label: "Credible adjacent high-upside lane",
-      title: "Knowledge Integrity, Trust & Investigations",
+      title: "Source Quality, Trust & Investigations",
       summary: "Archival OSINT, source-quality auditing, public-record reconciliation, structured-data integrity and content-risk analysis, grounded in attributed public work rather than a generic OSINT skills list.",
       roles: [
         "Trust & safety analyst",
-        "Knowledge-integrity or content-integrity operations",
+        "Source-quality or content-integrity support",
         "OSINT and public-record researcher",
         "AI abuse and policy-analysis support"
       ],
@@ -75,7 +75,7 @@ const PORTFOLIO_V3 = {
         "Biomedical taxonomy and prevalence synthesis from peer-reviewed literature"
       ],
       next: "Continue documenting attributed case studies with explicit legal, scientific and evidentiary boundaries.",
-      cv: "/cv-integrity.html",
+      cv: "/cv-integrity",
       cvLabel: "Trust & Integrity CV"
     },
     {
@@ -88,16 +88,16 @@ const PORTFOLIO_V3 = {
       roles: [
         "Research verification specialist",
         "Scientific or biomedical AI quality",
-        "Metadata and data-provenance operations",
-        "Research data or knowledge operations"
+        "Metadata and data-provenance work",
+        "Research data or knowledge-quality support"
       ],
       evidence: [
         "55 research-participation records with verification workflows",
         "FAIRsharing, Zenodo, Wikidata and ENA public records",
         "70+ evidence visualizations and 4,317 public contributions"
       ],
-      next: "The revenue ceiling improves through enterprise AI/data programs, domain-expert model quality and technical program ownership rather than remaining in junior cataloguing work.",
-      cv: "/cv-research.html",
+      next: "The revenue ceiling improves through enterprise AI/data programs, domain-expert model quality and technical program leadership rather than remaining in junior cataloguing work.",
+      cv: "/cv-research",
       cvLabel: "Research & Data Quality CV"
     }
   ],
@@ -107,9 +107,9 @@ const PORTFOLIO_V3 = {
       eyebrow: "AI systems",
       title: "Model-behavior evaluation under ambiguous constraints",
       summary: "Repeated exploratory testing across instruction hierarchy, multimodal inputs, agentic tool use and indirect prompt injection, reported with an explicit separation between platform status and independent verification.",
-      methods: ["Adversarial test design", "Behavior classification", "Evidence boundaries", "Reproduction notes"],
+      methods: ["Adversarial test design", "Behavior classification", "Evidence limits", "Reproduction notes"],
       metric: "110 platform-displayed breaks · #75 · top 6%",
-      href: "/security.html",
+      href: "/security",
       linkLabel: "Open evaluation record"
     },
     {
@@ -159,7 +159,7 @@ const PORTFOLIO_V3 = {
       summary: "Co-developed and co-facilitated recorded Zoom focus groups with autistic participants on sensitive sexuality and relationship topics, using structured prompts, respectful pacing, live handoffs and recovery when a facilitator missed steps or needed support.",
       methods: ["Sensitive-topic moderation", "Neurodiversity-aware communication", "Two-person handoffs", "Remote-session logistics"],
       metric: "2022–2025 collaboration · public institutional attribution",
-      href: "/cv-editorial.html",
+      href: "/cv-editorial",
       linkLabel: "Open relevant CV"
     },
     {
@@ -182,12 +182,12 @@ const PORTFOLIO_V3 = {
     {
       year: "2022 — 2025",
       title: "Community-facing research facilitation",
-      body: "Co-developed and co-facilitated recorded Zoom discussions with autistic participants on sensitive sexuality and relationship topics, combining participant-sensitive moderation, technical session operations and reliable two-person handoffs."
+      body: "Co-developed and co-facilitated recorded Zoom discussions with autistic participants on sensitive sexuality and relationship topics, combining participant-sensitive moderation, technical session support and reliable two-person handoffs."
     },
     {
       year: "2023 — now",
-      title: "Paid scientific editorial and web operations",
-      body: "Primary-literature research, scientific fact-checking, content-production support and website operations for Entropy for Life."
+      title: "Paid scientific editorial work and website maintenance",
+      body: "Primary-literature research, scientific fact-checking, content-production support and website maintenance for Entropy for Life."
     },
     {
       year: "2024 — now",
@@ -205,36 +205,36 @@ const PORTFOLIO_V3 = {
       id: "ai",
       label: "AI systems",
       title: "AI Safety & Adversarial Testing CV",
-      body: "For safeguards, model behavior, adversarial QA, trust & safety and evaluation-operations roles.",
-      href: "/cv-resume.html"
+      body: "For AI evaluation, model behavior, adversarial QA, trust & safety and evaluation-support roles.",
+      href: "/cv-resume"
     },
     {
       id: "editorial",
       label: "Research organizations",
-      title: "Editorial & Community Operations CV",
+      title: "Editorial & Community Coordination CV",
       body: "For assistant editor, evidence-synthesis coordination, research programs and community-engagement roles.",
-      href: "/cv-editorial.html"
+      href: "/cv-editorial"
     },
     {
       id: "integrity",
       label: "Trust & investigations",
-      title: "Trust, Safety & Knowledge Integrity CV",
+      title: "Trust, Safety & Source Quality CV",
       body: "For content integrity, archival and public-record research, OSINT support, trust & safety and abuse-analysis roles.",
-      href: "/cv-integrity.html"
+      href: "/cv-integrity"
     },
     {
       id: "data",
       label: "Research and data",
       title: "Research Verification & Data Quality CV",
-      body: "For scientific evidence, provenance, metadata, research operations and domain-expert AI quality roles.",
-      href: "/cv-research.html"
+      body: "For scientific evidence, provenance, metadata, research support and domain-expert AI quality roles.",
+      href: "/cv-research"
     },
     {
       id: "master",
       label: "Complete archive",
       title: "Master CV & Evidence Record",
       body: "The comprehensive source document for due diligence and future tailored applications—not the default attachment.",
-      href: "/cv.html"
+      href: "/cv"
     }
   ]
 };

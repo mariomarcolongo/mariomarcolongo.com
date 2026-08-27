@@ -8,15 +8,16 @@ import { buildProfileGraph } from "../lib/structured-data.js";
 
 const { D, P } = career;
 const pageTitle = "Mario Marcolongo — Master CV & Evidence Record";
-const pageDescription = "Comprehensive master CV and evidence record for Mario Marcolongo. Use the specialized two-page CVs for most applications.";
-const profileJsonLd = buildProfileGraph(D, "https://mariomarcolongo.com/cv.html", pageTitle);
+const pageDescription = "Comprehensive master CV and evidence record for Mario Marcolongo. Use the role-family two-page CVs for most applications.";
+const profileJsonLd = buildProfileGraph(D, "https://mariomarcolongo.com/cv", pageTitle);
 
 const roleAliases = {
-  "Founder & Technical Product Builder": "Founder & Research-Workflow Owner",
-  "Independent Model-Behavior Evaluator": "Model-Behavior Evaluator",
-  "Product Owner & Technical Builder": "Product Owner & AI-Assisted Technical Operator",
-  "Creator & Systems Builder": "Creator & Technical Operator",
-  "Creator & Systems Designer": "Creator & Concept and Requirements Designer"
+  "Founder & Technical Product Builder": "Founder & Project Lead",
+  "Product Owner & Technical Builder": "Creator & Product Lead",
+  "Product Owner & AI-Assisted Technical Operator": "Creator & Product Lead",
+  "Creator & Technical Operator": "Creator & Project Lead",
+  "Creator & Systems Builder": "Creator & Project Lead",
+  "Creator & Systems Designer": "Creator & Project Lead"
 };
 
 const tagAliases = {
@@ -37,17 +38,19 @@ function cleanTag(tag) {
 
 function cleanText(value) {
   return String(value || "")
-    .replaceAll("Founder and technical builder", "Founder and research-workflow owner")
-    .replaceAll("Founder & Technical Product Builder", "Founder & Research-Workflow Owner")
-    .replaceAll("Product Owner & Technical Builder", "Product Owner & AI-Assisted Technical Operator")
-    .replaceAll("Creator & Systems Builder", "Creator & Technical Operator")
+    .replaceAll("Founder and technical builder", "Founder and project lead")
+    .replaceAll("Founder & Technical Product Builder", "Founder & Project Lead")
+    .replaceAll("Product Owner & Technical Builder", "Creator & Product Lead")
+    .replaceAll("Product Owner & AI-Assisted Technical Operator", "Creator & Product Lead")
+    .replaceAll("Creator & Technical Operator", "Creator & Project Lead")
+    .replaceAll("Creator & Systems Builder", "Creator & Project Lead")
     .replaceAll("Designed and iteratively validated a local downstream bioinformatics workflow", "Specified requirements for and iteratively validated a local downstream bioinformatics workflow")
     .replaceAll("custom Python VEP extraction scripts", "AI-assisted Python VEP extraction scripts")
     .replaceAll("Designed the analytical requirements and processed", "Defined the analytical requirements and used Terra.bio workflows to process")
     .replaceAll("codebase navigation and modification", "codebase reading and behavior inspection")
     .replaceAll("generated-code review", "code structure and behavior inspection")
     .replaceAll("debugging", "functional issue diagnosis")
-    .replaceAll("technical builder", "research-workflow owner");
+    .replaceAll("technical builder", "project lead");
 }
 
 function linksFor(item) {
@@ -56,7 +59,7 @@ function linksFor(item) {
     website: "Website",
     workRecord: "Official Entropy for Life work record",
     caseStudy: "Evaluation record",
-    researchOperations: "Research-operations case study",
+    researchOperations: "Research-support case study",
     supervisor: "Marta Panzeri",
     department: "University department",
     profile: "Public profile",
@@ -84,7 +87,7 @@ function linksFor(item) {
 }
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical="https://mariomarcolongo.com/cv.html">
+<Layout title={pageTitle} description={pageDescription} canonical="https://mariomarcolongo.com/cv">
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(profileJsonLd)}></script>
   </Fragment>
@@ -96,13 +99,13 @@ function linksFor(item) {
       <div>
         <div class="master-eyebrow">Master source document</div>
         <h2>Comprehensive CV & evidence archive</h2>
-        <p>This preserves the complete record used to create tailored applications. For most jobs, send one of the four specialized two-page CVs instead.</p>
+        <p>This preserves the complete record used to create tailored applications. For most jobs, send one of the four role-family two-page CVs instead.</p>
       </div>
       <div class="application-guide-actions">
-        <a class="btn btn-primary" href="/cv-resume.html">AI Safety CV</a>
-        <a class="btn" href="/cv-editorial.html">Editorial & Community CV</a>
-        <a class="btn" href="/cv-integrity.html">Trust & Knowledge Integrity CV</a>
-        <a class="btn" href="/cv-research.html">Research & Data Quality CV</a>
+        <a class="btn btn-primary" href="/cv-resume">AI Safety CV</a>
+        <a class="btn" href="/cv-editorial">Editorial & Community CV</a>
+        <a class="btn" href="/cv-integrity">Trust & Source Quality CV</a>
+        <a class="btn" href="/cv-research">Research & Data Quality CV</a>
         <button class="btn" type="button" onclick="window.print()">Print / Save PDF</button>
       </div>
     </section>
@@ -112,9 +115,9 @@ function linksFor(item) {
         <div>
           <div class="master-eyebrow">Master CV · updated July 2026</div>
           <h1 class="master-name">{P.shared.name}</h1>
-          <div class="master-title">Research · Evidence · Knowledge Integrity · AI Operations</div>
+          <div class="master-title">Data Quality · Evidence Research · AI Evaluation</div>
           <p class="master-summary">
-            Evidence-focused specialist combining paid scientific fact-checking and writing, content and research operations, audience-focused visual packaging, public-source and provenance work, open research workflows, structured-data quality and adversarial model testing. Code-literate and able to inspect structure and behavior, define requirements, test implementations and guide AI-assisted technical iteration; not presented as an independent software developer.
+            My work spans information retrieval, data quality, scientific fact-checking, research support, public-source and provenance work, open research directories, structured-data quality and adversarial model testing. I can inspect structure and behavior, define requirements, test implementations and guide AI-assisted technical delivery; I am not presented as an independent software developer.
           </p>
         </div>
         <div class="master-contact">

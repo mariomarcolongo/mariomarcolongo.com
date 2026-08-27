@@ -1,19 +1,21 @@
 {
   "name": "mariomarcolongo-evidence-mcp",
-  "version": "1.1.0",
-  "description": "Model Context Protocol resource card for Mario Marcolongo's professional evidence record, AI safety evaluation activity, research-verification work and public open-science records.",
+  "version": "1.2.0",
+  "description": "Public resource card for Mario Marcolongo's professional evidence record: information retrieval, data quality, AI evaluation, scientific verification, research support, source-quality investigation and open-science records.",
   "status": "active",
   "endpoints": {
     "summary": "https://mariomarcolongo.com/llms.txt",
     "full_dossier": "https://mariomarcolongo.com/llms-full.txt",
-    "master_cv": "https://mariomarcolongo.com/cv-llm.txt"
+    "master_cv": "https://mariomarcolongo.com/cv-llm.txt",
+    "integrity_record": "https://mariomarcolongo.com/integrity",
+    "research_operations": "https://mariomarcolongo.com/research-operations"
   },
   "resources": [
     {
       "uri": "dossier://summary",
       "name": "Mario Marcolongo Core Summary",
       "mimeType": "text/markdown",
-      "description": "Evidence-bound summary of AI safety evaluation, scientific verification, research operations and data-quality work."
+      "description": "Source-backed summary of AI safety evaluation, scientific verification, research support and data-quality work."
     },
     {
       "uri": "dossier://cv",
@@ -26,6 +28,12 @@
       "name": "41× WGS Open-Data Record",
       "mimeType": "text/markdown",
       "description": "Public ENA identifiers and workflow notes for BioSample SAMEA121950568 and Study PRJEB109744."
+    },
+    {
+      "uri": "dossier://research-operations",
+      "name": "Source-Backed Research Support Case Study",
+      "mimeType": "text/html",
+      "description": "Public, scope-limited record of qualitative research support, accessibility-aware facilitation and participant-privacy procedures."
     }
   ],
   "tools": [
@@ -37,7 +45,7 @@
         "properties": {
           "section": {
             "type": "string",
-            "enum": ["all", "summary", "experience", "skills", "projects", "evaluation", "genomics"],
+            "enum": ["all", "summary", "experience", "skills", "projects", "evaluation", "integrity", "research_operations", "genomics"],
             "description": "The dossier section to retrieve."
           }
         },

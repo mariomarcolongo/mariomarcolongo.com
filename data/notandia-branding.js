@@ -1,8 +1,8 @@
 const NOTANDIA = Object.freeze({
   name: "Notandia",
   formerName: "MDPI Filter",
-  canonicalPath: "/notandia.html",
-  canonicalUrl: "https://mariomarcolongo.com/notandia.html",
+  canonicalPath: "/notandia",
+  canonicalUrl: "https://mariomarcolongo.com/notandia",
   browserRepository: "https://github.com/notandia/browser-extension",
   zoteroRepository: "https://github.com/notandia/zotero-plugin",
   legacyOrganization: "https://github.com/mdpi-filter",
@@ -36,7 +36,7 @@ function applyNotandiaBranding({ D, H, P } = {}) {
     project.title = "Notandia — formerly MDPI Filter | Browser Extension & Zotero Plugin";
     project.oneLiner = "An independent open-source browser and Zotero tool that helps researchers identify articles from publishers whose editorial and peer-review practices have attracted scrutiny and check for formal notices such as retractions, corrections and expressions of concern.";
     project.description = `Created and maintain Notandia, the public continuation and expansion of MDPI Filter. The browser extension helps users identify articles from publishers whose editorial and peer-review practices have attracted scrutiny—including MDPI and Frontiers—and choose how matching articles should appear, including context, badges, highlights, dimming or hiding. It also uses Crossref/Retraction Watch data to check for formal notices such as retractions, corrections, expressions of concern, withdrawals, duplicate-publication findings and reinstatements. I define product requirements and evidence hierarchies, test cross-browser and Zotero behavior, inspect API and implementation logic, reproduce failures, guide AI-assisted changes, and manage documentation, release verification and deployment. The Zotero plugin currently focuses on precise MDPI item and reference detection, including structured PubMed Central evidence and exact citation highlighting. Publisher-level context is controlled by the user and does not treat every journal or article as equivalent. Existing store identities and compatibility-sensitive identifiers are retained so the same product lineage can continue receiving updates. Current source repositories: ${NOTANDIA.browserRepository} and ${NOTANDIA.zoteroRepository}.`;
-    project.role = "Creator & AI-Assisted Technical Product Operator";
+    project.role = "Creator & Product Lead";
     project.tech = [
       "Product Requirements",
       "Functional Testing",
@@ -44,7 +44,7 @@ function applyNotandiaBranding({ D, H, P } = {}) {
       "Crossref/Retraction Watch",
       "Zotero",
       "NCBI/Europe PMC",
-      "Multi-Browser Release Operations"
+      "Multi-Browser Release Maintenance"
     ];
     project.links = {
       website: NOTANDIA.canonicalUrl,

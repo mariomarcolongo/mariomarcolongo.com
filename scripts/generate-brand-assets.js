@@ -62,12 +62,12 @@ async function main() {
     }
 
     await renderSvg(browser, socialCard({
-      eyebrow: 'AI evaluation · scientific evidence · research operations',
+      eyebrow: 'Data quality · evidence research · AI evaluation',
       title: 'Mario Marcolongo',
-      subtitle: 'Model-behavior evaluation, paid primary-source verification and ownership of public research systems.',
+      subtitle: 'Information retrieval, model-behavior evaluation, paid primary-source verification and public research directories.',
       metrics: [
-        { value: '75', label: 'CONFIRMED MODEL BREAKS' },
-        { value: '55+', label: 'PRODUCTIONS CHECKED' },
+        { value: '113', label: 'PLATFORM-DISPLAYED BREAKS' },
+        { value: '80', label: 'PUBLISHED CONTRIBUTIONS' },
         { value: '55+', label: 'RESEARCH INITIATIVES' },
         { value: '70+', label: 'PUBLIC VISUALIZATIONS' }
       ]
@@ -79,16 +79,16 @@ async function main() {
       subtitle: 'Threat-surface selection, adversarial variation, conservative evidence capture and an archived Gray Swan public profile.',
       accent: '#2257d6',
       metrics: [
-        { value: '75', label: 'PLATFORM-CONFIRMED BREAKS' },
-        { value: '156', label: 'SUBMISSIONS' },
-        { value: '26', label: 'LISTED WAVES' }
+        { value: '113', label: 'PLATFORM-DISPLAYED BREAKS' },
+        { value: '255', label: 'ARENA SUBMISSIONS' },
+        { value: '4', label: 'EVALUATION SURFACES' }
       ]
     }), path.join(OG, 'security.png'), 1200, 630);
 
     await renderSvg(browser, socialCard({
       eyebrow: 'Targeted application documents',
       title: 'Evidence matched to the role',
-      subtitle: 'AI evaluation and model behavior · scientific AI quality · knowledge integrity · research and editorial operations.',
+      subtitle: 'AI evaluation and model behavior · data quality · source verification · research and editorial coordination.',
       accent: '#2f7254',
       metrics: [
         { value: '4', label: 'SPECIALIZED TWO-PAGE CVS' },
@@ -97,9 +97,9 @@ async function main() {
     }), path.join(OG, 'cv.png'), 1200, 630);
 
     await renderSvg(browser, socialCard({
-      eyebrow: 'Knowledge integrity and evidence verification',
+      eyebrow: 'Source verification and public investigation',
       title: 'Sources that survive scrutiny',
-      subtitle: 'Public-record investigation, provenance, citation reconciliation, structured metadata and explicit evidence boundaries.',
+      subtitle: 'Public-source investigation, provenance, citation reconciliation, structured metadata and explicit evidence limits.',
       accent: '#7356a5',
       metrics: [
         { value: '4,317', label: 'WIKIMEDIA CONTRIBUTIONS' },

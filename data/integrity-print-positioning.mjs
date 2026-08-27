@@ -22,7 +22,7 @@ if (entropy?.bullets?.[2]) {
   entropy.bullets[2] = 'Localize English-language scientific evidence into Italian summaries while preserving meaning, source context and uncertainty.';
 }
 
-const gray = integrity.experience?.find((item) => item?.role?.includes('Model-Behavior'));
+const gray = integrity.experience?.find((item) => item?.role?.includes('Independent AI Evaluator'));
 if (gray?.bullets?.[0]) {
   gray.bullets[0] = 'Tested chat, image, tool-use and indirect prompt-injection challenges, including extreme and otherwise sensitive content; #74 globally (top 6%) with 113 platform-displayed breaks on 29 July 2026. Analytical evaluation evidence, not production enforcement experience.';
 }
@@ -36,10 +36,10 @@ if (integrity.evidence?.[2]) {
 }
 
 const multilingualSkill = integrity.skills?.find(
-  ([title]) => title === 'Knowledge integrity and multilingual quality' || title === 'Knowledge integrity'
+  ([title]) => title === 'Source verification & multilingual quality' || title === 'Source verification & integrity'
 );
 if (multilingualSkill) {
-  multilingualSkill[0] = 'Knowledge integrity';
+  multilingualSkill[0] = 'Source verification & integrity';
   multilingualSkill[1] = 'Claim-to-source auditing, provenance, citation, terminology and metadata review';
 }
 

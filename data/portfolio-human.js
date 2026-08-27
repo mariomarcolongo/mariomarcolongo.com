@@ -1,16 +1,17 @@
 const ENTROPY_WORK_URL = "https://entropyforlife.it/mario-marcolongo-entropy-for-life/";
 
-const PORTFOLIO_HUMAN = {
-  eyebrow: "AI evaluation · scientific fact-checking · knowledge integrity",
-  headline: "I test AI systems, verify scientific claims and reconstruct public evidence.",
-  introduction: "My primary work is AI model-behavior evaluation, scientific fact-checking and evidence-bound public-source investigation. I also build and operate research-information tools when a recurring verification problem needs a practical system.",
+function createPortfolioHuman() {
+  return {
+  eyebrow: "Information retrieval · data quality · AI evaluation · scientific fact-checking",
+  headline: "Evidence first. AI systems tested.",
+  introduction: "I retrieve and verify information, investigate data quality and test model behavior. When recurring verification needs a practical system, I define its requirements, validation rules and maintenance process.",
 
   proofMoments: [
     {
       value: "113",
       label: "platform-recorded Proving Ground breaks",
       detail: "#74 · top 6% · 29 July 2026",
-      href: "/security.html"
+      href: "/security"
     },
     {
       value: "80",
@@ -22,7 +23,7 @@ const PORTFOLIO_HUMAN = {
       value: "4,317",
       label: "auditable Wikimedia contributions",
       detail: "Privacy research · archival recovery · source review · biomedical evidence",
-      href: "/integrity.html"
+      href: "/integrity"
     }
   ],
 
@@ -34,7 +35,7 @@ const PORTFOLIO_HUMAN = {
       image: "/media/work/gray-swan-profile-2026-07-29-1600.webp",
       imageSet: "/media/work/gray-swan-profile-2026-07-29-800.webp 800w, /media/work/gray-swan-profile-2026-07-29-1600.webp 1600w",
       alt: "Screenshot of Mario Marcolongo's Gray Swan Arena and Proving Ground profile showing the dated public ranking and activity record",
-      href: "/security.html"
+      href: "/security"
     },
     {
       id: "entropy",
@@ -67,27 +68,27 @@ const PORTFOLIO_HUMAN = {
   scopes: [
     {
       number: "01",
-      label: "Primary",
+      label: "Distinctive specialist",
       title: "AI model-behavior evaluation",
       body: "Adversarial and edge-case testing across chat, multimodal inputs, tool use and indirect prompt injection."
     },
     {
       number: "02",
-      label: "Primary",
-      title: "Scientific fact-checking",
-      body: "Primary-literature review for scripts, articles and public scientific communication."
+      label: "Core",
+      title: "Information retrieval & scientific verification",
+      body: "Finding primary sources, tracing claims and verifying scientific evidence for public-facing work."
     },
     {
       number: "03",
-      label: "Primary",
-      title: "Knowledge integrity & public-source investigation",
-      body: "Consumer-genomics privacy, corporate-source reconciliation, archival recovery, source-quality auditing, content-governance review and structured biomedical evidence synthesis."
+      label: "Core",
+      title: "Data quality & provenance",
+      body: "Provenance, metadata, source reconciliation, validation, public-source investigation and information-quality review."
     },
     {
       number: "04",
       label: "Supporting",
-      title: "Research information systems",
-      body: "Structured records, provenance rules and maintained tools for recurring research-information problems."
+      title: "Research directories, tools & visualization",
+      body: "Structured records, provenance rules, maintained tools and data visualizations for recurring research-information problems."
     }
   ],
 
@@ -101,7 +102,7 @@ const PORTFOLIO_HUMAN = {
       action: "I vary the interaction path, preserve reproduction notes and distinguish direct observations from platform labels, independent verification and model-wide conclusions.",
       result: "#74 on the Proving Ground leaderboard, top 6%, with 113 platform-recorded total breaks on 29 July 2026; the same screenshot shows Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions.",
       boundary: "This supports model-evaluation and adversarial-QA work. It is not presented as penetration testing or senior red-team engineering.",
-      href: "/security.html",
+      href: "/security",
       linkLabel: "Open the evaluation record",
       image: "/media/work/gray-swan-profile-2026-07-29-1600.webp",
       imageSet: "/media/work/gray-swan-profile-2026-07-29-800.webp 800w, /media/work/gray-swan-profile-2026-07-29-1600.webp 1600w",
@@ -115,7 +116,7 @@ const PORTFOLIO_HUMAN = {
       label: "Scientific fact-checking",
       title: "Fact-checking and producing scientific content before publication.",
       lead: "Entropy for Life is an Italian science-communication brand with 267K YouTube subscribers and 480K+ combined public following across YouTube, Instagram and TikTok.",
-      action: "Primary-literature research and scientific fact-checking are recurring. Depending on the assignment, I also contribute to script development, data analysis and visualization, slides and on-screen assets, short-form content and selected thumbnail concepts or production. I designed and built entropyforlife.it in WordPress and manage its responsive design, publishing and OVHcloud technical operations.",
+      action: "Primary-literature research and scientific fact-checking are recurring. Depending on the assignment, I also contribute to script development, data analysis and visualization, slides and on-screen assets, short-form content and selected thumbnail concepts or production. I designed and built entropyforlife.it in WordPress and manage responsive design, publishing, hosting, DNS, SSL and technical SEO.",
       result: "80 documented published content contributions: 55 YouTube videos, four co-authored articles and 21 short-form pieces. The official work record also indexes selected thumbnail work; thumbnail contributions overlap with video projects and are not added to the 80.",
       boundary: "The audience belongs to Entropy for Life, not to me, and the combined platform total is not a count of unique people. Quantified CTR or watch-time lift should only be claimed when comparable channel analytics can be published.",
       href: ENTROPY_WORK_URL,
@@ -136,13 +137,13 @@ const PORTFOLIO_HUMAN = {
     {
       id: "knowledge-integrity",
       number: "03",
-      label: "Knowledge integrity & investigation",
+      label: "Source verification & investigation",
       title: "Tracing privacy, policy and evidence changes under dispute.",
       lead: "My public record includes consumer-genomics privacy research, corporate-source reconciliation, archival recovery, content-governance review and biomedical evidence synthesis—not a generic claim of OSINT familiarity.",
       action: "I built and maintained the Nebula Genomics privacy record across historical sequencing relationships, changing company statements, archived privacy policies, third-party-data questions, corporate restructuring and litigation coverage. In separate cases, I recovered missing documents for a legally sensitive chronology, audited source quality and bibliometrics during a contentious moderation process, and built a syndromic-autism taxonomy from peer-reviewed literature.",
-      result: "Each case is linked to an exact attributed diff, edit history or collaborative discussion record, with methods and evidence boundaries documented on a dedicated page. Living-person names are not used as promotional headings when they add little hiring value.",
+      result: "Each case is linked to an exact attributed diff, edit history or collaborative discussion record, with methods and stated limits documented on a dedicated page. Living-person names are not used as promotional headings when they add little hiring value.",
       boundary: "The work represents public-source research and collaborative knowledge governance. It does not establish company liability, personal misconduct, editor affiliation, an independent legal judgment or original clinical research.",
-      href: "/integrity.html",
+      href: "/integrity",
       linkLabel: "Inspect the investigation records",
       image: "/media/work/wikimedia-clinical-overlap.svg",
       alt: "Scientific evidence diagram representing structured biomedical and Wikimedia work",
@@ -155,9 +156,9 @@ const PORTFOLIO_HUMAN = {
       label: "Supporting research system",
       title: "Building a maintained directory of research opportunities.",
       lead: "Yourself to Science turns scattered institutional opportunities into a public catalogue with explicit inclusion and update rules.",
-      action: "I defined the inclusion criteria, verification fields, provenance model, licensing boundaries, update workflow and public-data requirements, then coordinated AI-assisted implementation and ongoing operation.",
+      action: "I defined the inclusion criteria, verification fields, provenance model, licensing boundaries, update process and public-data requirements, then coordinated AI-assisted implementation and maintenance.",
       result: "55 resources indexed; 37 unique Wikidata items use yourselftoscience.org as a reference URL, with FAIRsharing and Zenodo records and human- and machine-readable interfaces.",
-      boundary: "My contribution covers requirements, information architecture, verification, functional testing, deployment diagnosis and operations—not unaided software development.",
+      boundary: "My contribution covers requirements, information architecture, verification, functional testing, deployment diagnosis and maintenance—not unaided software development.",
       href: "https://yourselftoscience.org/",
       linkLabel: "Explore Yourself to Science",
       image: "/media/work/yourself-to-science-800.webp",
@@ -221,8 +222,8 @@ const PORTFOLIO_HUMAN = {
 
   moreWork: [
     {
-      title: "Knowledge integrity & investigation records",
-      href: "/integrity.html"
+      title: "Source verification & investigation records",
+      href: "/integrity"
     },
     {
       title: "Protein by bodyweight by country",
@@ -255,37 +256,48 @@ const PORTFOLIO_HUMAN = {
     },
     {
       title: "Plan for maintenance",
-      body: "Treat updates, provenance and operational recovery as part of the work."
+      body: "Treat updates, provenance and recovery from problems as part of the work."
     }
   ],
 
   applicationDocuments: [
     {
+      title: "Data Quality & Research Analysis",
+      description: "Information retrieval, data quality, source verification, data visualization and research support.",
+      href: "/cv-research",
+      recommendedFor: "Recommended general CV for analytical, data-quality and research roles"
+    },
+    {
       title: "AI Evaluation & Model Behavior",
-      description: "Model-behavior testing, adversarial QA, evaluation operations and evidence-bound reporting.",
-      href: "/cv-resume.html",
-      recommendedFor: "Recommended for AI evaluation and safeguards roles"
+      description: "Model testing, adversarial QA, test planning and evidence reporting.",
+      href: "/cv-resume",
+      recommendedFor: "Specialist CV for AI evaluation and adversarial-testing roles"
     },
     {
-      title: "Scientific AI Quality & Research Data",
-      description: "Scientific evidence review, research-data quality, provenance, metadata and research operations.",
-      href: "/cv-research.html",
-      recommendedFor: "Scientific AI and research-data roles"
-    },
-    {
-      title: "Trust, Safety & Knowledge Integrity",
+      title: "Trust, Safety & Source Quality",
       description: "Consumer-genomics privacy, archival OSINT, source-quality review, public-record research, content governance and investigation support.",
-      href: "/cv-integrity.html",
-      recommendedFor: "Integrity and investigation roles"
+      href: "/cv-integrity",
+      recommendedFor: "Integrity, trust & safety and investigation roles"
     },
     {
-      title: "Research, Editorial & Content Operations",
-      description: "Scientific fact-checking, editorial coordination, audience packaging, evidence synthesis and content operations.",
-      href: "/cv-editorial.html",
-      recommendedFor: "Editorial, content-operations and audience-quality roles"
+      title: "Research, Editorial & Community Coordination",
+      description: "Scientific fact-checking, editorial coordination, research participation, community engagement and content production.",
+      href: "/cv-editorial",
+      recommendedFor: "Editorial, community-coordination and content-quality roles"
     }
   ]
-};
+  };
+}
+
+const PORTFOLIO_HUMAN = createPortfolioHuman();
+Object.defineProperty(PORTFOLIO_HUMAN, "create", {
+  value: createPortfolioHuman,
+  enumerable: false
+});
+Object.defineProperty(PORTFOLIO_HUMAN, "createPortfolioHuman", {
+  value: createPortfolioHuman,
+  enumerable: false
+});
 
 if (typeof module !== "undefined" && module.exports) {
   module.exports = PORTFOLIO_HUMAN;

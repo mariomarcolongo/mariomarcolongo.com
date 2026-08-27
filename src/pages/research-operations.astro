@@ -7,24 +7,29 @@ import "../styles/integrity.css";
 import career from "../../data/research-operations-positioning.mjs";
 
 const { D } = career;
-const pageTitle = "Sensitive Qualitative Research Operations — Mario Marcolongo";
-const pageDescription = "Evidence-bound case study of volunteer focus-group facilitation and research-operations support in a University of Padua project involving autistic participants and sensitive sexuality and relationship topics.";
+const pageTitle = "Sensitive Qualitative Research Support — Mario Marcolongo";
+const pageDescription = "Source-backed case study of volunteer focus-group facilitation and research-support work in a University of Padua project involving autistic participants and sensitive sexuality and relationship topics.";
 const thesisUrl = "https://thesis.unipd.it/handle/20.500.12608/51396";
 const supervisorUrl = "https://dpss.unipd.it/en/node/239";
 const departmentUrl = "https://www.unipd.it/en/dpss";
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical="https://mariomarcolongo.com/research-operations.html">
+<Layout title={pageTitle} description={pageDescription} canonical="https://mariomarcolongo.com/research-operations">
   <Fragment slot="head">
-    <meta name="robots" content="noindex,follow" />
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "ProfilePage",
       name: pageTitle,
       description: pageDescription,
-      url: "https://mariomarcolongo.com/research-operations.html",
-      mainEntity: { "@id": "https://mariomarcolongo.com/#person" },
-      about: ["Qualitative research operations", "Focus-group facilitation", "Accessible research", "Participant privacy", "Autism research"]
+      url: "https://mariomarcolongo.com/research-operations",
+      mainEntity: {
+        "@type": "Person",
+        "@id": "https://mariomarcolongo.com/#person",
+        name: D.identity.name,
+        url: D.identity.domain,
+        sameAs: D.identity.sameAs
+      },
+      about: ["Qualitative research support (research operations)", "Focus-group facilitation", "Accessible research", "Participant privacy", "Autism research"]
     })}></script>
   </Fragment>
 
@@ -32,13 +37,13 @@ const departmentUrl = "https://www.unipd.it/en/dpss";
 
   <main class="v3-page integrity-page">
     <section class="integrity-hero">
-      <div class="v3-kicker">Research operations · evidence boundary</div>
+      <div class="v3-kicker">Research support · evidence limits</div>
       <h1>Sensitive qualitative research requires accessibility, privacy and exact attribution.</h1>
       <p>I report a volunteer role supporting remote focus groups with autistic participants discussing sexuality and relationships. The public University of Padua thesis documents the project and parts of its methodology, but it does not identify the individual facilitators. This page separates those two evidence levels.</p>
       <div class="v3-hero-actions">
-        <a class="v3-button v3-button-primary" href="/cv-editorial.html">Research & Editorial CV →</a>
-        <a class="v3-button" href="/cv-integrity.html">Knowledge Integrity CV</a>
-        <a class="v3-button v3-button-quiet" href="/integrity.html">Other evidence records</a>
+        <a class="v3-button v3-button-primary" href="/cv-editorial">Research & Editorial CV →</a>
+        <a class="v3-button" href="/cv-integrity">Source Quality CV</a>
+        <a class="v3-button v3-button-quiet" href="/integrity">Other evidence records</a>
       </div>
     </section>
 
@@ -46,22 +51,22 @@ const departmentUrl = "https://www.unipd.it/en/dpss";
       <article><strong>Project corroborated</strong><span>An institutional thesis documents the study, ethics approval and focus-group procedure.</span></article>
       <article><strong>Role self-reported</strong><span>The thesis does not name Mario Marcolongo or the individual facilitators.</span></article>
       <article><strong>Privacy preserved</strong><span>No participant identities, private correspondence or confidential session content are published.</span></article>
-      <article><strong>Scope limited</strong><span>This is research-operations experience, not authorship of the thesis or ownership of its findings.</span></article>
+      <article><strong>Scope limited</strong><span>This is study-support experience, not authorship of the thesis or ownership of its findings.</span></article>
     </section>
 
     <section class="v3-section" id="reported-contribution">
       <div class="v3-section-head">
         <div>
           <div class="v3-kicker">Reported contribution</div>
-          <h2>Volunteer facilitation and operational support.</h2>
+          <h2>Volunteer facilitation and study support.</h2>
         </div>
-        <p>The role is described conservatively as a contribution to study operations rather than as academic authorship or independent research leadership.</p>
+        <p>The role is described conservatively as a contribution to study support rather than as academic authorship or independent research leadership.</p>
       </div>
 
       <article class="integrity-record sensitive-research-operations">
         <div class="integrity-record-number">01</div>
         <div class="integrity-record-main">
-          <div class="integrity-record-category">Sensitive qualitative research operations</div>
+          <div class="integrity-record-category">Sensitive qualitative research support</div>
           <h3>Autism and sexuality focus groups</h3>
           <p class="integrity-context">Volunteer collaboration under Marta Panzeri at the University of Padua Department of Developmental Psychology and Socialisation, reported for November 2022–2025.</p>
           <div class="integrity-record-columns">
@@ -77,7 +82,7 @@ const departmentUrl = "https://www.unipd.it/en/dpss";
             <div>
               <h4>Capabilities demonstrated</h4>
               <div class="v3-methods">
-                <span>Qualitative research operations</span>
+                <span>Qualitative research support</span>
                 <span>Sensitive-topic facilitation</span>
                 <span>Accessibility-aware participation</span>
                 <span>Consent and privacy procedures</span>
@@ -85,7 +90,7 @@ const departmentUrl = "https://www.unipd.it/en/dpss";
                 <span>Two-person moderation</span>
               </div>
               <div class="integrity-limit">
-                <strong>Evidence boundary</strong>
+                <strong>Evidence limits</strong>
                 <p>These responsibilities are self-reported. The linked thesis corroborates the institutional project and several methodological features, but it does not attribute the role to Mario Marcolongo, verify every listed responsibility or independently confirm the approximate number of sessions he facilitated.</p>
               </div>
             </div>
@@ -136,10 +141,10 @@ const departmentUrl = "https://www.unipd.it/en/dpss";
     <section class="integrity-ethics">
       <div>
         <div class="v3-kicker">Career relevance</div>
-        <h2>Strongest for research and community operations.</h2>
+        <h2>Strongest for research and community support.</h2>
       </div>
       <div>
-        <p>This case supports applications involving qualitative research operations, participant research, community engagement, accessibility-aware facilitation, human-data programs and sensitive-topic moderation.</p>
+        <p>This case supports applications involving qualitative research support (including research-operations work), participant research, community engagement, accessibility-aware facilitation, human-data programs and sensitive-topic moderation.</p>
         <p>It is supporting—not flagship—evidence for knowledge-integrity work, and it is not presented as a primary AI-evaluation accomplishment, academic publication or independently attributable university appointment.</p>
       </div>
     </section>

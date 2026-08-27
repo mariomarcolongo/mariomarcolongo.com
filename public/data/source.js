@@ -13,15 +13,15 @@ const MARIO_DOSSIER = {
     "grayswanUrl": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
     "grayswanArchiveUrl": "/evidence/gray-swan-2026-07-29/",
     "evaluationAsOf": "29 July 2026",
-    "jobTitle": "AI Evaluation & Research Operations Specialist",
-    "secondaryTitle": "Model Behavior · Scientific Evidence · Knowledge Integrity · Open Science & Data Quality",
-    "headline": "I evaluate model behavior, verify scientific evidence, and operate research systems.",
-    "authorshipStatement": "My technical work is code-literate and AI-assisted: I define requirements and workflows, inspect implementation behavior, test releases, diagnose functional problems, guide iterations, deploy releases and maintain services.",
-    "role": "AI evaluation and research operations specialist. Gray Swan Proving Ground snapshot: #74 (top 6%) with 113 platform-displayed total breaks on 29 July 2026.",
-    "heroStatement": "Evaluating model behavior, verifying scientific evidence and operating research workflows and public technical products.",
-    "location": "Based in Italy · Italian/EU citizen · Open to worldwide relocation · International B2B contracting available",
-    "relocation": "EU/EEA work-authorized; Swiss EU/EFTA permit eligible; open to employer-sponsored work authorization elsewhere; self-funded relocation considered for exceptional opportunities.",
-    "relocationVisible": "Based in Italy · Italian/EU citizen · Open to worldwide relocation · International B2B contracting available",
+    "professionalHeadline": "Data Quality & Information Retrieval | AI Evaluation & Adversarial Testing | Scientific Fact-Checking & Evidence Synthesis",
+    "secondaryTitle": "Information Retrieval · Evidence Synthesis · AI Evaluation",
+    "headline": "I make information and AI systems more reliable.",
+    "authorshipStatement": "My technical work uses AI-assisted implementation: I define requirements, inspect implementation behavior, test releases, diagnose functional problems, guide iterations, deploy releases and maintain services.",
+    "role": "Work spanning information retrieval, data quality, AI evaluation, scientific fact-checking and research operations. Gray Swan Proving Ground snapshot: #74 (top 6%) with 113 platform-displayed total breaks on 29 July 2026.",
+    "heroStatement": "Making information and AI systems more reliable through retrieval, verification, data-quality review and model testing.",
+    "location": "Based in Italy · EU/EEA work-authorised · Open to sponsored international relocation and B2B engagements",
+    "relocation": "EU/EEA work-authorised; Switzerland: EU/EFTA employment route once an offer is secured; open to employer-sponsored work authorisation elsewhere. International B2B engagements are available where the contracting arrangement is compliant.",
+    "relocationVisible": "Based in Italy · EU/EEA work-authorised · Open to sponsored international relocation and B2B engagements",
     "languages": "Italian (Native / Mother Tongue) · English (C1 overall, EF SET 68/100; advanced technical reading and professional/technical writing)",
     "email": "me@mariomarcolongo.com",
     "orcid": "0000-0003-2846-7115",
@@ -42,7 +42,7 @@ const MARIO_DOSSIER = {
     "subjectOf": [
       {
         "@type": "WebPage",
-        "@id": "https://mariomarcolongo.com/security.html#webpage"
+        "@id": "https://mariomarcolongo.com/security#webpage"
       }
     ],
     "contactObfuscated": [
@@ -50,12 +50,12 @@ const MARIO_DOSSIER = {
       "mariomarcolongo",
       "com"
     ],
-    "notandiaUrl": "https://mariomarcolongo.com/notandia.html"
+    "notandiaUrl": "https://mariomarcolongo.com/notandia"
   },
-  "summary": "Research, evidence and AI operations specialist with eight years of auditable public-source and structured-data work, paid scientific fact-checking and editorial production, community-facing research facilitation, ownership of an open research-participation directory, and sustained adversarial testing of AI systems. On 29 July 2026, the Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks. Entropy for Life work covers 80 documented published content contributions: 55 YouTube videos · 4 articles · 21 short-form pieces. Technical work is code-literate and AI-assisted, with personal ownership of requirements, verification, deployment and maintenance. Current open-source product work includes Notandia (formerly MDPI Filter), a continuing browser and Zotero research-integrity tool.",
+  "summary": "My work spans information retrieval, data quality, scientific fact-checking, AI evaluation and research operations. It includes eight years of auditable public-source and structured-data work, a maintained research-participation directory and self-directed model-behavior testing. On 29 July 2026, the Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks. Entropy for Life work covers 80 documented published content contributions: 55 YouTube videos · 4 articles · 21 short-form pieces. Technical delivery is AI-assisted, with personal responsibility for requirements, verification, deployment and maintenance. Current open-source product work includes Notandia (formerly MDPI Filter), a continuing browser and Zotero research-integrity tool.",
   "pillars": [
     {
-      "category": "AI EVALUATION & SAFETY OPERATIONS",
+      "category": "AI EVALUATION & ADVERSARIAL TESTING",
       "icon": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"></path></svg>",
       "title": "Model Behavior & Adversarial Testing",
       "lead": "Structured, self-directed probing of LLM and multimodal-system behavior across chat, image, tool-use and indirect prompt-injection challenges.",
@@ -89,11 +89,11 @@ const MARIO_DOSSIER = {
       ]
     },
     {
-      "category": "DATA QUALITY & OPEN SCIENCE",
+      "category": "DATA QUALITY & PROVENANCE",
       "icon": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"></ellipse><path d=\"M21 12c0 1.66-4 3-9 3s-9-1.34-9-3\"></path><path d=\"M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5\"></path></svg>",
-      "title": "Research Workflows, Metadata & Provenance",
-      "lead": "Operating an open research-participation directory and maintaining structured, publicly inspectable research and data records.",
-      "desc": "Founded and operate Yourself to Science™, an open-source research-participation directory indexing 55 resources with documented inclusion, verification, provenance, metadata and licensing workflows. As of 27 July 2026, 37 unique Wikidata items use yourselftoscience.org as a reference URL (P854).",
+      "title": "Information Retrieval, Data Quality & Provenance",
+      "lead": "Retrieving, verifying and reconciling information across scientific sources, structured records and public research systems.",
+      "desc": "Founded and operate Yourself to Science™, an open-source research-participation directory indexing more than 55 initiatives, with documented inclusion, verification, provenance, metadata and licensing workflows. Public records include FAIRsharing, Zenodo, Wikidata and ENA entries.",
       "highlights": [
         {
           "label": "Research Directory",
@@ -106,19 +106,19 @@ const MARIO_DOSSIER = {
       ]
     },
     {
-      "category": "TECHNICAL OPERATIONS",
+      "category": "TECHNICAL DELIVERY",
       "icon": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"13 2 3 14 12 14 11 22 21 10 12 10 13 2\"></polygon></svg>",
-      "title": "Code-Literate, AI-Assisted Technical Operations",
+      "title": "Requirements, Testing & Technical Delivery",
       "lead": "Defining requirements, inspecting code structure and behavior, testing implementations, diagnosing functional problems and operating deployed services.",
       "desc": "Uses coding agents for implementation support while personally defining requirements and workflows, inspecting code structure and behavior, testing releases, diagnosing functional problems, guiding revisions, deploying releases and maintaining services.",
       "highlights": [
         {
-          "label": "Technical Operations",
+          "label": "Technical delivery",
           "detail": "Requirements, code reading, functional testing, deployment and maintenance"
         },
         {
           "label": "Delivery Model",
-          "detail": "AI-assisted implementation with explicit ownership of verification and operational behavior"
+          "detail": "AI-assisted implementation with personal responsibility for verification, release checks and maintenance"
         }
       ]
     }
@@ -156,31 +156,31 @@ const MARIO_DOSSIER = {
       "title": "Model Behavior & Adversarial Evaluation",
       "oneLiner": "Dated public record of self-directed model-behavior evaluation across chat, multimodal, agentic tool-use and indirect prompt-injection challenges.",
       "description": "Self-directed model-behavior evaluation conducted through the Gray Swan Proving Ground. The 29 July 2026 profile snapshot displays rank #74, top 6%, and 113 total breaks. The same snapshot shows 255 Arena submissions, 28 global unique breaks, 1,120 points and Arena rank #365. Aggregate counts are presented with explicit evidence limitations; complete prompts, outputs, model versions and adjudication materials are not reproduced.",
-      "role": "Model-Behavior Evaluator",
+      "role": "Independent AI Evaluator",
       "tech": [
         "Adversarial Evaluation",
         "Prompt Injection",
         "Agentic Tool-Use",
         "Multimodal Safety",
-        "Evidence-Bound Reporting"
+        "Evidence Limits & Reporting"
       ],
       "links": {
-        "caseStudy": "/security.html",
+        "caseStudy": "/security",
         "profile": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
         "evidence": "/evidence/gray-swan-2026-07-29/"
       },
       "highlights": [
         "Current Snapshot: #74, top 6% and 113 platform-displayed Proving Ground breaks",
         "Arena Activity: 255 submissions, 28 global unique breaks and 1,120 points",
-        "Evidence Boundary: The visible area counters sum to 112; the platform displays 113 total breaks"
+        "Evidence limits: The visible area counters sum to 112; the platform displays 113 total breaks"
       ]
     },
     {
       "id": "yourself-to-science",
       "title": "Yourself to Science™ | Open Research-Participation Directory",
       "oneLiner": "An open-source directory indexing 55 research-participation resources, with 37 unique Wikidata items using the domain as a reference URL.",
-      "description": "Founded, designed and operate an open-source research-participation directory indexing 55 resources. As of 27 July 2026, 37 unique Wikidata items use yourselftoscience.org as a reference URL (P854). Defined the inclusion model, verification workflow, provenance fields, licensing structure and machine-readable metadata requirements, including JSON-LD, RDF Turtle/VoID, OpenAPI and an MCP interface. Technical implementation is AI-assisted and personally verified through requirements, code reading, functional testing and operational maintenance.",
-      "role": "Founder & Research-Workflow Owner",
+      "description": "Founded, designed and operate an open-source research-participation directory indexing 55 resources. As of 27 July 2026, 37 unique Wikidata items use yourselftoscience.org as a reference URL (P854). Defined the inclusion model, verification workflow, provenance fields, licensing structure and machine-readable metadata requirements, including JSON-LD, RDF Turtle/VoID, OpenAPI and an MCP interface. Technical implementation is AI-assisted and personally verified through requirements, code reading, functional testing and maintenance.",
+      "role": "Founder & Project Lead",
       "tech": [
         "Research Verification",
         "Metadata & Provenance",
@@ -205,10 +205,10 @@ const MARIO_DOSSIER = {
     },
     {
       "id": "entropy-for-life",
-      "title": "Entropy for Life — Scientific Content Quality & Operations",
+      "title": "Entropy for Life — Science Writing, Fact-Checking & Website Management",
       "oneLiner": "80 documented published content contributions inside a creator brand with 267K YouTube subscribers and 36.5M channel views.",
       "description": "Conduct recurring primary-literature research and scientific fact-checking across 80 documented published content contributions: 55 YouTube videos, 4 co-authored articles and 21 short-form pieces. Entropy for Life is an Italian science-communication brand with 267K YouTube subscribers, 36,524,137 channel views, 159K Instagram followers and 54K TikTok followers as of 26 July 2026. Depending on the assignment, also translate evidence into scripts, data analyses, visualizations, slides, on-screen assets, short-form content and selected thumbnail concepts or production. Designed and built entropyforlife.it in WordPress and operate its responsive design, publishing and OVHcloud technical stack. The audience belongs to the brand, and cross-platform totals are not counts of unique people.",
-      "role": "Scientific Content Quality & Operations Contractor",
+      "role": "Science Writer & Fact-Checker / Website Manager (WordPress)",
       "tech": [
         "Primary-Source Research",
         "Scientific Fact-Checking",
@@ -226,7 +226,7 @@ const MARIO_DOSSIER = {
       "highlights": [
         "Production Scale: 36.5M YouTube views · 267K subscribers · 592 published videos",
         "Documented Work: 80 contributions · 55 YouTube videos · 4 articles · 21 short-form pieces",
-        "Cross-Functional Scope: Evidence quality, content production, visual packaging and website design and operations"
+        "Work performed: Evidence review, content production, visual packaging and website design and maintenance"
       ]
     },
     {
@@ -234,7 +234,7 @@ const MARIO_DOSSIER = {
       "title": "Notandia — formerly MDPI Filter | Browser Extension & Zotero Plugin",
       "oneLiner": "An independent open-source browser and Zotero tool that helps researchers identify articles from publishers whose editorial and peer-review practices have attracted scrutiny and check for formal notices such as retractions, corrections and expressions of concern.",
       "description": "Created and maintain Notandia, the public continuation and expansion of MDPI Filter. The browser extension helps users identify articles from publishers whose editorial and peer-review practices have attracted scrutiny—including MDPI and Frontiers—and choose how matching articles should appear, including context, badges, highlights, dimming or hiding. It also uses Crossref/Retraction Watch data to check for formal notices such as retractions, corrections, expressions of concern, withdrawals, duplicate-publication findings and reinstatements. I define product requirements and evidence hierarchies, test cross-browser and Zotero behavior, inspect API and implementation logic, reproduce failures, guide AI-assisted changes, and manage documentation, release verification and deployment. The Zotero plugin currently focuses on precise MDPI item and reference detection, including structured PubMed Central evidence and exact citation highlighting. Publisher-level context is controlled by the user and does not treat every journal or article as equivalent. Existing store identities and compatibility-sensitive identifiers are retained so the same product lineage can continue receiving updates. Current source repositories: https://github.com/notandia/browser-extension and https://github.com/notandia/zotero-plugin.",
-      "role": "Creator & AI-Assisted Technical Product Operator",
+      "role": "Creator & Product Lead",
       "tech": [
         "Product Requirements",
         "Functional Testing",
@@ -242,12 +242,12 @@ const MARIO_DOSSIER = {
         "Crossref/Retraction Watch",
         "Zotero",
         "NCBI/Europe PMC",
-        "Multi-Browser Release Operations"
+        "Multi-Browser Release Maintenance"
       ],
       "links": {
-        "website": "https://mariomarcolongo.com/notandia.html",
+        "website": "https://mariomarcolongo.com/notandia",
         "github": "https://github.com/notandia/browser-extension",
-        "canonical": "https://mariomarcolongo.com/notandia.html",
+        "canonical": "https://mariomarcolongo.com/notandia",
         "browserRepository": "https://github.com/notandia/browser-extension",
         "zoteroRepository": "https://github.com/notandia/zotero-plugin",
         "chromeStore": "https://chromewebstore.google.com/detail/mdpi-filter/comknkeimaaadpiopddjoknflbmjeccp",
@@ -269,14 +269,14 @@ const MARIO_DOSSIER = {
       "title": "English Wikipedia Link Converter | Telegram Bot",
       "oneLiner": "An open-source Telegram bot that converts non-English Wikipedia links to their English equivalents.",
       "description": "Specified the behavior and deployment requirements for a Telegram bot running on AWS Lambda and API Gateway. Used AI-assisted implementation, tested private, group and inline workflows, diagnosed deployment problems and maintained GitHub Actions releases.",
-      "role": "Creator & Technical Operator",
+      "role": "Creator & Project Lead",
       "tech": [
         "Requirements",
         "Functional Testing",
         "AWS Lambda",
         "API Gateway",
         "GitHub Actions",
-        "Serverless Operations"
+        "Serverless Deployment & Maintenance"
       ],
       "links": {
         "bot": "https://t.me/ToEnWikipediaBot",
@@ -285,7 +285,7 @@ const MARIO_DOSSIER = {
       "highlights": [
         "Serverless Deployment: AWS Lambda and API Gateway",
         "Behavioral Coverage: Private chats, groups and inline usage",
-        "Operational Ownership: Testing, deployment diagnosis and release maintenance"
+        "Testing & release maintenance: Deployment diagnosis and release maintenance"
       ]
     },
     {
@@ -293,7 +293,7 @@ const MARIO_DOSSIER = {
       "title": "Emergent Humanity | Interactive Network Narrative",
       "oneLiner": "A 16-chapter interactive narrative and browser simulation modeling humanity as an emergent network entity.",
       "description": "Developed the concept, narrative structure, interaction requirements and behavioral specifications for an evolving browser-based network simulation. Implementation was produced through AI-assisted workflows and personally tested and iterated.",
-      "role": "Creator & Concept and Requirements Designer",
+      "role": "Creator & Project Lead",
       "tech": [
         "Concept Design",
         "Interactive Narration",
@@ -575,7 +575,7 @@ const MARIO_DOSSIER = {
   },
   "experience": [
     {
-      "role": "Founder & Research-Workflow Owner",
+      "role": "Founder & Project Lead",
       "org": "Yourself to Science™",
       "tag": "Independent project",
       "period": "Aug 2024 — Present",
@@ -595,12 +595,12 @@ const MARIO_DOSSIER = {
       ]
     },
     {
-      "role": "Model-Behavior Evaluator",
+      "role": "Independent AI Evaluator",
       "org": "Independent practice · Gray Swan Proving Ground participant",
       "tag": "Independent practice",
       "period": "Jul 2026 — Present",
       "links": {
-        "caseStudy": "/security.html",
+        "caseStudy": "/security",
         "profile": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
         "evidence": "/evidence/gray-swan-2026-07-29/"
       },
@@ -615,7 +615,7 @@ const MARIO_DOSSIER = {
       ]
     },
     {
-      "role": "Scientific Content Quality & Operations Contractor",
+      "role": "Science Writer & Fact-Checker / Website Manager (WordPress)",
       "org": "Entropy for Life — Italy",
       "tag": "Independent contractor",
       "period": "Jun 2023 — Present",
@@ -629,12 +629,12 @@ const MARIO_DOSSIER = {
         "Designed and built entropyforlife.it in WordPress and manage responsive design, publishing, OVHcloud hosting, DNS, SSL and technical SEO; formally acknowledged in the Mondadori book Italiani veri for scientific-literature research and error detection."
       ],
       "resumeBullets": [
-        "Delivered 80 documented published content contributions—55 YouTube videos, 4 articles and 21 short-form pieces—through evidence review, content production and publishing operations.",
-        "Designed and built entropyforlife.it in WordPress and manage its responsive design, publishing and OVHcloud technical operations."
+        "Delivered 80 documented published content contributions—55 YouTube videos, 4 articles and 21 short-form pieces—through evidence review, content production and publishing.",
+        "Designed and built entropyforlife.it in WordPress and manage its responsive design, publishing, OVHcloud hosting, DNS, SSL and technical SEO."
       ]
     },
     {
-      "role": "Volunteer Focus-Group Co-Facilitator & Research Operations Contributor",
+      "role": "Volunteer Research Assistant & Focus-Group Co-Facilitator",
       "org": "Department of Developmental Psychology and Socialisation (DPSS), University of Padua",
       "tag": "Volunteer research collaboration supervised by Marta Panzeri",
       "period": "Nov 2022 — 2025",
@@ -646,7 +646,7 @@ const MARIO_DOSSIER = {
       "bullets": [
         "Served as lead or co-facilitator across approximately 4–5 recorded Zoom focus-group sessions, typically lasting 1–2 hours, with autistic participants discussing sensitive sexuality and relationship topics.",
         "Co-developed the protocol, including pseudonymous naming, explicit recorded consent, optional captions and written-chat participation, timed turn-taking, scripted prompts, recording boundaries and two-person facilitation handoffs.",
-        "Supported participant recruitment, bibliographic research, technical preparation and protocol feedback from an autistic perspective; coordinated with Marta Panzeri, researchers and a second autistic volunteer facilitator.",
+        "Supported participant recruitment, bibliographic research and technical preparation; contributed to structuring participant experience and accessibility considerations and coordinated with Marta Panzeri, researchers and a second volunteer facilitator.",
         "Public attribution to Marta Panzeri and the Department of Developmental Psychology and Socialisation is included with permission; no participant information or confidential session content is disclosed."
       ],
       "resumeBullets": [
@@ -693,7 +693,7 @@ const MARIO_DOSSIER = {
       ]
     },
     {
-      "role": "Scientific Data Visualizer & Evidence Synthesist",
+      "role": "Scientific Data Visualization & Evidence Synthesis",
       "org": "Wikimedia Commons, Tableau Public & Flourish",
       "tag": "Independent project",
       "period": "2023 — Present",
@@ -716,7 +716,7 @@ const MARIO_DOSSIER = {
       "title": "Information Technology — Open UAS Path Studies (120 ECTS)",
       "institution": "Metropolia University of Applied Sciences",
       "period": "Aug 2026 — Present",
-      "status": "Bachelor's-level ICT path studies · Curriculum: software development, SQL and relational databases, Unix/Linux, data structures and algorithms, CCNA networking, cloud computing, cybersecurity, ethical hacking, engineering mathematics and applied AI",
+      "status": "Bachelor's-level ICT path studies · After completing 120 ECTS, eligible to apply to the BEng IT programme (admission not yet granted) · Curriculum: software development, SQL and relational databases, Unix/Linux, data structures and algorithms, CCNA networking, cloud computing, cybersecurity, ethical hacking, engineering mathematics and applied AI",
       "programUrl": "https://www.metropolia.fi/en/study-at-metropolia/open-university/path-studies/it-online"
     },
     {
@@ -739,23 +739,25 @@ const MARIO_DOSSIER = {
     }
   ],
   "skills": [
-    "AI Safety Evaluation & Adversarial Testing: Exploratory model-behavior testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection.",
-    "Evaluation Operations: Test planning, evidence capture, reproducibility notes, taxonomy thinking, issue classification, evidence-bound reporting and mitigation-retesting concepts.",
-    "Scientific Verification & Evidence Synthesis: Primary-source fact-checking, bibliographic research, claim decomposition, evidence screening, source-quality assessment and cross-source corroboration.",
+    "Information Retrieval & Verification: Primary-source and bibliographic search, claim tracing, source discovery, query refinement, source-quality assessment and cross-source corroboration.",
     "Data Quality & Provenance: Structured metadata, entity reconciliation, validation rules, documentation, taxonomy design and public-record verification.",
-    "Code-Literate Technical Operations: Requirements definition, codebase reading and behavior inspection, functional testing, issue diagnosis, deployment operations and service maintenance.",
-    "AI-Assisted Technical Workflow: Uses coding agents for implementation support while personally defining requirements, inspecting structure and behavior, testing results, guiding revisions, deploying releases and maintaining services.",
-    "Open Science & Structured Data: Wikimedia, Wikidata, FAIRsharing, Zenodo, ENA records, JSON-LD, RDF Turtle/VoID, OpenAPI and MCP interfaces.",
-    "Web & Cloud Operations: WordPress, HTML/CSS modification, Git/GitHub, JSON, REST APIs, AWS Lambda, Cloudflare Pages, DNS/SSL and CI/CD operations.",
+    "AI Evaluation & Adversarial Testing: Exploratory model-behavior testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection.",
+    "Scientific Verification & Evidence Synthesis: Primary-source fact-checking, bibliographic research, claim decomposition, evidence screening, source-quality assessment and cross-source corroboration.",
     "Data Visualization: SVG vector diagrams, Tableau Public, Flourish and open-data publication.",
+    "Evaluation Planning & Reporting: Test planning, evidence capture, reproducibility notes, taxonomy thinking, issue classification, reporting that separates evidence from inference and mitigation-retesting concepts.",
+    "Technical Delivery: Requirements definition, codebase reading and behavior inspection, functional testing, issue diagnosis, deployment and service maintenance.",
+    "AI-Assisted Implementation: Uses coding agents for implementation support while personally defining requirements, inspecting structure and behavior, testing results, guiding revisions, deploying releases and maintaining services.",
+    "Open Science & Structured Data: Wikimedia, Wikidata, FAIRsharing, Zenodo, ENA records, JSON-LD, RDF Turtle/VoID, OpenAPI and MCP interfaces.",
+    "Web & Cloud Delivery: WordPress, HTML/CSS modification, Git/GitHub, JSON, REST APIs, AWS Lambda, Cloudflare Pages, DNS/SSL and CI/CD maintenance.",
     "Languages: Italian — native. English — C1 overall (EF SET 68/100), with advanced technical reading and professional/technical writing."
   ],
   "resumeSkills": [
-    "AI Safety Evaluation & Adversarial Testing: Exploratory model-behavior testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection.",
-    "Evaluation Operations: Test planning, evidence capture, reproducibility notes, taxonomy thinking, issue classification and evidence-bound reporting.",
-    "Scientific Verification & Evidence Synthesis: Primary-source fact-checking, bibliographic research, claim decomposition, evidence screening and cross-source corroboration.",
+    "Information Retrieval & Verification: Primary-source and bibliographic search, claim tracing, source discovery, query refinement and cross-source corroboration.",
     "Data Quality & Provenance: Structured metadata, entity reconciliation, validation rules, documentation and public-record verification.",
-    "Code-Literate Technical Operations: Requirements definition, codebase reading and behavior inspection, functional testing, issue diagnosis, deployment operations and AI-assisted implementation workflows.",
+    "AI Evaluation & Adversarial Testing: Exploratory model-behavior testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection.",
+    "Scientific Verification & Evidence Synthesis: Primary-source fact-checking, bibliographic research, claim decomposition, evidence screening and cross-source corroboration.",
+    "Data Visualization: SVG vector diagrams, Tableau Public, Flourish and open-data publication.",
+    "Technical Delivery: Requirements definition, codebase reading and behavior inspection, functional testing, issue diagnosis, deployment and AI-assisted implementation.",
     "Languages: Italian — native. English — C1 overall (EF SET 68/100), with advanced technical reading and professional/technical writing."
   ]
 };

@@ -6,8 +6,8 @@ const D = require('../data/source.js');
 const ROOT = path.resolve(__dirname, '..');
 const ENTROPY_WORK_URL = 'https://entropyforlife.it/mario-marcolongo-entropy-for-life/';
 const EXPECTED = {
-  jobTitle: 'AI Evaluation & Research Operations Specialist',
-  secondaryTitle: 'Model Behavior · Scientific Evidence · Knowledge Integrity · Open Science & Data Quality',
+  professionalHeadline: 'Data Quality & Information Retrieval | AI Evaluation & Adversarial Testing | Scientific Fact-Checking & Evidence Synthesis',
+  secondaryTitle: 'Information Retrieval · Evidence Synthesis · AI Evaluation',
   email: 'me@mariomarcolongo.com',
   orcid: '0000-0003-2846-7115',
   ena: 'PRJEB109744',
@@ -18,7 +18,8 @@ const EXPECTED = {
 const REQUIRED = [
   'package.json', 'package-lock.json', 'data/source.js', 'data/application-profiles.js',
   'data/portfolio-human.js', 'data/recent-application-evidence.js',
-  'data/career-positioning.js', 'data/investigation-cases.js', 'data/investigation-positioning.mjs',
+  'data/career-positioning.js', 'data/homepage-positioning.js', 'data/public-evidence.js',
+  'data/investigation-cases.js', 'data/investigation-positioning.mjs',
   'src/layouts/Layout.astro', 'src/components/SiteNav.astro',
   'src/components/SiteFooter.astro', 'src/components/ApplicationCv.astro', 'src/pages/index.astro',
   'src/pages/integrity.astro', 'src/pages/cv.astro', 'src/pages/cv-resume.astro',
@@ -66,7 +67,24 @@ const PROHIBITED = [
   ['Coursework in Medicine and Surgery', 'Abandoned Medicine programme should not appear in public CV/site data'],
   ['Medicine and Surgery studies', 'Abandoned Medicine programme should not be presented as current study'],
   ['Studies currently inactive', 'Administrative Medicine enrollment status should not appear publicly'],
-  ['domain-expert evaluation', 'Avoid implying formal biomedical domain expertise']
+  ['domain-expert evaluation', 'Avoid implying formal biomedical domain expertise'],
+  ['Founder & Research-Workflow Owner', 'Replace the invented founder title with Founder & Project Lead'],
+  ['Research-Workflow Owner', 'Replace the invented workflow-owner title'],
+  ['AI Evaluation & Model Behavior Specialist', 'Use the clearer AI Evaluation & Model Behavior Analyst title'],
+  ['Research, Editorial & Community Operations Specialist', 'Use the clearer Research, Editorial & Community Coordinator title'],
+  ['Trust, Safety & Knowledge Integrity Specialist', 'Use the clearer Trust, Safety & Source Quality Analyst title'],
+  ['Investigations & Knowledge Integrity Analyst', 'Use the clearer Investigations & Source Quality Analyst title'],
+  ['evidence-bound reporting', 'Use reporting that separates evidence from inference'],
+  ['evaluation operations', 'Use a concrete evaluation activity such as test planning or reporting'],
+  ['AI-enabled workflows', 'Use a concrete description of AI-assisted tools'],
+  ['Website Operations Contractor', 'Use the clearer Website Maintenance Contractor role title'],
+  ['Research Operations Contributor', 'Use the clearer Research Support Contributor role title'],
+  ['Research-integrity product operations', 'Name the product work as requirements and testing'],
+  ['Data & Knowledge Quality Analyst', 'Use the capability-led professional headline instead of an invented analyst title'],
+  ['Scientific Research, Fact-Checking & Website Maintenance Contractor', 'Use the clearer paired Entropy role titles'],
+  ['Volunteer Focus-Group Co-Facilitator & Research Support Contributor', 'Use the clearer Volunteer Research Assistant & Focus-Group Co-Facilitator title'],
+  ['Model-Behavior Evaluator', 'Use the clearer Independent AI Evaluator title'],
+  ['Scientific Data Visualizer & Evidence Synthesist', 'Use the conventional Scientific Data Visualization & Evidence Synthesis label']
 ];
 
 let failures = 0;
@@ -104,7 +122,7 @@ for (const relative of REQUIRED) {
 for (const root of SCAN_ROOTS) filesUnder(root).forEach(scanFile);
 
 const identityChecks = [
-  ['identity.jobTitle', D.identity?.jobTitle, EXPECTED.jobTitle],
+  ['identity.professionalHeadline', D.identity?.professionalHeadline, EXPECTED.professionalHeadline],
   ['identity.secondaryTitle', D.identity?.secondaryTitle, EXPECTED.secondaryTitle],
   ['identity.email', D.identity?.email, EXPECTED.email],
   ['identity.orcid', D.identity?.orcid, EXPECTED.orcid],
@@ -128,7 +146,7 @@ for (const [field, actual, expected] of currentGraySwanChecks) {
   if (actual !== expected) fail('data/source.js', 1, `${field} must equal ${JSON.stringify(expected)}; found ${JSON.stringify(actual)}.`);
 }
 
-const currentAiPillar = (D.pillars || []).find((item) => item?.category === 'AI EVALUATION & SAFETY OPERATIONS');
+const currentAiPillar = (D.pillars || []).find((item) => item?.category === 'AI EVALUATION & ADVERSARIAL TESTING');
 for (const required of ['#74', 'top 6%', '113 platform-recorded total breaks', 'Arena rank #365', '28 global unique breaks', '1,120 points', '255 submissions', '29 July 2026']) {
   if (!String(currentAiPillar?.desc || '').includes(required)) fail('data/source.js', 1, `Current AI-evaluation pillar is missing: ${required}`);
 }
@@ -156,20 +174,30 @@ if (!String(packageJson.scripts?.deploy || '').startsWith('npm run build')) fail
 if (!String(packageJson.scripts?.build || '').includes('verify-dist.js')) fail('package.json', 1, 'Production build must run generated-output verification.');
 if (!String(packageJson.scripts?.deploy || '').includes('--project-name=mariomarcolongo-pages')) fail('package.json', 1, 'Deployment must target the production Cloudflare Pages project.');
 
+const robots = fs.readFileSync(path.join(ROOT, 'public/robots.txt'), 'utf8');
+for (const crawler of ['OAI-SearchBot', 'GPTBot', 'ChatGPT-User', 'OAI-AdsBot', 'User-agent: *']) {
+  if (!robots.includes(crawler)) fail('public/robots.txt', 1, `Explicit public crawl policy is missing ${crawler}.`);
+}
+for (const directive of ['Content-Signal: ai-train=yes, search=yes, ai-input=yes', 'Allow: /']) {
+  if (!robots.includes(directive)) fail('public/robots.txt', 1, `Explicit public crawl policy is missing ${directive}.`);
+}
+
 const indexSource = fs.readFileSync(path.join(ROOT, 'src/pages/index.astro'), 'utf8');
 const portfolioSource = fs.readFileSync(path.join(ROOT, 'data/portfolio-human.js'), 'utf8');
-const homepageSource = `${indexSource}\n${portfolioSource}`;
+const homepagePositioning = fs.readFileSync(path.join(ROOT, 'data/homepage-positioning.js'), 'utf8');
+const notandiaBranding = fs.readFileSync(path.join(ROOT, 'data/notandia-branding.js'), 'utf8');
+const homepageSource = `${indexSource}\n${portfolioSource}\n${homepagePositioning}\n${notandiaBranding}`;
 for (const marker of ['human-capabilities', 'human-work', 'human-documents']) {
   if (!indexSource.includes(`data-testid="${marker}"`)) fail('src/pages/index.astro', 1, `Missing homepage marker ${marker}.`);
 }
 for (const requiredText of [
-  'I test AI systems, verify scientific claims and reconstruct public evidence.',
+  'I make information and AI systems more reliable.',
   'Where I can contribute.',
   'Selected work, shown through the actual output.',
-  'MDPI Filter now works in the browser and as a Zotero plugin.',
+  'Notandia works across browser and Zotero research workflows.',
   'A diagram that became a reusable public reference.',
   'Start with the role you are hiring for.',
-  'AI evaluation and scientific evidence roles.',
+  'Data quality, information retrieval and AI evaluation roles.',
   '#74 on the Proving Ground leaderboard',
   'Fact-checking and producing scientific content before publication.',
   'Tracing privacy, policy and evidence changes under dispute.',
@@ -182,7 +210,7 @@ for (const requiredText of [
   'designed and built entropyforlife.it',
   ENTROPY_WORK_URL,
   'Official work record published by Entropy for Life',
-  '/integrity.html'
+  '/integrity'
 ]) {
   if (!homepageSource.includes(requiredText)) fail('src/pages/index.astro', 1, `Homepage is missing current artifact-led portfolio content: ${requiredText}`);
 }
@@ -211,7 +239,7 @@ const integritySource = fs.readFileSync(path.join(ROOT, 'src/pages/integrity.ast
 const investigationSource = fs.readFileSync(path.join(ROOT, 'data/investigation-cases.js'), 'utf8');
 const integrityRecord = `${integritySource}\n${investigationSource}`;
 for (const requiredText of [
-  'evidence trail survives scrutiny', 'Evidence boundary', 'Ethical and legal boundary',
+  'evidence trail survives scrutiny', 'Evidence limits', 'Ethical and legal boundary',
   'Nebula Genomics', 'Archival reconstruction of a legally sensitive public record',
   'Biographical source-quality and notability review', 'Syndromic autism',
   'Additional provenance and rights work', 'Archival OSINT', 'Source-quality auditing',

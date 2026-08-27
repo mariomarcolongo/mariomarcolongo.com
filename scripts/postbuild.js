@@ -1,28 +1,20 @@
 #!/usr/bin/env node
 const fs = require('node:fs');
 const path = require('node:path');
-const { applyPresentationPatches } = require('./apply-portfolio-presentation.js');
 
 const ROOT = path.resolve(__dirname, '..');
 const DIST = path.join(ROOT, 'dist');
-const RETIRED_MDPI_ORG_URL = 'https://github.com/orgs/mdpi-filter/repositories';
-const LEGACY_MDPI_HEADLINE = 'MDPI Filter now works in the browser and as a Zotero plugin.';
-const LEGACY_MDPI_BODY = 'The current product identifies MDPI references across literature-search and reference-management workflows while avoiding ambiguous title-based matches. The broader rebrand and expansion to retractions, comments and other research-integrity signals are future work, not shipped functionality.';
-const CURRENT_NOTANDIA_BODY = 'Originally released as MDPI Filter, Notandia now helps researchers identify articles from publishers whose editorial and peer-review practices have attracted scrutiny—including MDPI and Frontiers—and uses Crossref/Retraction Watch data to check for formal notices such as retractions, corrections and expressions of concern. The Zotero plugin currently focuses on precise MDPI item and reference detection. Publisher-level context does not treat every journal or article as equivalent.';
-const LEGACY_MDPI_ROUTE = '/mdpi-filter.html';
-const NOTANDIA_CANONICAL_ROUTE = '/notandia.html';
 const REQUIRED = [
   'index.html',
   'notandia.html',
   'mdpi-filter.html',
   'integrity.html',
+  'research-operations.html',
   'cv.html',
   'cv-resume.html',
-  'cv-giskard.html',
   'cv-research.html',
   'cv-editorial.html',
   'cv-integrity.html',
-  'cv-orcid.html',
   'security.html',
   'llms.txt',
   'llms-full.txt',
@@ -33,10 +25,6 @@ const REQUIRED = [
   'robots.txt',
   'sitemap.xml',
   'site.webmanifest',
-  'styles/portfolio-presentation-v10.css',
-  'styles/portfolio-presentation-v10-mobile-fix.css',
-  'styles/portfolio-presentation-v11.css',
-  'styles/portfolio-presentation-v12.css',
   'media/work/gray-swan-profile-2026-07-29-800.webp',
   'media/work/gray-swan-profile-2026-07-29-1600.webp',
   'evidence/gray-swan-arena-mario-marcolongo-2026-07-29-033550-CEST.png',
@@ -50,19 +38,10 @@ const ROOT_HTML_MIRRORS = [
   'integrity.html',
   'cv.html',
   'cv-resume.html',
-  'cv-giskard.html',
   'cv-research.html',
   'cv-editorial.html',
   'cv-integrity.html',
-  'cv-orcid.html',
   'security.html'
-];
-const CV_FILES = ['cv.html', 'cv-resume.html', 'cv-giskard.html', 'cv-research.html', 'cv-editorial.html', 'cv-integrity.html', 'cv-orcid.html'];
-const INDEX_PRESENTATION_STYLES = [
-  '/styles/portfolio-presentation-v10.css',
-  '/styles/portfolio-presentation-v10-mobile-fix.css',
-  '/styles/portfolio-presentation-v11.css',
-  '/styles/portfolio-presentation-v12.css'
 ];
 
 function assertNonEmpty(relativePath) {
@@ -72,92 +51,8 @@ function assertNonEmpty(relativePath) {
   if (!stat.isFile() || stat.size === 0) throw new Error(`Required build artifact is empty or not a file: dist/${relativePath}`);
 }
 
-function normalizeCurrentCvMetrics() {
-  for (const relativePath of CV_FILES) {
-    const filePath = path.join(DIST, relativePath);
-    const current = fs.readFileSync(filePath, 'utf8');
-    const normalized = current
-      .replaceAll('25 July 2026', '29 July 2026')
-      .replaceAll('#370', '#365')
-      .replaceAll('250K+', '267K')
-      .replaceAll('460K+', '480K+')
-      .replaceAll('250,000+', '267,000+')
-      .replaceAll('460,000+', '480,000+');
-    fs.writeFileSync(filePath, normalized);
-  }
-}
-
-function normalizeIndexCopy() {
-  const filePath = path.join(DIST, 'index.html');
-  const current = fs.readFileSync(filePath, 'utf8');
-  fs.writeFileSync(filePath, current.replaceAll('Performance-aware packaging', 'Content-performance practice'));
-}
-
-function normalizeNotandiaBranding() {
-  for (const relativePath of ROOT_HTML_MIRRORS) {
-    const filePath = path.join(DIST, relativePath);
-    let html = fs.readFileSync(filePath, 'utf8');
-
-    if (relativePath !== 'mdpi-filter.html') {
-      html = html
-        .replaceAll(`href="${RETIRED_MDPI_ORG_URL}"`, `href="${NOTANDIA_CANONICAL_ROUTE}"`)
-        .replaceAll(`href="${LEGACY_MDPI_ROUTE}"`, `href="${NOTANDIA_CANONICAL_ROUTE}"`)
-        .replaceAll(LEGACY_MDPI_HEADLINE, 'Notandia works across browser and Zotero research workflows.')
-        .replaceAll(LEGACY_MDPI_BODY, CURRENT_NOTANDIA_BODY)
-        .replaceAll('Open the product repositories', 'Open the Notandia project record')
-        .replaceAll('MDPI Filter | Browser Extension', 'Notandia — formerly MDPI Filter | Browser Extension & Zotero Plugin')
-        .replaceAll('Research tooling</div><div class="v8-hero-shot-title">MDPI Filter', 'Research tooling</div><div class="v8-hero-shot-title">Notandia');
-    }
-
-    if (relativePath === 'index.html' && !html.includes('data-retired-mdpi-filter-url')) {
-      const legacyMarkers = `<!-- data-retired-mdpi-filter-url: ${RETIRED_MDPI_ORG_URL} | legacy-verification-copy: ${LEGACY_MDPI_HEADLINE} -->`;
-      html = html.replace('</body>', `${legacyMarkers}</body>`);
-    }
-    fs.writeFileSync(filePath, html);
-  }
-}
-
-function addIndexStylesheet(href) {
-  const filePath = path.join(DIST, 'index.html');
-  const current = fs.readFileSync(filePath, 'utf8');
-  if (current.includes(href)) return;
-  if (!current.includes('</head>')) throw new Error('dist/index.html has no closing head tag');
-  fs.writeFileSync(filePath, current.replace('</head>', `<link rel="stylesheet" href="${href}"></head>`));
-}
-
-function inlineIndexPresentationStyles() {
-  const filePath = path.join(DIST, 'index.html');
-  let html = fs.readFileSync(filePath, 'utf8');
-  const css = [];
-
-  for (const href of INDEX_PRESENTATION_STYLES) {
-    const link = `<link rel="stylesheet" href="${href}">`;
-    if (!html.includes(link)) throw new Error(`dist/index.html is missing expected presentation stylesheet: ${href}`);
-    const stylesheetPath = path.join(DIST, href.replace(/^\//, ''));
-    css.push(`/* ${href} */\n${fs.readFileSync(stylesheetPath, 'utf8')}`);
-    html = html.replace(link, '');
-  }
-
-  if (!html.includes('</head>')) throw new Error('dist/index.html has no closing head tag');
-  html = html.replace('</head>', `<style data-inline="portfolio-presentation">\n${css.join('\n')}\n</style></head>`);
-  fs.writeFileSync(filePath, html);
-}
-
 try {
   REQUIRED.forEach(assertNonEmpty);
-  try {
-    applyPresentationPatches(DIST);
-  } catch (error) {
-    if (!/presentation patch made no changes/.test(error.message)) throw error;
-    console.log(`Presentation patch reached an already-current CV: ${error.message}`);
-  }
-  normalizeCurrentCvMetrics();
-  normalizeIndexCopy();
-  normalizeNotandiaBranding();
-  addIndexStylesheet('/styles/portfolio-presentation-v10-mobile-fix.css');
-  addIndexStylesheet('/styles/portfolio-presentation-v11.css');
-  addIndexStylesheet('/styles/portfolio-presentation-v12.css');
-  inlineIndexPresentationStyles();
   for (const relativePath of ROOT_HTML_MIRRORS) {
     const source = path.join(DIST, relativePath);
     const destination = path.join(ROOT, relativePath);

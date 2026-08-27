@@ -1,15 +1,15 @@
 const APPLICATION_PROFILES = {
   aiSafety: {
     id: "ai-safety",
-    documentLabel: "Specialized Application CV",
-    title: "AI Evaluation & Model Behavior Specialist",
-    subtitle: "Model behavior testing · adversarial QA · evidence-bound reporting · evaluation operations",
-    summary: "AI evaluation and research-verification specialist with sustained self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. Gray Swan Proving Ground participant ranked #74 (top 6%) on 29 July 2026, with 113 platform-recorded total breaks; the same profile showed Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions. Brings eight years of auditable claim verification, paid scientific fact-checking, structured research workflows and clear evidence-bound reporting.",
+    documentLabel: "Role-family application CV",
+    title: "AI Evaluation & Model Behavior Analyst",
+    subtitle: "Model testing · adversarial QA · evidence reporting · test planning",
+    summary: "I conduct AI evaluation and research verification through sustained self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. The Gray Swan Proving Ground profile ranked #74 (top 6%) on 29 July 2026, with 113 platform-recorded total breaks; the same profile showed Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions. The work is supported by eight years of auditable claim verification, paid scientific fact-checking, structured research processes and reporting that separates evidence from inference.",
     fit: [
-      "AI evaluation and safeguards operations",
+      "AI evaluation and adversarial testing",
       "AI content red teaming and adversarial QA",
       "Model behavior, trust & safety and policy testing",
-      "Human-data quality, grading and evaluation operations"
+      "Human-data quality, grading and evaluation support"
     ],
     strengths: [
       { value: "113", label: "Platform-recorded Proving Ground breaks", detail: "#74 · top 6% · 29 July 2026" },
@@ -19,21 +19,21 @@ const APPLICATION_PROFILES = {
     ],
     experience: [
       {
-        role: "Model-Behavior Evaluator",
+        role: "Independent AI Evaluator",
         organization: "Independent practice · Gray Swan Proving Ground",
         period: "Jul 2026 — Present",
         links: [
-          { label: "Evaluation record", url: "/security.html" },
+          { label: "Evaluation record", url: "/security" },
           { label: "Public profile", url: "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf" }
         ],
         bullets: [
           "Conduct self-directed testing of LLM instruction handling, policy boundaries and edge cases across chat, image, agentic tool-use and indirect prompt-injection settings.",
           "Reached #74 on the Proving Ground leaderboard (top 6%) with 113 platform-recorded total breaks on 29 July 2026; the same profile showed Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions.",
-          "Document public evidence conservatively, separating platform-reported outcomes from independent verification, model-wide conclusions or security certification."
+          "Document reproduction steps, observed behavior and platform-reported outcomes without inflating them into model-wide conclusions or security-certification claims."
         ]
       },
       {
-        role: "Scientific Research, Fact-Checking & Website Operations Contractor",
+        role: "Science Writer & Fact-Checker / Website Manager (WordPress)",
         organization: "Entropy for Life · Independent contractor",
         period: "Jun 2023 — Present",
         links: [
@@ -48,7 +48,7 @@ const APPLICATION_PROFILES = {
         ]
       },
       {
-        role: "Founder & Research-Workflow Owner",
+        role: "Founder & Project Lead",
         organization: "Yourself to Science™",
         period: "Aug 2024 — Present",
         links: [
@@ -71,34 +71,34 @@ const APPLICATION_PROFILES = {
       {
         title: "Structured evaluation practice",
         body: "Repeated adversarial testing across instruction hierarchy, multimodal inputs, tool-use behavior and untrusted external context.",
-        link: "/security.html"
+        link: "/security"
       },
       {
-        title: "Human-subject research operations",
+        title: "Human-subject research support",
         body: "Co-developed and co-facilitated structured remote focus groups with autistic participants on sexuality and relationships, supervised by Marta Panzeri at the University of Padua DPSS.",
-        link: "/cv-editorial.html"
+        link: "/cv-editorial"
       }
     ],
     skills: [
-      ["AI safety testing", "Exploratory adversarial testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection"],
-      ["Evaluation operations", "Test planning, evidence capture, reproducibility notes, taxonomy thinking, issue classification, severity-oriented reporting and mitigation-retesting concepts"],
+      ["AI evaluation & adversarial testing", "Exploratory adversarial testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection"],
+      ["Evaluation planning & reporting", "Test planning, evidence capture, reproducibility notes, taxonomy thinking, issue classification, severity-oriented reporting and mitigation-retesting concepts"],
       ["Research verification", "Primary-source fact-checking, bibliographic research, claim decomposition, source-quality assessment, cross-source corroboration and evidence screening"],
-      ["Technical operations", "Codebase reading and behavior inspection, requirements definition, functional testing, AI-assisted implementation workflows, Git/GitHub, JSON, REST APIs, WordPress, Cloudflare Pages and AWS Lambda deployment"],
+      ["Technical delivery", "Codebase reading and behavior inspection, requirements definition, functional testing, AI-assisted implementation, Git/GitHub, JSON, REST APIs, WordPress, Cloudflare Pages and AWS Lambda deployment"],
       ["Communication", "Technical and professional English writing, concise findings, evidence limitations and explanations for mixed technical/non-technical audiences"]
     ]
   },
 
   researchQuality: {
     id: "research-quality",
-    documentLabel: "Specialized Application CV",
-    title: "Scientific AI Quality & Research Data Specialist",
-    subtitle: "Scientific evidence review · structured-data quality · provenance verification · research operations",
-    summary: "Research-verification and data-quality specialist with eight years of auditable work checking scientific, biomedical and structured-data claims. Paid fact-checker and writer for Entropy for Life, founder of an open research-participation directory with documented verification and metadata workflows, and public contributor across Wikipedia, Wikidata and Wikimedia Commons. Combines primary-source research, provenance discipline, structured-data literacy and practical technical operations.",
+    documentLabel: "Role-family application CV",
+    title: "Research Analyst | Data Quality & Information Retrieval",
+    subtitle: "Information retrieval · data quality · source verification · data visualization · research support",
+    summary: "I work across information retrieval, evidence verification and data quality, with eight years of auditable work across scientific sources, structured data and public knowledge systems. I am a paid fact-checker and writer for Entropy for Life, founder of an open research-participation directory with documented verification and metadata workflows, and a public contributor across Wikipedia, Wikidata and Wikimedia Commons. The work combines source retrieval, provenance discipline, data-quality thinking, scientific visualization and practical technical delivery.",
     fit: [
-      "Scientific and biomedical AI quality",
-      "Research operations and evidence verification",
-      "Knowledge, metadata and data-provenance quality",
-      "Human-data operations and scientific-content evaluation"
+      "Data quality and information-quality analysis",
+      "Research analysis and evidence verification",
+      "Data visualization and research support",
+      "Scientific, biomedical and AI-content quality"
     ],
     strengths: [
       { value: "8 years", label: "Auditable verification work", detail: "Public source, citation and structured-data record" },
@@ -108,7 +108,21 @@ const APPLICATION_PROFILES = {
     ],
     experience: [
       {
-        role: "Founder & Research-Workflow Owner",
+        role: "Science Writer & Fact-Checker / Website Manager (WordPress)",
+        organization: "Entropy for Life · Independent contractor",
+        period: "Jun 2023 — Present",
+        links: [
+          { label: "Author page", url: "https://entropyforlife.it/autore/mario-marcolongo/" },
+          { label: "Website", url: "https://entropyforlife.it" }
+        ],
+        bullets: [
+          "Retrieve and verify primary literature for 55+ published YouTube video projects and four co-authored articles across biology, medicine and public health.",
+          "Compare sources, identify unsupported claims and conflicting evidence, and translate findings into clear editorial recommendations with explicit uncertainty where needed.",
+          "Produce or support data analyses and visualizations and manage hosting, DNS, SSL, WordPress configuration, technical SEO and functional site changes."
+        ]
+      },
+      {
+        role: "Founder & Project Lead",
         organization: "Yourself to Science™",
         period: "Aug 2024 — Present",
         links: [
@@ -117,22 +131,8 @@ const APPLICATION_PROFILES = {
         ],
         bullets: [
           "Founded and operate an open-source research-participation directory indexing more than 55 clinical studies, biobanks, donation programs, registries and other initiatives.",
-          "Defined the inclusion model, verification workflow, provenance fields, licensing structure and machine-readable metadata requirements.",
+          "Defined inclusion and verification rules, provenance fields, licensing requirements, metadata structure and update workflows across heterogeneous institutional sources.",
           "Maintain public records through FAIRsharing and Zenodo and coordinate AI-assisted technical implementation through requirements, testing and behavior inspection."
-        ]
-      },
-      {
-        role: "Scientific Research, Fact-Checking & Website Operations Contractor",
-        organization: "Entropy for Life · Independent contractor",
-        period: "Jun 2023 — Present",
-        links: [
-          { label: "Author page", url: "https://entropyforlife.it/autore/mario-marcolongo/" },
-          { label: "Website", url: "https://entropyforlife.it" }
-        ],
-        bullets: [
-          "Verify primary literature and conduct bibliographic research for 55+ published YouTube video projects and four co-authored articles across biology, medicine and public health.",
-          "Translate complex evidence into clear editorial recommendations, identify unsupported claims and document uncertainty or disagreement between sources.",
-          "Manage hosting, DNS, SSL, WordPress configuration, technical SEO and functional site changes."
         ]
       },
       {
@@ -156,9 +156,9 @@ const APPLICATION_PROFILES = {
         link: "https://yourselftoscience.org"
       },
       {
-        title: "Public genomic data contribution",
-        body: "Personal 41× whole-genome sequencing reads and derived files released under CC0 through ENA accession PRJEB109744.",
-        link: "https://www.ebi.ac.uk/ena/browser/view/PRJEB109744"
+        title: "Scientific visualization record",
+        body: "More than 70 published biomedical, epidemiological and public-health visualizations, including interactive Tableau Public and Flourish work.",
+        link: "https://public.tableau.com/app/profile/mario.marcolongo/vizzes"
       },
       {
         title: "Evidence-synthesis training",
@@ -167,24 +167,24 @@ const APPLICATION_PROFILES = {
       }
     ],
     skills: [
-      ["Evidence verification", "Primary-source research, bibliographic search, evidence screening, claim decomposition, source-quality assessment and cross-source corroboration"],
+      ["Information retrieval", "Primary-source and bibliographic search, claim tracing, source discovery, query refinement, source-quality assessment and cross-source corroboration"],
       ["Data quality", "Structured metadata, provenance, entity reconciliation, taxonomy design, validation rules, documentation and quality-control workflows"],
-      ["Open science", "FAIRsharing, Zenodo, Wikimedia, Wikidata, ENA records, JSON-LD, RDF Turtle/VoID, OpenAPI and licensing boundaries"],
-      ["Technical operations", "Codebase reading and behavior inspection, requirements definition, functional testing, AI-assisted implementation workflows, Git/GitHub, JSON, REST APIs, WordPress, DNS/SSL and cloud deployment operations"],
-      ["Communication", "Technical and professional English writing, scientific explanation, editorial feedback and documentation for mixed audiences"]
+      ["Data visualization", "70+ published biomedical, epidemiological and public-health visualizations across Wikimedia Commons, Tableau Public and Flourish"],
+      ["Research analysis", "Claim decomposition, evidence screening, conflicting-source reconciliation, uncertainty documentation and synthesis for decision-ready outputs"],
+      ["Technical delivery", "Codebase reading and behavior inspection, requirements definition, functional testing, AI-assisted implementation, Git/GitHub, JSON, REST APIs, WordPress, DNS/SSL and cloud deployment"]
     ]
   },
 
   editorialCommunity: {
     id: "editorial-community",
-    documentLabel: "Specialized Application CV",
-    title: "Research, Editorial & Community Operations Specialist",
-    subtitle: "Evidence synthesis · editorial coordination · research programs · community engagement · AI-enabled workflows",
-    summary: "Research, editorial and community-operations specialist with paid experience supporting scientific content production, primary-source fact-checking, professional writing and web operations. Co-developed and facilitated approximately 4–5 structured remote focus-group sessions, typically lasting 1–2 hours, with autistic participants discussing sensitive sexuality and relationship topics under Marta Panzeri at the University of Padua DPSS. Also contributed evidence research to 55+ published YouTube video projects and four co-authored articles and founded an open research-participation directory covering more than 55 initiatives.",
+    documentLabel: "Role-family application CV",
+    title: "Research, Editorial & Community Coordinator",
+    subtitle: "Evidence synthesis · editorial coordination · research participation · community engagement · AI-assisted tools",
+    summary: "I coordinate research, editorial and community work with paid experience supporting scientific content production, primary-source fact-checking, professional writing and WordPress website management. I co-developed and facilitated approximately 4–5 structured remote focus-group sessions, typically lasting 1–2 hours, with autistic participants discussing sensitive sexuality and relationship topics under Marta Panzeri at the University of Padua DPSS. I also contributed evidence research to 55+ published YouTube video projects and four co-authored articles and founded an open research-participation directory covering more than 55 initiatives.",
     fit: [
-      "Assistant editor and editorial operations",
+      "Assistant editor and editorial-production support",
       "Evidence-synthesis program coordination",
-      "Research community engagement and learning operations",
+      "Research community engagement and learning-program support",
       "Scientific communications and publication support"
     ],
     strengths: [
@@ -195,7 +195,7 @@ const APPLICATION_PROFILES = {
     ],
     experience: [
       {
-        role: "Scientific Research, Fact-Checking & Website Operations Contractor",
+        role: "Science Writer & Fact-Checker / Website Manager (WordPress)",
         organization: "Entropy for Life · Independent contractor",
         period: "Jun 2023 — Present",
         links: [
@@ -210,7 +210,7 @@ const APPLICATION_PROFILES = {
         ]
       },
       {
-        role: "Volunteer Focus-Group Co-Facilitator & Research Operations Contributor",
+        role: "Volunteer Research Assistant & Focus-Group Co-Facilitator",
         organization: "Department of Developmental Psychology and Socialisation (DPSS), University of Padua · supervised by Marta Panzeri",
         period: "Nov 2022 — 2025",
         links: [
@@ -221,11 +221,11 @@ const APPLICATION_PROFILES = {
         bullets: [
           "Served as lead or co-facilitator across approximately 4–5 recorded Zoom focus-group sessions, typically lasting 1–2 hours, with autistic participants discussing sensitive sexuality and relationship topics.",
           "Co-developed the protocol, including pseudonymous naming, explicit recorded consent, optional captions and written-chat participation, timed turn-taking, scripted prompts, recording boundaries and two-person facilitation handoffs.",
-          "Supported participant recruitment, bibliographic research, technical preparation and protocol feedback from an autistic perspective; coordinated with Marta Panzeri, researchers and a second autistic volunteer facilitator. Participant information remains confidential."
+          "Supported participant recruitment, bibliographic research and technical preparation; contributed to structuring participant experience and accessibility considerations and coordinated with Marta Panzeri, researchers and a second volunteer facilitator. Participant information remains confidential."
         ]
       },
       {
-        role: "Founder & Research-Workflow Owner",
+        role: "Founder & Project Lead",
         organization: "Yourself to Science™",
         period: "Aug 2024 — Present",
         links: [
@@ -252,35 +252,35 @@ const APPLICATION_PROFILES = {
       },
       {
         title: "Sensitive remote research facilitation",
-        body: "Structured moderation, recruitment and Zoom-session procedures for autistic participants discussing sensitive topics; attribution remains private pending permission.",
-        link: "/cv-editorial.html"
+        body: "Structured moderation, recruitment and Zoom-session procedures for autistic participants discussing sensitive topics, with public attribution to Marta Panzeri and the University of Padua DPSS; participant information remains confidential.",
+        link: "/cv-editorial"
       }
     ],
     skills: [
-      ["Editorial operations", "Evidence research, claim checking, source documentation, editorial feedback, content preparation and production troubleshooting"],
+      ["Editorial production support", "Evidence research, claim checking, source documentation, editorial feedback, content preparation and production troubleshooting"],
       ["Project coordination", "Independent prioritization, overlapping workstreams, issue tracking, progress documentation, release coordination and follow-through"],
-      ["Community engagement", "Participant recruitment, sensitive-topic moderation, neurodiversity-aware communication, two-person facilitation handoffs and support for distributed communities"],
-      ["Digital communications", "Professional and technical writing, WordPress publishing, website operations, technical SEO and content presentation"],
-      ["AI-enabled workflows", "Experimenting with AI for research, drafting, implementation support, quality checks and workflow acceleration while retaining human verification"]
+      ["Community engagement", "Participant recruitment, sensitive-topic moderation, accessibility-aware communication, two-person facilitation handoffs and support for distributed communities"],
+      ["Digital communications", "Professional and technical writing, WordPress publishing, website maintenance, technical SEO and content presentation"],
+      ["AI-assisted tools", "Use AI for research, drafting, implementation support and quality checks, with human verification of results"]
     ]
   },
 
   integrity: {
     id: "knowledge-integrity",
-    documentLabel: "Specialized Application CV",
-    title: "Trust, Safety & Knowledge Integrity Specialist",
-    subtitle: "Open-source research · source provenance · content integrity · structured-data verification · adversarial analysis",
-    summary: "Knowledge-integrity and open-source research specialist with eight years of auditable public work across Wikipedia, Wikidata and Wikimedia Commons, paid scientific fact-checking for a large science-communication project, and sustained adversarial testing of AI systems. Experience includes source provenance, rights and authorship verification, public-record reconciliation, health-information monitoring, structured metadata and evidence-bound reporting. Best suited to analyst and operations roles in trust & safety, content integrity, investigations, knowledge quality and abuse-risk research rather than penetration-testing engineering.",
+    documentLabel: "Role-family application CV",
+    title: "Content Integrity & Research Analyst",
+    subtitle: "Public-source research · source verification · content integrity · structured-data review · adversarial analysis",
+    summary: "I conduct content-integrity and research analysis through eight years of auditable public work across Wikipedia, Wikidata and Wikimedia Commons, paid scientific fact-checking for a science-communication project and sustained adversarial testing of AI systems. Experience includes source provenance, rights and authorship verification, public-record reconciliation, health-information monitoring, structured metadata and reporting that separates evidence from inference. The strongest fit is analyst and support roles in trust & safety, content integrity, investigations, knowledge quality and abuse-risk research rather than penetration-testing engineering.",
     fit: [
-      "Trust & safety and content-integrity operations",
-      "Knowledge integrity and public-record investigations",
+      "Trust & safety and content-integrity analysis",
+      "Source quality and public-record investigations",
       "OSINT research and source-provenance analysis",
       "AI abuse, policy and adversarial-analysis support"
     ],
     strengths: [
       { value: "8 years", label: "Public source-work record", detail: "Wikipedia, Wikidata and Wikimedia Commons" },
       { value: "4,317", label: "Auditable contributions", detail: "Claims, citations, metadata and media records" },
-      { value: "110", label: "Platform-recorded Proving Ground breaks", detail: "#75 · top 6% · four evaluation surfaces" },
+      { value: "113", label: "Platform-recorded Proving Ground breaks", detail: "#74 · top 6% · 29 July 2026" },
       { value: "55+", label: "Scientific productions checked", detail: "Health and biology evidence verification" }
     ],
     experience: [
@@ -290,7 +290,7 @@ const APPLICATION_PROFILES = {
         period: "Mar 2018 — Present",
         links: [
           { label: "Public contribution record", url: "https://commons.wikimedia.org/wiki/Special:CentralAuth/Digressivo" },
-          { label: "Integrity work samples", url: "/integrity.html" }
+          { label: "Integrity work samples", url: "/integrity" }
         ],
         bullets: [
           "Check claims and citations, reconcile conflicting public sources, improve structured metadata and document provenance across public knowledge projects.",
@@ -299,7 +299,7 @@ const APPLICATION_PROFILES = {
         ]
       },
       {
-        role: "Scientific Research, Fact-Checking & Website Operations Contractor",
+        role: "Science Writer & Fact-Checker / Website Manager (WordPress)",
         organization: "Entropy for Life · Independent contractor",
         period: "Jun 2023 — Present",
         links: [
@@ -313,16 +313,16 @@ const APPLICATION_PROFILES = {
         ]
       },
       {
-        role: "Model-Behavior Evaluator",
+        role: "Independent AI Evaluator",
         organization: "Independent practice · Gray Swan Proving Ground",
         period: "Jul 2026 — Present",
         links: [
-          { label: "Evaluation record", url: "/security.html" },
+          { label: "Evaluation record", url: "/security" },
           { label: "Public profile", url: "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf" }
         ],
         bullets: [
           "Test instruction hierarchy, policy boundaries, indirect prompt injection and agentic tool-use behavior across repeated adversarial scenarios.",
-          "Reached #75 on the Proving Ground leaderboard (top 6%) with 110 platform-recorded total breaks, while documenting that the four visible area counters sum to 109 and keeping Arena metrics separate.",
+          "Reached #74 on the Proving Ground leaderboard (top 6%) with 113 platform-recorded total breaks on 29 July 2026; the same profile showed Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions.",
           "Apply threat-oriented thinking and evidence capture to ambiguous system behavior without claiming application-security or penetration-testing expertise."
         ]
       }
@@ -345,8 +345,8 @@ const APPLICATION_PROFILES = {
       }
     ],
     skills: [
-      ["Open-source research", "Advanced web and scholarly search, public-record triangulation, archival comparison, source provenance and cross-source corroboration"],
-      ["Knowledge integrity", "Claim decomposition, citation checking, entity reconciliation, structured metadata, rights context and evidence-bound reporting"],
+      ["Public-source research", "Advanced web and scholarly search, public-record triangulation, archival comparison, source provenance and cross-source corroboration"],
+      ["Source verification & integrity", "Claim decomposition, citation checking, entity reconciliation, structured metadata, rights context and reporting that separates evidence from inference"],
       ["Trust & safety analysis", "Content-risk thinking, ambiguous-case investigation, taxonomy development, policy-boundary testing and escalation-ready documentation"],
       ["AI adversarial analysis", "Prompt and jailbreak analysis, indirect prompt injection, multi-turn behavior, multimodal inputs and agentic tool-use testing"],
       ["Communication", "Concise investigative writing, uncertainty communication, reproducibility notes and explanations for technical and non-technical audiences"]
@@ -355,7 +355,7 @@ const APPLICATION_PROFILES = {
 
   shared: {
     name: "Mario Marcolongo",
-    location: "Italy · EU work authorization · Open to worldwide relocation and international B2B contracting",
+    location: "Italy · EU/EEA work-authorised · Open to sponsored international relocation and B2B engagements",
     email: "me@mariomarcolongo.com",
     website: "https://mariomarcolongo.com",
     linkedin: "https://www.linkedin.com/in/mario-marcolongo",
@@ -363,7 +363,7 @@ const APPLICATION_PROFILES = {
     orcid: "https://orcid.org/0000-0003-2846-7115",
     language: "Italian — native. English — C1 overall (EF SET 68/100); advanced technical reading and professional/technical writing.",
     education: [
-      "Information Technology — Open UAS Path Studies (120 ECTS) — Metropolia University of Applied Sciences, Aug 2026–Present; bachelor's-level ICT studies in software development, databases, Unix/Linux, data structures and algorithms, networking, cloud computing, cybersecurity and applied AI",
+      "Information Technology — Open UAS Path Studies (120 ECTS) — Metropolia University of Applied Sciences, Aug 2026–Present; bachelor's-level ICT studies in software development, databases, Unix/Linux, data structures and algorithms, networking, cloud computing, cybersecurity and applied AI. Eligible to apply to the BEng IT programme after completing 120 ECTS (admission not yet granted).",
       "GALENOS Crowd Evidence Synthesis Training — Cochrane Crowd & GALENOS, 2026",
       "Career Essentials in Generative AI — Microsoft & LinkedIn, 2024",
       "EF SET English Certificate — 68/100, C1 overall, 2024"

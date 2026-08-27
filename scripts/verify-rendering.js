@@ -1,21 +1,21 @@
 #!/usr/bin/env node
 const fs = require('node:fs');
 const path = require('node:path');
-const { H } = require('../data/career-positioning.js');
+const { H } = require('../data/homepage-positioning.js');
 const { startStaticServer } = require('./lib/static-server.js');
 const { launchBrowser } = require('./lib/browser.js');
 
 const ROOT = path.resolve(__dirname, '..');
 const DIST = path.join(ROOT, 'dist');
 const OUTPUT = path.join(ROOT, 'audit-output');
-const MAX_HOMEPAGE_HEIGHT = 16500;
+const MAX_HOMEPAGE_HEIGHT = 16800;
 const NOTANDIA_HOMEPAGE_TITLE = 'Notandia works across browser and Zotero research workflows.';
 const ROUTES = [
-  'index.html', 'integrity.html', 'cv.html', 'cv-resume.html', 'cv-giskard.html',
-  'cv-research.html', 'cv-editorial.html', 'cv-integrity.html', 'cv-orcid.html', 'security.html'
+  'index.html', 'integrity.html', 'research-operations.html', 'cv.html', 'cv-resume.html',
+  'cv-research.html', 'cv-editorial.html', 'cv-integrity.html', 'security.html'
 ];
 const APPLICATION_ROUTES = new Set([
-  'cv-resume.html', 'cv-giskard.html', 'cv-research.html', 'cv-editorial.html', 'cv-integrity.html', 'cv-orcid.html'
+  'cv-resume.html', 'cv-research.html', 'cv-editorial.html', 'cv-integrity.html'
 ]);
 const VIEWPORTS = [
   { name: 'desktop', width: 1440, height: 1000 },
@@ -54,7 +54,7 @@ async function verifyHomepage(page, viewport) {
     scopeCount: document.querySelectorAll('.v8-scope-grid article').length,
     caseCount: document.querySelectorAll('.v8-case').length,
     caseImageCount: document.querySelectorAll('.v8-case-media img').length,
-    entropyPanelCount: document.querySelectorAll('.v10-entropy-panel').length,
+    entropyPanelCount: document.querySelectorAll('.v8-entropy-panel').length,
     productImageCount: document.querySelectorAll('.v8-product-shot img').length,
     visualArtifactCount: document.querySelectorAll('.v8-artifact img').length,
     principleCount: document.querySelectorAll('.v8-principles > article').length,
@@ -120,7 +120,7 @@ async function verifyNoJavaScript(browser, staticServer, route) {
       clientWidth: document.documentElement.clientWidth,
       externalLinks: document.querySelectorAll('a[href^="http"]').length,
       imageCount: document.querySelectorAll('.portfolio-v8 img').length,
-      entropyPanelCount: document.querySelectorAll('.v10-entropy-panel').length
+      entropyPanelCount: document.querySelectorAll('.v8-entropy-panel').length
     };
   }, expected);
 

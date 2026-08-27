@@ -1,42 +1,42 @@
 {
   "$schema": "https://agent-skills.org/schema/v0.2.0/index.json",
-  "name": "Mario Marcolongo Evidence-Bound Professional Skills",
-  "version": "2026.07.21",
+  "name": "Mario Marcolongo Source-Backed Professional Skills",
+  "version": "2026.08.26",
   "skills": [
     {
       "id": "ai-safety-model-behavior",
       "name": "AI Safety & Model Behavior",
       "description": "Self-directed adversarial testing across chat, image, agentic tool-use and indirect prompt-injection challenges, with conservative interpretation of platform-reported outcomes.",
       "category": "ai-safety",
-      "referenceUrl": "https://mariomarcolongo.com/security.html"
+      "referenceUrl": "https://mariomarcolongo.com/security"
     },
     {
-      "id": "research-editorial-community-operations",
-      "name": "Research, Editorial & Community Operations",
-      "description": "Scientific editorial support, public writing, evidence-synthesis preparation, research facilitation, community-facing protocols and technical publishing operations.",
-      "category": "research-operations",
-      "referenceUrl": "https://mariomarcolongo.com/cv-editorial.html"
+      "id": "research-editorial-community-coordination",
+      "name": "Research, Editorial & Community Coordination",
+      "description": "Scientific editorial support, public writing, evidence-synthesis preparation, research facilitation, community-facing protocols and website delivery.",
+      "category": "research-support",
+      "referenceUrl": "https://mariomarcolongo.com/research-operations"
     },
     {
-      "id": "knowledge-integrity-investigations",
-      "name": "Knowledge Integrity, Trust & Investigations",
-      "description": "Source provenance, public-record research, cross-source corroboration, entity reconciliation, rights context and evidence-bound investigative reporting.",
-      "category": "trust-integrity",
-      "referenceUrl": "https://mariomarcolongo.com/integrity.html"
+      "id": "source-quality-investigations",
+      "name": "Source Quality, Trust & Investigations",
+      "description": "Source provenance, public-record research, cross-source corroboration, entity reconciliation, rights context and reporting that separates evidence from inference.",
+      "category": "source-quality",
+      "referenceUrl": "https://mariomarcolongo.com/integrity"
     },
     {
       "id": "open-science-data-quality",
       "name": "Open Science & Data Quality",
       "description": "Scientific evidence verification, structured metadata, provenance, taxonomy and validation workflows across Wikimedia, Wikidata, FAIRsharing, Zenodo and ENA records.",
       "category": "data-quality",
-      "referenceUrl": "https://mariomarcolongo.com/cv-research.html"
+      "referenceUrl": "https://mariomarcolongo.com/cv-research"
     },
     {
-      "id": "code-literate-technical-operations",
-      "name": "Code-Literate Technical Operations",
-      "description": "Requirements definition, codebase reading and behavior inspection, functional testing, issue diagnosis, deployment operations and AI-assisted implementation workflows; not independent software development.",
-      "category": "technical-operations",
-      "referenceUrl": "https://mariomarcolongo.com/cv.html"
+      "id": "technical-delivery",
+      "name": "Requirements, Testing & Technical Delivery",
+      "description": "Requirements definition, codebase reading and behavior inspection, functional testing, issue diagnosis, deployment and AI-assisted implementation; not independent software development.",
+      "category": "technical-delivery",
+      "referenceUrl": "https://mariomarcolongo.com/cv"
     }
   ]
 }

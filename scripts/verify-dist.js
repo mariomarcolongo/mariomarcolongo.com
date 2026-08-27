@@ -1,7 +1,11 @@
 #!/usr/bin/env node
 const fs = require('node:fs');
 const path = require('node:path');
-const { D, H, P } = require('../data/career-positioning.js');
+const { D, P } = require('../data/career-positioning.js');
+const homepage = require('../data/homepage-positioning.js');
+const { H } = homepage;
+const sourceDossier = require('../data/source.js');
+const baseHomepage = require('../data/portfolio-human.js');
 const { applyNotandiaBranding } = require('../data/notandia-branding.js');
 const {
   generateLlmsTxt,
@@ -9,7 +13,7 @@ const {
   generateCvLlmTxt
 } = require('./lib/dossier-generators.js');
 
-applyNotandiaBranding({ D, H, P });
+applyNotandiaBranding({ D, P });
 
 const ROOT = path.resolve(__dirname, '..');
 const ENTROPY_WORK_URL = 'https://entropyforlife.it/mario-marcolongo-entropy-for-life/';
@@ -19,6 +23,10 @@ function fail(message) {
   failures += 1;
   console.error(`FAIL: ${message}`);
 }
+
+if (homepage.D === sourceDossier || H === baseHomepage) {
+  fail('Homepage positioning must use fresh source records rather than mutable CV-route singletons.');
+}
 function pass(message) { console.log(`PASS: ${message}`); }
 function read(relativePath) {
   const full = path.join(ROOT, relativePath);
@@ -26,6 +34,9 @@ function read(relativePath) {
   const value = fs.readFileSync(full, 'utf8');
   if (!value.length) fail(`Empty file: ${relativePath}`);
   return value;
+}
+function assertMissing(relativePath, label) {
+  if (fs.existsSync(path.join(ROOT, relativePath))) fail(`${label} must not exist: ${relativePath}`);
 }
 function normalizeHtmlText(content) {
   const entities = new Map([
@@ -67,11 +78,53 @@ for (const [name, expected] of Object.entries(canonical)) {
 }
 pass('Canonical dossier mirrors checked');
 
+const robots = read('dist/robots.txt');
+for (const crawler of ['OAI-SearchBot', 'GPTBot', 'ChatGPT-User', 'OAI-AdsBot', 'User-agent: *']) {
+  assertContains(robots, crawler, 'dist/robots.txt');
+}
+assertContains(robots, 'Content-Signal: ai-train=yes, search=yes, ai-input=yes', 'dist/robots.txt');
+assertContains(robots, 'Allow: /', 'dist/robots.txt');
+
+const discoveryCatalog = read('dist/.well-known/api-catalog');
+for (const route of [
+  '/cv-resume', '/cv-research', '/cv-editorial', '/cv-integrity', '/cv',
+  '/integrity', '/research-operations', '/llms.txt', '/llms-full.txt', '/cv-llm.txt'
+]) assertContains(discoveryCatalog, route, 'dist/.well-known/api-catalog');
+
+const redirects = read('dist/_redirects');
+assertContains(redirects, '/cv-giskard.html      /cv-resume         301', 'dist/_redirects');
+assertContains(redirects, '/cv-orcid.html        /cv-research       301', 'dist/_redirects');
+assertMissing('dist/cv-giskard.html', 'Company-specific CV route');
+assertMissing('dist/cv-orcid.html', 'Company-specific CV route');
+pass('Explicit crawler access and durable CV discovery checked');
+
 const pages = {
-  index: read('dist/index.html'), notandia: read('dist/notandia.html'), integrityPage: read('dist/integrity.html'), cv: read('dist/cv.html'),
+  index: read('dist/index.html'), notandia: read('dist/notandia.html'), integrityPage: read('dist/integrity.html'), researchOperations: read('dist/research-operations.html'), cv: read('dist/cv.html'),
   resume: read('dist/cv-resume.html'), research: read('dist/cv-research.html'), editorial: read('dist/cv-editorial.html'),
   integrityCv: read('dist/cv-integrity.html'), security: read('dist/security.html')
 };
+
+const canonicalRoutes = {
+  index: 'https://mariomarcolongo.com/',
+  notandia: 'https://mariomarcolongo.com/notandia',
+  integrityPage: 'https://mariomarcolongo.com/integrity',
+  researchOperations: 'https://mariomarcolongo.com/research-operations',
+  cv: 'https://mariomarcolongo.com/cv',
+  resume: 'https://mariomarcolongo.com/cv-resume',
+  research: 'https://mariomarcolongo.com/cv-research',
+  editorial: 'https://mariomarcolongo.com/cv-editorial',
+  integrityCv: 'https://mariomarcolongo.com/cv-integrity',
+  security: 'https://mariomarcolongo.com/security'
+};
+
+for (const [name, canonicalUrl] of Object.entries(canonicalRoutes)) {
+  const html = pages[name];
+  const markdownUrl = canonicalUrl.endsWith('/') ? `${canonicalUrl}index.md` : `${canonicalUrl}.md`;
+  assertContains(html, `<link rel="canonical" href="${canonicalUrl}"`, `dist/${name}.html`);
+  assertContains(html, `<link rel="alternate" type="text/markdown" href="${markdownUrl}"`, `dist/${name}.html`);
+  assertNotContains(html, `rel="canonical" href="${canonicalUrl}.html"`, `dist/${name}.html`);
+}
+pass('Canonical and Markdown-alternate routes checked');
 
 for (const [name, html] of Object.entries(pages)) {
   if (!html) continue;
@@ -100,12 +153,12 @@ for (const needle of [
   ...H.applicationDocuments.map((item) => item.title),
   'data-testid="human-capabilities"', 'data-testid="human-work"', 'data-testid="human-documents"',
   'Where I can contribute.', 'Selected work, shown through the actual output.',
-  'Start with the role you are hiring for.', 'AI evaluation and scientific evidence roles.',
-  'Zotero plugin', 'Protein by bodyweight by country', '#74 on the Proving Ground,',
+  'Start with the role you are hiring for.', 'Data quality, information retrieval and AI evaluation roles.',
+  'Zotero research workflows', 'Protein by bodyweight by country', '#74 on the Proving Ground,',
   '267K', '36.5M', '80', '55 YouTube videos', '21 short-form pieces',
-  'Research, content and website work', 'Official evidence index',
+  'Research, content & website maintenance', 'Official work record published by Entropy for Life',
   'Platform metrics describe the production environment',
-  'Research and fact-checking', 'Content production', 'Website design and management',
+  'Primary literature and scientific fact-checking', 'Scripts, visuals, slides and selected packaging', 'WordPress, responsive design, publishing and hosting',
   'Nebula Genomics', 'consumer-genomics privacy',
   ENTROPY_WORK_URL, 'Official work record published by Entropy for Life'
 ]) assertContains(indexText, needle, 'dist/index.html');
@@ -130,9 +183,9 @@ assertContains(index, 'class="portfolio-v8"', 'dist/index.html');
 assertContains(index, 'class="v8-hero-gallery"', 'dist/index.html');
 assertContains(index, 'class="v8-case-stack"', 'dist/index.html');
 assertContains(index, 'class="v8-product"', 'dist/index.html');
-assertContains(index, 'v10-entropy-panel', 'dist/index.html');
-assertContains(index, 'v12-platform-proof', 'dist/index.html');
-const currentGraySwanCaption = '<span class="v10-gs-caption"><span><strong>#74</strong><small>Proving Ground</small></span><span><strong>Top 6%</strong><small>Global percentile</small></span><span><strong>113</strong><small>Total breaks</small></span><span><strong>#365</strong><small>Arena rank</small></span></span>';
+assertContains(index, 'v8-entropy-panel', 'dist/index.html');
+assertContains(index, 'v8-gs-caption', 'dist/index.html');
+const currentGraySwanCaption = '<span class="v8-gs-caption"><span><strong>#74</strong><small>Proving Ground</small></span><span><strong>Top 6%</strong><small>Global percentile</small></span><span><strong>113</strong><small>Total breaks</small></span><span><strong>#365</strong><small>Arena rank</small></span></span>';
 assertContains(index, currentGraySwanCaption, 'dist/index.html Gray Swan caption');
 for (const staleCaption of ['<span class="v10-gs-caption"><span><strong>#75</strong>', '<span><strong>110</strong><small>Total breaks</small></span>', '<span><strong>#371</strong><small>Arena rank</small></span>']) {
   assertNotContains(index, staleCaption, 'dist/index.html Gray Swan caption');
@@ -143,7 +196,7 @@ for (const media of [
   '/media/work/mdpi-filter-2-800.webp', '/media/work/wikimedia-clinical-overlap.svg',
   '/media/work/tableau-mortality-800.webp', '/media/work/flourish-oesophageal-cancer.svg'
 ]) assertContains(index, media, 'dist/index.html');
-assertContains(index, 'href="/notandia.html"', 'dist/index.html');
+assertContains(index, 'href="/notandia"', 'dist/index.html');
 assertContains(indexText, 'Notandia', 'dist/index.html');
 assertContains(index, 'https://jnton.github.io/protein-by-bodyweight-country/', 'dist/index.html');
 pass('Artifact-led homepage checked');
@@ -152,7 +205,7 @@ const applicationProfiles = [
   ['resume', P.aiSafety, P.aiSafety.title],
   ['research', P.researchQuality, P.researchQuality.title],
   ['editorial', P.editorialCommunity, P.editorialCommunity.title],
-  ['integrityCv', P.integrity, 'Investigations & Knowledge Integrity Analyst']
+  ['integrityCv', P.integrity, 'Investigations & Source Quality Analyst']
 ];
 for (const [name, profile, expectedTitle] of applicationProfiles) {
   const html = pages[name];
@@ -165,6 +218,12 @@ for (const [name, profile, expectedTitle] of applicationProfiles) {
   assertContains(html, ENTROPY_WORK_URL, `dist/${name}.html`);
   assertContains(text, 'Official Entropy for Life work record', `dist/${name}.html`);
   assertContains(text, '80', `dist/${name}.html`);
+  assertContains(html, 'data-ats-layout="semantic-two-page"', `dist/${name}.html`);
+  assertContains(html, 'aria-label=', `dist/${name}.html`);
+  for (const heading of ['Relevant experience', 'Capabilities', 'Education & credentials']) {
+    assertContains(text, heading, `dist/${name}.html ATS structure`);
+  }
+  assertContains(html, '<ul class="application-list">', `dist/${name}.html ATS structure`);
 }
 
 const resumeText = normalizeHtmlText(pages.resume);
@@ -173,12 +232,12 @@ for (const needle of ['consumer-genomics privacy', 'archival source recovery', '
 }
 
 const researchText = normalizeHtmlText(pages.research);
-for (const needle of ['public-source and structured-data work', 'corporate and public-record reconciliation', 'Evidence verification and OSINT']) {
+for (const needle of ['public-source and structured-data work', 'corporate and public-record reconciliation', 'Information retrieval']) {
   assertContains(researchText, needle, 'dist/cv-research.html');
 }
 
 const editorialText = normalizeHtmlText(pages.editorial);
-for (const needle of ['long-running public-source and structured-data work', 'Public-source investigation and archival verification', 'Editorial operations and OSINT']) {
+for (const needle of ['long-running public-source and structured-data work', 'Public-source investigation and archival verification', 'Editorial production, localization & public-source research']) {
   assertContains(editorialText, needle, 'dist/cv-editorial.html');
 }
 for (const needle of ['Marta Panzeri', 'Department of Developmental Psychology and Socialisation', '36.5M', 'click-through rate', 'Performance-aware content packaging']) {
@@ -186,10 +245,10 @@ for (const needle of ['Marta Panzeri', 'Department of Developmental Psychology a
 }
 
 const integrityCvText = normalizeHtmlText(pages.integrityCv);
-for (const needle of ['Investigations & Knowledge Integrity Analyst', 'Sensitive Research Operations Contributor', 'Trust & Safety-adjacent analysis', 'Consumer-genomics privacy and corporate-source reconciliation']) {
+for (const needle of ['Investigations & Source Quality Analyst', 'Volunteer Research Assistant & Focus-Group Co-Facilitator', 'Trust & Safety-adjacent analysis', 'Consumer-genomics privacy and corporate-source reconciliation']) {
   assertContains(integrityCvText, needle, 'dist/cv-integrity.html');
 }
-assertNotContains(integrityCvText, 'Trust, Safety & Knowledge Integrity Specialist', 'dist/cv-integrity.html');
+assertNotContains(integrityCvText, 'Trust, Safety & Source Quality Analyst', 'dist/cv-integrity.html');
 pass('Four specialized application CVs and role-specific OSINT weighting checked');
 
 const integrityText = normalizeHtmlText(pages.integrityPage);
@@ -200,15 +259,15 @@ for (const needle of [
   'Biographical source-quality and notability review',
   "Fascist-era carpenter's pencil", 'Additional provenance and rights work.',
   'H5N1 situation tracker', 'Yourself to Science: verifying participation opportunities',
-  'Wikimedia and Wikidata: auditable source and metadata work', 'Evidence boundary', 'Ethical and legal boundary'
+  'Wikimedia and Wikidata: auditable source and metadata work', 'Evidence limits', 'Ethical and legal boundary'
 ]) assertContains(integrityText, needle, 'dist/integrity.html');
 pass('Knowledge-integrity work sample checked');
 
 const masterText = normalizeHtmlText(pages.cv);
 for (const needle of [
   'Master CV & Evidence Record', 'not presented as an independent software developer', 'AI Safety',
-  'Research & Data Quality', 'Editorial & Community', 'Trust & Knowledge Integrity', 'Marta Panzeri',
-  '36.5M', '80', 'Scientific Content Quality & Operations Contractor',
+  'Research & Data Quality', 'Editorial & Community', 'Trust & Source Quality', 'Marta Panzeri',
+  '36.5M', '80', 'Science Writer & Fact-Checker / Website Manager (WordPress)',
   'Consumer-genomics privacy record', 'Investigation work samples',
   'Official Entropy for Life work record', ENTROPY_WORK_URL,
   'Notandia — formerly MDPI Filter'
@@ -225,10 +284,10 @@ for (const needle of [
   'tracking boundary resilience across major model architecture updates',
   'ensuring research directories and data pipelines are resilient', 'Model Behavior & Safety Case Study'
 ]) assertNotContains(securityText, needle, 'dist/security.html');
-pass('Evaluation record evidence boundary checked');
+pass('Evaluation record evidence limits checked');
 
 const allGenerated = normalizeHtmlText(Object.values(pages).join('\n')) + Object.values(canonical).join('\n');
-assertContains(allGenerated, D.identity.jobTitle, 'Generated outputs');
+assertContains(allGenerated, D.identity.professionalHeadline, 'Generated outputs');
 assertContains(allGenerated, D.identity.secondaryTitle, 'Generated outputs');
 assertContains(allGenerated, ENTROPY_WORK_URL, 'Generated outputs');
 assertContains(allGenerated, 'Notandia', 'Generated outputs');

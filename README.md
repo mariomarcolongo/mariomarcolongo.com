@@ -1,7 +1,7 @@
 # Mario Marcolongo — Portfolio & Application CV System
 
-> **AI Evaluation & Research Operations Specialist**  
-> Model Behavior · Scientific Evidence · Knowledge Integrity · Open Science & Data Quality
+> **Data Quality & Information Retrieval | AI Evaluation & Adversarial Testing | Scientific Fact-Checking & Evidence Synthesis**<br>
+> Information retrieval · evidence synthesis · AI evaluation · source verification
 
 Live website: [mariomarcolongo.com](https://mariomarcolongo.com)
 
@@ -9,37 +9,37 @@ Live website: [mariomarcolongo.com](https://mariomarcolongo.com)
 
 This repository generates Mario Marcolongo's public portfolio, evidence record, work-sample pages, machine-readable dossiers and role-specific application CVs.
 
-The public positioning is intentionally ambitious but evidence-bound. It presents current strengths in exploratory AI evaluation, paid scientific verification, research/product operations and knowledge integrity without claiming independent software-development, penetration-testing or senior red-team-engineering experience that has not yet been demonstrated.
+The public positioning is intentionally ambitious and source-backed. It presents current strengths in exploratory AI evaluation, paid scientific verification, research and product delivery, and source-quality investigation without claiming independent software-development, penetration-testing or senior red-team-engineering experience that has not yet been demonstrated.
 
 ## Career hierarchy
 
 The homepage prioritizes the evidence most relevant to higher-upside roles and to realistic paths toward them:
 
-1. **AI evaluation and model behavior** — exploratory adversarial testing, safeguards support, evaluation operations and evidence-bound reporting.
-2. **Scientific AI quality and research data** — primary-source verification, provenance, metadata, domain-expert review and research operations.
-3. **Trust, safety and knowledge integrity** — source provenance, public-record investigation, structured-data integrity and OSINT support.
-4. **Research, editorial and community operations** — a credible bridge path for evidence-synthesis, editorial-production and participant-facing roles.
+1. **AI evaluation and model behavior** — exploratory adversarial testing, evaluation support, test planning and evidence reporting.
+2. **Scientific AI quality and research data** — primary-source verification, provenance, metadata, domain-expert review and research support.
+3. **Trust, safety and source quality** — source provenance, public-record investigation, structured-data review and public-source research support.
+4. **Research, editorial and community coordination** — a credible bridge path for evidence synthesis, editorial production and participant-facing roles.
 
-Longer-term targets include automated evaluation, AI-safety program or technical operations, evaluation infrastructure and higher-responsibility trust/integrity work. Engineering-heavy roles remain a development target requiring independently understood Python, software-testing and security experience.
+Longer-term targets include automated evaluation, AI-safety programs, evaluation infrastructure and higher-responsibility trust and safety work. Engineering-heavy roles remain a development target requiring independently understood Python, software-testing and security experience.
 
 ## Public routes
 
 - **Portfolio (`/`)** — readable metric-led evidence cards, three principal cases, supporting products and curated data artifacts, an explicit high-autonomy working profile, concise experience and targeted CV selection.
 - **Notandia / MDPI Filter continuity (`/mdpi-filter.html`)** — stable canonical record connecting the former MDPI Filter branding and repositories to the current Notandia browser-extension and Zotero projects.
 - **AI Evaluation Record (`/security.html`)** — scope, methodology, platform-reported Gray Swan activity, the live participant profile as the primary destination, dated evidence and explicit limitations.
-- **Knowledge Integrity Work Samples (`/integrity.html`)** — provenance, health-information monitoring, entity reconciliation and structured-data cases.
+- **Source Verification Work Samples (`/integrity.html`)** — provenance, health-information monitoring, entity reconciliation and structured-data cases.
+- **Research Operations Record (`/research-operations.html`)** — source-backed public case study of accessibility-aware qualitative research support and facilitation.
 - **AI Evaluation & Model Behavior CV (`/cv-resume.html`)** — two-page application document.
 - **Scientific AI Quality & Research Data CV (`/cv-research.html`)** — two-page application document.
-- **Trust, Safety & Knowledge Integrity CV (`/cv-integrity.html`)** — two-page application document.
-- **Research, Editorial & Community Operations CV (`/cv-editorial.html`)** — two-page bridge document.
-- **ORCID Member Support CV (`/cv-orcid.html`)** — unlisted, noindex application-specific two-page document.
+- **Trust, Safety & Source Quality CV (`/cv-integrity.html`)** — two-page application document.
+- **Research, Editorial & Community Coordinator CV (`/cv-editorial.html`)** — two-page bridge document.
 - **Master CV (`/cv.html`)** — comprehensive evidence archive; not the default application attachment.
 
-All five specialized application CVs are verified as exactly two A4 pages. The master CV is intentionally comprehensive and may be longer.
+All four role-based application CVs are verified as exactly two A4 pages. The master CV is intentionally comprehensive and may be longer. Former company-specific CV URLs redirect to the closest durable role-based document rather than remaining independently maintained.
 
 ## Notandia / MDPI Filter continuity
 
-Notandia is the public-facing rebrand and continuation of MDPI Filter. The stable portfolio route `/mdpi-filter.html` is used as the recruiter-facing evidence URL so future repository transfers or branding changes do not break application documents again.
+Notandia is the public-facing rebrand and continuation of MDPI Filter. The canonical recruiter-facing evidence URL is `/notandia.html`; the legacy `/mdpi-filter.html` route redirects there so prior links continue to work.
 
 The current canonical repositories are:
 
@@ -66,11 +66,12 @@ The collaboration is retained as named experience and in the relevant CV; it is 
 - `data/source.js` — canonical factual dossier and public evidence boundaries.
 - `data/application-profiles.js` — role-specific CV selection and wording.
 - `data/portfolio-human.js` — homepage hierarchy, evidence cards, explicit link destinations, working-profile language and application routes.
-- `data/orcid-positioning.mjs` — ORCID Member Support application profile.
+- `data/public-evidence.js` — dated, immutable public metrics shared across presentation layers.
+- `data/homepage-positioning.js` — fresh homepage presentation model, isolated from role-specific CV overlays.
 - `src/pages/` — Astro source pages.
 - `src/styles/portfolio-v6-overrides.css` — readable evidence-card system and corrected contact contrast layered over the established portfolio layout.
 - `scripts/generate-llm-dossiers.js` — canonical machine-readable dossiers.
-- `scripts/postbuild.js` — generated root mirrors, current metrics and stable Notandia link normalization.
+- `scripts/postbuild.js` — generated root mirrors and artifact-presence checks; source pages own their copy and presentation.
 - `scripts/verify-dist.js` — generated-output, metadata and evidence assertions.
 - `scripts/verify-notandia-transition.js` — continuity-page rendering checks and retired-link rejection.
 - `scripts/verify-rendering.js` — desktop, tablet, mobile, light/dark and no-JavaScript rendering checks.
@@ -83,7 +84,7 @@ Generated outputs include:
 - `llms-full.txt`
 - `cv-llm.txt`
 - static HTML mirrors for public routes
-- five specialized two-page PDFs
+- four role-based two-page PDFs
 - a comprehensive master-CV PDF
 - responsive WebP portfolio previews
 - page-specific Open Graph images and favicon assets
@@ -104,7 +105,7 @@ CV_PHONE="+39 ..." npm run pdf
 
 The generator injects the value at render time without writing it into tracked source files or public HTML. `CV_PHONE` takes precedence over the ignored local config.
 
-After building, `npm run preview` serves a loopback-only local preview that injects the phone into the six CV responses without modifying `dist/`. Use `npm run preview:public` when you need to inspect the exact public output without private contact data.
+After building, `npm run preview` serves a loopback-only local preview that injects the phone into the five public CV responses without modifying `dist/`. Use `npm run preview:public` when you need to inspect the exact public output without private contact data.
 
 ## Verification and release gates
 

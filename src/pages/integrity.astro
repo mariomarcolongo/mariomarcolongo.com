@@ -7,8 +7,8 @@ import "../styles/integrity.css";
 import D from "../../data/source.js";
 import C from "../../data/investigation-cases.js";
 
-const pageTitle = "Knowledge Integrity & Investigation Work Samples — Mario Marcolongo";
-const pageDescription = "Public, attributable work samples demonstrating original article creation, scientific and technical localization, contested-source synthesis, consumer-genomics privacy research, archival OSINT, source-quality review, biomedical evidence synthesis, provenance and evidence-bound investigation methods.";
+const pageTitle = "Source Verification & Investigation Work Samples — Mario Marcolongo";
+const pageDescription = "Public, attributable work samples demonstrating original article creation, scientific and technical localization, contested-source synthesis, consumer-genomics privacy research, archival public-source research, source-quality review, biomedical evidence synthesis, provenance and reporting that separates evidence from inference.";
 const records = C.primary.map((record, index) => ({
   ...record,
   number: String(index + 1).padStart(2, "0")
@@ -24,11 +24,11 @@ const methods = [
   ["Source hierarchy", "Prioritize primary records, court or institutional documents, official datasets, scholarly literature and reputable independent reporting."],
   ["Cross-source checking", "Compare independent records, dates, wording and metadata; document unresolved disagreement rather than forcing certainty."],
   ["Taxonomy & entity reconciliation", "Resolve naming variants, organizations, identifiers, scientific categories and relationships across prose and structured records."],
-  ["Evidence-bound reporting", "Separate what a source directly supports from company statement, allegation, hypothesis, inference, community decision, platform label or unverified interpretation."]
+  ["Evidence limits & reporting", "Separate what a source directly supports from company statement, allegation, hypothesis, inference, community decision, platform label or unverified interpretation."]
 ];
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical="https://mariomarcolongo.com/integrity.html">
+<Layout title={pageTitle} description={pageDescription} canonical="https://mariomarcolongo.com/integrity">
   <Fragment slot="head">
     <script is:inline>document.documentElement.classList.add("v3-js");</script>
     <script type="application/ld+json" set:html={JSON.stringify({
@@ -36,14 +36,14 @@ const methods = [
       "@type": "ProfilePage",
       name: pageTitle,
       description: pageDescription,
-      url: "https://mariomarcolongo.com/integrity.html",
+      url: "https://mariomarcolongo.com/integrity",
       mainEntity: {
         "@type": "Person",
         "@id": "https://mariomarcolongo.com/#person",
         name: D.identity.name,
         url: "https://mariomarcolongo.com/"
       },
-      about: ["Knowledge integrity", "Open-source research", "Article creation", "Scientific localization", "Technical localization", "Consumer genomics privacy", "Archival research", "Source provenance", "Trust and safety"]
+      about: ["Source verification", "Public-source research", "Article creation", "Scientific localization", "Technical localization", "Consumer genomics privacy", "Archival research", "Source provenance", "Trust and safety"]
     })}></script>
   </Fragment>
 
@@ -51,11 +51,11 @@ const methods = [
 
   <main class="v3-page integrity-page">
     <section class="integrity-hero">
-      <div class="v3-kicker v3-enter" style="--enter-delay:60ms">Knowledge integrity · public work samples</div>
+      <div class="v3-kicker v3-enter" style="--enter-delay:60ms">Source verification · public work samples</div>
       <h1 class="v3-enter" style="--enter-delay:130ms">Investigation is useful only when the evidence trail survives scrutiny.</h1>
       <p class="v3-enter" style="--enter-delay:210ms">This page collects attributable examples of original article creation, scientific and technical localization, contested-source policy synthesis, consumer-genomics privacy research, corporate-source reconciliation, archival record recovery, legally sensitive chronology, source-quality review, biomedical evidence synthesis, health-information monitoring and research-data provenance. It shows the reasoning and records behind the work rather than relying on a generic OSINT tool list.</p>
       <div class="v3-hero-actions v3-enter" style="--enter-delay:290ms">
-        <a class="v3-button v3-button-primary" href="/cv-integrity.html">Trust & Integrity CV →</a>
+        <a class="v3-button v3-button-primary" href="/cv-integrity">Trust & Source Quality CV →</a>
         <a class="v3-button" href="#records">Inspect case records</a>
         <a class="v3-button v3-button-quiet" href="/">Back to portfolio</a>
       </div>
@@ -93,7 +93,7 @@ const methods = [
                 <div>
                   <h4>Capabilities demonstrated</h4>
                   <div class="v3-methods">{record.demonstrates.map((item) => <span>{item}</span>)}</div>
-                  <div class="integrity-limit"><strong>Evidence boundary</strong><p>{record.limitations}</p></div>
+                  <div class="integrity-limit"><strong>Evidence limits</strong><p>{record.limitations}</p></div>
                 </div>
               </div>
               <div class="v3-hero-actions">
@@ -113,7 +113,7 @@ const methods = [
           <div class="v3-kicker">Selected article and provenance evidence</div>
           <h2>Additional provenance and rights work.</h2>
         </div>
-        <p>These lower-priority examples demonstrate scientific and technical translation, terminology adaptation, source enrichment, post-publication maintenance and rights provenance. They support research, editorial and knowledge-integrity applications without displacing the stronger flagship investigations above.</p>
+        <p>These lower-priority examples demonstrate scientific and technical translation, terminology adaptation, source enrichment, post-publication maintenance and rights provenance. They support research, editorial and source-quality applications without displacing the stronger flagship investigations above.</p>
       </div>
 
       <div class="integrity-records">
@@ -132,7 +132,7 @@ const methods = [
                 <div>
                   <h4>Capabilities demonstrated</h4>
                   <div class="v3-methods">{record.demonstrates.map((item) => <span>{item}</span>)}</div>
-                  <div class="integrity-limit"><strong>Evidence boundary</strong><p>{record.limitations}</p></div>
+                  <div class="integrity-limit"><strong>Evidence limits</strong><p>{record.limitations}</p></div>
                 </div>
               </div>
               <div class="v3-hero-actions">
@@ -150,7 +150,7 @@ const methods = [
       <div class="v3-section-head v3-reveal">
         <div>
           <div class="v3-kicker">Method</div>
-          <h2>A reusable investigation workflow.</h2>
+          <h2>A reusable investigation process.</h2>
         </div>
         <p>Tools change, but the core process remains: define the claim, recover the best evidence, establish provenance, compare independent records and report only what survives scrutiny.</p>
       </div>
@@ -179,12 +179,12 @@ const methods = [
     <section class="v3-contact v3-reveal">
       <div>
         <div class="v3-kicker">Application lane</div>
-        <h2>Trust, safety & knowledge integrity.</h2>
-        <p>The current evidence supports analyst, research and operations roles involving public-source investigation, content governance, data quality and evidence-bound reporting. It does not support presenting the profile as an application-security engineer, penetration tester or covert investigator.</p>
+        <h2>Trust, safety & source quality.</h2>
+        <p>The current evidence supports analyst, research and support roles involving public-source investigation, content governance, data quality and reporting that separates evidence from inference. It does not support presenting the profile as an application-security engineer, penetration tester or covert investigator.</p>
       </div>
       <div class="v3-contact-links">
-        <a href="/cv-integrity.html"><span>CV</span><strong>Trust & Knowledge Integrity</strong><span aria-hidden="true">↗</span></a>
-        <a href="/security.html"><span>AI</span><strong>Model-behavior evaluation</strong><span aria-hidden="true">↗</span></a>
+        <a href="/cv-integrity"><span>CV</span><strong>Trust & Source Quality</strong><span aria-hidden="true">↗</span></a>
+        <a href="/security"><span>AI</span><strong>Model-behavior evaluation</strong><span aria-hidden="true">↗</span></a>
         <a href={D.identity.centralAuth} target="_blank" rel="noopener noreferrer"><span>Record</span><strong>Wikimedia CentralAuth</strong><span aria-hidden="true">↗</span></a>
         <a href={`mailto:${D.identity.email}`}><span>Email</span><strong>{D.identity.email}</strong><span aria-hidden="true">↗</span></a>
       </div>

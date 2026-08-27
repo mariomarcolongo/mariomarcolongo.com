@@ -721,7 +721,8 @@ body {
 .application-footer-note {
   position: absolute;
   right: 58px;
-  bottom: 34px;
+  /* Keep the fixed footer clear of the longest screen-layout sections. */
+  bottom: 20px;
   left: 58px;
   display: flex;
   justify-content: space-between;
@@ -1097,6 +1098,8 @@ body {
 
   .application-guide,
   .application-shell > .print-hide,
+  .master-guidance,
+  .master-shell > .print-hide,
   .nav,
   footer,
   #scrollProgress {

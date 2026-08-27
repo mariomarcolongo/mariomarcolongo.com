@@ -8,48 +8,12 @@
 const release = require('./release-data.js');
 const { D, H, P } = release;
 
-const ENTROPY_WORK_URL = 'https://entropyforlife.it/mario-marcolongo-entropy-for-life/';
-
-const graySwan = Object.freeze({
-  asOf: '29 July 2026',
-  rank: 74,
-  percentile: 'Top 6%',
-  totalBreaks: 113,
-  displayedAreaTotal: 112,
-  arenaRank: 365,
-  uniqueBreaks: 28,
-  points: 1120,
-  submissions: 255,
-  evidencePath: '/evidence/gray-swan-2026-07-29/',
-  screenshotPath: '/media/work/gray-swan-profile-2026-07-29-1600.webp',
-  screenshotSet: '/media/work/gray-swan-profile-2026-07-29-800.webp 800w, /media/work/gray-swan-profile-2026-07-29-1600.webp 1600w'
-});
-
-const audience = Object.freeze({
-  asOf: '26 July 2026',
-  combinedFollowers: '480K+',
-  youtubeSubscribers: '267K',
-  youtubeVideos: 592,
-  youtubeViews: '36.5M',
-  youtubeViewsExact: '36,524,137',
-  instagramFollowers: '159K',
-  tiktokFollowers: '54K',
-  tiktokLikes: '528K',
-  projects: '80',
-  videoProjects: '55',
-  articles: 4,
-  shortForm: 21,
-  selectedThumbnails: '15+',
-  workRecordUrl: ENTROPY_WORK_URL,
-  scopeNote: 'Brand audience; cross-platform follower totals are non-unique and time-sensitive.'
-});
-
-const yourselfToScience = Object.freeze({
-  asOf: '27 July 2026',
-  resources: 55,
-  wikidataReferences: 37,
-  statsUrl: 'https://yourselftoscience.org/stats'
-});
+const {
+  ENTROPY_WORK_URL,
+  graySwan,
+  audience,
+  yourselfToScience
+} = require('./public-evidence.js');
 
 function findEntropyExperience(profile) {
   return profile?.experience?.find((item) => item?.organization?.includes('Entropy for Life'));
@@ -82,12 +46,12 @@ D.identity.buildVersion = 'v2026.07.29';
 D.identity.grayswanArchiveUrl = graySwan.evidencePath;
 D.identity.evaluationAsOf = graySwan.asOf;
 D.identity.authorshipStatement =
-  'My technical work is code-literate and AI-assisted: I define requirements and workflows, inspect implementation behavior, test releases, diagnose functional problems, guide iterations, deploy releases and maintain services.';
+  'My technical work uses AI-assisted implementation: I define requirements, inspect implementation behavior, test releases, diagnose functional problems, guide iterations, deploy releases and maintain services.';
 D.identity.location =
-  'Based in Italy · Italian/EU citizen · Open to worldwide relocation · International B2B contracting available';
+  'Based in Italy · EU/EEA work-authorised · Open to sponsored international relocation and B2B engagements';
 D.identity.relocationVisible = D.identity.location;
 D.summary =
-  `Research, evidence and AI operations specialist with eight years of auditable public-source and structured-data work, paid scientific fact-checking and editorial production, community-facing research facilitation, ownership of an open research-participation directory, and sustained adversarial testing of AI systems. On ${graySwan.asOf}, the Gray Swan Proving Ground profile displayed rank #${graySwan.rank} (${graySwan.percentile.toLowerCase()}) and ${graySwan.totalBreaks} total breaks. Entropy for Life work covers ${audience.projects} documented published content contributions: ${contributionBreakdown()}. Technical work is code-literate and AI-assisted, with personal ownership of requirements, verification, deployment and maintenance.`;
+  `My work spans information retrieval, data quality, scientific fact-checking, AI evaluation and research operations. It includes eight years of auditable public-source and structured-data work, a maintained research-participation directory and self-directed model-behavior testing. On ${graySwan.asOf}, the Gray Swan Proving Ground profile displayed rank #${graySwan.rank} (${graySwan.percentile.toLowerCase()}) and ${graySwan.totalBreaks} total breaks. Entropy for Life work covers ${audience.projects} documented published content contributions: ${contributionBreakdown()}. Technical delivery is AI-assisted, with personal responsibility for requirements, verification, deployment and maintenance.`;
 
 Object.assign(D.redTeamActivity || {}, {
   asOf: graySwan.asOf,
@@ -102,7 +66,7 @@ Object.assign(D.redTeamActivity || {}, {
   totalArenaSubmissions: graySwan.submissions
 });
 
-const technicalPillar = D.pillars?.find((item) => item?.category === 'TECHNICAL OPERATIONS');
+const technicalPillar = D.pillars?.find((item) => item?.category === 'TECHNICAL DELIVERY');
 if (technicalPillar) {
   technicalPillar.desc =
     'Uses coding agents for implementation support while personally defining requirements and workflows, inspecting code structure and behavior, testing releases, diagnosing functional problems, guiding revisions, deploying releases and maintaining services.';
@@ -114,7 +78,7 @@ if (dataQualityPillar) {
     `Founded and operate Yourself to Science™, an open-source research-participation directory indexing ${yourselfToScience.resources} resources with documented inclusion, verification, provenance, metadata and licensing workflows. As of ${yourselfToScience.asOf}, ${wikidataReferenceStatement()}.`;
 }
 
-const masterGray = D.experience?.find((item) => item?.role?.includes('Model-Behavior'));
+const masterGray = D.experience?.find((item) => item?.role?.includes('Independent AI Evaluator'));
 if (masterGray) {
   masterGray.bullets = [
     'Conduct self-directed testing of LLM instruction handling, policy boundaries and edge cases across chat, image, agentic tool-use and indirect prompt-injection settings.',
@@ -127,7 +91,7 @@ if (masterGray) {
   ];
   masterGray.links = {
     ...(masterGray.links || {}),
-    caseStudy: '/security.html',
+    caseStudy: '/security',
     profile: D.identity.grayswanUrl,
     evidence: graySwan.evidencePath
   };
@@ -135,7 +99,7 @@ if (masterGray) {
 
 const masterEntropy = D.experience?.find((item) => item?.org?.includes('Entropy for Life'));
 if (masterEntropy) {
-  masterEntropy.role = 'Scientific Content Quality & Operations Contractor';
+  masterEntropy.role = 'Science Writer & Fact-Checker / Website Manager (WordPress)';
   masterEntropy.links = { workRecord: ENTROPY_WORK_URL };
   masterEntropy.bullets = [
     `Delivered ${audience.projects} documented published content contributions: ${audience.videoProjects} YouTube videos, ${audience.articles} co-authored articles and ${audience.shortForm} short-form pieces.`,
@@ -144,8 +108,8 @@ if (masterEntropy) {
     'Designed and built entropyforlife.it in WordPress and manage responsive design, publishing, OVHcloud hosting, DNS, SSL and technical SEO; formally acknowledged in the Mondadori book Italiani veri for scientific-literature research and error detection.'
   ];
   masterEntropy.resumeBullets = [
-    `Delivered ${audience.projects} documented published content contributions—${audience.videoProjects} YouTube videos, ${audience.articles} articles and ${audience.shortForm} short-form pieces—through evidence review, content production and publishing operations.`,
-    'Designed and built entropyforlife.it in WordPress and manage its responsive design, publishing and OVHcloud technical operations.'
+    `Delivered ${audience.projects} documented published content contributions—${audience.videoProjects} YouTube videos, ${audience.articles} articles and ${audience.shortForm} short-form pieces—through evidence review, content production and publishing.`,
+    'Designed and built entropyforlife.it in WordPress and manage its responsive design, publishing, OVHcloud hosting, DNS, SSL and technical SEO.'
   ];
 }
 
@@ -172,10 +136,10 @@ if (researchDirectoryStat) {
   researchDirectoryStat.detail = `${yourselfToScience.wikidataReferences} unique Wikidata items use the domain as a P854 reference URL`;
 }
 
-const aiWorkflowSkill = D.skills?.findIndex((item) => item.startsWith('AI-Assisted Technical Workflow:'));
+const aiWorkflowSkill = D.skills?.findIndex((item) => item.startsWith('AI-Assisted Implementation:'));
 if (aiWorkflowSkill >= 0) {
   D.skills[aiWorkflowSkill] =
-    'AI-Assisted Technical Workflow: Uses coding agents for implementation support while personally defining requirements, inspecting structure and behavior, testing results, guiding revisions, deploying releases and maintaining services.';
+    'AI-Assisted Implementation: Uses coding agents for implementation support while personally defining requirements, inspecting structure and behavior, testing results, guiding revisions, deploying releases and maintaining services.';
 }
 
 const yourselfToScienceProject = D.projects?.find((item) => item?.id === 'yourself-to-science');
@@ -183,7 +147,7 @@ if (yourselfToScienceProject) {
   yourselfToScienceProject.oneLiner =
     `An open-source directory indexing ${yourselfToScience.resources} research-participation resources, with ${yourselfToScience.wikidataReferences} unique Wikidata items using the domain as a reference URL.`;
   yourselfToScienceProject.description =
-    `Founded, designed and operate an open-source research-participation directory indexing ${yourselfToScience.resources} resources. As of ${yourselfToScience.asOf}, ${wikidataReferenceStatement()}. Defined the inclusion model, verification workflow, provenance fields, licensing structure and machine-readable metadata requirements, including JSON-LD, RDF Turtle/VoID, OpenAPI and an MCP interface. Technical implementation is AI-assisted and personally verified through requirements, code reading, functional testing and operational maintenance.`;
+    `Founded, designed and operate an open-source research-participation directory indexing ${yourselfToScience.resources} resources. As of ${yourselfToScience.asOf}, ${wikidataReferenceStatement()}. Defined the inclusion model, verification workflow, provenance fields, licensing structure and machine-readable metadata requirements, including JSON-LD, RDF Turtle/VoID, OpenAPI and an MCP interface. Technical implementation is AI-assisted and personally verified through requirements, code reading, functional testing and maintenance.`;
   yourselfToScienceProject.links = {
     ...(yourselfToScienceProject.links || {}),
     stats: yourselfToScience.statsUrl
@@ -197,16 +161,16 @@ if (yourselfToScienceProject) {
 
 const entropyProject = D.projects?.find((item) => item?.id === 'entropy-for-life');
 if (entropyProject) {
-  entropyProject.title = 'Entropy for Life — Scientific Content Quality & Operations';
+  entropyProject.title = 'Entropy for Life — Science Writing, Fact-Checking & Website Management';
   entropyProject.oneLiner = `${audience.projects} documented published content contributions inside a creator brand with ${audience.youtubeSubscribers} YouTube subscribers and ${audience.youtubeViews} channel views.`;
   entropyProject.description =
     `Conduct recurring primary-literature research and scientific fact-checking across ${audience.projects} documented published content contributions: ${audience.videoProjects} YouTube videos, ${audience.articles} co-authored articles and ${audience.shortForm} short-form pieces. Entropy for Life is an Italian science-communication brand with ${audience.youtubeSubscribers} YouTube subscribers, ${audience.youtubeViewsExact} channel views, ${audience.instagramFollowers} Instagram followers and ${audience.tiktokFollowers} TikTok followers as of ${audience.asOf}. Depending on the assignment, also translate evidence into scripts, data analyses, visualizations, slides, on-screen assets, short-form content and selected thumbnail concepts or production. Designed and built entropyforlife.it in WordPress and operate its responsive design, publishing and OVHcloud technical stack. The audience belongs to the brand, and cross-platform totals are not counts of unique people.`;
-  entropyProject.role = 'Scientific Content Quality & Operations Contractor';
+  entropyProject.role = 'Science Writer & Fact-Checker / Website Manager (WordPress)';
   entropyProject.links = { workRecord: ENTROPY_WORK_URL };
   entropyProject.highlights = [
     `Production Scale: ${audience.youtubeViews} YouTube views · ${audience.youtubeSubscribers} subscribers · ${audience.youtubeVideos} published videos`,
     `Documented Work: ${audience.projects} contributions · ${contributionBreakdown()}`,
-    'Cross-Functional Scope: Evidence quality, content production, visual packaging and website design and operations'
+    'Work performed: Evidence review, content production, visual packaging and website design and maintenance'
   ];
 }
 
@@ -214,7 +178,7 @@ const mdpiProject = D.projects?.find((item) => item?.id === 'mdpi-filter');
 if (mdpiProject?.highlights?.length) {
   mdpiProject.highlights = mdpiProject.highlights.map((item) =>
     item.startsWith('Implementation Boundary:')
-      ? 'Technical Ownership: Requirements, behavior inspection, functional testing, release deployment and maintenance'
+      ? 'Technical responsibilities: Requirements, behavior inspection, functional testing, release deployment and maintenance'
       : item
   );
 }
@@ -224,7 +188,7 @@ if (Array.isArray(H?.proofMoments)) {
     value: String(graySwan.totalBreaks),
     label: 'platform-displayed Proving Ground breaks',
     detail: `#${graySwan.rank} · ${graySwan.percentile.toLowerCase()} · ${graySwan.asOf}`,
-    href: '/security.html'
+    href: '/security'
   };
   H.proofMoments[1] = {
     value: audience.projects,
@@ -257,9 +221,9 @@ if (modelCase) {
 
 const entropyCase = H?.cases?.find((item) => item?.id === 'scientific-verification');
 if (entropyCase) {
-  entropyCase.title = 'Evidence quality and content operations at creator scale.';
-  entropyCase.lead = 'Paid contractor supporting an established Italian science-communication brand across evidence review, content production and website operations.';
-  entropyCase.action = 'Own recurring primary-literature research and scientific fact-checking. Depending on the assignment, also develop scripts, data analyses, visualizations, slides, on-screen assets, short-form content and selected thumbnails. Designed and built entropyforlife.it in WordPress and manage its responsive design, publishing and OVHcloud technical operations.';
+  entropyCase.title = 'Fact-checking and producing scientific content before publication.';
+  entropyCase.lead = 'Paid contractor supporting an established Italian science-communication brand through evidence review, content production and WordPress website management.';
+  entropyCase.action = 'Conduct recurring primary-literature research and scientific fact-checking. Depending on the assignment, also develop scripts, data analyses, visualizations, slides, on-screen assets, short-form content and selected thumbnails. Designed and built entropyforlife.it in WordPress and manage responsive design, publishing, hosting, DNS, SSL and technical SEO.';
   entropyCase.result = `${audience.projects} documented published content contributions: ${audience.videoProjects} YouTube videos, ${audience.articles} co-authored articles and ${audience.shortForm} short-form pieces. The official work record also indexes selected thumbnail work, which overlaps with video projects and is not added to the total.`;
   entropyCase.boundary = 'Platform metrics describe the production environment, not a personal audience. Quantified thumbnail lift is stated only when comparable analytics are available.';
   entropyCase.href = ENTROPY_WORK_URL;
@@ -274,7 +238,7 @@ if (researchSystemCase) {
   researchSystemCase.result =
     `${yourselfToScience.resources} resources indexed; as of ${yourselfToScience.asOf}, ${wikidataReferenceStatement()}. FAIRsharing, Zenodo and human- and machine-readable interfaces provide additional public records.`;
   researchSystemCase.boundary =
-    'Technical ownership covers requirements, information architecture, verification, functional testing, deployment diagnosis and ongoing operations; implementation is AI-assisted.';
+    'My technical responsibilities cover requirements, information architecture, verification, functional testing, deployment diagnosis and ongoing maintenance; implementation is AI-assisted.';
   researchSystemCase.links = [
     { label: 'View project statistics and Wikidata references', href: yourselfToScience.statsUrl }
   ];
@@ -282,18 +246,22 @@ if (researchSystemCase) {
 
 if (P.shared) {
   P.shared.location =
-    'Italy · Italian/EU citizen · Open to worldwide relocation · International B2B contracting';
+    'Italy · EU/EEA work-authorised · Open to sponsored international relocation and B2B engagements';
   if (Array.isArray(P.shared.education)) {
     P.shared.education = P.shared.education.filter((item) => !item.includes('Medicine and Surgery'));
   }
 }
 
 if (P.aiSafety) {
-  P.aiSafety.summary = `AI evaluation and research-verification specialist with self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. The Gray Swan Proving Ground profile displayed rank #${graySwan.rank} (${graySwan.percentile.toLowerCase()}) and ${graySwan.totalBreaks} total breaks on ${graySwan.asOf}. Brings eight years of auditable claim verification and ${audience.projects} published-content contributions inside a ${audience.youtubeSubscribers}-subscriber, ${audience.youtubeViews}-view science-communication environment.`;
+  // Keep the first page readable at normal print size. The founder record
+  // remains on page two alongside supporting evidence instead of forcing
+  // three dense experience entries above a fixed footer.
+  P.aiSafety.firstPageExperienceCount = 2;
+  P.aiSafety.summary = `AI evaluation and research-verification analyst with self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. The Gray Swan Proving Ground profile displayed rank #${graySwan.rank} (${graySwan.percentile.toLowerCase()}) and ${graySwan.totalBreaks} total breaks on ${graySwan.asOf}. Brings eight years of auditable claim verification and ${audience.projects} published-content contributions inside a ${audience.youtubeSubscribers}-subscriber, ${audience.youtubeViews}-view science-communication environment.`;
   replaceStrength(P.aiSafety, 2, audience.projects, 'Published content contributions', contributionBreakdown());
   const item = useOfficialEntropyRecord(P.aiSafety);
   if (item) {
-    item.role = 'Scientific Content Quality & Operations Contractor';
+    item.role = 'Science Writer & Fact-Checker / Website Manager (WordPress)';
     item.bullets = [
       `Delivered ${audience.projects} documented published content contributions: ${contributionBreakdown()}.`,
       'Conduct recurring primary-literature review and scientific fact-checking; contribute assignment-specific scripts, data analyses, visualizations, slides/on-screen assets, short-form content and selected thumbnail or visual-packaging work.',
@@ -308,7 +276,8 @@ if (P.aiSafety) {
 }
 
 if (P.researchQuality) {
-  P.researchQuality.summary = `Research-verification and data-quality specialist with eight years of auditable scientific, biomedical and structured-data work. Paid contractor across ${audience.projects} documented Entropy for Life content contributions inside a science-communication brand with ${audience.youtubeSubscribers} YouTube subscribers and ${audience.youtubeViews} channel views, plus founder of an open research-participation directory with documented verification and metadata workflows.`;
+  P.researchQuality.firstPageExperienceCount = 2;
+  P.researchQuality.summary = `Research-verification and data-quality analyst with eight years of auditable scientific, biomedical and structured-data work. Paid contractor across ${audience.projects} documented Entropy for Life content contributions inside a science-communication brand with ${audience.youtubeSubscribers} YouTube subscribers and ${audience.youtubeViews} channel views, plus founder of an open research-participation directory with documented verification and metadata workflows.`;
   replaceStrength(
     P.researchQuality,
     1,
@@ -339,7 +308,7 @@ if (P.researchQuality) {
 }
 
 if (P.editorialCommunity) {
-  P.editorialCommunity.summary = `Research, editorial and content-operations specialist with paid experience across ${audience.projects} documented Entropy for Life content contributions inside an Italian science-communication brand with ${audience.youtubeSubscribers} YouTube subscribers and ${audience.youtubeViews} channel views. Work spans primary-source fact-checking, scripts and visual production, short-form content, performance-aware packaging, selected thumbnails, professional writing and web operations.`;
+  P.editorialCommunity.summary = `Research, editorial and community coordinator with paid experience across ${audience.projects} documented Entropy for Life content contributions inside an Italian science-communication brand with ${audience.youtubeSubscribers} YouTube subscribers and ${audience.youtubeViews} channel views. Work spans primary-source fact-checking, scripts and visual production, short-form content, performance-aware packaging, selected thumbnails, professional writing and WordPress website management.`;
   replaceStrength(P.editorialCommunity, 0, audience.projects, 'Published content contributions', contributionBreakdown());
   addSkill(P.editorialCommunity, 'Performance-aware content packaging', 'Thumbnail concepts, visual hierarchy and attention structure informed by click-through rate, watch time, retention and current platform best practices.');
   const item = useOfficialEntropyRecord(P.editorialCommunity);
@@ -347,13 +316,14 @@ if (P.editorialCommunity) {
     item.bullets = [
       `Support a small recurring science-communication team across ${audience.projects} documented published contributions: ${contributionBreakdown()}.`,
       'Create or support scripts, data analyses, visualizations, presentation slides, on-screen assets, short-form materials and selected thumbnails, with roles attributed per project.',
-      'Designed and built entropyforlife.it in WordPress and manage its responsive design, publishing and OVHcloud technical operations.'
+      'Designed and built entropyforlife.it in WordPress and manage its responsive design, publishing, OVHcloud hosting, DNS, SSL and technical SEO.'
     ];
   }
 }
 
 if (P.integrity) {
-  P.integrity.summary = `Knowledge-integrity and open-source research specialist with eight years of auditable Wikimedia work, paid scientific verification across ${audience.projects} documented Entropy for Life content contributions inside a ${audience.youtubeSubscribers}-subscriber science-communication brand, and self-directed adversarial testing of AI systems. The ${graySwan.asOf} Gray Swan snapshot displayed rank #${graySwan.rank} (${graySwan.percentile.toLowerCase()}) and ${graySwan.totalBreaks} Proving Ground total breaks.`;
+  P.integrity.firstPageExperienceCount = 2;
+  P.integrity.summary = `Trust, safety and source-quality analyst with eight years of auditable Wikimedia work, paid scientific verification across ${audience.projects} documented Entropy for Life content contributions inside a ${audience.youtubeSubscribers}-subscriber science-communication brand, and self-directed adversarial testing of AI systems. The ${graySwan.asOf} Gray Swan snapshot displayed rank #${graySwan.rank} (${graySwan.percentile.toLowerCase()}) and ${graySwan.totalBreaks} Proving Ground total breaks.`;
   const item = useOfficialEntropyRecord(P.integrity);
   if (item) {
     item.bullets = [
@@ -362,7 +332,7 @@ if (P.integrity) {
       'Communicate uncertainty, conflicting evidence and corrections to a public-facing content team without overstating conclusions.'
     ];
   }
-  const gray = P.integrity.experience?.find((experience) => experience?.role?.includes('Model-Behavior'));
+  const gray = P.integrity.experience?.find((experience) => experience?.role?.includes('Independent AI Evaluator'));
   if (gray?.bullets?.[2]) {
     gray.bullets[2] =
       'Apply threat-oriented reasoning and structured evidence capture to ambiguous AI-system behavior.';

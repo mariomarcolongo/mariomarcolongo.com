@@ -4,7 +4,7 @@ import C from "./investigation-cases.js";
 const { D, P } = career;
 
 const centralAuth = "https://commons.wikimedia.org/wiki/Special:CentralAuth/Digressivo";
-const integrityPage = "/integrity.html";
+const integrityPage = "/integrity";
 
 function replaceSkill(profile, currentTitle, nextTitle, detail) {
   const index = profile?.skills?.findIndex(([title]) => title === currentTitle);
@@ -21,7 +21,7 @@ function cloneExperience(item) {
 }
 
 D.identity.buildVersion = "v2026.07.29";
-D.summary = `Research, evidence and AI operations specialist with eight years of auditable public-source and structured-data work, including consumer-genomics privacy research, corporate-source reconciliation, archival recovery of legally sensitive records, long-form article creation, source-quality and content-governance review, biomedical evidence synthesis, multilingual scientific localization, paid scientific fact-checking, research-data provenance and adversarial testing of AI systems. ${D.summary}`;
+D.summary = `Additional work includes consumer-genomics privacy research, corporate-source reconciliation, archival recovery of legally sensitive records, long-form article creation, source-quality and content-governance review, biomedical evidence synthesis, multilingual scientific localization, paid scientific fact-checking, research-data provenance and adversarial testing of AI systems. ${D.summary}`;
 
 const scientificPillar = D.pillars?.find((item) => item?.category === "SCIENTIFIC VERIFICATION");
 if (scientificPillar) {
@@ -56,7 +56,7 @@ if (masterWiki) {
 }
 
 if (P.aiSafety) {
-  P.aiSafety.summary = "AI evaluation and research-verification specialist with self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. The Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks on 29 July 2026. Supporting work demonstrates multilingual content quality, consumer-genomics privacy research, corporate-source reconciliation, archival source recovery, claim-to-source auditing and evidence-bound reporting across sensitive records.";
+  P.aiSafety.summary = "AI evaluation and research-verification analyst with self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. The Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks on 29 July 2026. Supporting work demonstrates multilingual content quality, consumer-genomics privacy research, corporate-source reconciliation, archival source recovery, claim-to-source auditing and reporting that separates evidence from inference across sensitive records.";
 
   const sourceEvidence = P.aiSafety.evidence?.find((item) => item?.title?.includes("Auditable source-verification"));
   if (sourceEvidence) {
@@ -65,7 +65,7 @@ if (P.aiSafety) {
   }
   if (P.aiSafety.evidence?.[2]) {
     P.aiSafety.evidence[2] = {
-      title: "Investigation and evidence-bound judgment",
+      title: "Investigation: evidence and interpretation",
       body: "Attributed public cases demonstrate source synthesis, privacy-policy analysis, corporate-source reconciliation, archive recovery, legal-stage chronology, source-quality auditing, scientific taxonomy design and explicit separation of evidence from inference.",
       link: integrityPage
     };
@@ -74,12 +74,12 @@ if (P.aiSafety) {
     P.aiSafety,
     "Research verification",
     "OSINT and research verification",
-    "Public-source and bibliographic research, claim decomposition, web-archive recovery, source-provenance analysis, corporate and legal record reconciliation, cross-source corroboration and evidence-bound reporting"
+    "Public-source and bibliographic research, claim decomposition, web-archive recovery, source-provenance analysis, corporate and legal record reconciliation, cross-source corroboration and reporting that separates evidence from inference"
   );
 }
 
 if (P.researchQuality) {
-  P.researchQuality.summary = "Research-verification and data-quality specialist with eight years of auditable scientific, biomedical, public-source and structured-data work. Experience spans original article creation, multilingual scientific localization, consumer-genomics privacy, archived corporate and legal records, scientific literature, source-quality analysis, paid fact-checking and ownership of an open research-participation directory with documented verification and metadata workflows.";
+  P.researchQuality.summary = "Research-verification and data-quality analyst with eight years of auditable scientific, biomedical, public-source and structured-data work. Experience spans original article creation, multilingual scientific localization, consumer-genomics privacy, archived corporate and legal records, scientific literature, source-quality analysis, paid fact-checking and leadership of an open research-participation directory with documented verification and metadata workflows.";
 
   const wiki = P.researchQuality.experience?.find((item) => item?.organization?.includes("Wikipedia"));
   if (wiki) {
@@ -112,7 +112,8 @@ if (P.researchQuality) {
 }
 
 if (P.editorialCommunity) {
-  P.editorialCommunity.summary = "Research, editorial and community-operations specialist with paid scientific content and English-to-Italian localization experience inside a 36.5M-view science-communication brand, plus long-running public-source and structured-data work. Work includes primary-literature verification, original long-form article creation, scientific and technical localization, archival recovery, claim review, public-health monitoring, sensitive research facilitation and public verification workflows; audience metrics describe the production environment, not a personal audience.";
+  P.editorialCommunity.summary = "Research, editorial and community coordinator with paid scientific content and English-to-Italian localization experience inside a 36.5M-view science-communication brand, plus long-running public-source and structured-data work. Work includes primary-literature verification, original long-form article creation, scientific and technical localization, archival recovery, claim review, public-health monitoring, sensitive research facilitation and public verification processes; audience metrics describe the production environment, not a personal audience.";
+  P.editorialCommunity.firstPageExperienceCount = 2;
 
   if (P.editorialCommunity.strengths?.[2]) {
     P.editorialCommunity.strengths[2] = {
@@ -132,18 +133,18 @@ if (P.editorialCommunity) {
 
   replaceSkill(
     P.editorialCommunity,
-    "Editorial operations",
-    "Editorial operations, localization and OSINT",
+    "Editorial production support",
+    "Editorial production, localization & public-source research",
     "Evidence research, long-form explanatory writing, English-to-Italian scientific and technical localization, archival source recovery, claim checking, source documentation, public-record reconciliation, editorial feedback, content preparation and production troubleshooting"
   );
 }
 
 if (P.integrity) {
-  P.integrity.title = "Investigations & Knowledge Integrity Analyst";
-  P.integrity.subtitle = "OSINT · risk and evidence assessment · sensitive research · analytical reporting · data quality";
-  P.integrity.summary = "Investigations and knowledge-integrity analyst with eight years of auditable public work across original article creation, contested-source synthesis, consumer-genomics privacy, archival OSINT, source-quality review, biomedical evidence synthesis, health-information monitoring, structured metadata and adversarial AI evaluation. Public cases link to exact diffs and state explicit evidence boundaries.";
+  P.integrity.title = "Investigations & Source Quality Analyst";
+  P.integrity.subtitle = "Public-source research · risk and evidence assessment · sensitive research · analytical reporting · data quality";
+  P.integrity.summary = "Investigations and source-quality analyst with eight years of auditable public work across original article creation, contested-source synthesis, consumer-genomics privacy, archival public-source research, source-quality review, biomedical evidence synthesis, health-information monitoring, structured metadata and adversarial AI evaluation. Public cases link to exact diffs and state explicit limits on what the evidence supports.";
   P.integrity.fit = [
-    "Investigations and content-integrity operations",
+    "Investigations and content-integrity support",
     "OSINT research and source-provenance analysis",
     "Trust & Safety-adjacent analysis, risk documentation and escalation support"
   ];
@@ -165,7 +166,7 @@ if (P.integrity) {
 
   const wiki = P.integrity.experience?.find((item) => item?.organization?.includes("Wikipedia"));
   const entropy = P.integrity.experience?.find((item) => item?.organization?.includes("Entropy for Life"));
-  const gray = P.integrity.experience?.find((item) => item?.role?.includes("Model-Behavior"));
+  const gray = P.integrity.experience?.find((item) => item?.role?.includes("Independent AI Evaluator"));
   const focusGroupSource = P.editorialCommunity?.experience?.find((item) => item?.role?.includes("Focus-Group"));
   const focusGroup = cloneExperience(focusGroupSource);
 
@@ -195,7 +196,7 @@ if (P.integrity) {
   }
 
   if (focusGroup) {
-    focusGroup.role = "Sensitive Research Operations Contributor";
+    focusGroup.role = "Volunteer Research Assistant & Focus-Group Co-Facilitator";
     focusGroup.bullets = [
       "Co-developed and facilitated approximately 4–5 recorded remote focus groups with autistic participants discussing sensitive sexuality and relationship topics.",
       "Supported recruitment, consent, participant privacy, pseudonymous naming, recording boundaries, structured prompts, accessibility options and two-person facilitation handoffs."
@@ -229,8 +230,8 @@ if (P.integrity) {
 
   replaceSkill(
     P.integrity,
-    "Knowledge integrity",
-    "Knowledge integrity",
+    "Source verification & integrity",
+    "Source verification & integrity",
     "Claim-to-source auditing, source provenance, cross-language citation, terminology and metadata review"
   );
 

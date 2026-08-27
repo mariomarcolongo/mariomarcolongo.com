@@ -8,11 +8,9 @@ const DIST = path.resolve(process.cwd(), 'dist');
 const CV_PAGES = new Set([
   'cv.html',
   'cv-resume.html',
-  'cv-giskard.html',
   'cv-research.html',
   'cv-editorial.html',
-  'cv-integrity.html',
-  'cv-orcid.html'
+  'cv-integrity.html'
 ]);
 const MIME_TYPES = {
   '.avif': 'image/avif',

@@ -57,8 +57,8 @@ jobs:
             audit-output/**/*.png
             Mario Marcolongo — AI Safety & Adversarial Testing CV.pdf
             Mario Marcolongo — Research Verification & Data Quality CV.pdf
-            Mario Marcolongo — Research Editorial & Community Operations CV.pdf
-            Mario Marcolongo — Trust Safety & Knowledge Integrity CV.pdf
+            Mario Marcolongo — Research Editorial & Community Coordinator CV.pdf
+            Mario Marcolongo — Trust Safety & Source Quality CV.pdf
             Mario Marcolongo — Curriculum Vitae.pdf
           if-no-files-found: ignore
           retention-days: 7

@@ -39,8 +39,12 @@ function formatEducationText(e) {
   return `- **${e.title}**${period}${details}\n`;
 }
 
+function profileHeading(d, fallback) {
+  return d.identity.professionalHeadline || d.identity.jobTitle || fallback;
+}
+
 function generateLlmsTxt(d) {
-  let out = `# ${d.identity.name} — ${d.identity.jobTitle || 'AI Evaluation & Research Verification Specialist'}\n`;
+  let out = `# ${d.identity.name} — ${profileHeading(d, 'Professional Profile')}\n`;
   if (d.identity.secondaryTitle) out += `> ${d.identity.secondaryTitle}\n`;
   out += `\n> ${d.summary}\n\n`;
   if (d.identity.authorshipStatement) out += `> **${d.identity.authorshipStatement}**\n\n`;
@@ -81,7 +85,7 @@ function generateLlmsTxt(d) {
 }
 
 function generateLlmsFullTxt(d) {
-  let out = `# ${d.identity.name} — ${d.identity.jobTitle || 'Comprehensive Profile & Curriculum Vitae'}\n`;
+  let out = `# ${d.identity.name} — ${profileHeading(d, 'Comprehensive Profile & Curriculum Vitae')}\n`;
   if (d.identity.secondaryTitle) out += `> ${d.identity.secondaryTitle}\n\n`;
   out += `## Overview\n${d.summary}\n\n`;
   if (d.identity.authorshipStatement) out += `> **${d.identity.authorshipStatement}**\n\n`;
@@ -186,7 +190,7 @@ function generateLlmsFullTxt(d) {
 }
 
 function generateCvLlmTxt(d) {
-  let out = `# ${d.identity.name} — ${d.identity.jobTitle || 'Curriculum Vitae'} (AI / LLM Compatible Markdown)\n`;
+  let out = `# ${d.identity.name} — ${profileHeading(d, 'Curriculum Vitae')} (AI / LLM Compatible Markdown)\n`;
   if (d.identity.secondaryTitle) out += `> ${d.identity.secondaryTitle}\n`;
   out += `> ${d.identity.headline}\n`;
   out += `> Work Authorization: ${d.identity.relocation}\n`;
