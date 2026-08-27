@@ -2,7 +2,7 @@ const ENTROPY_WORK_URL = "https://entropyforlife.it/mario-marcolongo-entropy-for
 
 function createPortfolioHuman() {
   return {
-  eyebrow: "Information retrieval · data & knowledge quality · AI evaluation · scientific fact-checking",
+  eyebrow: "Information retrieval · data quality · AI evaluation · scientific fact-checking",
   headline: "Evidence first. AI systems tested.",
   introduction: "I retrieve and verify information, investigate data quality and test model behavior. When recurring verification needs a practical system, I define its requirements, validation rules and maintenance process.",
 
@@ -81,7 +81,7 @@ function createPortfolioHuman() {
     {
       number: "03",
       label: "Core",
-      title: "Data & knowledge quality",
+      title: "Data quality & provenance",
       body: "Provenance, metadata, source reconciliation, validation, public-source investigation and information-quality review."
     },
     {
@@ -271,7 +271,7 @@ function createPortfolioHuman() {
       title: "AI Evaluation & Model Behavior",
       description: "Model testing, adversarial QA, test planning and evidence reporting.",
       href: "/cv-resume",
-      recommendedFor: "Specialist CV for AI evaluation and safeguards roles"
+      recommendedFor: "Specialist CV for AI evaluation and adversarial-testing roles"
     },
     {
       title: "Trust, Safety & Source Quality",

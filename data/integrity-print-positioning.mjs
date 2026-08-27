@@ -22,7 +22,7 @@ if (entropy?.bullets?.[2]) {
   entropy.bullets[2] = 'Localize English-language scientific evidence into Italian summaries while preserving meaning, source context and uncertainty.';
 }
 
-const gray = integrity.experience?.find((item) => item?.role?.includes('Model-Behavior'));
+const gray = integrity.experience?.find((item) => item?.role?.includes('Independent AI Evaluator'));
 if (gray?.bullets?.[0]) {
   gray.bullets[0] = 'Tested chat, image, tool-use and indirect prompt-injection challenges, including extreme and otherwise sensitive content; #74 globally (top 6%) with 113 platform-displayed breaks on 29 July 2026. Analytical evaluation evidence, not production enforcement experience.';
 }

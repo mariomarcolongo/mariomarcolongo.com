@@ -21,7 +21,7 @@ function cloneExperience(item) {
 }
 
 D.identity.buildVersion = "v2026.07.29";
-D.summary = `Data and knowledge-quality analyst with eight years of auditable public-source and structured-data work, including consumer-genomics privacy research, corporate-source reconciliation, archival recovery of legally sensitive records, long-form article creation, source-quality and content-governance review, biomedical evidence synthesis, multilingual scientific localization, paid scientific fact-checking, research-data provenance and adversarial testing of AI systems. ${D.summary}`;
+D.summary = `Data Quality & Information Retrieval Analyst with eight years of auditable public-source and structured-data work, including consumer-genomics privacy research, corporate-source reconciliation, archival recovery of legally sensitive records, long-form article creation, source-quality and content-governance review, biomedical evidence synthesis, multilingual scientific localization, paid scientific fact-checking, research-data provenance and adversarial testing of AI systems. ${D.summary}`;
 
 const scientificPillar = D.pillars?.find((item) => item?.category === "SCIENTIFIC VERIFICATION");
 if (scientificPillar) {
@@ -166,7 +166,7 @@ if (P.integrity) {
 
   const wiki = P.integrity.experience?.find((item) => item?.organization?.includes("Wikipedia"));
   const entropy = P.integrity.experience?.find((item) => item?.organization?.includes("Entropy for Life"));
-  const gray = P.integrity.experience?.find((item) => item?.role?.includes("Model-Behavior"));
+  const gray = P.integrity.experience?.find((item) => item?.role?.includes("Independent AI Evaluator"));
   const focusGroupSource = P.editorialCommunity?.experience?.find((item) => item?.role?.includes("Focus-Group"));
   const focusGroup = cloneExperience(focusGroupSource);
 
@@ -196,7 +196,7 @@ if (P.integrity) {
   }
 
   if (focusGroup) {
-    focusGroup.role = "Focus-Group Co-Facilitator & Research Support Contributor";
+    focusGroup.role = "Volunteer Research Assistant & Focus-Group Co-Facilitator";
     focusGroup.bullets = [
       "Co-developed and facilitated approximately 4–5 recorded remote focus groups with autistic participants discussing sensitive sexuality and relationship topics.",
       "Supported recruitment, consent, participant privacy, pseudonymous naming, recording boundaries, structured prompts, accessibility options and two-person facilitation handoffs."

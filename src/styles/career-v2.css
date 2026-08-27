@@ -1098,6 +1098,8 @@ body {
 
   .application-guide,
   .application-shell > .print-hide,
+  .master-guidance,
+  .master-shell > .print-hide,
   .nav,
   footer,
   #scrollProgress {

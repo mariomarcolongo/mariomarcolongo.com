@@ -46,7 +46,7 @@ if (P.editorialCommunity) {
 }
 
 if (P.integrity) {
-  const focusGroup = P.integrity.experience?.find((item) => item?.role?.includes("Research Support"));
+  const focusGroup = P.integrity.experience?.find((item) => item?.role?.includes("Research Assistant"));
   if (focusGroup) {
     focusGroup.links = [
       { label: "Research-support case study", url: researchOperationsPage }

@@ -13,11 +13,11 @@ const MARIO_DOSSIER = {
     "grayswanUrl": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
     "grayswanArchiveUrl": "/evidence/gray-swan-2026-07-29/",
     "evaluationAsOf": "29 July 2026",
-    "jobTitle": "Data & Knowledge Quality Analyst",
+    "jobTitle": "Data Quality & Information Retrieval Analyst",
     "secondaryTitle": "Information Retrieval · Evidence Synthesis · AI Evaluation",
     "headline": "I make information and AI systems more reliable.",
     "authorshipStatement": "My technical work uses AI-assisted implementation: I define requirements, inspect implementation behavior, test releases, diagnose functional problems, guide iterations, deploy releases and maintain services.",
-    "role": "Data and knowledge-quality analyst. Gray Swan Proving Ground snapshot: #74 (top 6%) with 113 platform-displayed total breaks on 29 July 2026.",
+    "role": "Data Quality & Information Retrieval Analyst. Gray Swan Proving Ground snapshot: #74 (top 6%) with 113 platform-displayed total breaks on 29 July 2026.",
     "heroStatement": "Making information and AI systems more reliable through retrieval, verification, data-quality review and model testing.",
     "location": "Based in Italy · EU/EEA work-authorised · Open to sponsored international relocation and B2B engagements",
     "relocation": "EU/EEA work-authorised; Switzerland: EU/EFTA employment route once an offer is secured; open to employer-sponsored work authorisation elsewhere. International B2B engagements are available where the contracting arrangement is compliant.",
@@ -52,10 +52,10 @@ const MARIO_DOSSIER = {
     ],
     "notandiaUrl": "https://mariomarcolongo.com/notandia"
   },
-  "summary": "Data and knowledge-quality analyst with eight years of auditable public-source and structured-data work. The public record includes paid scientific fact-checking and editorial production, a maintained research-participation directory and self-directed model-behavior testing. On 29 July 2026, the Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks. Entropy for Life work covers 80 documented published content contributions: 55 YouTube videos · 4 articles · 21 short-form pieces. Technical delivery is AI-assisted, with personal responsibility for requirements, verification, deployment and maintenance. Current open-source product work includes Notandia (formerly MDPI Filter), a continuing browser and Zotero research-integrity tool.",
+  "summary": "Data Quality & Information Retrieval Analyst with eight years of auditable public-source and structured-data work. The public record includes paid scientific fact-checking and editorial production, a maintained research-participation directory and self-directed model-behavior testing. On 29 July 2026, the Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks. Entropy for Life work covers 80 documented published content contributions: 55 YouTube videos · 4 articles · 21 short-form pieces. Technical delivery is AI-assisted, with personal responsibility for requirements, verification, deployment and maintenance. Current open-source product work includes Notandia (formerly MDPI Filter), a continuing browser and Zotero research-integrity tool.",
   "pillars": [
     {
-      "category": "AI EVALUATION & SAFEGUARD TESTING",
+      "category": "AI EVALUATION & ADVERSARIAL TESTING",
       "icon": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"></path></svg>",
       "title": "Model Behavior & Adversarial Testing",
       "lead": "Structured, self-directed probing of LLM and multimodal-system behavior across chat, image, tool-use and indirect prompt-injection challenges.",
@@ -89,9 +89,9 @@ const MARIO_DOSSIER = {
       ]
     },
     {
-      "category": "DATA & KNOWLEDGE QUALITY",
+      "category": "DATA QUALITY & PROVENANCE",
       "icon": "<svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"></ellipse><path d=\"M21 12c0 1.66-4 3-9 3s-9-1.34-9-3\"></path><path d=\"M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5\"></path></svg>",
-      "title": "Information Retrieval, Metadata & Provenance",
+      "title": "Information Retrieval, Data Quality & Provenance",
       "lead": "Retrieving, verifying and reconciling information across scientific sources, structured records and public research systems.",
       "desc": "Founded and operate Yourself to Science™, an open-source research-participation directory indexing more than 55 initiatives, with documented inclusion, verification, provenance, metadata and licensing workflows. Public records include FAIRsharing, Zenodo, Wikidata and ENA entries.",
       "highlights": [
@@ -156,7 +156,7 @@ const MARIO_DOSSIER = {
       "title": "Model Behavior & Adversarial Evaluation",
       "oneLiner": "Dated public record of self-directed model-behavior evaluation across chat, multimodal, agentic tool-use and indirect prompt-injection challenges.",
       "description": "Self-directed model-behavior evaluation conducted through the Gray Swan Proving Ground. The 29 July 2026 profile snapshot displays rank #74, top 6%, and 113 total breaks. The same snapshot shows 255 Arena submissions, 28 global unique breaks, 1,120 points and Arena rank #365. Aggregate counts are presented with explicit evidence limitations; complete prompts, outputs, model versions and adjudication materials are not reproduced.",
-      "role": "Model-Behavior Evaluator",
+      "role": "Independent AI Evaluator",
       "tech": [
         "Adversarial Evaluation",
         "Prompt Injection",
@@ -205,10 +205,10 @@ const MARIO_DOSSIER = {
     },
     {
       "id": "entropy-for-life",
-      "title": "Entropy for Life — Scientific Research, Fact-Checking & Website Maintenance",
+      "title": "Entropy for Life — Science Writing, Fact-Checking & Website Management",
       "oneLiner": "80 documented published content contributions inside a creator brand with 267K YouTube subscribers and 36.5M channel views.",
       "description": "Conduct recurring primary-literature research and scientific fact-checking across 80 documented published content contributions: 55 YouTube videos, 4 co-authored articles and 21 short-form pieces. Entropy for Life is an Italian science-communication brand with 267K YouTube subscribers, 36,524,137 channel views, 159K Instagram followers and 54K TikTok followers as of 26 July 2026. Depending on the assignment, also translate evidence into scripts, data analyses, visualizations, slides, on-screen assets, short-form content and selected thumbnail concepts or production. Designed and built entropyforlife.it in WordPress and operate its responsive design, publishing and OVHcloud technical stack. The audience belongs to the brand, and cross-platform totals are not counts of unique people.",
-      "role": "Scientific Research, Fact-Checking & Website Maintenance Contractor",
+      "role": "Science Writer & Fact-Checker / Website Manager (WordPress)",
       "tech": [
         "Primary-Source Research",
         "Scientific Fact-Checking",
@@ -595,7 +595,7 @@ const MARIO_DOSSIER = {
       ]
     },
     {
-      "role": "Model-Behavior Evaluator",
+      "role": "Independent AI Evaluator",
       "org": "Independent practice · Gray Swan Proving Ground participant",
       "tag": "Independent practice",
       "period": "Jul 2026 — Present",
@@ -615,7 +615,7 @@ const MARIO_DOSSIER = {
       ]
     },
     {
-      "role": "Scientific Research, Fact-Checking & Website Maintenance Contractor",
+      "role": "Science Writer & Fact-Checker / Website Manager (WordPress)",
       "org": "Entropy for Life — Italy",
       "tag": "Independent contractor",
       "period": "Jun 2023 — Present",
@@ -634,7 +634,7 @@ const MARIO_DOSSIER = {
       ]
     },
     {
-      "role": "Volunteer Focus-Group Co-Facilitator & Research Support Contributor",
+      "role": "Volunteer Research Assistant & Focus-Group Co-Facilitator",
       "org": "Department of Developmental Psychology and Socialisation (DPSS), University of Padua",
       "tag": "Volunteer research collaboration supervised by Marta Panzeri",
       "period": "Nov 2022 — 2025",
@@ -693,7 +693,7 @@ const MARIO_DOSSIER = {
       ]
     },
     {
-      "role": "Scientific Data Visualizer & Evidence Synthesist",
+      "role": "Scientific Data Visualization & Evidence Synthesis",
       "org": "Wikimedia Commons, Tableau Public & Flourish",
       "tag": "Independent project",
       "period": "2023 — Present",
@@ -741,7 +741,7 @@ const MARIO_DOSSIER = {
   "skills": [
     "Information Retrieval & Verification: Primary-source and bibliographic search, claim tracing, source discovery, query refinement, source-quality assessment and cross-source corroboration.",
     "Data Quality & Provenance: Structured metadata, entity reconciliation, validation rules, documentation, taxonomy design and public-record verification.",
-    "AI Safety Evaluation & Adversarial Testing: Exploratory model-behavior testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection.",
+    "AI Evaluation & Adversarial Testing: Exploratory model-behavior testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection.",
     "Scientific Verification & Evidence Synthesis: Primary-source fact-checking, bibliographic research, claim decomposition, evidence screening, source-quality assessment and cross-source corroboration.",
     "Data Visualization: SVG vector diagrams, Tableau Public, Flourish and open-data publication.",
     "Evaluation Planning & Reporting: Test planning, evidence capture, reproducibility notes, taxonomy thinking, issue classification, reporting that separates evidence from inference and mitigation-retesting concepts.",
@@ -754,7 +754,7 @@ const MARIO_DOSSIER = {
   "resumeSkills": [
     "Information Retrieval & Verification: Primary-source and bibliographic search, claim tracing, source discovery, query refinement and cross-source corroboration.",
     "Data Quality & Provenance: Structured metadata, entity reconciliation, validation rules, documentation and public-record verification.",
-    "AI Safety Evaluation & Adversarial Testing: Exploratory model-behavior testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection.",
+    "AI Evaluation & Adversarial Testing: Exploratory model-behavior testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection.",
     "Scientific Verification & Evidence Synthesis: Primary-source fact-checking, bibliographic research, claim decomposition, evidence screening and cross-source corroboration.",
     "Data Visualization: SVG vector diagrams, Tableau Public, Flourish and open-data publication.",
     "Technical Delivery: Requirements definition, codebase reading and behavior inspection, functional testing, issue diagnosis, deployment and AI-assisted implementation.",

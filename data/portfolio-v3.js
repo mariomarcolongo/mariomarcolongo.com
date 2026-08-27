@@ -18,11 +18,11 @@ const PORTFOLIO_V3 = {
       color: "blue",
       label: "Highest-upside emerging lane",
       title: "AI Safety & Model Behavior",
-      summary: "Adversarial testing, safeguard testing, trust & safety and model-quality work built on sustained exploratory testing plus unusually strong evidence discipline.",
+      summary: "Adversarial testing, AI evaluation, trust & safety and model-quality work built on sustained exploratory testing plus unusually strong evidence discipline.",
       roles: [
         "AI safety evaluator",
         "AI content red-team analyst",
-        "Safeguards or evaluation support",
+        "AI evaluation support",
         "Model-quality and adversarial QA"
       ],
       evidence: [
@@ -205,7 +205,7 @@ const PORTFOLIO_V3 = {
       id: "ai",
       label: "AI systems",
       title: "AI Safety & Adversarial Testing CV",
-      body: "For safeguard testing, model behavior, adversarial QA, trust & safety and evaluation-support roles.",
+      body: "For AI evaluation, model behavior, adversarial QA, trust & safety and evaluation-support roles.",
       href: "/cv-resume"
     },
     {

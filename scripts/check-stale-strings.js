@@ -6,7 +6,7 @@ const D = require('../data/source.js');
 const ROOT = path.resolve(__dirname, '..');
 const ENTROPY_WORK_URL = 'https://entropyforlife.it/mario-marcolongo-entropy-for-life/';
 const EXPECTED = {
-  jobTitle: 'Data & Knowledge Quality Analyst',
+  jobTitle: 'Data Quality & Information Retrieval Analyst',
   secondaryTitle: 'Information Retrieval · Evidence Synthesis · AI Evaluation',
   email: 'me@mariomarcolongo.com',
   orcid: '0000-0003-2846-7115',
@@ -79,7 +79,12 @@ const PROHIBITED = [
   ['AI-enabled workflows', 'Use a concrete description of AI-assisted tools'],
   ['Website Operations Contractor', 'Use the clearer Website Maintenance Contractor role title'],
   ['Research Operations Contributor', 'Use the clearer Research Support Contributor role title'],
-  ['Research-integrity product operations', 'Name the product work as requirements and testing']
+  ['Research-integrity product operations', 'Name the product work as requirements and testing'],
+  ['Data & Knowledge Quality Analyst', 'Use the clearer Data Quality & Information Retrieval Analyst title'],
+  ['Scientific Research, Fact-Checking & Website Maintenance Contractor', 'Use the clearer paired Entropy role titles'],
+  ['Volunteer Focus-Group Co-Facilitator & Research Support Contributor', 'Use the clearer Volunteer Research Assistant & Focus-Group Co-Facilitator title'],
+  ['Model-Behavior Evaluator', 'Use the clearer Independent AI Evaluator title'],
+  ['Scientific Data Visualizer & Evidence Synthesist', 'Use the conventional Scientific Data Visualization & Evidence Synthesis label']
 ];
 
 let failures = 0;
@@ -141,7 +146,7 @@ for (const [field, actual, expected] of currentGraySwanChecks) {
   if (actual !== expected) fail('data/source.js', 1, `${field} must equal ${JSON.stringify(expected)}; found ${JSON.stringify(actual)}.`);
 }
 
-const currentAiPillar = (D.pillars || []).find((item) => item?.category === 'AI EVALUATION & SAFEGUARD TESTING');
+const currentAiPillar = (D.pillars || []).find((item) => item?.category === 'AI EVALUATION & ADVERSARIAL TESTING');
 for (const required of ['#74', 'top 6%', '113 platform-recorded total breaks', 'Arena rank #365', '28 global unique breaks', '1,120 points', '255 submissions', '29 July 2026']) {
   if (!String(currentAiPillar?.desc || '').includes(required)) fail('data/source.js', 1, `Current AI-evaluation pillar is missing: ${required}`);
 }

@@ -1,6 +1,6 @@
 # Mario Marcolongo — Portfolio & Application CV System
 
-> **Data & Knowledge Quality Analyst**<br>
+> **Data Quality & Information Retrieval Analyst**<br>
 > Information Retrieval · Evidence Synthesis · AI Evaluation · Source Verification
 
 Live website: [mariomarcolongo.com](https://mariomarcolongo.com)
@@ -15,7 +15,7 @@ The public positioning is intentionally ambitious and source-backed. It presents
 
 The homepage prioritizes the evidence most relevant to higher-upside roles and to realistic paths toward them:
 
-1. **AI evaluation and model behavior** — exploratory adversarial testing, safeguards support, test planning and evidence reporting.
+1. **AI evaluation and model behavior** — exploratory adversarial testing, evaluation support, test planning and evidence reporting.
 2. **Scientific AI quality and research data** — primary-source verification, provenance, metadata, domain-expert review and research support.
 3. **Trust, safety and source quality** — source provenance, public-record investigation, structured-data review and public-source research support.
 4. **Research, editorial and community coordination** — a credible bridge path for evidence synthesis, editorial production and participant-facing roles.

@@ -20,7 +20,7 @@ const H = portfolio.createPortfolioHuman();
 
 applyNotandiaBranding({ D, H });
 
-H.eyebrow = 'Data & knowledge quality · information retrieval · AI evaluation';
+H.eyebrow = 'Data quality · information retrieval · AI evaluation';
 H.headline = 'I make information and AI systems more reliable.';
 H.introduction = 'I retrieve and verify information, investigate data and evidence quality, and test model behavior. When the work needs a durable system, I define the research process, test the result and keep it maintained.';
 
@@ -63,7 +63,7 @@ if (modelCase) {
 const entropyCase = H.cases.find((item) => item.id === 'scientific-verification');
 if (entropyCase) {
   entropyCase.title = 'Fact-checking and producing scientific content before publication.';
-  entropyCase.lead = 'Paid contractor supporting an established Italian science-communication brand through evidence review, English-to-Italian scientific localization, content production and website delivery.';
+  entropyCase.lead = 'Paid contractor supporting an established Italian science-communication brand through evidence review, English-to-Italian scientific localization, content production and WordPress website management.';
   entropyCase.action = 'Conduct recurring primary-literature research, scientific fact-checking and source-faithful English-to-Italian localization. Depending on the assignment, also develop scripts, data analyses, visualizations, slides, on-screen assets, short-form content and selected thumbnails. Designed and built entropyforlife.it in WordPress and manage responsive design, publishing, hosting, DNS, SSL and technical SEO.';
   entropyCase.result = `${audience.projects} documented published content contributions: ${audience.videoProjects} YouTube videos, ${audience.articles} co-authored articles and ${audience.shortForm} short-form pieces. The official work record also indexes selected thumbnail work, which overlaps with video projects and is not added to the total.`;
   entropyCase.boundary = 'Platform metrics describe the production environment, not a personal audience. Quantified thumbnail lift is stated only when comparable analytics are available.';

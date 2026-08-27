@@ -86,12 +86,12 @@ replaceStringSkill(D.resumeSkills, 'Languages:', multilingualMasterSkill);
 
 const entropyProject = D.projects?.find((item) => item?.id === 'entropy-for-life');
 if (entropyProject) {
-  entropyProject.title = 'Entropy for Life — Scientific Content Quality, Localization & Website Maintenance';
+  entropyProject.title = 'Entropy for Life — Science Writing, Fact-Checking & Website Management';
   entropyProject.description =
     `Conduct recurring primary-literature research, scientific fact-checking and English-to-Italian scientific localization across ${career.audience.projects} documented published content contributions: ${career.audience.videoProjects} YouTube videos, ${career.audience.articles} co-authored articles and ${career.audience.shortForm} short-form pieces. Predominantly English-language evidence is adapted into accurate Italian scripts, articles, visualizations and short-form content with attention to terminology, source meaning, cultural context and audience comprehension. Entropy for Life is an Italian science-communication brand with ${career.audience.youtubeSubscribers} YouTube subscribers and ${career.audience.youtubeViewsExact} channel views as of ${career.audience.asOf}. Depending on the assignment, work also includes data analysis, slides, on-screen assets, short-form content and selected thumbnail concepts or production. Designed and built entropyforlife.it in WordPress and operate its responsive design, publishing and OVHcloud technical stack. Platform metrics describe the production environment, not a personal audience.`;
   entropyProject.tech = [
     'Scientific Evidence Review', 'English-to-Italian Localization', 'Terminology & Content Quality',
-    'Script Development', 'Data Visualization', 'Presentation Assets', 'WordPress', 'Website Delivery'
+    'Script Development', 'Data Visualization', 'Presentation Assets', 'WordPress', 'WordPress Website Management'
   ];
   entropyProject.highlights = [
     `Production Scale: ${career.audience.youtubeViews} YouTube views · ${career.audience.youtubeSubscribers} subscribers · ${career.audience.youtubeVideos} published videos`,

@@ -61,10 +61,10 @@ const requiredFiles = [
   "dist/cv-editorial.html",
   "dist/cv-integrity.html",
   "dist/integrity.html",
-  "dist/evidence/gray-swan-2026-07-25/index.html",
-  "dist/media/work/model-behavior-profile.webp",
+  "dist/evidence/gray-swan-2026-07-29.html",
+  "dist/media/work/gray-swan-profile-2026-07-29-1600.webp",
   "dist/media/work/entropy-work-inventory.svg",
-  "dist/evidence/gray-swan-profile-2026-07-25.png",
+  "dist/evidence/gray-swan-arena-mario-marcolongo-2026-07-29-033550-CEST.png",
   "dist/llms.txt",
   "dist/llms-full.txt",
   "dist/cv-llm.txt"
@@ -80,7 +80,7 @@ const pages = {
   editorial: read("dist/cv-editorial.html"),
   integrity: read("dist/cv-integrity.html"),
   workSample: read("dist/integrity.html"),
-  evidence: read("dist/evidence/gray-swan-2026-07-25/index.html")
+  evidence: read("dist/evidence/gray-swan-2026-07-29.html")
 };
 for (const [name, html] of Object.entries(pages)) {
   if (html) parseJsonLd(html, name);
@@ -110,7 +110,7 @@ for (const expected of [
   `${ENTROPY.videoProjects} YouTube`,
   `${ENTROPY.articles} co-authored articles`,
   ENTROPY_WORK_URL,
-  "/media/work/model-behavior-profile.webp",
+  "/media/work/gray-swan-profile-2026-07-29-1600.webp",
   GS.evidencePath
 ]) contains(currentOutputs, expected, "Current applicant-facing outputs");
 
@@ -132,10 +132,10 @@ for (const stale of [
 
 const home = normalize(pages.home);
 for (const expected of [
-  H.headline,
+  "I make information and AI systems more reliable.",
   "Fact-checking and producing scientific content before publication.",
-  `${ENTROPY.projects} documented published projects`,
-  `${ENTROPY.videoProjects} YouTube projects`,
+  `${ENTROPY.projects} documented published content contributions`,
+  `${ENTROPY.videoProjects} YouTube videos`,
   `${ENTROPY.articles} co-authored articles`,
   "Official work record published by Entropy for Life",
   ENTROPY_WORK_URL,
@@ -149,10 +149,10 @@ pass("Homepage evidence hierarchy and media checked");
 const security = normalize(pages.security);
 for (const expected of [
   "AI evaluation and model-behavior record.",
-  `${GS.totalBreaks} platform-displayed total breaks`,
+  "Proving Ground total breaks",
   `${GS.displayedAreaTotal}`,
-  "Current dated profile evidence",
-  "Historical 24 July wave record",
+  "29 July 2026 Gray Swan profile screenshot",
+  "historical 24 July 26-wave activity table",
   GS.evidencePath,
   "Open live Gray Swan profile"
 ]) contains(security, expected, "Evaluation record");
@@ -166,7 +166,8 @@ const profiles = [
 ];
 for (const [label, html, profile] of profiles) {
   const text = normalize(html);
-  contains(text, profile.title, label);
+  const expectedTitle = label === "Integrity CV" ? "Investigations & Source Quality Analyst" : profile.title;
+  contains(text, expectedTitle, label);
   contains(text, "Page 1 of 2", label);
   contains(text, "Page 2 of 2", label);
   contains(text, "C1 overall", label);
@@ -185,12 +186,12 @@ for (const expected of [
   "not presented as an independent software developer",
   String(GS.totalBreaks),
   ENTROPY.projects,
-  "Scientific Research, Fact-Checking & Website Maintenance Contractor",
+  "Science Writer & Fact-Checker / Website Manager (WordPress)",
   ENTROPY_WORK_URL
 ]) contains(master, expected, "Master CV");
 pass("Master CV checked");
 
-if (D.identity.buildVersion !== "v2026.07.26") fail("Release build version is not current.");
+if (D.identity.buildVersion !== "v2026.07.29") fail("Release build version is not current.");
 if (D.redTeamActivity.platformReportedBreaks !== GS.totalBreaks) fail("Current Gray Swan total is inconsistent.");
 if (D.redTeamActivity.areaBreaksTotal !== GS.displayedAreaTotal) fail("Area-total evidence limit is inconsistent.");
 

@@ -6,7 +6,7 @@ const APPLICATION_PROFILES = {
     subtitle: "Model testing · adversarial QA · evidence reporting · test planning",
     summary: "AI evaluation and research-verification analyst with sustained self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. Gray Swan Proving Ground participant ranked #74 (top 6%) on 29 July 2026, with 113 platform-recorded total breaks; the same profile showed Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions. Brings eight years of auditable claim verification, paid scientific fact-checking, structured research processes and reporting that separates evidence from inference.",
     fit: [
-      "AI evaluation and safeguard testing",
+      "AI evaluation and adversarial testing",
       "AI content red teaming and adversarial QA",
       "Model behavior, trust & safety and policy testing",
       "Human-data quality, grading and evaluation support"
@@ -19,7 +19,7 @@ const APPLICATION_PROFILES = {
     ],
     experience: [
       {
-        role: "Model-Behavior Evaluator",
+        role: "Independent AI Evaluator",
         organization: "Independent practice · Gray Swan Proving Ground",
         period: "Jul 2026 — Present",
         links: [
@@ -33,7 +33,7 @@ const APPLICATION_PROFILES = {
         ]
       },
       {
-        role: "Scientific Research, Fact-Checking & Website Maintenance Contractor",
+        role: "Science Writer & Fact-Checker / Website Manager (WordPress)",
         organization: "Entropy for Life · Independent contractor",
         period: "Jun 2023 — Present",
         links: [
@@ -80,7 +80,7 @@ const APPLICATION_PROFILES = {
       }
     ],
     skills: [
-      ["AI safety testing", "Exploratory adversarial testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection"],
+      ["AI evaluation & adversarial testing", "Exploratory adversarial testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection"],
       ["Evaluation planning & reporting", "Test planning, evidence capture, reproducibility notes, taxonomy thinking, issue classification, severity-oriented reporting and mitigation-retesting concepts"],
       ["Research verification", "Primary-source fact-checking, bibliographic research, claim decomposition, source-quality assessment, cross-source corroboration and evidence screening"],
       ["Technical delivery", "Codebase reading and behavior inspection, requirements definition, functional testing, AI-assisted implementation, Git/GitHub, JSON, REST APIs, WordPress, Cloudflare Pages and AWS Lambda deployment"],
@@ -108,7 +108,7 @@ const APPLICATION_PROFILES = {
     ],
     experience: [
       {
-        role: "Scientific Research, Fact-Checking & Website Maintenance Contractor",
+        role: "Science Writer & Fact-Checker / Website Manager (WordPress)",
         organization: "Entropy for Life · Independent contractor",
         period: "Jun 2023 — Present",
         links: [
@@ -180,7 +180,7 @@ const APPLICATION_PROFILES = {
     documentLabel: "Role-family application CV",
     title: "Research, Editorial & Community Coordinator",
     subtitle: "Evidence synthesis · editorial coordination · research participation · community engagement · AI-assisted tools",
-    summary: "Research, editorial and community coordinator with paid experience supporting scientific content production, primary-source fact-checking, professional writing and website delivery. Co-developed and facilitated approximately 4–5 structured remote focus-group sessions, typically lasting 1–2 hours, with autistic participants discussing sensitive sexuality and relationship topics under Marta Panzeri at the University of Padua DPSS. Also contributed evidence research to 55+ published YouTube video projects and four co-authored articles and founded an open research-participation directory covering more than 55 initiatives.",
+    summary: "Research, editorial and community coordinator with paid experience supporting scientific content production, primary-source fact-checking, professional writing and WordPress website management. Co-developed and facilitated approximately 4–5 structured remote focus-group sessions, typically lasting 1–2 hours, with autistic participants discussing sensitive sexuality and relationship topics under Marta Panzeri at the University of Padua DPSS. Also contributed evidence research to 55+ published YouTube video projects and four co-authored articles and founded an open research-participation directory covering more than 55 initiatives.",
     fit: [
       "Assistant editor and editorial-production support",
       "Evidence-synthesis program coordination",
@@ -195,7 +195,7 @@ const APPLICATION_PROFILES = {
     ],
     experience: [
       {
-        role: "Scientific Research, Fact-Checking & Website Maintenance Contractor",
+        role: "Science Writer & Fact-Checker / Website Manager (WordPress)",
         organization: "Entropy for Life · Independent contractor",
         period: "Jun 2023 — Present",
         links: [
@@ -210,7 +210,7 @@ const APPLICATION_PROFILES = {
         ]
       },
       {
-        role: "Volunteer Focus-Group Co-Facilitator & Research Support Contributor",
+        role: "Volunteer Research Assistant & Focus-Group Co-Facilitator",
         organization: "Department of Developmental Psychology and Socialisation (DPSS), University of Padua · supervised by Marta Panzeri",
         period: "Nov 2022 — 2025",
         links: [
@@ -299,7 +299,7 @@ const APPLICATION_PROFILES = {
         ]
       },
       {
-        role: "Scientific Research, Fact-Checking & Website Maintenance Contractor",
+        role: "Science Writer & Fact-Checker / Website Manager (WordPress)",
         organization: "Entropy for Life · Independent contractor",
         period: "Jun 2023 — Present",
         links: [
@@ -313,7 +313,7 @@ const APPLICATION_PROFILES = {
         ]
       },
       {
-        role: "Model-Behavior Evaluator",
+        role: "Independent AI Evaluator",
         organization: "Independent practice · Gray Swan Proving Ground",
         period: "Jul 2026 — Present",
         links: [

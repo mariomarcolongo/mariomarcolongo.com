@@ -17,11 +17,11 @@ function createMarioDossier() {
     grayswanUrl: "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
     grayswanArchiveUrl: "/evidence/gray-swan-2026-07-29/",
     evaluationAsOf: "29 July 2026",
-    jobTitle: "Data & Knowledge Quality Analyst",
+    jobTitle: "Data Quality & Information Retrieval Analyst",
     secondaryTitle: "Information Retrieval · Evidence Synthesis · AI Evaluation",
     headline: "I make information and AI systems more reliable.",
     authorshipStatement: "I use AI-assisted implementation extensively. I define requirements and workflows, inspect code structure and behavior, test implementations, diagnose functional problems, guide iterative changes, deploy releases, and maintain services. I do not present myself as an independent software developer.",
-    role: "Data and knowledge-quality analyst who retrieves and verifies information, reviews data quality and tests AI behavior.",
+    role: "Data Quality & Information Retrieval Analyst focused on retrieval, verification, data-quality review and AI evaluation.",
     heroStatement: "Making information and AI systems more reliable through retrieval, verification, data-quality review and model testing.",
     location: "Based in Italy · EU/EEA work-authorised · Open to sponsored international relocation and B2B engagements",
     relocation: "EU/EEA work-authorised; Switzerland: EU/EFTA employment route once an offer is secured; open to employer-sponsored work authorisation elsewhere. International B2B engagements are available where the contracting arrangement is compliant.",
@@ -52,11 +52,11 @@ function createMarioDossier() {
     contactObfuscated: ["me", "mariomarcolongo", "com"]
   },
 
-  summary: "Data and knowledge-quality analyst with eight years of auditable public-source and structured-data work, paid scientific fact-checking and writing, community-facing research facilitation, leadership of an open research-participation directory and sustained AI model testing. The profile supports four application lanes: data quality and research analysis; AI evaluation and model behavior; source quality, trust and investigations; and research, editorial and community coordination. Public claims distinguish evidence from inference, while technical work is described accurately as AI-assisted delivery rather than independent software development.",
+  summary: "Data Quality & Information Retrieval Analyst with eight years of auditable public-source and structured-data work, paid scientific fact-checking and writing, community-facing research facilitation, leadership of an open research-participation directory and sustained AI model testing. The profile supports four application lanes: data quality and research analysis; AI evaluation and model behavior; source quality, trust and investigations; and research, editorial and community coordination. Public claims distinguish evidence from inference, while technical work is described accurately as AI-assisted delivery rather than independent software development.",
 
   pillars: [
     {
-      category: "AI EVALUATION & SAFEGUARD TESTING",
+      category: "AI EVALUATION & ADVERSARIAL TESTING",
       icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>`,
       title: "Model Behavior & Adversarial Testing",
       lead: "Structured, self-directed probing of LLM and multimodal-system behavior across chat, image, tool-use and indirect prompt-injection challenges.",
@@ -78,9 +78,9 @@ function createMarioDossier() {
       ]
     },
     {
-      category: "DATA & KNOWLEDGE QUALITY",
+      category: "DATA QUALITY & PROVENANCE",
       icon: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>`,
-      title: "Information Retrieval, Metadata & Provenance",
+      title: "Information Retrieval, Data Quality & Provenance",
       lead: "Retrieving, verifying and reconciling information across scientific sources, structured records and public research systems.",
       desc: "Founded and operate Yourself to Science™, an open-source research-participation directory indexing more than 55 initiatives, with documented inclusion, verification, provenance, metadata and licensing workflows. Public records include FAIRsharing, Zenodo, Wikidata and ENA entries.",
       highlights: [
@@ -115,7 +115,7 @@ function createMarioDossier() {
       title: "Model Behavior & Adversarial Evaluation",
       oneLiner: "Public aggregate record of self-directed model-behavior evaluation across chat, multimodal, agentic tool-use and indirect prompt-injection challenges.",
       description: "Self-directed model-behavior evaluation conducted through the Gray Swan Proving Ground. The dated 29 July 2026 screenshot shows Proving Ground rank #74, top 6%, with 113 platform-recorded total breaks; the same profile shows Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions. Aggregate counts and selected public labels are presented with explicit evidence limitations; complete prompts, outputs, model versions and adjudication materials are not reproduced.",
-      role: "Model-Behavior Evaluator",
+      role: "Independent AI Evaluator",
       tech: ["Adversarial Evaluation", "Prompt Injection", "Agentic Tool-Use", "Multimodal Safety", "Evidence Limits & Reporting"],
       links: {
         caseStudy: "/security",
@@ -148,10 +148,10 @@ function createMarioDossier() {
     },
     {
       id: "entropy-for-life",
-      title: "Entropy for Life — Scientific Verification & Website Maintenance",
-      oneLiner: "Paid scientific research, fact-checking, script-development, visual-production and website-maintenance work across 59+ published projects.",
+      title: "Entropy for Life — Science Writing, Fact-Checking & Website Management",
+      oneLiner: "Paid science writing, fact-checking, script-development, visual-production and website-management work across 59+ published projects.",
       description: "Paid contractor for Entropy for Life across 59+ publicly indexed projects: 55+ published YouTube video projects and four co-authored articles. Most video assignments combine primary-literature research, scientific fact-checking and script development; selected assignments focus on fact-checking and/or data visualization. Also produce data visualizations, presentation slides, on-screen assets, short-form materials and selected thumbnails independently or with video editor Alessandro Lanzoni. Additional Instagram and TikTok work is not yet fully indexed. Manage OVHCloud hosting, DNS, SSL, WordPress configuration, layout and functionality changes, and technical SEO. Formally acknowledged in Giacomo Moro Mauretto’s Mondadori book Italiani veri.",
-      role: "Scientific Research, Fact-Checking & Website Maintenance Contractor",
+      role: "Science Writer & Fact-Checker / Website Manager (WordPress)",
       tech: ["Primary-Literature Research", "Scientific Fact-Checking", "Script Development", "Data Visualization & Presentation Design", "WordPress", "DNS/SSL", "Technical SEO"],
       links: {
         website: "https://entropyforlife.it",
@@ -162,7 +162,7 @@ function createMarioDossier() {
       highlights: [
         "55+ Published YouTube Projects: Primary literature researched, checked and developed into scripts",
         "Four Co-Authored Articles: Scientific writing and evidence verification",
-        "Visual production & website maintenance: Slides, on-screen assets, selected thumbnails, hosting, DNS/SSL, WordPress and technical SEO"
+        "Visual production & website management: Slides, on-screen assets, selected thumbnails, hosting, DNS/SSL, WordPress and technical SEO"
       ]
     },
     {
@@ -344,7 +344,7 @@ function createMarioDossier() {
       ]
     },
     {
-      role: "Model-Behavior Evaluator",
+      role: "Independent AI Evaluator",
       org: "Independent practice · Gray Swan Proving Ground participant",
       tag: "Independent practice",
       period: "Jul 2026 — Present",
@@ -364,7 +364,7 @@ function createMarioDossier() {
       ]
     },
     {
-      role: "Scientific Research, Fact-Checking & Website Maintenance Contractor",
+      role: "Science Writer & Fact-Checker / Website Manager (WordPress)",
       org: "Entropy for Life — Italy",
       tag: "Independent contractor",
       period: "Jun 2023 — Present",
@@ -386,7 +386,7 @@ function createMarioDossier() {
       ]
     },
     {
-      role: "Volunteer Focus-Group Co-Facilitator & Research Support Contributor",
+      role: "Volunteer Research Assistant & Focus-Group Co-Facilitator",
       org: "Department of Developmental Psychology and Socialisation (DPSS), University of Padua",
       tag: "Volunteer research collaboration supervised by Marta Panzeri",
       period: "Nov 2022 — 2025",
@@ -446,7 +446,7 @@ function createMarioDossier() {
       ]
     },
     {
-      role: "Scientific Data Visualizer & Evidence Synthesist",
+      role: "Scientific Data Visualization & Evidence Synthesis",
       org: "Wikimedia Commons, Tableau Public & Flourish",
       tag: "Independent project",
       period: "2023 — Present",
@@ -496,7 +496,7 @@ function createMarioDossier() {
   skills: [
     "Information Retrieval & Verification: Primary-source and bibliographic search, claim tracing, source discovery, query refinement, source-quality assessment and cross-source corroboration.",
     "Data Quality & Provenance: Structured metadata, entity reconciliation, validation rules, documentation, taxonomy design and public-record verification.",
-    "AI Safety Evaluation & Adversarial Testing: Exploratory model-behavior testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection.",
+    "AI Evaluation & Adversarial Testing: Exploratory model-behavior testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection.",
     "Scientific Verification & Evidence Synthesis: Primary-source fact-checking, bibliographic research, claim decomposition, evidence screening, source-quality assessment and cross-source corroboration.",
     "Data Visualization: SVG vector diagrams, Tableau Public, Flourish and open-data publication.",
     "Evaluation Planning & Reporting: Test planning, evidence capture, reproducibility notes, taxonomy thinking, issue classification, reporting that separates evidence from inference and mitigation-retesting concepts.",
@@ -510,7 +510,7 @@ function createMarioDossier() {
   resumeSkills: [
     "Information Retrieval & Verification: Primary-source and bibliographic search, claim tracing, source discovery, query refinement and cross-source corroboration.",
     "Data Quality & Provenance: Structured metadata, entity reconciliation, validation rules, documentation and public-record verification.",
-    "AI Safety Evaluation & Adversarial Testing: Exploratory model-behavior testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection.",
+    "AI Evaluation & Adversarial Testing: Exploratory model-behavior testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection.",
     "Scientific Verification & Evidence Synthesis: Primary-source fact-checking, bibliographic research, claim decomposition, evidence screening and cross-source corroboration.",
     "Data Visualization: SVG vector diagrams, Tableau Public, Flourish and open-data publication.",
     "Technical Delivery: Requirements definition, codebase reading and behavior inspection, functional testing, issue diagnosis, deployment and AI-assisted implementation.",
