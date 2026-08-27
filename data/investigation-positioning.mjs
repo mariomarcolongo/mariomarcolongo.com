@@ -21,7 +21,7 @@ function cloneExperience(item) {
 }
 
 D.identity.buildVersion = "v2026.07.29";
-D.summary = `Data Quality & Information Retrieval Analyst with eight years of auditable public-source and structured-data work, including consumer-genomics privacy research, corporate-source reconciliation, archival recovery of legally sensitive records, long-form article creation, source-quality and content-governance review, biomedical evidence synthesis, multilingual scientific localization, paid scientific fact-checking, research-data provenance and adversarial testing of AI systems. ${D.summary}`;
+D.summary = `Additional work includes consumer-genomics privacy research, corporate-source reconciliation, archival recovery of legally sensitive records, long-form article creation, source-quality and content-governance review, biomedical evidence synthesis, multilingual scientific localization, paid scientific fact-checking, research-data provenance and adversarial testing of AI systems. ${D.summary}`;
 
 const scientificPillar = D.pillars?.find((item) => item?.category === "SCIENTIFIC VERIFICATION");
 if (scientificPillar) {

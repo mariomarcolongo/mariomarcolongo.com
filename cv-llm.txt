@@ -1,4 +1,4 @@
-# Mario Marcolongo — Data Quality & Information Retrieval Analyst (AI / LLM Compatible Markdown)
+# Mario Marcolongo — Data Quality & Information Retrieval | AI Evaluation & Adversarial Testing | Scientific Fact-Checking & Evidence Synthesis (AI / LLM Compatible Markdown)
 > Information Retrieval · Evidence Synthesis · AI Evaluation
 > I make information and AI systems more reliable.
 > Work Authorization: EU/EEA work-authorised; Switzerland: EU/EFTA employment route once an offer is secured; open to employer-sponsored work authorisation elsewhere. International B2B engagements are available where the contracting arrangement is compliant.
@@ -7,7 +7,7 @@
 ---
 
 ## Executive Summary
-Data Quality & Information Retrieval Analyst with eight years of auditable public-source and structured-data work. The public record includes paid scientific fact-checking and editorial production, a maintained research-participation directory and self-directed model-behavior testing. On 29 July 2026, the Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks. Entropy for Life work covers 80 documented published content contributions: 55 YouTube videos · 4 articles · 21 short-form pieces. Technical delivery is AI-assisted, with personal responsibility for requirements, verification, deployment and maintenance. Current open-source product work includes Notandia (formerly MDPI Filter), a continuing browser and Zotero research-integrity tool.
+My work spans information retrieval, data quality, scientific fact-checking, AI evaluation and research operations. It includes eight years of auditable public-source and structured-data work, a maintained research-participation directory and self-directed model-behavior testing. On 29 July 2026, the Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks. Entropy for Life work covers 80 documented published content contributions: 55 YouTube videos · 4 articles · 21 short-form pieces. Technical delivery is AI-assisted, with personal responsibility for requirements, verification, deployment and maintenance. Current open-source product work includes Notandia (formerly MDPI Filter), a continuing browser and Zotero research-integrity tool.
 
 > **My technical work uses AI-assisted implementation: I define requirements, inspect implementation behavior, test releases, diagnose functional problems, guide iterations, deploy releases and maintain services.**
 
@@ -110,12 +110,12 @@ Conduct recurring primary-literature research and scientific fact-checking acros
 Created and maintain Notandia, the public continuation and expansion of MDPI Filter. The browser extension helps users identify articles from publishers whose editorial and peer-review practices have attracted scrutiny—including MDPI and Frontiers—and choose how matching articles should appear, including context, badges, highlights, dimming or hiding. It also uses Crossref/Retraction Watch data to check for formal notices such as retractions, corrections, expressions of concern, withdrawals, duplicate-publication findings and reinstatements. I define product requirements and evidence hierarchies, test cross-browser and Zotero behavior, inspect API and implementation logic, reproduce failures, guide AI-assisted changes, and manage documentation, release verification and deployment. The Zotero plugin currently focuses on precise MDPI item and reference detection, including structured PubMed Central evidence and exact citation highlighting. Publisher-level context is controlled by the user and does not treat every journal or article as equivalent. Existing store identities and compatibility-sensitive identifiers are retained so the same product lineage can continue receiving updates. Current source repositories: https://github.com/notandia/browser-extension and https://github.com/notandia/zotero-plugin.
 
 ### English Wikipedia Link Converter | Telegram Bot
-**Creator & Technical Maintainer** | GitHub: https://github.com/jnton/english-wikipedia-link-converter-telegram-bot | Bot: https://t.me/ToEnWikipediaBot
+**Creator & Project Lead** | GitHub: https://github.com/jnton/english-wikipedia-link-converter-telegram-bot | Bot: https://t.me/ToEnWikipediaBot
 
 Specified the behavior and deployment requirements for a Telegram bot running on AWS Lambda and API Gateway. Used AI-assisted implementation, tested private, group and inline workflows, diagnosed deployment problems and maintained GitHub Actions releases.
 
 ### Emergent Humanity | Interactive Network Narrative
-**Creator & Concept and Requirements Designer** | Website: https://jnton.github.io/emergent-humanity/ | GitHub: https://github.com/jnton/emergent-humanity
+**Creator & Project Lead** | Website: https://jnton.github.io/emergent-humanity/ | GitHub: https://github.com/jnton/emergent-humanity
 
 Developed the concept, narrative structure, interaction requirements and behavioral specifications for an evolving browser-based network simulation. Implementation was produced through AI-assisted workflows and personally tested and iterated.
 

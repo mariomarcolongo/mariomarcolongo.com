@@ -1,7 +1,7 @@
 # Mario Marcolongo — Portfolio & Application CV System
 
-> **Data Quality & Information Retrieval Analyst**<br>
-> Information Retrieval · Evidence Synthesis · AI Evaluation · Source Verification
+> **Data Quality & Information Retrieval | AI Evaluation & Adversarial Testing | Scientific Fact-Checking & Evidence Synthesis**<br>
+> Information retrieval · evidence synthesis · AI evaluation · source verification
 
 Live website: [mariomarcolongo.com](https://mariomarcolongo.com)
 

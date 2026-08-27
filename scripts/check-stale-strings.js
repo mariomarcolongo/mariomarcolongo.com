@@ -6,7 +6,7 @@ const D = require('../data/source.js');
 const ROOT = path.resolve(__dirname, '..');
 const ENTROPY_WORK_URL = 'https://entropyforlife.it/mario-marcolongo-entropy-for-life/';
 const EXPECTED = {
-  jobTitle: 'Data Quality & Information Retrieval Analyst',
+  professionalHeadline: 'Data Quality & Information Retrieval | AI Evaluation & Adversarial Testing | Scientific Fact-Checking & Evidence Synthesis',
   secondaryTitle: 'Information Retrieval · Evidence Synthesis · AI Evaluation',
   email: 'me@mariomarcolongo.com',
   orcid: '0000-0003-2846-7115',
@@ -80,7 +80,7 @@ const PROHIBITED = [
   ['Website Operations Contractor', 'Use the clearer Website Maintenance Contractor role title'],
   ['Research Operations Contributor', 'Use the clearer Research Support Contributor role title'],
   ['Research-integrity product operations', 'Name the product work as requirements and testing'],
-  ['Data & Knowledge Quality Analyst', 'Use the clearer Data Quality & Information Retrieval Analyst title'],
+  ['Data & Knowledge Quality Analyst', 'Use the capability-led professional headline instead of an invented analyst title'],
   ['Scientific Research, Fact-Checking & Website Maintenance Contractor', 'Use the clearer paired Entropy role titles'],
   ['Volunteer Focus-Group Co-Facilitator & Research Support Contributor', 'Use the clearer Volunteer Research Assistant & Focus-Group Co-Facilitator title'],
   ['Model-Behavior Evaluator', 'Use the clearer Independent AI Evaluator title'],
@@ -122,7 +122,7 @@ for (const relative of REQUIRED) {
 for (const root of SCAN_ROOTS) filesUnder(root).forEach(scanFile);
 
 const identityChecks = [
-  ['identity.jobTitle', D.identity?.jobTitle, EXPECTED.jobTitle],
+  ['identity.professionalHeadline', D.identity?.professionalHeadline, EXPECTED.professionalHeadline],
   ['identity.secondaryTitle', D.identity?.secondaryTitle, EXPECTED.secondaryTitle],
   ['identity.email', D.identity?.email, EXPECTED.email],
   ['identity.orcid', D.identity?.orcid, EXPECTED.orcid],

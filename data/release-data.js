@@ -73,9 +73,9 @@ D.identity.buildVersion = "v2026.07.29";
 D.identity.grayswanArchiveUrl = GS.evidencePath;
 D.identity.evaluationAsOf = GS.asOf;
 D.identity.role =
-  `Data Quality & Information Retrieval Analyst. Gray Swan Proving Ground snapshot: #${GS.rank} (${GS.percentile.toLowerCase()}) with ${GS.totalBreaks} platform-displayed total breaks on ${GS.asOf}.`;
+  `Work spanning information retrieval, data quality, AI evaluation, scientific fact-checking and research operations. Gray Swan Proving Ground snapshot: #${GS.rank} (${GS.percentile.toLowerCase()}) with ${GS.totalBreaks} platform-displayed total breaks on ${GS.asOf}.`;
 D.summary =
-  `Data Quality & Information Retrieval Analyst with eight years of auditable public-source and structured-data work, paid scientific fact-checking and editorial production, community-facing research facilitation, leadership of an open research-participation directory and sustained adversarial testing of AI systems. On ${GS.asOf}, the Gray Swan Proving Ground profile displayed rank #${GS.rank} (${GS.percentile.toLowerCase()}) and ${GS.totalBreaks} total breaks. Entropy for Life work covers ${ENTROPY.totalProjects} documented published projects: ${ENTROPY.videoProjects} YouTube video projects and ${ENTROPY.articles} co-authored articles. Technical implementation is described accurately as AI-assisted delivery rather than independent software development.`;
+  `My work spans information retrieval, data quality, scientific fact-checking, AI evaluation and research operations. It includes eight years of auditable public-source and structured-data work, paid scientific fact-checking and editorial production, community-facing research facilitation, leadership of an open research-participation directory and sustained adversarial testing of AI systems. On ${GS.asOf}, the Gray Swan Proving Ground profile displayed rank #${GS.rank} (${GS.percentile.toLowerCase()}) and ${GS.totalBreaks} total breaks. Entropy for Life work covers ${ENTROPY.totalProjects} documented published projects: ${ENTROPY.videoProjects} YouTube video projects and ${ENTROPY.articles} co-authored articles. Technical implementation is described accurately as AI-assisted delivery rather than independent software development.`;
 
 const aiPillar = D.pillars?.[0];
 if (aiPillar) {

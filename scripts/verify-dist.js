@@ -287,7 +287,7 @@ for (const needle of [
 pass('Evaluation record evidence limits checked');
 
 const allGenerated = normalizeHtmlText(Object.values(pages).join('\n')) + Object.values(canonical).join('\n');
-assertContains(allGenerated, D.identity.jobTitle, 'Generated outputs');
+assertContains(allGenerated, D.identity.professionalHeadline, 'Generated outputs');
 assertContains(allGenerated, D.identity.secondaryTitle, 'Generated outputs');
 assertContains(allGenerated, ENTROPY_WORK_URL, 'Generated outputs');
 assertContains(allGenerated, 'Notandia', 'Generated outputs');

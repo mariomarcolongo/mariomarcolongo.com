@@ -17,11 +17,11 @@ function createMarioDossier() {
     grayswanUrl: "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
     grayswanArchiveUrl: "/evidence/gray-swan-2026-07-29/",
     evaluationAsOf: "29 July 2026",
-    jobTitle: "Data Quality & Information Retrieval Analyst",
+    professionalHeadline: "Data Quality & Information Retrieval | AI Evaluation & Adversarial Testing | Scientific Fact-Checking & Evidence Synthesis",
     secondaryTitle: "Information Retrieval · Evidence Synthesis · AI Evaluation",
     headline: "I make information and AI systems more reliable.",
     authorshipStatement: "I use AI-assisted implementation extensively. I define requirements and workflows, inspect code structure and behavior, test implementations, diagnose functional problems, guide iterative changes, deploy releases, and maintain services. I do not present myself as an independent software developer.",
-    role: "Data Quality & Information Retrieval Analyst focused on retrieval, verification, data-quality review and AI evaluation.",
+    role: "Work spanning information retrieval, data quality, AI evaluation, scientific fact-checking and knowledge integrity.",
     heroStatement: "Making information and AI systems more reliable through retrieval, verification, data-quality review and model testing.",
     location: "Based in Italy · EU/EEA work-authorised · Open to sponsored international relocation and B2B engagements",
     relocation: "EU/EEA work-authorised; Switzerland: EU/EFTA employment route once an offer is secured; open to employer-sponsored work authorisation elsewhere. International B2B engagements are available where the contracting arrangement is compliant.",
@@ -52,7 +52,7 @@ function createMarioDossier() {
     contactObfuscated: ["me", "mariomarcolongo", "com"]
   },
 
-  summary: "Data Quality & Information Retrieval Analyst with eight years of auditable public-source and structured-data work, paid scientific fact-checking and writing, community-facing research facilitation, leadership of an open research-participation directory and sustained AI model testing. The profile supports four application lanes: data quality and research analysis; AI evaluation and model behavior; source quality, trust and investigations; and research, editorial and community coordination. Public claims distinguish evidence from inference, while technical work is described accurately as AI-assisted delivery rather than independent software development.",
+  summary: "My work spans information retrieval, data quality, scientific verification and AI evaluation, with eight years of auditable public-source and structured-data work. Experience includes paid scientific fact-checking and writing, community-facing research facilitation, leadership of an open research-participation directory and sustained AI model testing. The profile supports four application lanes: data quality and research analysis; AI evaluation and model behavior; source quality, trust and investigations; and research, editorial and community coordination. Public claims distinguish evidence from inference, while technical work is described accurately as AI-assisted delivery rather than independent software development.",
 
   pillars: [
     {
@@ -170,7 +170,7 @@ function createMarioDossier() {
       title: "MDPI Filter | Browser Extension",
       oneLiner: "An open-source browser extension that helps researchers identify and manage MDPI publications across search and citation workflows.",
       description: "Conceived product requirements and specified DOM-targeting behavior for a browser extension that highlights or hides MDPI publications across Google, Google Scholar, PubMed and Europe PMC and identifies citations on publisher pages. Coordinated AI-assisted implementation, inspected behavior, tested releases and maintained public store deployments.",
-      role: "Product Lead & Technical Maintainer",
+      role: "Creator & Product Lead",
       tech: ["Product Requirements", "Functional Testing", "Manifest V3", "NCBI E-utilities", "Browser Extension Maintenance"],
       links: {
         chromeStore: "https://chromewebstore.google.com/detail/mdpi-filter/comknkeimaaadpiopddjoknflbmjeccp",
@@ -192,7 +192,7 @@ function createMarioDossier() {
       title: "English Wikipedia Link Converter | Telegram Bot",
       oneLiner: "An open-source Telegram bot that converts non-English Wikipedia links to their English equivalents.",
       description: "Specified the behavior and deployment requirements for a Telegram bot running on AWS Lambda and API Gateway. Used AI-assisted implementation, tested private, group and inline workflows, diagnosed deployment problems and maintained GitHub Actions releases.",
-      role: "Creator & Technical Maintainer",
+      role: "Creator & Project Lead",
       tech: ["Requirements", "Functional Testing", "AWS Lambda", "API Gateway", "GitHub Actions", "Serverless Deployment & Maintenance"],
       links: {
         bot: "https://t.me/ToEnWikipediaBot",
@@ -209,7 +209,7 @@ function createMarioDossier() {
       title: "Emergent Humanity | Interactive Network Narrative",
       oneLiner: "A 16-chapter interactive narrative and browser simulation modeling humanity as an emergent network entity.",
       description: "Developed the concept, narrative structure, interaction requirements and behavioral specifications for an evolving browser-based network simulation. Implementation was produced through AI-assisted workflows and personally tested and iterated.",
-      role: "Creator & Concept and Requirements Designer",
+      role: "Creator & Project Lead",
       tech: ["Concept Design", "Interactive Narration", "Requirements", "Behavioral Testing", "Network Visualization"],
       links: {
         website: "https://jnton.github.io/emergent-humanity/",

@@ -13,11 +13,11 @@ const MARIO_DOSSIER = {
     "grayswanUrl": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
     "grayswanArchiveUrl": "/evidence/gray-swan-2026-07-29/",
     "evaluationAsOf": "29 July 2026",
-    "jobTitle": "Data Quality & Information Retrieval Analyst",
+    "professionalHeadline": "Data Quality & Information Retrieval | AI Evaluation & Adversarial Testing | Scientific Fact-Checking & Evidence Synthesis",
     "secondaryTitle": "Information Retrieval · Evidence Synthesis · AI Evaluation",
     "headline": "I make information and AI systems more reliable.",
     "authorshipStatement": "My technical work uses AI-assisted implementation: I define requirements, inspect implementation behavior, test releases, diagnose functional problems, guide iterations, deploy releases and maintain services.",
-    "role": "Data Quality & Information Retrieval Analyst. Gray Swan Proving Ground snapshot: #74 (top 6%) with 113 platform-displayed total breaks on 29 July 2026.",
+    "role": "Work spanning information retrieval, data quality, AI evaluation, scientific fact-checking and research operations. Gray Swan Proving Ground snapshot: #74 (top 6%) with 113 platform-displayed total breaks on 29 July 2026.",
     "heroStatement": "Making information and AI systems more reliable through retrieval, verification, data-quality review and model testing.",
     "location": "Based in Italy · EU/EEA work-authorised · Open to sponsored international relocation and B2B engagements",
     "relocation": "EU/EEA work-authorised; Switzerland: EU/EFTA employment route once an offer is secured; open to employer-sponsored work authorisation elsewhere. International B2B engagements are available where the contracting arrangement is compliant.",
@@ -52,7 +52,7 @@ const MARIO_DOSSIER = {
     ],
     "notandiaUrl": "https://mariomarcolongo.com/notandia"
   },
-  "summary": "Data Quality & Information Retrieval Analyst with eight years of auditable public-source and structured-data work. The public record includes paid scientific fact-checking and editorial production, a maintained research-participation directory and self-directed model-behavior testing. On 29 July 2026, the Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks. Entropy for Life work covers 80 documented published content contributions: 55 YouTube videos · 4 articles · 21 short-form pieces. Technical delivery is AI-assisted, with personal responsibility for requirements, verification, deployment and maintenance. Current open-source product work includes Notandia (formerly MDPI Filter), a continuing browser and Zotero research-integrity tool.",
+  "summary": "My work spans information retrieval, data quality, scientific fact-checking, AI evaluation and research operations. It includes eight years of auditable public-source and structured-data work, a maintained research-participation directory and self-directed model-behavior testing. On 29 July 2026, the Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks. Entropy for Life work covers 80 documented published content contributions: 55 YouTube videos · 4 articles · 21 short-form pieces. Technical delivery is AI-assisted, with personal responsibility for requirements, verification, deployment and maintenance. Current open-source product work includes Notandia (formerly MDPI Filter), a continuing browser and Zotero research-integrity tool.",
   "pillars": [
     {
       "category": "AI EVALUATION & ADVERSARIAL TESTING",
@@ -269,7 +269,7 @@ const MARIO_DOSSIER = {
       "title": "English Wikipedia Link Converter | Telegram Bot",
       "oneLiner": "An open-source Telegram bot that converts non-English Wikipedia links to their English equivalents.",
       "description": "Specified the behavior and deployment requirements for a Telegram bot running on AWS Lambda and API Gateway. Used AI-assisted implementation, tested private, group and inline workflows, diagnosed deployment problems and maintained GitHub Actions releases.",
-      "role": "Creator & Technical Maintainer",
+      "role": "Creator & Project Lead",
       "tech": [
         "Requirements",
         "Functional Testing",
@@ -293,7 +293,7 @@ const MARIO_DOSSIER = {
       "title": "Emergent Humanity | Interactive Network Narrative",
       "oneLiner": "A 16-chapter interactive narrative and browser simulation modeling humanity as an emergent network entity.",
       "description": "Developed the concept, narrative structure, interaction requirements and behavioral specifications for an evolving browser-based network simulation. Implementation was produced through AI-assisted workflows and personally tested and iterated.",
-      "role": "Creator & Concept and Requirements Designer",
+      "role": "Creator & Project Lead",
       "tech": [
         "Concept Design",
         "Interactive Narration",

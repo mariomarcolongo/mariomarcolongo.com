@@ -13,11 +13,11 @@ const profileJsonLd = buildProfileGraph(D, "https://mariomarcolongo.com/cv", pag
 
 const roleAliases = {
   "Founder & Technical Product Builder": "Founder & Project Lead",
-  "Product Owner & Technical Builder": "Product Lead & Technical Maintainer",
-  "Product Owner & AI-Assisted Technical Operator": "Product Lead & Technical Maintainer",
-  "Creator & Technical Operator": "Creator & Technical Maintainer",
-  "Creator & Systems Builder": "Creator & Product Lead",
-  "Creator & Systems Designer": "Creator & Product Requirements Lead"
+  "Product Owner & Technical Builder": "Creator & Product Lead",
+  "Product Owner & AI-Assisted Technical Operator": "Creator & Product Lead",
+  "Creator & Technical Operator": "Creator & Project Lead",
+  "Creator & Systems Builder": "Creator & Project Lead",
+  "Creator & Systems Designer": "Creator & Project Lead"
 };
 
 const tagAliases = {
@@ -40,10 +40,10 @@ function cleanText(value) {
   return String(value || "")
     .replaceAll("Founder and technical builder", "Founder and project lead")
     .replaceAll("Founder & Technical Product Builder", "Founder & Project Lead")
-    .replaceAll("Product Owner & Technical Builder", "Product Lead & Technical Maintainer")
-    .replaceAll("Product Owner & AI-Assisted Technical Operator", "Product Lead & Technical Maintainer")
-    .replaceAll("Creator & Technical Operator", "Creator & Technical Maintainer")
-    .replaceAll("Creator & Systems Builder", "Creator & Product Lead")
+    .replaceAll("Product Owner & Technical Builder", "Creator & Product Lead")
+    .replaceAll("Product Owner & AI-Assisted Technical Operator", "Creator & Product Lead")
+    .replaceAll("Creator & Technical Operator", "Creator & Project Lead")
+    .replaceAll("Creator & Systems Builder", "Creator & Project Lead")
     .replaceAll("Designed and iteratively validated a local downstream bioinformatics workflow", "Specified requirements for and iteratively validated a local downstream bioinformatics workflow")
     .replaceAll("custom Python VEP extraction scripts", "AI-assisted Python VEP extraction scripts")
     .replaceAll("Designed the analytical requirements and processed", "Defined the analytical requirements and used Terra.bio workflows to process")
@@ -117,7 +117,7 @@ function linksFor(item) {
           <h1 class="master-name">{P.shared.name}</h1>
           <div class="master-title">Data Quality · Evidence Research · AI Evaluation</div>
           <p class="master-summary">
-            Data Quality & Information Retrieval Analyst combining paid scientific fact-checking and writing, research support, content production, public-source and provenance work, open research directories, structured-data quality and adversarial model testing. Able to inspect structure and behavior, define requirements, test implementations and guide AI-assisted technical delivery; not presented as an independent software developer.
+            My work spans information retrieval, data quality, scientific fact-checking, research support, public-source and provenance work, open research directories, structured-data quality and adversarial model testing. I can inspect structure and behavior, define requirements, test implementations and guide AI-assisted technical delivery; I am not presented as an independent software developer.
           </p>
         </div>
         <div class="master-contact">

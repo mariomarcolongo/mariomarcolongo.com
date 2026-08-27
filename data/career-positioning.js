@@ -51,7 +51,7 @@ D.identity.location =
   'Based in Italy · EU/EEA work-authorised · Open to sponsored international relocation and B2B engagements';
 D.identity.relocationVisible = D.identity.location;
 D.summary =
-  `Data Quality & Information Retrieval Analyst with eight years of auditable public-source and structured-data work. The public record includes paid scientific fact-checking and editorial production, a maintained research-participation directory and self-directed model-behavior testing. On ${graySwan.asOf}, the Gray Swan Proving Ground profile displayed rank #${graySwan.rank} (${graySwan.percentile.toLowerCase()}) and ${graySwan.totalBreaks} total breaks. Entropy for Life work covers ${audience.projects} documented published content contributions: ${contributionBreakdown()}. Technical delivery is AI-assisted, with personal responsibility for requirements, verification, deployment and maintenance.`;
+  `My work spans information retrieval, data quality, scientific fact-checking, AI evaluation and research operations. It includes eight years of auditable public-source and structured-data work, a maintained research-participation directory and self-directed model-behavior testing. On ${graySwan.asOf}, the Gray Swan Proving Ground profile displayed rank #${graySwan.rank} (${graySwan.percentile.toLowerCase()}) and ${graySwan.totalBreaks} total breaks. Entropy for Life work covers ${audience.projects} documented published content contributions: ${contributionBreakdown()}. Technical delivery is AI-assisted, with personal responsibility for requirements, verification, deployment and maintenance.`;
 
 Object.assign(D.redTeamActivity || {}, {
   asOf: graySwan.asOf,

@@ -4,7 +4,7 @@ const APPLICATION_PROFILES = {
     documentLabel: "Role-family application CV",
     title: "AI Evaluation & Model Behavior Analyst",
     subtitle: "Model testing · adversarial QA · evidence reporting · test planning",
-    summary: "AI evaluation and research-verification analyst with sustained self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. Gray Swan Proving Ground participant ranked #74 (top 6%) on 29 July 2026, with 113 platform-recorded total breaks; the same profile showed Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions. Brings eight years of auditable claim verification, paid scientific fact-checking, structured research processes and reporting that separates evidence from inference.",
+    summary: "I conduct AI evaluation and research verification through sustained self-directed model-behavior testing across chat, image, agentic tool-use and indirect prompt-injection challenges. The Gray Swan Proving Ground profile ranked #74 (top 6%) on 29 July 2026, with 113 platform-recorded total breaks; the same profile showed Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions. The work is supported by eight years of auditable claim verification, paid scientific fact-checking, structured research processes and reporting that separates evidence from inference.",
     fit: [
       "AI evaluation and adversarial testing",
       "AI content red teaming and adversarial QA",
@@ -91,9 +91,9 @@ const APPLICATION_PROFILES = {
   researchQuality: {
     id: "research-quality",
     documentLabel: "Role-family application CV",
-    title: "Data Quality & Research Analyst",
+    title: "Research Analyst | Data Quality & Information Retrieval",
     subtitle: "Information retrieval · data quality · source verification · data visualization · research support",
-    summary: "Information-retrieval, evidence-verification and data-quality analyst with eight years of auditable work across scientific sources, structured data and public knowledge systems. Paid fact-checker and writer for Entropy for Life, founder of an open research-participation directory with documented verification and metadata workflows, and public contributor across Wikipedia, Wikidata and Wikimedia Commons. Combines source retrieval, provenance discipline, data-quality thinking, scientific visualization and practical technical delivery.",
+    summary: "I work across information retrieval, evidence verification and data quality, with eight years of auditable work across scientific sources, structured data and public knowledge systems. I am a paid fact-checker and writer for Entropy for Life, founder of an open research-participation directory with documented verification and metadata workflows, and a public contributor across Wikipedia, Wikidata and Wikimedia Commons. The work combines source retrieval, provenance discipline, data-quality thinking, scientific visualization and practical technical delivery.",
     fit: [
       "Data quality and information-quality analysis",
       "Research analysis and evidence verification",
@@ -180,7 +180,7 @@ const APPLICATION_PROFILES = {
     documentLabel: "Role-family application CV",
     title: "Research, Editorial & Community Coordinator",
     subtitle: "Evidence synthesis · editorial coordination · research participation · community engagement · AI-assisted tools",
-    summary: "Research, editorial and community coordinator with paid experience supporting scientific content production, primary-source fact-checking, professional writing and WordPress website management. Co-developed and facilitated approximately 4–5 structured remote focus-group sessions, typically lasting 1–2 hours, with autistic participants discussing sensitive sexuality and relationship topics under Marta Panzeri at the University of Padua DPSS. Also contributed evidence research to 55+ published YouTube video projects and four co-authored articles and founded an open research-participation directory covering more than 55 initiatives.",
+    summary: "I coordinate research, editorial and community work with paid experience supporting scientific content production, primary-source fact-checking, professional writing and WordPress website management. I co-developed and facilitated approximately 4–5 structured remote focus-group sessions, typically lasting 1–2 hours, with autistic participants discussing sensitive sexuality and relationship topics under Marta Panzeri at the University of Padua DPSS. I also contributed evidence research to 55+ published YouTube video projects and four co-authored articles and founded an open research-participation directory covering more than 55 initiatives.",
     fit: [
       "Assistant editor and editorial-production support",
       "Evidence-synthesis program coordination",
@@ -268,9 +268,9 @@ const APPLICATION_PROFILES = {
   integrity: {
     id: "knowledge-integrity",
     documentLabel: "Role-family application CV",
-    title: "Trust, Safety & Source Quality Analyst",
+    title: "Content Integrity & Research Analyst",
     subtitle: "Public-source research · source verification · content integrity · structured-data review · adversarial analysis",
-    summary: "Trust, safety and source-quality analyst with eight years of auditable public work across Wikipedia, Wikidata and Wikimedia Commons, paid scientific fact-checking for a large science-communication project, and sustained adversarial testing of AI systems. Experience includes source provenance, rights and authorship verification, public-record reconciliation, health-information monitoring, structured metadata and reporting that separates evidence from inference. Best suited to analyst and support roles in trust & safety, content integrity, investigations, knowledge quality and abuse-risk research rather than penetration-testing engineering.",
+    summary: "I conduct content-integrity and research analysis through eight years of auditable public work across Wikipedia, Wikidata and Wikimedia Commons, paid scientific fact-checking for a science-communication project and sustained adversarial testing of AI systems. Experience includes source provenance, rights and authorship verification, public-record reconciliation, health-information monitoring, structured metadata and reporting that separates evidence from inference. The strongest fit is analyst and support roles in trust & safety, content integrity, investigations, knowledge quality and abuse-risk research rather than penetration-testing engineering.",
     fit: [
       "Trust & safety and content-integrity analysis",
       "Source quality and public-record investigations",

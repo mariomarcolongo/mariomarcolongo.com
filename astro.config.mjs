@@ -27,6 +27,48 @@ const legacyDataInterop = {
   transform(code, id) {
     const cleanId = id.split('?', 1)[0];
 
+    if (cleanId.endsWith('/data/notandia-branding.js')) {
+      const transformed = code.replace(
+        'module.exports = { NOTANDIA, applyNotandiaBranding, rewriteLegacyLinks };',
+        'export { NOTANDIA, applyNotandiaBranding, rewriteLegacyLinks };\nexport default { NOTANDIA, applyNotandiaBranding, rewriteLegacyLinks };'
+      );
+      return transformed === code ? null : transformed;
+    }
+
+    if (cleanId.endsWith('/data/public-evidence.js')) {
+      const transformed = code.replace(
+        'module.exports = { ENTROPY_WORK_URL, graySwan, audience, yourselfToScience };',
+        'export { ENTROPY_WORK_URL, graySwan, audience, yourselfToScience };\nexport default { ENTROPY_WORK_URL, graySwan, audience, yourselfToScience };'
+      );
+      return transformed === code ? null : transformed;
+    }
+
+    if (cleanId.endsWith('/data/homepage-positioning.js')) {
+      const originalImports = [
+        "const source = require('./source.js');",
+        "const portfolio = require('./portfolio-human.js');",
+        "const { applyNotandiaBranding } = require('./notandia-branding.js');",
+        'const {',
+        '  ENTROPY_WORK_URL,',
+        '  audience,',
+        '  graySwan,',
+        '  yourselfToScience',
+        "} = require('./public-evidence.js');"
+      ].join('\n');
+      const compatibleImports = [
+        "import source from './source.js';",
+        "import portfolio from './portfolio-human.js';",
+        "import notandiaBranding from './notandia-branding.js';",
+        "import publicEvidence from './public-evidence.js';",
+        'const { applyNotandiaBranding } = notandiaBranding;',
+        'const { ENTROPY_WORK_URL, audience, graySwan, yourselfToScience } = publicEvidence;'
+      ].join('\n');
+      const transformed = code
+        .replace(originalImports, compatibleImports)
+        .replace('module.exports = { D, H, audience, graySwan };', 'export default { D, H, audience, graySwan };');
+      return transformed === code ? null : transformed;
+    }
+
     if (cleanId.endsWith('/data/release-data.js')) {
       const originalImports = [
         'const D = require("./source.js");',
