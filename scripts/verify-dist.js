@@ -166,6 +166,10 @@ for (const falseOAuthMetadata of [
 const headers = read('dist/_headers');
 assertContains(headers, 'rel="ard"', 'dist/_headers');
 assertContains(headers, 'rel="ai-catalog"', 'dist/_headers');
+const corsHeaderDeclarations = headers.match(/^\s*Access-Control-Allow-Origin:\s*\*\s*$/gm) || [];
+if (corsHeaderDeclarations.length !== 1) {
+  fail('dist/_headers must declare one global Access-Control-Allow-Origin header; overlapping Pages rules produce an invalid combined value');
+}
 const catchAllFunction = read('functions/[[path]].js');
 for (const unsupportedOauthPath of [
   '/.well-known/oauth-protected-resource',

@@ -97,15 +97,20 @@ jobs:
             'cv-research', 'cv-editorial', 'cv-integrity', 'security'
           ];
           const categories = ['performance', 'accessibility', 'best-practices', 'seo'];
-          const expectedContentSignal = 'Content-Signal: ai-train=yes, search=yes, ai-input=yes';
+          const expectedRobotsCompatibilityDirectives = new Set([
+            'Content-Signal: ai-train=yes, search=yes, ai-input=yes',
+            'Agentmap: https://mariomarcolongo.com/.well-known/ard.json',
+            'Agentmap: https://mariomarcolongo.com/.well-known/ai-catalog.json'
+          ]);
           const robots = fs.readFileSync('dist/robots.txt', 'utf8');
-          let failed = !robots.split(/\r?\n/).some((line) => line.trim() === expectedContentSignal);
+          let failed = [...expectedRobotsCompatibilityDirectives]
+            .some((directive) => !robots.split(/\r?\n/).some((line) => line.trim() === directive));
           const summary = [
             '# Lighthouse audit — every public route', '',
             '| Route | Mode | Performance | Accessibility | Best practices | SEO |',
             '|---|---|---:|---:|---:|---:|'
           ];
-          let usedContentSignalCompatibility = false;
+          let usedRobotsCompatibility = false;
 
           for (const route of routes) {
             for (const mode of ['mobile', 'desktop']) {
@@ -130,29 +135,29 @@ jobs:
                 typeof report.audits[id].score === 'number' &&
                 report.audits[id].score < 1
               );
-              const acceptedContentSignalCompatibility =
+              const acceptedRobotsCompatibility =
                 scores.seo === 92 &&
                 robotsAudit?.score === 0 &&
                 robotsItems.length >= 1 &&
                 robotsItems.every((item) =>
-                  String(item.line || '').trim() === expectedContentSignal &&
+                  expectedRobotsCompatibilityDirectives.has(String(item.line || '').trim()) &&
                   /unknown directive/i.test(String(item.message || ''))
                 ) &&
                 otherSeoFailures.length === 0;
 
               const corePerfect = ['performance', 'accessibility', 'best-practices']
                 .every((key) => scores[key] === 100);
-              const seoAccepted = scores.seo === 100 || acceptedContentSignalCompatibility;
+              const seoAccepted = scores.seo === 100 || acceptedRobotsCompatibility;
               if (!corePerfect || !seoAccepted) failed = true;
-              if (acceptedContentSignalCompatibility) usedContentSignalCompatibility = true;
+              if (acceptedRobotsCompatibility) usedRobotsCompatibility = true;
 
-              const seoDisplay = acceptedContentSignalCompatibility ? '92†' : String(scores.seo);
+              const seoDisplay = acceptedRobotsCompatibility ? '92†' : String(scores.seo);
               summary.push(`| ${route}.html | ${mode} | ${scores.performance} | ${scores.accessibility} | ${scores['best-practices']} | ${seoDisplay} |`);
             }
           }
 
-          if (usedContentSignalCompatibility) {
-            summary.push('', '† Lighthouse 12.8.2 deducts eight SEO points because it does not yet recognize Cloudflare Content Signals in robots.txt. The exception is accepted only when every reported unknown directive is that exact Content Signal and it is the sole SEO failure.');
+          if (usedRobotsCompatibility) {
+            summary.push('', '† Lighthouse 12.8.2 deducts eight SEO points because it does not yet recognize Cloudflare Content Signals and Agentmap discovery directives in robots.txt. The exception is accepted only when every reported unknown directive is one of those exact public discovery directives and it is the sole SEO failure.');
           }
           if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `${summary.join('\n')}\n`);
           fs.writeFileSync('lighthouse-output/summary.md', `${summary.join('\n')}\n`);
