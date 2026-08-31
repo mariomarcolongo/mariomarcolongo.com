@@ -28,10 +28,17 @@ Allow: /
 
 Sitemap: https://mariomarcolongo.com/sitemap.xml
 
+# Agentic Resource Discovery (ARD), with the legacy catalog alias retained for
+# discovery clients that have not yet moved to the current ARD path.
+Agentmap: https://mariomarcolongo.com/.well-known/ard.json
+Agentmap: https://mariomarcolongo.com/.well-known/ai-catalog.json
+
 # Public discovery endpoints covered by the blanket Allow rule:
 # /llms.txt
 # /llms-full.txt
 # /cv-llm.txt
 # /auth.md
 # /data/source.js
+# /.well-known/ard.json
+# /.well-known/ai-catalog.json
 # /.well-known/

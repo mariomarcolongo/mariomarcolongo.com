@@ -74,6 +74,16 @@
           "href": "https://mariomarcolongo.com/.well-known/agent-skills/index.json",
           "type": "application/json",
           "title": "Source-Backed Skills Index"
+        },
+        {
+          "href": "https://mariomarcolongo.com/.well-known/ard.json",
+          "type": "application/json",
+          "title": "Agentic Resource Discovery Manifest"
+        },
+        {
+          "href": "https://mariomarcolongo.com/.well-known/ai-catalog.json",
+          "type": "application/json",
+          "title": "Agentic Resource Discovery Compatibility Manifest"
         }
       ],
       "service-doc": [

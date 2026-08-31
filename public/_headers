@@ -4,6 +4,8 @@
   Access-Control-Allow-Methods: GET, HEAD, OPTIONS
   Content-Signal: search=yes, ai-input=yes, ai-train=yes
   Link: <https://mariomarcolongo.com/.well-known/api-catalog>; rel="api-catalog"
+  Link: <https://mariomarcolongo.com/.well-known/ard.json>; rel="ard"; type="application/json"
+  Link: <https://mariomarcolongo.com/.well-known/ai-catalog.json>; rel="ai-catalog"; type="application/json"
   Link: <https://mariomarcolongo.com/llms.txt>; rel="describedby"; type="text/plain"
   Link: <https://mariomarcolongo.com/llms-full.txt>; rel="describedby"; type="text/plain"
   Link: <https://mariomarcolongo.com/.well-known/agent-card.json>; rel="agent-card"
