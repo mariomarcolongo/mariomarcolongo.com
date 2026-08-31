@@ -1,0 +1,74 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Mario Marcolongo — Public Evidence Interface",
+    "documentationUrl": "https://mariomarcolongo.com/auth.md"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:mariomarcolongo.com:document:professional-summary",
+      "displayName": "Mario Marcolongo Professional Summary",
+      "type": "text/markdown",
+      "url": "https://mariomarcolongo.com/llms.txt",
+      "description": "Concise, public, machine-readable professional summary for direct retrieval and citation.",
+      "tags": ["professional-profile", "information-retrieval", "data-quality", "ai-evaluation"],
+      "representativeQueries": [
+        "Who is Mario Marcolongo and what are his professional strengths?",
+        "Find Mario Marcolongo's public professional summary.",
+        "Where can I read Mario Marcolongo's background in AI evaluation and source verification?"
+      ]
+    },
+    {
+      "identifier": "urn:air:mariomarcolongo.com:document:evidence-dossier",
+      "displayName": "Mario Marcolongo Comprehensive Evidence Dossier",
+      "type": "text/markdown",
+      "url": "https://mariomarcolongo.com/llms-full.txt",
+      "description": "Public, source-linked professional evidence dossier covering experience, projects, capabilities and scope limits.",
+      "tags": ["professional-evidence", "source-verification", "research-support", "open-science"],
+      "representativeQueries": [
+        "Find evidence for Mario Marcolongo's source-verification work.",
+        "What public projects and experience support Mario Marcolongo's professional profile?",
+        "Read Mario Marcolongo's detailed machine-readable dossier."
+      ]
+    },
+    {
+      "identifier": "urn:air:mariomarcolongo.com:document:machine-readable-cv",
+      "displayName": "Mario Marcolongo Machine-Readable CV",
+      "type": "text/markdown",
+      "url": "https://mariomarcolongo.com/cv-llm.txt",
+      "description": "Public machine-readable curriculum vitae and evidence record for recruiter, ATS and AI-assisted review.",
+      "tags": ["cv", "recruiting", "ats", "career-history"],
+      "representativeQueries": [
+        "Retrieve Mario Marcolongo's machine-readable CV.",
+        "What experience and education are listed in Mario Marcolongo's CV?",
+        "Find a recruiter-readable CV for Mario Marcolongo."
+      ]
+    },
+    {
+      "identifier": "urn:air:mariomarcolongo.com:discovery:public-linkset",
+      "displayName": "Mario Marcolongo Public Discovery Linkset",
+      "type": "application/linkset+json",
+      "url": "https://mariomarcolongo.com/.well-known/api-catalog",
+      "description": "Public linkset to the site's role-based CVs, dossier documents, evidence records and discovery metadata.",
+      "tags": ["discovery", "linkset", "portfolio", "public-web"],
+      "representativeQueries": [
+        "Find all machine-readable resources on mariomarcolongo.com.",
+        "Which public CV and evidence pages are available for Mario Marcolongo?",
+        "Discover Mario Marcolongo's public professional dossier resources."
+      ]
+    },
+    {
+      "identifier": "urn:air:mariomarcolongo.com:profile:agent-card",
+      "displayName": "Mario Marcolongo Professional Evidence Agent Card",
+      "type": "application/a2a-agent-card+json",
+      "url": "https://mariomarcolongo.com/.well-known/agent-card.json",
+      "description": "Machine-readable profile of the site's public, static evidence resources. It describes direct GET retrieval only and is not a remote task-execution endpoint.",
+      "tags": ["agent-card", "public-evidence", "static-resources", "professional-profile"],
+      "representativeQueries": [
+        "Find a machine-readable agent profile for Mario Marcolongo's public evidence.",
+        "Which static professional resources can an agent retrieve from mariomarcolongo.com?",
+        "Discover Mario Marcolongo's public professional evidence interface."
+      ]
+    }
+  ]
+}

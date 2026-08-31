@@ -1,4 +1,9 @@
 // functions/[[path]].js
+const UNSUPPORTED_OAUTH_METADATA_PATHS = new Set([
+    "/.well-known/oauth-authorization-server",
+    "/.well-known/oauth-protected-resource"
+]);
+
 function markdownVariantPath(pathname) {
     if (pathname === "/") return "/index.md";
     if (pathname.endsWith(".html")) return `${pathname.slice(0, -5)}.md`;
@@ -14,6 +19,21 @@ function markdownVariantPath(pathname) {
 export async function onRequest(context) {
     const { request, next } = context;
     const url = new URL(request.url);
+
+    // This is a public static site, not an OAuth issuer or protected resource.
+    // Handle these retired metadata paths before the cache/fallback path so a
+    // cached homepage cannot be misrepresented as OAuth JSON metadata.
+    if (UNSUPPORTED_OAUTH_METADATA_PATHS.has(url.pathname)) {
+        return new Response("Not found.\n", {
+            status: 404,
+            headers: {
+                "Content-Type": "text/plain; charset=utf-8",
+                "Cache-Control": "no-store",
+                "X-Worker-Active": "true"
+            }
+        });
+    }
+
     const accept = (request.headers.get("Accept") || "").toLowerCase();
     const wantsMarkdown = accept.includes("text/markdown");
     const canCacheHtml = request.method === "GET" && !wantsMarkdown && url.search === "";
@@ -55,6 +75,8 @@ export async function onRequest(context) {
     if (headers.get("Content-Type")?.includes("text/html")) {
         const alternateMarkdownPath = markdownVariantPath(url.pathname);
         headers.append("Link", '<https://mariomarcolongo.com/.well-known/api-catalog>; rel="api-catalog"');
+        headers.append("Link", '<https://mariomarcolongo.com/.well-known/ard.json>; rel="ard"; type="application/json"');
+        headers.append("Link", '<https://mariomarcolongo.com/.well-known/ai-catalog.json>; rel="ai-catalog"; type="application/json"');
         headers.append("Link", '<https://mariomarcolongo.com/llms.txt>; rel="describedby"; type="text/plain"');
         headers.append("Link", '<https://mariomarcolongo.com/llms-full.txt>; rel="describedby"; type="text/plain"');
         if (alternateMarkdownPath) {

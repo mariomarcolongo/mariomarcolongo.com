@@ -17,16 +17,27 @@ Primary machine-readable resources:
 - `/cv-llm.txt` — machine-readable curriculum vitae
 - `/data/source.js` — effective structured public dossier
 - `/.well-known/api-catalog` — public API and discovery linkset
+- `/.well-known/ard.json` — Agentic Resource Discovery manifest
+- `/.well-known/ai-catalog.json` — compatibility alias for the ARD manifest
 - `/.well-known/agent-card.json` — Agent-to-Agent discovery card
 - `/.well-known/mcp/server-card.json` — MCP server card
 
 The public-access policy deliberately applies to every resource served from this domain, including public HTML pages, role-based CVs, machine-readable dossiers, evidence records, data files and the public personal-genomics record. The site does not reserve a public route for human-only access.
 
-## Registration and authentication
+## Agent registration
 
-No registration or authentication is required for the site's public read-only resources. Agents may access them directly with ordinary `GET` or `HEAD` requests.
+- **Registration required:** No.
+- **Registration endpoint:** None.
+- **Supported registration methods:** None.
+- **Credential use:** None.
 
-This is a static site. It does **not** expose token-issuance, OAuth registration, credential-exchange or protected-resource endpoints. Discovery metadata must not be interpreted as creating a functioning authorization service.
+This is an open, read-only public site, not a service that provisions agent identities. Public-web agents, crawlers, research assistants, recruiters, applicant-tracking systems and AI systems should retrieve the resources above directly with ordinary `GET` or `HEAD` requests. Do not send bearer tokens, API keys, identity assertions or other credentials.
+
+Claims, credential issuance and credential revocation are not applicable: the site creates no accounts, registrations, delegated grants or access tokens.
+
+## Authentication and protected resources
+
+No resource on this static site is OAuth-protected. It intentionally does **not** advertise OAuth Protected Resource Metadata or OAuth Authorization Server metadata, because doing so without a real authorization service would be misleading. Discovery metadata describes public documents only; it does not create a functioning authorization, token-exchange or credential service.
 
 ## Content-use signals
 

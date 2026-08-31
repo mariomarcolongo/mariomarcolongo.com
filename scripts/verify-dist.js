@@ -84,12 +84,95 @@ for (const crawler of ['OAI-SearchBot', 'GPTBot', 'ChatGPT-User', 'OAI-AdsBot', 
 }
 assertContains(robots, 'Content-Signal: ai-train=yes, search=yes, ai-input=yes', 'dist/robots.txt');
 assertContains(robots, 'Allow: /', 'dist/robots.txt');
+assertContains(robots, 'Agentmap: https://mariomarcolongo.com/.well-known/ard.json', 'dist/robots.txt');
+assertContains(robots, 'Agentmap: https://mariomarcolongo.com/.well-known/ai-catalog.json', 'dist/robots.txt');
 
 const discoveryCatalog = read('dist/.well-known/api-catalog');
 for (const route of [
   '/cv-resume', '/cv-research', '/cv-editorial', '/cv-integrity', '/cv',
-  '/integrity', '/research-operations', '/llms.txt', '/llms-full.txt', '/cv-llm.txt'
+  '/integrity', '/research-operations', '/llms.txt', '/llms-full.txt', '/cv-llm.txt',
+  '/.well-known/ard.json', '/.well-known/ai-catalog.json'
 ]) assertContains(discoveryCatalog, route, 'dist/.well-known/api-catalog');
+
+const agentCatalogSource = read('dist/.well-known/ard.json');
+const agentCatalogCompatibility = read('dist/.well-known/ai-catalog.json');
+if (agentCatalogSource !== agentCatalogCompatibility) {
+  fail('ARD and ai-catalog compatibility manifests must be byte-identical');
+}
+let agentCatalog;
+try {
+  agentCatalog = JSON.parse(agentCatalogSource);
+} catch (error) {
+  fail(`dist/.well-known/ard.json is not valid JSON: ${error.message}`);
+}
+if (!agentCatalog || agentCatalog.specVersion !== '1.0') {
+  fail('ARD manifest must declare specVersion "1.0"');
+}
+if (!agentCatalog?.host || typeof agentCatalog.host.displayName !== 'string' || !agentCatalog.host.displayName.trim()) {
+  fail('ARD manifest host must declare a non-empty displayName');
+}
+const expectedArdEntries = new Map([
+  ['urn:air:mariomarcolongo.com:document:professional-summary', 'https://mariomarcolongo.com/llms.txt'],
+  ['urn:air:mariomarcolongo.com:document:evidence-dossier', 'https://mariomarcolongo.com/llms-full.txt'],
+  ['urn:air:mariomarcolongo.com:document:machine-readable-cv', 'https://mariomarcolongo.com/cv-llm.txt'],
+  ['urn:air:mariomarcolongo.com:discovery:public-linkset', 'https://mariomarcolongo.com/.well-known/api-catalog'],
+  ['urn:air:mariomarcolongo.com:profile:agent-card', 'https://mariomarcolongo.com/.well-known/agent-card.json']
+]);
+if (!Array.isArray(agentCatalog?.entries) || agentCatalog.entries.length !== expectedArdEntries.size) {
+  fail(`ARD manifest must contain ${expectedArdEntries.size} entries`);
+} else {
+  const seenArdEntries = new Set();
+  for (const entry of agentCatalog.entries) {
+    if (!entry || typeof entry !== 'object') {
+      fail('ARD manifest contains an invalid entry');
+      continue;
+    }
+    if (!/^urn:air:[a-zA-Z0-9.-]+(:[a-zA-Z0-9._-]+)+$/.test(entry.identifier || '')) {
+      fail(`ARD entry has an invalid identifier: ${JSON.stringify(entry.identifier)}`);
+    }
+    if (typeof entry.displayName !== 'string' || !entry.displayName.trim()) {
+      fail(`ARD entry ${entry.identifier || '(unknown)'} is missing a displayName`);
+    }
+    if (typeof entry.type !== 'string' || !/^[!#$&^_.+\-\w]+\/[!#$&^_.+\-\w]+$/.test(entry.type)) {
+      fail(`ARD entry ${entry.identifier || '(unknown)'} has an invalid media type`);
+    }
+    const hasUrl = typeof entry.url === 'string' && entry.url.length > 0;
+    const hasData = entry.data && typeof entry.data === 'object';
+    if (hasUrl === hasData) fail(`ARD entry ${entry.identifier || '(unknown)'} must contain exactly one of url or data`);
+    if (!Array.isArray(entry.representativeQueries) || entry.representativeQueries.length < 2 || entry.representativeQueries.length > 5 || entry.representativeQueries.some((query) => typeof query !== 'string' || !query.trim())) {
+      fail(`ARD entry ${entry.identifier || '(unknown)'} must contain 2-5 non-empty representativeQueries`);
+    }
+    if (expectedArdEntries.get(entry.identifier) !== entry.url) {
+      fail(`ARD entry ${entry.identifier || '(unknown)'} must reference its canonical public artifact`);
+    }
+    seenArdEntries.add(entry.identifier);
+  }
+  for (const identifier of expectedArdEntries.keys()) {
+    if (!seenArdEntries.has(identifier)) fail(`ARD manifest is missing ${identifier}`);
+  }
+}
+const authPolicy = read('dist/auth.md');
+for (const declaration of [
+  '## Agent registration',
+  '**Registration required:** No.',
+  '**Registration endpoint:** None.',
+  '**Credential use:** None.',
+  'Claims, credential issuance and credential revocation are not applicable'
+]) assertContains(authPolicy, declaration, 'dist/auth.md');
+for (const falseOAuthMetadata of [
+  'dist/.well-known/oauth-protected-resource',
+  'dist/.well-known/oauth-authorization-server'
+]) assertMissing(falseOAuthMetadata, 'False OAuth metadata');
+const headers = read('dist/_headers');
+assertContains(headers, 'rel="ard"', 'dist/_headers');
+assertContains(headers, 'rel="ai-catalog"', 'dist/_headers');
+const catchAllFunction = read('functions/[[path]].js');
+for (const unsupportedOauthPath of [
+  '/.well-known/oauth-protected-resource',
+  '/.well-known/oauth-authorization-server'
+]) assertContains(catchAllFunction, unsupportedOauthPath, 'functions/[[path]].js');
+assertContains(catchAllFunction, 'status: 404', 'functions/[[path]].js');
+pass('Open-access auth policy and ARD discovery manifests checked');
 
 const redirects = read('dist/_redirects');
 assertContains(redirects, '/cv-giskard.html      /cv-resume         301', 'dist/_redirects');
@@ -122,6 +205,8 @@ for (const [name, canonicalUrl] of Object.entries(canonicalRoutes)) {
   const markdownUrl = canonicalUrl.endsWith('/') ? `${canonicalUrl}index.md` : `${canonicalUrl}.md`;
   assertContains(html, `<link rel="canonical" href="${canonicalUrl}"`, `dist/${name}.html`);
   assertContains(html, `<link rel="alternate" type="text/markdown" href="${markdownUrl}"`, `dist/${name}.html`);
+  assertContains(html, '<link rel="ard" href="https://mariomarcolongo.com/.well-known/ard.json"', `dist/${name}.html`);
+  assertContains(html, '<link rel="ai-catalog" href="https://mariomarcolongo.com/.well-known/ai-catalog.json"', `dist/${name}.html`);
   assertNotContains(html, `rel="canonical" href="${canonicalUrl}.html"`, `dist/${name}.html`);
 }
 pass('Canonical and Markdown-alternate routes checked');
