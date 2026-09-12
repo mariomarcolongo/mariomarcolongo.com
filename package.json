@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "node scripts/check-stale-strings.js",
     "dev": "node scripts/check-stale-strings.js && node scripts/generate-llm-dossiers.js && astro dev",
-    "build": "npm run lint && node scripts/verify-public-routing.mjs && node scripts/generate-llm-dossiers.js && astro build && node scripts/postbuild.js && node scripts/verify-dist.js && node scripts/verify-structured-data.js",
+    "build": "npm run lint && node scripts/verify-public-routing.mjs && npm run verify:vite-interop && node scripts/generate-llm-dossiers.js && astro build && node scripts/postbuild.js && node scripts/verify-dist.js && node scripts/verify-structured-data.js",
     "deploy": "npm run build && npm run verify:render && npx wrangler pages deploy dist --project-name=mariomarcolongo-pages",
     "preview": "node scripts/private-preview.js",
     "preview:public": "astro preview",
@@ -17,6 +17,7 @@
     "pdf:resume": "node scripts/generate-resume-pdf.js",
     "pdf": "npm run pdf:resume && npm run pdf:cv",
     "verify:dist": "node scripts/verify-dist.js && node scripts/verify-structured-data.js",
+    "verify:vite-interop": "node scripts/verify-vite-interop.mjs",
     "verify:structured-data": "node scripts/verify-structured-data.js",
     "verify:public-routing": "node scripts/verify-public-routing.mjs",
     "verify:render": "node scripts/verify-rendering.js",

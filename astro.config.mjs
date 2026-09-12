@@ -76,25 +76,73 @@ const legacyDataInterop = {
         'const P = require("./application-profiles.js");'
       ].join('\n');
       const compatibleImports = [
-        'const unwrapDefault = (value) =>',
-        '  value && typeof value === "object" && "default" in value ? value.default : value;',
-        'const D = unwrapDefault(require("./source.js"));',
-        'const H = unwrapDefault(require("./portfolio-human.js"));',
-        'const P = unwrapDefault(require("./application-profiles.js"));'
+        'import D from "./source.js";',
+        'import H from "./portfolio-human.js";',
+        'import P from "./application-profiles.js";'
       ].join('\n');
-      const transformed = code.replace(originalImports, compatibleImports);
+      const compatibleExports = [
+        'const release = { D, H, P, GS, ENTROPY };',
+        'export { D, H, P, GS, ENTROPY };',
+        'export default release;'
+      ].join('\n');
+      const transformed = code
+        .replace(originalImports, compatibleImports)
+        .replace('module.exports = { D, H, P, GS, ENTROPY };', compatibleExports);
       return transformed === code ? null : transformed;
     }
 
     if (cleanId.endsWith('/data/career-positioning.js')) {
-      const originalImport = "const release = require('./release-data.js');";
-      const compatibleImport = [
-        "const releaseModule = require('./release-data.js');",
-        "const release = releaseModule && typeof releaseModule === 'object' && 'default' in releaseModule",
-        '  ? releaseModule.default',
-        '  : releaseModule;'
+      const originalImports = [
+        "const release = require('./release-data.js');",
+        'const { D, H, P } = release;',
+        '',
+        'const {',
+        '  ENTROPY_WORK_URL,',
+        '  graySwan,',
+        '  audience,',
+        '  yourselfToScience',
+        "} = require('./public-evidence.js');"
       ].join('\n');
-      const transformed = code.replace(originalImport, compatibleImport);
+      const compatibleImports = [
+        "import release from './release-data.js';",
+        "import publicEvidence from './public-evidence.js';",
+        'const { D, H, P } = release;',
+        'const { ENTROPY_WORK_URL, graySwan, audience, yourselfToScience } = publicEvidence;'
+      ].join('\n');
+      const compatibleExports = [
+        'const career = { ...release, D, H, P, audience, graySwan, yourselfToScience, ENTROPY_WORK_URL };',
+        'export { D, H, P, audience, graySwan, yourselfToScience, ENTROPY_WORK_URL };',
+        'export default career;'
+      ].join('\n');
+      const transformed = code
+        .replace(originalImports, compatibleImports)
+        .replace(
+          'module.exports = { ...release, D, H, P, audience, graySwan, yourselfToScience, ENTROPY_WORK_URL };',
+          compatibleExports
+        );
+      return transformed === code ? null : transformed;
+    }
+
+    if (cleanId.endsWith('/data/multilingual-positioning.js')) {
+      const originalImports = [
+        "const career = require('./career-positioning.js');",
+        'const { D, H, P } = career;'
+      ].join('\n');
+      const compatibleImports = [
+        "import career from './career-positioning.js';",
+        'const { D, H, P } = career;'
+      ].join('\n');
+      const compatibleExports = [
+        'const multilingualPositioning = { ...career, D, H, P, multilingualQuality };',
+        'export { D, H, P, multilingualQuality };',
+        'export default multilingualPositioning;'
+      ].join('\n');
+      const transformed = code
+        .replace(originalImports, compatibleImports)
+        .replace(
+          'module.exports = { ...career, D, H, P, multilingualQuality };',
+          compatibleExports
+        );
       return transformed === code ? null : transformed;
     }
 
