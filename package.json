@@ -25,7 +25,7 @@
   },
   "author": "Mario Marcolongo <me@mariomarcolongo.com>",
   "devDependencies": {
-    "astro": "^7.0.9",
+    "astro": "^7.2.8",
     "pdf-lib": "^1.17.1",
     "puppeteer": "^25.3.0",
     "turndown": "^7.2.4",
