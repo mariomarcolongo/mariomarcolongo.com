@@ -376,3 +376,79 @@ html,body {
 .resume-document .evidence-note {
   font-size:8pt}
 }
+
+/* Hiring-facing presentation: short project names, consistent result panels. */
+:root { --surface: #ffffff; --tint: #edf2ee; }
+:root[data-theme=dark] { --surface: #1d2521; --tint: #202e27; }
+body { transition: none; }
+.site-header, .site-footer, .presence-shell { max-width: 1080px; }
+.site-header nav a { text-decoration: none; }
+.site-header nav a:hover, .site-header nav a:focus-visible { text-decoration: underline; }
+.home-shell { padding-top: 64px; }
+.home-hero { max-width: 840px; }
+.home-hero h1 { max-width: 15ch; font-size: clamp(2.6rem, 5vw, 4.5rem); }
+.home-hero .lede { max-width: 58ch !important; font-size: 20px; }
+.home-hero .actions { gap: 24px; margin: 28px 0 20px; }
+.home-hero .button { gap: 24px; padding: 12px 20px; }
+.quiet-link { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; }
+.relocation-line { margin-bottom: 0 !important; }
+.home-work { margin-top: 56px; }
+.section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; margin-bottom: 24px; }
+.section-heading h2 { margin: 0; }
+.section-heading > a { font-size: 15px; padding-block: 10px; }
+.work-row { display: block; padding: 32px 0; }
+.work-row.has-highlight { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); align-items: center; gap: 48px; }
+.work-description { max-width: 62ch; }
+.work-row .meta { font-size: 14px; margin-bottom: 10px; }
+.work-row h3 { font-size: 29px; margin-bottom: 14px; }
+.work-row h3 a { text-decoration: none; }
+.work-row h3 a:hover, .work-row h3 a:focus-visible { text-decoration: underline; }
+.work-row p { margin-bottom: 16px; }
+.source-links { gap: 8px 24px; font-size: 15px; }
+.source-links a { min-height: 44px; display: inline-flex; align-items: center; }
+.case-link { font-weight: 600; gap: 8px; }
+.work-highlight { padding: 28px 32px; background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; }
+.work-highlight .highlight-number { display: flex; align-items: baseline; gap: 14px; color: var(--accent); font: 52px/1 Georgia,serif; margin-bottom: 18px; }
+.highlight-number span { font: 16px/1.4 system-ui,sans-serif; color: var(--ink); }
+.work-highlight .highlight-detail { font-size: 15px; margin-bottom: 18px; }
+.work-highlight .highlight-caption { margin: 0; color: var(--muted); font-size: 12px; border-top: 1px solid var(--rule); padding-top: 12px; }
+.experience-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 56px; border-top: 1px solid var(--rule); padding-top: 40px; }
+.experience-grid .eyebrow { margin-bottom: 12px; }
+.experience-grid h2 { max-width: 14ch; }
+.further-links { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
+.further-links a { display: block; padding-top: 20px; border-top: 1px solid var(--rule); text-decoration: none; }
+.further-links strong { display: block; font-weight: 600; margin-bottom: 10px; }
+.further-links a:hover strong { text-decoration: underline; }
+.further-links span:not([aria-hidden]) { display: block; color: var(--muted); font-size: 15px; }
+.contact-panel { background: var(--tint); border-radius: 12px; padding: 40px; }
+.contact-panel .eyebrow { margin-bottom: 12px; }
+.contact-panel p { max-width: 65ch; }
+.contact-email { display: inline-flex; align-items: center; gap: 16px; min-height: 44px; font-size: 22px; margin-bottom: 24px; }
+.contact-panel .meta { margin: 0; max-width: 76ch; }
+.resume-switch { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; border-bottom: 1px solid var(--rule); padding-bottom: 24px; }
+.resume-switch > p { flex-basis: 100%; font-size: 15px; }
+.resume-document { padding: 32px; background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; }
+@media(max-width:759px) {
+  .home-shell { padding-top: 36px; }
+  .home-hero h1 { font-size: clamp(2.4rem, 7.5vw, 3.25rem); }
+  .home-hero .lede { font-size: 18px; }
+  .home-work { margin-top: 40px; }
+  .section-heading { gap: 12px; margin-bottom: 16px; }
+  .section-heading > a { flex-shrink: 0; }
+  .work-row.has-highlight { grid-template-columns: 1fr; gap: 20px; }
+  .work-row h3 { font-size: 27px; }
+  .work-highlight { padding: 20px 24px; }
+  .work-highlight .highlight-number { font-size: 42px; margin-bottom: 12px; }
+  .work-highlight .highlight-detail { margin-bottom: 12px; }
+  .experience-grid { grid-template-columns: 1fr; gap: 8px; padding-top: 32px; }
+  .experience-grid h2 { max-width: none; }
+  .further-links { grid-template-columns: 1fr; gap: 20px; }
+  .further-links strong { margin-bottom: 4px; }
+  .contact-panel { padding: 24px; }
+  .contact-email { font-size: 18px; gap: 8px; }
+  .resume-document { padding: 0; border: 0; background: transparent; }
+}
+@media print {
+  .resume-document { padding: 0; border: 0; background: white; border-radius: 0; }
+  .resume-switch { display: none; }
+}

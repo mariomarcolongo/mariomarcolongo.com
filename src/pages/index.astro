@@ -4,12 +4,47 @@ import SiteNav from '../components/SiteNav.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import WorkRow from '../components/WorkRow.astro';
 import D from '../../data/source.js';
-const P=D.presence;
+const P = D.presence;
 ---
-<Layout><SiteNav/><main id="main-content" class="presence-shell">
-<section aria-labelledby="hero-title"><p class="eyebrow">Research &amp; technical operations</p><h1 id="hero-title">{P.headline}</h1><p class="lede">{P.subheadline}</p><div class="actions"><a class="button primary" href="/cv">View résumé</a><a class="button" href="#selected-work">See selected work</a></div><p class="meta">{P.location}</p><div class="proof-strip"><a href="/work/entropy">Paid scientific work · Entropy for Life</a><a href="/work/atlas">Accepted open-source contributions · Atlas</a></div></section>
-<section class="presence-section" id="selected-work" aria-labelledby="work-title"><h2 id="work-title">Selected work</h2><p>Three places to start: published science work, a reviewable technical contribution and a maintained research resource. Each case separates the problem, my contribution, the result and the evidence available to inspect.</p>{P.projects.slice(0,3).map((project,index)=><WorkRow project={project} index={index} diagnosis={true}/>)}</section>
-<section class="presence-section" id="experience" aria-labelledby="experience-title"><h2 id="experience-title">Experience &amp; education</h2><p>I have worked as a paid contractor with Entropy for Life since June 2023, contributing research, fact-checking and production support. Website publishing and technical operations became part of my responsibilities in September 2023. The <a href="/work/entropy">work record</a> identifies the published outputs; responsibilities varied by assignment.</p><p>I’m enrolled in English-taught, online IT path studies through Metropolia Open UAS, beginning August 2026. This is a non-degree pathway toward eligibility to apply for the online BEng, with 3 ECTS awarded for Python Programming (Pass, 15 September 2026), as recorded in the student-supplied transcript. I previously studied medicine at the University of Campania Luigi Vanvitelli from 2020 to 2023; I did not complete the degree.</p><p><a href="/cv">Read the concise résumé</a> for the current chronology, demonstrated work and skills I’m developing.</p></section>
-<section class="presence-section" aria-labelledby="more-title"><h2 id="more-title">Further evidence</h2><p><a href="/investigations">Source investigations</a> show how I resolve conflicting records without turning uncertainty into a stronger claim. <a href="/ai-evaluation">AI evaluation</a> holds a dated July 2026 platform record, with separate metrics and their limits. <a href="/work/scientific-visualizations">Scientific visualizations</a> connect diagrams and data views to their source material.</p><p>Technical project work is AI-assisted. My cases describe the requirements I defined, the behavior I inspected, the checks available and any external acceptance. They are evidence of specific contributions, while independent Python, SQL and quantitative competence remain areas of active study.</p><a href="/work">Browse the work index</a></section>
-<section class="presence-section" id="contact" aria-labelledby="contact-title"><h2 id="contact-title">Contact</h2><p>{P.contact}</p><p><a href={`mailto:${P.email}`}>{P.email}</a></p><p>{P.availability}</p></section>
-</main><SiteFooter/></Layout>
+<Layout>
+  <SiteNav/>
+  <main id="main-content" class="presence-shell home-shell">
+    <section class="home-hero" aria-labelledby="hero-title">
+      <p class="eyebrow">Research &amp; technical operations</p>
+      <h1 id="hero-title">{P.headline}</h1>
+      <p class="lede">{P.subheadline}</p>
+      <div class="actions">
+        <a class="button primary" href="/cv">View résumé <span aria-hidden="true">↗</span></a>
+        <a class="quiet-link" href="#selected-work">Explore my work <span aria-hidden="true">↓</span></a>
+      </div>
+      <p class="meta relocation-line">{P.location}</p>
+    </section>
+    <section class="presence-section home-work" id="selected-work" aria-labelledby="work-title">
+      <div class="section-heading"><h2 id="work-title">Selected work</h2><a href="/work">All projects <span aria-hidden="true">↗</span></a></div>
+      {P.projects.slice(0,3).map(project => <WorkRow project={project}/>)}
+    </section>
+    <section class="presence-section experience-grid" id="experience" aria-labelledby="experience-title">
+      <div><p class="eyebrow">Background</p><h2 id="experience-title">Experience &amp; learning</h2></div>
+      <div>
+        <p>I’ve worked with <a href="/work/entropy">Entropy for Life</a> as a paid contractor since June 2023, combining scientific research and fact-checking with publishing and website operations.</p>
+        <p>I’m studying IT through Metropolia Open UAS, an online, non-degree pathway. I’ve completed Python Programming, earning 3 ECTS with a Pass, and continue to develop my Python, SQL and systems skills.</p>
+        <a href="/cv">Full experience and education <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+    <section class="presence-section further-work" aria-labelledby="more-title">
+      <h2 id="more-title">More to explore</h2>
+      <div class="further-links">
+        <a href="/investigations"><strong>Source investigations <span aria-hidden="true">↗</span></strong><span>Tracing conflicting records back to their sources.</span></a>
+        <a href="/ai-evaluation"><strong>AI evaluation <span aria-hidden="true">↗</span></strong><span>Independent model testing and the July 2026 Gray Swan record.</span></a>
+        <a href="/work/scientific-visualizations"><strong>Scientific visualizations <span aria-hidden="true">↗</span></strong><span>Diagrams and data views that explain scientific relationships.</span></a>
+      </div>
+    </section>
+    <section class="presence-section contact-panel" id="contact" aria-labelledby="contact-title">
+      <p class="eyebrow">Next chapter</p><h2 id="contact-title">Looking beyond Italy.</h2>
+      <p>{P.contact}</p>
+      <a class="contact-email" href={`mailto:${P.email}`}>{P.email} <span aria-hidden="true">↗</span></a>
+      <p class="meta">{P.availability}</p>
+    </section>
+  </main>
+  <SiteFooter/>
+</Layout>

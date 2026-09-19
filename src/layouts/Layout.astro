@@ -18,7 +18,7 @@ const graph = {'@context':'https://schema.org','@type':'ProfilePage',name:title,
 <link rel="alternate" type="text/markdown" href={markdown}/><link rel="describedby" type="text/plain" href="/llms.txt"/>
 {noIndex && <meta name="robots" content="noindex"/>}
 <script type="application/ld+json" set:html={JSON.stringify(graph).replace(/</g,'\\u003c')}/>
-<script is:inline>try{document.documentElement.dataset.theme=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch{}</script>
+<script is:inline>try{document.documentElement.dataset.theme=localStorage.getItem('theme')||'light'}catch{}</script>
 <slot name="head"/>
 </head>
 <body><a class="skip-link" href="#main-content">Skip to content</a><slot/></body>

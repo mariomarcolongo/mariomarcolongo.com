@@ -15,6 +15,7 @@
     "Data quality",
     "Systems diagnosis"
   ],
+  "availability": "Open to relocation and international remote work. I can work in the EU as an Italian citizen; opportunities elsewhere depend on the role’s hiring and work-authorization arrangements.",
   "summary": "Mario Marcolongo works on scientific information quality, research operations and practical technical problems. His evidence includes paid science communication work, public source investigations and accepted open source contributions. Based in Italy, he is an Italian citizen studying IT through Metropolia Open UAS and developing independent Python, SQL and quantitative skills.",
   "authorship": "I use AI tools extensively for implementation. My contributions include defining problems and requirements, inspecting behavior, testing, diagnosing failures and maintaining the resulting tools. Each case identifies external review and remaining validation limits.",
   "resumeRoutes": {
@@ -30,7 +31,7 @@
       "startDate": "2026-08",
       "endDate": null,
       "status": "open_uas_path_enrolled",
-      "description": "English-taught, online, non-degree pathway toward eligibility to apply for the online BEng. Python Programming: 3 ECTS, Pass, assessed 15 Sep 2026.",
+      "description": "English-taught, online Open UAS path studies (non-degree). Python Programming: 3 ECTS, Pass, assessed 15 Sep 2026.",
       "programExtentECTS": 120,
       "creditsAwarded": 3,
       "degreeAwarded": false,

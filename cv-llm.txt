@@ -8,11 +8,11 @@ Research and technical-operations contributor with paid scientific fact-checking
 
 I use AI tools extensively for implementation. My contributions include defining problems and requirements, inspecting behavior, testing, diagnosing failures and maintaining the resulting tools. Each case identifies external review and remaining validation limits.
 
-I’m based in Italy and open to relocation and international engagements where the hiring or contracting arrangement permits. Work authorization outside the EU must be checked for the role.
+Open to relocation and international remote work. I can work in the EU as an Italian citizen; opportunities elsewhere depend on the role’s hiring and work-authorization arrangements.
 
 ## Entropy for Life
 
-Paid contractor · Jun 2023–Present. Paid research, fact-checking and production contributions to documented science content. The case links the published work and explains my role.
+Paid contractor · Jun 2023–Present. Research, fact-checking and production support for 80 published science pieces, alongside website operations.
 
 Contributed research, fact-checking and production support to 80 documented published pieces: 55 videos, 4 articles and 21 short-form pieces. The attribution record is on a site I help manage. Responsibilities varied by assignment; the organization’s audience is not my personally attributable reach.
 Source: https://entropyforlife.it/mario-marcolongo-entropy-for-life/. Owner: client organization; evidence: organizational work record; observed: 2026-09-12; event/start: 2023-06.
@@ -21,7 +21,7 @@ Case: https://mariomarcolongo.com/work/entropy
 
 ## AI Safety Formalization Atlas
 
-Open-source contributor · Sep 2026. Accepted contributions to portability and repository instructions, with the exact changes and maintainer review available to inspect.
+Open-source contributor · Sep 2026. Diagnosed a macOS validation failure and contributed accepted changes to repository tooling and instructions.
 
 Contributed merged PR #52: migration validation portability. Acceptance covers the submitted change; it does not establish authorship of the wider research or independent engineering proficiency.
 Source: https://github.com/mbrcic/ai-safety-formalization-atlas/pull/52. Owner: upstream project; evidence: external acceptance; observed: 2026-09-12; event/start: 2026-09-03.
@@ -36,7 +36,7 @@ Case: https://mariomarcolongo.com/work/atlas
 
 ## Yourself to Science
 
-Independent maintained project. A maintained directory of research-participation resources, with documented inclusion decisions and linked source records.
+Independent maintained project. A maintained directory that helps people find research-participation opportunities and follow their original sources.
 
 Maintained a directory containing 55 research-participation resources in the dated review. 37 Wikidata items referenced the project URL in the dated check; these are not 37 users or independent citations. A deposited DOI is not peer review.
 Source: https://github.com/yourselftoscience/yourselftoscience.org. Owner: project maintainer; evidence: public artifact; observed: 2026-09-12.
@@ -63,7 +63,7 @@ Case: https://mariomarcolongo.com/ai-evaluation
 
 ## Education
 
-Metropolia University of Applied Sciences — Open UAS Information Technology path studies. Aug 2026–Present. English-taught, online, non-degree pathway toward eligibility to apply for the online BEng. Python Programming: 3 ECTS, Pass, assessed 15 Sep 2026.
+Metropolia University of Applied Sciences — Open UAS Information Technology path studies. Aug 2026–Present. English-taught, online Open UAS path studies (non-degree). Python Programming: 3 ECTS, Pass, assessed 15 Sep 2026.
 
 University of Campania Luigi Vanvitelli — Medicine studies, degree not completed. 2020–2023.
 
