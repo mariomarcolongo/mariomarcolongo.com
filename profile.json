@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "name": "Mario Marcolongo",
+  "canonicalUrl": "https://mariomarcolongo.com",
+  "location": {
+    "country": "Italy"
+  },
+  "citizenship": [
+    "Italy"
+  ],
+  "usWorkAuthorization": "not_established",
+  "currentPositioning": "Research & Technical Operations",
+  "developmentDirection": [
+    "Technical implementation",
+    "Data quality",
+    "Systems diagnosis"
+  ],
+  "summary": "Mario Marcolongo works on scientific information quality, research operations and practical technical problems. His evidence includes paid science communication work, public source investigations and accepted open source contributions. Based in Italy, he is an Italian citizen studying IT through Metropolia Open UAS and developing independent Python, SQL and quantitative skills.",
+  "authorship": "I use AI tools extensively for implementation. My contributions include defining problems and requirements, inspecting behavior, testing, diagnosing failures and maintaining the resulting tools. Each case identifies external review and remaining validation limits.",
+  "resumeRoutes": {
+    "default": "/cv",
+    "technical": "/cv-technical",
+    "aiEvaluation": "/cv-ai"
+  },
+  "education": [
+    {
+      "institution": "Metropolia University of Applied Sciences",
+      "title": "Open UAS Information Technology path studies",
+      "period": "Aug 2026–Present",
+      "startDate": "2026-08",
+      "endDate": null,
+      "status": "open_uas_path_enrolled",
+      "description": "English-taught, online, non-degree pathway toward eligibility to apply for the online BEng. Python Programming: 3 ECTS, Pass, assessed 15 Sep 2026.",
+      "programExtentECTS": 120,
+      "creditsAwarded": 3,
+      "degreeAwarded": false,
+      "expectedDegreeCompletion": null,
+      "sourceUrl": "https://www.metropolia.fi/en/study-at-metropolia/open-university/path-studies/it-online",
+      "attainments": [
+        {
+          "name": "Python Programming",
+          "code": "TT00CB02",
+          "creditsECTS": 3,
+          "grade": "Pass",
+          "assessedAt": "2026-09-15",
+          "sourceType": "user_supplied_institutional_transcript",
+          "transcriptDate": "2026-09-19",
+          "observedAt": "2026-09-19",
+          "sourceUrl": null
+        }
+      ],
+      "lastReviewedAt": "2026-09-19"
+    },
+    {
+      "institution": "University of Campania Luigi Vanvitelli",
+      "title": "Medicine studies, degree not completed",
+      "period": "2020–2023",
+      "startDate": "2020",
+      "endDate": "2023",
+      "status": "degree_not_completed",
+      "degreeAwarded": false,
+      "sourceUrl": null
+    }
+  ],
+  "languages": {
+    "text": "Italian native · English: EF SET C1 overall, 68/100 (Mar 2024)",
+    "sourceUrl": "https://cert.efset.org/jHk84h",
+    "issuedAt": "2024-03-26",
+    "scores": {
+      "overall": 68,
+      "reading": 75,
+      "listening": 81,
+      "writing": 59,
+      "speaking": 55
+    }
+  },
+  "claims": [
+    {
+      "id": "entropy-published-work",
+      "text": "Contributed research, fact-checking and production support to 80 documented published pieces: 55 videos, 4 articles and 21 short-form pieces.",
+      "sourceUrl": "https://entropyforlife.it/mario-marcolongo-entropy-for-life/",
+      "sourceOwner": "client_organization",
+      "evidenceType": "organizational_work_record",
+      "engagementType": "paid_contractor",
+      "limitation": "The attribution record is on a site I help manage. Responsibilities varied by assignment; the organization’s audience is not my personally attributable reach.",
+      "startDate": "2023-06",
+      "endDate": null,
+      "observedAt": "2026-09-12",
+      "lastReviewedAt": "2026-09-12",
+      "visibility": "public"
+    },
+    {
+      "id": "atlas-pr-52-accepted",
+      "text": "Contributed merged PR #52: migration validation portability.",
+      "sourceUrl": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/52",
+      "sourceOwner": "upstream_project",
+      "evidenceType": "external_acceptance",
+      "engagementType": "open_source_contribution",
+      "limitation": "Acceptance covers the submitted change; it does not establish authorship of the wider research or independent engineering proficiency.",
+      "startDate": "2026-09-03",
+      "endDate": "2026-09-03",
+      "observedAt": "2026-09-12",
+      "lastReviewedAt": "2026-09-12",
+      "visibility": "public"
+    },
+    {
+      "id": "atlas-pr-54-accepted",
+      "text": "Contributed merged PR #54: portable repository instruction adapters.",
+      "sourceUrl": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/54",
+      "sourceOwner": "upstream_project",
+      "evidenceType": "external_acceptance",
+      "engagementType": "open_source_contribution",
+      "limitation": "Acceptance covers the submitted change; it does not establish authorship of the wider research or independent engineering proficiency.",
+      "startDate": "2026-09-03",
+      "endDate": "2026-09-03",
+      "observedAt": "2026-09-12",
+      "lastReviewedAt": "2026-09-12",
+      "visibility": "public"
+    },
+    {
+      "id": "atlas-pr-61-accepted",
+      "text": "Contributed merged PR #61: repository instruction organization.",
+      "sourceUrl": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/61",
+      "sourceOwner": "upstream_project",
+      "evidenceType": "external_acceptance",
+      "engagementType": "open_source_contribution",
+      "limitation": "Acceptance covers the submitted change; it does not establish authorship of the wider research or independent engineering proficiency.",
+      "startDate": "2026-09-06",
+      "endDate": "2026-09-06",
+      "observedAt": "2026-09-12",
+      "lastReviewedAt": "2026-09-12",
+      "visibility": "public"
+    },
+    {
+      "id": "yourself-to-science-directory",
+      "text": "Maintained a directory containing 55 research-participation resources in the dated review.",
+      "sourceUrl": "https://github.com/yourselftoscience/yourselftoscience.org",
+      "sourceOwner": "project_maintainer",
+      "evidenceType": "public_artifact",
+      "engagementType": "independent_project",
+      "limitation": "37 Wikidata items referenced the project URL in the dated check; these are not 37 users or independent citations. A deposited DOI is not peer review.",
+      "startDate": null,
+      "endDate": null,
+      "observedAt": "2026-09-12",
+      "lastReviewedAt": "2026-09-12",
+      "visibility": "public"
+    },
+    {
+      "id": "gray-swan-july-29",
+      "text": "Dated Proving Ground record: rank #74, top 6%, on 29 July 2026.",
+      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-2026-07-29/",
+      "sourceOwner": "platform_record_captured_by_account_holder",
+      "evidenceType": "dated_platform_snapshot",
+      "engagementType": "independent_evaluation",
+      "limitation": "The displayed total is 113; four visible area counters sum to 112. Arena figures are separate. This is not a current ranking or paid engagement.",
+      "startDate": "2026-07-29",
+      "endDate": "2026-07-29",
+      "observedAt": "2026-09-12",
+      "lastReviewedAt": "2026-09-12",
+      "visibility": "public"
+    },
+    {
+      "id": "notandia-source-release",
+      "text": "Developed and maintained an AI-assisted browser tool for research-result workflows; case study distinguishes released store versions from capabilities currently in source.",
+      "sourceUrl": "https://github.com/notandia/browser-extension",
+      "sourceOwner": "project_maintainer",
+      "evidenceType": "public_source_and_store_records",
+      "engagementType": "independent_project",
+      "limitation": "The inspected legacy store record showed version 0.0.2 (June 2025), 11 users and one rating. Expanded source capabilities are not asserted to ship in every store.",
+      "startDate": null,
+      "endDate": null,
+      "observedAt": "2026-09-12",
+      "lastReviewedAt": "2026-09-12",
+      "visibility": "public"
+    },
+    {
+      "id": "metropolia-python-3ects",
+      "text": "Python Programming (TT00CB02): 3 ECTS, Pass, assessed 15 September 2026.",
+      "engagementType": "open_uas_study",
+      "startDate": null,
+      "endDate": "2026-09-15",
+      "observedAt": "2026-09-19",
+      "lastReviewedAt": "2026-09-19",
+      "sourceUrl": null,
+      "sourceOwner": "Metropolia University of Applied Sciences",
+      "evidenceType": "user_supplied_institutional_transcript",
+      "limitation": "Based on transcript text supplied by the student, dated 19 September 2026. The private transcript is not published. This is one completed course in a non-degree Open UAS pathway, not an awarded degree or proof of professional programming proficiency.",
+      "visibility": "public"
+    }
+  ]
+}
