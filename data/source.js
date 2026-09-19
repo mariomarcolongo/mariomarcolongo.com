@@ -17,7 +17,7 @@ function createMarioDossier() {
   "github": "https://github.com/jnton",
   "linkedin": "https://www.linkedin.com/in/mario-marcolongo",
   "currentPositioning": "Research & Technical Operations",
-  "location": "Based in Italy · Italian/EU citizen · Open to relocation",
+  "location": "Based in Italy · EU citizen · Seeking opportunities abroad",
   "citizenship": [
     "Italy"
   ],
@@ -29,9 +29,9 @@ function createMarioDossier() {
   ],
   "headline": "I trace problems to their source.",
   "description": "Scientific fact-checking, source investigation and practical technical work, with published contributions, accepted open-source changes and inspectable evidence.",
-  "subheadline": "My work combines scientific fact-checking, source investigation and practical troubleshooting. I contribute to published science work and open-source tools, and I’m building stronger Python, SQL and systems skills.",
-  "contact": "Have a research, data or technical workflow that needs careful investigation? Tell me the problem, the expected outcome and the working arrangement.",
-  "availability": "I’m based in Italy and open to relocation and international engagements where the hiring or contracting arrangement permits. Work authorization outside the EU must be checked for the role.",
+  "subheadline": "I research scientific claims, investigate conflicting sources and troubleshoot technical workflows. My work spans paid science communication and accepted open-source contributions.",
+  "contact": "I’m looking for research operations, technical support and implementation opportunities outside Italy. Have a role where careful investigation leads to a practical result? Let’s talk.",
+  "availability": "Open to relocation and international remote work. I can work in the EU as an Italian citizen; opportunities elsewhere depend on the role’s hiring and work-authorization arrangements.",
   "authorship": "I use AI tools extensively for implementation. My contributions include defining problems and requirements, inspecting behavior, testing, diagnosing failures and maintaining the resulting tools. Each case identifies external review and remaining validation limits.",
   "machineSummary": "Mario Marcolongo works on scientific information quality, research operations and practical technical problems. His evidence includes paid science communication work, public source investigations and accepted open source contributions. Based in Italy, he is an Italian citizen studying IT through Metropolia Open UAS and developing independent Python, SQL and quantitative skills.",
   "resumeRoutes": {
@@ -47,7 +47,7 @@ function createMarioDossier() {
       "startDate": "2026-08",
       "endDate": null,
       "status": "open_uas_path_enrolled",
-      "description": "English-taught, online, non-degree pathway toward eligibility to apply for the online BEng. Python Programming: 3 ECTS, Pass, assessed 15 Sep 2026.",
+      "description": "English-taught, online Open UAS path studies (non-degree). Python Programming: 3 ECTS, Pass, assessed 15 Sep 2026.",
       "programExtentECTS": 120,
       "creditsAwarded": 3,
       "degreeAwarded": false,
@@ -212,7 +212,7 @@ function createMarioDossier() {
       "hook": "Scientific evidence behind published work",
       "route": "/work/entropy",
       "status": "Paid contractor · Jun 2023–Present",
-      "text": "Paid research, fact-checking and production contributions to documented science content. The case links the published work and explains my role.",
+      "text": "Research, fact-checking and production support for 80 published science pieces, alongside website operations.",
       "claimIds": [
         "entropy-published-work"
       ],
@@ -253,7 +253,13 @@ function createMarioDossier() {
           "heading": "What this demonstrates",
           "text": "The work supports scientific source retrieval, fact-checking, source-faithful communication and delivery within an ongoing paid relationship. Website operations add practical publishing experience. The evidence is strongest when a reviewer follows the output and asks about the particular assignment. It does not establish a medical qualification, original clinical research or independent software-engineering proficiency."
         }
-      ]
+      ],
+      "highlight": {
+        "value": "80",
+        "label": "published pieces",
+        "detail": "55 videos · 4 articles · 21 short-form pieces",
+        "caption": "Attributed contributions · reviewed Sep 2026"
+      }
     },
     {
       "id": "atlas",
@@ -261,7 +267,7 @@ function createMarioDossier() {
       "hook": "Diagnosing repository tooling problems",
       "route": "/work/atlas",
       "status": "Open-source contributor · Sep 2026",
-      "text": "Accepted contributions to portability and repository instructions, with the exact changes and maintainer review available to inspect.",
+      "text": "Diagnosed a macOS validation failure and contributed accepted changes to repository tooling and instructions.",
       "claimIds": [
         "atlas-pr-52-accepted",
         "atlas-pr-54-accepted",
@@ -310,7 +316,13 @@ function createMarioDossier() {
           "heading": "What I bring to a similar problem",
           "text": "This case shows a practical approach to troubleshooting: observe the failing behavior, inspect the environment assumption, narrow the change and leave a public review trail. My contribution includes defining the problem, inspecting behavior, testing and diagnosing failures while using AI tools extensively for implementation. The next stronger evidence would be repeated delivery or an independently assessed task; it is not claimed here as an achievement already completed."
         }
-      ]
+      ],
+      "highlight": {
+        "value": "3",
+        "label": "merged contributions",
+        "detail": "Portability · instruction adapters · documentation",
+        "caption": "Upstream acceptance · September 2026"
+      }
     },
     {
       "id": "yourself-to-science",
@@ -318,7 +330,7 @@ function createMarioDossier() {
       "hook": "Organizing research opportunities with provenance",
       "route": "/work/yourself-to-science",
       "status": "Independent maintained project",
-      "text": "A maintained directory of research-participation resources, with documented inclusion decisions and linked source records.",
+      "text": "A maintained directory that helps people find research-participation opportunities and follow their original sources.",
       "claimIds": [
         "yourself-to-science-directory"
       ],
@@ -359,7 +371,13 @@ function createMarioDossier() {
           "heading": "What this demonstrates",
           "text": "The relevant work is information organization with inspectable sources, practical requirements and continued maintenance. The useful hiring question is whether the entries and changes are clear enough for someone else to review. The directory is presented as one independent project, separate from paid Entropy work and accepted Atlas contributions, so its evidence is not mistaken for employment or institutional endorsement."
         }
-      ]
+      ],
+      "highlight": {
+        "value": "55",
+        "label": "research resources",
+        "detail": "Documented inclusion decisions and source records",
+        "caption": "Directory snapshot · September 2026"
+      }
     },
     {
       "id": "investigations",
@@ -559,21 +577,25 @@ function createMarioDossier() {
       "Managed publishing and technical website operations alongside scientific content work."
     ],
     "atlas": [
-      "Contributed three merged pull requests to AI Safety Formalization Atlas, covering repository tooling portability and instruction organization.",
-      "Worked through reviewable changes with public maintainer acceptance; exact contributions and validation limits are linked in the portfolio."
+      "Contributed three merged pull requests covering macOS validation portability and repository instruction organization.",
+      "Diagnosed a Bash 3.2 compatibility failure and contributed a fix accepted by the upstream maintainer."
     ],
     "yts": [
-      "Maintained research-participation resources with documented inclusion decisions and linked source records.",
-      "Maintained a directory containing 55 research-participation resources in the dated review."
+      "Maintained a directory of 55 research-participation resources, with documented inclusion decisions and linked sources.",
+      "Organized resource information and maintained the AI-assisted website."
     ],
     "gray": [
-      "Dated Proving Ground record: rank #74, top 6%, on 29 July 2026.",
-      "Public evidence page distinguishes the competition record from the separate Arena metrics and explains the limits of platform-level results."
+      "Ranked #74, top 6%, in the Gray Swan Proving Ground snapshot of 29 July 2026.",
+      "Conducted adversarial model-behavior testing and documented the dated platform results."
     ],
     "notandia": [
-      "Developed and maintained an AI-assisted browser tool for research-result workflows; case study distinguishes released store versions from capabilities currently in source.",
-      "Defined requirements, inspected behavior and tested AI-assisted changes; release records and source development remain separately documented."
+      "Developed and maintained an AI-assisted browser tool for research-result workflows.",
+      "Defined requirements, tested behavior and diagnosed release issues; documented store releases separately from source development."
     ]
+  },
+  "cvSkills": {
+    "foundation": "Python fundamentals — Python Programming, 3 ECTS, Pass (Sep 2026).",
+    "currentStudy": "Continuing study in Python, SQL, systems and quantitative foundations."
   }
 },
   identity: {
