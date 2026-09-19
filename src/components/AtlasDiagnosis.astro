@@ -1,0 +1,5 @@
+<aside class="diagnosis" aria-label="A portability investigation">
+<h4>A check failed before it could check the work.</h4>
+<p>A repository validation workflow depended on shell behavior that was not portable to macOS’s system Bash. I traced the failure to an empty-array expansion under strict error handling. The accepted change made the quiet-mode invocation compatible with Bash 3.2.</p>
+<details><summary>What changed?</summary><p>The check was stopping at its own invocation, before it could evaluate the work. The change kept the recursive command’s argument array nonempty. The same PR also addressed exact-case file checks and CI environment activation. These were repository validation changes; they did not change a Lean theorem or prove the wider research correct.</p><p><a href="https://github.com/mbrcic/ai-safety-formalization-atlas/pull/52/files">Inspect the change and review in PR #52</a></p></details>
+</aside>

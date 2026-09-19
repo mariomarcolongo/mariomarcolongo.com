@@ -1,161 +1,25 @@
 ---
 import '../styles/global.css';
-import '../styles/v3-accessibility.css';
-import '../styles/portfolio-v7-safety.css';
-import '../styles/portfolio-v7-mobile.css';
-import '../styles/application-print-fit.css';
-import '../styles/accessibility-final.css';
-import '../styles/portfolio-v9-overrides.css';
-
-export interface Props {
-  title?: string;
-  description?: string;
-  canonical?: string;
-}
-
-const {
-  title = "Mario Marcolongo — Data Quality, Research & AI Evaluation",
-  description = "Portfolio spanning data quality, information retrieval, scientific verification, AI evaluation, open science and source-quality investigations.",
-  canonical = "https://mariomarcolongo.com/"
-} = Astro.props;
-
-const htmlClass = canonical === "https://mariomarcolongo.com/" ? "human-portfolio" : undefined;
-const socialImagePath = canonical.includes('/security')
-  ? '/og/security.png'
-  : canonical.includes('/integrity')
-    ? '/og/integrity.png'
-    : canonical.includes('/cv')
-      ? '/og/cv.png'
-      : '/og/home.png';
-const socialImage = `https://mariomarcolongo.com${socialImagePath}`;
-const canonicalUrl = new URL(canonical);
-const markdownAlternative = canonicalUrl.pathname === "/"
-  ? `${canonicalUrl.origin}/index.md`
-  : `${canonicalUrl.origin}${canonicalUrl.pathname.replace(/\/$/, "")}.md`;
+import '../styles/presence.css';
+import D from '../../data/source.js';
+const P = D.presence;
+const {title = `Mario Marcolongo — ${P.currentPositioning}`, description = P.description, canonical = `${P.canonicalUrl}${Astro.url.pathname}`, noIndex = false} = Astro.props;
+const markdown = Astro.url.pathname === '/' ? '/index.md' : `${Astro.url.pathname.replace(/\/$/, '').replace(/\.html$/, '')}.md`;
+const graph = {'@context':'https://schema.org','@type':'ProfilePage',name:title,url:canonical,mainEntity:{'@type':'Person','@id':`${P.canonicalUrl}/#person`,name:P.name,url:P.canonicalUrl,description:P.machineSummary,email:`mailto:${P.email}`,sameAs:[P.github,P.linkedin]}};
 ---
-
-<!DOCTYPE html>
-<html lang="en" class={htmlClass}>
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#f7f6f2" />
-  <title>{title}</title>
-  <meta name="description" content={description} />
-  <link rel="canonical" href={canonical} />
-  <link rel="alternate" type="text/markdown" href={markdownAlternative} title={`${title} — Markdown`} />
-
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-
-  <script is:inline id="mm-theme">
-    (function() {
-      try {
-        var stored = null;
-        try { stored = localStorage.getItem('theme'); } catch(e) {}
-        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (stored === 'dark' || (!stored && prefersDark)) {
-          document.documentElement.setAttribute('data-theme', 'dark');
-        } else {
-          document.documentElement.setAttribute('data-theme', 'light');
-        }
-      } catch(err) {}
-    })();
-  </script>
-
-  <link rel="api-catalog" href="https://mariomarcolongo.com/.well-known/api-catalog" />
-  <link rel="ard" href="https://mariomarcolongo.com/.well-known/ard.json" />
-  <link rel="ai-catalog" href="https://mariomarcolongo.com/.well-known/ai-catalog.json" />
-  <link rel="describedby" type="text/plain" href="https://mariomarcolongo.com/llms.txt" />
-  <link rel="describedby" type="text/plain" href="https://mariomarcolongo.com/llms-full.txt" />
-  <link rel="agent-card" href="https://mariomarcolongo.com/.well-known/agent-card.json" />
-  <link rel="mcp-server-card" href="https://mariomarcolongo.com/.well-known/mcp/server-card.json" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content={canonical} />
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
-  <meta property="og:image" content={socialImage} />
-  <meta property="og:image:secure_url" content={socialImage} />
-  <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content={`${title} — social preview`} />
-  <meta property="og:site_name" content="Mario Marcolongo" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content={canonical} />
-  <meta name="twitter:title" content={title} />
-  <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content={socialImage} />
-  <meta name="twitter:image:alt" content={`${title} — social preview`} />
-
-  <slot name="head" />
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>{title}</title><meta name="description" content={description}/><link rel="canonical" href={canonical}/>
+<meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:type" content="website"/><meta property="og:url" content={canonical}/>
+<meta name="twitter:card" content="summary"/><meta name="theme-color" content="#FAF9F6"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="alternate" type="text/markdown" href={markdown}/><link rel="describedby" type="text/plain" href="/llms.txt"/>
+{noIndex && <meta name="robots" content="noindex"/>}
+<script type="application/ld+json" set:html={JSON.stringify(graph).replace(/</g,'\\u003c')}/>
+<script is:inline>try{document.documentElement.dataset.theme=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch{}</script>
+<slot name="head"/>
 </head>
-<body>
-  <div id="scrollProgress"></div>
-  <main id="main-content">
-    <slot />
-  </main>
-  <script is:inline>
-    (function initWebMCP() {
-      function registerTools() {
-        if (typeof navigator !== 'undefined' && navigator.modelContext && typeof navigator.modelContext.provideContext === 'function') {
-          try {
-            navigator.modelContext.provideContext({
-              tools: [
-                {
-                  name: "query_dossier",
-                  description: "Retrieve Mario Marcolongo's source-backed professional dossier, work history and public records.",
-                  inputSchema: {
-                    type: "object",
-                    properties: {
-                      format: { type: "string", description: "Format option: 'summary' or 'full'", default: "full" }
-                    }
-                  },
-                  execute: async (args = {}) => {
-                    const url = args.format === 'summary' ? '/llms.txt' : '/llms-full.txt';
-                    const res = await fetch(url);
-                    const text = await res.text();
-                    return { content: text };
-                  }
-                },
-                {
-                  name: "query_cv",
-                  description: "Access Mario Marcolongo's machine-readable master CV.",
-                  inputSchema: { type: "object", properties: {} },
-                  execute: async () => {
-                    const res = await fetch('/cv-llm.txt');
-                    const text = await res.text();
-                    return { content: text };
-                  }
-                },
-                {
-                  name: "query_genomic_pipeline",
-                  description: "Access technical notes for the public 41x WGS genomic donation under ENA PRJEB109744.",
-                  inputSchema: { type: "object", properties: {} },
-                  execute: async () => {
-                    const res = await fetch('/llms-full.txt');
-                    const text = await res.text();
-                    return { content: text };
-                  }
-                }
-              ]
-            });
-          } catch (e) {
-            console.warn("WebMCP registration error:", e);
-          }
-        }
-      }
-
-      registerTools();
-      if (typeof window !== 'undefined') {
-        window.addEventListener('DOMContentLoaded', registerTools);
-        window.addEventListener('load', registerTools);
-      }
-    })();
-  </script>
-</body>
+<body><a class="skip-link" href="#main-content">Skip to content</a><slot/></body>
 </html>

@@ -64,22 +64,9 @@ export default function markdownEmitter() {
 
           let bodyContent = '';
 
-          // Check if there is a pristine, human/AI-curated SSOT text dossier available for standard routes
-          if (relPath === 'index.html') {
-            const llmsFullPath = path.join(distDir, 'llms-full.txt');
-            if (fs.existsSync(llmsFullPath)) {
-              bodyContent = fs.readFileSync(llmsFullPath, 'utf8').trim() + '\n';
-            }
-          } else if (relPath === 'cv.html') {
-            const cvLlmPath = path.join(distDir, 'cv-llm.txt');
-            if (fs.existsSync(cvLlmPath)) {
-              bodyContent = fs.readFileSync(cvLlmPath, 'utf8').trim() + '\n';
-            }
-          }
-
           // If no pre-curated dossier was loaded, cleanly convert the HTML body using Turndown
           if (!bodyContent) {
-            let cleanedHtml = htmlContent;
+            let cleanedHtml = htmlContent.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1] || htmlContent;
             // Strip out head, script, style, nav, footer, toolbar, scroll progress, and print-hide elements
             cleanedHtml = cleanedHtml.replace(/<head[\s\S]*?<\/head>/gi, '');
             cleanedHtml = cleanedHtml.replace(/<script[\s\S]*?<\/script>/gi, '');

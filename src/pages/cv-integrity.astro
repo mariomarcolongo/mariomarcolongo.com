@@ -1,14 +1,4 @@
 ---
-import ApplicationCv from "../components/ApplicationCv.astro";
-import career from "../../data/integrity-print-positioning.mjs";
-
-const { P } = career;
+import Layout from '../layouts/Layout.astro';
 ---
-
-<ApplicationCv
-  profile={P.integrity}
-  shared={P.shared}
-  canonical="https://mariomarcolongo.com/cv-integrity"
-  alternateHref="/cv-resume"
-  alternateLabel="AI Safety CV"
-/>
+<Layout title="Page moved — Mario Marcolongo" canonical="https://mariomarcolongo.com/cv" noIndex={true}><Fragment slot="head"><meta http-equiv="refresh" content="0;url=/cv"/></Fragment><main id="main-content" class="presence-shell"><h1>Page moved</h1><p><a href="/cv">Continue to the current page</a>.</p></main></Layout>
