@@ -1,0 +1,8 @@
+---
+import AtlasDiagnosis from './AtlasDiagnosis.astro';
+const {project:p,index=0,diagnosis=false}=Astro.props;
+---
+<article class="work-row">
+<div>{p.image?<figure><a href={p.route}><img src={p.image} alt={p.alt} width="800" height="450" loading="lazy"/></a><figcaption>{p.name} · public artifact</figcaption></figure>:<span class="ordinal" aria-hidden="true">{String(index+1).padStart(2,'0')}</span>}</div>
+<div><p class="meta">{p.status}</p><h3><a href={p.route}>{p.name} — {p.hook}</a></h3><p>{p.text}</p><div class="source-links"><a href={p.route}>Read the case</a>{p.links.slice(0,2).map(link=><a href={link.url}>{link.label}</a>)}</div>{diagnosis&&p.id==='atlas'&&<AtlasDiagnosis/>}</div>
+</article>

@@ -7,6 +7,575 @@
 
 function createMarioDossier() {
   return {
+  // Approved public projection. Legacy fields below support historical records only.
+  presence: {
+  "schemaVersion": 1,
+  "name": "Mario Marcolongo",
+  "canonicalUrl": "https://mariomarcolongo.com",
+  "reviewedAt": "2026-09-12",
+  "email": "me@mariomarcolongo.com",
+  "github": "https://github.com/jnton",
+  "linkedin": "https://www.linkedin.com/in/mario-marcolongo",
+  "currentPositioning": "Research & Technical Operations",
+  "location": "Based in Italy · Italian/EU citizen · Open to relocation",
+  "citizenship": [
+    "Italy"
+  ],
+  "usWorkAuthorization": "not_established",
+  "developmentDirection": [
+    "Technical implementation",
+    "Data quality",
+    "Systems diagnosis"
+  ],
+  "headline": "I trace problems to their source.",
+  "description": "Scientific fact-checking, source investigation and practical technical work, with published contributions, accepted open-source changes and inspectable evidence.",
+  "subheadline": "My work combines scientific fact-checking, source investigation and practical troubleshooting. I contribute to published science work and open-source tools, and I’m building stronger Python, SQL and systems skills.",
+  "contact": "Have a research, data or technical workflow that needs careful investigation? Tell me the problem, the expected outcome and the working arrangement.",
+  "availability": "I’m based in Italy and open to relocation and international engagements where the hiring or contracting arrangement permits. Work authorization outside the EU must be checked for the role.",
+  "authorship": "I use AI tools extensively for implementation. My contributions include defining problems and requirements, inspecting behavior, testing, diagnosing failures and maintaining the resulting tools. Each case identifies external review and remaining validation limits.",
+  "machineSummary": "Mario Marcolongo works on scientific information quality, research operations and practical technical problems. His evidence includes paid science communication work, public source investigations and accepted open source contributions. Based in Italy, he is an Italian citizen studying IT through Metropolia Open UAS and developing independent Python, SQL and quantitative skills.",
+  "resumeRoutes": {
+    "default": "/cv",
+    "technical": "/cv-technical",
+    "aiEvaluation": "/cv-ai"
+  },
+  "education": [
+    {
+      "institution": "Metropolia University of Applied Sciences",
+      "title": "Open UAS Information Technology path studies",
+      "period": "Aug 2026–Present",
+      "startDate": "2026-08",
+      "endDate": null,
+      "status": "open_uas_path_enrolled",
+      "description": "English-taught, online, non-degree pathway toward eligibility to apply for the online BEng. Python Programming: 3 ECTS, Pass, assessed 15 Sep 2026.",
+      "programExtentECTS": 120,
+      "creditsAwarded": 3,
+      "degreeAwarded": false,
+      "expectedDegreeCompletion": null,
+      "sourceUrl": "https://www.metropolia.fi/en/study-at-metropolia/open-university/path-studies/it-online",
+      "attainments": [
+        {
+          "name": "Python Programming",
+          "code": "TT00CB02",
+          "creditsECTS": 3,
+          "grade": "Pass",
+          "assessedAt": "2026-09-15",
+          "sourceType": "user_supplied_institutional_transcript",
+          "transcriptDate": "2026-09-19",
+          "observedAt": "2026-09-19",
+          "sourceUrl": null
+        }
+      ],
+      "lastReviewedAt": "2026-09-19"
+    },
+    {
+      "institution": "University of Campania Luigi Vanvitelli",
+      "title": "Medicine studies, degree not completed",
+      "period": "2020–2023",
+      "startDate": "2020",
+      "endDate": "2023",
+      "status": "degree_not_completed",
+      "degreeAwarded": false,
+      "sourceUrl": null
+    }
+  ],
+  "languages": {
+    "text": "Italian native · English: EF SET C1 overall, 68/100 (Mar 2024)",
+    "sourceUrl": "https://cert.efset.org/jHk84h",
+    "issuedAt": "2024-03-26",
+    "scores": {
+      "overall": 68,
+      "reading": 75,
+      "listening": 81,
+      "writing": 59,
+      "speaking": 55
+    }
+  },
+  "claims": [
+    {
+      "id": "entropy-published-work",
+      "text": "Contributed research, fact-checking and production support to 80 documented published pieces: 55 videos, 4 articles and 21 short-form pieces.",
+      "sourceUrl": "https://entropyforlife.it/mario-marcolongo-entropy-for-life/",
+      "sourceOwner": "client_organization",
+      "evidenceType": "organizational_work_record",
+      "engagementType": "paid_contractor",
+      "limitation": "The attribution record is on a site I help manage. Responsibilities varied by assignment; the organization’s audience is not my personally attributable reach.",
+      "startDate": "2023-06",
+      "endDate": null,
+      "observedAt": "2026-09-12",
+      "lastReviewedAt": "2026-09-12",
+      "visibility": "public"
+    },
+    {
+      "id": "atlas-pr-52-accepted",
+      "text": "Contributed merged PR #52: migration validation portability.",
+      "sourceUrl": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/52",
+      "sourceOwner": "upstream_project",
+      "evidenceType": "external_acceptance",
+      "engagementType": "open_source_contribution",
+      "limitation": "Acceptance covers the submitted change; it does not establish authorship of the wider research or independent engineering proficiency.",
+      "startDate": "2026-09-03",
+      "endDate": "2026-09-03",
+      "observedAt": "2026-09-12",
+      "lastReviewedAt": "2026-09-12",
+      "visibility": "public"
+    },
+    {
+      "id": "atlas-pr-54-accepted",
+      "text": "Contributed merged PR #54: portable repository instruction adapters.",
+      "sourceUrl": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/54",
+      "sourceOwner": "upstream_project",
+      "evidenceType": "external_acceptance",
+      "engagementType": "open_source_contribution",
+      "limitation": "Acceptance covers the submitted change; it does not establish authorship of the wider research or independent engineering proficiency.",
+      "startDate": "2026-09-03",
+      "endDate": "2026-09-03",
+      "observedAt": "2026-09-12",
+      "lastReviewedAt": "2026-09-12",
+      "visibility": "public"
+    },
+    {
+      "id": "atlas-pr-61-accepted",
+      "text": "Contributed merged PR #61: repository instruction organization.",
+      "sourceUrl": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/61",
+      "sourceOwner": "upstream_project",
+      "evidenceType": "external_acceptance",
+      "engagementType": "open_source_contribution",
+      "limitation": "Acceptance covers the submitted change; it does not establish authorship of the wider research or independent engineering proficiency.",
+      "startDate": "2026-09-06",
+      "endDate": "2026-09-06",
+      "observedAt": "2026-09-12",
+      "lastReviewedAt": "2026-09-12",
+      "visibility": "public"
+    },
+    {
+      "id": "yourself-to-science-directory",
+      "text": "Maintained a directory containing 55 research-participation resources in the dated review.",
+      "sourceUrl": "https://github.com/yourselftoscience/yourselftoscience.org",
+      "sourceOwner": "project_maintainer",
+      "evidenceType": "public_artifact",
+      "engagementType": "independent_project",
+      "limitation": "37 Wikidata items referenced the project URL in the dated check; these are not 37 users or independent citations. A deposited DOI is not peer review.",
+      "startDate": null,
+      "endDate": null,
+      "observedAt": "2026-09-12",
+      "lastReviewedAt": "2026-09-12",
+      "visibility": "public"
+    },
+    {
+      "id": "gray-swan-july-29",
+      "text": "Dated Proving Ground record: rank #74, top 6%, on 29 July 2026.",
+      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-2026-07-29/",
+      "sourceOwner": "platform_record_captured_by_account_holder",
+      "evidenceType": "dated_platform_snapshot",
+      "engagementType": "independent_evaluation",
+      "limitation": "The displayed total is 113; four visible area counters sum to 112. Arena figures are separate. This is not a current ranking or paid engagement.",
+      "startDate": "2026-07-29",
+      "endDate": "2026-07-29",
+      "observedAt": "2026-09-12",
+      "lastReviewedAt": "2026-09-12",
+      "visibility": "public"
+    },
+    {
+      "id": "notandia-source-release",
+      "text": "Developed and maintained an AI-assisted browser tool for research-result workflows; case study distinguishes released store versions from capabilities currently in source.",
+      "sourceUrl": "https://github.com/notandia/browser-extension",
+      "sourceOwner": "project_maintainer",
+      "evidenceType": "public_source_and_store_records",
+      "engagementType": "independent_project",
+      "limitation": "The inspected legacy store record showed version 0.0.2 (June 2025), 11 users and one rating. Expanded source capabilities are not asserted to ship in every store.",
+      "startDate": null,
+      "endDate": null,
+      "observedAt": "2026-09-12",
+      "lastReviewedAt": "2026-09-12",
+      "visibility": "public"
+    },
+    {
+      "id": "metropolia-python-3ects",
+      "text": "Python Programming (TT00CB02): 3 ECTS, Pass, assessed 15 September 2026.",
+      "engagementType": "open_uas_study",
+      "startDate": null,
+      "endDate": "2026-09-15",
+      "observedAt": "2026-09-19",
+      "lastReviewedAt": "2026-09-19",
+      "sourceUrl": null,
+      "sourceOwner": "Metropolia University of Applied Sciences",
+      "evidenceType": "user_supplied_institutional_transcript",
+      "limitation": "Based on transcript text supplied by the student, dated 19 September 2026. The private transcript is not published. This is one completed course in a non-degree Open UAS pathway, not an awarded degree or proof of professional programming proficiency.",
+      "visibility": "public"
+    }
+  ],
+  "projects": [
+    {
+      "id": "entropy",
+      "name": "Entropy for Life",
+      "hook": "Scientific evidence behind published work",
+      "route": "/work/entropy",
+      "status": "Paid contractor · Jun 2023–Present",
+      "text": "Paid research, fact-checking and production contributions to documented science content. The case links the published work and explains my role.",
+      "claimIds": [
+        "entropy-published-work"
+      ],
+      "image": "/media/work/entropy-h5n1.png",
+      "alt": "Published Entropy for Life science content about H5N1",
+      "links": [
+        {
+          "label": "Organizational work record",
+          "url": "https://entropyforlife.it/mario-marcolongo-entropy-for-life/"
+        },
+        {
+          "label": "Published science content",
+          "url": "https://entropyforlife.it/"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Problem",
+          "text": "Published science content has to communicate clearly while remaining faithful to the underlying evidence. Sources differ in design, scope and certainty; a useful script or article must preserve those distinctions without asking the audience to read every paper. My contribution sits inside that production process, alongside the creator’s editorial decisions and other contributors’ work."
+        },
+        {
+          "heading": "My contribution",
+          "text": "I have contributed paid research, scientific fact-checking and production support since June 2023. Responsibilities varied by assignment: retrieving scientific sources, checking claims against the source material and supporting English-to-Italian localization where relevant. Publishing and technical website operations became part of my responsibilities in September 2023. This is a contractor relationship, not a claim to have created every component of the channel or its output."
+        },
+        {
+          "heading": "Result",
+          "text": "The dated organizational work record attributes contributions to 80 published pieces: 55 videos, four articles and 21 short-form pieces. Eleven thumbnail contributions overlap with that work and are not eleven additional published pieces. The record connects the contribution to public outputs rather than using the organization’s audience as a personal performance metric. No quantified increase in accuracy, reach or production speed is asserted."
+        },
+        {
+          "heading": "How to inspect the work",
+          "text": "Start with the organizational work record, which links the published pieces. Choose a piece and distinguish its public credits and source material from the broader description of my role here. The record supports attribution to real outputs; it does not assign identical responsibilities to me on every item. The H5N1 image is an example of the published science content, not a stand-alone scientific finding or an image offered as proof of sole authorship."
+        },
+        {
+          "heading": "Evidence ownership and limits",
+          "text": "The attribution page belongs to Entropy for Life, on a website I help manage. It is an organizational work record, not wholly independent verification of each underlying scientific claim. The client’s editorial voice, audience and overall production are not personally attributable achievements. A specific reference would require the person’s permission; no private correspondence is presented as a public endorsement."
+        },
+        {
+          "heading": "What this demonstrates",
+          "text": "The work supports scientific source retrieval, fact-checking, source-faithful communication and delivery within an ongoing paid relationship. Website operations add practical publishing experience. The evidence is strongest when a reviewer follows the output and asks about the particular assignment. It does not establish a medical qualification, original clinical research or independent software-engineering proficiency."
+        }
+      ]
+    },
+    {
+      "id": "atlas",
+      "name": "AI Safety Formalization Atlas",
+      "hook": "Diagnosing repository tooling problems",
+      "route": "/work/atlas",
+      "status": "Open-source contributor · Sep 2026",
+      "text": "Accepted contributions to portability and repository instructions, with the exact changes and maintainer review available to inspect.",
+      "claimIds": [
+        "atlas-pr-52-accepted",
+        "atlas-pr-54-accepted",
+        "atlas-pr-61-accepted"
+      ],
+      "links": [
+        {
+          "label": "Accepted PR #52",
+          "url": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/52"
+        },
+        {
+          "label": "Accepted PR #54",
+          "url": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/54"
+        },
+        {
+          "label": "Accepted PR #61",
+          "url": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/61"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Problem",
+          "text": "A validation workflow should distinguish defects in the submitted work from defects in the checking environment. During repository work on the AI Safety Formalization Atlas, macOS compatibility exposed an assumption inside the workflow itself. Quiet mode could fail before the intended checks ran. That made an apparently simple validation failure a question about how the command was being invoked."
+        },
+        {
+          "heading": "My contribution",
+          "text": "PR #52 addressed migration validation portability. I worked through the observable failure and a narrow, reviewable change using AI-assisted implementation. The Bash 3.2 issue concerned empty-array expansion under set -u; the quiet recursive invocation was changed to keep the argument array nonempty. The same contribution activated the CI virtual environment explicitly, checked actual directory-entry case for Lean targets and excluded Finder metadata. These are tooling and repository-hygiene changes."
+        },
+        {
+          "heading": "Checks and result",
+          "text": "The PR description records the quiet gate invocation, focused compatibility and coverage tests with 27 passing tests, type checking and whitespace checks. Those are the checks reported for that contribution; this portfolio build does not rerun them or turn their result into an assurance about every environment. The upstream maintainer merged PR #52 on 3 September 2026. The public diff and review are the evidence of what changed and what was accepted."
+        },
+        {
+          "heading": "The other accepted contributions",
+          "text": "PR #54 added portable instruction adapters around the existing repository instructions. Its public record includes a review correction to an import reference and a limitation: the full gate stopped because the local Python lacked PyYAML. PR #61 reorganized repository instructions into task-scoped policy files and a small routing entry point. Its acceptance occurred on 6 September 2026. These contributions concern how repository guidance is found and used, not new safety theorems."
+        },
+        {
+          "heading": "Scope and authorship",
+          "text": "I am an open-source contributor to the Atlas. I do not claim authorship of the project, its formalizations or the underlying research. The accepted portability change did not modify a Lean theorem, proof or toolchain. Public maintainer acceptance is a meaningful external signal about a bounded contribution. It is not a substitute for an independent assessment of my programming proficiency or an independent review of the project’s scientific conclusions."
+        },
+        {
+          "heading": "How to verify",
+          "text": "Open PR #52 and inspect Files changed alongside its description. The Bash change is useful to compare with the visible symptom: a validation command stopping at its own invocation. Then read the separate records for #54 and #61 rather than treating three merged PRs as three instances of the same work. Their dates and validation boundaries remain attached to the individual changes."
+        },
+        {
+          "heading": "What I bring to a similar problem",
+          "text": "This case shows a practical approach to troubleshooting: observe the failing behavior, inspect the environment assumption, narrow the change and leave a public review trail. My contribution includes defining the problem, inspecting behavior, testing and diagnosing failures while using AI tools extensively for implementation. The next stronger evidence would be repeated delivery or an independently assessed task; it is not claimed here as an achievement already completed."
+        }
+      ]
+    },
+    {
+      "id": "yourself-to-science",
+      "name": "Yourself to Science",
+      "hook": "Organizing research opportunities with provenance",
+      "route": "/work/yourself-to-science",
+      "status": "Independent maintained project",
+      "text": "A maintained directory of research-participation resources, with documented inclusion decisions and linked source records.",
+      "claimIds": [
+        "yourself-to-science-directory"
+      ],
+      "image": "/media/work/yourself-to-science-800.webp",
+      "alt": "Yourself to Science research-participation directory",
+      "links": [
+        {
+          "label": "Open directory",
+          "url": "https://yourselftoscience.org"
+        },
+        {
+          "label": "Source and inclusion records",
+          "url": "https://github.com/yourselftoscience/yourselftoscience.org"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Problem",
+          "text": "Research-participation opportunities are spread across institutions and project websites. A directory is useful only if readers can identify the opportunity, find its original source and understand what an entry represents. Organizing links is therefore also a provenance and maintenance task: an entry needs a defensible inclusion decision, not just an appealing description."
+        },
+        {
+          "heading": "My contribution",
+          "text": "I maintain Yourself to Science as an independent research-participation directory. My work includes defining the resource structure, organizing entries and linking source records. Technical implementation is AI-assisted. My contribution is to the requirements, information organization, behavior review and maintenance of the resource; it is not a claim to conduct the studies listed or to represent the institutions behind them."
+        },
+        {
+          "heading": "Result",
+          "text": "The dated review found 55 resources. A separate check found 37 Wikidata items that referenced the project URL. The two counts answer different questions: the first describes directory scope and the second a form of reference use. Neither establishes 37 active users, 37 independent scholarly citations or participation in 55 studies. Counts describe the inspected state and are not presented as live counters."
+        },
+        {
+          "heading": "How to inspect it",
+          "text": "Open the directory and follow an entry to the original research source. The project repository provides the structure and source history used to maintain the resource. A reviewer can compare the public presentation with those records and inspect changes over time. For any individual opportunity, the originating institution’s current eligibility, consent and participation information governs; a directory entry does not replace those materials."
+        },
+        {
+          "heading": "Publication and validation limits",
+          "text": "A publicly deposited DOI provides a persistent record. It does not establish peer review of the directory or scientific validation of its design. Wikidata references establish the referenced URL’s appearance in structured records, with their own provenance. They do not independently verify every statement on the website. No verified user count, revenue figure or effect on recruitment is claimed."
+        },
+        {
+          "heading": "What this demonstrates",
+          "text": "The relevant work is information organization with inspectable sources, practical requirements and continued maintenance. The useful hiring question is whether the entries and changes are clear enough for someone else to review. The directory is presented as one independent project, separate from paid Entropy work and accepted Atlas contributions, so its evidence is not mistaken for employment or institutional endorsement."
+        }
+      ]
+    },
+    {
+      "id": "investigations",
+      "name": "Source investigations",
+      "hook": "From conflicting records to a defensible conclusion",
+      "route": "/investigations",
+      "status": "Public-source contributions",
+      "text": "Selected cases showing what I checked, which evidence changed the conclusion and what remains uncertain.",
+      "claimIds": [],
+      "links": [],
+      "sections": []
+    },
+    {
+      "id": "ai-evaluation",
+      "name": "Gray Swan",
+      "hook": "A dated record of model-behavior testing",
+      "route": "/ai-evaluation",
+      "status": "Independent evaluation · July 2026 snapshot",
+      "text": "Independent adversarial-evaluation activity, with the July 2026 platform record and clear limits on what the metrics establish.",
+      "claimIds": [
+        "gray-swan-july-29"
+      ],
+      "links": [
+        {
+          "label": "Dated evidence",
+          "url": "https://mariomarcolongo.com/evidence/gray-swan-2026-07-29/"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Activity",
+          "text": "I carried out independent adversarial/model-behavior evaluation through Gray Swan. This is independent platform activity, not employment at Gray Swan or a claim to be a research scientist. The public record supports a dated account of testing activity; it does not replace a reproducible evaluation method, a professional reference or an independent engineering assessment."
+        },
+        {
+          "heading": "Dated result",
+          "text": "On 29 July 2026, the captured Proving Ground profile displayed rank #74, top 6%, and 113 total breaks. The four visible area counters sum to 112. That discrepancy remains visible rather than being silently reconciled. The separate Arena profile displayed rank #365, 28 global unique breaks, 1,120 points and 255 submissions. These are separate platform metrics, not additive totals."
+        },
+        {
+          "heading": "Evidence",
+          "text": "The evidence page contains the original account-holder screenshot, a preserved manifest and a structured record. The platform is the source of the displayed numbers; I captured the record. Follow the original image to inspect the labels and the date. A link to the live profile is provided there, but the live state can change and should not be confused with the July snapshot."
+        },
+        {
+          "heading": "What is not established",
+          "text": "Aggregate counts do not reveal every tested model, prompt, output, adjudication decision or denominator. They do not demonstrate that each counted result represents an independently verified security failure. The public page does not provide a complete reproduction package or private challenge material. It also does not establish paid evaluation work, current ranking or general competence in penetration testing."
+        },
+        {
+          "heading": "Contribution and next evidence",
+          "text": "The relevant contribution is hands-on model-behavior testing and evidence documentation within the demonstrated surfaces. My broader technical implementations are AI-assisted. A shareable method and rubric case could strengthen the record if it were completed and permitted to publish; it is not listed as an existing achievement. For current evaluation-support roles, use the specialist résumé and inspect the dated record alongside the scientific source work and accepted Atlas contributions."
+        }
+      ]
+    },
+    {
+      "id": "notandia",
+      "name": "Notandia",
+      "hook": "A practical tool for research-result workflows",
+      "route": "/notandia",
+      "status": "Independent project · AI-assisted implementation",
+      "text": "An AI-assisted browser tool with released versions and source development documented separately.",
+      "claimIds": [
+        "notandia-source-release"
+      ],
+      "links": [
+        {
+          "label": "Canonical browser source",
+          "url": "https://github.com/notandia/browser-extension"
+        },
+        {
+          "label": "Chrome store record",
+          "url": "https://chromewebstore.google.com/detail/mdpi-filter/comknkeimaaadpiopddjoknflbmjeccp"
+        },
+        {
+          "label": "Edge store record",
+          "url": "https://microsoftedge.microsoft.com/addons/detail/mdpi-filter/efonlkldplkaeekpiajloajjmkappjgi"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Problem",
+          "text": "Research-result workflows can make it difficult to distinguish a publisher-level signal from an article-specific notice. A tool must explain that difference and give the reader control. A publisher’s inclusion in a watchlist does not by itself establish that a particular paper is unreliable, retracted or scientifically incorrect."
+        },
+        {
+          "heading": "My contribution",
+          "text": "Notandia continues the earlier MDPI Filter project. I defined product requirements and research-result behavior, inspected implementation and tested AI-assisted changes. Current browser source and the Zotero source are maintained separately. My contribution includes diagnosing behavior and maintaining documentation; this is an independent project, not an institutional research-integrity service or an independent assessment of programming proficiency."
+        },
+        {
+          "heading": "Released record versus source development",
+          "text": "The inspected legacy store record showed MDPI Filter version 0.0.2 from June 2025, with 11 users and one rating. Those are dated store values, not current combined usage. The canonical browser source contains the expanded Notandia work. Source development is not proof that every capability has shipped in Chrome and Edge. Store listings and repository release records must be compared before choosing a version."
+        },
+        {
+          "heading": "Evidence and interpretation",
+          "text": "Use the canonical browser repository to inspect the current source and release notes. Follow the separate store links to check what is actually distributed there. The expanded source includes publisher context and formal-notice workflows, but a notice’s type and source matter: a correction is not synonymous with a retraction, and either still requires reading its scope. This portfolio does not certify complete detection or make a paper-level verdict."
+        },
+        {
+          "heading": "Availability",
+          "text": "Chrome: legacy listing retained for continuity; inspected version 0.0.2, June 2025. Edge: separate listing, whose installed version must be checked independently. Browser source: canonical Notandia repository, development tracked independently of store availability. Zotero: separate source repository with its own scope. No cross-store feature-parity claim is made."
+        },
+        {
+          "heading": "What this demonstrates",
+          "text": "The inspectable work concerns requirements, information-quality distinctions, functional testing and release troubleshooting. The useful output is a tool whose behavior and limits can be examined. A successful deployment alone does not prove scientific accuracy or production readiness; reviewers should use the relevant release record and a reproducible example for the version they are assessing."
+        }
+      ]
+    },
+    {
+      "id": "scientific-visualizations",
+      "name": "Scientific visualizations",
+      "hook": "Making a relationship easier to inspect",
+      "route": "/work/scientific-visualizations",
+      "status": "Public diagrams and data views",
+      "text": "Selected diagrams and data views with source material, assumptions and documented reuse where available.",
+      "claimIds": [],
+      "image": "/media/work/wikimedia-clinical-overlap.svg",
+      "alt": "Diagram comparing clinical and molecular definitions of conditions",
+      "links": [
+        {
+          "label": "Wikimedia contributions",
+          "url": "https://commons.wikimedia.org/wiki/Special:Contributions/Digressivo"
+        },
+        {
+          "label": "Tableau data views",
+          "url": "https://public.tableau.com/app/profile/mario.marcolongo/vizzes"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Problem",
+          "text": "A scientific relationship can be difficult to inspect in prose alone. A diagram or data view can expose definitions, groupings and assumptions, provided the viewer can trace what each mark means. The goal is to make a source-backed relationship legible, not to make the visual itself look like independent evidence."
+        },
+        {
+          "heading": "Clinical and molecular definitions",
+          "text": "The retained diagram compares clinical and molecular ways of defining conditions. Its purpose is conceptual explanation. The public Wikimedia contribution record provides attribution and the relevant file context; source and licensing details should be read at the original artifact. The illustration is not a diagnostic instrument, a prevalence estimate or new clinical research."
+        },
+        {
+          "heading": "Data views",
+          "text": "The Tableau profile links published epidemiological and public-health views. Each view should be read with its dataset, units and transformation assumptions. Protein-supply work describes food supply, not observed individual protein intake. A national aggregate cannot be silently converted into a personal nutritional conclusion. The original data and view context are the appropriate place to inspect the measure."
+        },
+        {
+          "heading": "My contribution",
+          "text": "I organized scientific material and created visual explanations and data views. The useful evidence is the actual artifact, its source trail and documented attributable changes. A reuse record, where present at the original file, supports that specific reuse; it is not a blanket statement about the impact of all my visualizations. No audience or clinical outcome is inferred from a download or publication."
+        },
+        {
+          "heading": "How to inspect",
+          "text": "Start with the diagram and its public contribution trail, or open a data view and examine its labels and original dataset. Check whether the displayed relationship is a definition, an estimate or a transformation. The project remains supporting evidence of source communication and data presentation, separate from paid scientific production and accepted repository contributions."
+        }
+      ]
+    },
+    {
+      "id": "telegram",
+      "name": "Telegram and cloud automation",
+      "hook": "A documented link-conversion workflow",
+      "route": "/work/telegram",
+      "status": "Independent project · AI-assisted implementation",
+      "text": "A practical Telegram workflow with inspected cloud architecture and explicit operating limits.",
+      "links": [
+        {
+          "label": "Source and operating instructions",
+          "url": "https://github.com/jnton/english-wikipedia-link-converter-telegram-bot"
+        }
+      ],
+      "claimIds": [],
+      "sections": [
+        {
+          "heading": "Problem and contribution",
+          "text": "The bot converts English Wikipedia links in Telegram workflows. I defined requirements, inspected behavior, tested workflows and diagnosed deployment problems using AI-assisted implementation. The repository is the source for current reproduction and configuration details."
+        },
+        {
+          "heading": "Inspected architecture",
+          "text": "The inspected architecture uses an AWS Lambda function URL with SQS, DynamoDB, EventBridge and SNS. The architecture describes the reviewed source; this portfolio release does not independently prove that the hosted bot is currently operating or rerun its cloud deployment."
+        },
+        {
+          "heading": "Evidence and limits",
+          "text": "Source history and operating instructions support inspection of the implementation. Private, group and inline behavior should be tested against the version being assessed. No uptime guarantee, independently assessed AWS proficiency or production-readiness certification is claimed."
+        }
+      ]
+    }
+  ],
+  "cv": {
+    "default": {
+      "title": "Research & Technical Operations",
+      "filename": "Mario-Marcolongo-Research-Technical-Operations.pdf",
+      "summary": "Research and technical-operations contributor with paid scientific fact-checking experience, public-source investigations and accepted open-source contributions. I trace evidence, reconcile inconsistencies and help turn findings into usable outputs. Currently studying Python, SQL and IT foundations through Metropolia Open UAS path studies."
+    },
+    "technical": {
+      "title": "Technical Operations | Troubleshooting & Data Quality",
+      "filename": "Mario-Marcolongo-Technical-Operations.pdf",
+      "summary": "Technical-operations candidate with accepted open-source contributions and experience defining, testing and maintaining AI-assisted tools. My strongest work involves tracing failures, checking evidence and documenting practical fixes. I am developing independent Python, SQL and systems competence through structured study."
+    },
+    "aiEvaluation": {
+      "title": "AI Evaluation & Research Support",
+      "filename": "Mario-Marcolongo-AI-Evaluation-Research-Support.pdf",
+      "summary": "Independent AI evaluator with a dated Gray Swan competition record, paid scientific fact-checking experience and accepted open-source contributions. I investigate model behavior and source claims, document evidence and state the limits of what a result shows. My technical implementations are AI-assisted; I am strengthening independent programming and quantitative skills."
+    }
+  },
+  "cvBullets": {
+    "entropy": [
+      "Contributed research, fact-checking and production support to 80 documented published pieces: 55 videos, 4 articles and 21 short-form pieces.",
+      "Retrieved and checked scientific sources and supported source-faithful English-to-Italian localization; responsibilities varied by assignment.",
+      "Managed publishing and technical website operations alongside scientific content work."
+    ],
+    "atlas": [
+      "Contributed three merged pull requests to AI Safety Formalization Atlas, covering repository tooling portability and instruction organization.",
+      "Worked through reviewable changes with public maintainer acceptance; exact contributions and validation limits are linked in the portfolio."
+    ],
+    "yts": [
+      "Maintained research-participation resources with documented inclusion decisions and linked source records.",
+      "Maintained a directory containing 55 research-participation resources in the dated review."
+    ],
+    "gray": [
+      "Dated Proving Ground record: rank #74, top 6%, on 29 July 2026.",
+      "Public evidence page distinguishes the competition record from the separate Arena metrics and explains the limits of platform-level results."
+    ],
+    "notandia": [
+      "Developed and maintained an AI-assisted browser tool for research-result workflows; case study distinguishes released store versions from capabilities currently in source.",
+      "Defined requirements, inspected behavior and tested AI-assisted changes; release records and source development remain separately documented."
+    ]
+  }
+},
   identity: {
     name: "Mario Marcolongo",
     buildVersion: "v2026.07.29",
@@ -191,15 +760,15 @@ function createMarioDossier() {
       id: "telegram-bot",
       title: "English Wikipedia Link Converter | Telegram Bot",
       oneLiner: "An open-source Telegram bot that converts non-English Wikipedia links to their English equivalents.",
-      description: "Specified the behavior and deployment requirements for a Telegram bot running on AWS Lambda and API Gateway. Used AI-assisted implementation, tested private, group and inline workflows, diagnosed deployment problems and maintained GitHub Actions releases.",
+      description: "Specified the behavior and deployment requirements for a Telegram bot running on AWS Lambda function URL with SQS, DynamoDB, EventBridge and SNS. Used AI-assisted implementation, tested private, group and inline workflows, diagnosed deployment problems and maintained GitHub Actions releases.",
       role: "Creator & Project Lead",
-      tech: ["Requirements", "Functional Testing", "AWS Lambda", "API Gateway", "GitHub Actions", "Serverless Deployment & Maintenance"],
+      tech: ["Requirements", "Functional Testing", "AWS Lambda", "Lambda function URL", "GitHub Actions", "Serverless Deployment & Maintenance"],
       links: {
         bot: "https://t.me/ToEnWikipediaBot",
         github: "https://github.com/jnton/english-wikipedia-link-converter-telegram-bot"
       },
       highlights: [
-        "Serverless Deployment: AWS Lambda and API Gateway",
+        "Serverless Deployment: AWS Lambda function URL with SQS, DynamoDB, EventBridge and SNS",
         "Behavioral Coverage: Private chats, groups and inline usage",
         "Testing & release maintenance: Deployment diagnosis and release maintenance"
       ]
@@ -477,7 +1046,7 @@ function createMarioDossier() {
       title: "EF SET English Certificate 68/100 (C1 overall)",
       institution: "EF Standard English Test",
       period: "Mar 2024",
-      credentialUrl: "https://cert.efset.org/en/eJz39v"
+      credentialUrl: "https://cert.efset.org/jHk84h"
     },
     {
       title: "Career Essentials in Generative AI",

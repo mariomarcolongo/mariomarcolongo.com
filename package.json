@@ -2,7 +2,7 @@
   "name": "mariomarcolongo",
   "version": "2026.07.29",
   "private": true,
-  "description": "AI evaluation, scientific evidence and research-support portfolio with role-specific CVs and public evidence records",
+  "description": "Research and technical operations portfolio with three source-backed application r\u00e9sum\u00e9s",
   "scripts": {
     "lint": "node scripts/check-stale-strings.js",
     "dev": "node scripts/check-stale-strings.js && node scripts/generate-llm-dossiers.js && astro dev",
@@ -15,7 +15,7 @@
     "cv:custom": "node scripts/generate-custom-cv.js",
     "pdf:cv": "node scripts/generate-cv-pdf.js",
     "pdf:resume": "node scripts/generate-resume-pdf.js",
-    "pdf": "npm run pdf:resume && npm run pdf:cv",
+    "pdf": "node scripts/generate-cv-pdf.js",
     "verify:dist": "node scripts/verify-dist.js && node scripts/verify-structured-data.js",
     "verify:vite-interop": "node scripts/verify-vite-interop.mjs",
     "verify:structured-data": "node scripts/verify-structured-data.js",

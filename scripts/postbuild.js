@@ -1,69 +1,8 @@
-#!/usr/bin/env node
-const fs = require('node:fs');
-const path = require('node:path');
-
-const ROOT = path.resolve(__dirname, '..');
-const DIST = path.join(ROOT, 'dist');
-const REQUIRED = [
-  'index.html',
-  'notandia.html',
-  'mdpi-filter.html',
-  'integrity.html',
-  'research-operations.html',
-  'cv.html',
-  'cv-resume.html',
-  'cv-research.html',
-  'cv-editorial.html',
-  'cv-integrity.html',
-  'security.html',
-  'llms.txt',
-  'llms-full.txt',
-  'cv-llm.txt',
-  '.well-known/api-catalog',
-  '.well-known/ard.json',
-  '.well-known/ai-catalog.json',
-  '.well-known/agent-card.json',
-  '.well-known/mcp/server-card.json',
-  'auth.md',
-  'robots.txt',
-  'sitemap.xml',
-  'site.webmanifest',
-  'media/work/gray-swan-profile-2026-07-29-800.webp',
-  'media/work/gray-swan-profile-2026-07-29-1600.webp',
-  'evidence/gray-swan-arena-mario-marcolongo-2026-07-29-033550-CEST.png',
-  'evidence/gray-swan-profile-2026-07-29.html',
-  'evidence/gray-swan-profile-2026-07-29.json'
-];
-const ROOT_HTML_MIRRORS = [
-  'index.html',
-  'notandia.html',
-  'mdpi-filter.html',
-  'integrity.html',
-  'cv.html',
-  'cv-resume.html',
-  'cv-research.html',
-  'cv-editorial.html',
-  'cv-integrity.html',
-  'security.html'
-];
-
-function assertNonEmpty(relativePath) {
-  const filePath = path.join(DIST, relativePath);
-  if (!fs.existsSync(filePath)) throw new Error(`Required build artifact is missing: dist/${relativePath}`);
-  const stat = fs.statSync(filePath);
-  if (!stat.isFile() || stat.size === 0) throw new Error(`Required build artifact is empty or not a file: dist/${relativePath}`);
-}
-
-try {
-  REQUIRED.forEach(assertNonEmpty);
-  for (const relativePath of ROOT_HTML_MIRRORS) {
-    const source = path.join(DIST, relativePath);
-    const destination = path.join(ROOT, relativePath);
-    fs.copyFileSync(source, destination);
-    console.log(`Copied ${path.relative(ROOT, source)} -> ${path.relative(ROOT, destination)}`);
-  }
-  console.log(`Post-build artifact check passed (${REQUIRED.length} required files).`);
-} catch (error) {
-  console.error(`Post-build step failed: ${error.message}`);
-  process.exit(1);
-}
+const fs=require('node:fs');const path=require('node:path');
+const root=path.resolve(__dirname,'..');const dist=path.join(root,'dist');
+const routes=['/','/work','/work/entropy','/work/atlas','/work/yourself-to-science','/work/scientific-visualizations','/work/telegram','/investigations','/ai-evaluation','/notandia','/research-operations','/cv','/cv-technical','/cv-ai','/evidence','/evidence/gray-swan-2026-07-29/'];
+for(const route of routes){const file=route==='/'?'index.html':route.replace(/^\//,'').replace(/\/$/,'')+'.html';if(!fs.existsSync(path.join(dist,file)))throw Error(`Missing canonical page: ${file}`);}
+for(const name of ['index','notandia','mdpi-filter','integrity','cv','cv-resume','cv-research','cv-editorial','cv-integrity','security','cv-technical','cv-ai'])fs.copyFileSync(path.join(dist,name+'.html'),path.join(root,name+'.html'));
+const sitemap='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+routes.map(route=>`<url><loc>https://mariomarcolongo.com${route}</loc></url>`).join('\n')+'\n</urlset>\n';
+for(const folder of ['public','dist'])fs.writeFileSync(path.join(root,folder,'sitemap.xml'),sitemap);
+console.log('Canonical routes, sitemap and generated root mirrors updated.');

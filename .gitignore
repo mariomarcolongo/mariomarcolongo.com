@@ -23,3 +23,10 @@ Thumbs.db
 *Assistant Editor*
 *.pdf
 Mario Marcolongo — Curriculum Vitae.pdf
+
+# Private factual master and deliberate regional application exports
+/private/
+# Only these generated public application PDFs are published
+!public/Mario-Marcolongo-Research-Technical-Operations.pdf
+!public/Mario-Marcolongo-Technical-Operations.pdf
+!public/Mario-Marcolongo-AI-Evaluation-Research-Support.pdf
