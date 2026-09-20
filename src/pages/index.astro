@@ -3,25 +3,26 @@ import Layout from '../layouts/Layout.astro';
 import SiteNav from '../components/SiteNav.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import WorkRow from '../components/WorkRow.astro';
+import AtlasDiagnosis from '../components/AtlasDiagnosis.astro';
 import D from '../../data/source.js';
 const P = D.presence;
 ---
 <Layout>
   <SiteNav/>
   <main id="main-content" class="presence-shell home-shell">
-    <section class="home-hero" aria-labelledby="hero-title">
+    <section class="home-hero" aria-labelledby="hero-title"><div class="hero-copy">
       <p class="eyebrow">Research &amp; technical operations</p>
-      <h1 id="hero-title">{P.headline}</h1>
+      <h1 id="hero-title">Find the source.<br/><em>Fix the problem.</em></h1>
       <p class="lede">{P.subheadline}</p>
       <div class="actions">
         <a class="button primary" href="/cv">View résumé <span aria-hidden="true">↗</span></a>
         <a class="quiet-link" href="#selected-work">Explore my work <span aria-hidden="true">↓</span></a>
       </div>
-      <p class="meta relocation-line">{P.location}</p>
+      <p class="meta relocation-line">{P.location}</p></div><AtlasDiagnosis/>
     </section>
     <section class="presence-section home-work" id="selected-work" aria-labelledby="work-title">
-      <div class="section-heading"><h2 id="work-title">Selected work</h2><a href="/work">All projects <span aria-hidden="true">↗</span></a></div>
-      {P.projects.slice(0,3).map(project => <WorkRow project={project}/>)}
+      <div class="section-heading"><h2 id="work-title">Curiosity, put to work.</h2><a href="/work">All projects <span aria-hidden="true">↗</span></a></div>
+      <div class="project-gallery">{P.projects.slice(0,3).map(project => <WorkRow project={project}/>)}</div>
     </section>
     <section class="presence-section experience-grid" id="experience" aria-labelledby="experience-title">
       <div><p class="eyebrow">Background</p><h2 id="experience-title">Experience &amp; learning</h2></div>
@@ -40,7 +41,7 @@ const P = D.presence;
       </div>
     </section>
     <section class="presence-section contact-panel" id="contact" aria-labelledby="contact-title">
-      <p class="eyebrow">Next chapter</p><h2 id="contact-title">Looking beyond Italy.</h2>
+      <p class="eyebrow">Next chapter</p><h2 id="contact-title">A useful next problem.<br/><em>Somewhere new.</em></h2>
       <p>{P.contact}</p>
       <a class="contact-email" href={`mailto:${P.email}`}>{P.email} <span aria-hidden="true">↗</span></a>
       <p class="meta">{P.availability}</p>
