@@ -4,7 +4,7 @@ Mario Marcolongo works on scientific information quality, research operations an
 
 ## Current scope
 
-Research and technical-operations contributor with paid scientific fact-checking experience, public-source investigations and accepted open-source contributions. I trace evidence, reconcile inconsistencies and help turn findings into usable outputs. Currently studying Python, SQL and IT foundations through Metropolia Open UAS path studies.
+Research and technical-operations contributor combining paid scientific fact-checking and website operations with sustained Wikimedia source work and volunteer research support. I investigate inconsistencies, organize evidence and help turn findings into usable outputs.
 
 I use AI tools extensively for implementation. My contributions include defining problems and requirements, inspecting behavior, testing, diagnosing failures and maintaining the resulting tools. Each case identifies external review and remaining validation limits.
 
@@ -36,7 +36,7 @@ Case: https://mariomarcolongo.com/work/atlas
 
 ## Yourself to Science
 
-Independent maintained project. A maintained directory that helps people find research-participation opportunities and follow their original sources.
+Founder · Independent maintained project. I founded and maintain a directory that helps people find research-participation opportunities and follow their original sources.
 
 Maintained a directory containing 55 research-participation resources in the dated review. 37 Wikidata items referenced the project URL in the dated check; these are not 37 users or independent citations. A deposited DOI is not peer review.
 Source: https://github.com/yourselftoscience/yourselftoscience.org. Owner: project maintainer; evidence: public artifact; observed: 2026-09-12.
@@ -60,6 +60,12 @@ Dated Proving Ground record: rank #74, top 6%, on 29 July 2026. The displayed to
 Source: https://mariomarcolongo.com/evidence/gray-swan-2026-07-29/. Owner: platform record captured by account holder; evidence: dated platform snapshot; observed: 2026-09-12; event/start: 2026-07-29.
 
 Case: https://mariomarcolongo.com/ai-evaluation
+
+## Further experience
+
+Wikipedia, Wikidata & Wikimedia Commons. Since 2018 · Public contributions. Citation review, source reconciliation, structured-data editing and scientific visualizations. Source and attribution: https://mariomarcolongo.com/work/wikimedia
+
+University of Padua research project. 2022–2025 · Volunteer collaboration. Focus-group facilitation, participant recruitment and accessible research procedures, working with a supervisor and fellow facilitator. Source and attribution: https://mariomarcolongo.com/research-operations
 
 ## Education
 

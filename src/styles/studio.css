@@ -16,25 +16,6 @@
   .home-hero .actions { margin-top:28px; gap:24px; }
   .button.primary { border-radius:5px; }
   .hero-copy .relocation-line { font-size:12px; max-width:50ch; }
-  .atlas-feature { background:#e5ec80; color:#202719; border-radius:4px; padding:28px; box-shadow:10px 10px 0 var(--rule); }
-  .feature-topline { display:flex; justify-content:space-between; gap:12px; font:11px/1.4 ui-monospace,monospace; padding-bottom:22px; border-bottom:1px solid #a4ac5b; }
-  .atlas-feature h2 { font:500 32px/1.15 system-ui,sans-serif; letter-spacing:-1.1px; color:#202719; margin:24px 0; }
-  .atlas-feature h2 em { font:italic 35px/1.15 Georgia,serif; }
-  .failure-map { display:flex; align-items:center; margin:28px 0; gap:12px; }
-  .map-node { border:1px solid #899441; padding:10px 12px; flex:1; font:11px/1.6 ui-monospace,monospace; }
-  .map-node strong { font-size:13px; }
-  .map-failure { background:#fff8e8; border-color:#bfa572; }
-  .case-reveal { border-color:#a4ac5b; padding:0; }
-  .case-reveal summary { list-style:none; display:flex; justify-content:space-between; align-items:center; gap:8px; min-height:52px; color:#202719; font-size:15px; font-weight:650; }
-  .case-reveal summary::-webkit-details-marker { display:none; }
-  .case-reveal summary:focus-visible { outline-color:#202719; }
-  .reveal-mark { font-size:26px; font-weight:400; transition:transform 160ms ease; }
-  .case-reveal[open] .reveal-mark { transform:rotate(45deg); }
-  .case-reveal .when-open,.case-reveal[open] .when-closed { display:none; }
-  .case-reveal[open] .when-open { display:inline; }
-  .reveal-answer p { font-size:14px; line-height:1.6; margin:8px 0 14px!important; }
-  .reveal-answer a { color:#202719; font-size:14px; display:inline-block; padding:8px 0; }
-  .atlas-feature .feature-caption { font-size:11px; line-height:1.5; margin:12px 0 0; color:#475024; }
   .home-work { margin-top:88px; }
   .section-heading { margin-bottom:30px; }
   .section-heading h2 { font-size:35px; letter-spacing:-1px; }
@@ -76,9 +57,6 @@
   .site-footer { padding-bottom:32px; }
   @media(max-width:900px) {
     .home-hero { gap:32px; grid-template-columns:1.2fr 1fr; }
-    .atlas-feature { padding:22px; }
-    .atlas-feature h2 { font-size:27px; }
-    .atlas-feature h2 em { font-size:30px; }
     .project-gallery .project-entropy { gap:24px; }
   }
   @media(max-width:759px) {
@@ -89,11 +67,6 @@
     .hero-copy .eyebrow { font-size:11px; margin-bottom:18px; }
     .home-hero .lede { font-size:17px; }
     .hero-copy .relocation-line { font-size:12px; }
-    .atlas-feature { box-shadow:6px 6px 0 var(--rule); margin-right:6px; }
-    .atlas-feature h2 { font-size:28px; }
-    .atlas-feature h2 em { font-size:30px; }
-    .feature-topline { padding-bottom:16px; }
-    .failure-map { margin-block:20px; }
     .home-work { margin-top:52px; }
     .section-heading h2 { font-size:27px; max-width:12ch; }
     .project-gallery { grid-template-columns:1fr; gap:36px; }
@@ -108,6 +81,41 @@
     .contact-email { font-size:17px; }
   }
   @media(prefers-reduced-motion:reduce) {
-    .reveal-mark,.cover-label { transition:none; }
   }
 }
+@media screen {
+ .home-hero { align-items:start; gap:48px; }
+ .work-gallery { background:var(--surface); border:1px solid var(--rule); padding:20px; border-radius:6px; min-width:0; }
+ .work-gallery .eyebrow { font-size:12px; margin:0 0 16px; }
+ .gallery-slide { margin:0; animation:sample-in 180ms ease-out; }
+ .gallery-slide[hidden],.gallery-controls[hidden] { display:none; }
+ .gallery-slide img { width:100%; height:230px; object-fit:contain; background:#fff; border:1px solid var(--rule); }
+ .gallery-slide figcaption { padding-top:16px; color:var(--ink); }
+ .gallery-slide figcaption strong { font-size:18px; }
+ .gallery-slide figcaption p { font-size:14px; line-height:1.5; margin:8px 0; }
+ .gallery-slide figcaption a { font-size:14px; }
+ .gallery-arrows { display:flex; align-items:center; justify-content:space-between; margin:16px 0; }
+ .gallery-arrows button { min-width:44px; min-height:44px; }
+ .gallery-status { font:13px ui-monospace,monospace; }
+ .gallery-choices { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
+ .gallery-choices button { padding:6px; border:2px solid var(--rule); border-radius:4px; color:var(--ink); background:var(--canvas); cursor:pointer; }
+ .gallery-choices button[aria-pressed=true] { border-color:var(--accent); }
+ .gallery-choices img { width:100%; height:40px; object-fit:contain; background:white; }
+ .gallery-choices span { display:block; font-size:10px; line-height:1.3; margin-top:5px; }
+ .gallery-slide a:focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
+ .experience-list article { padding-bottom:20px; margin-bottom:20px; border-bottom:1px solid var(--rule); }
+ .experience-list h3 { font-size:21px; margin:6px 0 10px; }
+ .experience-list .meta { margin:0; }
+ .wiki-feature { display:grid; grid-template-columns:1fr 1fr; gap:40px; background:var(--tint); padding:32px; border-radius:6px; }
+ .wiki-feature h3 { font-size:21px; }
+ .home-work .project-yourself-to-science { grid-column:1/-1; display:grid; grid-template-columns:1fr 1.4fr; gap:40px; align-items:center; }
+ .home-work .project-yourself-to-science .artifact-cover { order:2; }
+ .home-work .project-yourself-to-science .work-description { padding:0; }
+ .artifact-cover,.button { transition:box-shadow 160ms ease, border-color 160ms ease; }
+ .artifact-cover:hover,.artifact-cover:focus-visible { box-shadow:0 5px 18px #191d291a; border-color:var(--accent); }
+ @keyframes sample-in { from {opacity:.75;transform:translateY(4px)} to {opacity:1;transform:translateY(0)} }
+ @media(max-width:759px){.wiki-feature,.home-work .project-yourself-to-science {grid-template-columns:1fr;gap:24px}.wiki-feature{padding:24px}.home-work .project-yourself-to-science .artifact-cover{order:0}.gallery-slide img{height:200px}}
+ @media(prefers-reduced-motion:reduce){.gallery-slide{animation:none}.artifact-cover,.button{transition:none}}
+}
+
+@media screen { .gallery-choices button { display:flex; flex-direction:column; align-items:stretch; } @media(max-width:759px) { .nav-experience { display:inline!important; } .site-header nav { gap:10px; } } }

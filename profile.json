@@ -23,6 +23,32 @@
     "technical": "/cv-technical",
     "aiEvaluation": "/cv-ai"
   },
+  "experience": [
+    {
+      "name": "Entropy for Life",
+      "period": "Jun 2023–Present · Paid contractor",
+      "text": "Scientific literature research, fact-checking and production support, alongside publishing and website operations.",
+      "route": "/work/entropy"
+    },
+    {
+      "name": "Wikipedia, Wikidata & Wikimedia Commons",
+      "period": "Since 2018 · Public contributions",
+      "text": "Citation review, source reconciliation, structured-data editing and scientific visualizations.",
+      "route": "/work/wikimedia"
+    },
+    {
+      "name": "University of Padua research project",
+      "period": "2022–2025 · Volunteer collaboration",
+      "text": "Focus-group facilitation, participant recruitment and accessible research procedures, working with a supervisor and fellow facilitator.",
+      "route": "/research-operations"
+    },
+    {
+      "name": "Yourself to Science",
+      "period": "Since 2024 · Founder, independent project",
+      "text": "Research-participation directory: resource selection, information organization and ongoing website maintenance.",
+      "route": "/work/yourself-to-science"
+    }
+  ],
   "education": [
     {
       "institution": "Metropolia University of Applied Sciences",
