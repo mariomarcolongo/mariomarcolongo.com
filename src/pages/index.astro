@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import SiteNav from '../components/SiteNav.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import WorkRow from '../components/WorkRow.astro';
-import AtlasDiagnosis from '../components/AtlasDiagnosis.astro';
+import WorkGallery from '../components/WorkGallery.astro';
 import D from '../../data/source.js';
 const P = D.presence;
 ---
@@ -18,26 +18,26 @@ const P = D.presence;
         <a class="button primary" href="/cv">View résumé <span aria-hidden="true">↗</span></a>
         <a class="quiet-link" href="#selected-work">Explore my work <span aria-hidden="true">↓</span></a>
       </div>
-      <p class="meta relocation-line">{P.location}</p></div><AtlasDiagnosis/>
+      <p class="meta relocation-line">{P.location}</p></div><WorkGallery/>
     </section>
     <section class="presence-section home-work" id="selected-work" aria-labelledby="work-title">
       <div class="section-heading"><h2 id="work-title">Curiosity, put to work.</h2><a href="/work">All projects <span aria-hidden="true">↗</span></a></div>
-      <div class="project-gallery">{P.projects.slice(0,3).map(project => <WorkRow project={project}/>)}</div>
+      <div class="project-gallery">{P.projects.filter(p => ['entropy','yourself-to-science'].includes(p.id)).map(project => <WorkRow project={project}/>)}</div>
     </section>
     <section class="presence-section experience-grid" id="experience" aria-labelledby="experience-title">
       <div><p class="eyebrow">Background</p><h2 id="experience-title">Experience &amp; learning</h2></div>
-      <div>
-        <p>I’ve worked with <a href="/work/entropy">Entropy for Life</a> as a paid contractor since June 2023, combining scientific research and fact-checking with publishing and website operations.</p>
-        <p>I’m studying IT through Metropolia Open UAS, an online, non-degree pathway. I’ve completed Python Programming, earning 3 ECTS with a Pass, and continue to develop my Python, SQL and systems skills.</p>
-        <a href="/cv">Full experience and education <span aria-hidden="true">↗</span></a>
+      <div class="experience-list">{P.experience.map(e=><article><p class="meta">{e.period}</p><h3><a href={e.route}>{e.name}</a></h3><p>{e.text}</p></article>)}
+        <p>I’m studying IT through Metropolia Open UAS, an online, non-degree pathway. Python Programming: 3 ECTS, Pass (September 2026). Continuing Python, SQL and quantitative foundations.</p>
+        <a href="/cv">View the research &amp; technical operations résumé ↗</a>
       </div>
     </section>
+    <section class="presence-section wiki-feature" aria-labelledby="wiki-title"><div><p class="eyebrow">Wikipedia · Wikidata · Wikimedia Commons</p><h2 id="wiki-title">Follow the evidence.</h2><p>From conflicting records to sourced explanations: citation review, biomedical synthesis, structured data and original diagrams.</p><a href="/work/wikimedia">Explore my Wikimedia contributions ↗</a></div><div><h3>Biomedical evidence</h3><p>Organizing literature on syndromic autism into a sourced explanation and comparative visual.</p><h3>Source reconstruction</h3><p>Recovering archived reporting and distinguishing stages in a fragmented public record.</p><a href="/investigations">Read the investigations and inspect attributed edits ↗</a></div></section>
     <section class="presence-section further-work" aria-labelledby="more-title">
       <h2 id="more-title">More to explore</h2>
       <div class="further-links">
-        <a href="/investigations"><strong>Source investigations <span aria-hidden="true">↗</span></strong><span>Tracing conflicting records back to their sources.</span></a>
+        <a href="/work/atlas"><strong>Atlas contributions ↗</strong><span>Three accepted changes to validation portability and repository instructions.</span></a>
         <a href="/ai-evaluation"><strong>AI evaluation <span aria-hidden="true">↗</span></strong><span>Independent model testing and the July 2026 Gray Swan record.</span></a>
-        <a href="/work/scientific-visualizations"><strong>Scientific visualizations <span aria-hidden="true">↗</span></strong><span>Diagrams and data views that explain scientific relationships.</span></a>
+        <a href="/notandia"><strong>Notandia ↗</strong><span>A maintained browser tool for research-result workflows.</span></a>
       </div>
     </section>
     <section class="presence-section contact-panel" id="contact" aria-labelledby="contact-title">

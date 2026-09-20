@@ -29,7 +29,7 @@ function createMarioDossier() {
   ],
   "headline": "Find the source. Fix the problem.",
   "description": "Scientific fact-checking, source investigation and practical technical work, with published contributions, accepted open-source changes and inspectable evidence.",
-  "subheadline": "I research scientific claims, investigate conflicting sources and troubleshoot technical workflows. My work spans paid science communication and accepted open-source contributions.",
+  "subheadline": "I investigate scientific claims, reconcile conflicting sources and troubleshoot practical workflows. Since 2023, I’ve combined paid science work with website operations, alongside sustained Wikimedia contributions and independent projects.",
   "contact": "I’m looking for research operations, technical support and implementation opportunities outside Italy. Have a role where careful investigation leads to a practical result? Let’s talk.",
   "availability": "Open to relocation and international remote work. I can work in the EU as an Italian citizen; opportunities elsewhere depend on the role’s hiring and work-authorization arrangements.",
   "authorship": "I use AI tools extensively for implementation. My contributions include defining problems and requirements, inspecting behavior, testing, diagnosing failures and maintaining the resulting tools. Each case identifies external review and remaining validation limits.",
@@ -329,8 +329,8 @@ function createMarioDossier() {
       "name": "Yourself to Science",
       "hook": "Organizing research opportunities with provenance",
       "route": "/work/yourself-to-science",
-      "status": "Independent maintained project",
-      "text": "A maintained directory that helps people find research-participation opportunities and follow their original sources.",
+      "status": "Founder · Independent maintained project",
+      "text": "I founded and maintain a directory that helps people find research-participation opportunities and follow their original sources.",
       "claimIds": [
         "yourself-to-science-directory"
       ],
@@ -489,7 +489,7 @@ function createMarioDossier() {
       "text": "Selected diagrams and data views with source material, assumptions and documented reuse where available.",
       "claimIds": [],
       "image": "/media/work/wikimedia-clinical-overlap.svg",
-      "alt": "Diagram comparing clinical and molecular definitions of conditions",
+      "alt": "Diagram of overlapping genes associated with clinical phenotypes",
       "links": [
         {
           "label": "Wikimedia contributions",
@@ -506,8 +506,8 @@ function createMarioDossier() {
           "text": "A scientific relationship can be difficult to inspect in prose alone. A diagram or data view can expose definitions, groupings and assumptions, provided the viewer can trace what each mark means. The goal is to make a source-backed relationship legible, not to make the visual itself look like independent evidence."
         },
         {
-          "heading": "Clinical and molecular definitions",
-          "text": "The retained diagram compares clinical and molecular ways of defining conditions. Its purpose is conceptual explanation. The public Wikimedia contribution record provides attribution and the relevant file context; source and licensing details should be read at the original artifact. The illustration is not a diagnostic instrument, a prevalence estimate or new clinical research."
+          "heading": "Overlapping genes and clinical phenotypes",
+          "text": "The diagram shows genes associated with overlapping clinical phenotypes, using intersecting regions to make shared associations visible. It is a sourced visual explanation; the original Wikimedia file and its references provide the scientific context."
         },
         {
           "heading": "Data views",
@@ -557,17 +557,17 @@ function createMarioDossier() {
     "default": {
       "title": "Research & Technical Operations",
       "filename": "Mario-Marcolongo-Research-Technical-Operations.pdf",
-      "summary": "Research and technical-operations contributor with paid scientific fact-checking experience, public-source investigations and accepted open-source contributions. I trace evidence, reconcile inconsistencies and help turn findings into usable outputs. Currently studying Python, SQL and IT foundations through Metropolia Open UAS path studies."
+      "summary": "Research and technical-operations contributor combining paid scientific fact-checking and website operations with sustained Wikimedia source work and volunteer research support. I investigate inconsistencies, organize evidence and help turn findings into usable outputs."
     },
     "technical": {
       "title": "Technical Operations | Troubleshooting & Data Quality",
       "filename": "Mario-Marcolongo-Technical-Operations.pdf",
-      "summary": "Technical-operations candidate with accepted open-source contributions and experience defining, testing and maintaining AI-assisted tools. My strongest work involves tracing failures, checking evidence and documenting practical fixes. I am developing independent Python, SQL and systems competence through structured study."
+      "summary": "Technical-operations candidate with experience maintaining websites, testing AI-assisted tools and diagnosing workflow failures. My record combines paid publishing operations, structured-data contributions and accepted repository changes. Developing Python, SQL and systems foundations through structured study."
     },
     "aiEvaluation": {
       "title": "AI Evaluation & Research Support",
       "filename": "Mario-Marcolongo-AI-Evaluation-Research-Support.pdf",
-      "summary": "Independent AI evaluator with a dated Gray Swan competition record, paid scientific fact-checking experience and accepted open-source contributions. I investigate model behavior and source claims, document evidence and state the limits of what a result shows. My technical implementations are AI-assisted; I am strengthening independent programming and quantitative skills."
+      "summary": "Independent AI evaluator with a dated Gray Swan competition record and paid scientific fact-checking experience. I investigate model behavior, reconcile sources and document evidence, drawing on sustained Wikimedia work and practical research support."
     }
   },
   "cvBullets": {
@@ -581,7 +581,7 @@ function createMarioDossier() {
       "Diagnosed a Bash 3.2 compatibility failure and contributed a fix accepted by the upstream maintainer."
     ],
     "yts": [
-      "Maintained a directory of 55 research-participation resources, with documented inclusion decisions and linked sources.",
+      "Founded and maintain a directory of 55 research-participation resources, with documented inclusion decisions and linked sources.",
       "Organized resource information and maintained the AI-assisted website."
     ],
     "gray": [
@@ -591,12 +591,45 @@ function createMarioDossier() {
     "notandia": [
       "Developed and maintained an AI-assisted browser tool for research-result workflows.",
       "Defined requirements, tested behavior and diagnosed release issues; documented store releases separately from source development."
+    ],
+    "wikimedia": [
+      "Review citations, reconcile conflicting sources and improve structured metadata across Wikipedia, Wikidata and Wikimedia Commons.",
+      "Create sourced scientific explanations and diagrams, with attributable edits and public artifacts."
+    ],
+    "padua": [
+      "Co-facilitated remote focus groups and supported recruitment, bibliographic research and accessible participation procedures."
     ]
   },
   "cvSkills": {
     "foundation": "Python fundamentals — Python Programming, 3 ECTS, Pass (Sep 2026).",
     "currentStudy": "Continuing study in Python, SQL, systems and quantitative foundations."
-  }
+  },
+  "experience": [
+    {
+      "name": "Entropy for Life",
+      "period": "Jun 2023–Present · Paid contractor",
+      "text": "Scientific literature research, fact-checking and production support, alongside publishing and website operations.",
+      "route": "/work/entropy"
+    },
+    {
+      "name": "Wikipedia, Wikidata & Wikimedia Commons",
+      "period": "Since 2018 · Public contributions",
+      "text": "Citation review, source reconciliation, structured-data editing and scientific visualizations.",
+      "route": "/work/wikimedia"
+    },
+    {
+      "name": "University of Padua research project",
+      "period": "2022–2025 · Volunteer collaboration",
+      "text": "Focus-group facilitation, participant recruitment and accessible research procedures, working with a supervisor and fellow facilitator.",
+      "route": "/research-operations"
+    },
+    {
+      "name": "Yourself to Science",
+      "period": "Since 2024 · Founder, independent project",
+      "text": "Research-participation directory: resource selection, information organization and ongoing website maintenance.",
+      "route": "/work/yourself-to-science"
+    }
+  ]
 },
   identity: {
     name: "Mario Marcolongo",
