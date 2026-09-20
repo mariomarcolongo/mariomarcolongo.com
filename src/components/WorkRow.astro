@@ -1,19 +1,14 @@
 ---
 const { project: p } = Astro.props;
 ---
-<article class:list={['work-row', { 'has-highlight': p.highlight }]}>
+<article class:list={['work-row', 'artifact-project', `project-${p.id}`]}>
+  <a class="artifact-cover" href={p.route} aria-label={`Explore ${p.name}`}>
+    {p.image ? <img src={p.image} alt={p.alt} width="800" height="500" loading="lazy"/> : p.id==='atlas' ? <div class="atlas-cover" aria-hidden="true"><span>01 / OBSERVE</span><strong>A failing check.</strong><span>02 / TRACE</span><strong>A shell assumption.</strong><span>03 / RESOLVE</span><strong>An accepted fix. ↗</strong></div> : <div class="text-cover"><span>{p.status}</span><strong>{p.hook}</strong><span aria-hidden="true">↗</span></div>}
+    <span class="cover-label">{p.id==='atlas'?'The investigation':p.image?'View the work':'Explore the project'} <span aria-hidden="true">↗</span></span>
+  </a>
   <div class="work-description">
-    <p class="meta">{p.status}</p>
-    <h3><a href={p.route}>{p.name}</a></h3>
-    <p>{p.text}</p>
-    <div class="source-links">
-      <a class="case-link" href={p.route}>Explore the work <span aria-hidden="true">↗</span></a>
-      {p.links[0] && <a href={p.links[0].url}>{p.links[0].label}</a>}
-    </div>
+    <p class="meta">{p.status}</p><h3><a href={p.route}>{p.name}</a></h3><p>{p.text}</p>
+    {p.highlight&&<p class="project-proof"><strong>{p.highlight.value} {p.highlight.label}</strong><span> · September 2026 record</span></p>}
+    <div class="source-links"><a class="case-link" href={p.route}>Explore the work <span aria-hidden="true">↗</span></a>{p.links[0]&&<a href={p.links[0].url}>{p.links[0].label}</a>}</div>
   </div>
-  {p.highlight && <aside class="work-highlight" aria-label={`${p.name}: result`}>
-    <p class="highlight-number">{p.highlight.value}<span>{p.highlight.label}</span></p>
-    <p class="highlight-detail">{p.highlight.detail}</p>
-    <p class="highlight-caption">{p.highlight.caption}</p>
-  </aside>}
 </article>

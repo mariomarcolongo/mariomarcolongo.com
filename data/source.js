@@ -27,7 +27,7 @@ function createMarioDossier() {
     "Data quality",
     "Systems diagnosis"
   ],
-  "headline": "I trace problems to their source.",
+  "headline": "Find the source. Fix the problem.",
   "description": "Scientific fact-checking, source investigation and practical technical work, with published contributions, accepted open-source changes and inspectable evidence.",
   "subheadline": "I research scientific claims, investigate conflicting sources and troubleshoot technical workflows. My work spans paid science communication and accepted open-source contributions.",
   "contact": "I’m looking for research operations, technical support and implementation opportunities outside Italy. Have a role where careful investigation leads to a practical result? Let’s talk.",

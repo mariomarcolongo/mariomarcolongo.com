@@ -1,5 +1,12 @@
-<aside class="diagnosis" aria-label="A portability investigation">
-<h4>A check failed before it could check the work.</h4>
-<p>A repository validation workflow depended on shell behavior that was not portable to macOS’s system Bash. I traced the failure to an empty-array expansion under strict error handling. The accepted change made the quiet-mode invocation compatible with Bash 3.2.</p>
-<details><summary>What changed?</summary><p>The check was stopping at its own invocation, before it could evaluate the work. The change kept the recursive command’s argument array nonempty. The same PR also addressed exact-case file checks and CI environment activation. These were repository validation changes; they did not change a Lean theorem or prove the wider research correct.</p><p><a href="https://github.com/mbrcic/ai-safety-formalization-atlas/pull/52/files">Inspect the change and review in PR #52</a></p></details>
+<aside class="atlas-feature" aria-labelledby="atlas-feature-title">
+  <div class="feature-topline"><span>Inside an investigation</span><span>Atlas · PR #52</span></div>
+  <h2 id="atlas-feature-title">A check failed.<br/>Before it could<br/><em>check the work.</em></h2>
+  <div class="failure-map" aria-label="Observed failure: macOS Bash 3.2, quiet validation mode">
+    <span class="map-node">macOS<br/><strong>Bash 3.2</strong></span><span class="map-connector" aria-hidden="true">→</span><span class="map-node map-failure">Validation<br/><strong>Stopped early</strong></span>
+  </div>
+  <details class="case-reveal">
+    <summary><span class="when-closed">What was the cause?</span><span class="when-open">The cause and the fix</span><span class="reveal-mark" aria-hidden="true">+</span></summary>
+    <div class="reveal-answer"><p>An empty-array expansion under <code>set -u</code> failed in Bash 3.2. The fix kept the quiet-mode invocation’s argument array nonempty.</p><a href="/work/atlas">Read the accepted contribution <span aria-hidden="true">↗</span></a></div>
+  </details>
+  <p class="feature-caption">A real portability fix, accepted by the upstream maintainer.</p>
 </aside>
