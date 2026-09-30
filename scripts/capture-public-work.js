@@ -16,7 +16,7 @@ const pageTargets = [
     settle: 8000
   },
   { id: 'flourish-profile', url: 'https://app.flourish.studio/@Digressivo', waitFor: 'body', settle: 6000 },
-  { id: 'emergent-humanity', url: 'https://jnton.github.io/emergent-humanity/', waitFor: 'body', optional: true }
+  { id: 'emergent-humanity', url: 'https://mariomarcolongo.github.io/emergent-humanity/', waitFor: 'body', optional: true }
 ];
 
 const imageTargets = [

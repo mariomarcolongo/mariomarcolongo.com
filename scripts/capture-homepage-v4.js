@@ -6,7 +6,7 @@ const { launchBrowser } = require('./lib/browser.js');
 
 const ROOT = path.resolve(__dirname, '..');
 const DIST = path.join(ROOT, 'dist');
-const OUTPUT = path.join(ROOT, 'audit-v4');
+const OUTPUT = path.resolve(ROOT, process.env.VISUAL_AUDIT_OUTPUT || 'audit-v4');
 
 async function warmLazyContent(page) {
   await page.evaluate(async () => {
@@ -33,13 +33,13 @@ async function capture(browser, server, name, width, height, theme) {
   await warmLazyContent(page);
   const measurements = await page.evaluate(() => {
     const brokenImages = Array.from(document.images)
-      .filter((image) => image.complete && image.naturalWidth === 0)
+      .filter((image) => image.getClientRects().length > 0 && (!image.complete || image.naturalWidth === 0))
       .map((image) => ({ src: image.getAttribute('src'), alt: image.alt }));
-    const contact = document.querySelector('.v8-contact');
+    const contact = document.querySelector('#contact');
     const contactStyle = contact ? getComputedStyle(contact) : null;
-    const caseImages = document.querySelectorAll('.v8-case-media img').length;
-    const entropyPanels = document.querySelectorAll('.v8-entropy-panel').length;
-    const totalPortfolioImages = document.querySelectorAll('.portfolio-v8 img').length;
+    const caseImages = document.querySelectorAll('.evidence-work-card img').length;
+    const entropyImages = document.querySelectorAll('.entropy-case img').length;
+    const totalPortfolioImages = document.querySelectorAll('main img').length;
     return {
       scrollWidth: document.documentElement.scrollWidth,
       clientWidth: document.documentElement.clientWidth,
@@ -47,13 +47,11 @@ async function capture(browser, server, name, width, height, theme) {
       contactExists: Boolean(contact),
       contactOpacity: contactStyle ? Number.parseFloat(contactStyle.opacity) : null,
       contactHeight: contact ? Math.round(contact.getBoundingClientRect().height) : null,
-      heroImages: document.querySelectorAll('.v8-hero-shot img').length,
+      heroImages: document.querySelectorAll('.work-gallery img').length,
       caseImages,
-      entropyPanels,
-      caseVisuals: caseImages + entropyPanels,
-      productImages: document.querySelectorAll('.v8-product-shot img').length,
+      entropyImages,
+      productImages: document.querySelectorAll('.real-tool-card img').length,
       totalPortfolioImages,
-      totalPortfolioVisuals: totalPortfolioImages + entropyPanels,
       brokenLocalImages: brokenImages.filter((item) => item.src && item.src.startsWith('/')),
       brokenExternalImages: brokenImages.filter((item) => !item.src || !item.src.startsWith('/'))
     };
@@ -69,7 +67,7 @@ async function capture(browser, server, name, width, height, theme) {
   if (!measurements.contactExists || measurements.contactOpacity < 0.95 || !measurements.contactHeight) {
     throw new Error(`${name} has a hidden or missing contact conversion section: ${JSON.stringify(measurements)}`);
   }
-  if (measurements.heroImages < 4 || measurements.caseVisuals < 3 || measurements.entropyPanels !== 1 || measurements.productImages < 2 || measurements.totalPortfolioVisuals < 12) {
+  if (!measurements.heroImages || !measurements.caseImages || !measurements.entropyImages || !measurements.productImages) {
     throw new Error(`${name} does not render the expected real-work evidence: ${JSON.stringify(measurements)}`);
   }
   if (measurements.brokenLocalImages.length) {

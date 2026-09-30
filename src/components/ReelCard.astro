@@ -1,0 +1,12 @@
+---
+const { reel:r }=Astro.props;
+---
+<article class="reel-card">
+  <a class="reel-poster" href={r.url} aria-label={`Watch reel: ${r.title}`}>
+    <img src={r.image} alt={`Published reel preview: ${r.title}`} width={r.width} height={r.height} loading="lazy"/>
+    <span class="video-play" aria-hidden="true">▶</span>
+  </a>
+  <p class="meta">{r.airc?'Entropy for Life × AIRC':'Entropy for Life · Collaborative production'}</p>
+  <h3><a href={r.url} title={r.title}>{r.displayTitle||r.title}</a></h3>
+  <a class="video-watch" href={r.url}>Watch on Instagram ↗</a>
+</article>

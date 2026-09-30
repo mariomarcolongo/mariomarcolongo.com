@@ -1,14 +1,4 @@
 ---
-import ApplicationCv from "../components/ApplicationCv.astro";
-import career from "../../data/research-operations-positioning.mjs";
-
-const { P } = career;
+import Layout from '../layouts/Layout.astro';
 ---
-
-<ApplicationCv
-  profile={P.editorialCommunity}
-  shared={P.shared}
-  canonical="https://mariomarcolongo.com/cv-editorial"
-  alternateHref="/cv-research"
-  alternateLabel="Research & Data Quality CV"
-/>
+<Layout title="Page moved — Mario Marcolongo" canonical="https://mariomarcolongo.com/cv" noIndex={true}><Fragment slot="head"><meta http-equiv="refresh" content="0;url=/cv"/></Fragment><main id="main-content" class="presence-shell"><h1>Page moved</h1><p><a href="/cv">Continue to the current page</a>.</p></main></Layout>

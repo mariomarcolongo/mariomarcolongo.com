@@ -1,6 +1,22 @@
-# Cloudflare Pages Redirects
-/resume              /cv               301
-/mdpi-filter          /notandia          301
-/mdpi-filter.html     /notandia          301
-/cv-giskard.html      /cv-resume         301
-/cv-orcid.html        /cv-research       301
+# Canonical replacements; no PDF-to-HTML redirects.
+/integrity /investigations 301
+/integrity.html /investigations 301
+/security /ai-evaluation 301
+/security.html /ai-evaluation 301
+/mdpi-filter /notandia 301
+/mdpi-filter.html /notandia 301
+/cv-research /cv 301
+/cv-research.html /cv 301
+/cv-editorial /cv 301
+/cv-editorial.html /cv 301
+/cv-integrity /cv 301
+/cv-integrity.html /cv 301
+/resume /cv 301
+/resume.html /cv 301
+/cv-resume /cv-ai 301
+/cv-resume.html /cv-ai 301
+/cv-giskard /cv-ai 301
+/cv-giskard.html /cv-ai 301
+/cv-orcid /cv 301
+/cv-orcid.html /cv 301
+/llms-full.txt /cv-llm.txt 301

@@ -1,0 +1,54 @@
+{
+  "displayDate": "30 September 2026",
+  "observedAt": "2026-09-30",
+  "preservedAtUtc": "2026-09-30T03:21:36.759698Z",
+  "sourceUrl": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
+  "evidencePath": "/evidence/gray-swan-2026-09-30/",
+  "originalImage": "/evidence/gray-swan-public-2026-09-30.jpg",
+  "originalSha256": "6a4c364c4c639c0dd96276838c64699bd3b18402dcec72789c8d0620fecb7a67",
+  "originalDimensions": [
+    1280,
+    1675
+  ],
+  "previewImage": "/media/work/gray-swan-profile-2026-09-30-1280.webp",
+  "detailImage": "/media/work/gray-swan-profile-2026-09-30-detail.webp",
+  "provingGround": {
+    "rank": 79,
+    "percentile": "top 5%",
+    "totalBreaks": 127,
+    "displayedAreaTotal": 126,
+    "areas": [
+      {
+        "name": "Chat",
+        "breaks": 43,
+        "available": 552,
+        "displayedPercent": 8
+      },
+      {
+        "name": "Image",
+        "breaks": 32,
+        "available": 387,
+        "displayedPercent": 8
+      },
+      {
+        "name": "Agent",
+        "breaks": 35,
+        "available": 593,
+        "displayedPercent": 6
+      },
+      {
+        "name": "Indirect",
+        "breaks": 16,
+        "available": 547,
+        "displayedPercent": 3
+      }
+    ]
+  },
+  "arena": {
+    "rank": 462,
+    "uniqueBreaks": 31,
+    "points": 1260,
+    "submissions": 354
+  },
+  "scope": "Public platform profile captured while logged out. Rankings and counts are dated platform reports, not independent reproduction of every result. Proving Ground and Arena are separate systems; the four visible area counts total 126 while the displayed total is 127."
+}

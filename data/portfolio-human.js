@@ -227,7 +227,7 @@ function createPortfolioHuman() {
     },
     {
       title: "Protein by bodyweight by country",
-      href: "https://jnton.github.io/protein-by-bodyweight-country/"
+      href: "https://mariomarcolongo.github.io/protein-by-bodyweight-country/"
     },
     {
       title: "English Wikipedia Link Converter",
@@ -235,7 +235,7 @@ function createPortfolioHuman() {
     },
     {
       title: "Emergent Humanity",
-      href: "https://jnton.github.io/emergent-humanity/"
+      href: "https://mariomarcolongo.github.io/emergent-humanity/"
     }
   ],
 
