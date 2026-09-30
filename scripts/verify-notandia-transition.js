@@ -1,179 +1,86 @@
 #!/usr/bin/env node
 const fs = require('node:fs');
 const path = require('node:path');
+const assert = require('node:assert/strict');
 const { startStaticServer } = require('./lib/static-server.js');
 const { launchBrowser } = require('./lib/browser.js');
-
 const ROOT = path.resolve(__dirname, '..');
 const DIST = path.join(ROOT, 'dist');
-const OUTPUT = path.join(ROOT, 'audit-output');
+const OUTPUT = path.join(ROOT, process.env.CI ? 'audit-output' : 'private/qa/notandia');
 const RETIRED_URL = 'https://github.com/orgs/mdpi-filter/repositories';
-const CURRENT_BROWSER_REPO = 'https://github.com/notandia/browser-extension';
-const CURRENT_ZOTERO_REPO = 'https://github.com/notandia/zotero-plugin';
-const CANONICAL_ROUTE = '/notandia';
-const LEGACY_ROUTE = '/mdpi-filter.html';
-const CANONICAL_URL = 'https://mariomarcolongo.com/notandia';
-const HTML_FILES = [
-  'index.html', 'notandia.html', 'mdpi-filter.html', 'cv.html', 'cv-resume.html', 'cv-research.html',
-  'cv-editorial.html', 'cv-integrity.html', 'integrity.html', 'security.html'
-];
+const BROWSER_REPO = 'https://github.com/notandia/browser-extension';
+const ZOTERO_REPO = 'https://github.com/notandia/zotero-plugin';
+const read = (file) => fs.readFileSync(path.join(DIST, file), 'utf8');
+const contains = (value, expected, label) =>
+  assert.ok(value.includes(expected), `${label}: missing ${expected}`);
+const sameUrl = (value, expected) => {
+  try { return new URL(value).href === new URL(expected).href; } catch { return false; }
+};
+const hasUrl = (value, expected) => [...value.matchAll(/https?:\/\/[^\s"'<>\\]+/g)]
+  .some(([url]) => sameUrl(url, expected));
+const boundaries = ['publisher-level', 'article-specific', 'AI-assisted',
+  'Source development is not proof that every capability has shipped in Chrome and Edge.'];
 
-function read(relativePath) {
-  const filePath = path.join(DIST, relativePath);
-  if (!fs.existsSync(filePath)) throw new Error(`Missing dist/${relativePath}`);
-  return fs.readFileSync(filePath, 'utf8');
-}
+async function main() {
+  for (const file of ['index.html', 'notandia.html', 'mdpi-filter.html', 'cv.html',
+    'cv-technical.html', 'cv-ai.html']) {
+    assert.ok(!hasUrl(read(file), RETIRED_URL), `${file}: retired organization link`);
+  }
+  const canonical = read('notandia.html');
+  for (const expected of [...boundaries, 'MDPI Filter',
+    '/media/work/notandia-current-options.webp']) contains(canonical, expected, 'Notandia');
+  for (const url of [BROWSER_REPO, ZOTERO_REPO]) assert.ok(hasUrl(canonical, url), `Notandia: missing ${url}`);
+  contains(read('index.html'), 'href="/notandia"', 'Homepage');
+  contains(read('cv-technical.html'), 'Notandia', 'Technical résumé');
+  const legacy = read('mdpi-filter.html');
+  assert.match(legacy, /<meta\s+name="robots"\s+content="noindex(?:,\s*follow)?">/);
+  assert.ok(hasUrl(legacy, 'https://mariomarcolongo.com/notandia'), 'Legacy canonical');
+  assert.match(read('_redirects'), /^\/mdpi-filter\.html\s+\/notandia\s+301\s*$/m);
+  assert.ok(hasUrl(read('sitemap.xml'), 'https://mariomarcolongo.com/notandia'), 'Sitemap');
+  assert.ok(!hasUrl(read('sitemap.xml'), 'https://mariomarcolongo.com/mdpi-filter.html'));
+  for (const file of ['llms.txt', 'llms-full.txt', 'cv-llm.txt', 'profile.json']) {
+    assert.ok(!hasUrl(read(file), RETIRED_URL), `${file}: retired source`);
+  }
+  for (const file of ['cv-llm.txt', 'profile.json']) contains(read(file), 'Notandia', file);
 
-function assertContains(value, expected, label) {
-  if (!value.includes(expected)) throw new Error(`${label} is missing: ${expected}`);
-}
-
-function assertNotContains(value, prohibited, label) {
-  if (value.includes(prohibited)) throw new Error(`${label} contains prohibited text: ${prohibited}`);
-}
-
-function parseJsonLd(html, label) {
-  const blocks = [...html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script\s*>/gi)];
-  if (!blocks.length) throw new Error(`${label} has no JSON-LD`);
-  for (const [, block] of blocks) JSON.parse(block.trim());
-}
-
-async function verifyRendering() {
   fs.mkdirSync(OUTPUT, { recursive: true });
   const server = await startStaticServer(DIST);
-  const browser = await launchBrowser();
+  let browser;
   try {
-    for (const viewport of [
-      { name: 'desktop', width: 1440, height: 1000 },
-      { name: 'tablet', width: 768, height: 1024 },
-      { name: 'mobile', width: 390, height: 844 }
-    ]) {
+    browser = await launchBrowser();
+    for (const viewport of [{ width: 1440, height: 1000 },
+      { width: 768, height: 1024 }, { width: 390, height: 844 }]) {
       for (const theme of ['light', 'dark']) {
         const page = await browser.newPage();
-        await page.setViewport({ width: viewport.width, height: viewport.height, deviceScaleFactor: 1 });
-        await page.evaluateOnNewDocument((selectedTheme) => {
-          try { localStorage.setItem('theme', selectedTheme); } catch (error) {}
+        await page.setViewport({ ...viewport, deviceScaleFactor: 1 });
+        await page.evaluateOnNewDocument((value) => {
+          try { localStorage.setItem('theme', value); } catch {}
         }, theme);
-        await page.goto(`${server.origin}${CANONICAL_ROUTE}`, { waitUntil: 'networkidle0', timeout: 45000 });
+        await page.goto(`${server.origin}/notandia`, { waitUntil: 'networkidle0', timeout: 45000 });
         const model = await page.evaluate(() => ({
           h1Count: document.querySelectorAll('h1').length,
-          scrollWidth: document.documentElement.scrollWidth,
-          clientWidth: document.documentElement.clientWidth,
+          overflow: document.documentElement.scrollWidth > document.documentElement.clientWidth + 1,
           text: document.body.innerText,
-          retiredClickableLinks: document.querySelectorAll('a[href="https://github.com/orgs/mdpi-filter/repositories"]').length,
-          currentLinks: Array.from(document.querySelectorAll('a[href]')).map((item) => item.href)
+          links: Array.from(document.querySelectorAll('a[href]'), (link) => link.href)
         }));
-        if (model.h1Count !== 1) throw new Error(`Notandia page ${theme}/${viewport.name} must have one H1`);
-        if (model.scrollWidth > model.clientWidth + 1) throw new Error(`Notandia page ${theme}/${viewport.name} overflows horizontally`);
-        for (const requiredText of [
-          'Notandia',
-          'Originally released as MDPI Filter',
-          'Publishers under scrutiny',
-          'editorial and peer-review practices have attracted scrutiny',
-          'Crossref/Retraction Watch',
-          'Precise Zotero reference detection'
-        ]) {
-          if (!model.text.includes(requiredText)) {
-            throw new Error(`Notandia page ${theme}/${viewport.name} is missing current capability text: ${requiredText}`);
-          }
-        }
-        if (model.retiredClickableLinks !== 0) throw new Error('Notandia page renders the retired organization URL as a clickable link');
-        if (!model.currentLinks.includes(CURRENT_BROWSER_REPO) || !model.currentLinks.includes(CURRENT_ZOTERO_REPO)) {
-          throw new Error(`Notandia page ${theme}/${viewport.name} is missing current repository links`);
-        }
-        await page.screenshot({ path: path.join(OUTPUT, `notandia-${theme}-${viewport.name}.png`), fullPage: true });
+        assert.equal(model.h1Count, 1, 'One Notandia heading');
+        assert.equal(model.overflow, false, `${theme}/${viewport.width}: horizontal overflow`);
+        for (const expected of boundaries) contains(model.text, expected, 'Visible scope');
+        assert.ok(model.links.some((url) => sameUrl(url, BROWSER_REPO)) &&
+          model.links.some((url) => sameUrl(url, ZOTERO_REPO)));
+        assert.ok(!model.links.some((url) => sameUrl(url, RETIRED_URL)));
+        await page.screenshot({ path: path.join(OUTPUT, `notandia-${theme}-${viewport.width}.png`), fullPage: true });
         await page.close();
       }
     }
   } finally {
-    await browser.close();
+    if (browser) await browser.close();
     await server.close();
   }
-}
-
-async function main() {
-  for (const relativePath of HTML_FILES) {
-    const html = read(relativePath);
-    const retiredLink = new RegExp(`href=["']${RETIRED_URL.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["']`);
-    if (retiredLink.test(html)) throw new Error(`dist/${relativePath} still exposes the retired organization URL as a clickable link`);
-  }
-
-  const canonical = read('notandia.html');
-  parseJsonLd(canonical, 'dist/notandia.html');
-  for (const expected of [
-    '>Notandia</h1>',
-    'Originally released as MDPI Filter',
-    'For application reviewers',
-    'Publisher-level concerns and article-level notices are separate signals',
-    'Publishers under scrutiny',
-    'editorial and peer-review practices have attracted scrutiny',
-    '“grey area” publication channels',
-    'Crossref/Retraction Watch',
-    'Retractions, corrections and other formal notices',
-    'Precise Zotero reference detection',
-    'Neither signal is converted into a blanket verdict about every journal or article',
-    CURRENT_BROWSER_REPO,
-    CURRENT_ZOTERO_REPO,
-    'Stable evidence URL'
-  ]) assertContains(canonical, expected, 'dist/notandia.html');
-  for (const prohibited of [
-    'expanding toward explainable publisher context',
-    'future work, not shipped functionality',
-    'Configurable publisher context',
-    'formal update relationships',
-    'Publisher flags chosen by the user',
-    'Publishers selected by the user'
-  ]) assertNotContains(canonical, prohibited, 'dist/notandia.html');
-
-  const legacy = read('mdpi-filter.html');
-  assertContains(legacy, 'noindex,follow', 'dist/mdpi-filter.html');
-  assertContains(legacy, CANONICAL_URL, 'dist/mdpi-filter.html');
-  assertContains(legacy, CANONICAL_ROUTE, 'dist/mdpi-filter.html');
-
-  const redirects = read('_redirects');
-  assertContains(redirects, '/mdpi-filter.html', 'dist/_redirects');
-  assertContains(redirects, CANONICAL_ROUTE, 'dist/_redirects');
-
-  const index = read('index.html');
-  assertContains(index, `href="${CANONICAL_ROUTE}"`, 'dist/index.html');
-  for (const expected of [
-    'Notandia',
-    'Crossref/Retraction Watch',
-    'scrutinized publishers',
-    'Publisher context is not an article-quality verdict'
-  ]) {
-    assertContains(index, expected, 'dist/index.html');
-  }
-  assertNotContains(index, 'future work, not shipped functionality', 'dist/index.html');
-
-  const resume = read('cv-resume.html');
-  for (const expected of [
-    'Notandia (formerly MDPI Filter)',
-    'publishers whose editorial and peer-review practices have attracted scrutiny',
-    'including MDPI and Frontiers',
-    'Crossref/Retraction Watch',
-    'formal notices such as retractions, corrections and expressions of concern',
-    'false-positive boundaries and release tests'
-  ]) {
-    assertContains(resume, expected, 'dist/cv-resume.html');
-  }
-
-  const sitemap = read('sitemap.xml');
-  assertContains(sitemap, CANONICAL_URL, 'dist/sitemap.xml');
-  assertNotContains(sitemap, 'https://mariomarcolongo.com/mdpi-filter.html', 'dist/sitemap.xml');
-
-  for (const dossier of ['llms.txt', 'llms-full.txt', 'cv-llm.txt', 'data/source.js']) {
-    const value = read(dossier);
-    assertContains(value, 'Notandia', `dist/${dossier}`);
-    assertNotContains(value, RETIRED_URL, `dist/${dossier}`);
-    assertNotContains(value, LEGACY_ROUTE, `dist/${dossier}`);
-  }
-
-  await verifyRendering();
-  console.log('Publishing-integrity rationale, Notandia scope, legacy redirects, CV evidence, dossiers and retired-URL boundary verified.');
+  console.log('Notandia source/store boundaries, repositories, current CVs, redirects and six rendered views passed.');
 }
 
 main().catch((error) => {
-  console.error(`Notandia transition verification failed: ${error.stack || error.message}`);
-  process.exit(1);
+  console.error(`Notandia verification failed: ${error.stack || error.message}`);
+  process.exitCode = 1;
 });

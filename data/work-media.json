@@ -1,0 +1,107 @@
+{
+  "capturedAt": "2026-09-30",
+  "attributionSource": "https://entropyforlife.it/mario-marcolongo-entropy-for-life/",
+  "featuredVideoIds": [
+    "ML8JtSNP8FU",
+    "0gaMHhXxFnc",
+    "_jPESX-AN9A",
+    "vkddETqKcpU",
+    "7NcqLnpEC7M",
+    "AruJh5WSP0E"
+  ],
+  "videoRoles": {
+    "ML8JtSNP8FU": "Related project: data collection, interactive map and article",
+    "AruJh5WSP0E": "Related project: data analysis, visualization and article",
+    "PZmTOf77Ri4": "Source research, scientific fact-checking and content preparation"
+  },
+  "articles": [
+    {
+      "title": "Mappa attacchi squali nel Mar Mediterraneo e in Europa",
+      "url": "https://entropyforlife.it/2024/07/24/mappa-attacchi-squali-nel-mar-mediterraneo-e-in-europa/",
+      "role": "Data collection & interactive visualization"
+    },
+    {
+      "title": "Lunghezza squali bianchi",
+      "url": "https://entropyforlife.it/2024/08/02/lunghezza-squali-bianchi/",
+      "role": "Data analysis & visualization"
+    },
+    {
+      "title": "L’influenza aviaria sarà la prossima pandemia?",
+      "url": "https://entropyforlife.it/2024/10/23/influenza-aviaria-h5n1-sara-la-prossima-pandemia/",
+      "role": "Research & scientific content"
+    },
+    {
+      "title": "Influenza Aviaria: situazione epidemiologica aggiornata",
+      "url": "https://entropyforlife.it/2024/10/25/influenza-aviaria-situazione-epidemiologica-aggiornata/",
+      "role": "Scientific updates"
+    }
+  ],
+  "screenshots": {
+    "atlas": {
+      "image": "/media/work/atlas-pr-70.webp",
+      "url": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/70",
+      "caption": "Actual merged PR #70: source locators and publication provenance",
+      "alt": "GitHub pull request 70 showing Mario Marcolongo's accepted source-locator contribution and merged status"
+    },
+    "notandia": {
+      "image": "/media/work/notandia-current-options.webp",
+      "url": "https://github.com/notandia/browser-extension",
+      "caption": "Current source build: publisher watchlists and research-integrity settings",
+      "alt": "Actual Notandia settings with configurable MDPI and Frontiers watchlists and optional research-integrity checks"
+    },
+    "yourself-to-science": {
+      "image": "/media/work/directory-live.webp",
+      "url": "https://yourselftoscience.org/",
+      "caption": "Live directory: filters, resource cards and original-source links",
+      "alt": "Yourself to Science directory showing search filters and research-participation resources"
+    },
+    "entropy-website": {
+      "image": "/media/work/entropy-live-site.webp",
+      "url": "https://entropyforlife.it/",
+      "caption": "Live WordPress website: design, build and ongoing technical operation",
+      "alt": "Actual Entropy for Life homepage designed, built and operated by Mario Marcolongo"
+    },
+    "entropy-article": {
+      "image": "/media/work/entropy-h5n1.png",
+      "url": "https://entropyforlife.it/2024/10/25/influenza-aviaria-situazione-epidemiologica-aggiornata/",
+      "caption": "Published H5N1 article with a visible coauthor byline; archived page view",
+      "alt": "Published avian-influenza article showing Giacomo Moro Mauretto and Mario Marcolongo's coauthor byline"
+    },
+    "hypermandala": {
+      "image": "/media/work/hypermandala-7cf4a50.webp",
+      "url": "https://hypermandala.mariomarcolongo.com/",
+      "caption": "Fresh live 4D Sri Yantra capture, 30 September 2026; new form additions remain experimental",
+      "alt": "Current Hypermandala interface displaying the 4D Sri Yantra form with its form library collapsed and rotation controls visible",
+      "capturedAtUtc": "2026-09-30T14:57:13.792Z",
+      "sourceRevision": "7cf4a50c043fb3a4e570c3282a101a772203e3a8",
+      "executedAppSha256": "eae4435044b168cdce76240cb873c0ad81ed9a41dad6d888958f68a1325a1467",
+      "captureMethod": "Browser screenshot after a cache-bypassed reload; executed JavaScript verified against source revision 7cf4a50. Adjusted Sri Yantra solid in the 4D view, form library collapsed. JPEG compressed to WebP without altering the image content."
+    },
+    "protein": {
+      "image": "/media/work/protein-explorer.webp",
+      "url": "https://mariomarcolongo.github.io/protein-by-bodyweight-country/",
+      "caption": "Live protein-supply data explorer; an ecological indicator, not individual intake",
+      "alt": "Protein-supply explorer displaying its country map and time-series interface"
+    },
+    "entropy-map": {
+      "image": "/media/work/entropy-shark-map.webp",
+      "url": "https://entropyforlife.it/2024/07/24/mappa-attacchi-squali-nel-mar-mediterraneo-e-in-europa/",
+      "caption": "Interactive shark-attack map · actual published Tableau view",
+      "alt": "Interactive shark-attack map with data marks and filter controls"
+    },
+    "entropy-size": {
+      "image": "/media/work/entropy-shark-size.webp",
+      "url": "https://entropyforlife.it/2024/08/02/lunghezza-squali-bianchi/",
+      "caption": "Shark-size distributions by life stage and sex · actual published Tableau view",
+      "alt": "Shark-size distributions by life stage and sex with data marks and filter controls"
+    },
+    "entropy-cannabis": {
+      "image": "/media/work/flourish-cannabis-story.webp",
+      "url": "https://public.flourish.studio/story/2720661/",
+      "caption": "Industrial hemp cultivation · first view of the published seven-part Flourish story",
+      "alt": "Published Flourish cannabis cultivation story showing Mario Marcolongo’s byline, Italy’s cultivation-area series and original chart controls"
+    }
+  },
+  "selectionBasis": "Shark-attack work and cannabis series recommended by Mario Marcolongo on 30 September 2026. The profile contains a collection, not a curated video selection.",
+  "reelRole": "Mario Marcolongo confirms personal creation of the data visualizations in the AIRC reels that use them; the whole reels are collaborative productions."
+}

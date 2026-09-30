@@ -1,0 +1,21 @@
+---
+import { M } from '../lib/artifacts';
+const panels=[
+ {label:'Published data',name:'Entropy for Life · Paid scientific work',image:M.screenshots['entropy-map'].image,alt:M.screenshots['entropy-map'].alt,title:'From source records to an interactive map.',role:'I collected and organized shark-attack data and created this published Tableau visualization. English case notes explain my contribution to the Italian production.',url:'/work/entropy',action:'Read the English case',case:null},
+ {label:'Notandia',name:'Notandia',image:M.screenshots.notandia.image,alt:M.screenshots.notandia.alt,title:'Publisher watchlists & reference checks.',role:'Requirements, behavior testing and release work. Actual settings from the current source build.',url:'/notandia',action:'See the extension',case:null},
+ {label:'Geometry lab',name:'Hypermandala · Independent experiment',image:M.screenshots.hypermandala.image,alt:M.screenshots.hypermandala.alt,title:'Explore geometry across dimensions.',role:'An AI-assisted visualization project: 2D plans, 3D forms and experimental 4D extensions. New form additions are still being tested.',url:M.screenshots.hypermandala.url,action:'Try the live explorer',case:'/work/hypermandala'}
+];
+---
+<section class="work-gallery artifact-explorer" aria-label="Explore actual work">
+ <div class="gallery-controls" role="tablist" aria-label="Choose a project">{panels.map((p,i)=><button type="button" role="tab" id={`work-tab-${i}`} data-index={i} aria-controls={`work-panel-${i}`} aria-selected={i===0} tabindex={i===0?0:-1} disabled>{p.label}</button>)}</div>
+ <div class="gallery-slides">{panels.map((p,i)=><div class="gallery-slide" id={`work-panel-${i}`}><a class:list={['gallery-media',`media-${i}`]} href={p.url}><img src={p.image} alt={p.alt} width="800" height="450" loading={i===0?'eager':'lazy'} fetchpriority={i===0?'high':undefined}/></a><div class="gallery-caption"><p class="sample-name">{p.name}</p><h2><a href={p.url}>{p.title}</a></h2><p class="sample-description">{p.role}</p><div class="gallery-artifact-links"><a href={p.url}>{p.action} ↗</a>{p.case&&<a href={p.case}>My contribution →</a>}</div></div></div>)}</div>
+</section>
+<script>
+for(const gallery of document.querySelectorAll<HTMLElement>('.work-gallery')){
+ const panels=[...gallery.querySelectorAll<HTMLElement>('.gallery-slide')];
+ const tabs=[...gallery.querySelectorAll<HTMLButtonElement>('[role=tab]')];
+ let current=0;
+ const show=(index:number,focus=false)=>{current=(index+panels.length)%panels.length;panels.forEach((panel,i)=>{panel.hidden=i!==current;panel.setAttribute('role','tabpanel');panel.setAttribute('aria-labelledby',tabs[i].id);});tabs.forEach((tab,i)=>{tab.setAttribute('aria-selected',String(i===current));tab.tabIndex=i===current?0:-1;});if(focus)tabs[current].focus();};
+ tabs.forEach((tab,i)=>{tab.disabled=false;tab.addEventListener('click',()=>show(i));tab.addEventListener('keydown',event=>{if(!['ArrowRight','ArrowLeft','Home','End'].includes(event.key))return;event.preventDefault();show(event.key==='Home'?0:event.key==='End'?panels.length-1:current+(event.key==='ArrowRight'?1:-1),true);});});show(0);gallery.classList.add('gallery-ready');
+}
+</script>

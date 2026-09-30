@@ -31,7 +31,7 @@ if (integrity.evidence?.[2]) {
   integrity.evidence[2] = {
     title: 'Structured-data analysis and visualization',
     body: 'Built a public explorer combining FAOSTAT, NCD-RisC and World Bank datasets into interactive views with documented transformations, assumptions and methodological limitations.',
-    link: 'https://jnton.github.io/protein-by-bodyweight-country/'
+    link: 'https://mariomarcolongo.github.io/protein-by-bodyweight-country/'
   };
 }
 

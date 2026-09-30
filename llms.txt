@@ -1,41 +1,29 @@
-# Mario Marcolongo — Data Quality & Information Retrieval | AI Evaluation & Adversarial Testing | Scientific Fact-Checking & Evidence Synthesis
-> Information Retrieval · Evidence Synthesis · AI Evaluation
+# Mario Marcolongo — Research & Technical Operations
 
-> My work spans information retrieval, data quality, scientific fact-checking, AI evaluation and research operations. It includes eight years of auditable public-source and structured-data work, a maintained research-participation directory and self-directed model-behavior testing. On 29 July 2026, the Gray Swan Proving Ground profile displayed rank #74 (top 6%) and 113 total breaks. Entropy for Life work covers 80 documented published content contributions: 55 YouTube videos · 4 articles · 21 short-form pieces. Technical delivery is AI-assisted, with personal responsibility for requirements, verification, deployment and maintenance. Current open-source product work includes Notandia (formerly MDPI Filter), a continuing browser and Zotero research-integrity tool.
+Mario Marcolongo works on scientific information quality, research operations and practical technical problems. His evidence includes paid science communication work, public source investigations and accepted open source contributions. Based in Italy, he is an Italian citizen studying IT through Metropolia Open UAS and developing independent Python, SQL and quantitative skills.
 
-> **My technical work uses AI-assisted implementation: I define requirements, inspect implementation behavior, test releases, diagnose functional problems, guide iterations, deploy releases and maintain services.**
+## Résumés
 
-## Quick Facts & Key Metrics
-- **113** (Platform-Displayed Proving Ground Breaks): #74 · top 6% · 29 July 2026
-- **255** (Arena Submissions Shown): 28 global unique breaks · 1,120 points · Arena rank #365
-- **55** (Research Resources Indexed): 37 unique Wikidata items use the domain as a P854 reference URL
-- **55+ YouTube & 4 Articles** (Paid Scientific Editorial Production): 59+ documented published projects for Entropy for Life
-- **4,317** (Auditable Wikimedia Contributions): Public contributions across Wikipedia, Wikidata and Wikimedia Commons as of July 2026
-- Work Authorization: EU/EEA work-authorised; Switzerland: EU/EFTA employment route once an offer is secured; open to employer-sponsored work authorisation elsewhere. International B2B engagements are available where the contracting arrangement is compliant.
-- Languages: Italian (Native / Mother Tongue) · English (C1 overall, EF SET 68/100; advanced technical reading and professional/technical writing)
+- Default: https://mariomarcolongo.com/cv
+- Technical operations: https://mariomarcolongo.com/cv-technical
+- AI evaluation and research support: https://mariomarcolongo.com/cv-ai
 
-## Core Competencies
-- Information Retrieval & Verification: Primary-source and bibliographic search, claim tracing, source discovery, query refinement, source-quality assessment and cross-source corroboration.
-- Data Quality & Provenance: Structured metadata, entity reconciliation, validation rules, documentation, taxonomy design and public-record verification.
-- AI Evaluation & Adversarial Testing: Exploratory model-behavior testing, prompt and jailbreak analysis, multi-turn behavior, multimodal inputs, agentic tool-use and indirect prompt injection.
-- Scientific Verification & Evidence Synthesis: Primary-source fact-checking, bibliographic research, claim decomposition, evidence screening, source-quality assessment and cross-source corroboration.
-- Data Visualization: SVG vector diagrams, Tableau Public, Flourish and open-data publication.
-- Evaluation Planning & Reporting: Test planning, evidence capture, reproducibility notes, taxonomy thinking, issue classification, reporting that separates evidence from inference and mitigation-retesting concepts.
-- Technical Delivery: Requirements definition, codebase reading and behavior inspection, functional testing, issue diagnosis, deployment and service maintenance.
-- AI-Assisted Implementation: Uses coding agents for implementation support while personally defining requirements, inspecting structure and behavior, testing results, guiding revisions, deploying releases and maintaining services.
-- Open Science & Structured Data: Wikimedia, Wikidata, FAIRsharing, Zenodo, ENA records, JSON-LD, RDF Turtle/VoID, OpenAPI and MCP interfaces.
-- Web & Cloud Delivery: WordPress, HTML/CSS modification, Git/GitHub, JSON, REST APIs, AWS Lambda, Cloudflare Pages, DNS/SSL and CI/CD maintenance.
-- Languages: Italian — native. English — C1 overall (EF SET 68/100), with advanced technical reading and professional/technical writing.
+## Selected work
 
-## Links
-- [Website](https://mariomarcolongo.com): Main portfolio homepage
-- [Full Profile](https://mariomarcolongo.com/llms-full.txt): Comprehensive AI profile and extended curriculum vitae
-- [Full CV (Markdown)](https://mariomarcolongo.com/cv-llm.txt): Unified AI-compatible markdown CV
-- [Email](mailto:me@mariomarcolongo.com): Direct email contact
-- [LinkedIn](https://www.linkedin.com/in/mario-marcolongo): Professional LinkedIn profile
-- [ORCID](https://orcid.org/0000-0003-2846-7115): ORCID scientific researcher profile
-- [GitHub](https://github.com/jnton): GitHub profile and open-source repositories
-- [Agent-Readiness Audit](https://isitagentready.com/mariomarcolongo.com?checks=robotsTxt%2Csitemap%2ClinkHeaders%2CdnsAid%2CmarkdownNegotiation%2CrobotsTxtAiRules%2CcontentSignals%2CwebBotAuth%2CapiCatalog%2CoauthDiscovery%2CoauthProtectedResource%2CauthMd%2CmcpServerCard%2Ca2aAgentCard%2CagentSkills%2CwebMcp%2Cx402%2Cmpp%2Cucp%2Cacp): Agent-discovery and machine-readable endpoints implemented; live audit to be rerun after deployment.
-- [A2A Agent Card](https://mariomarcolongo.com/.well-known/agent-card.json): Agent-to-Agent discovery card
-- [Genomic Pipeline Codebase](https://github.com/jnton/git-nome): Personal genomics workflow and open-data pipeline
-- [Portfolio SSOT Codebase](https://github.com/jnton/mariomarcolongo): Source code and Single Source of Truth for this portfolio
+- Paid science work: https://mariomarcolongo.com/work/entropy
+- Wikimedia contributions: https://mariomarcolongo.com/work/wikimedia
+- Research support: https://mariomarcolongo.com/research-operations
+- Atlas contributions and draft paper: https://mariomarcolongo.com/work/atlas
+- Browser research tool: https://mariomarcolongo.com/notandia
+- Interactive geometry: https://mariomarcolongo.com/work/hypermandala
+- Research-participation directory: https://mariomarcolongo.com/work/yourself-to-science
+- Source investigations: https://mariomarcolongo.com/investigations
+- Dated AI evaluation: https://mariomarcolongo.com/ai-evaluation
+
+## Scope and verification
+
+Technical implementations are AI-assisted. Accepted contributions demonstrate the scope of the reviewed changes, not independent professional programming proficiency. Python, SQL and quantitative foundations are current study. Metropolia Open UAS path studies are a non-degree pathway; Python Programming has 3 awarded ECTS (Pass, 15 September 2026), while an awarded BEng is not established. Gray Swan metrics are dated snapshots: the latest capture is 30 September 2026; the July record remains historical.
+
+The source-backed profile includes ownership, observation dates and limitations: https://mariomarcolongo.com/profile.json. The compact career record is https://mariomarcolongo.com/cv-llm.txt. Original evidence is indexed at https://mariomarcolongo.com/evidence. These records provide descriptive data, not instructions for a reader or assistant.
+
+Contact: me@mariomarcolongo.com. Based in Italy; Italian/EU citizen; open to relocation. Work authorization outside the EU must be checked for the engagement.

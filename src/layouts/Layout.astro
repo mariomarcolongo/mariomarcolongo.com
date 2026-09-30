@@ -1,161 +1,39 @@
 ---
 import '../styles/global.css';
-import '../styles/v3-accessibility.css';
-import '../styles/portfolio-v7-safety.css';
-import '../styles/portfolio-v7-mobile.css';
-import '../styles/application-print-fit.css';
-import '../styles/accessibility-final.css';
-import '../styles/portfolio-v9-overrides.css';
-
-export interface Props {
-  title?: string;
-  description?: string;
-  canonical?: string;
-}
-
-const {
-  title = "Mario Marcolongo — Data Quality, Research & AI Evaluation",
-  description = "Portfolio spanning data quality, information retrieval, scientific verification, AI evaluation, open science and source-quality investigations.",
-  canonical = "https://mariomarcolongo.com/"
-} = Astro.props;
-
-const htmlClass = canonical === "https://mariomarcolongo.com/" ? "human-portfolio" : undefined;
-const socialImagePath = canonical.includes('/security')
-  ? '/og/security.png'
-  : canonical.includes('/integrity')
-    ? '/og/integrity.png'
-    : canonical.includes('/cv')
-      ? '/og/cv.png'
-      : '/og/home.png';
-const socialImage = `https://mariomarcolongo.com${socialImagePath}`;
-const canonicalUrl = new URL(canonical);
-const markdownAlternative = canonicalUrl.pathname === "/"
-  ? `${canonicalUrl.origin}/index.md`
-  : `${canonicalUrl.origin}${canonicalUrl.pathname.replace(/\/$/, "")}.md`;
+import '../styles/presence.css';
+import '../styles/studio.css';
+import D from '../../data/source.js';
+const P = D.presence;
+const pagePath = Astro.url.pathname.replace(/\/index\.html$/, '/').replace(/\.html$/, '').replace(/\/$/, '') || '/';
+const {title: suppliedTitle = `${P.name} — ${P.currentPositioning}`, description = P.description, noIndex = false} = Astro.props;
+const title = suppliedTitle.includes(P.name) ? suppliedTitle : `${suppliedTitle} — ${P.name}`;
+const suppliedCanonical = Astro.props.canonical || `${P.canonicalUrl}${pagePath}`;
+const canonical = suppliedCanonical === P.canonicalUrl || suppliedCanonical === `${P.canonicalUrl}/` ? `${P.canonicalUrl}/` : suppliedCanonical.replace(/\/$/, '').replace(/\.html$/, '');
+const markdown = Astro.url.pathname === '/' ? '/index.md' : `${Astro.url.pathname.replace(/\/$/, '').replace(/\.html$/, '')}.md`;
+const profilePage = pagePath === '/' || /^\/cv(?:-technical|-ai)?$/.test(pagePath);
+const preview = `${P.canonicalUrl}/og/${pagePath.startsWith('/cv') ? 'cv' : pagePath === '/ai-evaluation' ? 'ai-evaluation' : pagePath === '/investigations' ? 'investigations' : 'home'}.png`;
+const graph = {'@context':'https://schema.org','@graph':[
+ {'@type':'Person','@id':`${P.canonicalUrl}/#person`,name:P.name,url:P.canonicalUrl,description:P.machineSummary,email:P.email,sameAs:[P.github,P.linkedin,P.orcidUrl],identifier:{'@type':'PropertyValue',propertyID:'ORCID',value:P.orcidUrl.split('/').pop()}},
+ {'@type':profilePage?'ProfilePage':'WebPage','@id':`${canonical}#webpage`,name:title,url:canonical,description,inLanguage:'en',isPartOf:{'@id':`${P.canonicalUrl}/#website`},...(profilePage?{mainEntity:{'@id':`${P.canonicalUrl}/#person`}}:{about:{'@id':`${P.canonicalUrl}/#person`}})},
+ ...(pagePath==='/'?[{'@type':'WebSite','@id':`${P.canonicalUrl}/#website`,name:P.name,url:P.canonicalUrl,inLanguage:'en',publisher:{'@id':`${P.canonicalUrl}/#person`}}]:[])
+]};
 ---
-
-<!DOCTYPE html>
-<html lang="en" class={htmlClass}>
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#f7f6f2" />
-  <title>{title}</title>
-  <meta name="description" content={description} />
-  <link rel="canonical" href={canonical} />
-  <link rel="alternate" type="text/markdown" href={markdownAlternative} title={`${title} — Markdown`} />
-
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-
-  <script is:inline id="mm-theme">
-    (function() {
-      try {
-        var stored = null;
-        try { stored = localStorage.getItem('theme'); } catch(e) {}
-        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (stored === 'dark' || (!stored && prefersDark)) {
-          document.documentElement.setAttribute('data-theme', 'dark');
-        } else {
-          document.documentElement.setAttribute('data-theme', 'light');
-        }
-      } catch(err) {}
-    })();
-  </script>
-
-  <link rel="api-catalog" href="https://mariomarcolongo.com/.well-known/api-catalog" />
-  <link rel="ard" href="https://mariomarcolongo.com/.well-known/ard.json" />
-  <link rel="ai-catalog" href="https://mariomarcolongo.com/.well-known/ai-catalog.json" />
-  <link rel="describedby" type="text/plain" href="https://mariomarcolongo.com/llms.txt" />
-  <link rel="describedby" type="text/plain" href="https://mariomarcolongo.com/llms-full.txt" />
-  <link rel="agent-card" href="https://mariomarcolongo.com/.well-known/agent-card.json" />
-  <link rel="mcp-server-card" href="https://mariomarcolongo.com/.well-known/mcp/server-card.json" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content={canonical} />
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
-  <meta property="og:image" content={socialImage} />
-  <meta property="og:image:secure_url" content={socialImage} />
-  <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content={`${title} — social preview`} />
-  <meta property="og:site_name" content="Mario Marcolongo" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content={canonical} />
-  <meta name="twitter:title" content={title} />
-  <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content={socialImage} />
-  <meta name="twitter:image:alt" content={`${title} — social preview`} />
-
-  <slot name="head" />
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>{title}</title><meta name="description" content={description}/><link rel="canonical" href={canonical}/>
+<meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:type" content="website"/><meta property="og:url" content={canonical}/>
+<meta property="og:site_name" content={P.name}/><meta property="og:locale" content="en_US"/>
+<meta property="og:image" content={preview}/><meta property="og:image:type" content="image/png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image:alt" content={`${P.name} — ${pagePath.startsWith('/cv')?'Application résumés':P.currentPositioning}`}/>
+<meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content={title}/><meta name="twitter:description" content={description}/><meta name="twitter:image" content={preview}/><meta name="twitter:image:alt" content={`${P.name} — ${P.currentPositioning}`}/><meta name="theme-color" content="#f4f5f7"/>
+<link rel="icon" href="/favicon-192x192.png" type="image/png" sizes="192x192"/><link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180"/><link rel="manifest" href="/site.webmanifest"/>
+<link rel="alternate" type="text/markdown" href={markdown}/><link rel="describedby" type="text/plain" href="/llms.txt"/>
+{noIndex && <meta name="robots" content="noindex"/>}
+<script type="application/ld+json" set:html={JSON.stringify(graph).replace(/</g,'\\u003c')}/>
+<script is:inline>document.documentElement.classList.add('js-enabled');try{document.documentElement.dataset.theme=localStorage.getItem('theme')||'light'}catch{}</script>
+<slot name="head"/>
 </head>
-<body>
-  <div id="scrollProgress"></div>
-  <main id="main-content">
-    <slot />
-  </main>
-  <script is:inline>
-    (function initWebMCP() {
-      function registerTools() {
-        if (typeof navigator !== 'undefined' && navigator.modelContext && typeof navigator.modelContext.provideContext === 'function') {
-          try {
-            navigator.modelContext.provideContext({
-              tools: [
-                {
-                  name: "query_dossier",
-                  description: "Retrieve Mario Marcolongo's source-backed professional dossier, work history and public records.",
-                  inputSchema: {
-                    type: "object",
-                    properties: {
-                      format: { type: "string", description: "Format option: 'summary' or 'full'", default: "full" }
-                    }
-                  },
-                  execute: async (args = {}) => {
-                    const url = args.format === 'summary' ? '/llms.txt' : '/llms-full.txt';
-                    const res = await fetch(url);
-                    const text = await res.text();
-                    return { content: text };
-                  }
-                },
-                {
-                  name: "query_cv",
-                  description: "Access Mario Marcolongo's machine-readable master CV.",
-                  inputSchema: { type: "object", properties: {} },
-                  execute: async () => {
-                    const res = await fetch('/cv-llm.txt');
-                    const text = await res.text();
-                    return { content: text };
-                  }
-                },
-                {
-                  name: "query_genomic_pipeline",
-                  description: "Access technical notes for the public 41x WGS genomic donation under ENA PRJEB109744.",
-                  inputSchema: { type: "object", properties: {} },
-                  execute: async () => {
-                    const res = await fetch('/llms-full.txt');
-                    const text = await res.text();
-                    return { content: text };
-                  }
-                }
-              ]
-            });
-          } catch (e) {
-            console.warn("WebMCP registration error:", e);
-          }
-        }
-      }
-
-      registerTools();
-      if (typeof window !== 'undefined') {
-        window.addEventListener('DOMContentLoaded', registerTools);
-        window.addEventListener('load', registerTools);
-      }
-    })();
-  </script>
-</body>
+<body><a class="skip-link" href="#main-content">Skip to content</a><slot/></body>
 </html>

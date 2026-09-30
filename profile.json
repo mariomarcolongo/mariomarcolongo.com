@@ -1,0 +1,653 @@
+{
+  "schemaVersion": 1,
+  "name": "Mario Marcolongo",
+  "canonicalUrl": "https://mariomarcolongo.com",
+  "orcidUrl": "https://orcid.org/0000-0003-2846-7115",
+  "github": "https://github.com/mariomarcolongo",
+  "reviewedAt": "2026-09-30",
+  "linkedin": "https://www.linkedin.com/in/mario-marcolongo",
+  "email": "me@mariomarcolongo.com",
+  "projects": [
+    {
+      "id": "entropy",
+      "name": "Entropy for Life",
+      "route": "/work/entropy",
+      "status": "Paid contractor · Jun 2023–Present",
+      "text": "Scientific research, fact-checking, script development and visual production for Entropy for Life, plus the design, build and operation of its WordPress website.",
+      "claimIds": [
+        "entropy-published-work",
+        "entropy-airc-visuals"
+      ],
+      "links": [
+        {
+          "label": "Organizational work record",
+          "url": "https://entropyforlife.it/mario-marcolongo-entropy-for-life/"
+        },
+        {
+          "label": "Published science content",
+          "url": "https://entropyforlife.it/"
+        },
+        {
+          "label": "Author articles",
+          "url": "https://entropyforlife.it/autore/mario-marcolongo/"
+        }
+      ]
+    },
+    {
+      "id": "atlas",
+      "name": "AI Safety Formalization Atlas",
+      "route": "/work/atlas",
+      "status": "Open-source contributor · Draft-paper coauthor · Sep 2026",
+      "text": "Five merged contributions to source auditing, citation provenance and repository tooling; listed coauthor of the September 2026 Atlas paper draft.",
+      "claimIds": [
+        "atlas-pr-52-accepted",
+        "atlas-pr-54-accepted",
+        "atlas-pr-61-accepted",
+        "atlas-pr-69-accepted",
+        "atlas-pr-70-accepted",
+        "atlas-paper-draft"
+      ],
+      "links": [
+        {
+          "label": "Source audit · PR #69",
+          "url": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/69"
+        },
+        {
+          "label": "Source locators · PR #70",
+          "url": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/70"
+        },
+        {
+          "label": "Accepted PR #52",
+          "url": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/52"
+        },
+        {
+          "label": "Accepted PR #54",
+          "url": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/54"
+        },
+        {
+          "label": "Accepted PR #61",
+          "url": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/61"
+        }
+      ]
+    },
+    {
+      "id": "yourself-to-science",
+      "name": "Yourself to Science",
+      "route": "/work/yourself-to-science",
+      "status": "Founder · Independent maintained project",
+      "text": "I founded and maintain a directory that helps people find research-participation opportunities and follow their original sources.",
+      "claimIds": [
+        "yourself-to-science-directory"
+      ],
+      "links": [
+        {
+          "label": "Open directory",
+          "url": "https://yourselftoscience.org"
+        },
+        {
+          "label": "Source and inclusion records",
+          "url": "https://github.com/yourselftoscience/yourselftoscience.org"
+        }
+      ]
+    },
+    {
+      "id": "investigations",
+      "name": "Source investigations",
+      "route": "/investigations",
+      "status": "Public-source contributions",
+      "text": "Selected cases showing what I checked, which evidence changed the conclusion and what remains uncertain.",
+      "claimIds": [],
+      "links": []
+    },
+    {
+      "id": "ai-evaluation",
+      "name": "Gray Swan",
+      "route": "/ai-evaluation",
+      "status": "Independent evaluation · September 2026 snapshot",
+      "text": "Hands-on adversarial model testing across chat, image, agent and indirect challenges. The 30 September 2026 Proving Ground profile shows #79, top 5%, and 127 platform-recorded total breaks.",
+      "claimIds": [
+        "gray-swan-september-30",
+        "gray-swan-july-29"
+      ],
+      "links": [
+        {
+          "label": "Dated evidence",
+          "url": "https://mariomarcolongo.com/evidence/gray-swan-2026-09-30/"
+        },
+        {
+          "label": "July snapshot",
+          "url": "https://mariomarcolongo.com/evidence/gray-swan-2026-07-29/"
+        }
+      ]
+    },
+    {
+      "id": "notandia",
+      "name": "Notandia",
+      "route": "/notandia",
+      "status": "Independent project · AI-assisted implementation",
+      "text": "A browser extension and separate Zotero plugin for research-result and reference workflows. I define product requirements, test behavior and manage AI-assisted development and releases.",
+      "claimIds": [
+        "notandia-source-release"
+      ],
+      "links": [
+        {
+          "label": "Canonical browser source",
+          "url": "https://github.com/notandia/browser-extension"
+        },
+        {
+          "label": "Chrome store record",
+          "url": "https://chromewebstore.google.com/detail/mdpi-filter/comknkeimaaadpiopddjoknflbmjeccp"
+        },
+        {
+          "label": "Edge store record",
+          "url": "https://microsoftedge.microsoft.com/addons/detail/mdpi-filter/efonlkldplkaeekpiajloajjmkappjgi"
+        }
+      ]
+    },
+    {
+      "id": "scientific-visualizations",
+      "name": "Scientific visualizations",
+      "route": "/work/scientific-visualizations",
+      "status": "Public diagrams and data views",
+      "text": "Scientific diagrams, charts and maps across Wikimedia Commons, Tableau Public and Flourish, with links to original files and interactive views.",
+      "claimIds": [],
+      "links": [
+        {
+          "label": "Wikimedia contributions",
+          "url": "https://commons.wikimedia.org/wiki/Special:Contributions/Digressivo"
+        },
+        {
+          "label": "Tableau data views",
+          "url": "https://public.tableau.com/app/profile/mario.marcolongo/vizzes"
+        },
+        {
+          "label": "Flourish charts and maps",
+          "url": "https://app.flourish.studio/@Digressivo"
+        }
+      ]
+    },
+    {
+      "id": "telegram",
+      "name": "Telegram and cloud automation",
+      "route": "/work/telegram",
+      "status": "Independent project · AI-assisted implementation",
+      "text": "A practical Telegram workflow with inspected cloud architecture and explicit operating limits.",
+      "claimIds": [],
+      "links": [
+        {
+          "label": "Source and operating instructions",
+          "url": "https://github.com/mariomarcolongo/english-wikipedia-link-converter-telegram-bot"
+        }
+      ]
+    },
+    {
+      "id": "hypermandala",
+      "name": "Hypermandala",
+      "route": "/work/hypermandala",
+      "status": "Creator · Independent visualization experiment",
+      "text": "An interactive geometry explorer connecting 2D plans, 3D forms and 4D projections, with direct controls for rotation, projection and dimensional collapse.",
+      "claimIds": [
+        "hypermandala-public-artifact"
+      ],
+      "links": [
+        {
+          "label": "Try the explorer",
+          "url": "https://hypermandala.mariomarcolongo.com/"
+        },
+        {
+          "label": "Public source · AGPL-3.0",
+          "url": "https://github.com/mariomarcolongo/hypermandala"
+        }
+      ]
+    }
+  ],
+  "aiEvaluationSnapshot": {
+    "displayDate": "30 September 2026",
+    "observedAt": "2026-09-30",
+    "preservedAtUtc": "2026-09-30T03:21:36.759698Z",
+    "sourceUrl": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
+    "evidencePath": "/evidence/gray-swan-2026-09-30/",
+    "originalImage": "/evidence/gray-swan-public-2026-09-30.jpg",
+    "originalSha256": "6a4c364c4c639c0dd96276838c64699bd3b18402dcec72789c8d0620fecb7a67",
+    "originalDimensions": [
+      1280,
+      1675
+    ],
+    "previewImage": "/media/work/gray-swan-profile-2026-09-30-1280.webp",
+    "detailImage": "/media/work/gray-swan-profile-2026-09-30-detail.webp",
+    "provingGround": {
+      "rank": 79,
+      "percentile": "top 5%",
+      "totalBreaks": 127,
+      "displayedAreaTotal": 126,
+      "areas": [
+        {
+          "name": "Chat",
+          "breaks": 43,
+          "available": 552,
+          "displayedPercent": 8
+        },
+        {
+          "name": "Image",
+          "breaks": 32,
+          "available": 387,
+          "displayedPercent": 8
+        },
+        {
+          "name": "Agent",
+          "breaks": 35,
+          "available": 593,
+          "displayedPercent": 6
+        },
+        {
+          "name": "Indirect",
+          "breaks": 16,
+          "available": 547,
+          "displayedPercent": 3
+        }
+      ]
+    },
+    "arena": {
+      "rank": 462,
+      "uniqueBreaks": 31,
+      "points": 1260,
+      "submissions": 354
+    },
+    "scope": "Public platform profile captured while logged out. Rankings and counts are dated platform reports, not independent reproduction of every result. Proving Ground and Arena are separate systems; the four visible area counts total 126 while the displayed total is 127."
+  },
+  "visualArtifacts": [
+    {
+      "title": "Industrial hemp cultivation in Europe",
+      "text": "A seven-part interactive data story on cultivation area, harvest and production. This is a capture of the published first view, credited to Mario Marcolongo on 8 January 2025.",
+      "platform": "Flourish",
+      "image": "/media/work/flourish-cannabis-story.webp",
+      "url": "https://public.flourish.studio/story/2720661/"
+    },
+    {
+      "title": "Shark attacks in the Mediterranean and Europe",
+      "text": "Data collection, organization and an interactive map for Entropy for Life. Open the published article for the live Tableau view and its context.",
+      "platform": "Entropy for Life / Tableau",
+      "image": "/media/work/entropy-shark-map.webp",
+      "url": "https://entropyforlife.it/2024/07/24/mappa-attacchi-squali-nel-mar-mediterraneo-e-in-europa/"
+    },
+    {
+      "title": "White-shark size distributions",
+      "text": "Data analysis and visualization by life stage and sex for Entropy for Life. This preview is the actual published Tableau view.",
+      "platform": "Entropy for Life / Tableau",
+      "image": "/media/work/entropy-shark-size.webp",
+      "url": "https://entropyforlife.it/2024/08/02/lunghezza-squali-bianchi/"
+    },
+    {
+      "title": "Brain Disorder Gene Overlap",
+      "text": "Original vector diagram showing genes associated with overlapping clinical phenotypes. The Wikimedia file contains authorship, references and reuse information.",
+      "url": "https://commons.wikimedia.org/wiki/File:Overlapping_clinical_phenotypes_in_genes_associated_with_monogenic_forms_of_autism_spectrum_disorder_(ASD),_dystonia,_epilepsy_and_schizophrenia.svg",
+      "platform": "Wikimedia Commons",
+      "image": "/media/work/wikimedia-clinical-overlap.svg"
+    },
+    {
+      "title": "Carcinogen Levels in Yerba Maté",
+      "text": "Benzo(a)pyrene contamination measured across commercial brands and sampling years, synthesized from published HPLC and GC-MS toxicology literature.",
+      "url": "https://commons.wikimedia.org/wiki/File:Benzo(a)pyrene_Concentration_in_Processed_Yerba_Mat%C3%A9_Leaves_Sampled_in_2006,_2008,_and_2010_-_Column_Chart.svg",
+      "platform": "Wikimedia Commons",
+      "image": "/media/work/wikimedia-yerba.svg"
+    },
+    {
+      "title": "Global Vegetarian Diet Policies",
+      "text": "Comparative map of food-based dietary guidelines and their positions on vegetarian diets. Sources and dates are documented with the original artifact.",
+      "url": "https://commons.wikimedia.org/wiki/File:Countries_(States_and_Subnational_Regions)_and_Their_Positions_on_Vegetarian_Diets_in_Food-Based_Dietary_Guidelines.svg",
+      "platform": "Wikimedia Commons",
+      "image": "/media/work/wikimedia-vegetarian.svg"
+    },
+    {
+      "title": "Global Naturalization Residence Requirements",
+      "text": "Map of residence requirements for naturalization. A dated visualization of source material; consult current official rules for decisions.",
+      "url": "https://commons.wikimedia.org/wiki/File:Naturalization_Residence_Requirements_by_Country_(Years_of_Residence).svg",
+      "platform": "Wikimedia Commons"
+    },
+    {
+      "title": "Global Oesophageal Cancer Incidence (IARC 2022)",
+      "text": "Age-standardized global incidence rate per 100,000 synthesized from Globocan 2022 and International Agency for Research on Cancer data.",
+      "url": "https://commons.wikimedia.org/wiki/File:Oesophageal_Cancer,_Age-Standardized_Rate_(World)_per_100.000_of_Incidence_Cases,_Both_sexes,_Worldwide_in_2022.svg",
+      "platform": "Wikimedia Commons",
+      "image": "/media/work/flourish-oesophageal-cancer.svg"
+    },
+    {
+      "title": "Mortality patterns in Italy",
+      "text": "Interactive life-table visualization using ISTAT data. Open the Tableau view to inspect its controls, labels and data context.",
+      "platform": "Tableau Public",
+      "image": "/media/work/tableau-mortality-800.webp",
+      "url": "https://public.tableau.com/app/profile/mario.marcolongo/viz/TavolediMortalitSingoleEtItalia-ISTAT/Sheet1"
+    },
+    {
+      "title": "Flourish visualization collection",
+      "text": "Browse the published interactive charts and maps in my Flourish profile.",
+      "platform": "Flourish",
+      "url": "https://app.flourish.studio/@Digressivo"
+    },
+    {
+      "title": "Protein supply relative to bodyweight",
+      "text": "A country-level data exploration. The measure concerns food supply, not observed individual protein intake.",
+      "image": "/media/work/protein-explorer.webp",
+      "platform": "Independent data project",
+      "url": "https://mariomarcolongo.github.io/protein-by-bodyweight-country/"
+    }
+  ],
+  "location": {
+    "country": "Italy"
+  },
+  "citizenship": [
+    "Italy"
+  ],
+  "usWorkAuthorization": "not_established",
+  "currentPositioning": "Research & Technical Operations",
+  "developmentDirection": [
+    "Technical implementation",
+    "Data quality",
+    "Systems diagnosis"
+  ],
+  "availability": "Open to relocation and international remote work. I can work in the EU as an Italian citizen; opportunities elsewhere depend on the role’s hiring and work-authorization arrangements.",
+  "summary": "Mario Marcolongo works on scientific information quality, research operations and practical technical problems. His evidence includes paid science communication work, public source investigations and accepted open source contributions. Based in Italy, he is an Italian citizen studying IT through Metropolia Open UAS and developing independent Python, SQL and quantitative skills.",
+  "authorship": "I use AI tools extensively for implementation. My contributions include defining problems and requirements, inspecting behavior, testing, diagnosing failures and maintaining the resulting tools. Each case identifies external review and remaining validation limits.",
+  "resumeRoutes": {
+    "default": "/cv",
+    "technical": "/cv-technical",
+    "aiEvaluation": "/cv-ai"
+  },
+  "experience": [
+    {
+      "name": "Entropy for Life",
+      "period": "Jun 2023–Present · Paid contractor",
+      "text": "Scientific research, fact-checking, script development and visual production for Entropy for Life, plus the design, build and operation of its WordPress website.",
+      "route": "/work/entropy",
+      "details": [
+        "Since June 2023, I have worked as a paid contractor on primary-literature research, scientific fact-checking and script development. Depending on the assignment, I write, co-write or review content, check claims against sources and adapt English-language evidence for Italian audiences, preserving terminology and scientific context.",
+        "My work includes collecting and organizing data, creating charts and maps, preparing slides and on-screen assets, and researching images. I also contribute to short-form content and selected thumbnail concepts or production, independently or in collaboration with the video editor. Responsibilities vary by project. I personally created the data visualizations in the AIRC reel collaborations that use them; the whole reels are collaborative productions.",
+        "I designed and built entropyforlife.it in WordPress. Since September 2023, my work has included responsive design, publishing, configuration and functionality changes, OVHcloud hosting, DNS, SSL and technical SEO. This combines initial website delivery with ongoing responsibility for its operation."
+      ]
+    },
+    {
+      "name": "Wikipedia, Wikidata & Wikimedia Commons",
+      "period": "Since 2018 · Public contributions",
+      "text": "Citation review, source reconciliation, structured-data editing and scientific visualizations.",
+      "route": "/work/wikimedia",
+      "details": [
+        "Review citations, reconcile conflicting records and improve structured metadata across Wikipedia, Wikidata and Commons.",
+        "Create sourced biomedical explanations, original vector diagrams, charts and maps; maintain attributable revision and source trails."
+      ]
+    },
+    {
+      "name": "University of Padua research project",
+      "period": "2022–2025 · Volunteer collaboration",
+      "text": "Focus-group facilitation, participant recruitment and accessible research procedures, working with a supervisor and fellow facilitator.",
+      "route": "/research-operations",
+      "details": [
+        "Led or co-facilitated approximately 4–5 remote focus groups, supported recruitment and bibliographic research, and helped prepare accessible participation procedures.",
+        "Worked with Marta Panzeri, researchers and a second facilitator on consent, optional captions, written-chat participation, structured prompts, recording boundaries and handoffs. The individual role is self-reported; the linked university record establishes the project context."
+      ]
+    },
+    {
+      "name": "Yourself to Science",
+      "period": "Since 2024 · Founder, independent project",
+      "text": "Research-participation directory: resource selection, information organization and ongoing website maintenance.",
+      "route": "/work/yourself-to-science",
+      "details": [
+        "Defined resource inclusion criteria, verification fields, provenance, licensing boundaries and the update process.",
+        "Coordinate AI-assisted implementation, inspect behavior, test releases, diagnose deployment issues and maintain the directory."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Metropolia University of Applied Sciences",
+      "title": "Open UAS Information Technology path studies",
+      "period": "Aug 2026–Present",
+      "startDate": "2026-08",
+      "endDate": null,
+      "status": "open_uas_path_enrolled",
+      "description": "English-taught, online Open UAS path studies (non-degree). Python Programming: 3 ECTS, Pass, assessed 15 Sep 2026.",
+      "programExtentECTS": 120,
+      "creditsAwarded": 3,
+      "degreeAwarded": false,
+      "expectedDegreeCompletion": null,
+      "sourceUrl": "https://www.metropolia.fi/en/study-at-metropolia/open-university/path-studies/it-online",
+      "attainments": [
+        {
+          "name": "Python Programming",
+          "code": "TT00CB02",
+          "creditsECTS": 3,
+          "grade": "Pass",
+          "assessedAt": "2026-09-15",
+          "sourceType": "user_supplied_institutional_transcript",
+          "transcriptDate": "2026-09-19",
+          "observedAt": "2026-09-19",
+          "sourceUrl": null
+        }
+      ],
+      "lastReviewedAt": "2026-09-19"
+    },
+    {
+      "institution": "University of Campania Luigi Vanvitelli",
+      "title": "Medicine studies, degree not completed",
+      "period": "2020–approx. 2023 (attendance)",
+      "startDate": "2020",
+      "endDate": null,
+      "attendanceEndedApproximately": "2023",
+      "status": "degree_not_completed",
+      "description": "Attendance stopped around 2023; no degree awarded. Administrative enrollment remains active.",
+      "administrativeEnrollmentStatus": "active",
+      "administrativeRecordAcademicYear": "2024/2025",
+      "degreeAwarded": false,
+      "lastReviewedAt": "2026-09-30",
+      "sourceUrl": null
+    }
+  ],
+  "languages": {
+    "text": "Italian native · English: EF SET C1 overall, 68/100 (Mar 2024)",
+    "sourceUrl": "https://cert.efset.org/jHk84h",
+    "issuedAt": "2024-03-26",
+    "scores": {
+      "overall": 68,
+      "reading": 75,
+      "listening": 81,
+      "writing": 59,
+      "speaking": 55
+    }
+  },
+  "claims": [
+    {
+      "id": "entropy-airc-visuals",
+      "text": "Created the data visualizations in the Entropy for Life × AIRC reels that feature them.",
+      "sourceUrl": "https://entropyforlife.it/mario-marcolongo-entropy-for-life/",
+      "sourceOwner": "contributor",
+      "evidenceType": "contributor_confirmation",
+      "engagementType": "paid_contractor",
+      "limitation": "Visualization authorship: contributor-confirmed, 30 September 2026. Public captions verify AIRC context, not individual production roles. Shared productions; no sole reel authorship or direct AIRC employment is implied.",
+      "observedAt": "2026-09-30",
+      "lastReviewedAt": "2026-09-30",
+      "visibility": "public"
+    },
+    {
+      "id": "entropy-published-work",
+      "text": "Contributed research, fact-checking and production support to 80 documented published pieces: 55 videos, 4 articles and 21 short-form pieces.",
+      "sourceUrl": "https://entropyforlife.it/mario-marcolongo-entropy-for-life/",
+      "sourceOwner": "client_organization",
+      "evidenceType": "organizational_work_record",
+      "engagementType": "paid_contractor",
+      "limitation": "The attribution record is on a site I help manage. Responsibilities varied by assignment; the organization’s audience is not my personally attributable reach.",
+      "startDate": "2023-06",
+      "endDate": null,
+      "observedAt": "2026-09-12",
+      "lastReviewedAt": "2026-09-12",
+      "visibility": "public"
+    },
+    {
+      "id": "atlas-pr-52-accepted",
+      "text": "Contributed merged PR #52: migration validation portability.",
+      "sourceUrl": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/52",
+      "sourceOwner": "upstream_project",
+      "evidenceType": "external_acceptance",
+      "engagementType": "open_source_contribution",
+      "limitation": "Acceptance covers the submitted change; it does not establish authorship of the wider research or independent engineering proficiency.",
+      "startDate": "2026-09-03",
+      "endDate": "2026-09-03",
+      "observedAt": "2026-09-12",
+      "lastReviewedAt": "2026-09-12",
+      "visibility": "public"
+    },
+    {
+      "id": "atlas-pr-54-accepted",
+      "text": "Contributed merged PR #54: portable repository instruction adapters.",
+      "sourceUrl": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/54",
+      "sourceOwner": "upstream_project",
+      "evidenceType": "external_acceptance",
+      "engagementType": "open_source_contribution",
+      "limitation": "Acceptance covers the submitted change; it does not establish authorship of the wider research or independent engineering proficiency.",
+      "startDate": "2026-09-03",
+      "endDate": "2026-09-03",
+      "observedAt": "2026-09-12",
+      "lastReviewedAt": "2026-09-12",
+      "visibility": "public"
+    },
+    {
+      "id": "atlas-pr-61-accepted",
+      "text": "Contributed merged PR #61: repository instruction organization.",
+      "sourceUrl": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/61",
+      "sourceOwner": "upstream_project",
+      "evidenceType": "external_acceptance",
+      "engagementType": "open_source_contribution",
+      "limitation": "Acceptance covers the submitted change; it does not establish authorship of the wider research or independent engineering proficiency.",
+      "startDate": "2026-09-06",
+      "endDate": "2026-09-06",
+      "observedAt": "2026-09-12",
+      "lastReviewedAt": "2026-09-12",
+      "visibility": "public"
+    },
+    {
+      "id": "yourself-to-science-directory",
+      "text": "Maintained a directory containing 55 research-participation resources in the dated review.",
+      "sourceUrl": "https://github.com/yourselftoscience/yourselftoscience.org",
+      "sourceOwner": "project_maintainer",
+      "evidenceType": "public_artifact",
+      "engagementType": "independent_project",
+      "limitation": "37 Wikidata items referenced the project URL in the dated check; these are not 37 users or independent citations. A deposited DOI is not peer review.",
+      "startDate": null,
+      "endDate": null,
+      "observedAt": "2026-09-12",
+      "lastReviewedAt": "2026-09-12",
+      "visibility": "public"
+    },
+    {
+      "id": "gray-swan-july-29",
+      "text": "Dated Proving Ground record: rank #74, top 6%, on 29 July 2026.",
+      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-2026-07-29/",
+      "sourceOwner": "platform_record_captured_by_account_holder",
+      "evidenceType": "dated_platform_snapshot",
+      "engagementType": "independent_evaluation",
+      "limitation": "The displayed total is 113; four visible area counters sum to 112. Arena figures are separate. This is not a current ranking or paid engagement.",
+      "startDate": "2026-07-29",
+      "endDate": "2026-07-29",
+      "observedAt": "2026-09-12",
+      "lastReviewedAt": "2026-09-12",
+      "visibility": "public"
+    },
+    {
+      "id": "gray-swan-september-30",
+      "text": "Dated Proving Ground record: rank #79, top 5%, with 127 platform-recorded total breaks on 30 September 2026.",
+      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-2026-09-30/",
+      "sourceOwner": "public_platform_profile",
+      "evidenceType": "dated_platform_snapshot",
+      "engagementType": "independent_evaluation",
+      "limitation": "Captured from the logged-out public profile. The displayed total is 127; visible area counters sum to 126. Arena separately shows rank #462, 31 unique breaks, 1,260 points and 354 submissions. This is dated platform evidence, not paid employment, security certification or independent reproduction of every result.",
+      "startDate": "2026-09-30",
+      "endDate": "2026-09-30",
+      "observedAt": "2026-09-30",
+      "lastReviewedAt": "2026-09-30",
+      "visibility": "public"
+    },
+    {
+      "id": "notandia-source-release",
+      "text": "Developed and maintained an AI-assisted browser tool for research-result workflows; case study distinguishes released store versions from capabilities currently in source.",
+      "sourceUrl": "https://github.com/notandia/browser-extension",
+      "sourceOwner": "project_maintainer",
+      "evidenceType": "public_source_and_store_records",
+      "engagementType": "independent_project",
+      "limitation": "Chrome: MDPI Filter 0.0.2 (June 2025), 14 users, one rating. Notandia 0.1.0 remains an unpublished draft. These are store counts, not verified active users. Edge availability and feature parity are unverified.",
+      "startDate": null,
+      "endDate": null,
+      "observedAt": "2026-09-30",
+      "lastReviewedAt": "2026-09-30",
+      "visibility": "public"
+    },
+    {
+      "id": "metropolia-python-3ects",
+      "text": "Python Programming (TT00CB02): 3 ECTS, Pass, assessed 15 September 2026.",
+      "engagementType": "open_uas_study",
+      "startDate": null,
+      "endDate": "2026-09-15",
+      "observedAt": "2026-09-19",
+      "lastReviewedAt": "2026-09-19",
+      "sourceUrl": null,
+      "sourceOwner": "Metropolia University of Applied Sciences",
+      "evidenceType": "user_supplied_institutional_transcript",
+      "limitation": "Based on transcript text supplied by the student, dated 19 September 2026. The private transcript is not published. This is one completed course in a non-degree Open UAS pathway, not an awarded degree or proof of professional programming proficiency.",
+      "visibility": "public"
+    },
+    {
+      "id": "atlas-pr-69-accepted",
+      "text": "Contributed merged PR #69: a human-reviewable source metadata and rights-evidence audit.",
+      "sourceUrl": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/69",
+      "sourceOwner": "upstream_project",
+      "evidenceType": "external_acceptance",
+      "engagementType": "open_source_contribution",
+      "limitation": "The audit compares metadata and preserves retrieval evidence for human review; it does not certify citations or reuse rights. Most added lines are generated reports and evidence, not handwritten tooling.",
+      "startDate": "2026-09-22",
+      "endDate": "2026-09-22",
+      "observedAt": "2026-09-30",
+      "lastReviewedAt": "2026-09-30",
+      "visibility": "public"
+    },
+    {
+      "id": "atlas-pr-70-accepted",
+      "text": "Contributed merged PR #70: 15 missing source locators and clarified publication provenance.",
+      "sourceUrl": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/70",
+      "sourceOwner": "upstream_project",
+      "evidenceType": "external_acceptance",
+      "engagementType": "open_source_contribution",
+      "limitation": "Acceptance covers source traceability and bibliographic changes; no Lean theorem, proof or formalization-coverage change is claimed.",
+      "startDate": "2026-09-28",
+      "endDate": "2026-09-28",
+      "observedAt": "2026-09-30",
+      "lastReviewedAt": "2026-09-30",
+      "visibility": "public"
+    },
+    {
+      "id": "atlas-paper-draft",
+      "text": "Listed as a coauthor of the September 2026 draft “The AI Safety Formalization Atlas: a machine-checked memory for AI safety mathematics.”",
+      "sourceUrl": null,
+      "sourceNote": "Draft title and author page supplied by the contributor; no public manuscript link supplied.",
+      "sourceOwner": "project_authors",
+      "evidenceType": "contributor_supplied_draft",
+      "engagementType": "research_collaboration",
+      "limitation": "Draft status; publication and peer review are not established. The supplied page lists Metropolia University of Applied Sciences as affiliation, with permission confirmed by the contributor. It does not establish employment or a degree. Individual manuscript contributions are not yet specified here.",
+      "startDate": "2026-09",
+      "endDate": null,
+      "observedAt": "2026-09-30",
+      "lastReviewedAt": "2026-09-30",
+      "visibility": "public"
+    },
+    {
+      "id": "hypermandala-public-artifact",
+      "text": "Created Hypermandala, a public interactive 2D, 3D and 4D geometry explorer.",
+      "sourceUrl": "https://hypermandala.mariomarcolongo.com/",
+      "sourceOwner": "project_maintainer",
+      "evidenceType": "public_artifact",
+      "engagementType": "independent_project",
+      "limitation": "The public explorer and source repository establish an inspectable visualization project, not adoption, revenue or an independent mathematical or engineering assessment. Source availability was verified while logged out on 30 September 2026. Higher-dimensional extensions and new form additions are experimental; testing and adjustments continue. Forms are procedural interpretations, not historical reconstructions.",
+      "startDate": "2026-09",
+      "endDate": null,
+      "observedAt": "2026-09-30",
+      "lastReviewedAt": "2026-09-30",
+      "visibility": "public"
+    }
+  ]
+}
