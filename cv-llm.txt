@@ -66,10 +66,10 @@ Case: https://mariomarcolongo.com/notandia
 
 ## Gray Swan
 
-Independent evaluation · July 2026 snapshot. Independent adversarial-evaluation activity, with the July 2026 platform record and clear limits on what the metrics establish.
+Independent evaluation · September 2026 snapshot.
 
-Dated Proving Ground record: rank #74, top 6%, on 29 July 2026. The displayed total is 113; four visible area counters sum to 112. Arena figures are separate. This is not a current ranking or paid engagement.
-Source: https://mariomarcolongo.com/evidence/gray-swan-2026-07-29/. Owner: platform record captured by account holder; evidence: dated platform snapshot; observed: 2026-09-12; event/start: 2026-07-29.
+Dated Proving Ground record: rank #79, top 5%, with 127 platform-recorded total breaks on 30 September 2026. Captured from the logged-out public profile. The displayed total is 127; visible area counters sum to 126. Arena separately shows rank #462, 31 unique breaks, 1,260 points and 354 submissions. This is dated platform evidence, not paid employment, security certification or independent reproduction of every result.
+Source: https://mariomarcolongo.com/evidence/gray-swan-2026-09-30/. Owner: public platform profile; evidence: dated platform snapshot; observed: 2026-09-30; event/start: 2026-09-30.
 
 Case: https://mariomarcolongo.com/ai-evaluation
 
@@ -89,7 +89,7 @@ Metropolia’s 120 ECTS is the path extent. Transcript: 19 September 2026; Pytho
 
 ## Demonstrated work and current study
 
-Scientific literature search, source verification, information organization, technical documentation and functional testing are supported by the linked work. Requirements definition and troubleshooting are described at the case level. Python, SQL, systems and quantitative foundations remain current study.
+Scientific literature search, source verification, information organization, technical documentation and functional testing are supported by the linked work. Python, SQL, systems and quantitative foundations remain current study.
 
 Italian native · English: EF SET C1 overall, 68/100 (Mar 2024). Issued 26 March 2024. Reading 75/C2; listening 81/C2; writing 59/B2; speaking 55/B2. Overall C1 is not a claim that every productive skill is C1. Certificate: https://cert.efset.org/jHk84h
 

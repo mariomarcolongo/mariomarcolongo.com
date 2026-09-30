@@ -6,7 +6,7 @@ const entropy=entry('Entropy for Life','Paid contractor · Jun 2023–Present',[
 const atlas=entry('AI Safety Formalization Atlas','Contributor & draft-paper coauthor · Sep 2026',P.cvBullets.atlas,'/work/atlas');
 const yts=entry('Yourself to Science','Founder · Independent project',[P.cvBullets.yts[0]],'/work/yourself-to-science');
 const notandia=entry('Notandia','Independent project · AI-assisted implementation',P.cvBullets.notandia,'/notandia');
-const gray=entry('Gray Swan','Independent evaluation · July 2026 snapshot',P.cvBullets.gray,'/evidence/gray-swan-2026-07-29/');
+const gray=entry('Gray Swan',`Independent evaluation · ${P.aiEvaluationSnapshot.displayDate}`,P.cvBullets.gray,P.aiEvaluationSnapshot.evidencePath);
 const wiki=entry('Wikipedia, Wikidata & Wikimedia Commons','Public contributor · Since 2018',[P.cvBullets.wikimedia[0]],'/work/wikimedia');
 const padua=entry('University of Padua research project','Volunteer collaboration · 2022–2025',P.cvBullets.padua,'/research-operations');
 const sections=variant==='default'?[{title:'Experience',entries:[entropy,padua]},{title:'Independent work & public contributions',entries:[atlas,wiki,yts]}]:variant==='technical'?[{title:'Professional experience',entries:[entropy]},{title:'Technical & data contributions',entries:[notandia,atlas,wiki]}]:[{title:'Independent evaluation work',entries:[gray]},{title:'Professional & research experience',entries:[entropy,padua]},{title:'Public-source contributions',entries:[atlas,wiki]}];

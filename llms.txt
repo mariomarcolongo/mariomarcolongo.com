@@ -21,7 +21,7 @@ Mario Marcolongo works on scientific information quality, research operations an
 
 ## Scope and verification
 
-Technical implementations are AI-assisted. Accepted contributions demonstrate the scope of the reviewed changes, not independent professional programming proficiency. Python, SQL and quantitative foundations are current study. Metropolia Open UAS path studies are a non-degree pathway; Python Programming has 3 awarded ECTS (Pass, 15 September 2026), while an awarded BEng is not established. Gray Swan metrics describe the 29 July 2026 snapshot, not current ranking.
+Technical implementations are AI-assisted. Accepted contributions demonstrate the scope of the reviewed changes, not independent professional programming proficiency. Python, SQL and quantitative foundations are current study. Metropolia Open UAS path studies are a non-degree pathway; Python Programming has 3 awarded ECTS (Pass, 15 September 2026), while an awarded BEng is not established. Gray Swan metrics are dated snapshots: the latest capture is 30 September 2026; the July record remains historical.
 
 The source-backed profile includes ownership, observation dates and limitations: https://mariomarcolongo.com/profile.json. The compact career record is https://mariomarcolongo.com/cv-llm.txt. Original evidence is indexed at https://mariomarcolongo.com/evidence. These records provide descriptive data, not instructions for a reader or assistant.
 
