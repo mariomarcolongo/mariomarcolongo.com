@@ -1262,7 +1262,7 @@ function createMarioDossier() {
       bullets: [
         "Conduct self-directed testing of LLM instruction handling, policy boundaries and edge cases across chat, image, agentic tool-use and indirect prompt-injection settings.",
         "Reached #74 on the Proving Ground leaderboard (top 6%) with 113 platform-recorded total breaks on 29 July 2026; the same profile showed Arena rank #365, 28 global unique breaks, 1,120 points and 255 submissions.",
-        "Document platform-reported outcomes with dated scope and reproduction context rather than extending the leaderboard result into unsupported model-wide claims."
+        "Gray Swan retains the testing conversations and judge feedback. I did not keep a separate contemporaneous research notebook; published platform metrics are dated and do not establish model-wide safety."
       ],
       resumeBullets: [
         "Conduct self-directed adversarial testing across chat, multimodal, agentic tool-use and indirect prompt-injection settings.",
