@@ -1,7 +1,7 @@
-name: Deploy to Cloudflare Pages
+name: Verify Cloudflare production
 
-# Production deployment for the application-ready portfolio.
-# Production runs only from main. Pull requests use Cloudflare's isolated preview.
+# Cloudflare's Git integration owns production and preview deployment.
+# Check the public release against the same committed assets that it publishes.
 on:
   push:
     branches: [main]
@@ -9,20 +9,19 @@ on:
 
 permissions:
   contents: read
-  deployments: write
 
 jobs:
-  deploy:
+  verify:
     if: github.ref == 'refs/heads/main'
     concurrency:
-      group: cloudflare-pages-production
+      group: cloudflare-pages-production-verification
       cancel-in-progress: true
-    name: Build, deploy and verify production site
+    name: Verify native Pages production release
     runs-on: ubuntu-latest
     timeout-minutes: 30
     environment:
       name: production
-      url: ${{ steps.deploy.outputs.deployment-url }}
+      url: https://mariomarcolongo.com
     env:
       DEPLOY_SHA: ${{ github.sha }}
 
@@ -47,20 +46,13 @@ jobs:
       - name: Verify rendered pages and interactions
         run: npm run verify:render
 
-      - name: Generate current application PDFs and verify discovery metadata
+      # The PR verification workflow regenerates and checks all three PDFs.
+      # Native Pages publishes committed public PDFs; do not replace those here
+      # before comparing their exact bytes with the live release.
+      - name: Verify committed release assets and discovery metadata
         run: |
-          npm run pdf
           node scripts/verify-discovery.js
           node scripts/verify-live-release.js --local
-
-      - name: Deploy to Cloudflare Pages
-        id: deploy
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=mariomarcolongo-pages --branch=main --commit-hash=${{ env.DEPLOY_SHA }}
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Verify the public release
         env:
