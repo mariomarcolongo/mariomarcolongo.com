@@ -2,50 +2,42 @@
 import Layout from '../layouts/Layout.astro';
 import SiteNav from '../components/SiteNav.astro';
 import SiteFooter from '../components/SiteFooter.astro';
-import WorkRow from '../components/WorkRow.astro';
 import WorkGallery from '../components/WorkGallery.astro';
 import D from '../../data/source.js';
-const P = D.presence;
+const P=D.presence;
+const work=[
+ {id:'entropy',type:'Paid scientific work',note:'Research, fact-checking, scripts, visuals and website delivery.',proof:'80 published pieces'},
+ {id:'atlas',type:'Accepted open-source work',note:'Source metadata auditing, citation provenance and repository tooling.',proof:'5 merged PRs · draft-paper coauthor'},
+ {id:'yourself-to-science',type:'Independent project',note:'Making research-participation opportunities easier to find and inspect.',proof:'Founder · maintained directory'}
+].map(w=>({...w,...P.projects.find(p=>p.id===w.id)}));
 ---
-<Layout>
-  <SiteNav/>
-  <main id="main-content" class="presence-shell home-shell">
-    <section class="home-hero" aria-labelledby="hero-title"><div class="hero-copy">
-      <p class="eyebrow">Research &amp; technical operations</p>
-      <h1 id="hero-title">Find the source.<br/><em>Fix the problem.</em></h1>
-      <p class="lede">{P.subheadline}</p>
-      <div class="actions">
-        <a class="button primary" href="/cv">View résumé <span aria-hidden="true">↗</span></a>
-        <a class="quiet-link" href="#selected-work">Explore my work <span aria-hidden="true">↓</span></a>
-      </div>
-      <p class="meta relocation-line">{P.location}</p></div><WorkGallery/>
-    </section>
-    <section class="presence-section home-work" id="selected-work" aria-labelledby="work-title">
-      <div class="section-heading"><h2 id="work-title">Curiosity, put to work.</h2><a href="/work">All projects <span aria-hidden="true">↗</span></a></div>
-      <div class="project-gallery">{P.projects.filter(p => ['entropy','atlas','yourself-to-science'].includes(p.id)).map(project => <WorkRow project={project}/>)}</div>
-    </section>
-    <section class="presence-section experience-grid" id="experience" aria-labelledby="experience-title">
-      <div><p class="eyebrow">Background</p><h2 id="experience-title">Experience &amp; learning</h2></div>
-      <div class="experience-list">{P.experience.map(e=><article><p class="meta">{e.period}</p><h3><a href={e.route}>{e.name}</a></h3><p>{e.text}</p></article>)}
-        <p>I’m studying IT through Metropolia Open UAS, an online, non-degree pathway. Python Programming: 3 ECTS, Pass (September 2026). Continuing Python, SQL and quantitative foundations.</p>
-        <a href="/experience">Full experience and responsibilities ↗</a>
-      </div>
-    </section>
-    <section class="presence-section wiki-feature" aria-labelledby="wiki-title"><div><p class="eyebrow">Wikipedia · Wikidata · Wikimedia Commons</p><h2 id="wiki-title">Follow the evidence.</h2><p>From conflicting records to sourced explanations: citation review, biomedical synthesis, structured data and original diagrams.</p><a href="/work/wikimedia">Explore my Wikimedia contributions ↗</a></div><div><h3>Biomedical evidence</h3><p>Organizing literature on syndromic autism into a sourced explanation and comparative visual.</p><h3>Source reconstruction</h3><p>Recovering archived reporting and distinguishing stages in a fragmented public record.</p><a href="/investigations">Read the investigations and inspect attributed edits ↗</a></div></section>
-    <section class="presence-section further-work" aria-labelledby="more-title">
-      <h2 id="more-title">More to explore</h2>
-      <div class="further-links">
-        <a href="/work/hypermandala"><strong>Hypermandala ↗</strong><span>Try an interactive explorer of 2D, 3D and 4D geometry.</span></a>
-        <a href="/ai-evaluation"><strong>AI evaluation <span aria-hidden="true">↗</span></strong><span>Independent model testing and the July 2026 Gray Swan record.</span></a>
-        <a href="/notandia"><strong>Notandia ↗</strong><span>A maintained browser tool for research-result workflows.</span></a><a href="/work/scientific-visualizations"><strong>Charts, maps &amp; diagrams ↗</strong><span>Wikimedia Commons, Tableau Public and Flourish collections.</span></a>
-      </div>
-    </section>
-    <section class="presence-section contact-panel" id="contact" aria-labelledby="contact-title">
-      <p class="eyebrow">Next chapter</p><h2 id="contact-title">A useful next problem.<br/><em>Somewhere new.</em></h2>
-      <p>{P.contact}</p>
-      <a class="contact-email" href={`mailto:${P.email}`}>{P.email} <span aria-hidden="true">↗</span></a>
-      <p class="meta">{P.availability}</p>
-    </section>
-  </main>
-  <SiteFooter/>
-</Layout>
+<Layout><SiteNav/><main id="main-content" class="presence-shell home-shell">
+  <section class="home-hero" aria-labelledby="hero-title">
+    <div class="hero-copy"><p class="eyebrow">Research &amp; technical operations</p><h1 id="hero-title">Research.<br/><span>Verify. Build.</span></h1>
+    <p class="hero-intro">I’m Mario Marcolongo. I investigate scientific claims, improve source quality and turn complex information into useful work.</p>
+    <p class="hero-context">Paid scientific work. Accepted AI-safety contributions. Independently maintained research tools.</p>
+    <div class="actions"><a class="button primary" href="#selected-work">Explore my work <span aria-hidden="true">↓</span></a><a class="hero-cv" href="/cv">View résumé <span aria-hidden="true">↗</span></a></div>
+    <p class="hero-availability"><span aria-hidden="true"></span>Based in Italy · Open to international opportunities</p></div><WorkGallery/>
+  </section>
+  <section class="presence-section home-work" id="selected-work" aria-labelledby="work-title" data-enter>
+    <div class="section-heading"><div><p class="eyebrow">Selected work / 01</p><h2 id="work-title">Work you can inspect.</h2></div><a href="/work">All work <span aria-hidden="true">↗</span></a></div>
+    <div class="selected-ledger">{work.map((p,i)=><a class="ledger-row" href={p.route}><span class="ledger-number" aria-hidden="true">0{i+1}</span><div><p class="meta">{p.type}</p><h3>{p.name}</h3><p>{p.note}</p><span class="ledger-proof">{p.proof}</span></div><span class="ledger-arrow" aria-hidden="true">↗</span></a>)}</div>
+  </section>
+  <section class="presence-section visual-feature" aria-labelledby="visual-title" data-enter>
+    <div class="visual-copy"><p class="eyebrow">Sources → explanations / 02</p><h2 id="visual-title">Make the evidence visible.</h2><p>Scientific diagrams, comparative maps and interactive data views. Published on Wikimedia Commons, Tableau Public and Flourish.</p><a href="/work/scientific-visualizations">Explore charts, maps &amp; diagrams <span aria-hidden="true">↗</span></a><a href="/work/wikimedia">Wikipedia &amp; Wikidata contributions <span aria-hidden="true">↗</span></a></div>
+    <a class="visual-image" href="/work/scientific-visualizations"><img src="/media/work/wikimedia-clinical-overlap.svg" alt="Original Wikimedia diagram showing overlapping genes and clinical phenotypes across brain disorders" width="800" height="500" loading="lazy"/><span>Original scientific diagram · Wikimedia Commons <span aria-hidden="true">↗</span></span></a>
+  </section>
+  <section class="presence-section background-section" aria-labelledby="background-title" data-enter>
+    <div class="background-copy"><p class="eyebrow">Background / 03</p><h2 id="background-title">A broader track record.</h2><p>Scientific communication, public-source work and practical research support, alongside continued technical study.</p><a href="/experience">Full experience &amp; responsibilities <span aria-hidden="true">↗</span></a></div>
+    <div class="background-list">{P.experience.filter(e=>['/work/wikimedia','/research-operations'].includes(e.route)).map(e=><article><p class="meta">{e.period}</p><h3><a href={e.route}>{e.name}</a></h3><p>{e.text}</p></article>)}<article><p class="meta">Aug 2026–Present · Open UAS</p><h3>Metropolia University of Applied Sciences</h3><p>Non-degree IT path studies. Python Programming: 3 ECTS, Pass (September 2026). Continuing Python, SQL and quantitative foundations.</p></article><a class="investigation-link" href="/investigations">Read the source investigations <span aria-hidden="true">↗</span></a></div>
+  </section>
+  <section class="presence-section experiments-section" aria-labelledby="experiment-title" data-enter>
+    <div class="section-heading"><div><p class="eyebrow">Tools &amp; experiments / 04</p><h2 id="experiment-title">Curiosity, in working form.</h2></div></div>
+    <div class="experiment-grid"><a class="experiment-card hyper-card" href="/work/hypermandala"><img src="/media/work/hypermandala.webp" alt="Hypermandala geometric forms across dimensions" width="1200" height="630" loading="lazy"/><div><p class="meta">Interactive visualization</p><h3>Hypermandala <span aria-hidden="true">↗</span></h3><p>An explorer of 2D, 3D and 4D geometry. An independent experiment you can try.</p></div></a><a class="experiment-card" href="/notandia"><div class="notandia-preview" aria-hidden="true"><span>Research results</span><div><i></i><span>Find</span><span>Check</span><span>Organize</span></div></div><div><p class="meta">Research workflow tool</p><h3>Notandia <span aria-hidden="true">↗</span></h3><p>Requirements, behavior testing and release troubleshooting for an AI-assisted browser tool.</p></div></a></div>
+    <div class="supporting-links"><a href="/ai-evaluation">Independent AI evaluation ↗</a><a href="/work/telegram">Telegram &amp; cloud automation ↗</a><a href="/work">More projects &amp; contributions ↗</a></div>
+  </section>
+  <section class="presence-section contact-panel" id="contact" aria-labelledby="contact-title" data-enter><div><p class="eyebrow">Next chapter</p><h2 id="contact-title">Let’s work on a<br/>useful next problem.</h2><p>{P.contact}</p><a class="contact-email" href={`mailto:${P.email}`}>{P.email} <span aria-hidden="true">↗</span></a></div><div class="contact-aside"><p>Research operations<br/>Source &amp; data quality<br/>Technical support &amp; implementation</p><p class="meta">{P.availability}</p><a href="/cv">View application résumés <span aria-hidden="true">↗</span></a></div></section>
+</main><SiteFooter/></Layout>
+<script>
+if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const observer=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){entry.target.classList.add('entered');observer.unobserve(entry.target);}}, {threshold:.08});document.querySelectorAll('[data-enter]').forEach(el=>observer.observe(el));}
+</script>
