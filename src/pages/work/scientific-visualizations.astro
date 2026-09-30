@@ -1,4 +1,8 @@
 ---
-import WorkCase from '../../components/WorkCase.astro';
+import Layout from '../../layouts/Layout.astro';
+import SiteNav from '../../components/SiteNav.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import D from '../../../data/source.js';
+const P=D.presence;
 ---
-<WorkCase id="scientific-visualizations"/>
+<Layout title="Scientific charts, maps & diagrams — Mario Marcolongo"><SiteNav/><main id="main-content" class="presence-shell"><p class="eyebrow">Scientific visualization &amp; evidence synthesis</p><h1>Data made visible.</h1><p class="lede">Original diagrams, comparative maps and interactive charts. I organize source material, define what the measures mean and create visual explanations people can inspect.</p><div class="source-links"><a href="https://commons.wikimedia.org/wiki/Special:Contributions/Digressivo">Wikimedia Commons collection</a><a href="https://public.tableau.com/app/profile/mario.marcolongo/vizzes">All Tableau views</a><a href="https://app.flourish.studio/@Digressivo">All Flourish views</a></div><div class="visual-archive">{P.visualArtifacts.map(v=><article><p class="meta">{v.platform}</p>{v.image&&<a href={v.url}><img src={v.image} alt={v.title} width="800" height="450" loading="lazy"/></a>}<h2><a href={v.url}>{v.title}</a></h2><p>{v.text}</p><a href={v.url}>Open original and source context ↗</a></article>)}</div><p class="evidence-note">These are selected published artifacts, not a live inventory or a claim about current policy or clinical guidance. Interactive views open on their original platforms; publication dates, sources and licenses belong with each original record.</p></main><SiteFooter/></Layout>

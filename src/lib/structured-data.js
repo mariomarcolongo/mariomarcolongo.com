@@ -92,7 +92,7 @@ function buildProfileGraph(d, pageUrl, pageName) {
         '@id': `${SITE}/#genomic-pipeline`,
         name: 'Personal Genomics Workflow and Open-Data Pipeline (git-nome)',
         description: 'Workflow for processing personal whole-genome sequencing data, downstream variant formats and research-oriented polygenic-score calculations.',
-        codeRepository: 'https://github.com/jnton/git-nome',
+        codeRepository: 'https://github.com/mariomarcolongo/git-nome',
         author: { '@id': `${SITE}/#person` }
       }
     ]

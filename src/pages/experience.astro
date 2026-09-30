@@ -1,0 +1,8 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SiteNav from '../components/SiteNav.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import D from '../../data/source.js';
+const P=D.presence;
+---
+<Layout title="Experience & responsibilities — Mario Marcolongo"><SiteNav/><main id="main-content" class="presence-shell case-shell"><p class="eyebrow">Professional, volunteer and independent work</p><h1>Experience, with the details.</h1><p class="lede">Scientific research and communication, website delivery, public-source work and practical research support.</p><p><a href="/cv">Concise application résumé</a> · <a href={P.orcidUrl}>ORCID record</a></p>{P.experience.map(e=><section><p class="meta">{e.period}</p><h2>{e.name}</h2><ul>{e.details.map(detail=><li>{detail}</li>)}</ul><a href={e.route}>Work examples and attribution ↗</a></section>)}<section><h2>Tools, evaluation and open-source work</h2>{P.projects.filter(p=>['notandia','atlas','ai-evaluation','telegram','hypermandala'].includes(p.id)).map(p=><article><h3><a href={p.route}>{p.name}</a></h3><p>{p.text}</p></article>)}</section><section><h2>Scientific visualization</h2><p>Original SVG diagrams, comparative maps and interactive data views across Wikimedia Commons, Tableau Public and Flourish.</p><a href="/work/scientific-visualizations">Explore the visual portfolio ↗</a></section><section><h2>Education and languages</h2>{P.education.map(e=><article><h3>{e.institution} — {e.title}</h3><p>{e.period}. {e.description}</p></article>)}<p>{P.languages.text} · <a href={P.languages.sourceUrl}>Certificate</a></p></section></main><SiteFooter/></Layout>

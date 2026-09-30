@@ -3,7 +3,7 @@ import D from '../../data/source.js';
 const P=D.presence;
 ---
 <footer class="site-footer">
-<p>Mario Marcolongo · <a href={`mailto:${P.email}`}>Email</a> · <a href={P.github}>GitHub</a> · <a href={P.linkedin}>LinkedIn</a></p>
+<p>Mario Marcolongo · <a href={`mailto:${P.email}`}>Email</a> · <a href={P.github}>GitHub</a> · <a href={P.linkedin}>LinkedIn</a> · <a href={P.orcidUrl}>ORCID</a></p>
 <p><a href="/evidence">Evidence index</a> · <a href="/llms.txt">Text index</a> · <a href="/profile.json">Structured profile</a></p>
 <details><summary>Short profile</summary><p id="short-profile">{P.machineSummary}</p><button id="copy-profile" type="button" hidden>Copy short profile</button><span id="copy-status" role="status" aria-live="polite"></span></details>
 </footer>

@@ -359,7 +359,7 @@ const APPLICATION_PROFILES = {
     email: "me@mariomarcolongo.com",
     website: "https://mariomarcolongo.com",
     linkedin: "https://www.linkedin.com/in/mario-marcolongo",
-    github: "https://github.com/jnton",
+    github: "https://github.com/mariomarcolongo",
     orcid: "https://orcid.org/0000-0003-2846-7115",
     language: "Italian — native. English — C1 overall (EF SET 68/100); advanced technical reading and professional/technical writing.",
     education: [

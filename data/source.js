@@ -14,7 +14,7 @@ function createMarioDossier() {
   "canonicalUrl": "https://mariomarcolongo.com",
   "reviewedAt": "2026-09-12",
   "email": "me@mariomarcolongo.com",
-  "github": "https://github.com/jnton",
+  "github": "https://github.com/mariomarcolongo",
   "linkedin": "https://www.linkedin.com/in/mario-marcolongo",
   "currentPositioning": "Research & Technical Operations",
   "location": "Based in Italy · EU citizen · Seeking opportunities abroad",
@@ -203,6 +203,63 @@ function createMarioDossier() {
       "evidenceType": "user_supplied_institutional_transcript",
       "limitation": "Based on transcript text supplied by the student, dated 19 September 2026. The private transcript is not published. This is one completed course in a non-degree Open UAS pathway, not an awarded degree or proof of professional programming proficiency.",
       "visibility": "public"
+    },
+    {
+      "id": "atlas-pr-69-accepted",
+      "text": "Contributed merged PR #69: a human-reviewable source metadata and rights-evidence audit.",
+      "sourceUrl": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/69",
+      "sourceOwner": "upstream_project",
+      "evidenceType": "external_acceptance",
+      "engagementType": "open_source_contribution",
+      "limitation": "The audit compares metadata and preserves retrieval evidence for human review; it does not certify citations or reuse rights. Most added lines are generated reports and evidence, not handwritten tooling.",
+      "startDate": "2026-09-22",
+      "endDate": "2026-09-22",
+      "observedAt": "2026-09-30",
+      "lastReviewedAt": "2026-09-30",
+      "visibility": "public"
+    },
+    {
+      "id": "atlas-pr-70-accepted",
+      "text": "Contributed merged PR #70: 15 missing source locators and clarified publication provenance.",
+      "sourceUrl": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/70",
+      "sourceOwner": "upstream_project",
+      "evidenceType": "external_acceptance",
+      "engagementType": "open_source_contribution",
+      "limitation": "Acceptance covers source traceability and bibliographic changes; no Lean theorem, proof or formalization-coverage change is claimed.",
+      "startDate": "2026-09-28",
+      "endDate": "2026-09-28",
+      "observedAt": "2026-09-30",
+      "lastReviewedAt": "2026-09-30",
+      "visibility": "public"
+    },
+    {
+      "id": "atlas-paper-draft",
+      "text": "Listed as a coauthor of the September 2026 draft “The AI Safety Formalization Atlas: a machine-checked memory for AI safety mathematics.”",
+      "sourceUrl": null,
+      "sourceNote": "Draft title and author page supplied by the contributor; no public manuscript link supplied.",
+      "sourceOwner": "project_authors",
+      "evidenceType": "contributor_supplied_draft",
+      "engagementType": "research_collaboration",
+      "limitation": "Draft status; publication and peer review are not established. The supplied page lists Metropolia University of Applied Sciences as affiliation, with permission confirmed by the contributor. It does not establish employment or a degree. Individual manuscript contributions are not yet specified here.",
+      "startDate": "2026-09",
+      "endDate": null,
+      "observedAt": "2026-09-30",
+      "lastReviewedAt": "2026-09-30",
+      "visibility": "public"
+    },
+    {
+      "id": "hypermandala-public-artifact",
+      "text": "Created Hypermandala, a public interactive 2D, 3D and 4D geometry explorer.",
+      "sourceUrl": "https://hypermandala.mariomarcolongo.com/",
+      "sourceOwner": "project_maintainer",
+      "evidenceType": "public_artifact",
+      "engagementType": "independent_project",
+      "limitation": "The working public interaction establishes an inspectable visualization project, not adoption, revenue or an independent mathematical or engineering assessment. The source repository was private at review; public source availability is not established. Forms are procedural interpretations, not historical reconstructions.",
+      "startDate": "2026-09",
+      "endDate": null,
+      "observedAt": "2026-09-30",
+      "lastReviewedAt": "2026-09-30",
+      "visibility": "public"
     }
   ],
   "projects": [
@@ -212,7 +269,7 @@ function createMarioDossier() {
       "hook": "Scientific evidence behind published work",
       "route": "/work/entropy",
       "status": "Paid contractor · Jun 2023–Present",
-      "text": "Research, fact-checking and production support for 80 published science pieces, alongside website operations.",
+      "text": "Scientific research, fact-checking, script development and visual production for Entropy for Life, plus the design, build and operation of its WordPress website.",
       "claimIds": [
         "entropy-published-work"
       ],
@@ -226,32 +283,36 @@ function createMarioDossier() {
         {
           "label": "Published science content",
           "url": "https://entropyforlife.it/"
+        },
+        {
+          "label": "Author articles",
+          "url": "https://entropyforlife.it/autore/mario-marcolongo/"
         }
       ],
       "sections": [
         {
-          "heading": "Problem",
-          "text": "Published science content has to communicate clearly while remaining faithful to the underlying evidence. Sources differ in design, scope and certainty; a useful script or article must preserve those distinctions without asking the audience to read every paper. My contribution sits inside that production process, alongside the creator’s editorial decisions and other contributors’ work."
+          "heading": "Scientific research, writing and fact-checking",
+          "text": "Since June 2023, I have worked as a paid contractor on primary-literature research, scientific fact-checking and script development. Depending on the assignment, I write, co-write or review content, check claims against sources and adapt English-language evidence for Italian audiences, preserving terminology and scientific context."
         },
         {
-          "heading": "My contribution",
-          "text": "I have contributed paid research, scientific fact-checking and production support since June 2023. Responsibilities varied by assignment: retrieving scientific sources, checking claims against the source material and supporting English-to-Italian localization where relevant. Publishing and technical website operations became part of my responsibilities in September 2023. This is a contractor relationship, not a claim to have created every component of the channel or its output."
+          "heading": "Data analysis and visual production",
+          "text": "My work includes collecting and organizing data, creating charts and maps, preparing slides and on-screen assets, and researching images. I also contribute to short-form content and selected thumbnail concepts or production, independently or in collaboration with the video editor. Responsibilities vary by project."
         },
         {
-          "heading": "Result",
-          "text": "The dated organizational work record attributes contributions to 80 published pieces: 55 videos, four articles and 21 short-form pieces. Eleven thumbnail contributions overlap with that work and are not eleven additional published pieces. The record connects the contribution to public outputs rather than using the organization’s audience as a personal performance metric. No quantified increase in accuracy, reach or production speed is asserted."
+          "heading": "Website design, build and operations",
+          "text": "I designed and built entropyforlife.it in WordPress. Since September 2023, my work has included responsive design, publishing, configuration and functionality changes, OVHcloud hosting, DNS, SSL and technical SEO. This combines initial website delivery with ongoing responsibility for its operation."
         },
         {
-          "heading": "How to inspect the work",
-          "text": "Start with the organizational work record, which links the published pieces. Choose a piece and distinguish its public credits and source material from the broader description of my role here. The record supports attribution to real outputs; it does not assign identical responsibilities to me on every item. The H5N1 image is an example of the published science content, not a stand-alone scientific finding or an image offered as proof of sole authorship."
+          "heading": "Examples to inspect",
+          "text": "The organizational work record links four representative areas: the website and infrastructure, the shark-attack map, analysis of great-white-shark length, and H5N1 source research and articles. These show different parts of the work rather than treating every contribution as the same task."
         },
         {
-          "heading": "Evidence ownership and limits",
-          "text": "The attribution page belongs to Entropy for Life, on a website I help manage. It is an organizational work record, not wholly independent verification of each underlying scientific claim. The client’s editorial voice, audience and overall production are not personally attributable achievements. A specific reference would require the person’s permission; no private correspondence is presented as a public endorsement."
+          "heading": "Published contribution record",
+          "text": "The dated record lists contributions to 55 videos, four articles and 21 short-form pieces: 80 published pieces in total. Eleven selected thumbnail contributions overlap with these projects and are not added to that total. The record describes varying combinations of research, writing, data analysis and visual production."
         },
         {
-          "heading": "What this demonstrates",
-          "text": "The work supports scientific source retrieval, fact-checking, source-faithful communication and delivery within an ongoing paid relationship. Website operations add practical publishing experience. The evidence is strongest when a reviewer follows the output and asks about the particular assignment. It does not establish a medical qualification, original clinical research or independent software-engineering proficiency."
+          "heading": "Attribution",
+          "text": "The linked work record is published on the Entropy for Life website, which I help manage. It is an organizational attribution record; project-specific credits describe shared work. Brand audience figures and channel-wide performance are not presented as my personal results."
         }
       ],
       "highlight": {
@@ -264,16 +325,27 @@ function createMarioDossier() {
     {
       "id": "atlas",
       "name": "AI Safety Formalization Atlas",
-      "hook": "Diagnosing repository tooling problems",
+      "hook": "Making research sources traceable",
       "route": "/work/atlas",
-      "status": "Open-source contributor · Sep 2026",
-      "text": "Diagnosed a macOS validation failure and contributed accepted changes to repository tooling and instructions.",
+      "status": "Open-source contributor · Draft-paper coauthor · Sep 2026",
+      "text": "Five merged contributions to source auditing, citation provenance and repository tooling; listed coauthor of the September 2026 Atlas paper draft.",
       "claimIds": [
         "atlas-pr-52-accepted",
         "atlas-pr-54-accepted",
-        "atlas-pr-61-accepted"
+        "atlas-pr-61-accepted",
+        "atlas-pr-69-accepted",
+        "atlas-pr-70-accepted",
+        "atlas-paper-draft"
       ],
       "links": [
+        {
+          "label": "Source audit · PR #69",
+          "url": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/69"
+        },
+        {
+          "label": "Source locators · PR #70",
+          "url": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/70"
+        },
         {
           "label": "Accepted PR #52",
           "url": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/52"
@@ -289,40 +361,37 @@ function createMarioDossier() {
       ],
       "sections": [
         {
-          "heading": "Problem",
-          "text": "A validation workflow should distinguish defects in the submitted work from defects in the checking environment. During repository work on the AI Safety Formalization Atlas, macOS compatibility exposed an assumption inside the workflow itself. Quiet mode could fail before the intended checks ran. That made an apparently simple validation failure a question about how the command was being invoked."
+          "heading": "A usable source trail",
+          "text": "Formal mathematics still depends on knowing which source, version and statement a result refers to. My recent Atlas work makes bibliographic comparisons inspectable and references easier to follow. The public contribution record now contains five merged PRs, each with its own scope and review trail."
         },
         {
-          "heading": "My contribution",
-          "text": "PR #52 addressed migration validation portability. I worked through the observable failure and a narrow, reviewable change using AI-assisted implementation. The Bash 3.2 issue concerned empty-array expansion under set -u; the quiet recursive invocation was changed to keep the argument array nonempty. The same contribution activated the CI virtual environment explicitly, checked actual directory-entry case for Lean targets and excluded Finder metadata. These are tooling and repository-hygiene changes."
+          "heading": "Source metadata and rights-evidence audit",
+          "text": "PR #69, merged on 22 September 2026, adds a reproducible audit that compares catalogue entries with Crossref, arXiv and public-page metadata. It saves dated evidence and generates a report of differences, missing information and retrieval failures for human review. Bibliographic comparison is separate from registry validation; licence observations remain distinct from a rights determination. The PR records a 109-work snapshot and full local validation. Those are dated audit and validation results, not counts of research I personally formalized."
         },
         {
-          "heading": "Checks and result",
-          "text": "The PR description records the quiet gate invocation, focused compatibility and coverage tests with 27 passing tests, type checking and whitespace checks. Those are the checks reported for that contribution; this portfolio build does not rerun them or turn their result into an assurance about every environment. The upstream maintainer merged PR #52 on 3 September 2026. The public diff and review are the evidence of what changed and what was accepted."
+          "heading": "Missing locators and publication provenance",
+          "text": "PR #70, merged on 28 September, adds 15 missing source locators and enriches selected references. It preserves the cited technical report where a later journal version also exists, with supplementary publication information. My work included verifying locators and statement correspondence for selected sources. Automated retrieval failures remain visible; they are not treated as proof of an incorrect citation."
         },
         {
-          "heading": "The other accepted contributions",
-          "text": "PR #54 added portable instruction adapters around the existing repository instructions. Its public record includes a review correction to an import reference and a limitation: the full gate stopped because the local Python lacked PyYAML. PR #61 reorganized repository instructions into task-scoped policy files and a small routing entry point. Its acceptance occurred on 6 September 2026. These contributions concern how repository guidance is found and used, not new safety theorems."
+          "heading": "Earlier repository contributions",
+          "text": "PR #52 diagnosed and repaired a Bash 3.2 validation failure on macOS and improved migration checks. PR #54 added portable instruction adapters; PR #61 reorganized repository guidance into task-scoped policy files. These earlier contributions address tooling and repository instructions. Their public diffs describe the specific changes and validation limits."
         },
         {
-          "heading": "Scope and authorship",
-          "text": "I am an open-source contributor to the Atlas. I do not claim authorship of the project, its formalizations or the underlying research. The accepted portability change did not modify a Lean theorem, proof or toolchain. Public maintainer acceptance is a meaningful external signal about a bounded contribution. It is not a substitute for an independent assessment of my programming proficiency or an independent review of the project’s scientific conclusions."
+          "heading": "Paper draft and affiliation",
+          "text": "The September 2026 draft “The AI Safety Formalization Atlas: a machine-checked memory for AI safety mathematics” lists me as a coauthor alongside Mario Brčić, Luka Hobor, Mihael Kovač and Adrian Satja Kurdija. The author page supplied for this portfolio lists Metropolia University of Applied Sciences, Espoo, Finland; Metropolia’s permission to use that affiliation is confirmed by me. The manuscript is a draft, with no public link supplied here. Publication and peer review are not claimed; the affiliation does not change my Open UAS, non-degree study status."
         },
         {
-          "heading": "How to verify",
-          "text": "Open PR #52 and inspect Files changed alongside its description. The Bash change is useful to compare with the visible symptom: a validation command stopping at its own invocation. Then read the separate records for #54 and #61 rather than treating three merged PRs as three instances of the same work. Their dates and validation boundaries remain attached to the individual changes."
-        },
-        {
-          "heading": "What I bring to a similar problem",
-          "text": "This case shows a practical approach to troubleshooting: observe the failing behavior, inspect the environment assumption, narrow the change and leave a public review trail. My contribution includes defining the problem, inspecting behavior, testing and diagnosing failures while using AI tools extensively for implementation. The next stronger evidence would be repeated delivery or an independently assessed task; it is not claimed here as an achievement already completed."
+          "heading": "Individual contribution and project scope",
+          "text": "The linked PRs establish my accepted work on source quality, provenance and tooling, with AI-assisted implementation. I do not attribute the Atlas’s library size, catalogue totals, formal proofs or mathematical findings to myself. The author page establishes draft coauthorship; a more specific manuscript-contribution statement will require the individual roles to be documented. Review the public diffs for the concrete scope of my work."
         }
       ],
       "highlight": {
-        "value": "3",
+        "value": "5",
         "label": "merged contributions",
-        "detail": "Portability · instruction adapters · documentation",
-        "caption": "Upstream acceptance · September 2026"
-      }
+        "detail": "Source audit · citation provenance · tooling",
+        "caption": "Upstream acceptance · reviewed 30 September 2026"
+      },
+      "reviewedAt": "2026-09-30"
     },
     {
       "id": "yourself-to-science",
@@ -353,7 +422,7 @@ function createMarioDossier() {
         },
         {
           "heading": "My contribution",
-          "text": "I maintain Yourself to Science as an independent research-participation directory. My work includes defining the resource structure, organizing entries and linking source records. Technical implementation is AI-assisted. My contribution is to the requirements, information organization, behavior review and maintenance of the resource; it is not a claim to conduct the studies listed or to represent the institutions behind them."
+          "text": "I founded the directory and defined its inclusion criteria, verification fields, provenance model, licensing boundaries and update process. I coordinate AI-assisted implementation, inspect behavior, test releases, diagnose deployment issues and maintain the service."
         },
         {
           "heading": "Result",
@@ -368,8 +437,8 @@ function createMarioDossier() {
           "text": "A publicly deposited DOI provides a persistent record. It does not establish peer review of the directory or scientific validation of its design. Wikidata references establish the referenced URL’s appearance in structured records, with their own provenance. They do not independently verify every statement on the website. No verified user count, revenue figure or effect on recruitment is claimed."
         },
         {
-          "heading": "What this demonstrates",
-          "text": "The relevant work is information organization with inspectable sources, practical requirements and continued maintenance. The useful hiring question is whether the entries and changes are clear enough for someone else to review. The directory is presented as one independent project, separate from paid Entropy work and accepted Atlas contributions, so its evidence is not mistaken for employment or institutional endorsement."
+          "heading": "Ongoing responsibility",
+          "text": "The work combines resource selection, information architecture, provenance and licensing decisions, functional testing and maintenance. The directory provides a practical way to compare opportunities and reach the original institutions."
         }
       ],
       "highlight": {
@@ -435,7 +504,7 @@ function createMarioDossier() {
       "hook": "A practical tool for research-result workflows",
       "route": "/notandia",
       "status": "Independent project · AI-assisted implementation",
-      "text": "An AI-assisted browser tool with released versions and source development documented separately.",
+      "text": "A browser extension and separate Zotero plugin for research-result and reference workflows. I define product requirements, test behavior and manage AI-assisted development and releases.",
       "claimIds": [
         "notandia-source-release"
       ],
@@ -459,8 +528,8 @@ function createMarioDossier() {
           "text": "Research-result workflows can make it difficult to distinguish a publisher-level signal from an article-specific notice. A tool must explain that difference and give the reader control. A publisher’s inclusion in a watchlist does not by itself establish that a particular paper is unreliable, retracted or scientifically incorrect."
         },
         {
-          "heading": "My contribution",
-          "text": "Notandia continues the earlier MDPI Filter project. I defined product requirements and research-result behavior, inspected implementation and tested AI-assisted changes. Current browser source and the Zotero source are maintained separately. My contribution includes diagnosing behavior and maintaining documentation; this is an independent project, not an institutional research-integrity service or an independent assessment of programming proficiency."
+          "heading": "Product ownership and implementation",
+          "text": "Notandia continues MDPI Filter. I define the product requirements and evidence hierarchy, inspect matching and API behavior, reproduce failures and guide AI-assisted implementation. My work includes cross-browser and Zotero testing, documentation, release verification and deployment. Browser and Zotero sources are maintained separately."
         },
         {
           "heading": "Released record versus source development",
@@ -475,8 +544,8 @@ function createMarioDossier() {
           "text": "Chrome: legacy listing retained for continuity; inspected version 0.0.2, June 2025. Edge: separate listing, whose installed version must be checked independently. Browser source: canonical Notandia repository, development tracked independently of store availability. Zotero: separate source repository with its own scope. No cross-store feature-parity claim is made."
         },
         {
-          "heading": "What this demonstrates",
-          "text": "The inspectable work concerns requirements, information-quality distinctions, functional testing and release troubleshooting. The useful output is a tool whose behavior and limits can be examined. A successful deployment alone does not prove scientific accuracy or production readiness; reviewers should use the relevant release record and a reproducible example for the version they are assessing."
+          "heading": "Research workflow design",
+          "text": "The browser source supports publisher context and formal-notice workflows; the Zotero source focuses on item and reference detection. I distinguish publisher-level context from article-level evidence and test matching behavior to reduce ambiguous results. The source and release links above establish which version is available; development capabilities should not be assumed to exist in every store build."
         }
       ]
     },
@@ -486,7 +555,7 @@ function createMarioDossier() {
       "hook": "Making a relationship easier to inspect",
       "route": "/work/scientific-visualizations",
       "status": "Public diagrams and data views",
-      "text": "Selected diagrams and data views with source material, assumptions and documented reuse where available.",
+      "text": "Scientific diagrams, charts and maps across Wikimedia Commons, Tableau Public and Flourish, with links to original files and interactive views.",
       "claimIds": [],
       "image": "/media/work/wikimedia-clinical-overlap.svg",
       "alt": "Diagram of overlapping genes associated with clinical phenotypes",
@@ -498,6 +567,10 @@ function createMarioDossier() {
         {
           "label": "Tableau data views",
           "url": "https://public.tableau.com/app/profile/mario.marcolongo/vizzes"
+        },
+        {
+          "label": "Flourish charts and maps",
+          "url": "https://app.flourish.studio/@Digressivo"
         }
       ],
       "sections": [
@@ -533,7 +606,7 @@ function createMarioDossier() {
       "links": [
         {
           "label": "Source and operating instructions",
-          "url": "https://github.com/jnton/english-wikipedia-link-converter-telegram-bot"
+          "url": "https://github.com/mariomarcolongo/english-wikipedia-link-converter-telegram-bot"
         }
       ],
       "claimIds": [],
@@ -551,13 +624,47 @@ function createMarioDossier() {
           "text": "Source history and operating instructions support inspection of the implementation. Private, group and inline behavior should be tested against the version being assessed. No uptime guarantee, independently assessed AWS proficiency or production-readiness certification is claimed."
         }
       ]
+    },
+    {
+      "id": "hypermandala",
+      "name": "Hypermandala",
+      "hook": "Explore geometry across dimensions",
+      "route": "/work/hypermandala",
+      "status": "Creator · Independent visualization experiment",
+      "reviewedAt": "2026-09-30",
+      "text": "An interactive geometry explorer connecting 2D plans, 3D forms and 4D projections, with direct controls for rotation, projection and dimensional collapse.",
+      "claimIds": [
+        "hypermandala-public-artifact"
+      ],
+      "links": [
+        {
+          "label": "Try the explorer",
+          "url": "https://hypermandala.mariomarcolongo.com/"
+        }
+      ],
+      "image": "/media/work/hypermandala.webp",
+      "alt": "Hypermandala geometry explorer with dimensional controls and a library of geometric forms.",
+      "sections": [
+        {
+          "heading": "A visual question you can manipulate",
+          "text": "Hypermandala makes higher-dimensional geometry explorable through a browser interface. Choose a form, move between 2D, 3D and 4D, rotate in coordinate planes and collapse a dimension. The form library includes geometric patterns, specific yantras and architecture-inspired abstractions."
+        },
+        {
+          "heading": "Implementation and inspectable behavior",
+          "text": "The live explorer offers six-plane rotation, projection controls, a projected coordinate basis and a library of procedural forms. Moving from 2D to 4D produces staged dimensional transitions. The public website can be inspected directly; the linked source repository was private at the 30 September 2026 review, so public source availability is not claimed. Technical implementation is AI-assisted, as with my other projects."
+        },
+        {
+          "heading": "What this contributes to my portfolio",
+          "text": "This is a practical sample of interactive visualization and product exploration: a visible interface with behavior visitors can manipulate and inspect. It complements my scientific diagrams and data views. It is an independent experiment; usage, learning outcomes and commercial demand have not been established."
+        }
+      ]
     }
   ],
   "cv": {
     "default": {
       "title": "Research & Technical Operations",
       "filename": "Mario-Marcolongo-Research-Technical-Operations.pdf",
-      "summary": "Research and technical-operations contributor combining paid scientific fact-checking and website operations with sustained Wikimedia source work and volunteer research support. I investigate inconsistencies, organize evidence and help turn findings into usable outputs."
+      "summary": "Research and technical-operations contributor combining paid scientific research and website delivery with Wikimedia source work, volunteer research support and accepted AI-safety source-quality contributions. I investigate inconsistencies, organize evidence and turn findings into usable outputs."
     },
     "technical": {
       "title": "Technical Operations | Troubleshooting & Data Quality",
@@ -567,33 +674,32 @@ function createMarioDossier() {
     "aiEvaluation": {
       "title": "AI Evaluation & Research Support",
       "filename": "Mario-Marcolongo-AI-Evaluation-Research-Support.pdf",
-      "summary": "Independent AI evaluator with a dated Gray Swan competition record and paid scientific fact-checking experience. I investigate model behavior, reconcile sources and document evidence, drawing on sustained Wikimedia work and practical research support."
+      "summary": "Independent AI evaluator with a dated Gray Swan competition record, paid scientific research experience and accepted Atlas source-quality contributions. I investigate model behavior, reconcile sources and document evidence."
     }
   },
   "cvBullets": {
     "entropy": [
-      "Contributed research, fact-checking and production support to 80 documented published pieces: 55 videos, 4 articles and 21 short-form pieces.",
-      "Retrieved and checked scientific sources and supported source-faithful English-to-Italian localization; responsibilities varied by assignment.",
-      "Managed publishing and technical website operations alongside scientific content work."
+      "Research, fact-checking, script development and visual production across 80 published pieces: 55 videos, 4 articles and 21 short-form pieces.",
+      "Research primary literature and adapt English-language scientific evidence for Italian scripts, articles and visual explanations.",
+      "Designed and built entropyforlife.it in WordPress; manage responsive design, publishing, OVHcloud hosting, DNS/SSL and technical SEO."
     ],
     "atlas": [
-      "Contributed three merged pull requests covering macOS validation portability and repository instruction organization.",
-      "Diagnosed a Bash 3.2 compatibility failure and contributed a fix accepted by the upstream maintainer."
+      "Five merged PRs: source-metadata audit, 15 citation locators, validation portability and repository instructions.",
+      "Coauthor, The AI Safety Formalization Atlas (September 2026 draft)."
     ],
     "yts": [
       "Founded and maintain a directory of 55 research-participation resources, with documented inclusion decisions and linked sources.",
       "Organized resource information and maintained the AI-assisted website."
     ],
     "gray": [
-      "Ranked #74, top 6%, in the Gray Swan Proving Ground snapshot of 29 July 2026.",
-      "Conducted adversarial model-behavior testing and documented the dated platform results."
+      "Conducted adversarial model testing; ranked #74, top 6%, in the Gray Swan Proving Ground snapshot of 29 July 2026."
     ],
     "notandia": [
       "Developed and maintained an AI-assisted browser tool for research-result workflows.",
       "Defined requirements, tested behavior and diagnosed release issues; documented store releases separately from source development."
     ],
     "wikimedia": [
-      "Review citations, reconcile conflicting sources and improve structured metadata across Wikipedia, Wikidata and Wikimedia Commons.",
+      "Review citations, reconcile conflicting sources and improve structured metadata; create sourced scientific explanations and diagrams.",
       "Create sourced scientific explanations and diagrams, with attributable edits and public artifacts."
     ],
     "padua": [
@@ -608,28 +714,102 @@ function createMarioDossier() {
     {
       "name": "Entropy for Life",
       "period": "Jun 2023–Present · Paid contractor",
-      "text": "Scientific literature research, fact-checking and production support, alongside publishing and website operations.",
-      "route": "/work/entropy"
+      "text": "Scientific research, fact-checking, script development and visual production for Entropy for Life, plus the design, build and operation of its WordPress website.",
+      "route": "/work/entropy",
+      "details": [
+        "Since June 2023, I have worked as a paid contractor on primary-literature research, scientific fact-checking and script development. Depending on the assignment, I write, co-write or review content, check claims against sources and adapt English-language evidence for Italian audiences, preserving terminology and scientific context.",
+        "My work includes collecting and organizing data, creating charts and maps, preparing slides and on-screen assets, and researching images. I also contribute to short-form content and selected thumbnail concepts or production, independently or in collaboration with the video editor. Responsibilities vary by project.",
+        "I designed and built entropyforlife.it in WordPress. Since September 2023, my work has included responsive design, publishing, configuration and functionality changes, OVHcloud hosting, DNS, SSL and technical SEO. This combines initial website delivery with ongoing responsibility for its operation."
+      ]
     },
     {
       "name": "Wikipedia, Wikidata & Wikimedia Commons",
       "period": "Since 2018 · Public contributions",
       "text": "Citation review, source reconciliation, structured-data editing and scientific visualizations.",
-      "route": "/work/wikimedia"
+      "route": "/work/wikimedia",
+      "details": [
+        "Review citations, reconcile conflicting records and improve structured metadata across Wikipedia, Wikidata and Commons.",
+        "Create sourced biomedical explanations, original vector diagrams, charts and maps; maintain attributable revision and source trails."
+      ]
     },
     {
       "name": "University of Padua research project",
       "period": "2022–2025 · Volunteer collaboration",
       "text": "Focus-group facilitation, participant recruitment and accessible research procedures, working with a supervisor and fellow facilitator.",
-      "route": "/research-operations"
+      "route": "/research-operations",
+      "details": [
+        "Led or co-facilitated approximately 4–5 remote focus groups, supported recruitment and bibliographic research, and helped prepare accessible participation procedures.",
+        "Worked with Marta Panzeri, researchers and a second facilitator on consent, optional captions, written-chat participation, structured prompts, recording boundaries and handoffs. The individual role is self-reported; the linked university record establishes the project context."
+      ]
     },
     {
       "name": "Yourself to Science",
       "period": "Since 2024 · Founder, independent project",
       "text": "Research-participation directory: resource selection, information organization and ongoing website maintenance.",
-      "route": "/work/yourself-to-science"
+      "route": "/work/yourself-to-science",
+      "details": [
+        "Defined resource inclusion criteria, verification fields, provenance, licensing boundaries and the update process.",
+        "Coordinate AI-assisted implementation, inspect behavior, test releases, diagnose deployment issues and maintain the directory."
+      ]
     }
-  ]
+  ],
+  "orcidUrl": "https://orcid.org/0000-0003-2846-7115",
+  "visualArtifacts": [
+    {
+      "title": "Brain Disorder Gene Overlap",
+      "text": "Original vector diagram showing genes associated with overlapping clinical phenotypes. The Wikimedia file contains authorship, references and reuse information.",
+      "url": "https://commons.wikimedia.org/wiki/File:Overlapping_clinical_phenotypes_in_genes_associated_with_monogenic_forms_of_autism_spectrum_disorder_(ASD),_dystonia,_epilepsy_and_schizophrenia.svg",
+      "platform": "Wikimedia Commons",
+      "image": "/media/work/wikimedia-clinical-overlap.svg"
+    },
+    {
+      "title": "Carcinogen Levels in Yerba Maté",
+      "text": "Benzo(a)pyrene contamination measured across commercial brands and sampling years, synthesized from published HPLC and GC-MS toxicology literature.",
+      "url": "https://commons.wikimedia.org/wiki/File:Benzo(a)pyrene_Concentration_in_Processed_Yerba_Mat%C3%A9_Leaves_Sampled_in_2006,_2008,_and_2010_-_Column_Chart.svg",
+      "platform": "Wikimedia Commons",
+      "image": "/media/work/wikimedia-yerba.svg"
+    },
+    {
+      "title": "Global Vegetarian Diet Policies",
+      "text": "Comparative map of food-based dietary guidelines and their positions on vegetarian diets. Sources and dates are documented with the original artifact.",
+      "url": "https://commons.wikimedia.org/wiki/File:Countries_(States_and_Subnational_Regions)_and_Their_Positions_on_Vegetarian_Diets_in_Food-Based_Dietary_Guidelines.svg",
+      "platform": "Wikimedia Commons",
+      "image": "/media/work/wikimedia-vegetarian.svg"
+    },
+    {
+      "title": "Global Naturalization Residence Requirements",
+      "text": "Map of residence requirements for naturalization. A dated visualization of source material; consult current official rules for decisions.",
+      "url": "https://commons.wikimedia.org/wiki/File:Naturalization_Residence_Requirements_by_Country_(Years_of_Residence).svg",
+      "platform": "Wikimedia Commons"
+    },
+    {
+      "title": "Global Oesophageal Cancer Incidence (IARC 2022)",
+      "text": "Age-standardized global incidence rate per 100,000 synthesized from Globocan 2022 and International Agency for Research on Cancer data.",
+      "url": "https://commons.wikimedia.org/wiki/File:Oesophageal_Cancer,_Age-Standardized_Rate_(World)_per_100.000_of_Incidence_Cases,_Both_sexes,_Worldwide_in_2022.svg",
+      "platform": "Wikimedia Commons",
+      "image": "/media/work/flourish-oesophageal-cancer.svg"
+    },
+    {
+      "title": "Mortality patterns in Italy",
+      "text": "Interactive life-table visualization using ISTAT data. Open the Tableau view to inspect its controls, labels and data context.",
+      "platform": "Tableau Public",
+      "image": "/media/work/tableau-mortality-800.webp",
+      "url": "https://public.tableau.com/app/profile/mario.marcolongo/viz/TavolediMortalitSingoleEtItalia-ISTAT/Sheet1"
+    },
+    {
+      "title": "Flourish visualization collection",
+      "text": "Browse the published interactive charts and maps in my Flourish profile.",
+      "platform": "Flourish",
+      "url": "https://app.flourish.studio/@Digressivo"
+    },
+    {
+      "title": "Protein supply relative to bodyweight",
+      "text": "A country-level data exploration. The measure concerns food supply, not observed individual protein intake.",
+      "platform": "Independent data project",
+      "url": "https://mariomarcolongo.github.io/protein-by-bodyweight-country/"
+    }
+  ],
+  "updatedAt": "2026-09-30"
 },
   identity: {
     name: "Mario Marcolongo",
@@ -656,11 +836,11 @@ function createMarioDossier() {
     orcidUrl: "https://orcid.org/0000-0003-2846-7115",
     domain: "https://mariomarcolongo.com",
     linkedin: "https://www.linkedin.com/in/mario-marcolongo",
-    github: "https://github.com/jnton",
-    portfolioRepo: "https://github.com/jnton/mariomarcolongo",
+    github: "https://github.com/mariomarcolongo",
+    portfolioRepo: "https://github.com/mariomarcolongo/mariomarcolongo.com",
     agentReadyUrl: "https://isitagentready.com/mariomarcolongo.com?checks=robotsTxt%2Csitemap%2ClinkHeaders%2CdnsAid%2CmarkdownNegotiation%2CrobotsTxtAiRules%2CcontentSignals%2CwebBotAuth%2CapiCatalog%2CoauthDiscovery%2CoauthProtectedResource%2CauthMd%2CmcpServerCard%2Ca2aAgentCard%2CagentSkills%2CwebMcp%2Cx402%2Cmpp%2Cucp%2Cacp",
     sameAs: [
-      "https://github.com/jnton",
+      "https://github.com/mariomarcolongo",
       "https://orcid.org/0000-0003-2846-7115",
       "https://www.linkedin.com/in/mario-marcolongo",
       "https://commons.wikimedia.org/wiki/Special:CentralAuth/Digressivo",
@@ -820,7 +1000,7 @@ function createMarioDossier() {
       tech: ["Requirements", "Functional Testing", "AWS Lambda", "Lambda function URL", "GitHub Actions", "Serverless Deployment & Maintenance"],
       links: {
         bot: "https://t.me/ToEnWikipediaBot",
-        github: "https://github.com/jnton/english-wikipedia-link-converter-telegram-bot"
+        github: "https://github.com/mariomarcolongo/english-wikipedia-link-converter-telegram-bot"
       },
       highlights: [
         "Serverless Deployment: AWS Lambda function URL with SQS, DynamoDB, EventBridge and SNS",
@@ -836,8 +1016,8 @@ function createMarioDossier() {
       role: "Creator & Project Lead",
       tech: ["Concept Design", "Interactive Narration", "Requirements", "Behavioral Testing", "Network Visualization"],
       links: {
-        website: "https://jnton.github.io/emergent-humanity/",
-        github: "https://github.com/jnton/emergent-humanity"
+        website: "https://mariomarcolongo.github.io/emergent-humanity/",
+        github: "https://github.com/mariomarcolongo/emergent-humanity"
       },
       highlights: [
         "Sixteen Interactive Chapters: Essay narration combined with live simulation",
@@ -1056,7 +1236,7 @@ function createMarioDossier() {
       period: "Jan 2026",
       links: {
         website: "https://www.ebi.ac.uk/ena/browser/view/PRJEB109744",
-        github: "https://github.com/jnton/git-nome"
+        github: "https://github.com/mariomarcolongo/git-nome"
       },
       bullets: [
         "Donated personal 41× whole-genome sequencing raw paired-end FASTQ reads to the public domain under ENA BioSample SAMEA121950568.",

@@ -5,7 +5,7 @@ const pathname=Astro.url.pathname.replace(/\/$/,'')||'/';
 <a class="site-name" href="/">Mario Marcolongo</a>
 <nav aria-label="Main navigation">
 <a href="/work" aria-current={pathname==='/work'?'page':undefined}>Work</a>
-<a class="nav-experience" href="/#experience">Experience</a>
+<a class="nav-experience" href="/experience">Experience</a>
 <a href="/cv" aria-current={pathname==='/cv'?'page':undefined}>Résumé</a>
 <a href="/#contact">Contact</a>
 <button id="themeToggle" type="button" aria-label="Switch color theme" hidden>Theme</button>

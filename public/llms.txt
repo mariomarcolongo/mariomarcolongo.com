@@ -13,7 +13,8 @@ Mario Marcolongo works on scientific information quality, research operations an
 - Paid science work: https://mariomarcolongo.com/work/entropy
 - Wikimedia contributions: https://mariomarcolongo.com/work/wikimedia
 - Research support: https://mariomarcolongo.com/research-operations
-- Accepted repository contributions: https://mariomarcolongo.com/work/atlas
+- Atlas contributions and draft paper: https://mariomarcolongo.com/work/atlas
+- Interactive geometry: https://mariomarcolongo.com/work/hypermandala
 - Research-participation directory: https://mariomarcolongo.com/work/yourself-to-science
 - Source investigations: https://mariomarcolongo.com/investigations
 - Dated AI evaluation: https://mariomarcolongo.com/ai-evaluation
