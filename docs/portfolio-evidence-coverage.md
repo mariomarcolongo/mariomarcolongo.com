@@ -9,10 +9,10 @@ The website preserves breadth; the three application CVs select work relevant to
 | Atlas September 2026 draft coauthorship | Atlas card/case, evidence index, structured records; clearly draft | Yes | Yes | Yes |
 | Metropolia affiliation permission | Atlas case; contributor-confirmed, separate from study qualification | Education and draft entry | Education and draft entry | Education and draft entry |
 | Wikipedia/Wikidata/Commons source work and original scientific explanations | Homepage, `/experience`, `/work/wikimedia`, investigations | Yes | Yes | Yes |
-| Commons diagrams/maps, Tableau and Flourish | `/work/scientific-visualizations`: eight artifacts/collections, five local preview images and source links | Wikimedia summary + full-experience link | Same | Same |
+| Commons diagrams/maps, Tableau and Flourish | `/work/scientific-visualizations`: eleven artifacts/collections, nine original preview images, 51 published Flourish links and source context | Wikimedia summary + full-experience link | Same | Same |
 | Padua volunteer research support | Homepage, `/experience`, `/research-operations`, institutional context and individual attribution boundary | Yes | Not selected | Yes |
 | Yourself to Science ownership and maintenance | Homepage, `/experience`, detailed case | Yes | Not selected | Not selected |
-| Notandia browser/Zotero work | Work index, `/experience`, detailed case and source links | Not selected | Yes | Not selected |
+| Notandia browser/Zotero work | Homepage, work index, `/experience`, detailed case, current installed-source settings capture and source links | Not selected | Yes | Not selected |
 | Gray Swan evaluation | Work index, dated case and preserved platform evidence | Not selected | Not selected | Yes |
 | Hypermandala | Work index, supporting homepage experiment card, `/experience`, dedicated demo-linked case | Not selected | Not selected | Not selected |
 | Telegram/cloud workflow | Work index, `/experience`, detailed architecture case | Not selected | Not selected | Not selected |
@@ -31,4 +31,4 @@ Historical contribution totals, organization-wide audience reach and Atlas-wide 
 
 ## Presentation coverage after the UI revision
 
-The homepage selects three inspectable work examples and an original Commons visualization, with separate background and experiments sections. This changes prominence, not factual coverage: the complete experience, scientific visualization archive, investigations and project cases remain linked. The manually controlled work explorer repeats bounded evidence from those cases; its publication chart is a count of pieces with varying personal responsibilities, not a count of independently authored outputs. CV content and print layouts are unchanged in this screen-design pass.
+The homepage opens with the actual shark-attack map, then three published video previews, AIRC reel examples, current tool interfaces and original charts. The full Entropy case exposes 56 video entries, 17 thumbnail entries, 21 reels, four articles and the website, with attribution boundaries. All four cannabis videos are featured in the case. The profile is a collection, not a curated video selection. Publication-count graphics and a simulated extension card have been removed from the active presentation. The complete experience, scientific visualization archive, investigations and project cases remain linked. CV content and print layouts remain unchanged. See [work-media-provenance.md](work-media-provenance.md) for acquisition, dated totals, source-build scope and limitations.

@@ -13,7 +13,8 @@
       "status": "Paid contractor · Jun 2023–Present",
       "text": "Scientific research, fact-checking, script development and visual production for Entropy for Life, plus the design, build and operation of its WordPress website.",
       "claimIds": [
-        "entropy-published-work"
+        "entropy-published-work",
+        "entropy-airc-visuals"
       ],
       "links": [
         {
@@ -191,6 +192,27 @@
   ],
   "visualArtifacts": [
     {
+      "title": "Industrial hemp cultivation in Europe",
+      "text": "A seven-part interactive data story on cultivation area, harvest and production. This is a capture of the published first view, credited to Mario Marcolongo on 8 January 2025.",
+      "platform": "Flourish",
+      "image": "/media/work/flourish-cannabis-story.webp",
+      "url": "https://public.flourish.studio/story/2720661/"
+    },
+    {
+      "title": "Shark attacks in the Mediterranean and Europe",
+      "text": "Data collection, organization and an interactive map for Entropy for Life. Open the published article for the live Tableau view and its context.",
+      "platform": "Entropy for Life / Tableau",
+      "image": "/media/work/entropy-shark-map.webp",
+      "url": "https://entropyforlife.it/2024/07/24/mappa-attacchi-squali-nel-mar-mediterraneo-e-in-europa/"
+    },
+    {
+      "title": "White-shark size distributions",
+      "text": "Data analysis and visualization by life stage and sex for Entropy for Life. This preview is the actual published Tableau view.",
+      "platform": "Entropy for Life / Tableau",
+      "image": "/media/work/entropy-shark-size.webp",
+      "url": "https://entropyforlife.it/2024/08/02/lunghezza-squali-bianchi/"
+    },
+    {
       "title": "Brain Disorder Gene Overlap",
       "text": "Original vector diagram showing genes associated with overlapping clinical phenotypes. The Wikimedia file contains authorship, references and reuse information.",
       "url": "https://commons.wikimedia.org/wiki/File:Overlapping_clinical_phenotypes_in_genes_associated_with_monogenic_forms_of_autism_spectrum_disorder_(ASD),_dystonia,_epilepsy_and_schizophrenia.svg",
@@ -240,6 +262,7 @@
     {
       "title": "Protein supply relative to bodyweight",
       "text": "A country-level data exploration. The measure concerns food supply, not observed individual protein intake.",
+      "image": "/media/work/protein-explorer.webp",
       "platform": "Independent data project",
       "url": "https://mariomarcolongo.github.io/protein-by-bodyweight-country/"
     }
@@ -273,7 +296,7 @@
       "route": "/work/entropy",
       "details": [
         "Since June 2023, I have worked as a paid contractor on primary-literature research, scientific fact-checking and script development. Depending on the assignment, I write, co-write or review content, check claims against sources and adapt English-language evidence for Italian audiences, preserving terminology and scientific context.",
-        "My work includes collecting and organizing data, creating charts and maps, preparing slides and on-screen assets, and researching images. I also contribute to short-form content and selected thumbnail concepts or production, independently or in collaboration with the video editor. Responsibilities vary by project.",
+        "My work includes collecting and organizing data, creating charts and maps, preparing slides and on-screen assets, and researching images. I also contribute to short-form content and selected thumbnail concepts or production, independently or in collaboration with the video editor. Responsibilities vary by project. I personally created the data visualizations in the AIRC reel collaborations that use them; the whole reels are collaborative productions.",
         "I designed and built entropyforlife.it in WordPress. Since September 2023, my work has included responsive design, publishing, configuration and functionality changes, OVHcloud hosting, DNS, SSL and technical SEO. This combines initial website delivery with ongoing responsibility for its operation."
       ]
     },
@@ -361,6 +384,18 @@
     }
   },
   "claims": [
+    {
+      "id": "entropy-airc-visuals",
+      "text": "Created the data visualizations in the Entropy for Life × AIRC reels that feature them.",
+      "sourceUrl": "https://entropyforlife.it/mario-marcolongo-entropy-for-life/",
+      "sourceOwner": "contributor",
+      "evidenceType": "contributor_confirmation",
+      "engagementType": "paid_contractor",
+      "limitation": "Visualization authorship: contributor-confirmed, 30 September 2026. Public captions verify AIRC context, not individual production roles. Shared productions; no sole reel authorship or direct AIRC employment is implied.",
+      "observedAt": "2026-09-30",
+      "lastReviewedAt": "2026-09-30",
+      "visibility": "public"
+    },
     {
       "id": "entropy-published-work",
       "text": "Contributed research, fact-checking and production support to 80 documented published pieces: 55 videos, 4 articles and 21 short-form pieces.",
