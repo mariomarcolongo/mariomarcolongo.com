@@ -14,6 +14,9 @@ Open to relocation and international remote work. I can work in the EU as an Ita
 
 Paid contractor · Jun 2023–Present. Scientific research, fact-checking, script development and visual production for Entropy for Life, plus the design, build and operation of its WordPress website.
 
+Created the data visualizations in the Entropy for Life × AIRC reels that feature them. Visualization authorship: contributor-confirmed, 30 September 2026. Public captions verify AIRC context, not individual production roles. Shared productions; no sole reel authorship or direct AIRC employment is implied.
+Source: https://entropyforlife.it/mario-marcolongo-entropy-for-life/. Owner: contributor; evidence: contributor confirmation; observed: 2026-09-30.
+
 Contributed research, fact-checking and production support to 80 documented published pieces: 55 videos, 4 articles and 21 short-form pieces. The attribution record is on a site I help manage. Responsibilities varied by assignment; the organization’s audience is not my personally attributable reach.
 Source: https://entropyforlife.it/mario-marcolongo-entropy-for-life/. Owner: client organization; evidence: organizational work record; observed: 2026-09-12; event/start: 2023-06.
 
@@ -82,7 +85,7 @@ Metropolia University of Applied Sciences — Open UAS Information Technology pa
 
 University of Campania Luigi Vanvitelli — Medicine studies, degree not completed. 2020–2023.
 
-The 120 ECTS figure describes the Metropolia path extent. The student-supplied transcript dated 19 September 2026 records 3 awarded ECTS for Python Programming (TT00CB02), assessed Pass on 15 September 2026. degreeAwarded remains false and no expected degree completion is asserted. Private transcript identifiers are excluded.
+Metropolia’s 120 ECTS is the path extent. Transcript: 19 September 2026; Python Programming (TT00CB02), 3 ECTS, Pass, assessed 15 September 2026. No degree or expected graduation is established.
 
 ## Demonstrated work and current study
 
@@ -92,12 +95,12 @@ Italian native · English: EF SET C1 overall, 68/100 (Mar 2024). Issued 26 March
 
 ## Additional evidence
 
-Public-source investigations distinguish original records, attributed edits and interpretation: https://mariomarcolongo.com/investigations. Scientific diagrams and data views are supporting evidence; protein supply is not individual intake: https://mariomarcolongo.com/work/scientific-visualizations. The Telegram workflow uses a Lambda function URL with SQS, DynamoDB, EventBridge and SNS; this is source architecture, not a current uptime claim: https://mariomarcolongo.com/work/telegram. Hypermandala is an interactive geometry experiment: https://mariomarcolongo.com/work/hypermandala. The QCAE implementation presents an existing instrument and does not establish new psychometric validation.
+Source investigations distinguish records, attributable edits and interpretation: https://mariomarcolongo.com/investigations. Scientific diagrams and data views (protein supply is not individual intake): https://mariomarcolongo.com/work/scientific-visualizations. Telegram source architecture: Lambda function URL, SQS, DynamoDB, EventBridge and SNS; current uptime unverified: https://mariomarcolongo.com/work/telegram. Hypermandala is an interactive geometry experiment: https://mariomarcolongo.com/work/hypermandala. The QCAE implementation presents an existing instrument and does not establish new psychometric validation.
 
 ## Application documents and contact
 
-Default résumé: https://mariomarcolongo.com/cv. Technical operations: https://mariomarcolongo.com/cv-technical. AI evaluation and research support: https://mariomarcolongo.com/cv-ai. These views select shared facts for different roles.
+Default résumé: https://mariomarcolongo.com/cv. Technical operations: https://mariomarcolongo.com/cv-technical. AI evaluation and research support: https://mariomarcolongo.com/cv-ai. Role-specific views of shared facts.
 
 Email: me@mariomarcolongo.com. ORCID: https://orcid.org/0000-0003-2846-7115. Full experience: https://mariomarcolongo.com/experience. Visual collections: https://mariomarcolongo.com/work/scientific-visualizations. GitHub: https://github.com/mariomarcolongo. LinkedIn: https://www.linkedin.com/in/mario-marcolongo. Italian citizen, based in Italy. US work authorization is not established in this record.
 
-Evidence review date: 2026-09-12. Individual records retain their observation dates and limitations; private contact and transcript identifiers are excluded.
+Evidence review date: 2026-09-12. Individual records retain dates and limitations.
