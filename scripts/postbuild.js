@@ -5,6 +5,6 @@ const snapshot=require('../data/source.js').presence.aiEvaluationSnapshot;
 for(const folder of ['public','dist'])fs.writeFileSync(path.join(root,folder,'evidence/gray-swan-profile-2026-09-30.json'),JSON.stringify(snapshot,null,2)+'\n');
 for(const route of routes){const file=route==='/'?'index.html':route.replace(/^\//,'').replace(/\/$/,'')+'.html';if(!fs.existsSync(path.join(dist,file)))throw Error(`Missing canonical page: ${file}`);}
 for(const name of ['index','notandia','mdpi-filter','integrity','cv','cv-resume','cv-research','cv-editorial','cv-integrity','security','cv-technical','cv-ai'])fs.copyFileSync(path.join(dist,name+'.html'),path.join(root,name+'.html'));
-const sitemap='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+routes.map(route=>`<url><loc>https://mariomarcolongo.com${route}</loc></url>`).join('\n')+'\n</urlset>\n';
+const sitemap='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+routes.map(route=>`<url><loc>https://mariomarcolongo.com${route==='/'?route:route.replace(/\/$/,'')}</loc></url>`).join('\n')+'\n</urlset>\n';
 for(const folder of ['public','dist'])fs.writeFileSync(path.join(root,folder,'sitemap.xml'),sitemap);
 console.log('Canonical routes, sitemap and generated root mirrors updated.');

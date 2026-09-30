@@ -4,7 +4,7 @@ Mario Marcolongo works on scientific information quality, research operations an
 
 ## Current scope
 
-Research and technical-operations contributor combining paid scientific research and website delivery with Wikimedia source work, volunteer research support and accepted AI-safety source-quality contributions. I investigate inconsistencies, organize evidence and turn findings into usable outputs.
+Paid contractor since 2023 in scientific literature research, fact-checking, data visualization and WordPress website operations. Additional experience includes volunteer research support, Wikimedia source and metadata work, and five accepted AI Safety Formalization Atlas contributions.
 
 I use AI tools extensively for implementation. My contributions include defining problems and requirements, inspecting behavior, testing, diagnosing failures and maintaining the resulting tools. Each case identifies external review and remaining validation limits.
 
@@ -103,4 +103,4 @@ Default résumé: https://mariomarcolongo.com/cv. Technical operations: https://
 
 Email: me@mariomarcolongo.com. ORCID: https://orcid.org/0000-0003-2846-7115. Full experience: https://mariomarcolongo.com/experience. Visual collections: https://mariomarcolongo.com/work/scientific-visualizations. GitHub: https://github.com/mariomarcolongo. LinkedIn: https://www.linkedin.com/in/mario-marcolongo. Italian citizen, based in Italy. US work authorization is not established in this record.
 
-Evidence review date: 2026-09-12. Individual records retain dates and limitations.
+Evidence review date: 2026-09-30. Individual records retain dates and limitations.

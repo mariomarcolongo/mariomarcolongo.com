@@ -68,10 +68,14 @@
       "alt": "Published avian-influenza article showing Giacomo Moro Mauretto and Mario Marcolongo's coauthor byline"
     },
     "hypermandala": {
-      "image": "/media/work/hypermandala-live.webp",
+      "image": "/media/work/hypermandala-7cf4a50.webp",
       "url": "https://hypermandala.mariomarcolongo.com/",
-      "caption": "Refreshed live 4D Sri Yantra capture; new form additions remain experimental",
-      "alt": "Actual Hypermandala interface displaying a 4D Sri Yantra form and interactive controls"
+      "caption": "Fresh live 4D Sri Yantra capture, 30 September 2026; new form additions remain experimental",
+      "alt": "Current Hypermandala interface displaying the 4D Sri Yantra form with its form library collapsed and rotation controls visible",
+      "capturedAtUtc": "2026-09-30T14:57:13.792Z",
+      "sourceRevision": "7cf4a50c043fb3a4e570c3282a101a772203e3a8",
+      "executedAppSha256": "eae4435044b168cdce76240cb873c0ad81ed9a41dad6d888958f68a1325a1467",
+      "captureMethod": "Browser screenshot after a cache-bypassed reload; executed JavaScript verified against source revision 7cf4a50. Adjusted Sri Yantra solid in the 4D view, form library collapsed. JPEG compressed to WebP without altering the image content."
     },
     "protein": {
       "image": "/media/work/protein-explorer.webp",

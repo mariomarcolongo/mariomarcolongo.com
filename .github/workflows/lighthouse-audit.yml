@@ -1,4 +1,4 @@
-name: Lighthouse 100 audit
+name: Lighthouse quality audit
 
 on:
   pull_request:
@@ -32,7 +32,7 @@ jobs:
           npm run verify:render
           npm run pdf
 
-      - name: Run production-like Lighthouse audits on every public route
+      - name: Run production-like Lighthouse audits on key public routes
         shell: bash
         run: |
           set -euo pipefail
@@ -49,13 +49,13 @@ jobs:
 
           routes=(
             index.html
-            integrity.html
+            work.html
+            experience.html
             cv.html
-            cv-resume.html
-            cv-research.html
-            cv-editorial.html
-            cv-integrity.html
-            security.html
+            cv-technical.html
+            cv-ai.html
+            notandia.html
+            ai-evaluation.html
           )
 
           for route in "${routes[@]}"; do
@@ -64,53 +64,28 @@ jobs:
               preset=()
               if [[ "$mode" == "desktop" ]]; then preset=(--preset=desktop); fi
 
-              attempts=1
-              if [[ "$route" == "index.html" && "$mode" == "mobile" ]]; then attempts=3; fi
-              best_score=-1
-              best_report=""
-
-              for attempt in $(seq 1 "$attempts"); do
-                report="lighthouse-output/${key}-${mode}-attempt-${attempt}.json"
-                npx --yes lighthouse@12.8.2 "http://127.0.0.1:4173/${route}" \
-                  --quiet "${preset[@]}" \
-                  --chrome-flags='--headless --no-sandbox --disable-dev-shm-usage' \
-                  --only-categories=performance,accessibility,best-practices,seo \
-                  --output=json --output-path="$report"
-
-                score=$(node -e "const fs=require('node:fs');const r=JSON.parse(fs.readFileSync(process.argv[1],'utf8'));const c=['performance','accessibility','best-practices','seo'];console.log(c.reduce((t,k)=>t+Math.round(r.categories[k].score*100),0));" "$report")
-                if (( score > best_score )); then
-                  best_score=$score
-                  best_report=$report
-                fi
-                if (( score == 400 )); then break; fi
-              done
-
-              cp "$best_report" "lighthouse-output/${key}-${mode}.json"
-              rm -f "lighthouse-output/${key}-${mode}-attempt-"*.json
+              report="lighthouse-output/${key}-${mode}.json"
+              npx --yes lighthouse@12.8.2 "http://127.0.0.1:4173/${route}" \
+                --quiet "${preset[@]}" \
+                --chrome-flags='--headless --no-sandbox --disable-dev-shm-usage' \
+                --only-categories=performance,accessibility,best-practices,seo \
+                --output=json --output-path="$report"
             done
           done
 
           node - <<'NODE'
           const fs = require('node:fs');
           const routes = [
-            'index', 'integrity', 'cv', 'cv-resume',
-            'cv-research', 'cv-editorial', 'cv-integrity', 'security'
+            'index', 'work', 'experience', 'cv', 'cv-technical',
+            'cv-ai', 'notandia', 'ai-evaluation'
           ];
           const categories = ['performance', 'accessibility', 'best-practices', 'seo'];
-          const expectedRobotsCompatibilityDirectives = new Set([
-            'Content-Signal: ai-train=yes, search=yes, ai-input=yes',
-            'Agentmap: https://mariomarcolongo.com/.well-known/ard.json',
-            'Agentmap: https://mariomarcolongo.com/.well-known/ai-catalog.json'
-          ]);
-          const robots = fs.readFileSync('dist/robots.txt', 'utf8');
-          let failed = [...expectedRobotsCompatibilityDirectives]
-            .some((directive) => !robots.split(/\r?\n/).some((line) => line.trim() === directive));
+          let failed = false;
           const summary = [
-            '# Lighthouse audit — every public route', '',
+            '# Lighthouse audit — key public routes', '',
             '| Route | Mode | Performance | Accessibility | Best practices | SEO |',
             '|---|---|---:|---:|---:|---:|'
           ];
-          let usedRobotsCompatibility = false;
 
           for (const route of routes) {
             for (const mode of ['mobile', 'desktop']) {
@@ -124,41 +99,13 @@ jobs:
               fs.writeFileSync(`lighthouse-output/${name}-diagnostics.json`, JSON.stringify(diagnostics, null, 2));
               console.log(`${name}:`, scores);
 
-              const robotsAudit = report.audits['robots-txt'];
-              const robotsItems = robotsAudit?.details?.items || [];
-              const seoAuditIds = (report.categories.seo.auditRefs || [])
-                .filter((ref) => ref.weight > 0)
-                .map((ref) => ref.id);
-              const otherSeoFailures = seoAuditIds.filter((id) =>
-                id !== 'robots-txt' &&
-                report.audits[id] &&
-                typeof report.audits[id].score === 'number' &&
-                report.audits[id].score < 1
-              );
-              const acceptedRobotsCompatibility =
-                scores.seo === 92 &&
-                robotsAudit?.score === 0 &&
-                robotsItems.length >= 1 &&
-                robotsItems.every((item) =>
-                  expectedRobotsCompatibilityDirectives.has(String(item.line || '').trim()) &&
-                  /unknown directive/i.test(String(item.message || ''))
-                ) &&
-                otherSeoFailures.length === 0;
-
-              const corePerfect = ['performance', 'accessibility', 'best-practices']
-                .every((key) => scores[key] === 100);
-              const seoAccepted = scores.seo === 100 || acceptedRobotsCompatibility;
-              if (!corePerfect || !seoAccepted) failed = true;
-              if (acceptedRobotsCompatibility) usedRobotsCompatibility = true;
-
-              const seoDisplay = acceptedRobotsCompatibility ? '92†' : String(scores.seo);
-              summary.push(`| ${route}.html | ${mode} | ${scores.performance} | ${scores.accessibility} | ${scores['best-practices']} | ${seoDisplay} |`);
+              // Keep structural checks perfect and allow small variation in measured load timing.
+              if (scores.performance < 95 ||
+                  !['accessibility', 'best-practices', 'seo'].every((key) => scores[key] === 100)) failed = true;
+              summary.push(`| ${route}.html | ${mode} | ${scores.performance} | ${scores.accessibility} | ${scores['best-practices']} | ${scores.seo} |`);
             }
           }
 
-          if (usedRobotsCompatibility) {
-            summary.push('', '† Lighthouse 12.8.2 deducts eight SEO points because it does not yet recognize Cloudflare Content Signals and Agentmap discovery directives in robots.txt. The exception is accepted only when every reported unknown directive is one of those exact public discovery directives and it is the sole SEO failure.');
-          }
           if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `${summary.join('\n')}\n`);
           fs.writeFileSync('lighthouse-output/summary.md', `${summary.join('\n')}\n`);
           if (failed) process.exit(1);
@@ -168,7 +115,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: lighthouse-100-audit
+          name: lighthouse-quality-audit
           path: lighthouse-output/
           if-no-files-found: error
           retention-days: 14

@@ -12,7 +12,7 @@ function createMarioDossier() {
   "schemaVersion": 1,
   "name": "Mario Marcolongo",
   "canonicalUrl": "https://mariomarcolongo.com",
-  "reviewedAt": "2026-09-12",
+  "reviewedAt": "2026-09-30",
   "email": "me@mariomarcolongo.com",
   "github": "https://github.com/mariomarcolongo",
   "linkedin": "https://www.linkedin.com/in/mario-marcolongo",
@@ -27,9 +27,9 @@ function createMarioDossier() {
     "Data quality",
     "Systems diagnosis"
   ],
-  "headline": "Find the source. Fix the problem.",
-  "description": "Scientific fact-checking, source investigation and practical technical work, with published contributions, accepted open-source changes and inspectable evidence.",
-  "subheadline": "I investigate scientific claims, reconcile conflicting sources and troubleshoot practical workflows. Since 2023, I’ve combined paid science work with website operations, alongside sustained Wikimedia contributions and independent projects.",
+  "headline": "Scientific evidence. Practical tools.",
+  "description": "Mario Marcolongo: scientific fact-checking, data visualization and website operations. Paid work since 2023, accepted Atlas contributions and open-source tools.",
+  "subheadline": "I research and fact-check scientific content, create data visualizations, and build and operate websites. Paid work since 2023, alongside accepted open-source contributions and independent research tools.",
   "contact": "I’m looking for research operations, technical support and implementation opportunities outside Italy. Have a role where careful investigation leads to a practical result? Let’s talk.",
   "availability": "Open to relocation and international remote work. I can work in the EU as an Italian citizen; opportunities elsewhere depend on the role’s hiring and work-authorization arrangements.",
   "authorship": "I use AI tools extensively for implementation. My contributions include defining problems and requirements, inspecting behavior, testing, diagnosing failures and maintaining the resulting tools. Each case identifies external review and remaining validation limits.",
@@ -713,8 +713,8 @@ function createMarioDossier() {
           "url": "https://github.com/mariomarcolongo/hypermandala"
         }
       ],
-      "image": "/media/work/hypermandala-live.webp",
-      "alt": "Hypermandala geometry explorer with dimensional controls and a library of geometric forms.",
+      "image": "/media/work/hypermandala-7cf4a50.webp",
+      "alt": "Current Hypermandala interface displaying the 4D Sri Yantra form with rotation and dimension-stretch controls.",
       "sections": [
         {
           "heading": "A visual question you can manipulate",
@@ -739,12 +739,12 @@ function createMarioDossier() {
     "default": {
       "title": "Research & Technical Operations",
       "filename": "Mario-Marcolongo-Research-Technical-Operations.pdf",
-      "summary": "Research and technical-operations contributor combining paid scientific research and website delivery with Wikimedia source work, volunteer research support and accepted AI-safety source-quality contributions. I investigate inconsistencies, organize evidence and turn findings into usable outputs."
+      "summary": "Paid contractor since 2023 in scientific literature research, fact-checking, data visualization and WordPress website operations. Additional experience includes volunteer research support, Wikimedia source and metadata work, and five accepted AI Safety Formalization Atlas contributions."
     },
     "technical": {
-      "title": "Technical Operations | Troubleshooting & Data Quality",
+      "title": "Technical Support & Website Operations",
       "filename": "Mario-Marcolongo-Technical-Operations.pdf",
-      "summary": "Technical-operations candidate with experience maintaining websites, testing AI-assisted tools and diagnosing workflow failures. My record combines paid publishing operations, structured-data contributions and accepted repository changes. Developing Python, SQL and systems foundations through structured study."
+      "summary": "Technical support candidate with paid WordPress website delivery and ongoing publishing, hosting, DNS and SSL responsibilities. Define requirements, test browser-tool behavior and diagnose release issues in AI-assisted projects. Currently studying Python, SQL and systems fundamentals."
     },
     "aiEvaluation": {
       "title": "AI Evaluation & Research Support",
@@ -754,13 +754,13 @@ function createMarioDossier() {
   },
   "cvBullets": {
     "entropy": [
-      "Research, fact-checking, script development and visual production across 80 published pieces: 55 videos, 4 articles and 21 short-form pieces.",
+      "Contributed research, fact-checking, scripts and/or visuals to 80 published pieces: 55 videos, 4 articles and 21 short-form pieces; responsibilities vary by assignment.",
       "Research primary literature and adapt English-language scientific evidence for Italian scripts, articles and visual explanations.",
       "Designed and built entropyforlife.it in WordPress; manage responsive design, publishing, OVHcloud hosting, DNS/SSL and technical SEO."
     ],
     "atlas": [
       "Five merged PRs: source-metadata audit, 15 citation locators, validation portability and repository instructions.",
-      "Coauthor, The AI Safety Formalization Atlas (September 2026 draft)."
+      "Listed coauthor, The AI Safety Formalization Atlas (unpublished September 2026 draft)."
     ],
     "yts": [
       "Founded and maintain a directory of 55 research-participation resources, with documented inclusion decisions and linked sources.",

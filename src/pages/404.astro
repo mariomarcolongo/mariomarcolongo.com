@@ -1,4 +1,6 @@
 ---
-import Layout from '../layouts/Layout.astro';import SiteNav from '../components/SiteNav.astro';
+import Layout from '../layouts/Layout.astro';
+import SiteNav from '../components/SiteNav.astro';
+import SiteFooter from '../components/SiteFooter.astro';
 ---
-<Layout title="Page not found — Mario Marcolongo" noIndex={true}><SiteNav/><main id="main-content" class="presence-shell"><h1>Page not found.</h1><p>The requested resource is unavailable. <a href="/">Return to the portfolio</a> or <a href="/cv">open the current résumé</a>.</p></main></Layout>
+<Layout title="Page not found — Mario Marcolongo" description="This page is unavailable. Browse Mario Marcolongo’s current work or résumé." noIndex><SiteNav/><main id="main-content" class="presence-shell"><p class="eyebrow">404 · Page not found</p><h1>This page is unavailable.</h1><p>The link may have changed. You can find the current work and application documents below.</p><div class="actions"><a class="button primary" href="/">Go to the homepage</a><a class="button" href="/cv">View résumé</a><a href="/work">Browse work →</a></div></main><SiteFooter/></Layout>
