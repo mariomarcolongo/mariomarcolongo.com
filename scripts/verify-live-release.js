@@ -1,104 +1,88 @@
 #!/usr/bin/env node
-
-const baseUrl = (process.env.LIVE_BASE_URL || 'https://mariomarcolongo.com').replace(/\/$/, '');
-const attempts = Number.parseInt(process.env.LIVE_VERIFY_ATTEMPTS || '18', 10);
-const delayMs = Number.parseInt(process.env.LIVE_VERIFY_DELAY_MS || '10000', 10);
-const releaseId = process.env.LIVE_RELEASE_ID || `v2026.07.29-${Date.now()}`;
-
+const fs = require('node:fs');
+const path = require('node:path');
+const assert = require('node:assert/strict');
+const { createHash } = require('node:crypto');
+const { startStaticServer } = require('./lib/static-server.js');
+const P = require('../data/source.js').presence;
+const M = require('../data/work-media.json');
+const G = P.aiEvaluationSnapshot;
+const DIST = path.resolve(__dirname, '../dist');
+const local = process.argv.includes('--local');
+const attempts = Number(process.env.LIVE_VERIFY_ATTEMPTS || (local ? 1 : 18));
+const delayMs = Number(process.env.LIVE_VERIFY_DELAY_MS || 10000);
+const releaseId = process.env.LIVE_RELEASE_ID || `release-${Date.now()}`;
 const pages = [
-  {
-    path: '/',
-    required: [
-      '113',
-      '#74',
-      'top 6%',
-      '#365',
-      '29 July 2026',
-      '/media/work/gray-swan-profile-2026-07-29-1600.webp'
-    ],
-    forbidden: [
-      '<span class="v10-gs-caption"><span><strong>#75</strong>',
-      '<span><strong>110</strong><small>Total breaks</small></span>',
-      '<span><strong>#371</strong><small>Arena rank</small></span>'
-    ]
-  },
-  {
-    path: '/security',
-    required: [
-      '29 July 2026',
-      '#74',
-      '113',
-      '#365',
-      '28 unique breaks',
-      '1,120 points',
-      '/evidence/gray-swan-2026-07-29/'
-    ],
-    forbidden: [
-      'Counts and ranking are platform-reported snapshots as of 26 July 2026',
-      '#75 · top 6% · 26 July 2026'
-    ]
-  },
-  {
-    path: '/evidence/gray-swan-2026-07-29/',
-    required: [
-      'Gray Swan profile evidence',
-      '#74',
-      'Top 6%',
-      '113',
-      '255',
-      '03:35:50 CEST'
-    ],
-    forbidden: []
-  }
+  { path: '/', required: [P.name, `#${G.provingGround.rank}`, G.provingGround.percentile,
+    G.displayDate, `${G.provingGround.totalBreaks} platform-recorded breaks`,
+    M.screenshots.hypermandala.image, '/work/entropy', '/work/atlas', '/notandia', '/cv'] },
+  { path: '/ai-evaluation', required: [G.evidencePath, G.displayDate, '/cv-ai'] },
+  { path: G.evidencePath, required: [G.displayDate, `#${G.provingGround.rank}`,
+    G.provingGround.percentile, `${G.provingGround.totalBreaks} platform-recorded`,
+    `#${G.arena.rank}`, G.originalImage, G.originalSha256] },
+  { path: '/work/hypermandala', required: [M.screenshots.hypermandala.image,
+    'https://github.com/mariomarcolongo/hypermandala', 'experimental'] },
+  ...Object.entries(P.cv).map(([key, cv]) => ({ path: P.resumeRoutes[key], required:
+    [P.name, cv.title, `/${cv.filename}`, P.orcidUrl, '3 ECTS', 'non-degree'] }))
 ];
+const assets = [...new Set([M.screenshots.hypermandala.image, G.originalImage,
+  '/profile.json', `/evidence/gray-swan-profile-${G.observedAt}.json`,
+  ...Object.values(P.cv).map((cv) => `/${cv.filename}`)])];
+const sha256 = (bytes) => createHash('sha256').update(bytes).digest('hex');
+const htmlText = (value) => value.replace(/&amp;/g, '&').replace(/&#39;|&apos;/g, "'")
+  .replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
 
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-async function fetchText(pathname, attempt) {
-  const separator = pathname.includes('?') ? '&' : '?';
-  const url = `${baseUrl}${pathname}${separator}release=${encodeURIComponent(releaseId)}&attempt=${attempt}`;
+async function fetchBytes(baseUrl, pathname, attempt) {
+  const url = new URL(`${baseUrl}${pathname}`);
+  url.searchParams.set('release', releaseId);
+  url.searchParams.set('attempt', String(attempt));
   const response = await fetch(url, {
-    headers: {
-      'cache-control': 'no-cache, no-store, max-age=0',
-      pragma: 'no-cache',
-      'user-agent': 'mariomarcolongo-live-release-verifier/1.0'
-    },
-    cache: 'no-store',
-    redirect: 'follow'
+    headers: { 'cache-control': 'no-cache, no-store, max-age=0', pragma: 'no-cache',
+      'user-agent': 'mariomarcolongo-live-release-verifier/2.0' },
+    cache: 'no-store', redirect: 'follow', signal: AbortSignal.timeout(15000)
   });
-  const body = await response.text();
   if (!response.ok) throw new Error(`${pathname} returned HTTP ${response.status}`);
-  return body;
+  return Buffer.from(await response.arrayBuffer());
 }
 
-function validate(pathname, body, required, forbidden) {
-  const missing = required.filter((value) => !body.includes(value));
-  const stale = forbidden.filter((value) => body.includes(value));
-  if (missing.length || stale.length) {
-    const details = [];
-    if (missing.length) details.push(`missing ${missing.map(JSON.stringify).join(', ')}`);
-    if (stale.length) details.push(`contains stale ${stale.map(JSON.stringify).join(', ')}`);
-    throw new Error(`${pathname}: ${details.join('; ')}`);
-  }
-}
-
-let latestError = null;
-for (let attempt = 1; attempt <= attempts; attempt += 1) {
+async function main() {
+  assert.ok(Number.isInteger(attempts) && attempts > 0, 'Attempts must be a positive integer');
+  assert.ok(Number.isFinite(delayMs) && delayMs >= 0 && delayMs <= 60000,
+    'Retry delay must be between 0 and 60000 ms');
+  const expectedHashes = new Map(assets.map((asset) =>
+    [asset, sha256(fs.readFileSync(path.join(DIST, asset)))]));
+  const server = local ? await startStaticServer(DIST) : null;
+  const baseUrl = (server?.origin || process.env.LIVE_BASE_URL || P.canonicalUrl).replace(/\/$/, '');
+  let latestError;
   try {
-    for (const page of pages) {
-      const body = await fetchText(page.path, attempt);
-      validate(page.path, body, page.required, page.forbidden);
+    for (let attempt = 1; attempt <= attempts; attempt += 1) {
+      try {
+        for (const page of pages) {
+          const body = htmlText((await fetchBytes(baseUrl, page.path, attempt)).toString('utf8'));
+          const missing = page.required.filter((value) => !body.includes(value));
+          assert.equal(missing.length, 0, `${page.path}: missing ${missing.join(', ')}`);
+          assert.ok(!/private\.local|href=["'][^"']*\/private\//.test(body),
+            `${page.path}: private contact or application reference`);
+        }
+        for (const [asset, expected] of expectedHashes) {
+          assert.equal(sha256(await fetchBytes(baseUrl, asset, attempt)), expected,
+            `${asset}: served content differs from this build`);
+        }
+        console.log(`PASS: ${pages.length} current routes and ${assets.length} exact assets verified at ${baseUrl}.`);
+        return;
+      } catch (error) {
+        latestError = error;
+        console.log(`Attempt ${attempt}/${attempts}: ${error.message}`);
+        if (attempt < attempts) await new Promise((resolve) => setTimeout(resolve, delayMs));
+      }
     }
-    console.log(`PASS: live release ${releaseId} verified at ${baseUrl} on attempt ${attempt}.`);
-    process.exit(0);
-  } catch (error) {
-    latestError = error;
-    console.log(`Attempt ${attempt}/${attempts} not current yet: ${error.message}`);
-    if (attempt < attempts) await sleep(delayMs);
+    throw new Error(`Release did not become current: ${latestError?.message || 'unknown error'}`);
+  } finally {
+    if (server) await server.close();
   }
 }
 
-console.error(`FAIL: live release did not become current: ${latestError?.message || 'unknown error'}`);
-process.exit(1);
+main().catch((error) => {
+  console.error(`FAIL: ${error.message}`);
+  process.exitCode = 1;
+});

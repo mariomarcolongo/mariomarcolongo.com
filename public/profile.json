@@ -4,7 +4,9 @@
   "canonicalUrl": "https://mariomarcolongo.com",
   "orcidUrl": "https://orcid.org/0000-0003-2846-7115",
   "github": "https://github.com/mariomarcolongo",
-  "updatedAt": "2026-09-30",
+  "reviewedAt": "2026-09-30",
+  "linkedin": "https://www.linkedin.com/in/mario-marcolongo",
+  "email": "me@mariomarcolongo.com",
   "projects": [
     {
       "id": "entropy",

@@ -7,10 +7,10 @@ on:
       - scripts/capture-homepage-v4.js
       - src/pages/index.astro
       - src/pages/evidence/**
-      - src/styles/portfolio-v8.css
-      - src/styles/portfolio-v9-overrides.css
-      - src/styles/nav-editorial.css
-      - data/portfolio-human.js
+      - src/components/**
+      - src/styles/studio.css
+      - data/source.js
+      - data/work-media.json
       - public/media/work/**
       - .github/workflows/visual-audit-v4.yml
   workflow_dispatch:
@@ -40,9 +40,10 @@ jobs:
       - name: Preserve Gray Swan source asset
         shell: bash
         run: |
-          cp public/media/work/gray-swan-profile-2026-07-24.svg audit-v4/gray-swan-profile-2026-07-24.svg
+          SOURCE_ASSET=$(node -e "console.log('public'+require('./data/source.js').presence.aiEvaluationSnapshot.originalImage)")
+          cp "$SOURCE_ASSET" audit-v4/gray-swan-original.jpg
           cp audit-build/build.log audit-v4/build.log
-          sha256sum audit-v4/gray-swan-profile-2026-07-24.svg > audit-v4/gray-swan-profile-2026-07-24.sha256
+          sha256sum audit-v4/gray-swan-original.jpg > audit-v4/gray-swan-original.sha256
       - name: Upload visual audit
         if: always()
         uses: actions/upload-artifact@v4

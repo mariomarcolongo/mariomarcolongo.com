@@ -50,11 +50,13 @@ jobs:
       - name: Verify Notandia continuity and legacy-link safety
         run: node scripts/verify-notandia-transition.js
 
-      - name: Generate four specialized application PDFs
-        run: npm run pdf:resume
+      - name: Generate the three current application PDFs
+        run: npm run pdf
 
-      - name: Generate master CV PDF
-        run: npm run pdf:cv
+      - name: Verify current release routes and exact public assets locally
+        run: |
+          node scripts/verify-discovery.js
+          node scripts/verify-live-release.js --local
 
       - name: Check patch formatting
         run: git diff --check
@@ -73,7 +75,6 @@ jobs:
             public/llms.txt
             public/llms-full.txt
             public/cv-llm.txt
-            public/data/source.js
             index.html
             mdpi-filter.html
             integrity.html
@@ -83,10 +84,6 @@ jobs:
             cv-editorial.html
             cv-integrity.html
             security.html
-            Mario Marcolongo — AI Evaluation & Model Behavior CV.pdf
-            Mario Marcolongo — Scientific AI Quality & Research Data CV.pdf
-            Mario Marcolongo — Research Editorial & Community Operations CV.pdf
-            Mario Marcolongo — Trust Safety & Knowledge Integrity CV.pdf
-            Mario Marcolongo — Curriculum Vitae.pdf
+            public/Mario-Marcolongo-*.pdf
           if-no-files-found: ignore
           retention-days: 7

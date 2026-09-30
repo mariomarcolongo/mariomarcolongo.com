@@ -56,6 +56,12 @@ jobs:
       - name: Verify rendered pages and interactions
         run: npm run verify:render
 
+      - name: Generate current application PDFs and verify discovery metadata
+        run: |
+          npm run pdf
+          node scripts/verify-discovery.js
+          node scripts/verify-live-release.js --local
+
       - name: Deploy to Cloudflare Pages
         id: deploy
         uses: cloudflare/wrangler-action@v3

@@ -1,118 +1,54 @@
 #!/usr/bin/env node
-
+// Canonical owner of favicon, manifest and share-card assets. Run after identity changes.
 const fs = require('node:fs');
 const path = require('node:path');
-const puppeteer = require('puppeteer');
+const { launchBrowser } = require('./lib/browser');
+const P = require('../data/source.js').presence;
+const M = require('../data/work-media.json');
+const root = path.resolve(__dirname, '..');
+const pub = path.join(root, 'public');
+const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
-const ROOT = path.resolve(__dirname, '..');
-const PUBLIC = path.join(ROOT, 'public');
-const OG = path.join(PUBLIC, 'og');
-
-function escapeHtml(value) {
-  return String(value).replace(/[&<>"']/g, (char) => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-  }[char]));
+function card({label, title, text, image, caption}) {
+ const media = fs.readFileSync(path.join(pub, image));
+ return `<!doctype html><html lang="en"><meta charset="utf-8"><style>
+ *{box-sizing:border-box}body{margin:0;width:1200px;height:630px;background:#f4f5f7;color:#1c2736;font-family:Arial,sans-serif;padding:52px;display:grid;grid-template-columns:620px 428px;gap:48px}
+ .label{color:#536174;font-size:20px;line-height:1.4;margin:0 0 26px}h1{font-size:64px;line-height:1.03;letter-spacing:-2.5px;margin:0 0 27px}p{font-size:27px;line-height:1.4;margin:0}.brand{display:flex;align-items:center;gap:14px;font-size:20px;font-weight:bold;margin-bottom:44px}.brand img{width:38px;height:38px}.url{font-size:20px;color:#2452c6;margin-top:30px}
+ .artifact{align-self:center;background:#fff;border:1px solid #d7dee6;border-radius:14px;overflow:hidden}.artifact>img{width:100%;height:315px;object-fit:contain;background:#10141a;display:block}.artifact p{font-size:18px;color:#536174;padding:20px;line-height:1.45}
+ </style><body><div><div class="brand"><img alt="" src="data:image/svg+xml;base64,${fs.readFileSync(path.join(pub,'favicon.svg')).toString('base64')}">${esc(P.name)}</div><p class="label">${esc(label)}</p><h1>${esc(title)}</h1><p>${esc(text)}</p><p class="url">mariomarcolongo.com</p></div><div class="artifact"><img alt="" src="data:image/${image.endsWith('.webp')?'webp':'png'};base64,${media.toString('base64')}"><p>${esc(caption)}</p></div></body></html>`;
 }
 
-function socialCard({ eyebrow, title, subtitle, accent = '#d9593f', metrics = [] }) {
-  const metricMarkup = metrics.map((item, index) => {
-    const x = 74 + index * 252;
-    return `
-      <g transform="translate(${x} 456)">
-        <text x="0" y="0" font-family="Georgia,serif" font-size="48" fill="#17202a">${escapeHtml(item.value)}</text>
-        <text x="0" y="35" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#596875">${escapeHtml(item.label)}</text>
-      </g>`;
-  }).join('');
-
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-    <rect width="1200" height="630" fill="#f7f6f2"/>
-    <rect x="34" y="34" width="1132" height="562" rx="28" fill="#ffffff"/>
-    <circle cx="1088" cy="108" r="13" fill="${accent}"/>
-    <path d="M78 520V102l172 205 172-205v418" fill="none" stroke="#e7ebef" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="74" y="102" font-family="Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="2.2" fill="${accent}">${escapeHtml(eyebrow.toUpperCase())}</text>
-    <text x="74" y="190" font-family="Georgia,serif" font-size="60" fill="#17202a">${escapeHtml(title)}</text>
-    <foreignObject x="74" y="230" width="940" height="138">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="font:28px/1.38 Arial,sans-serif;color:#3d4a56;">${escapeHtml(subtitle)}</div>
-    </foreignObject>
-    ${metricMarkup}
-    <text x="74" y="570" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#17202a">mariomarcolongo.com</text>
-  </svg>`;
-}
-
-async function renderSvg(browser, svg, outputPath, width, height, transparent = false) {
-  const page = await browser.newPage();
-  try {
-    await page.setViewport({ width, height, deviceScaleFactor: 1 });
-    await page.setContent(`<!doctype html><html><head><style>*{box-sizing:border-box}html,body{margin:0;width:${width}px;height:${height}px;overflow:hidden;background:${transparent ? 'transparent' : '#f7f6f2'}}</style></head><body>${svg}</body></html>`, { waitUntil: 'load' });
-    await page.screenshot({ path: outputPath, type: 'png', omitBackground: transparent, clip: { x: 0, y: 0, width, height } });
-  } finally {
-    await page.close();
-  }
+function ico(png) {
+ const h=Buffer.alloc(6);h.writeUInt16LE(1,2);h.writeUInt16LE(1,4);
+ const e=Buffer.alloc(16);e.writeUInt8(32,0);e.writeUInt8(32,1);e.writeUInt16LE(1,4);e.writeUInt16LE(32,6);e.writeUInt32LE(png.length,8);e.writeUInt32LE(22,12);
+ return Buffer.concat([h,e,png]);
 }
 
 async function main() {
-  fs.mkdirSync(OG, { recursive: true });
-  const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox'] });
-  try {
-    const favicon = fs.readFileSync(path.join(PUBLIC, 'favicon.svg'), 'utf8')
-      .replace(/<svg([^>]*)viewBox="0 0 64 64"/, '<svg$1 width="100%" height="100%" viewBox="0 0 64 64"');
-    for (const size of [48, 180, 192, 512]) {
-      const name = size === 180 ? 'apple-touch-icon.png' : `favicon-${size}x${size}.png`;
-      await renderSvg(browser, favicon, path.join(PUBLIC, name), size, size, true);
-    }
-
-    await renderSvg(browser, socialCard({
-      eyebrow: 'Data quality · evidence research · AI evaluation',
-      title: 'Mario Marcolongo',
-      subtitle: 'Information retrieval, model-behavior evaluation, paid primary-source verification and public research directories.',
-      metrics: [
-        { value: '113', label: 'PLATFORM-DISPLAYED BREAKS' },
-        { value: '80', label: 'PUBLISHED CONTRIBUTIONS' },
-        { value: '55+', label: 'RESEARCH INITIATIVES' },
-        { value: '70+', label: 'PUBLIC VISUALIZATIONS' }
-      ]
-    }), path.join(OG, 'home.png'), 1200, 630);
-
-    await renderSvg(browser, socialCard({
-      eyebrow: 'Public AI evaluation evidence',
-      title: 'Model Behavior Record',
-      subtitle: 'Threat-surface selection, adversarial variation, conservative evidence capture and an archived Gray Swan public profile.',
-      accent: '#2257d6',
-      metrics: [
-        { value: '113', label: 'PLATFORM-DISPLAYED BREAKS' },
-        { value: '255', label: 'ARENA SUBMISSIONS' },
-        { value: '4', label: 'EVALUATION SURFACES' }
-      ]
-    }), path.join(OG, 'security.png'), 1200, 630);
-
-    await renderSvg(browser, socialCard({
-      eyebrow: 'Targeted application documents',
-      title: 'Evidence matched to the role',
-      subtitle: 'AI evaluation and model behavior · data quality · source verification · research and editorial coordination.',
-      accent: '#2f7254',
-      metrics: [
-        { value: '4', label: 'SPECIALIZED TWO-PAGE CVS' },
-        { value: '1', label: 'MASTER EVIDENCE RECORD' }
-      ]
-    }), path.join(OG, 'cv.png'), 1200, 630);
-
-    await renderSvg(browser, socialCard({
-      eyebrow: 'Source verification and public investigation',
-      title: 'Sources that survive scrutiny',
-      subtitle: 'Public-source investigation, provenance, citation reconciliation, structured metadata and explicit evidence limits.',
-      accent: '#7356a5',
-      metrics: [
-        { value: '4,317', label: 'WIKIMEDIA CONTRIBUTIONS' },
-        { value: '8 yrs', label: 'AUDITABLE PUBLIC WORK' }
-      ]
-    }), path.join(OG, 'integrity.png'), 1200, 630);
-  } finally {
-    await browser.close();
+ fs.mkdirSync(path.join(pub,'og'),{recursive:true});
+ const browser=await launchBrowser();
+ try {
+  const page=await browser.newPage();
+  const svg=fs.readFileSync(path.join(pub,'favicon.svg'),'utf8');
+  for(const size of [32,48,180,192,512]) {
+   await page.setViewport({width:size,height:size,deviceScaleFactor:1});
+   await page.setContent(`<style>body{margin:0;width:${size}px;height:${size}px}svg{display:block;width:100%;height:100%}</style>${svg}`,{waitUntil:'load'});
+   const png=Buffer.from(await page.screenshot({type:'png',omitBackground:true}));
+   fs.writeFileSync(path.join(pub,size===32?'favicon.ico':size===180?'apple-touch-icon.png':`favicon-${size}x${size}.png`),size===32?ico(png):png);
   }
-  console.log('Generated favicon PNGs and page-specific social preview cards.');
+  const cards={
+   home:{label:'Research & technical operations',title:'Scientific evidence. Practical tools.',text:'Paid scientific work, website operations and open-source contributions.',image:M.screenshots.hypermandala.image,caption:'Hypermandala: an independent visualization experiment.'},
+   cv:{label:'Application résumés',title:'Experience you can inspect.',text:'Research operations · Technical support · AI evaluation',image:M.screenshots.notandia.image,caption:'One-page résumés. Published work and source records.'},
+   'ai-evaluation':{label:'Independent model testing',title:'AI evaluation record',text:'Dated platform results, original captures and explicit evidence limits.',image:P.aiEvaluationSnapshot.detailImage,caption:`Gray Swan public profile · ${P.aiEvaluationSnapshot.displayDate}`},
+   investigations:{label:'Source investigation & data quality',title:'Check the claim. Follow the source.',text:'Citation reconciliation, structured metadata and public investigation records.',image:M.screenshots.atlas.image,caption:'Accepted source-locator and provenance contribution.'}
+  };
+  await page.setViewport({width:1200,height:630,deviceScaleFactor:1});
+  for(const [name,config] of Object.entries(cards)) {
+   await page.setContent(card(config),{waitUntil:'load'});
+   await page.screenshot({path:path.join(pub,'og',`${name}.png`),type:'png'});
+  }
+  fs.writeFileSync(path.join(pub,'site.webmanifest'),JSON.stringify({name:`${P.name} — ${P.currentPositioning}`,short_name:'Mario M.',description:P.description,start_url:'/',scope:'/',icons:[192,512].map(size=>({src:`/favicon-${size}x${size}.png`,sizes:`${size}x${size}`,type:'image/png'})),theme_color:'#f4f5f7',background_color:'#f4f5f7',display:'standalone'},null,2)+'\n');
+ } finally { await browser.close(); }
+ console.log('Generated consistent icons, manifest and four current social preview cards.');
 }
-
-main().catch((error) => {
-  console.error(error.stack || error.message);
-  process.exit(1);
-});
+main().catch(e=>{console.error(e);process.exit(1)});
