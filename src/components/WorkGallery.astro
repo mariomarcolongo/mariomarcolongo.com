@@ -1,9 +1,11 @@
 ---
 import { M } from '../lib/artifacts';
+import D from '../../data/source.js';
+const G=D.presence.aiEvaluationSnapshot;
 const panels=[
- {label:'Entropy',name:'Entropy for Life · Tableau',image:M.screenshots['entropy-map'].image,alt:M.screenshots['entropy-map'].alt,title:'Mapping shark attacks in the Mediterranean.',role:'My work: data collection, organization, interactive visualization and a published article.',url:M.screenshots['entropy-map'].url,action:'Explore the published map',case:'/work/entropy'},
+ {label:'Geometry',name:'Hypermandala · Independent experiment',image:M.screenshots.hypermandala.image,alt:M.screenshots.hypermandala.alt,title:'Explore geometry across dimensions.',role:'An AI-assisted visualization project: 2D plans, 3D forms and experimental 4D extensions. New form additions are still being tested.',url:M.screenshots.hypermandala.url,action:'Try the live explorer',case:'/work/hypermandala'},
  {label:'Notandia',name:'Notandia',image:M.screenshots.notandia.image,alt:M.screenshots.notandia.alt,title:'Publisher watchlists & reference checks.',role:'Requirements, behavior testing and release work. Actual settings from the current source build.',url:'/notandia',action:'See the extension',case:null},
- {label:'Directory',name:'Yourself to Science',image:M.screenshots['yourself-to-science'].image,alt:M.screenshots['yourself-to-science'].alt,title:'Research opportunities, organized.',role:'Founder and maintainer: inclusion decisions, source records and AI-assisted implementation.',url:'https://yourselftoscience.org/',action:'Open the live directory',case:'/work/yourself-to-science'}
+ {label:'AI testing',name:`Gray Swan · ${G.displayDate} snapshot`,image:G.detailImage,alt:'Original public Gray Swan profile detail showing Mario Marcolongo and his dated evaluation results',title:`Proving Ground: #${G.provingGround.rank} · ${G.provingGround.percentile}.`,role:`${G.provingGround.totalBreaks} platform-recorded breaks across chat, image, agent and indirect challenges. Independent model testing; Arena metrics are separate.`,url:G.evidencePath,action:'Inspect the dated scores',case:'/ai-evaluation'}
 ];
 ---
 <section class="work-gallery artifact-explorer" aria-label="Explore actual work">

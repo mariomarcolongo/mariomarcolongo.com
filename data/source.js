@@ -39,6 +39,32 @@ function createMarioDossier() {
     "technical": "/cv-technical",
     "aiEvaluation": "/cv-ai"
   },
+  "aiEvaluationSnapshot": {
+    "displayDate": "30 September 2026",
+    "observedAt": "2026-09-30",
+    "preservedAtUtc": "2026-09-30T03:21:36.759698Z",
+    "sourceUrl": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
+    "evidencePath": "/evidence/gray-swan-2026-09-30/",
+    "originalImage": "/evidence/gray-swan-public-2026-09-30.jpg",
+    "originalSha256": "6a4c364c4c639c0dd96276838c64699bd3b18402dcec72789c8d0620fecb7a67",
+    "originalDimensions": [1280, 1675],
+    "previewImage": "/media/work/gray-swan-profile-2026-09-30-1280.webp",
+    "detailImage": "/media/work/gray-swan-profile-2026-09-30-detail.webp",
+    "provingGround": {
+      "rank": 79,
+      "percentile": "top 5%",
+      "totalBreaks": 127,
+      "displayedAreaTotal": 126,
+      "areas": [
+        {"name": "Chat", "breaks": 43, "available": 552, "displayedPercent": 8},
+        {"name": "Image", "breaks": 32, "available": 387, "displayedPercent": 8},
+        {"name": "Agent", "breaks": 35, "available": 593, "displayedPercent": 6},
+        {"name": "Indirect", "breaks": 16, "available": 547, "displayedPercent": 3}
+      ]
+    },
+    "arena": {"rank": 462, "uniqueBreaks": 31, "points": 1260, "submissions": 354},
+    "scope": "Public platform profile captured while logged out. Rankings and counts are dated platform reports, not independent reproduction of every result. Proving Ground and Arena are separate systems; the four visible area counts total 126 while the displayed total is 127."
+  },
   "education": [
     {
       "institution": "Metropolia University of Applied Sciences",
@@ -189,6 +215,20 @@ function createMarioDossier() {
       "visibility": "public"
     },
     {
+      "id": "gray-swan-september-30",
+      "text": "Dated Proving Ground record: rank #79, top 5%, with 127 platform-recorded total breaks on 30 September 2026.",
+      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-2026-09-30/",
+      "sourceOwner": "public_platform_profile",
+      "evidenceType": "dated_platform_snapshot",
+      "engagementType": "independent_evaluation",
+      "limitation": "Captured from the logged-out public profile. The displayed total is 127; visible area counters sum to 126. Arena separately shows rank #462, 31 unique breaks, 1,260 points and 354 submissions. This is dated platform evidence, not paid employment, security certification or independent reproduction of every result.",
+      "startDate": "2026-09-30",
+      "endDate": "2026-09-30",
+      "observedAt": "2026-09-30",
+      "lastReviewedAt": "2026-09-30",
+      "visibility": "public"
+    },
+    {
       "id": "notandia-source-release",
       "text": "Developed and maintained an AI-assisted browser tool for research-result workflows; case study distinguishes released store versions from capabilities currently in source.",
       "sourceUrl": "https://github.com/notandia/browser-extension",
@@ -266,7 +306,7 @@ function createMarioDossier() {
       "sourceOwner": "project_maintainer",
       "evidenceType": "public_artifact",
       "engagementType": "independent_project",
-      "limitation": "The working public interaction establishes an inspectable visualization project, not adoption, revenue or an independent mathematical or engineering assessment. The source repository was private at review; public source availability is not established. Forms are procedural interpretations, not historical reconstructions.",
+      "limitation": "The public explorer and source repository establish an inspectable visualization project, not adoption, revenue or an independent mathematical or engineering assessment. Source availability was verified while logged out on 30 September 2026. Higher-dimensional extensions and new form additions are experimental; testing and adjustments continue. Forms are procedural interpretations, not historical reconstructions.",
       "startDate": "2026-09",
       "endDate": null,
       "observedAt": "2026-09-30",
@@ -479,18 +519,24 @@ function createMarioDossier() {
     {
       "id": "ai-evaluation",
       "name": "Gray Swan",
-      "hook": "A dated record of model-behavior testing",
+      "hook": "Testing where model behavior breaks down",
       "route": "/ai-evaluation",
-      "status": "Independent evaluation · July 2026 snapshot",
-      "text": "Independent adversarial-evaluation activity, with the July 2026 platform record and clear limits on what the metrics establish.",
+      "status": "Independent evaluation · September 2026 snapshot",
+      "reviewedAt": "2026-09-30",
+      "text": "Hands-on adversarial model testing across chat, image, agent and indirect challenges. The 30 September 2026 Proving Ground profile shows #79, top 5%, and 127 platform-recorded total breaks.",
       "claimIds": [
+        "gray-swan-september-30",
         "gray-swan-july-29"
       ],
-      "image": "/media/work/gray-swan-profile-2026-07-29-800.webp",
-      "alt": "Original Gray Swan profile screenshot from 29 July 2026",
+      "image": "/media/work/gray-swan-profile-2026-09-30-detail.webp",
+      "alt": "Detail of the original public Gray Swan profile captured on 30 September 2026, showing Mario Marcolongo and separate Arena and Proving Ground results",
       "links": [
         {
           "label": "Dated evidence",
+          "url": "https://mariomarcolongo.com/evidence/gray-swan-2026-09-30/"
+        },
+        {
+          "label": "July snapshot",
           "url": "https://mariomarcolongo.com/evidence/gray-swan-2026-07-29/"
         }
       ],
@@ -501,11 +547,11 @@ function createMarioDossier() {
         },
         {
           "heading": "Dated result",
-          "text": "On 29 July 2026, the captured Proving Ground profile displayed rank #74, top 6%, and 113 total breaks. The four visible area counters sum to 112. That discrepancy remains visible rather than being silently reconciled. The separate Arena profile displayed rank #365, 28 global unique breaks, 1,120 points and 255 submissions. These are separate platform metrics, not additive totals."
+          "text": "On 30 September 2026, the public Proving Ground profile displayed rank #79, top 5%, and 127 total breaks. Chat, image, agent and indirect area counts were 43, 32, 35 and 16, totaling 126. The displayed-total discrepancy remains visible. The separate Arena profile showed rank #462, 31 unique breaks, 1,260 points and 354 submissions. These are separate platform metrics, not additive totals. The July snapshot is retained as historical evidence."
         },
         {
           "heading": "Evidence",
-          "text": "The evidence page contains the original account-holder screenshot, a preserved manifest and a structured record. The platform is the source of the displayed numbers; I captured the record. Follow the original image to inspect the labels and the date. A link to the live profile is provided there, but the live state can change and should not be confused with the July snapshot."
+          "text": "The September evidence page retains an unchanged screenshot of the logged-out public profile, its SHA-256 and a structured transcription. The platform is the source of the displayed numbers; the preserved capture supports inspection of the labels and date. The July account-holder capture remains separate. Live values can change and should not be confused with either dated snapshot."
         },
         {
           "heading": "What is not established",
@@ -661,6 +707,10 @@ function createMarioDossier() {
         {
           "label": "Try the explorer",
           "url": "https://hypermandala.mariomarcolongo.com/"
+        },
+        {
+          "label": "Public source · AGPL-3.0",
+          "url": "https://github.com/mariomarcolongo/hypermandala"
         }
       ],
       "image": "/media/work/hypermandala-live.webp",
@@ -672,7 +722,11 @@ function createMarioDossier() {
         },
         {
           "heading": "Implementation and inspectable behavior",
-          "text": "The live explorer offers six-plane rotation, projection controls, a projected coordinate basis and a library of procedural forms. Moving from 2D to 4D produces staged dimensional transitions. The public website can be inspected directly; the linked source repository was private at the 30 September 2026 review, so public source availability is not claimed. Technical implementation is AI-assisted, as with my other projects."
+          "text": "The live explorer offers six-plane rotation, projection controls, a projected coordinate basis and a library of procedural forms. Moving from 2D to 4D produces staged dimensional transitions. The source repository is publicly accessible under AGPL-3.0, verified while logged out on 30 September 2026. The screenshot was refreshed from the adjusted Sri Yantra form. Technical implementation is AI-assisted, as with my other projects."
+        },
+        {
+          "heading": "An evolving experiment",
+          "text": "Higher-dimensional extensions are experimental interpretations. New form additions remain under testing and adjustment, as confirmed by the creator; the portfolio screenshot shows the adjusted Sri Yantra form rather than presenting every new preset as validated. Public source availability supports inspection, not an independent guarantee of mathematical or historical accuracy."
         },
         {
           "heading": "What this contributes to my portfolio",
@@ -713,7 +767,7 @@ function createMarioDossier() {
       "Organized resource information and maintained the AI-assisted website."
     ],
     "gray": [
-      "Conducted adversarial model testing; ranked #74, top 6%, in the Gray Swan Proving Ground snapshot of 29 July 2026."
+      "Adversarial model testing: Proving Ground #79 (top 5%), 127 platform-recorded breaks; 30 Sep 2026 snapshot."
     ],
     "notandia": [
       "Developed and maintained an AI-assisted browser tool for research-result workflows.",

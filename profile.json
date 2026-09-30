@@ -101,14 +101,19 @@
       "id": "ai-evaluation",
       "name": "Gray Swan",
       "route": "/ai-evaluation",
-      "status": "Independent evaluation · July 2026 snapshot",
-      "text": "Independent adversarial-evaluation activity, with the July 2026 platform record and clear limits on what the metrics establish.",
+      "status": "Independent evaluation · September 2026 snapshot",
+      "text": "Hands-on adversarial model testing across chat, image, agent and indirect challenges. The 30 September 2026 Proving Ground profile shows #79, top 5%, and 127 platform-recorded total breaks.",
       "claimIds": [
+        "gray-swan-september-30",
         "gray-swan-july-29"
       ],
       "links": [
         {
           "label": "Dated evidence",
+          "url": "https://mariomarcolongo.com/evidence/gray-swan-2026-09-30/"
+        },
+        {
+          "label": "July snapshot",
           "url": "https://mariomarcolongo.com/evidence/gray-swan-2026-07-29/"
         }
       ]
@@ -186,10 +191,68 @@
         {
           "label": "Try the explorer",
           "url": "https://hypermandala.mariomarcolongo.com/"
+        },
+        {
+          "label": "Public source · AGPL-3.0",
+          "url": "https://github.com/mariomarcolongo/hypermandala"
         }
       ]
     }
   ],
+  "aiEvaluationSnapshot": {
+    "displayDate": "30 September 2026",
+    "observedAt": "2026-09-30",
+    "preservedAtUtc": "2026-09-30T03:21:36.759698Z",
+    "sourceUrl": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
+    "evidencePath": "/evidence/gray-swan-2026-09-30/",
+    "originalImage": "/evidence/gray-swan-public-2026-09-30.jpg",
+    "originalSha256": "6a4c364c4c639c0dd96276838c64699bd3b18402dcec72789c8d0620fecb7a67",
+    "originalDimensions": [
+      1280,
+      1675
+    ],
+    "previewImage": "/media/work/gray-swan-profile-2026-09-30-1280.webp",
+    "detailImage": "/media/work/gray-swan-profile-2026-09-30-detail.webp",
+    "provingGround": {
+      "rank": 79,
+      "percentile": "top 5%",
+      "totalBreaks": 127,
+      "displayedAreaTotal": 126,
+      "areas": [
+        {
+          "name": "Chat",
+          "breaks": 43,
+          "available": 552,
+          "displayedPercent": 8
+        },
+        {
+          "name": "Image",
+          "breaks": 32,
+          "available": 387,
+          "displayedPercent": 8
+        },
+        {
+          "name": "Agent",
+          "breaks": 35,
+          "available": 593,
+          "displayedPercent": 6
+        },
+        {
+          "name": "Indirect",
+          "breaks": 16,
+          "available": 547,
+          "displayedPercent": 3
+        }
+      ]
+    },
+    "arena": {
+      "rank": 462,
+      "uniqueBreaks": 31,
+      "points": 1260,
+      "submissions": 354
+    },
+    "scope": "Public platform profile captured while logged out. Rankings and counts are dated platform reports, not independent reproduction of every result. Proving Ground and Arena are separate systems; the four visible area counts total 126 while the displayed total is 127."
+  },
   "visualArtifacts": [
     {
       "title": "Industrial hemp cultivation in Europe",
@@ -481,6 +544,20 @@
       "visibility": "public"
     },
     {
+      "id": "gray-swan-september-30",
+      "text": "Dated Proving Ground record: rank #79, top 5%, with 127 platform-recorded total breaks on 30 September 2026.",
+      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-2026-09-30/",
+      "sourceOwner": "public_platform_profile",
+      "evidenceType": "dated_platform_snapshot",
+      "engagementType": "independent_evaluation",
+      "limitation": "Captured from the logged-out public profile. The displayed total is 127; visible area counters sum to 126. Arena separately shows rank #462, 31 unique breaks, 1,260 points and 354 submissions. This is dated platform evidence, not paid employment, security certification or independent reproduction of every result.",
+      "startDate": "2026-09-30",
+      "endDate": "2026-09-30",
+      "observedAt": "2026-09-30",
+      "lastReviewedAt": "2026-09-30",
+      "visibility": "public"
+    },
+    {
       "id": "notandia-source-release",
       "text": "Developed and maintained an AI-assisted browser tool for research-result workflows; case study distinguishes released store versions from capabilities currently in source.",
       "sourceUrl": "https://github.com/notandia/browser-extension",
@@ -558,7 +635,7 @@
       "sourceOwner": "project_maintainer",
       "evidenceType": "public_artifact",
       "engagementType": "independent_project",
-      "limitation": "The working public interaction establishes an inspectable visualization project, not adoption, revenue or an independent mathematical or engineering assessment. The source repository was private at review; public source availability is not established. Forms are procedural interpretations, not historical reconstructions.",
+      "limitation": "The public explorer and source repository establish an inspectable visualization project, not adoption, revenue or an independent mathematical or engineering assessment. Source availability was verified while logged out on 30 September 2026. Higher-dimensional extensions and new form additions are experimental; testing and adjustments continue. Forms are procedural interpretations, not historical reconstructions.",
       "startDate": "2026-09",
       "endDate": null,
       "observedAt": "2026-09-30",
