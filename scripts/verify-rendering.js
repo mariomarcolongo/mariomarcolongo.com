@@ -1,5 +1,42 @@
 const fs=require('node:fs');const path=require('node:path');const assert=require('node:assert/strict');const {startStaticServer}=require('./lib/static-server');const {launchBrowser}=require('./lib/browser');
+// Reproduce slow module delivery: first-paint geometry must match the initialized gallery.
+async function verifyDelayedGallery(browser, origin) {
+ const page=await browser.newPage();
+ const html=fs.readFileSync(path.resolve('dist/index.html'),'utf8');
+ const module=[...html.matchAll(/<script type="module">([\s\S]*?)<\/script>/g)].find(match=>match[1].includes('.work-gallery'));
+ assert.ok(module,'Built gallery module was not found');
+ // Deliver the actual built module separately so the pre-initialization paint is observable.
+ const deferredHtml=html.replace(module[0],'<script type="module" src="/.qa-gallery-module.js"></script>');
+ let moduleRequest;
+ await page.setViewport({width:1440,height:960});
+ await page.setRequestInterception(true);
+ page.on('request',request=>{
+  if(request.isNavigationRequest()&&request.resourceType()==='document')request.respond({status:200,contentType:'text/html',body:deferredHtml});
+  else if(new URL(request.url()).pathname==='/.qa-gallery-module.js')moduleRequest=request;
+  else request.continue();
+ });
+ const navigation=page.goto(origin,{waitUntil:'networkidle0'}).then(()=>null,error=>error);
+ try {
+  await page.waitForSelector('.gallery-slide');
+  await page.waitForFunction(()=>getComputedStyle(document.querySelector('#work-panel-1')).display==='none');
+  const geometry=()=>({hero:document.querySelector('.hero-copy').getBoundingClientRect().top,gallery:document.querySelector('.work-gallery').getBoundingClientRect().height});
+  const before=await page.evaluate(geometry);
+  assert.equal(await page.$$eval('.gallery-slide',els=>els.filter(el=>getComputedStyle(el).display!=='none').length),1);
+  assert.equal(await page.$eval('.gallery-controls',el=>getComputedStyle(el).display),'grid');
+  assert.equal(await page.$$eval('.gallery-controls button',els=>els.filter(el=>el.disabled).length),3);
+  await page.waitForFunction(()=>document.querySelector('#work-tab-0').disabled);
+  assert.ok(moduleRequest,'Gallery module request was not intercepted');
+  await moduleRequest.respond({status:200,contentType:'text/javascript',body:module[1]});
+  const navigationError=await navigation;
+  if(navigationError)throw navigationError;
+  const after=await page.evaluate(geometry);
+  assert.ok(Math.abs(before.hero-after.hero)<1,'Gallery initialization moved the headline');
+  assert.ok(Math.abs(before.gallery-after.gallery)<1,'Gallery initialization changed its height');
+  assert.equal(await page.$$eval('.gallery-controls button',els=>els.filter(el=>el.disabled).length),0);
+ } finally {await page.close();}
+}
 (async()=>{const out=path.resolve('private/qa');fs.mkdirSync(out,{recursive:true});const server=await startStaticServer(path.resolve('dist'));const browser=await launchBrowser();const report=[];try{const page=await browser.newPage();for(const width of [1440,768,390,320]){await page.setViewport({width,height:960});for(const route of ['/','/work','/work/entropy','/work/atlas','/work/hypermandala','/work/wikimedia','/work/scientific-visualizations','/experience','/research-operations','/cv','/cv-technical','/cv-ai','/investigations','/notandia','/evidence/gray-swan-2026-07-29','/evidence/gray-swan-2026-09-30','/ai-evaluation']){await page.goto(server.origin+route,{waitUntil:'networkidle0'});await page.evaluate(async()=>{await Promise.all([...document.images].map(i=>{i.loading='eager';return i.decode().catch(()=>{});}));});const result=await page.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth+1,main:document.querySelectorAll('main').length,h1:document.querySelectorAll('h1').length,brokenImages:[...document.images].filter(i=>!i.complete||i.naturalWidth===0).map(i=>i.src),h1visible:getComputedStyle(document.querySelector('h1')).opacity!=='0'}));assert.equal(result.overflow,false,`${width} ${route}: overflow`);assert.equal(result.main,1);assert.equal(result.h1,1);assert.equal(result.brokenImages.length,0,`${width} ${route}: ${result.brokenImages}`);assert.ok(result.h1visible);report.push({width,route,...result});if(route==='/'||route==='/cv')await page.screenshot({path:path.join(out,`${route==='/'?'home':'cv'}-${width}.png`),fullPage:true});}}
+await verifyDelayedGallery(browser,server.origin);
 await page.setViewport({width:1440,height:960});await page.goto(server.origin,{waitUntil:'networkidle0'});await page.keyboard.press('Tab');assert.equal(await page.evaluate(()=>document.activeElement.textContent),'Skip to content');await page.keyboard.press('Enter');assert.equal(await page.evaluate(()=>location.hash),'#main-content');await page.evaluate(()=>document.documentElement.dataset.theme='light');await page.click('#themeToggle');assert.equal(await page.evaluate(()=>document.documentElement.dataset.theme),'dark');await page.screenshot({path:path.join(out,'home-dark.png'),fullPage:true});
 await page.focus('#work-tab-0');await page.keyboard.press('ArrowRight');assert.equal(await page.$eval('#work-tab-1',el=>el.getAttribute('aria-selected')),'true');assert.equal(await page.evaluate(()=>document.activeElement.id),'work-tab-1');await page.keyboard.press('End');assert.equal(await page.$eval('#work-tab-2',el=>el.getAttribute('aria-selected')),'true');await page.keyboard.press('ArrowRight');assert.equal(await page.$eval('#work-tab-0',el=>el.getAttribute('aria-selected')),'true');await page.click('#work-tab-2');assert.equal(await page.$$eval('.gallery-slide',els=>els.filter(el=>!el.hidden).length),1);assert.ok(await page.$eval('#work-panel-2',el=>!el.hidden));
 await page.emulateMediaFeatures([{name:'prefers-reduced-motion',value:'reduce'}]);assert.equal(await page.evaluate(()=>getComputedStyle(document.querySelector('a')).transitionDuration),'0s');assert.equal(await page.$eval('.gallery-slide',el=>getComputedStyle(el).animationName),'none');await page.click('#work-tab-1');assert.equal(await page.$eval('#work-panel-1',el=>getComputedStyle(el).animationName),'none');

@@ -566,11 +566,11 @@
       "sourceOwner": "project_maintainer",
       "evidenceType": "public_source_and_store_records",
       "engagementType": "independent_project",
-      "limitation": "The inspected legacy store record showed version 0.0.2 (June 2025), 11 users and one rating. Expanded source capabilities are not asserted to ship in every store.",
+      "limitation": "Chrome: MDPI Filter 0.0.2 (June 2025), 14 users, one rating. Notandia 0.1.0 remains an unpublished draft. These are store counts, not verified active users. Edge availability and feature parity are unverified.",
       "startDate": null,
       "endDate": null,
-      "observedAt": "2026-09-12",
-      "lastReviewedAt": "2026-09-12",
+      "observedAt": "2026-09-30",
+      "lastReviewedAt": "2026-09-30",
       "visibility": "public"
     },
     {
