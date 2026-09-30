@@ -1,0 +1,1133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   width="1027"
+   height="650"
+   id="svg88"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title11">Benzo(a)pyrene Concentration in Processed Yerba Maté Leaves Sampled in 2006, 2008, and 2010 - Column Chart</title>
+  <defs
+     id="defs88">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath12">
+      <g
+         id="g13">
+        <rect
+           x="-1.25"
+           y="6.625"
+           width="929.06805"
+           height="567.76953"
+           id="rect12" />
+      </g>
+    </clipPath>
+  </defs>
+  <g
+     id="g4">
+    <svg
+       id="graphic"
+       fill="currentColor"
+       font-family="'Source Sans Pro'"
+       width="1005.2539"
+       height="629.00391"
+       x="10.498047"
+       y="10.498047"
+       version="1.1">
+      <g
+         class="fl-facet"
+         transform="translate(67.548935)"
+         opacity="1"
+         id="g67">
+        <rect
+           class="fl-facet-rect"
+           width="937.70496"
+           height="573.14453"
+           fill="none"
+           id="rect1"
+           x="0"
+           y="0" />
+        <rect
+           class="fl-facet-primary-rect"
+           width="937.70496"
+           height="573.14453"
+           y="0"
+           fill="none"
+           id="rect2"
+           x="0" />
+        <g
+           class="fl-facet-title"
+           id="g3">
+          <rect
+             class="fl-facet-title-bg"
+             height="0"
+             width="0"
+             fill="#eeeeee"
+             x="0"
+             opacity="0"
+             id="rect3"
+             y="0" />
+          <text
+             class="fl-facet-title-text"
+             font-size="14px"
+             font-weight="600"
+             transform="translate(0,14.7)"
+             opacity="0"
+             text-anchor="start"
+             id="text3"><tspan
+               x="0"
+               y="0"
+               dx="0"
+               text-anchor="start"
+               id="tspan3" /></text>
+        </g>
+        <g
+           class="fl-chart ready"
+           id="g65">
+          <rect
+             class="fl-chart-debug-rectangle"
+             x="0"
+             y="0"
+             style="display:none;fill:none;stroke:#ff0000;stroke-width:1px"
+             width="937.70496"
+             height="573.14453"
+             id="rect4" />
+          <clipPath
+             class="fl-data-clip-path"
+             id="fl-axes-1-clip-path">
+            <rect
+               x="0"
+               y="7.875"
+               width="926.56805"
+               height="565.26953"
+               id="rect5" />
+          </clipPath>
+          <g
+             class="fl-chart-background"
+             id="g8">
+            <rect
+               class="fl-chart-fill"
+               x="0"
+               y="7.875"
+               width="926.56805"
+               height="565.26953"
+               fill="none"
+               id="rect7" />
+            <image
+               class="fl-chart-image"
+               x="0"
+               y="7.875"
+               width="926.56805"
+               height="565.26953"
+               preserveAspectRatio="none"
+               id="image7" />
+            <rect
+               class="fl-chart-interaction"
+               style="opacity:0"
+               x="0"
+               y="7.875"
+               width="926.56805"
+               height="565.26953"
+               id="rect8" />
+          </g>
+          <g
+             class="fl-gridlines-horizontal"
+             id="g20"
+             clip-path="url(#clipPath12)">
+            <line
+               x1="0"
+               x2="926.56805"
+               y1="573.14453"
+               y2="573.14453"
+               style="opacity:1;stroke:#eeeeee;stroke-width:1.25"
+               id="line10" />
+            <line
+               x1="0"
+               x2="926.56805"
+               y1="516.61761"
+               y2="516.61761"
+               style="opacity:1;stroke:#eeeeee;stroke-width:1.25"
+               id="line11" />
+            <line
+               x1="0"
+               x2="926.56805"
+               y1="460.09064"
+               y2="460.09064"
+               style="opacity:1;stroke:#eeeeee;stroke-width:1.25"
+               id="line12" />
+            <line
+               x1="0"
+               x2="926.56805"
+               y1="403.56369"
+               y2="403.56369"
+               style="opacity:1;stroke:#eeeeee;stroke-width:1.25"
+               id="line13" />
+            <line
+               x1="0"
+               x2="926.56805"
+               y1="347.03671"
+               y2="347.03671"
+               style="opacity:1;stroke:#eeeeee;stroke-width:1.25"
+               id="line14" />
+            <line
+               x1="0"
+               x2="926.56805"
+               y1="290.50977"
+               y2="290.50977"
+               style="opacity:1;stroke:#eeeeee;stroke-width:1.25"
+               id="line15" />
+            <line
+               x1="0"
+               x2="926.56805"
+               y1="233.98282"
+               y2="233.98282"
+               style="opacity:1;stroke:#eeeeee;stroke-width:1.25"
+               id="line16" />
+            <line
+               x1="0"
+               x2="926.56805"
+               y1="177.45586"
+               y2="177.45586"
+               style="opacity:1;stroke:#eeeeee;stroke-width:1.25"
+               id="line17" />
+            <line
+               x1="0"
+               x2="926.56805"
+               y1="120.92891"
+               y2="120.92891"
+               style="opacity:1;stroke:#eeeeee;stroke-width:1.25"
+               id="line18" />
+            <line
+               x1="0"
+               x2="926.56805"
+               y1="64.401955"
+               y2="64.401955"
+               style="opacity:1;stroke:#eeeeee;stroke-width:1.25"
+               id="line19" />
+            <line
+               x1="0"
+               x2="926.56805"
+               y1="7.875"
+               y2="7.875"
+               style="opacity:1;stroke:#eeeeee;stroke-width:1.25"
+               id="line20" />
+          </g>
+          <g
+             class="fl-axes"
+             aria-hidden="true"
+             id="g63">
+            <g
+               class="fl-x-axes"
+               id="g42">
+              <g
+                 class="fl-axis-line"
+                 id="g22">
+                <line
+                   x1="0"
+                   y1="573.14453"
+                   y2="573.14453"
+                   style="opacity:1;stroke:#eeeeee;stroke-width:1.25;stroke-linecap:square"
+                   x2="926.56805"
+                   id="line21" />
+              </g>
+              <g
+                 class="fl-axis-ticks"
+                 id="g35">
+                <g
+                   transform="translate(38.607002,573.14454)"
+                   style="opacity:1"
+                   id="g23">
+                  <line
+                     y2="7"
+                     style="stroke:#eeeeee;stroke-width:1.25"
+                     id="line22"
+                     x1="0"
+                     y1="0"
+                     x2="0" />
+                  <text
+                     text-anchor="end"
+                     transform="rotate(-45,23.828288,0.63)"
+                     style="font-weight:normal;font-size:14px;fill:#4a4a4a"
+                     id="text22"><tspan
+                       x="0"
+                       dy="0"
+                       id="tspan22">Brand 1</tspan></text>
+                </g>
+                <g
+                   transform="translate(115.82101,573.14454)"
+                   style="opacity:1"
+                   id="g24">
+                  <line
+                     y2="7"
+                     style="stroke:#eeeeee;stroke-width:1.25"
+                     id="line23"
+                     x1="0"
+                     y1="0"
+                     x2="0" />
+                  <text
+                     text-anchor="end"
+                     transform="rotate(-45,23.828288,0.63)"
+                     style="font-weight:normal;font-size:14px;fill:#4a4a4a"
+                     id="text23"><tspan
+                       x="0"
+                       dy="0"
+                       id="tspan23">Brand 2</tspan></text>
+                </g>
+                <g
+                   transform="translate(193.03501,573.14454)"
+                   style="opacity:1"
+                   id="g25">
+                  <line
+                     y2="7"
+                     style="stroke:#eeeeee;stroke-width:1.25"
+                     id="line24"
+                     x1="0"
+                     y1="0"
+                     x2="0" />
+                  <text
+                     text-anchor="end"
+                     transform="rotate(-45,23.828288,0.63)"
+                     style="font-weight:normal;font-size:14px;fill:#4a4a4a"
+                     id="text24"><tspan
+                       x="0"
+                       dy="0"
+                       id="tspan24">Brand 3</tspan></text>
+                </g>
+                <g
+                   transform="translate(270.24901,573.14454)"
+                   style="opacity:1"
+                   id="g26">
+                  <line
+                     y2="7"
+                     style="stroke:#eeeeee;stroke-width:1.25"
+                     id="line25"
+                     x1="0"
+                     y1="0"
+                     x2="0" />
+                  <text
+                     text-anchor="end"
+                     transform="rotate(-45,23.828288,0.63)"
+                     style="font-weight:normal;font-size:14px;fill:#4a4a4a"
+                     id="text25"><tspan
+                       x="0"
+                       dy="0"
+                       id="tspan25">Brand 4</tspan></text>
+                </g>
+                <g
+                   transform="translate(347.46302,573.14454)"
+                   style="opacity:1"
+                   id="g27">
+                  <line
+                     y2="7"
+                     style="stroke:#eeeeee;stroke-width:1.25"
+                     id="line26"
+                     x1="0"
+                     y1="0"
+                     x2="0" />
+                  <text
+                     text-anchor="end"
+                     transform="rotate(-45,23.828288,0.63)"
+                     style="font-weight:normal;font-size:14px;fill:#4a4a4a"
+                     id="text26"><tspan
+                       x="0"
+                       dy="0"
+                       id="tspan26">Brand 5</tspan></text>
+                </g>
+                <g
+                   transform="translate(424.67702,573.14454)"
+                   style="opacity:1"
+                   id="g28">
+                  <line
+                     y2="7"
+                     style="stroke:#eeeeee;stroke-width:1.25"
+                     id="line27"
+                     x1="0"
+                     y1="0"
+                     x2="0" />
+                  <text
+                     text-anchor="end"
+                     transform="rotate(-45,23.828288,0.63)"
+                     style="font-weight:normal;font-size:14px;fill:#4a4a4a"
+                     id="text27"><tspan
+                       x="0"
+                       dy="0"
+                       id="tspan27">Brand 6</tspan></text>
+                </g>
+                <g
+                   transform="translate(501.89102,573.14454)"
+                   style="opacity:1"
+                   id="g29">
+                  <line
+                     y2="7"
+                     style="stroke:#eeeeee;stroke-width:1.25"
+                     id="line28"
+                     x1="0"
+                     y1="0"
+                     x2="0" />
+                  <text
+                     text-anchor="end"
+                     transform="rotate(-45,23.828288,0.63)"
+                     style="font-weight:normal;font-size:14px;fill:#4a4a4a"
+                     id="text28"><tspan
+                       x="0"
+                       dy="0"
+                       id="tspan28">Brand 7</tspan></text>
+                </g>
+                <g
+                   transform="translate(579.10503,573.14454)"
+                   style="opacity:1"
+                   id="g30">
+                  <line
+                     y2="7"
+                     style="stroke:#eeeeee;stroke-width:1.25"
+                     id="line29"
+                     x1="0"
+                     y1="0"
+                     x2="0" />
+                  <text
+                     text-anchor="end"
+                     transform="rotate(-45,23.828288,0.63)"
+                     style="font-weight:normal;font-size:14px;fill:#4a4a4a"
+                     id="text29"><tspan
+                       x="0"
+                       dy="0"
+                       id="tspan29">Brand 8</tspan></text>
+                </g>
+                <g
+                   transform="translate(656.31903,573.14454)"
+                   style="opacity:1"
+                   id="g31">
+                  <line
+                     y2="7"
+                     style="stroke:#eeeeee;stroke-width:1.25"
+                     id="line30"
+                     x1="0"
+                     y1="0"
+                     x2="0" />
+                  <text
+                     text-anchor="end"
+                     transform="rotate(-45,23.828288,0.63)"
+                     style="font-weight:normal;font-size:14px;fill:#4a4a4a"
+                     id="text30"><tspan
+                       x="0"
+                       dy="0"
+                       id="tspan30">Brand A</tspan></text>
+                </g>
+                <g
+                   transform="translate(733.53303,573.14454)"
+                   style="opacity:1"
+                   id="g32">
+                  <line
+                     y2="7"
+                     style="stroke:#eeeeee;stroke-width:1.25"
+                     id="line31"
+                     x1="0"
+                     y1="0"
+                     x2="0" />
+                  <text
+                     text-anchor="end"
+                     transform="rotate(-45,23.828288,0.63)"
+                     style="font-weight:normal;font-size:14px;fill:#4a4a4a"
+                     id="text31"><tspan
+                       x="0"
+                       dy="0"
+                       id="tspan31">Brand B</tspan></text>
+                </g>
+                <g
+                   transform="translate(810.74704,573.14454)"
+                   style="opacity:1"
+                   id="g33">
+                  <line
+                     y2="7"
+                     style="stroke:#eeeeee;stroke-width:1.25"
+                     id="line32"
+                     x1="0"
+                     y1="0"
+                     x2="0" />
+                  <text
+                     text-anchor="end"
+                     transform="rotate(-45,23.828288,0.63)"
+                     style="font-weight:normal;font-size:14px;fill:#4a4a4a"
+                     id="text32"><tspan
+                       x="0"
+                       dy="0"
+                       id="tspan32">Brand C</tspan></text>
+                </g>
+                <g
+                   transform="translate(887.96104,573.14454)"
+                   style="opacity:1"
+                   id="g34">
+                  <line
+                     y2="7"
+                     style="stroke:#eeeeee;stroke-width:1.25"
+                     id="line33"
+                     x1="0"
+                     y1="0"
+                     x2="0" />
+                  <text
+                     text-anchor="end"
+                     transform="rotate(-45,23.828288,0.63)"
+                     style="font-weight:normal;font-size:14px;fill:#4a4a4a"
+                     id="text33"><tspan
+                       x="0"
+                       dy="0"
+                       id="tspan33">Brand D</tspan></text>
+                </g>
+              </g>
+            </g>
+            <g
+               class="fl-axis fl-y-axis fl-left-axis"
+               id="g57">
+              <g
+                 class="fl-axis-line"
+                 id="g43">
+                <line
+                   x1="0"
+                   x2="0"
+                   y1="573.14453"
+                   y2="7.875"
+                   style="opacity:1;stroke:#eeeeee;stroke-width:1.25;stroke-linecap:square"
+                   id="line42" />
+              </g>
+              <g
+                 class="fl-axis-ticks"
+                 id="g55">
+                <g
+                   transform="translate(0,573.14454)"
+                   style="opacity:1"
+                   id="g44">
+                  <line
+                     x2="-7"
+                     style="stroke:#eeeeee;stroke-width:1.25"
+                     id="line43"
+                     x1="0"
+                     y1="0"
+                     y2="0" />
+                  <text
+                     text-anchor="end"
+                     transform="translate(-10.5,4.62)"
+                     style="font-weight:normal;font-size:14px;fill:#4a4a4a"
+                     id="text43"><tspan
+                       x="0"
+                       dy="0"
+                       id="tspan43">0</tspan></text>
+                </g>
+                <g
+                   transform="translate(0,7.875)"
+                   style="opacity:1"
+                   id="g45">
+                  <line
+                     x2="-7"
+                     style="stroke:#eeeeee;stroke-width:1.25"
+                     id="line44"
+                     x1="0"
+                     y1="0"
+                     y2="0" />
+                  <text
+                     text-anchor="end"
+                     transform="translate(-10.5,4.62)"
+                     style="font-weight:normal;font-size:14px;fill:#4a4a4a"
+                     id="text44"><tspan
+                       x="0"
+                       dy="0"
+                       id="tspan44">100</tspan></text>
+                </g>
+                <g
+                   transform="translate(0,64.401954)"
+                   style="opacity:1"
+                   id="g46">
+                  <line
+                     x2="-7"
+                     style="stroke:#eeeeee;stroke-width:1.25"
+                     id="line45"
+                     x1="0"
+                     y1="0"
+                     y2="0" />
+                  <text
+                     text-anchor="end"
+                     transform="translate(-10.5,4.62)"
+                     style="font-weight:normal;font-size:14px;fill:#4a4a4a"
+                     id="text45"><tspan
+                       x="0"
+                       dy="0"
+                       id="tspan45">90</tspan></text>
+                </g>
+                <g
+                   transform="translate(0,120.92891)"
+                   style="opacity:1"
+                   id="g47">
+                  <line
+                     x2="-7"
+                     style="stroke:#eeeeee;stroke-width:1.25"
+                     id="line46"
+                     x1="0"
+                     y1="0"
+                     y2="0" />
+                  <text
+                     text-anchor="end"
+                     transform="translate(-10.5,4.62)"
+                     style="font-weight:normal;font-size:14px;fill:#4a4a4a"
+                     id="text46"><tspan
+                       x="0"
+                       dy="0"
+                       id="tspan46">80</tspan></text>
+                </g>
+                <g
+                   transform="translate(0,177.45586)"
+                   style="opacity:1"
+                   id="g48">
+                  <line
+                     x2="-7"
+                     style="stroke:#eeeeee;stroke-width:1.25"
+                     id="line47"
+                     x1="0"
+                     y1="0"
+                     y2="0" />
+                  <text
+                     text-anchor="end"
+                     transform="translate(-10.5,4.62)"
+                     style="font-weight:normal;font-size:14px;fill:#4a4a4a"
+                     id="text47"><tspan
+                       x="0"
+                       dy="0"
+                       id="tspan47">70</tspan></text>
+                </g>
+                <g
+                   transform="translate(0,233.98282)"
+                   style="opacity:1"
+                   id="g49">
+                  <line
+                     x2="-7"
+                     style="stroke:#eeeeee;stroke-width:1.25"
+                     id="line48"
+                     x1="0"
+                     y1="0"
+                     y2="0" />
+                  <text
+                     text-anchor="end"
+                     transform="translate(-10.5,4.62)"
+                     style="font-weight:normal;font-size:14px;fill:#4a4a4a"
+                     id="text48"><tspan
+                       x="0"
+                       dy="0"
+                       id="tspan48">60</tspan></text>
+                </g>
+                <g
+                   transform="translate(0,290.50977)"
+                   style="opacity:1"
+                   id="g50">
+                  <line
+                     x2="-7"
+                     style="stroke:#eeeeee;stroke-width:1.25"
+                     id="line49"
+                     x1="0"
+                     y1="0"
+                     y2="0" />
+                  <text
+                     text-anchor="end"
+                     transform="translate(-10.5,4.62)"
+                     style="font-weight:normal;font-size:14px;fill:#4a4a4a"
+                     id="text49"><tspan
+                       x="0"
+                       dy="0"
+                       id="tspan49">50</tspan></text>
+                </g>
+                <g
+                   transform="translate(0,347.03673)"
+                   style="opacity:1"
+                   id="g51">
+                  <line
+                     x2="-7"
+                     style="stroke:#eeeeee;stroke-width:1.25"
+                     id="line50"
+                     x1="0"
+                     y1="0"
+                     y2="0" />
+                  <text
+                     text-anchor="end"
+                     transform="translate(-10.5,4.62)"
+                     style="font-weight:normal;font-size:14px;fill:#4a4a4a"
+                     id="text50"><tspan
+                       x="0"
+                       dy="0"
+                       id="tspan50">40</tspan></text>
+                </g>
+                <g
+                   transform="translate(0,403.56368)"
+                   style="opacity:1"
+                   id="g52">
+                  <line
+                     x2="-7"
+                     style="stroke:#eeeeee;stroke-width:1.25"
+                     id="line51"
+                     x1="0"
+                     y1="0"
+                     y2="0" />
+                  <text
+                     text-anchor="end"
+                     transform="translate(-10.5,4.62)"
+                     style="font-weight:normal;font-size:14px;fill:#4a4a4a"
+                     id="text51"><tspan
+                       x="0"
+                       dy="0"
+                       id="tspan51">30</tspan></text>
+                </g>
+                <g
+                   transform="translate(0,460.09063)"
+                   style="opacity:1"
+                   id="g53">
+                  <line
+                     x2="-7"
+                     style="stroke:#eeeeee;stroke-width:1.25"
+                     id="line52"
+                     x1="0"
+                     y1="0"
+                     y2="0" />
+                  <text
+                     text-anchor="end"
+                     transform="translate(-10.5,4.62)"
+                     style="font-weight:normal;font-size:14px;fill:#4a4a4a"
+                     id="text52"><tspan
+                       x="0"
+                       dy="0"
+                       id="tspan52">20</tspan></text>
+                </g>
+                <g
+                   transform="translate(0,516.61759)"
+                   style="opacity:1"
+                   id="g54">
+                  <line
+                     x2="-7"
+                     style="stroke:#eeeeee;stroke-width:1.25"
+                     id="line53"
+                     x1="0"
+                     y1="0"
+                     y2="0" />
+                  <text
+                     text-anchor="end"
+                     transform="translate(-10.5,4.62)"
+                     style="font-weight:normal;font-size:14px;fill:#4a4a4a"
+                     id="text53"><tspan
+                       x="0"
+                       dy="0"
+                       id="tspan53">10</tspan></text>
+                </g>
+              </g>
+              <g
+                 class="fl-axis-title"
+                 id="g56">
+                <text
+                   text-anchor="middle"
+                   style="font-weight:bold;font-size:15.4px;fill:#4a4a4a"
+                   transform="rotate(-90,122.82692,167.68285)"
+                   id="text55">Mass Fraction (ng/g)</text>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g
+         id="data-points">
+        <g
+           class="series"
+           transform="translate(67.548932)"
+           clip-path="url(#fl-axes-1-clip-path)"
+           id="g71">
+          <path
+             class="data-point"
+             data-type="column"
+             opacity="0.9"
+             fill="#8b5a2b"
+             stroke-width="0"
+             d="M 9.0642526,573.14454 H 26.968949 V 290.50977 H 9.0642526 Z"
+             tabindex="0"
+             role="img"
+             aria-roledescription="data point"
+             aria-label="2006 Batch, Brand 1: 50"
+             visibility="visible"
+             id="point-0-0" />
+          <path
+             class="data-point"
+             data-type="column"
+             opacity="0.9"
+             fill="#8b5a2b"
+             stroke-width="0"
+             d="M 86.278256,573.14454 H 104.18295 V 326.12175 H 86.278256 Z"
+             tabindex="0"
+             role="img"
+             aria-roledescription="data point"
+             aria-label="2006 Batch, Brand 2: 43.7"
+             visibility="visible"
+             id="point-0-1" />
+          <path
+             class="data-point"
+             data-type="column"
+             opacity="0.9"
+             fill="#8b5a2b"
+             stroke-width="0"
+             d="m 163.49226,573.14454 h 17.9047 V 371.34332 h -17.9047 z"
+             tabindex="0"
+             role="img"
+             aria-roledescription="data point"
+             aria-label="2006 Batch, Brand 3: 35.7"
+             visibility="visible"
+             id="point-0-2" />
+          <path
+             class="data-point"
+             data-type="column"
+             opacity="0.9"
+             fill="#8b5a2b"
+             stroke-width="0"
+             d="m 240.70626,573.14454 h 17.9047 V 276.37803 h -17.9047 z"
+             tabindex="0"
+             role="img"
+             aria-roledescription="data point"
+             aria-label="2006 Batch, Brand 4: 52.5"
+             visibility="visible"
+             id="point-0-3" />
+          <path
+             class="data-point"
+             data-type="column"
+             opacity="0.9"
+             fill="#8b5a2b"
+             stroke-width="0"
+             d="m 317.92027,573.14454 h 17.90469 V 527.7534 h -17.90469 z"
+             tabindex="0"
+             role="img"
+             aria-roledescription="data point"
+             aria-label="2006 Batch, Brand 5: 8.03"
+             visibility="visible"
+             id="point-0-4" />
+          <path
+             class="data-point"
+             data-type="column"
+             opacity="0.9"
+             fill="#8b5a2b"
+             stroke-width="0"
+             d="m 395.13427,573.14454 h 17.9047 V 271.85588 h -17.9047 z"
+             tabindex="0"
+             role="img"
+             aria-roledescription="data point"
+             aria-label="2006 Batch, Brand 6: 53.3"
+             visibility="visible"
+             id="point-0-5" />
+          <path
+             class="data-point"
+             data-type="column"
+             opacity="0.9"
+             fill="#8b5a2b"
+             stroke-width="0"
+             d="m 472.34827,573.14454 h 17.9047 V 366.82116 h -17.9047 z"
+             tabindex="0"
+             role="img"
+             aria-roledescription="data point"
+             aria-label="2006 Batch, Brand 7: 36.5"
+             visibility="visible"
+             id="point-0-6" />
+          <path
+             class="data-point"
+             data-type="column"
+             opacity="0.9"
+             fill="#8b5a2b"
+             stroke-width="0"
+             d="m 549.56228,573.14454 h 17.90469 v -97.79163 h -17.90469 z"
+             tabindex="0"
+             role="img"
+             aria-roledescription="data point"
+             aria-label="2006 Batch, Brand 8: 17.3"
+             visibility="visible"
+             id="point-0-7" />
+        </g>
+        <g
+           class="series"
+           transform="translate(67.548932)"
+           clip-path="url(#fl-axes-1-clip-path)"
+           id="g72">
+          <path
+             class="data-point"
+             data-type="column"
+             opacity="0.9"
+             fill="#654321"
+             stroke-width="0"
+             d="M 29.654654,573.14454 H 47.55935 V 466.3086 H 29.654654 Z"
+             tabindex="0"
+             role="img"
+             aria-roledescription="data point"
+             aria-label="2008 Batch, Brand 1: 18.9"
+             visibility="visible"
+             id="point-1-0" />
+          <path
+             class="data-point"
+             data-type="column"
+             opacity="0.9"
+             fill="#654321"
+             stroke-width="0"
+             d="m 106.86866,573.14454 h 17.90469 V 319.33852 h -17.90469 z"
+             tabindex="0"
+             role="img"
+             aria-roledescription="data point"
+             aria-label="2008 Batch, Brand 2: 44.9"
+             visibility="visible"
+             id="point-1-1" />
+          <path
+             class="data-point"
+             data-type="column"
+             opacity="0.9"
+             fill="#654321"
+             stroke-width="0"
+             d="m 184.08266,573.14454 h 17.9047 v -67.26707 h -17.9047 z"
+             tabindex="0"
+             role="img"
+             aria-roledescription="data point"
+             aria-label="2008 Batch, Brand 3: 11.9"
+             visibility="visible"
+             id="point-1-2" />
+          <path
+             class="data-point"
+             data-type="column"
+             opacity="0.9"
+             fill="#654321"
+             stroke-width="0"
+             d="m 261.29666,573.14454 h 17.9047 V 11.831887 h -17.9047 z"
+             tabindex="0"
+             role="img"
+             aria-roledescription="data point"
+             aria-label="2008 Batch, Brand 4: 99.3"
+             visibility="visible"
+             id="point-1-3" />
+          <path
+             class="data-point"
+             data-type="column"
+             opacity="0.9"
+             fill="#654321"
+             stroke-width="0"
+             d="m 338.51067,573.14454 h 17.90469 v -289.418 h -17.90469 z"
+             tabindex="0"
+             role="img"
+             aria-roledescription="data point"
+             aria-label="2008 Batch, Brand 5: 51.2"
+             visibility="visible"
+             id="point-1-4" />
+          <path
+             class="data-point"
+             data-type="column"
+             opacity="0.9"
+             fill="#654321"
+             stroke-width="0"
+             d="m 415.72467,573.14454 h 17.9047 V 220.98162 h -17.9047 z"
+             tabindex="0"
+             role="img"
+             aria-roledescription="data point"
+             aria-label="2008 Batch, Brand 6: 62.3"
+             visibility="visible"
+             id="point-1-5" />
+          <path
+             class="data-point"
+             data-type="column"
+             opacity="0.9"
+             fill="#654321"
+             stroke-width="0"
+             d="m 492.93867,573.14454 h 17.9047 V 456.69902 h -17.9047 z"
+             tabindex="0"
+             role="img"
+             aria-roledescription="data point"
+             aria-label="2008 Batch, Brand 7: 20.6"
+             visibility="visible"
+             id="point-1-6" />
+          <path
+             class="data-point"
+             data-type="column"
+             opacity="0.9"
+             fill="#654321"
+             stroke-width="0"
+             d="m 570.15268,573.14454 h 17.90469 v -92.7042 h -17.90469 z"
+             tabindex="0"
+             role="img"
+             aria-roledescription="data point"
+             aria-label="2008 Batch, Brand 8: 16.4"
+             visibility="visible"
+             id="point-1-7" />
+        </g>
+        <g
+           class="series"
+           transform="translate(67.548932)"
+           clip-path="url(#fl-axes-1-clip-path)"
+           id="g73">
+          <path
+             class="data-point"
+             data-type="column"
+             opacity="0.9"
+             fill="#423629"
+             stroke-width="0"
+             d="m 667.95708,573.14454 h 17.9047 v -28.88527 h -17.9047 z"
+             tabindex="0"
+             role="img"
+             aria-roledescription="data point"
+             aria-label="2010 Batch, Brand A: 5.11"
+             visibility="visible"
+             id="point-2-8" />
+          <path
+             class="data-point"
+             data-type="column"
+             opacity="0.9"
+             fill="#423629"
+             stroke-width="0"
+             d="m 745.17109,573.14454 h 17.90469 v -69.52815 h -17.90469 z"
+             tabindex="0"
+             role="img"
+             aria-roledescription="data point"
+             aria-label="2010 Batch, Brand B: 12.3"
+             visibility="visible"
+             id="point-2-9" />
+          <path
+             class="data-point"
+             data-type="column"
+             opacity="0.9"
+             fill="#423629"
+             stroke-width="0"
+             d="m 822.38509,573.14454 h 17.9047 v -118.7066 h -17.9047 z"
+             tabindex="0"
+             role="img"
+             aria-roledescription="data point"
+             aria-label="2010 Batch, Brand C: 21"
+             visibility="visible"
+             id="point-2-10" />
+          <path
+             class="data-point"
+             data-type="column"
+             opacity="0.9"
+             fill="#423629"
+             stroke-width="0"
+             d="m 899.59909,573.14454 h 17.9047 v -89.87785 h -17.9047 z"
+             tabindex="0"
+             role="img"
+             aria-roledescription="data point"
+             aria-label="2010 Batch, Brand D: 15.9"
+             visibility="visible"
+             id="point-2-11" />
+        </g>
+      </g>
+      <g
+         id="axes-highlights">
+        <g
+           class="line y"
+           pointer-events="none"
+           transform="translate(67.548935,544.25927)"
+           id="g79">
+          <line
+             width="0"
+             stroke-dasharray="3.25, 3.25"
+             stroke="currentColor"
+             stroke-width="2.25"
+             x2="926.56805"
+             id="line78"
+             x1="0"
+             y1="0"
+             y2="0" />
+          <text
+             transform="translate(920.26804,-6.3)"
+             text-anchor="end"
+             font-size="12.6px"
+             fill="currentColor"
+             id="text79"><tspan
+               class="bg-label"
+               y="0"
+               x="0"
+               font-weight="regular"
+               display="block"
+               fill="none"
+               stroke-width="2"
+               id="tspan78" /><tspan
+               class="fg-label"
+               y="0"
+               x="0"
+               font-weight="regular"
+               id="tspan79" /></text>
+        </g>
+      </g>
+    </svg>
+    <g
+       id="g2">
+      <g
+         id="g1">
+        <text
+           xml:space="preserve"
+           font-weight="bold"
+           font-size="17px"
+           font-family="Geneva, Verdana, sans-serif"
+           stroke="#000000"
+           stroke-width="0"
+           x="773.90155"
+           y="382.56091"
+           id="text89"><tspan
+             id="tspan1"
+             x="773.90155"
+             y="382.56091">Unsmoked</tspan><tspan
+             id="tspan2"
+             x="773.90155"
+             y="404.22754">yerba maté</tspan></text>
+        <rect
+           style="fill:#800000;fill-opacity:0;stroke:#800000;stroke-width:3.77953;stroke-dasharray:none;stroke-opacity:1"
+           id="rect91"
+           width="141.49486"
+           height="50.24918"
+           x="757.04694"
+           y="363.52158"
+           ry="5.6692915" />
+      </g>
+      <path
+         style="fill:#800000;fill-opacity:0;stroke:#800000;stroke-width:3.77953;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         d="m 728.52806,533.07128 -1.21089,-141.57184 30.5432,-0.14274"
+         id="path91" />
+      <rect
+         style="fill:#800000;fill-opacity:0;stroke:#800000;stroke-width:3.75796;stroke-dasharray:none;stroke-opacity:1"
+         id="rect9"
+         width="82.864792"
+         height="110.24294"
+         x="685.82996"
+         y="534.18481"
+         ry="5.6692915" />
+    </g>
+  </g>
+  <metadata
+     id="metadata11">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+        <dc:title>Benzo(a)pyrene Concentration in Processed Yerba Maté Leaves Sampled in 2006, 2008, and 2010 - Column Chart</dc:title>
+        <dc:source>https://doi.org/10.1021/es303494s, https://doi.org/10.1158/1055-9965.EPI-08-0025</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>https://app.flourish.studio/@Digressivo</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:description>Column chart displaying Benzo(a)pyrene concentration in processed yerba maté leaves sampled in 2006, 2008, and 2010.
+Brand 1–8 corresponds to eight different commercial Brazilian brands purchased in Rio Grande do Sul (RS). Brand A–D are four commercial brands obtained from a single yerba maté manufacturer (one of the major), Brand A leaves were never exposed to smoke, whereas Brands B–D were processed in the traditional way (that includes smoking them).
+Light brown indicates 2006 batches, medium brown indicates 2008 batches, and dark brown indicates 2010 batches.
+
+Created with Flourish: https://public.flourish.studio/visualisation/17692660/</dc:description>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

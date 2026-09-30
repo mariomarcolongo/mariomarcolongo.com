@@ -452,3 +452,14 @@ body { transition: none; }
   .resume-document { padding: 0; border: 0; background: white; border-radius: 0; }
   .resume-switch { display: none; }
 }
+
+/* Concise application layout with room for source-quality work and draft authorship. */
+@media print {
+  html, body { line-height:1.25; }
+  .resume-document h2 { font-size:11pt; margin:7px 0 4px; }
+  .resume-document h3 { margin:6px 0 2px; }
+  .resume-document p { margin-bottom:4px; }
+  .resume-document ul { margin:3px 0 5px; }
+  .resume-document li { margin:2px 0; }
+  .resume-document .evidence-note { margin-top:7px; padding-top:4px; }
+}
