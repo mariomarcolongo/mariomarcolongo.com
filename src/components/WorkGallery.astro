@@ -1,23 +1,30 @@
 ---
-import D from '../../data/source.js';
-const ids=['entropy','scientific-visualizations','yourself-to-science'];
-const items=ids.map(id=>D.presence.projects.find(p=>p.id===id));
-const captions=['Scientific research and fact-checking for published Entropy work.','An original scientific diagram, published on Wikimedia Commons.','An independent directory of research-participation opportunities.'];
+const panels = [
+  { id:'research', label:'Research', name:'Entropy for Life', route:'/work/entropy', title:'From papers to published work.', text:'Scientific research, fact-checking, scripts and visuals — plus the design, build and operation of the WordPress website.' },
+  { id:'sources', label:'Source quality', name:'AI Safety Formalization Atlas', route:'/work/atlas', title:'Make sources inspectable.', text:'Accepted work on source auditing, citation provenance and repository tooling. Listed coauthor of the September 2026 paper draft.' },
+  { id:'tools', label:'Tools', name:'Yourself to Science', route:'/work/yourself-to-science', title:'A useful way into research.', text:'A maintained directory of research-participation opportunities, with inclusion decisions and links to the original sources.' }
+];
 ---
-<section class="work-gallery" aria-label="Selected work samples" aria-roledescription="carousel">
-  <p class="eyebrow">A closer look at the work</p>
-  <div class="gallery-slides">{items.map((p,i)=><figure class="gallery-slide" id={`sample-${i}`} role="group" aria-roledescription="slide" aria-label={`${i+1} of ${items.length}: ${p.name}`}><a href={p.route}><img src={p.image} alt={p.alt} width="800" height="500" loading={i===0?'eager':'lazy'}/></a><figcaption><strong>{p.name}</strong><p>{captions[i]}</p><a href={p.route}>Explore this work ↗</a></figcaption></figure>)}</div>
-  <div class="gallery-controls" hidden><div class="gallery-arrows"><button type="button" data-step="-1" aria-label="Previous work sample">←</button><span class="gallery-status" aria-live="polite" aria-atomic="true">1 / 3</span><button type="button" data-step="1" aria-label="Next work sample">→</button></div><div class="gallery-choices" aria-label="Choose a work sample">{items.map((p,i)=><button type="button" data-index={i} aria-label={`Show ${p.name}`} aria-controls={`sample-${i}`} aria-pressed={i===0}><img src={p.image} alt="" width="80" height="50"/><span>{i===0?'Entropy':i===1?'Wikimedia':'Yourself to Science'}</span></button>)}</div></div>
+<section class="work-gallery" aria-label="Explore selected work">
+  <div class="gallery-heading"><span>Inside the work</span><span aria-hidden="true">↙</span></div>
+  <div class="gallery-controls" role="tablist" aria-label="Choose an area of work" hidden>{panels.map((p,i)=><button type="button" role="tab" id={`work-tab-${i}`} data-index={i} aria-controls={`work-panel-${i}`} aria-selected={i===0} tabindex={i===0?0:-1}>{p.label}</button>)}</div>
+  <div class="gallery-slides">{panels.map((p,i)=><article class:list={['gallery-slide',`sample-${p.id}`]} id={`work-panel-${i}`} aria-label={p.name}>
+    <p class="sample-name"><span class="sample-dot" aria-hidden="true"></span>{p.name}</p>
+    <h2>{p.title}</h2>
+    {i===0&&<div class="research-sample"><div class="sample-total"><strong>80</strong><span>published pieces</span></div><svg class="publication-chart" viewBox="0 0 280 90" aria-hidden="true">{Array.from({length:80},(_,n)=><circle cx={8+(n%16)*17.5} cy={8+Math.floor(n/16)*17.5} r="5" class={n<55?'piece-video':n<59?'piece-article':'piece-short'} style={`--piece-delay:${n*6}ms`}/>)}</svg><div class="sample-breakdown"><span><strong>55</strong> videos</span><span><strong>4</strong> articles</span><span><strong>21</strong> short-form pieces</span></div><p class="sample-context">One mark per published piece · responsibilities vary</p></div>}
+    {i===1&&<div class="source-sample"><svg viewBox="0 0 360 60" fill="none" aria-hidden="true"><path class="flow-line" d="M30 30H330"/><circle cx="30" cy="30" r="7"/><circle cx="180" cy="30" r="7"/><circle cx="330" cy="30" r="7"/></svg><div class="source-stages"><span>Source</span><span>Evidence</span><span>Human review</span></div><p class="sample-context">5 merged PRs · source quality &amp; tooling</p></div>}
+    {i===2&&<div class="tool-sample"><img src="/media/work/yourself-to-science-800.webp" alt="The Yourself to Science directory, with research-participation resources and search controls" width="800" height="450" loading="lazy"/><p class="sample-context">Founder · 55 resources in the dated review</p></div>}
+    <p class="sample-description">{p.text}</p><a class="sample-link" href={p.route}>See my contribution <span aria-hidden="true">↗</span></a>
+  </article>)}</div>
 </section>
 <script>
 for(const gallery of document.querySelectorAll<HTMLElement>('.work-gallery')){
- const slides=[...gallery.querySelectorAll<HTMLElement>('.gallery-slide')];
- const choices=[...gallery.querySelectorAll<HTMLButtonElement>('[data-index]')];
+ const panels=[...gallery.querySelectorAll<HTMLElement>('.gallery-slide')];
+ const tabs=[...gallery.querySelectorAll<HTMLButtonElement>('[role=tab]')];
  const controls=gallery.querySelector<HTMLElement>('.gallery-controls');
  let current=0;
- const show=(index:number)=>{current=(index+slides.length)%slides.length;slides.forEach((slide,i)=>slide.hidden=i!==current);choices.forEach((button,i)=>button.setAttribute('aria-pressed',String(i===current)));gallery.querySelector('.gallery-status')!.textContent=`${current+1} / ${slides.length}`;};
- choices.forEach((button,i)=>button.addEventListener('click',()=>show(i)));
- gallery.querySelectorAll<HTMLButtonElement>('[data-step]').forEach(button=>button.addEventListener('click',()=>show(current+Number(button.dataset.step))));
- if(controls)controls.hidden=false;show(0);
+ const show=(index:number,focus=false)=>{current=(index+panels.length)%panels.length;panels.forEach((panel,i)=>{panel.hidden=i!==current;panel.setAttribute('role','tabpanel');panel.setAttribute('aria-labelledby',tabs[i].id);});tabs.forEach((tab,i)=>{tab.setAttribute('aria-selected',String(i===current));tab.tabIndex=i===current?0:-1;});if(focus)tabs[current].focus();};
+ tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>show(i));tab.addEventListener('keydown',event=>{if(!['ArrowRight','ArrowLeft','Home','End'].includes(event.key))return;event.preventDefault();show(event.key==='Home'?0:event.key==='End'?panels.length-1:current+(event.key==='ArrowRight'?1:-1),true);});});
+ if(controls)controls.hidden=false;gallery.classList.add('gallery-ready');show(0);
 }
 </script>

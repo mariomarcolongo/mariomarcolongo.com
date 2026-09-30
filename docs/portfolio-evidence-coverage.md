@@ -14,7 +14,7 @@ The website preserves breadth; the three application CVs select work relevant to
 | Yourself to Science ownership and maintenance | Homepage, `/experience`, detailed case | Yes | Not selected | Not selected |
 | Notandia browser/Zotero work | Work index, `/experience`, detailed case and source links | Not selected | Yes | Not selected |
 | Gray Swan evaluation | Work index, dated case and preserved platform evidence | Not selected | Not selected | Yes |
-| Hypermandala | Work index, supporting homepage link, `/experience`, dedicated demo-linked case | Not selected | Not selected | Not selected |
+| Hypermandala | Work index, supporting homepage experiment card, `/experience`, dedicated demo-linked case | Not selected | Not selected | Not selected |
 | Telegram/cloud workflow | Work index, `/experience`, detailed architecture case | Not selected | Not selected | Not selected |
 | QCAE and Emergent Humanity | Work index links with scope and attribution | Not selected | Not selected | Not selected |
 | Metropolia Python Programming, 3 ECTS Pass, 15 September | Homepage, full experience, all CVs and structured records | Yes | Yes | Yes |
@@ -28,3 +28,7 @@ PR #69 merged 22 September; #70 merged 28 September. The five merged PRs are ext
 Hypermandala's live site is public, but its repository was private at review. The user is considering opening it. This portfolio does not publish private source or claim adoption/revenue. Its preview image comes from the public site and is compressed for the portfolio.
 
 Historical contribution totals, organization-wide audience reach and Atlas-wide proof/library totals are not personal achievement metrics. The missing naturalization-map preview remains a source link rather than an unverified substitute. Unconfirmed acknowledgement/training claims remain outside the public projection.
+
+## Presentation coverage after the UI revision
+
+The homepage selects three inspectable work examples and an original Commons visualization, with separate background and experiments sections. This changes prominence, not factual coverage: the complete experience, scientific visualization archive, investigations and project cases remain linked. The manually controlled work explorer repeats bounded evidence from those cases; its publication chart is a count of pieces with varying personal responsibilities, not a count of independently authored outputs. CV content and print layouts are unchanged in this screen-design pass.
