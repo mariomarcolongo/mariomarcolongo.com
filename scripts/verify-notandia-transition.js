@@ -13,27 +13,33 @@ const ZOTERO_REPO = 'https://github.com/notandia/zotero-plugin';
 const read = (file) => fs.readFileSync(path.join(DIST, file), 'utf8');
 const contains = (value, expected, label) =>
   assert.ok(value.includes(expected), `${label}: missing ${expected}`);
+const sameUrl = (value, expected) => {
+  try { return new URL(value).href === new URL(expected).href; } catch { return false; }
+};
+const hasUrl = (value, expected) => [...value.matchAll(/https?:\/\/[^\s"'<>\\]+/g)]
+  .some(([url]) => sameUrl(url, expected));
 const boundaries = ['publisher-level', 'article-specific', 'AI-assisted',
   'Source development is not proof that every capability has shipped in Chrome and Edge.'];
 
 async function main() {
   for (const file of ['index.html', 'notandia.html', 'mdpi-filter.html', 'cv.html',
     'cv-technical.html', 'cv-ai.html']) {
-    assert.ok(!read(file).includes(RETIRED_URL), `${file}: retired organization link`);
+    assert.ok(!hasUrl(read(file), RETIRED_URL), `${file}: retired organization link`);
   }
   const canonical = read('notandia.html');
-  for (const expected of [...boundaries, BROWSER_REPO, ZOTERO_REPO, 'MDPI Filter',
+  for (const expected of [...boundaries, 'MDPI Filter',
     '/media/work/notandia-current-options.webp']) contains(canonical, expected, 'Notandia');
+  for (const url of [BROWSER_REPO, ZOTERO_REPO]) assert.ok(hasUrl(canonical, url), `Notandia: missing ${url}`);
   contains(read('index.html'), 'href="/notandia"', 'Homepage');
   contains(read('cv-technical.html'), 'Notandia', 'Technical résumé');
   const legacy = read('mdpi-filter.html');
   assert.match(legacy, /<meta\s+name="robots"\s+content="noindex(?:,\s*follow)?">/);
-  contains(legacy, 'https://mariomarcolongo.com/notandia', 'Legacy canonical');
+  assert.ok(hasUrl(legacy, 'https://mariomarcolongo.com/notandia'), 'Legacy canonical');
   assert.match(read('_redirects'), /^\/mdpi-filter\.html\s+\/notandia\s+301\s*$/m);
-  contains(read('sitemap.xml'), 'https://mariomarcolongo.com/notandia', 'Sitemap');
-  assert.ok(!read('sitemap.xml').includes('https://mariomarcolongo.com/mdpi-filter.html'));
+  assert.ok(hasUrl(read('sitemap.xml'), 'https://mariomarcolongo.com/notandia'), 'Sitemap');
+  assert.ok(!hasUrl(read('sitemap.xml'), 'https://mariomarcolongo.com/mdpi-filter.html'));
   for (const file of ['llms.txt', 'llms-full.txt', 'cv-llm.txt', 'profile.json']) {
-    assert.ok(!read(file).includes(RETIRED_URL), `${file}: retired source`);
+    assert.ok(!hasUrl(read(file), RETIRED_URL), `${file}: retired source`);
   }
   for (const file of ['cv-llm.txt', 'profile.json']) contains(read(file), 'Notandia', file);
 
@@ -60,8 +66,9 @@ async function main() {
         assert.equal(model.h1Count, 1, 'One Notandia heading');
         assert.equal(model.overflow, false, `${theme}/${viewport.width}: horizontal overflow`);
         for (const expected of boundaries) contains(model.text, expected, 'Visible scope');
-        assert.ok(model.links.includes(BROWSER_REPO) && model.links.includes(ZOTERO_REPO));
-        assert.ok(!model.links.includes(RETIRED_URL));
+        assert.ok(model.links.some((url) => sameUrl(url, BROWSER_REPO)) &&
+          model.links.some((url) => sameUrl(url, ZOTERO_REPO)));
+        assert.ok(!model.links.some((url) => sameUrl(url, RETIRED_URL)));
         await page.screenshot({ path: path.join(OUTPUT, `notandia-${theme}-${viewport.width}.png`), fullPage: true });
         await page.close();
       }

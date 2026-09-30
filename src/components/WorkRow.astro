@@ -3,12 +3,12 @@ const { project: p } = Astro.props;
 const kind=['entropy','atlas','investigations','ai-evaluation'].includes(p.id)?'research':'tools';
 ---
 <article class:list={['work-row', 'artifact-project', `project-${p.id}`]} data-work-kind={kind}>
-  <a class="artifact-cover" href={p.route} aria-label={`Explore ${p.name}`}>
+  <a class="artifact-cover" href={p.route} aria-label={`${p.image?'View the actual work':'Explore the project'}: ${p.name}`}>
     {p.image ? <img src={p.image} alt={p.alt} width="800" height="500" loading="lazy"/> : <div class="text-cover"><span>{p.status}</span><strong>{p.hook}</strong><span aria-hidden="true">↗</span></div>}
     <span class="cover-label">{p.image?'View the actual work':'Explore the project'} <span aria-hidden="true">↗</span></span>
   </a>
   <div class="work-description">
-    <p class="meta">{p.status}</p><h3><a href={p.route}>{p.name}</a></h3><p>{p.text}</p>
+    <p class="meta">{p.status}</p><h2><a href={p.route}>{p.name}</a></h2><p>{p.text}</p>
     {p.highlight&&<p class="project-proof"><strong>{p.highlight.value} {p.highlight.label}</strong><span> · September 2026 record</span></p>}
     <div class="source-links"><a class="case-link" href={p.route}>Explore the work <span aria-hidden="true">↗</span></a>{p.links[0]&&<a href={p.links[0].url}>{p.links[0].label}</a>}</div>
   </div>

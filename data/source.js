@@ -235,11 +235,11 @@ function createMarioDossier() {
       "sourceOwner": "project_maintainer",
       "evidenceType": "public_source_and_store_records",
       "engagementType": "independent_project",
-      "limitation": "The inspected legacy store record showed version 0.0.2 (June 2025), 11 users and one rating. Expanded source capabilities are not asserted to ship in every store.",
+      "limitation": "Chrome: MDPI Filter 0.0.2 (June 2025), 14 users, one rating. Notandia 0.1.0 remains an unpublished draft. These are store counts, not verified active users. Edge availability and feature parity are unverified.",
       "startDate": null,
       "endDate": null,
-      "observedAt": "2026-09-12",
-      "lastReviewedAt": "2026-09-12",
+      "observedAt": "2026-09-30",
+      "lastReviewedAt": "2026-09-30",
       "visibility": "public"
     },
     {
@@ -600,7 +600,7 @@ function createMarioDossier() {
         },
         {
           "heading": "Released record versus source development",
-          "text": "The inspected legacy store record showed MDPI Filter version 0.0.2 from June 2025, with 11 users and one rating. Those are dated store values, not current combined usage. The canonical browser source contains the expanded Notandia work. Source development is not proof that every capability has shipped in Chrome and Edge. Store listings and repository release records must be compared before choosing a version."
+          "text": "On 30 September 2026, the public Chrome listing still showed MDPI Filter 0.0.2, updated June 2025, with 14 users and one rating. The developer dashboard's Notandia 0.1.0 draft was explicitly unpublished. These are dated store observations, not current combined usage. The canonical browser source contains the expanded Notandia work. Source development is not proof that every capability has shipped in Chrome and Edge. Compare store listings and repository release records before choosing a version."
         },
         {
           "heading": "Evidence and interpretation",
@@ -608,7 +608,7 @@ function createMarioDossier() {
         },
         {
           "heading": "Availability",
-          "text": "Chrome: legacy listing retained for continuity; inspected version 0.0.2, June 2025. Edge: separate listing, whose installed version must be checked independently. Browser source: canonical Notandia repository, development tracked independently of store availability. Zotero: separate source repository with its own scope. No cross-store feature-parity claim is made."
+          "text": "Chrome: the public listing still distributes MDPI Filter 0.0.2, updated June 2025; Notandia 0.1.0 is an unpublished draft as of 30 September 2026. Edge: separate listing, whose installed version must be checked independently. Browser source: canonical Notandia repository, development tracked independently of store availability. Zotero: separate source repository with its own scope. No cross-store feature-parity claim is made."
         },
         {
           "heading": "Research workflow design",

@@ -29,8 +29,9 @@ const assets = [...new Set([M.screenshots.hypermandala.image, G.originalImage,
   '/profile.json', `/evidence/gray-swan-profile-${G.observedAt}.json`,
   ...Object.values(P.cv).map((cv) => `/${cv.filename}`)])];
 const sha256 = (bytes) => createHash('sha256').update(bytes).digest('hex');
-const htmlText = (value) => value.replace(/&amp;/g, '&').replace(/&#39;|&apos;/g, "'")
-  .replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+const entities = { amp: '&', '#39': "'", apos: "'", quot: '"', lt: '<', gt: '>' };
+const htmlText = (value) => value.replace(/&(amp|#39|apos|quot|lt|gt);/g,
+  (_, entity) => entities[entity]);
 
 async function fetchBytes(baseUrl, pathname, attempt) {
   const url = new URL(`${baseUrl}${pathname}`);

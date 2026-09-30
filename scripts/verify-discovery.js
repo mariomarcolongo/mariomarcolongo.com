@@ -4,7 +4,6 @@ const path=require('node:path');
 const assert=require('node:assert/strict');
 const P=require('../data/source.js').presence;
 const dist=path.resolve(__dirname,'../dist');
-const decode=s=>s.replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#39;/g,"'");
 const urls=[...fs.readFileSync(path.join(dist,'sitemap.xml'),'utf8').matchAll(/<loc>(.*?)<\/loc>/g)].map(x=>x[1]);
 assert.equal(new Set(urls).size,urls.length,'Duplicate sitemap URLs');
 const pngSize=file=>{const b=fs.readFileSync(file);assert.equal(b.subarray(1,4).toString(),'PNG');return[b.readUInt32BE(16),b.readUInt32BE(20)]};

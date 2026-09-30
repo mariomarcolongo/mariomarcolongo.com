@@ -1,14 +1,10 @@
 name: Deploy to Cloudflare Pages
 
 # Production deployment for the application-ready portfolio.
-# pull_request_target always checks out a trusted main-branch commit, never
-# pull-request code. A deploy/production-* PR can therefore trigger a deliberate
-# production refresh without exposing secrets to the pull-request branch.
+# Production runs only from main. Pull requests use Cloudflare's isolated preview.
 on:
   push:
     branches: [main]
-  pull_request_target:
-    types: [opened, synchronize, reopened, closed]
   workflow_dispatch:
 
 permissions:
@@ -17,12 +13,7 @@ permissions:
 
 jobs:
   deploy:
-    if: >-
-      github.event_name != 'pull_request_target' ||
-      github.event.pull_request.merged == true ||
-      startsWith(github.event.pull_request.head.ref, 'deploy/production-')
-    # Keep the lock at job level so skipped ordinary PR events never acquire
-    # production concurrency and therefore cannot cancel a real deployment.
+    if: github.ref == 'refs/heads/main'
     concurrency:
       group: cloudflare-pages-production
       cancel-in-progress: true
@@ -33,13 +24,13 @@ jobs:
       name: production
       url: ${{ steps.deploy.outputs.deployment-url }}
     env:
-      DEPLOY_SHA: ${{ github.event_name == 'pull_request_target' && (github.event.pull_request.merged && github.event.pull_request.merge_commit_sha || github.event.pull_request.base.sha) || github.sha }}
+      DEPLOY_SHA: ${{ github.sha }}
 
     steps:
       - name: Check out trusted production commit
         uses: actions/checkout@v4
         with:
-          ref: ${{ env.DEPLOY_SHA }}
+          ref: ${{ github.sha }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
