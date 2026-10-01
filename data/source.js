@@ -5,6 +5,9 @@
  * are generated from this source-backed record.
  */
 
+const ENTROPY_ORGANIZATION_CONTEXT = "Entropy for Life is an Italian science-communication project covering biology, evolution and the environment, with 500K+ combined followers and subscribers across its social accounts.";
+const ENTROPY_SHORT_CONTEXT = "Client: Italian science communication · 500K+ combined followers and subscribers";
+
 function createMarioDossier() {
   return {
   // Approved public projection. Legacy fields below support historical records only.
@@ -12,7 +15,7 @@ function createMarioDossier() {
   "schemaVersion": 1,
   "name": "Mario Marcolongo",
   "canonicalUrl": "https://mariomarcolongo.com",
-  "reviewedAt": "2026-09-30",
+  "reviewedAt": "2026-10-01",
   "email": "me@mariomarcolongo.com",
   "github": "https://github.com/mariomarcolongo",
   "linkedin": "https://www.linkedin.com/in/mario-marcolongo",
@@ -114,6 +117,7 @@ function createMarioDossier() {
     "text": "Italian native · English: EF SET C1 overall, 68/100 (Mar 2024)",
     "sourceUrl": "https://cert.efset.org/jHk84h",
     "issuedAt": "2024-03-26",
+    "currentEnglishSelfAssessment": {"level": "C1", "reportedAt": "2026-10-01"},
     "scores": {
       "overall": 68,
       "reading": 75,
@@ -122,7 +126,35 @@ function createMarioDossier() {
       "speaking": 55
     }
   },
+  "entropyOrganization": {
+    "context": ENTROPY_ORGANIZATION_CONTEXT,
+    "cvContext": ENTROPY_SHORT_CONTEXT,
+    "audienceReportedAt": "2026-10-01",
+    "audienceSource": "Approximate combined total from displayed organization-account counts checked on 1 October 2026, including a contributor-reported TikTok count.",
+    "scope": "Organization accounts, including the secondary More Entropy YouTube channel. Combined following is not unique people, reach of an individual piece or growth attributable to Mario.",
+    "platformObservations": [
+      {"platform": "YouTube", "account": "Entropy for Life", "displayedCount": "272K subscribers", "url": "https://www.youtube.com/c/EntropyforLife", "observedAt": "2026-10-01"},
+      {"platform": "YouTube", "account": "More Entropy", "displayedCount": "50.2K subscribers", "url": "https://www.youtube.com/@moreentropyforlife", "observedAt": "2026-10-01", "scope": "Secondary channel display linked from the main channel; included in the combined account total."},
+      {"platform": "Instagram", "displayedCount": "159K followers", "url": "https://www.instagram.com/entropyforlife", "observedAt": "2026-10-01"},
+      {"platform": "Facebook", "displayedCount": "9.5K followers", "url": "https://www.facebook.com/entropyforlife", "observedAt": "2026-10-01"},
+      {"platform": "Telegram", "displayedCount": "3,984 subscribers", "url": "https://t.me/entropyforlife", "observedAt": "2026-10-01"},
+      {"platform": "TikTok", "displayedCount": "54.9K followers", "url": "https://www.tiktok.com/@entropyforlife", "reportedAt": "2026-10-01", "sourceOwner": "contributor", "scope": "Reported by Mario on 1 October 2026; not independently verified. The organization's about page separately lists an undated 54K figure."}
+    ]
+  },
   "claims": [
+    {
+      "id": "entropy-organization-context",
+      "text": "Entropy for Life is an Italian science-communication project with 500K+ combined followers and subscribers across its social accounts.",
+      "sourceUrl": "https://entropyforlife.it/chi-sono/",
+      "sourceOwner": "contributor",
+      "evidenceType": "contributor_confirmation",
+      "engagementType": "organizational_context",
+      "compactLimitation": "Organization accounts; audiences overlap. TikTok contributor-reported.",
+      "limitation": "Figures checked on 1 October 2026: main YouTube channel 272K subscribers, linked More Entropy channel 50.2K subscribers, Instagram 159K followers, Facebook 9.5K followers and Telegram 3,984 subscribers. Mario reported TikTok at 54.9K on the same date; that count was not independently verified. These displayed figures sum to approximately 550K across the organization's accounts. Figures are rounded and audiences may overlap; this is not a count of unique people, personal reach or growth attributable to Mario.",
+      "observedAt": "2026-10-01",
+      "lastReviewedAt": "2026-10-01",
+      "visibility": "public"
+    },
     {
       "id": "entropy-airc-visuals",
       "text": "Created the data visualizations in the Entropy for Life × AIRC reels that feature them.",
@@ -326,10 +358,12 @@ function createMarioDossier() {
       "hook": "Scientific evidence behind published work",
       "route": "/work/entropy",
       "status": "Paid contractor · Jun 2023–Present",
-      "text": "Scientific research, fact-checking, script development and visual production for Entropy for Life, plus the design, build and operation of its WordPress website.",
+      "text": "Paid research, fact-checking, scripts and visual production for Entropy for Life, an Italian science-communication project with 500K+ combined followers and subscribers, plus the design, build and operation of its WordPress website.",
+      "organizationContext": ENTROPY_ORGANIZATION_CONTEXT,
       "claimIds": [
         "entropy-published-work",
-        "entropy-airc-visuals"
+        "entropy-airc-visuals",
+        "entropy-organization-context"
       ],
       "image": "/media/work/entropy-h5n1.png",
       "alt": "Published Entropy for Life science content about H5N1",
@@ -348,6 +382,10 @@ function createMarioDossier() {
         }
       ],
       "sections": [
+        {
+          "heading": "About the project",
+          "text": `${ENTROPY_ORGANIZATION_CONTEXT} As of 1 October 2026, the main YouTube channel displayed 272K subscribers, More Entropy displayed 50.2K and Instagram displayed 159K followers. The combined total also includes TikTok, Facebook and Telegram; it counts subscriptions and follows, with overlapping audiences.`
+        },
         {
           "heading": "Scientific research, writing and fact-checking",
           "text": "Since June 2023, I have worked as a paid contractor on primary-literature research, scientific fact-checking and script development. Depending on the assignment, I write, co-write or review content, check claims against sources and adapt English-language evidence for Italian audiences, preserving terminology and scientific context."
@@ -794,9 +832,10 @@ function createMarioDossier() {
     {
       "name": "Entropy for Life",
       "period": "Jun 2023–Present · Paid contractor",
-      "text": "Scientific research, fact-checking, script development and visual production for Entropy for Life, plus the design, build and operation of its WordPress website.",
+      "text": "Scientific research, fact-checking, visual production and WordPress operations for an Italian science-communication project with 500K+ combined social followers and subscribers.",
       "route": "/work/entropy",
       "details": [
+        ENTROPY_ORGANIZATION_CONTEXT,
         "Since June 2023, I have worked as a paid contractor on primary-literature research, scientific fact-checking and script development. Depending on the assignment, I write, co-write or review content, check claims against sources and adapt English-language evidence for Italian audiences, preserving terminology and scientific context.",
         "My work includes collecting and organizing data, creating charts and maps, preparing slides and on-screen assets, and researching images. I also contribute to short-form content and selected thumbnail concepts or production, independently or in collaboration with the video editor. Responsibilities vary by project. I personally created the data visualizations in the AIRC reel collaborations that use them; the whole reels are collaborative productions.",
         "I designed and built entropyforlife.it in WordPress. Since September 2023, my work has included responsive design, publishing, configuration and functionality changes, OVHcloud hosting, DNS, SSL and technical SEO. This combines initial website delivery with ongoing responsibility for its operation."
