@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';import SiteNav from './SiteNav.astro';import SiteFooter from './SiteFooter.astro';import D from '../../data/source.js';
 const P=D.presence;const {variant='default'}=Astro.props;const cv=P.cv[variant];
 const entry=(name,meta,bullets,url)=>({name,meta,bullets,url});
-const entropy=entry('Entropy for Life','Scientific research, fact-checking & website operations · Paid contractor · Jun 2023–Present',[P.cvBullets.entropy[0],P.cvBullets.entropy[2]],'/work/entropy');
+const entropy={...entry('Entropy for Life','Scientific research, fact-checking & website operations · Paid contractor · Jun 2023–Present',[P.cvBullets.entropy[0],P.cvBullets.entropy[2]],'/work/entropy'),context:P.entropyOrganization.cvContext};
 const atlas=entry('AI Safety Formalization Atlas','Open-source contributor · Sep 2026',P.cvBullets.atlas,'/work/atlas');
 const yts=entry('Yourself to Science','Founder · Independent project',[P.cvBullets.yts[0]],'/work/yourself-to-science');
 const notandia=entry('Notandia','Independent project · AI-assisted implementation',P.cvBullets.notandia,'/notandia');
@@ -17,7 +17,7 @@ const sections=variant==='default'?[{title:'Experience',entries:[entropy,padua]}
 <article class="resume-document" id="cvDocument" data-ats-layout="single-column">
 <header><h1>{P.name}</h1><p class="resume-title">{cv.title}</p><p class="meta" id="resume-location">Italy · EU citizen · Open to international remote work & relocation</p><p class="meta"><a href={`mailto:${P.email}`}>{P.email}</a><span id="cvPhoneSlot" hidden></span> · <a href={P.canonicalUrl}>mariomarcolongo.com</a> · <a href={P.linkedin}>LinkedIn</a> · <a href={P.orcidUrl}>ORCID</a>{variant!=='default'&&<> · <a href={P.github}>GitHub</a></>}</p></header>
 <section><h2>Summary</h2><p>{cv.summary}</p></section>
-{sections.map(section=><section><h2>{section.title}</h2>{section.entries.map(e=><div class="resume-entry"><h3>{e.name}</h3><p class="meta">{e.meta} · <a href={`${P.canonicalUrl}${e.url}`}>View work</a></p><ul>{e.bullets.map(b=><li>{b}</li>)}</ul></div>)}</section>)}
+{sections.map(section=><section><h2>{section.title}</h2>{section.entries.map(e=><div class="resume-entry"><h3>{e.name}</h3><p class="meta">{e.meta} · <a href={`${P.canonicalUrl}${e.url}`}>View work</a></p>{e.context&&<p class="meta">{e.context}</p>}<ul>{e.bullets.map(b=><li>{b}</li>)}</ul></div>)}</section>)}
 <section><h2>Education</h2>{P.education.slice(0,variant==='technical'?1:2).map(e=><div class="resume-entry"><h3>{e.institution} — {e.title}</h3><p class="meta">{e.period}</p>{e.description&&<p>{e.description}</p>}</div>)}</section>
 <section><h2>Skills</h2><p><strong>Demonstrated work:</strong> {variant==='technical'?'WordPress, hosting, DNS/SSL, requirements, functional testing, release troubleshooting and technical documentation.':variant==='aiEvaluation'?'Adversarial model testing, scientific literature search, source verification and technical documentation.':'Scientific literature search, source verification, data visualization, WordPress and structured metadata.'} <strong>Current study:</strong> Python, SQL, systems and quantitative foundations.</p></section>
 <section><h2>Languages</h2><p>{P.languages.text} · <a href={P.languages.sourceUrl}>Certificate</a></p></section>
