@@ -4,15 +4,16 @@ Mario Marcolongo works on scientific information quality, research operations an
 
 ## Current scope
 
-Paid contractor since 2023 in scientific literature research, fact-checking, data visualization and WordPress website operations. Additional experience includes volunteer research support, Wikimedia source and metadata work, and five accepted AI Safety Formalization Atlas contributions.
-
 I use AI tools extensively for implementation. My contributions include defining problems and requirements, inspecting behavior, testing, diagnosing failures and maintaining the resulting tools. Each case identifies external review and remaining validation limits.
 
 Open to relocation and international remote work. I can work in the EU as an Italian citizen; opportunities elsewhere depend on the role’s hiring and work-authorization arrangements.
 
 ## Entropy for Life
 
-Paid contractor · Jun 2023–Present. Scientific research, fact-checking, script development and visual production for Entropy for Life, plus the design, build and operation of its WordPress website.
+Paid contractor · Jun 2023–Present. Paid research, fact-checking, scripts and visual production for Entropy for Life, an Italian science-communication project with 500K+ combined followers and subscribers, plus the design, build and operation of its WordPress website.
+
+Entropy for Life is an Italian science-communication project with 500K+ combined followers and subscribers across its social accounts. Organization accounts; audiences overlap. TikTok contributor-reported.
+Source: https://entropyforlife.it/chi-sono/. Owner: contributor; evidence: contributor confirmation; observed: 2026-10-01.
 
 Created the data visualizations in the Entropy for Life × AIRC reels that feature them. Visualization authorship: contributor-confirmed, 30 September 2026. Public captions verify AIRC context, not individual production roles. Shared productions; no sole reel authorship or direct AIRC employment is implied.
 Source: https://entropyforlife.it/mario-marcolongo-entropy-for-life/. Owner: contributor; evidence: contributor confirmation; observed: 2026-09-30.
@@ -91,7 +92,7 @@ Metropolia path extent: 120 ECTS; awarded: 3. No degree or expected graduation i
 
 Scientific literature search, source verification, information organization, technical documentation and functional testing are supported by the linked work. Python, SQL, systems and quantitative foundations remain current study.
 
-Italian native · English: EF SET C1 overall, 68/100 (Mar 2024). Issued 26 March 2024. Reading 75/C2; listening 81/C2; writing 59/B2; speaking 55/B2. Overall C1 is not a claim that every productive skill is C1. Certificate: https://cert.efset.org/jHk84h
+Italian native · English: EF SET C1 overall, 68/100 (Mar 2024). Certificate subscores: reading 75/C2; listening 81/C2; writing 59/B2; speaking 55/B2. Current English self-assessment: C1, reported 2026-10-01. Certificate: https://cert.efset.org/jHk84h
 
 ## Additional evidence
 
@@ -103,4 +104,4 @@ Default résumé: https://mariomarcolongo.com/cv. Technical operations: https://
 
 Email: me@mariomarcolongo.com. ORCID: https://orcid.org/0000-0003-2846-7115. Full experience: https://mariomarcolongo.com/experience. Visual collections: https://mariomarcolongo.com/work/scientific-visualizations. GitHub: https://github.com/mariomarcolongo. LinkedIn: https://www.linkedin.com/in/mario-marcolongo. Italian citizen, based in Italy. US work authorization is not established in this record.
 
-Evidence review date: 2026-09-30. Individual records retain dates and limitations.
+Evidence review date: 2026-10-01. Individual records retain dates and limitations.
