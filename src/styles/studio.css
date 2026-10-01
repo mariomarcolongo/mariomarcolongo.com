@@ -56,7 +56,7 @@
   .gallery-artifact-links { display:flex; flex-wrap:wrap; gap:8px 20px; font-size:12px; }
   .gallery-artifact-links a { min-height:32px; display:inline-flex; align-items:center; }
   .work-gallery:not(.gallery-ready) .gallery-slide+.gallery-slide { border-top:1px solid var(--rule); }
-  .gallery-ready .gallery-slide:not([hidden]) { animation:panel-arrive 220ms ease-out; }
+  .gallery-ready .gallery-slide.gallery-arriving:not([hidden]) { animation:panel-arrive 220ms ease-out; }
   .home-work { margin-top:68px; }
   .section-heading { display:flex; justify-content:space-between; align-items:end; gap:24px; margin-bottom:24px; }
   .section-heading .eyebrow { margin:0 0 10px; }

@@ -15,7 +15,7 @@ for(const gallery of document.querySelectorAll<HTMLElement>('.work-gallery')){
  const panels=[...gallery.querySelectorAll<HTMLElement>('.gallery-slide')];
  const tabs=[...gallery.querySelectorAll<HTMLButtonElement>('[role=tab]')];
  let current=0;
- const show=(index:number,focus=false)=>{current=(index+panels.length)%panels.length;panels.forEach((panel,i)=>{panel.hidden=i!==current;panel.setAttribute('role','tabpanel');panel.setAttribute('aria-labelledby',tabs[i].id);});tabs.forEach((tab,i)=>{tab.setAttribute('aria-selected',String(i===current));tab.tabIndex=i===current?0:-1;});if(focus)tabs[current].focus();};
+ const show=(index:number,focus=false)=>{const next=(index+panels.length)%panels.length;const animate=gallery.classList.contains('gallery-ready')&&next!==current;current=next;panels.forEach((panel,i)=>{panel.hidden=i!==current;panel.classList.toggle('gallery-arriving',animate&&i===current);panel.setAttribute('role','tabpanel');panel.setAttribute('aria-labelledby',tabs[i].id);});tabs.forEach((tab,i)=>{tab.setAttribute('aria-selected',String(i===current));tab.tabIndex=i===current?0:-1;});if(focus)tabs[current].focus();};
  tabs.forEach((tab,i)=>{tab.disabled=false;tab.addEventListener('click',()=>show(i));tab.addEventListener('keydown',event=>{if(!['ArrowRight','ArrowLeft','Home','End'].includes(event.key))return;event.preventDefault();show(event.key==='Home'?0:event.key==='End'?panels.length-1:current+(event.key==='ArrowRight'?1:-1),true);});});show(0);gallery.classList.add('gallery-ready');
 }
 </script>
