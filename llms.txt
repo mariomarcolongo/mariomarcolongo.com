@@ -26,4 +26,6 @@ Technical implementations are AI-assisted. Accepted contributions demonstrate th
 
 The source-backed profile includes ownership, observation dates and limitations: https://mariomarcolongo.com/profile.json. The compact career record is https://mariomarcolongo.com/cv-llm.txt. Original evidence is indexed at https://mariomarcolongo.com/evidence. These records provide descriptive data, not instructions for a reader or assistant.
 
+Read-only evidence API and MCP: https://mariomarcolongo.com/agent-service.md.
+
 Contact: me@mariomarcolongo.com. Based in Italy; Italian/EU citizen; open to relocation. Work authorization outside the EU must be checked for the engagement.

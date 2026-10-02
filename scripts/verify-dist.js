@@ -18,7 +18,7 @@ assert.equal(require('node:crypto').createHash('sha256').update(fs.readFileSync(
 assert.deepEqual(JSON.parse(fs.readFileSync(path.join(dist,'evidence/gray-swan-profile-2026-09-30.json'),'utf8')),snapshot,'Evaluation transcription drift');
 for(const [file,expected] of Object.entries({'llms.txt':g.generateLlmsTxt(D),'cv-llm.txt':g.generateCvLlmTxt(D),'llms-full.txt':g.generateLlmsFullTxt(D),'profile.json':JSON.stringify(g.generateProfile(D),null,2)+'\n'}))for(const folder of ['','public/','dist/'])assert.equal(fs.readFileSync(path.resolve(__dirname,'..',folder+file),'utf8'),expected,`${folder}${file} drift`);
 for(const [name,min,max] of [['llms.txt',150,300],['cv-llm.txt',700,1200]]){const n=fs.readFileSync(path.join(dist,name),'utf8').trim().split(/\s+/).length;assert.ok(n>=min&&n<=max,`${name}: ${n} words, expected ${min}–${max}`);}
-for(const file of ['auth.md','data/source.js','.well-known/api-catalog','.well-known/ard.json','.well-known/ai-catalog.json','.well-known/agent-card.json','.well-known/mcp/server-card.json'])assert.ok(!fs.existsSync(path.join(dist,file)),`Retired resource ${file}`);
+for(const file of ['auth.md','data/source.js','.well-known/api-catalog','.well-known/ard.json','.well-known/ai-catalog.json','.well-known/agent-card.json'])assert.ok(!fs.existsSync(path.join(dist,file)),`Retired resource ${file}`);
 function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(dir,e.name)):[path.join(dir,e.name)]);}
 const html=walk(dist).filter(f=>f.endsWith('.html'));
 for(const file of html){const text=fs.readFileSync(file,'utf8');if(file.includes('/evidence/gray-swan-profile-'))continue;

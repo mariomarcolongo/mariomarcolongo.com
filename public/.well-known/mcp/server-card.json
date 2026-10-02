@@ -1,0 +1,31 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/v1/server-card.schema.json",
+  "name": "com.mariomarcolongo/portfolio-evidence",
+  "version": "1.0.0",
+  "title": "Mario Marcolongo — public evidence",
+  "websiteUrl": "https://mariomarcolongo.com",
+  "description": "Read-only public professional profile, evidence search and résumé links.",
+  "repository": {
+    "url": "https://github.com/mariomarcolongo/mariomarcolongo.com",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mariomarcolongo.com/mcp",
+      "supportedProtocolVersions": [
+        "2025-11-25",
+        "2025-06-18",
+        "2025-03-26"
+      ]
+    }
+  ],
+  "_meta": {
+    "com.mariomarcolongo/service": {
+      "access": "public; no authentication required",
+      "readOnly": true,
+      "documentation": "https://mariomarcolongo.com/agent-service.md",
+      "discoveryStatus": "MCP server card is an experimental extension"
+    }
+  }
+}

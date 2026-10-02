@@ -60,3 +60,6 @@ jobs:
           LIVE_VERIFY_ATTEMPTS: '18'
           LIVE_VERIFY_DELAY_MS: '10000'
         run: npm run verify:live
+
+      - name: Verify the public evidence API and MCP service
+        run: node scripts/verify-agent-http.mjs https://mariomarcolongo.com

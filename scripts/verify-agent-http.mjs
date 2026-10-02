@@ -1,0 +1,25 @@
+import assert from 'node:assert/strict';
+const base=(process.argv[2]||'http://127.0.0.1:59722').replace(/\/$/,'');
+const get=async path=>{const response=await fetch(base+path);assert.equal(response.status,200,path);assert.match(response.headers.get('Content-Type'),/application\/json/);assert.equal(response.headers.get('Content-Signal'),'search=yes, ai-input=yes, ai-train=yes');return response.json();};
+const profile=await get('/api/profile');
+const staticProfile=await get('/profile.json');assert.deepEqual(profile.profile,staticProfile);
+const evidence=await get('/api/evidence?q=Atlas&limit=5');assert.ok(evidence.results.some(item=>item.evidence?.some(claim=>claim.id==='atlas-paper-draft')));
+const resumes=await get('/api/resumes');assert.equal(resumes.resumes.length,3);
+for(const resume of resumes.resumes){const response=await fetch(base+new URL(resume.pdfUrl).pathname);assert.equal(response.status,200);assert.match(response.headers.get('Content-Type'),/application\/pdf/);assert.equal(new TextDecoder().decode((await response.arrayBuffer()).slice(0,5)),'%PDF-');}
+const card=await get('/mcp/server-card');assert.equal(card.remotes[0].url,'https://mariomarcolongo.com/mcp');assert.deepEqual(await get('/.well-known/mcp/server-card.json'),card);
+const index=await get('/.well-known/agent-index.json');assert.equal(index.agents[0].endpoint,card.remotes[0].url);
+let id=0;const rpc=async(method,params={})=>{const response=await fetch(base+'/mcp',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json, text/event-stream','MCP-Protocol-Version':'2025-11-25'},body:JSON.stringify({jsonrpc:'2.0',id:++id,method,params})});assert.equal(response.status,200);const message=await response.json();assert.equal(message.id,id);assert.ok(!message.error,JSON.stringify(message));return message.result;};
+assert.equal((await rpc('initialize',{protocolVersion:'2025-11-25',capabilities:{},clientInfo:{name:'HTTP verification',version:'1.0.0'}})).protocolVersion,'2025-11-25');
+const initialized=await fetch(base+'/mcp',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json, text/event-stream'},body:JSON.stringify({jsonrpc:'2.0',method:'notifications/initialized'})});assert.equal(initialized.status,202);
+assert.equal((await rpc('tools/list')).tools.length,3);
+assert.deepEqual((await rpc('tools/call',{name:'get_profile',arguments:{}})).structuredContent.profile,staticProfile);
+assert.deepEqual((await rpc('tools/call',{name:'search_evidence',arguments:{query:'Atlas',limit:5}})).structuredContent,evidence);
+assert.deepEqual((await rpc('tools/call',{name:'get_resumes',arguments:{}})).structuredContent,resumes);
+assert.equal((await rpc('resources/list')).resources.length,3);
+assert.deepEqual(JSON.parse((await rpc('resources/read',{uri:'portfolio://profile'})).contents[0].text).profile,staticProfile);
+assert.equal((await fetch(base+'/mcp')).status,405);
+assert.equal((await fetch(base+'/mcp',{headers:{Origin:'https://attacker.invalid'}})).status,403);
+assert.equal((await fetch(base+'/api/evidence?q=test&limit=100')).status,400);
+for(const path of ['/auth.md','/.well-known/oauth-authorization-server','/.well-known/agent-card.json','/api/absent'])assert.equal((await fetch(base+path)).status,404,path);
+const robots=await (await fetch(base+'/robots.txt')).text();for(const signal of ['search=yes','ai-input=yes','ai-train=yes'])assert.ok(robots.includes(signal));
+console.log(`Verified real HTTP profile, evidence, PDF links, discovery, MCP tool/resource round trips and request boundaries at ${base}.`);
