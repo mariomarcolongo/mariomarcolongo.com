@@ -57,7 +57,7 @@ if (masterEntropy) {
     `Delivered ${career.audience.projects} documented published content contributions: ${career.audience.videoProjects} YouTube videos, ${career.audience.articles} co-authored articles and ${career.audience.shortForm} short-form pieces.`,
     'Own recurring primary-literature research, scientific fact-checking and English-to-Italian scientific localization, adapting predominantly English-language evidence into accurate Italian scripts, articles, visualizations and short-form material while preserving meaning, terminology and source context.',
     'Develop selected thumbnail concepts and visual packaging independently or with the video editor, using click-through rate, watch time, retention and immediate attention capture as explicit design criteria.',
-    'Designed and built entropyforlife.it in WordPress and manage responsive design, publishing, OVHcloud hosting, DNS, SSL and technical SEO; formally acknowledged in the Mondadori book Italiani veri for scientific-literature research and error detection.'
+    'Designed and built entropyforlife.it in WordPress and manage responsive design, publishing, OVHcloud hosting, DNS, SSL and technical SEO; formally acknowledged in the book Italiani veri (Mondadori, a major European publishing group) for scientific-literature research and error detection.'
   ];
   masterEntropy.resumeBullets = [
     `Delivered ${career.audience.projects} documented published content contributions—${career.audience.videoProjects} YouTube videos, ${career.audience.articles} articles and ${career.audience.shortForm} short-form pieces—through evidence review, English-to-Italian scientific localization, content production and publishing.`,
@@ -118,7 +118,7 @@ if (P.aiSafety) {
     item.bullets = [
       `Delivered ${career.audience.projects} documented published content contributions: ${career.audience.videoProjects} YouTube videos · ${career.audience.articles} articles · ${career.audience.shortForm} short-form pieces.`,
       'Conduct recurring primary-literature review, scientific fact-checking and English-to-Italian localization; adapt evidence into Italian scripts, visualizations and short-form content while preserving terminology, meaning and source context.',
-      "Designed and built entropyforlife.it in WordPress; formally acknowledged in Giacomo Moro Mauretto's Mondadori book Italiani veri for scientific-literature research and error detection."
+      "Designed and built entropyforlife.it in WordPress; formally acknowledged in Giacomo Moro Mauretto's book Italiani veri (Mondadori, a major European publishing group) for scientific-literature research and error detection."
     ];
   }
   replaceSkill(

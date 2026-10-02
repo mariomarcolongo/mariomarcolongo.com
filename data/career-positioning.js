@@ -105,7 +105,7 @@ if (masterEntropy) {
     `Delivered ${audience.projects} documented published content contributions: ${audience.videoProjects} YouTube videos, ${audience.articles} co-authored articles and ${audience.shortForm} short-form pieces.`,
     'Own recurring primary-literature research and scientific fact-checking; depending on the assignment, translate evidence into scripts, data analyses, visualizations, presentation slides, on-screen assets and short-form content.',
     'Develop selected thumbnail concepts and visual packaging independently or with the video editor, using click-through rate, watch time, retention and immediate attention capture as explicit design criteria.',
-    'Designed and built entropyforlife.it in WordPress and manage responsive design, publishing, OVHcloud hosting, DNS, SSL and technical SEO; formally acknowledged in the Mondadori book Italiani veri for scientific-literature research and error detection.'
+    'Designed and built entropyforlife.it in WordPress and manage responsive design, publishing, OVHcloud hosting, DNS, SSL and technical SEO; formally acknowledged in the book Italiani veri (Mondadori, a major European publishing group) for scientific-literature research and error detection.'
   ];
   masterEntropy.resumeBullets = [
     `Delivered ${audience.projects} documented published content contributions—${audience.videoProjects} YouTube videos, ${audience.articles} articles and ${audience.shortForm} short-form pieces—through evidence review, content production and publishing.`,
@@ -265,7 +265,7 @@ if (P.aiSafety) {
     item.bullets = [
       `Delivered ${audience.projects} documented published content contributions: ${contributionBreakdown()}.`,
       'Conduct recurring primary-literature review and scientific fact-checking; contribute assignment-specific scripts, data analyses, visualizations, slides/on-screen assets, short-form content and selected thumbnail or visual-packaging work.',
-      "Designed and built entropyforlife.it in WordPress; formally acknowledged in Giacomo Moro Mauretto's Mondadori book Italiani veri for scientific-literature research and error detection."
+      "Designed and built entropyforlife.it in WordPress; formally acknowledged in Giacomo Moro Mauretto's book Italiani veri (Mondadori, a major European publishing group) for scientific-literature research and error detection."
     ];
   }
   const y2s = P.aiSafety.experience?.find((experience) => experience?.organization?.includes('Yourself to Science'));
