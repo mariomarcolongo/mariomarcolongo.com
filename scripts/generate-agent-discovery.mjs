@@ -11,7 +11,9 @@ const card={
   remotes:[{type:'streamable-http',url:base+'/mcp',supportedProtocolVersions:PROTOCOLS}],
   _meta:{'com.mariomarcolongo/service':{access:'public; no authentication required',readOnly:true,documentation:base+'/agent-service.md',discoveryStatus:'MCP server card is an experimental extension'}}
 };
-const index={schemaVersion:1,organization:profile.name,website:base,agents:[{
+const index={schemaVersion:1,organization:profile.name,website:base,
+  dnsDiscovery:{owner:'_index._agents.mariomarcolongo.com',type:'SVCB',experimentalParameters:{key65400:'Absolute index URL as UTF-8; publisher-defined private-use parameter, not universally interoperable'}},
+  agents:[{
   id:'portfolio-evidence',name:SERVER.title,protocol:'mcp',endpoint:base+'/mcp',
   serverCard:base+'/mcp/server-card',capabilities:['get_profile','search_evidence','get_resumes'],
   readOnly:true,authentication:'none',documentation:base+'/agent-service.md'
