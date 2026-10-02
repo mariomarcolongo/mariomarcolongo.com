@@ -1,9 +1,13 @@
 // Negotiation is limited to generated representations. A fallback HTML body is never relabeled.
-const retired = new Set(['/.well-known/oauth-authorization-server','/.well-known/oauth-protected-resource','/.well-known/api-catalog','/.well-known/ard.json','/.well-known/ai-catalog.json','/.well-known/agent-card.json','/.well-known/mcp/server-card.json','/auth.md','/data/source.js']);
+import profile from '../public/profile.json';
+import {createPortfolioService} from '../src/server/portfolio-service.mjs';
+const service=createPortfolioService(profile);
+const retired = new Set(['/.well-known/oauth-authorization-server','/.well-known/oauth-protected-resource','/.well-known/api-catalog','/.well-known/ard.json','/.well-known/ai-catalog.json','/.well-known/agent-card.json','/auth.md','/data/source.js']);
 const aliases = {'/integrity':'/investigations','/security':'/ai-evaluation','/mdpi-filter':'/notandia','/cv-research':'/cv','/cv-editorial':'/cv','/cv-integrity':'/cv','/resume':'/cv','/cv-resume':'/cv-ai','/cv-giskard':'/cv-ai','/cv-orcid':'/cv','/llms-full.txt':'/cv-llm.txt'};
 function notFound(){return new Response('Not found.\n',{status:404,headers:{'Content-Type':'text/plain; charset=utf-8','Cache-Control':'no-store','Vary':'Accept'}});}
 export async function onRequest(context){
  const {request,next}=context;const url=new URL(request.url);
+ const serviceResponse=await service.handle(request);if(serviceResponse)return serviceResponse;
  const normalized=url.pathname.replace(/\.html$/,'').replace(/\/$/,'')||'/';
  if(retired.has(url.pathname))return notFound();
  if(aliases[normalized])return Response.redirect(new URL(aliases[normalized],url.origin),301);
