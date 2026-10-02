@@ -146,6 +146,8 @@ function createMarioDossier() {
     "title": "Italiani veri",
     "author": "Giacomo Moro Mauretto",
     "publisher": "Mondadori",
+    "publisherContext": "a major European publishing group",
+    "publisherContextSource": "https://www.linkedin.com/company/gruppomondadori",
     "year": 2025,
     "section": "Ringraziamenti / Acknowledgements",
     "quote": "Mario Marcolongo è il mio fidato collaboratore, è bravissimo a scavare nella letteratura scientifica e a scovare eventuali errori.",
@@ -157,7 +159,7 @@ function createMarioDossier() {
     {
       "id": "entropy-book-acknowledgement",
       "includeInCompactCv": false,
-      "text": "Acknowledged by Giacomo Moro Mauretto in Italiani veri (Mondadori, 2025) for scientific-literature research and error detection.",
+      "text": "Acknowledged by Giacomo Moro Mauretto in Italiani veri (Mondadori, a major European publishing group, 2025) for scientific-literature research and error detection.",
       "sourceOwner": "client_author",
       "evidenceType": "published_acknowledgement",
       "engagementType": "paid_contractor",
@@ -851,7 +853,7 @@ function createMarioDossier() {
   "cvBullets": {
     "entropy": [
       "Contributed research, fact-checking, scripts and/or visuals to 80 published pieces: 55 videos, 4 articles and 21 short-form pieces; responsibilities vary by assignment.",
-      "Research primary literature and adapt English-language evidence for Italian content; acknowledged for literature research and error detection in Italiani veri (Mondadori, 2025).",
+      "Research primary literature and adapt English-language evidence for Italian content; acknowledged for literature research and error detection in Italiani veri (Mondadori, a major European publishing group, 2025).",
       "Designed and built entropyforlife.it in WordPress; manage responsive design, publishing, OVHcloud hosting, DNS/SSL and technical SEO."
     ],
     "atlas": [
@@ -1149,7 +1151,7 @@ function createMarioDossier() {
       id: "entropy-for-life",
       title: "Entropy for Life — Science Writing, Fact-Checking & Website Management",
       oneLiner: "Paid science writing, fact-checking, script-development, visual-production and website-management work across 59+ published projects.",
-      description: "Paid contractor for Entropy for Life across 59+ publicly indexed projects: 55+ published YouTube video projects and four co-authored articles. Most video assignments combine primary-literature research, scientific fact-checking and script development; selected assignments focus on fact-checking and/or data visualization. Also produce data visualizations, presentation slides, on-screen assets, short-form materials and selected thumbnails independently or with video editor Alessandro Lanzoni. Edit selected videos and Shorts in DaVinci Resolve, including Luca Perri channel work through my collaboration with Giacomo; full and partial editing roles are identified in the linked portfolio. Additional Instagram and TikTok work is not yet fully indexed. Manage OVHCloud hosting, DNS, SSL, WordPress configuration, layout and functionality changes, and technical SEO. Formally acknowledged in Giacomo Moro Mauretto’s Mondadori book Italiani veri.",
+      description: "Paid contractor for Entropy for Life across 59+ publicly indexed projects: 55+ published YouTube video projects and four co-authored articles. Most video assignments combine primary-literature research, scientific fact-checking and script development; selected assignments focus on fact-checking and/or data visualization. Also produce data visualizations, presentation slides, on-screen assets, short-form materials and selected thumbnails independently or with video editor Alessandro Lanzoni. Edit selected videos and Shorts in DaVinci Resolve, including Luca Perri channel work through my collaboration with Giacomo; full and partial editing roles are identified in the linked portfolio. Additional Instagram and TikTok work is not yet fully indexed. Manage OVHCloud hosting, DNS, SSL, WordPress configuration, layout and functionality changes, and technical SEO. Formally acknowledged in Giacomo Moro Mauretto’s book Italiani veri (Mondadori, a major European publishing group).",
       role: "Science Writer & Fact-Checker / Website Manager (WordPress)",
       tech: ["Primary-Literature Research", "Scientific Fact-Checking", "Script Development", "Data Visualization & Presentation Design", "DaVinci Resolve — selected video editing", "WordPress", "DNS/SSL", "Technical SEO"],
       links: {
@@ -1377,11 +1379,11 @@ function createMarioDossier() {
         "Deliver primary-literature research, scientific fact-checking and script development across 55+ published YouTube video projects and four co-authored articles; most video assignments combine all three functions, while selected work focuses on fact-checking and/or data visualization.",
         "Produce data visualizations, presentation slides and on-screen assets, short-form materials and selected thumbnails independently or with video editor Alessandro Lanzoni; additional Instagram and TikTok work is not yet fully indexed.",
         "Manage OVHCloud hosting, DNS, SSL, WordPress configuration, layout and functionality changes, and technical SEO as website maintenance rather than conventional independent software development.",
-        "Formally acknowledged in Giacomo Moro Mauretto’s Mondadori book Italiani veri for scientific-literature research and error detection."
+        "Formally acknowledged in Giacomo Moro Mauretto’s book Italiani veri (Mondadori, a major European publishing group) for scientific-literature research and error detection."
       ],
       resumeBullets: [
         "Deliver primary-literature research, scientific fact-checking and script development across 55+ published YouTube video projects and four co-authored articles; most video assignments combine all three functions, while selected work focuses on fact-checking and/or data visualization.",
-        "Identify unsupported claims and source-quality problems; manage WordPress, hosting, DNS/SSL and technical SEO; formally acknowledged in the Mondadori book Italiani veri."
+        "Identify unsupported claims and source-quality problems; manage WordPress, hosting, DNS/SSL and technical SEO; formally acknowledged in the book Italiani veri (Mondadori, a major European publishing group)."
       ]
     },
     {

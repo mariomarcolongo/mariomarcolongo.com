@@ -60,11 +60,11 @@ function updateEntropyExperience(item) {
     `Delivered ${ENTROPY.totalProjects} documented published projects: ${ENTROPY.videoProjects} YouTube video projects and ${ENTROPY.articles} co-authored articles.`,
     "Primary-literature research and scientific fact-checking were recurring responsibilities; depending on the assignment, also contributed to script development, data visualization, slide and on-screen assets, and selected thumbnail production or collaboration.",
     "Manage OVHCloud hosting, DNS, SSL, WordPress configuration, layout and functionality changes, and technical SEO.",
-    "Formally acknowledged in Giacomo Moro Mauretto’s Mondadori book Italiani veri for scientific-literature research and error detection."
+    "Formally acknowledged in Giacomo Moro Mauretto’s book Italiani veri (Mondadori, a major European publishing group) for scientific-literature research and error detection."
   ];
   item.resumeBullets = [
     `Delivered ${ENTROPY.totalProjects} published projects—${ENTROPY.videoProjects} YouTube video projects and ${ENTROPY.articles} co-authored articles—through primary-literature research, fact-checking and assignment-specific script, visualization, slide and thumbnail work.`,
-    "Manage WordPress, hosting, DNS/SSL and technical SEO; formally acknowledged in the Mondadori book Italiani veri."
+    "Manage WordPress, hosting, DNS/SSL and technical SEO; formally acknowledged in the book Italiani veri (Mondadori, a major European publishing group)."
   ];
 }
 
@@ -292,7 +292,7 @@ if (ai) {
     entExp.bullets = [
       `Delivered ${ENTROPY.totalProjects} documented published projects: ${ENTROPY.videoProjects} YouTube video projects and ${ENTROPY.articles} co-authored articles.`,
       "Conduct recurring primary-literature research and scientific fact-checking; contribute assignment-specific script development, visualization, slides, on-screen assets and selected thumbnails.",
-      "Formally acknowledged in Giacomo Moro Mauretto's Mondadori book Italiani veri for scientific-literature research and error detection."
+      "Formally acknowledged in Giacomo Moro Mauretto's book Italiani veri (Mondadori, a major European publishing group) for scientific-literature research and error detection."
     ];
   }
 }

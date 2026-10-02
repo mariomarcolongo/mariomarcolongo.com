@@ -44,7 +44,7 @@ const APPLICATION_PROFILES = {
         bullets: [
           "Deliver primary-literature research, scientific fact-checking and script development across 55+ published YouTube video projects and four co-authored articles; most video assignments combine all three functions, while selected work focuses on fact-checking and/or data visualization.",
           "Identify unsupported claims, conflicting evidence and source-quality problems, then communicate corrections in a small recurring production team consisting primarily of Giacomo Moro Mauretto, the video editor and me.",
-          "Formally acknowledged in Giacomo Moro Mauretto's Mondadori book Italiani veri for scientific-literature research and error detection."
+          "Formally acknowledged in Giacomo Moro Mauretto's book Italiani veri (Mondadori, a major European publishing group) for scientific-literature research and error detection."
         ]
       },
       {
