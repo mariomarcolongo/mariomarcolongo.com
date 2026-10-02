@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';import SiteNav from './SiteNav.astro';import SiteFooter from './SiteFooter.astro';import D from '../../data/source.js';
 const P=D.presence;const {variant='default'}=Astro.props;const cv=P.cv[variant];
 const entry=(name,meta,bullets,url)=>({name,meta,bullets,url});
-const entropy={...entry('Entropy for Life','Scientific research, fact-checking & website operations · Paid contractor · Jun 2023–Present',[P.cvBullets.entropy[0],P.cvBullets.entropy[variant==='aiEvaluation'?1:2]],'/work/entropy'),context:P.entropyOrganization.cvContext};
+const entropy={...entry('Entropy for Life','Scientific research, fact-checking & website operations · Paid contractor · Jun 2023–Present',[P.cvBullets.entropy[0],P.cvBullets.entropy[variant==='technical'?2:1]],'/work/entropy'),context:P.entropyOrganization.cvContext};
 const atlas=entry('AI Safety Formalization Atlas','Open-source contributor · Sep 2026',P.cvBullets.atlas,'/work/atlas');
 const yts=entry('Yourself to Science','Founder · Independent project',[P.cvBullets.yts[0]],'/work/yourself-to-science');
 const notandia=entry('Notandia','Independent project · AI-assisted implementation',P.cvBullets.notandia,'/notandia');

@@ -5,6 +5,7 @@ The website preserves breadth; the three application CVs select work relevant to
 | Evidence | Website coverage | Default CV | Technical CV | AI evaluation CV |
 | --- | --- | --- | --- | --- |
 | Entropy research, fact-checking, scripts, visuals and website design/build/operations | Homepage, `/experience`, detailed `/work/entropy`, work record | Yes | Yes | Yes |
+| Italiani veri published acknowledgement | `/work/entropy#book-acknowledgement`, evidence index and structured profile; exact excerpt checked against supplied ebook screenshot | Concise research endorsement | Detailed work link only | Concise research endorsement |
 | Selected DaVinci Resolve editing, including Luca Perri channel productions | `/work/entropy#video-editing`, `/experience`, profile claim with contributor-confirmed roles; five deduplicated public examples | Full-experience link only | Full-experience link only | Full-experience link only |
 | Atlas source audit, citation locators and earlier tooling PRs | Homepage, `/work/atlas`, evidence index, structured records | Yes | Yes | Yes |
 | Atlas September 2026 draft coauthorship | Atlas card/case, evidence index, structured records; clearly draft | Yes | Yes | Yes |
@@ -28,7 +29,7 @@ PR #69 merged 22 September; #70 merged 28 September. The five merged PRs are ext
 
 Hypermandala's live site is public, but its repository was private at review. The user is considering opening it. This portfolio does not publish private source or claim adoption/revenue. Its preview image comes from the public site and is compressed for the portfolio.
 
-Historical contribution totals, organization-wide audience reach and Atlas-wide proof/library totals are not personal achievement metrics. The missing naturalization-map preview remains a source link rather than an unverified substitute. Unconfirmed acknowledgement/training claims remain outside the public projection.
+Historical contribution totals, organization-wide audience reach and Atlas-wide proof/library totals are not personal achievement metrics. The missing naturalization-map preview remains a source link rather than an unverified substitute. The Italiani veri acknowledgement is verified against the supplied ebook screenshot; other unconfirmed training claims remain outside the public projection.
 
 ## Presentation coverage after the UI revision
 
