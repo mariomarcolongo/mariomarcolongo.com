@@ -50,3 +50,7 @@ The former `hypermandala-live.webp` capture remains an unused historical asset. 
 ## Gray Swan refresh
 
 The logged-out public profile was preserved on 30 September 2026: Proving Ground #79, top 5%, 127 total breaks; area counts 43/32/35/16 sum to 126. Arena separately reports #462, 31 unique breaks, 1,260 points and 354 submissions. The original JPEG is unchanged; the homepage image is a crop retaining the name and both metric systems. Full and compressed previews, source URL and SHA-256 are linked at `/evidence/gray-swan-2026-09-30/`. Canonical values are in `presence.aiEvaluationSnapshot`; the JSON transcription is generated from that record. The July original and its separate 112/113 discrepancy remain unchanged. No success-rate, independent security finding or employment claim is inferred.
+
+## Italiani veri acknowledgement — 2 October 2026
+
+The user supplied a Google Play Books reader screenshot of the Ringraziamenti section. It names Mario Marcolongo and praises his scientific-literature research and error detection. The source screenshot and owned ebook remain private; the portfolio republishes only the 19-word relevant quotation and a labelled English translation. The reader’s 204/204 is an ebook position, not a verified printed-page citation. The Mondadori catalogue independently establishes the title and author; it does not expose the acknowledgement passage. This is a published client reference, not coauthorship, Mondadori employment or scholarly citation.

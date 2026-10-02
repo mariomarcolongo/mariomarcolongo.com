@@ -18,6 +18,7 @@
         "entropy-published-work",
         "entropy-airc-visuals",
         "entropy-selected-video-editing",
+        "entropy-book-acknowledgement",
         "entropy-organization-context"
       ],
       "links": [
@@ -533,6 +534,19 @@
     }
   },
   "claims": [
+    {
+      "id": "entropy-book-acknowledgement",
+      "includeInCompactCv": false,
+      "text": "Acknowledged by Giacomo Moro Mauretto in Italiani veri (Mondadori, 2025) for scientific-literature research and error detection.",
+      "sourceOwner": "client_author",
+      "evidenceType": "published_acknowledgement",
+      "engagementType": "paid_contractor",
+      "sourceNote": "Giacomo Moro Mauretto, Italiani veri. Storia evolutiva e genetica del nostro Paese (Mondadori, 2025), Ringraziamenti / Acknowledgements. The exact passage was inspected in the reader screenshot supplied by Mario on 2 October 2026; the owned ebook and full-page screenshot are not republished. The publisher catalogue establishes book identity, not the wording of the acknowledgement.",
+      "limitation": "The author's published acknowledgement endorses Mario's scientific-literature research and ability to identify errors. It is a client reference, not independent testing of skill, scholarly citation, book coauthorship, Mondadori employment or evidence that Mario reviewed the entire book.",
+      "observedAt": "2026-10-02",
+      "lastReviewedAt": "2026-10-02",
+      "visibility": "public"
+    },
     {
       "id": "entropy-selected-video-editing",
       "includeInCompactCv": false,

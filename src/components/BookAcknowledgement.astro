@@ -1,0 +1,11 @@
+---
+import D from '../../data/source.js';
+const book = D.presence.entropyBookAcknowledgement;
+---
+<section id="book-acknowledgement" class="book-acknowledgement" aria-labelledby="book-acknowledgement-heading">
+  <h2 id="book-acknowledgement-heading">A published acknowledgement</h2>
+  <blockquote lang="it"><p>“{book.quote}”</p></blockquote>
+  <p class="quote-translation"><strong>English translation:</strong> {book.translation}</p>
+  <p class="meta">{book.author} · <cite>{book.title}</cite> · {book.publisher}, {book.year} · {book.section}</p>
+  <p class="meta"><a href={book.catalogueUrl}>Find the book in the publisher’s catalogue ↗</a></p>
+</section>

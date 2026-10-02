@@ -142,7 +142,31 @@ function createMarioDossier() {
       {"platform": "TikTok", "displayedCount": "54.9K followers", "url": "https://www.tiktok.com/@entropyforlife", "reportedAt": "2026-10-01", "sourceOwner": "contributor", "scope": "Reported by Mario on 1 October 2026; not independently verified. The organization's about page separately lists an undated 54K figure."}
     ]
   },
+  "entropyBookAcknowledgement": {
+    "title": "Italiani veri",
+    "author": "Giacomo Moro Mauretto",
+    "publisher": "Mondadori",
+    "year": 2025,
+    "section": "Ringraziamenti / Acknowledgements",
+    "quote": "Mario Marcolongo è il mio fidato collaboratore, è bravissimo a scavare nella letteratura scientifica e a scovare eventuali errori.",
+    "translation": "Mario Marcolongo is my trusted collaborator; he is excellent at digging into the scientific literature and spotting possible errors.",
+    "catalogueUrl": "https://www.mondadoristore.it/autore/giacomo-moro-mauretto/c/04861651",
+    "reviewedAt": "2026-10-02"
+  },
   "claims": [
+    {
+      "id": "entropy-book-acknowledgement",
+      "includeInCompactCv": false,
+      "text": "Acknowledged by Giacomo Moro Mauretto in Italiani veri (Mondadori, 2025) for scientific-literature research and error detection.",
+      "sourceOwner": "client_author",
+      "evidenceType": "published_acknowledgement",
+      "engagementType": "paid_contractor",
+      "sourceNote": "Giacomo Moro Mauretto, Italiani veri. Storia evolutiva e genetica del nostro Paese (Mondadori, 2025), Ringraziamenti / Acknowledgements. The exact passage was inspected in the reader screenshot supplied by Mario on 2 October 2026; the owned ebook and full-page screenshot are not republished. The publisher catalogue establishes book identity, not the wording of the acknowledgement.",
+      "limitation": "The author's published acknowledgement endorses Mario's scientific-literature research and ability to identify errors. It is a client reference, not independent testing of skill, scholarly citation, book coauthorship, Mondadori employment or evidence that Mario reviewed the entire book.",
+      "observedAt": "2026-10-02",
+      "lastReviewedAt": "2026-10-02",
+      "visibility": "public"
+    },
     {
       "id": "entropy-selected-video-editing",
       "includeInCompactCv": false,
@@ -379,6 +403,7 @@ function createMarioDossier() {
         "entropy-published-work",
         "entropy-airc-visuals",
         "entropy-selected-video-editing",
+        "entropy-book-acknowledgement",
         "entropy-organization-context"
       ],
       "image": "/media/work/entropy-h5n1.png",
@@ -818,7 +843,7 @@ function createMarioDossier() {
   "cvBullets": {
     "entropy": [
       "Contributed research, fact-checking, scripts and/or visuals to 80 published pieces: 55 videos, 4 articles and 21 short-form pieces; responsibilities vary by assignment.",
-      "Research primary literature and adapt English-language scientific evidence for Italian scripts, articles and visual explanations.",
+      "Research primary literature and adapt English-language evidence for Italian content; acknowledged for literature research and error detection in Italiani veri (Mondadori, 2025).",
       "Designed and built entropyforlife.it in WordPress; manage responsive design, publishing, OVHcloud hosting, DNS/SSL and technical SEO."
     ],
     "atlas": [

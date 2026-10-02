@@ -127,6 +127,10 @@
   .case-shell details summary { font-size:14px; cursor:pointer; }
   .case-shell details p { margin-top:14px; }
   .case-shell .evidence-note { font-size:11px; }
+  .book-acknowledgement { border-left:3px solid var(--accent); padding:4px 0 4px 24px; margin:32px 0 48px; }
+  .book-acknowledgement blockquote { margin:16px 0; }
+  .book-acknowledgement blockquote p { font-size:clamp(18px,2.2vw,25px); line-height:1.5; }
+  .book-acknowledgement .quote-translation { font-size:14px; }
   .project-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px; margin-top:32px; }
   .project-gallery .artifact-project { display:flex; flex-direction:column; padding:0; margin:0; border:1px solid var(--rule); border-radius:12px; overflow:hidden; background:var(--surface); min-width:0; }
   .artifact-cover { display:block; height:200px; position:relative; background:var(--tint); overflow:hidden; border:0; border-radius:0; }
