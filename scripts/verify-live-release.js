@@ -26,7 +26,7 @@ const pages = [
     [P.name, cv.title, `/${cv.filename}`, P.orcidUrl, '3 ECTS', 'non-degree'] }))
 ];
 const assets = [...new Set([M.screenshots.hypermandala.image, G.originalImage,
-  '/profile.json', `/evidence/gray-swan-profile-${G.observedAt}.json`,
+  '/profile.json', '/robots.txt', `/evidence/gray-swan-profile-${G.observedAt}.json`,
   ...Object.values(P.cv).map((cv) => `/${cv.filename}`)])];
 const sha256 = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const entities = { amp: '&', '#39': "'", apos: "'", quot: '"', lt: '<', gt: '>' };

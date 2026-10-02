@@ -65,7 +65,7 @@ jobs:
               if [[ "$mode" == "desktop" ]]; then preset=(--preset=desktop); fi
 
               report="lighthouse-output/${key}-${mode}.json"
-              npx --yes lighthouse@12.8.2 "http://127.0.0.1:4173/${route}" \
+              npx --yes lighthouse@13.5.0 "http://127.0.0.1:4173/${route}" \
                 --quiet "${preset[@]}" \
                 --chrome-flags='--headless --no-sandbox --disable-dev-shm-usage' \
                 --only-categories=performance,accessibility,best-practices,seo \

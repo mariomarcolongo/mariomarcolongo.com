@@ -19,13 +19,13 @@ export async function onRequest(context){
   const result=context.env?.ASSETS ? await context.env.ASSETS.fetch(assetRequest) : await next(assetRequest);
   const type=result.headers.get('Content-Type')||'';
   if(result.status!==200||!/^(text\/markdown|text\/plain|application\/octet-stream)(;|$)/i.test(type))return notFound();
-  const headers=new Headers(result.headers);headers.set('Content-Type','text/markdown; charset=utf-8');headers.set('Vary','Accept');headers.set('Content-Signal','search=yes, ai-input=yes');headers.delete('Link');
+  const headers=new Headers(result.headers);headers.set('Content-Type','text/markdown; charset=utf-8');headers.set('Vary','Accept');headers.set('Content-Signal','search=yes, ai-input=yes, ai-train=yes');headers.delete('Link');
   return new Response(result.body,{status:200,headers});
  }
  const result=await next();const headers=new Headers(result.headers);headers.set('Vary','Accept');headers.delete('Link');
  // Prevent a host fallback from impersonating an absent PDF, JSON or Markdown resource.
  if(result.status===200&&headers.get('Content-Type')?.includes('text/html')&&/\.(pdf|json|md|txt)$/i.test(url.pathname))return notFound();
  if(result.status===200&&headers.get('Content-Type')?.includes('text/html'))headers.set('Link','<https://mariomarcolongo.com/llms.txt>; rel="describedby"; type="text/plain"');
- if(result.status===200)headers.set('Content-Signal','search=yes, ai-input=yes');
+ if(result.status===200)headers.set('Content-Signal','search=yes, ai-input=yes, ai-train=yes');
  return new Response(result.body,{status:result.status,headers});
 }
