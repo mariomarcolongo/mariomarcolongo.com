@@ -1,5 +1,7 @@
 const fs=require('node:fs');const path=require('node:path');
 const root=path.resolve(__dirname,'..');const dist=path.join(root,'dist');
+// public/robots.txt owns the crawler policy; the root copy is only a mirror.
+fs.copyFileSync(path.join(root,'public/robots.txt'),path.join(root,'robots.txt'));
 const routes=['/','/work','/work/entropy','/work/atlas','/work/hypermandala','/work/wikimedia','/experience','/work/yourself-to-science','/work/scientific-visualizations','/work/telegram','/investigations','/ai-evaluation','/notandia','/research-operations','/cv','/cv-technical','/cv-ai','/evidence','/evidence/gray-swan-2026-07-29/','/evidence/gray-swan-2026-09-30/'];
 const snapshot=require('../data/source.js').presence.aiEvaluationSnapshot;
 for(const folder of ['public','dist'])fs.writeFileSync(path.join(root,folder,'evidence/gray-swan-profile-2026-09-30.json'),JSON.stringify(snapshot,null,2)+'\n');

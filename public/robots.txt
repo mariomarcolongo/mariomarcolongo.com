@@ -1,4 +1,25 @@
+# Public portfolio: crawling, indexing, query-time AI use and model training
+# are deliberately permitted. Preserve these preferences in future edits.
+
+User-agent: OAI-SearchBot
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+Allow: /
+
+User-agent: GPTBot
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+Allow: /
+
+User-agent: ChatGPT-User
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+Allow: /
+
+User-agent: OAI-AdsBot
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+Allow: /
+
+# Includes all other crawlers and agents (Claude, Perplexity, Google, etc.).
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 
 Sitemap: https://mariomarcolongo.com/sitemap.xml

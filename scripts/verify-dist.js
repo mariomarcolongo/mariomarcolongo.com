@@ -1,5 +1,17 @@
 const fs=require('node:fs');const path=require('node:path');const assert=require('node:assert/strict');const D=require('../data/source.js');const g=require('./lib/dossier-generators.js');
 const dist=path.resolve(__dirname,'../dist');
+const robots=fs.readFileSync(path.join(dist,'robots.txt'),'utf8');
+for(const folder of ['','public/'])assert.equal(fs.readFileSync(path.resolve(__dirname,'..',folder+'robots.txt'),'utf8'),robots,`${folder}robots.txt policy drift`);
+assert.ok(!/^\s*Disallow\s*:\s*\S/im.test(robots),'Public crawler access must remain permissive');
+const crawlerGroups=robots.split(/\n\s*\n/).filter(group=>/^User-agent:/im.test(group));
+for(const agent of ['*','OAI-SearchBot','GPTBot','ChatGPT-User','OAI-AdsBot']){
+ const group=crawlerGroups.find(group=>group.split('\n').some(line=>line.trim()===`User-agent: ${agent}`));
+ assert.ok(group,`${agent}: crawler policy missing`);
+ assert.match(group,/^Allow: \/\s*$/m,`${agent}: full crawl permission missing`);
+ for(const signal of ['search','ai-input','ai-train'])assert.match(group,new RegExp(`^Content-Signal:.*\\b${signal}=yes(?:,|\\s|$)`,'m'),`${agent}: ${signal} permission missing`);
+}
+const headers=fs.readFileSync(path.join(dist,'_headers'),'utf8');
+assert.match(headers,/^\/\*\n(?:[ \t].*\n)*?  Content-Signal: search=yes, ai-input=yes, ai-train=yes\s*$/m,'Site-wide content-use header must preserve all permissions');
 const snapshot=D.presence.aiEvaluationSnapshot;
 assert.equal(snapshot.provingGround.areas.reduce((total,area)=>total+area.breaks,0),snapshot.provingGround.displayedAreaTotal);
 assert.equal(require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(dist,snapshot.originalImage))).digest('hex'),snapshot.originalSha256,'Original evaluation capture changed');
