@@ -17,6 +17,7 @@
       "claimIds": [
         "entropy-published-work",
         "entropy-airc-visuals",
+        "entropy-selected-video-editing",
         "entropy-organization-context"
       ],
       "links": [
@@ -434,6 +435,7 @@
         "Entropy for Life is an Italian science-communication project covering biology, evolution and the environment, with 500K+ combined followers and subscribers across its social accounts.",
         "Since June 2023, I have worked as a paid contractor on primary-literature research, scientific fact-checking and script development. Depending on the assignment, I write, co-write or review content, check claims against sources and adapt English-language evidence for Italian audiences, preserving terminology and scientific context.",
         "My work includes collecting and organizing data, creating charts and maps, preparing slides and on-screen assets, and researching images. I also contribute to short-form content and selected thumbnail concepts or production, independently or in collaboration with the video editor. Responsibilities vary by project. I personally created the data visualizations in the AIRC reel collaborations that use them; the whole reels are collaborative productions.",
+        "Edited selected science videos and Shorts in DaVinci Resolve, including work published on Luca Perri’s channel through my collaboration with Giacomo. My role ranges from full editing to partial initial edits; the linked examples identify each contribution separately.",
         "I designed and built entropyforlife.it in WordPress. Since September 2023, my work has included responsive design, publishing, configuration and functionality changes, OVHcloud hosting, DNS, SSL and technical SEO. This combines initial website delivery with ongoing responsibility for its operation."
       ]
     },
@@ -506,6 +508,7 @@
       "attendanceEndedApproximately": "2023",
       "status": "degree_not_completed",
       "description": "Attendance stopped around 2023; no degree awarded. Administrative enrollment remains active.",
+      "cvDescription": "",
       "administrativeEnrollmentStatus": "active",
       "administrativeRecordAcademicYear": "2024/2025",
       "degreeAwarded": false,
@@ -530,6 +533,19 @@
     }
   },
   "claims": [
+    {
+      "id": "entropy-selected-video-editing",
+      "includeInCompactCv": false,
+      "text": "Edited selected science videos and Shorts in DaVinci Resolve, with full and partial editing roles identified per example.",
+      "sourceUrl": "https://www.youtube.com/watch?v=bOdizHTFlLQ",
+      "sourceOwner": "contributor",
+      "evidenceType": "contributor_confirmation",
+      "engagementType": "paid_contractor",
+      "limitation": "Mario confirmed full editing of two linked Luca Perri Shorts and the Entropy genetic-testing video, plus partial initial editing of the Luca Perri electric-car video, on 2 October 2026. YouTube metadata confirms publication titles and channels, not individual editing credits. These examples do not establish channel ownership, sole production authorship, advanced editing proficiency or additional pieces beyond the older inventory.",
+      "observedAt": "2026-10-02",
+      "lastReviewedAt": "2026-10-02",
+      "visibility": "public"
+    },
     {
       "id": "entropy-organization-context",
       "text": "Entropy for Life is an Italian science-communication project with 500K+ combined followers and subscribers across its social accounts.",
