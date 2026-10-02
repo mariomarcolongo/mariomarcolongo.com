@@ -239,6 +239,7 @@
   .published-section,.delivered-tools,.real-visuals,.actual-atlas,.reel-feature { margin-top:64px; }
   .section-intro { font-size:16px; color:var(--muted); max-width:75ch; margin-bottom:28px; }
   .video-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px 20px; }
+  .editing-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .video-card,.reel-card { min-width:0; }
   .video-poster,.reel-poster { display:block; position:relative; overflow:hidden; border-radius:9px; background:#121c28; }
   .video-poster img { width:100%; display:block; aspect-ratio:16/9; height:auto; object-fit:cover; transition:transform 200ms; }
@@ -365,6 +366,7 @@
     .actual-atlas h2 { font-size:27px; }
     .section-links { gap:4px; flex-direction:column; }
     .published-artifacts .video-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .published-artifacts .editing-grid { grid-template-columns:1fr; }
   }
   .flourish-disclosure { margin-top:32px; background:var(--surface); border:1px solid var(--rule); border-radius:9px; padding:16px 20px; }
   .flourish-disclosure summary { cursor:pointer; font-size:15px; min-height:28px; }
