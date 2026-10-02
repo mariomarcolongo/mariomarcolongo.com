@@ -404,6 +404,26 @@
     "technical": "/cv-technical",
     "aiEvaluation": "/cv-ai"
   },
+  "resumeDocuments": [
+    {
+      "focus": "default",
+      "title": "Research & Technical Operations",
+      "filename": "Mario-Marcolongo-Research-Technical-Operations.pdf",
+      "route": "/cv"
+    },
+    {
+      "focus": "technical",
+      "title": "Technical Support & Website Operations",
+      "filename": "Mario-Marcolongo-Technical-Operations.pdf",
+      "route": "/cv-technical"
+    },
+    {
+      "focus": "aiEvaluation",
+      "title": "AI Evaluation & Research Support",
+      "filename": "Mario-Marcolongo-AI-Evaluation-Research-Support.pdf",
+      "route": "/cv-ai"
+    }
+  ],
   "experience": [
     {
       "name": "Entropy for Life",

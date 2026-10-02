@@ -1,0 +1,47 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {createPortfolioService,PROTOCOLS} from '../src/server/portfolio-service.mjs';
+const profile=JSON.parse(await readFile(new URL('../public/profile.json',import.meta.url),'utf8'));
+const service=createPortfolioService(profile);
+const request=(path,options={})=>new Request('https://mariomarcolongo.com'+path,options);
+const send=(message,headers={})=>service.handle(request('/mcp',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json, text/event-stream',...headers},body:JSON.stringify(message)}));
+const rpc=(method,params={},id=1)=>({jsonrpc:'2.0',id,method,params});
+const evidence=service.search('Atlas',5);
+assert.ok(evidence.results.some(result=>result.kind==='project'&&result.id==='atlas'));
+assert.ok(evidence.results.some(result=>result.evidence?.some(claim=>claim.id==='atlas-paper-draft')));
+for(const result of evidence.results)if(result.evidence)for(const claim of result.evidence)assert.ok(claim.limitation&&claim.lastReviewedAt&&claim.sourceOwner);
+assert.equal(service.search('zzzzunmatchedterm').totalMatches,0);
+assert.equal(service.search('show Mario experience').totalMatches,0);
+assert.ok(service.search('AI',20).results.every(result=>/\bAI\b/i.test([result.title,result.record.text,result.record.description,result.record.status,result.record.period,...(result.record.details||[]),result.record.limitation].filter(Boolean).join(' '))));
+assert.ok(service.search('Metropolia').results.some(result=>result.record.degreeAwarded===false));
+const org=service.search('followers',20).results.find(result=>result.id==='entropy-organization-context');assert.match(org.record.limitation,/not.*personal reach/);
+assert.throws(()=>service.search('Atlas',100));assert.throws(()=>service.search('x'.repeat(201)));assert.throws(()=>service.getResumes('executive'));
+assert.equal(service.getResumes('technical').resumes[0].pdfUrl,'https://mariomarcolongo.com/Mario-Marcolongo-Technical-Operations.pdf');
+assert.deepEqual(service.call('get_profile').profile,profile);
+for(const version of PROTOCOLS){const response=await send(rpc('initialize',{protocolVersion:version,capabilities:{},clientInfo:{name:'test',version:'1'}}));assert.equal((await response.json()).result.protocolVersion,version);}
+let response=await send({jsonrpc:'2.0',method:'notifications/initialized'});assert.equal(response.status,202);assert.equal(await response.text(),'');
+response=await send(rpc('tools/list'));assert.equal((await response.json()).result.tools.length,3);
+response=await send(rpc('tools/call',{name:'search_evidence',arguments:{query:'Atlas',limit:5}}));const result=(await response.json()).result;assert.deepEqual(JSON.parse(result.content[0].text),result.structuredContent);assert.deepEqual(result.structuredContent,evidence);
+response=await send(rpc('resources/read',{uri:'portfolio://profile'}));assert.deepEqual(JSON.parse((await response.json()).result.contents[0].text).profile,profile);
+for(const uri of ['file:///etc/passwd','https://example.com','__proto__']){response=await send(rpc('resources/read',{uri}));assert.equal((await response.json()).error.code,-32002);}
+response=await send(rpc('tools/call',{name:'get_profile',arguments:{path:'private'}}));assert.equal((await response.json()).error.code,-32602);
+response=await send(rpc('tools/call',{name:'get_profile',arguments:{}}),{Origin:'https://attacker.invalid'});assert.equal(response.status,403);
+response=await send(rpc('ping'),{'MCP-Protocol-Version':'9999'});assert.equal(response.status,400);
+response=await send(rpc('ping'),{Accept:'application/json'});assert.equal(response.status,406);
+response=await send(rpc('ping'),{Accept:'application/json;q=0, text/event-stream'});assert.equal(response.status,406);
+response=await service.handle(request('/mcp',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json, text/event-stream'},body:'{bad json'}));assert.equal((await response.json()).error.code,-32700);
+response=await send([rpc('ping')]);assert.equal((await response.json()).error.code,-32600);
+response=await send(rpc('ping',{padding:'x'.repeat(17000)}));assert.equal(response.status,413);
+assert.equal((await service.handle(request('/mcp'))).status,405);
+assert.equal((await service.handle(request('/api/profile',{method:'POST'}))).status,405);
+assert.equal((await service.handle(request('/api/unknown'))).status,404);
+assert.equal((await service.handle(request('/api/evidence'))).status,400);
+assert.equal((await service.handle(request('/api/resumes?focus=unknown'))).status,400);
+assert.equal(await (await service.handle(request('/api/profile',{method:'HEAD'}))).text(),'');
+assert.equal(await service.handle(request('/')),null);
+// Discovery must reflect actual tools and protocol versions, not invented capabilities.
+const card=JSON.parse(await readFile(new URL('../public/mcp/server-card',import.meta.url),'utf8'));
+assert.deepEqual(card.remotes[0].supportedProtocolVersions,PROTOCOLS);
+assert.equal(card.remotes[0].url,'https://mariomarcolongo.com/mcp');
+for(const document of profile.resumeDocuments)await readFile(new URL('../public/'+document.filename,import.meta.url));
+console.log('Public evidence scope, attribution, résumé assets, MCP interoperability boundaries and input rejection checks passed.');

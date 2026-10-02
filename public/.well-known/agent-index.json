@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "organization": "Mario Marcolongo",
+  "website": "https://mariomarcolongo.com",
+  "agents": [
+    {
+      "id": "portfolio-evidence",
+      "name": "Mario Marcolongo — public evidence",
+      "protocol": "mcp",
+      "endpoint": "https://mariomarcolongo.com/mcp",
+      "serverCard": "https://mariomarcolongo.com/mcp/server-card",
+      "capabilities": [
+        "get_profile",
+        "search_evidence",
+        "get_resumes"
+      ],
+      "readOnly": true,
+      "authentication": "none",
+      "documentation": "https://mariomarcolongo.com/agent-service.md"
+    }
+  ],
+  "scope": "Experimental organization index for a working public retrieval service. No generative model, A2A, OAuth, booking, payments or private data access."
+}
