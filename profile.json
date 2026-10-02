@@ -90,6 +90,14 @@
         {
           "label": "Source and inclusion records",
           "url": "https://github.com/yourselftoscience/yourselftoscience.org"
+        },
+        {
+          "label": "Zenodo archive · DOI",
+          "url": "https://doi.org/10.5281/zenodo.15109359"
+        },
+        {
+          "label": "FAIRsharing knowledgebase record",
+          "url": "https://doi.org/10.25504/FAIRsharing.d3d487"
         }
       ]
     },

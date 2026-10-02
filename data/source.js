@@ -552,6 +552,14 @@ function createMarioDossier() {
         {
           "label": "Source and inclusion records",
           "url": "https://github.com/yourselftoscience/yourselftoscience.org"
+        },
+        {
+          "label": "Zenodo archive · DOI",
+          "url": "https://doi.org/10.5281/zenodo.15109359"
+        },
+        {
+          "label": "FAIRsharing knowledgebase record",
+          "url": "https://doi.org/10.25504/FAIRsharing.d3d487"
         }
       ],
       "sections": [
@@ -565,7 +573,7 @@ function createMarioDossier() {
         },
         {
           "heading": "Result",
-          "text": "The dated review found 55 resources. A separate check found 37 Wikidata items that referenced the project URL. The two counts answer different questions: the first describes directory scope and the second a form of reference use. Neither establishes 37 active users, 37 independent scholarly citations or participation in 55 studies. Counts describe the inspected state and are not presented as live counters."
+          "text": "The dated review found 55 resources. Software releases are archived on Zenodo with a persistent DOI, and the directory is listed as a knowledgebase in FAIRsharing; both records identify me as creator or maintainer and link my ORCID. A separate check found 37 Wikidata items that referenced the project URL. The two counts answer different questions: the first describes directory scope and the second a form of reference use. Neither establishes 37 active users, 37 independent scholarly citations or participation in 55 studies. Counts describe the inspected state and are not presented as live counters."
         },
         {
           "heading": "How to inspect it",
@@ -851,7 +859,7 @@ function createMarioDossier() {
       "Listed coauthor, The AI Safety Formalization Atlas (unpublished September 2026 draft)."
     ],
     "yts": [
-      "Founded and maintain a directory of 55 research-participation resources, with documented inclusion decisions and linked sources.",
+      "Founded and maintain a directory of 55 research-participation resources, with linked sources, releases archived on Zenodo (DOI) and a FAIRsharing knowledgebase record.",
       "Organized resource information and maintained the AI-assisted website."
     ],
     "gray": [

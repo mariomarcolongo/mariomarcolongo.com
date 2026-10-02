@@ -12,10 +12,12 @@ const canonical = suppliedCanonical === P.canonicalUrl || suppliedCanonical === 
 const markdown = Astro.url.pathname === '/' ? '/index.md' : `${Astro.url.pathname.replace(/\/$/, '').replace(/\.html$/, '')}.md`;
 const profilePage = pagePath === '/' || /^\/cv(?:-technical|-ai)?$/.test(pagePath);
 const preview = `${P.canonicalUrl}/og/${pagePath.startsWith('/cv') ? 'cv' : pagePath === '/ai-evaluation' ? 'ai-evaluation' : pagePath === '/investigations' ? 'investigations' : 'home'}.png`;
+const directory = pagePath === '/work/yourself-to-science' ? D.projects.find(project => project.id === 'yourself-to-science') : undefined;
 const graph = {'@context':'https://schema.org','@graph':[
  {'@type':'Person','@id':`${P.canonicalUrl}/#person`,name:P.name,url:P.canonicalUrl,description:P.machineSummary,email:P.email,sameAs:[P.github,P.linkedin,P.orcidUrl],identifier:{'@type':'PropertyValue',propertyID:'ORCID',value:P.orcidUrl.split('/').pop()}},
  {'@type':profilePage?'ProfilePage':'WebPage','@id':`${canonical}#webpage`,name:title,url:canonical,description,inLanguage:'en',isPartOf:{'@id':`${P.canonicalUrl}/#website`},...(profilePage?{mainEntity:{'@id':`${P.canonicalUrl}/#person`}}:{about:{'@id':`${P.canonicalUrl}/#person`}})},
- ...(pagePath==='/'?[{'@type':'WebSite','@id':`${P.canonicalUrl}/#website`,name:P.name,url:P.canonicalUrl,inLanguage:'en',publisher:{'@id':`${P.canonicalUrl}/#person`}}]:[])
+ ...(pagePath==='/'?[{'@type':'WebSite','@id':`${P.canonicalUrl}/#website`,name:P.name,url:P.canonicalUrl,inLanguage:'en',publisher:{'@id':`${P.canonicalUrl}/#person`}}]:[]),
+ ...(directory?[{'@type':'SoftwareApplication','@id':`${directory.links.website}/#app`,name:'Yourself to Science',url:directory.links.website,applicationCategory:'ScientificApplication',operatingSystem:'Web',author:{'@id':`${P.canonicalUrl}/#person`},sameAs:[directory.links.doi,directory.links.fairsharing]}]:[])
 ]};
 ---
 <!doctype html>
