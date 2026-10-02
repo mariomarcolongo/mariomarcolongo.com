@@ -151,7 +151,7 @@ function createMarioDossier() {
       "sourceOwner": "contributor",
       "evidenceType": "contributor_confirmation",
       "engagementType": "paid_contractor",
-      "limitation": "Mario confirmed full editing of two linked Luca Perri Shorts and the Entropy genetic-testing video, plus partial initial editing of the Luca Perri electric-car video, on 2 October 2026. YouTube metadata confirms publication titles and channels, not individual editing credits. These examples do not establish channel ownership, sole production authorship, advanced editing proficiency or additional pieces beyond the older inventory.",
+      "limitation": "Mario confirmed full editing of two linked Luca Perri Shorts and two Entropy videos about genetic testing and genetic selection, plus partial initial editing of the Luca Perri electric-car video, on 2 October 2026. YouTube metadata confirms publication titles and channels, not individual editing credits. These examples do not establish channel ownership, sole production authorship, advanced editing proficiency or additional pieces beyond the older inventory.",
       "observedAt": "2026-10-02",
       "lastReviewedAt": "2026-10-02",
       "visibility": "public"
