@@ -2,6 +2,13 @@
   "schemaVersion": 1,
   "organization": "Mario Marcolongo",
   "website": "https://mariomarcolongo.com",
+  "dnsDiscovery": {
+    "owner": "_index._agents.mariomarcolongo.com",
+    "type": "SVCB",
+    "experimentalParameters": {
+      "key65400": "Absolute index URL as UTF-8; publisher-defined private-use parameter, not universally interoperable"
+    }
+  },
   "agents": [
     {
       "id": "portfolio-evidence",

@@ -27,6 +27,10 @@ Resources: `portfolio://profile`, `portfolio://evidence`, `portfolio://resumes`.
 
 Discovery: [MCP server card](https://mariomarcolongo.com/mcp/server-card) (experimental MCP extension) and [organization index](https://mariomarcolongo.com/.well-known/agent-index.json) (publisher-defined JSON). DNS-AID remains an experimental draft. Neither discovery document advertises A2A or authentication services.
 
+### Experimental DNS discovery
+
+The `_index._agents.mariomarcolongo.com` SVCB record identifies the HTTPS host and port for the organization index. Its private-use `key65400` contains the absolute index URL as UTF-8. This publisher-defined parameter is not an IANA-registered or universally interoperable DNS-AID field. A compatible consumer reads that URL, fetches the JSON index and connects to the listed MCP endpoint; the index does not claim to be an MCP transport itself. DNS records are advertised only after the corresponding endpoint is deployed and tested.
+
 ## Interpretation
 
 These are owner-maintained records, not independent certification. Preserve each claim’s source ownership, dates and limitations. Organizational audience figures are not Mario’s personally attributable reach. Draft-paper authorship is not publication; Open UAS path enrollment is not an awarded degree. AI-assisted implementation is disclosed in the underlying profile.
