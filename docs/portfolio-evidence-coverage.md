@@ -5,7 +5,7 @@ The website preserves breadth; the three application CVs select work relevant to
 | Evidence | Website coverage | Default CV | Technical CV | AI evaluation CV |
 | --- | --- | --- | --- | --- |
 | Entropy research, fact-checking, scripts, visuals and website design/build/operations | Homepage, `/experience`, detailed `/work/entropy`, work record | Yes | Yes | Yes |
-| Selected DaVinci Resolve editing, including Luca Perri channel productions | `/work/entropy#video-editing`, `/experience`, profile claim with contributor-confirmed roles; four deduplicated public examples | Full-experience link only | Full-experience link only | Full-experience link only |
+| Selected DaVinci Resolve editing, including Luca Perri channel productions | `/work/entropy#video-editing`, `/experience`, profile claim with contributor-confirmed roles; five deduplicated public examples | Full-experience link only | Full-experience link only | Full-experience link only |
 | Atlas source audit, citation locators and earlier tooling PRs | Homepage, `/work/atlas`, evidence index, structured records | Yes | Yes | Yes |
 | Atlas September 2026 draft coauthorship | Atlas card/case, evidence index, structured records; clearly draft | Yes | Yes | Yes |
 | Metropolia affiliation permission | Atlas case; contributor-confirmed, separate from study qualification | Education and draft entry | Education and draft entry | Education and draft entry |
