@@ -106,6 +106,7 @@ function createMarioDossier() {
       "attendanceEndedApproximately": "2023",
       "status": "degree_not_completed",
       "description": "Attendance stopped around 2023; no degree awarded. Administrative enrollment remains active.",
+      "cvDescription": "",
       "administrativeEnrollmentStatus": "active",
       "administrativeRecordAcademicYear": "2024/2025",
       "degreeAwarded": false,
@@ -142,6 +143,19 @@ function createMarioDossier() {
     ]
   },
   "claims": [
+    {
+      "id": "entropy-selected-video-editing",
+      "includeInCompactCv": false,
+      "text": "Edited selected science videos and Shorts in DaVinci Resolve, with full and partial editing roles identified per example.",
+      "sourceUrl": "https://www.youtube.com/watch?v=bOdizHTFlLQ",
+      "sourceOwner": "contributor",
+      "evidenceType": "contributor_confirmation",
+      "engagementType": "paid_contractor",
+      "limitation": "Mario confirmed full editing of two linked Luca Perri Shorts and the Entropy genetic-testing video, plus partial initial editing of the Luca Perri electric-car video, on 2 October 2026. YouTube metadata confirms publication titles and channels, not individual editing credits. These examples do not establish channel ownership, sole production authorship, advanced editing proficiency or additional pieces beyond the older inventory.",
+      "observedAt": "2026-10-02",
+      "lastReviewedAt": "2026-10-02",
+      "visibility": "public"
+    },
     {
       "id": "entropy-organization-context",
       "text": "Entropy for Life is an Italian science-communication project with 500K+ combined followers and subscribers across its social accounts.",
@@ -358,11 +372,13 @@ function createMarioDossier() {
       "hook": "Scientific evidence behind published work",
       "route": "/work/entropy",
       "status": "Paid contractor · Jun 2023–Present",
+      "reviewedAt": "2026-10-02",
       "text": "Paid research, fact-checking, scripts and visual production for Entropy for Life, an Italian science-communication project with 500K+ combined followers and subscribers, plus the design, build and operation of its WordPress website.",
       "organizationContext": ENTROPY_ORGANIZATION_CONTEXT,
       "claimIds": [
         "entropy-published-work",
         "entropy-airc-visuals",
+        "entropy-selected-video-editing",
         "entropy-organization-context"
       ],
       "image": "/media/work/entropy-h5n1.png",
@@ -642,6 +658,10 @@ function createMarioDossier() {
           "text": "Notandia continues MDPI Filter. I define the product requirements and evidence hierarchy, inspect matching and API behavior, reproduce failures and guide AI-assisted implementation. My work includes cross-browser and Zotero testing, documentation, release verification and deployment. Browser and Zotero sources are maintained separately."
         },
         {
+          "heading": "Use in scientific production",
+          "text": "I created Notandia to support my work at Entropy for Life, where my team uses it during scientific source review. In my experience, the warnings help us notice issues and avoid repeated manual checking. This use is confirmed by me on 2 October 2026; I have not measured time savings or quality improvements independently."
+        },
+        {
           "heading": "Released record versus source development",
           "text": "On 30 September 2026, the public Chrome listing still showed MDPI Filter 0.0.2, updated June 2025, with 14 users and one rating. The developer dashboard's Notandia 0.1.0 draft was explicitly unpublished. These are dated store observations, not current combined usage. The canonical browser source contains the expanded Notandia work. Source development is not proof that every capability has shipped in Chrome and Edge. Compare store listings and repository release records before choosing a version."
         },
@@ -813,8 +833,8 @@ function createMarioDossier() {
       "Adversarial model testing: Proving Ground #79 (top 5%), 127 platform-recorded breaks; 30 Sep 2026 snapshot."
     ],
     "notandia": [
-      "Developed and maintained an AI-assisted browser tool for research-result workflows.",
-      "Defined requirements, tested behavior and diagnosed release issues; documented store releases separately from source development."
+      "Created Notandia, an AI-assisted browser tool used by the Entropy for Life team during scientific source review.",
+      "Defined requirements, tested warning behavior and diagnosed browser-extension release issues."
     ],
     "wikimedia": [
       "Review citations, reconcile conflicting sources and improve structured metadata; create sourced scientific explanations and diagrams.",
@@ -838,6 +858,7 @@ function createMarioDossier() {
         ENTROPY_ORGANIZATION_CONTEXT,
         "Since June 2023, I have worked as a paid contractor on primary-literature research, scientific fact-checking and script development. Depending on the assignment, I write, co-write or review content, check claims against sources and adapt English-language evidence for Italian audiences, preserving terminology and scientific context.",
         "My work includes collecting and organizing data, creating charts and maps, preparing slides and on-screen assets, and researching images. I also contribute to short-form content and selected thumbnail concepts or production, independently or in collaboration with the video editor. Responsibilities vary by project. I personally created the data visualizations in the AIRC reel collaborations that use them; the whole reels are collaborative productions.",
+        "Edited selected science videos and Shorts in DaVinci Resolve, including work published on Luca Perri’s channel through my collaboration with Giacomo. My role ranges from full editing to partial initial edits; the linked examples identify each contribution separately.",
         "I designed and built entropyforlife.it in WordPress. Since September 2023, my work has included responsive design, publishing, configuration and functionality changes, OVHcloud hosting, DNS, SSL and technical SEO. This combines initial website delivery with ongoing responsibility for its operation."
       ]
     },
@@ -1095,9 +1116,9 @@ function createMarioDossier() {
       id: "entropy-for-life",
       title: "Entropy for Life — Science Writing, Fact-Checking & Website Management",
       oneLiner: "Paid science writing, fact-checking, script-development, visual-production and website-management work across 59+ published projects.",
-      description: "Paid contractor for Entropy for Life across 59+ publicly indexed projects: 55+ published YouTube video projects and four co-authored articles. Most video assignments combine primary-literature research, scientific fact-checking and script development; selected assignments focus on fact-checking and/or data visualization. Also produce data visualizations, presentation slides, on-screen assets, short-form materials and selected thumbnails independently or with video editor Alessandro Lanzoni. Additional Instagram and TikTok work is not yet fully indexed. Manage OVHCloud hosting, DNS, SSL, WordPress configuration, layout and functionality changes, and technical SEO. Formally acknowledged in Giacomo Moro Mauretto’s Mondadori book Italiani veri.",
+      description: "Paid contractor for Entropy for Life across 59+ publicly indexed projects: 55+ published YouTube video projects and four co-authored articles. Most video assignments combine primary-literature research, scientific fact-checking and script development; selected assignments focus on fact-checking and/or data visualization. Also produce data visualizations, presentation slides, on-screen assets, short-form materials and selected thumbnails independently or with video editor Alessandro Lanzoni. Edit selected videos and Shorts in DaVinci Resolve, including Luca Perri channel work through my collaboration with Giacomo; full and partial editing roles are identified in the linked portfolio. Additional Instagram and TikTok work is not yet fully indexed. Manage OVHCloud hosting, DNS, SSL, WordPress configuration, layout and functionality changes, and technical SEO. Formally acknowledged in Giacomo Moro Mauretto’s Mondadori book Italiani veri.",
       role: "Science Writer & Fact-Checker / Website Manager (WordPress)",
-      tech: ["Primary-Literature Research", "Scientific Fact-Checking", "Script Development", "Data Visualization & Presentation Design", "WordPress", "DNS/SSL", "Technical SEO"],
+      tech: ["Primary-Literature Research", "Scientific Fact-Checking", "Script Development", "Data Visualization & Presentation Design", "DaVinci Resolve — selected video editing", "WordPress", "DNS/SSL", "Technical SEO"],
       links: {
         website: "https://entropyforlife.it",
         playlist: "https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh",

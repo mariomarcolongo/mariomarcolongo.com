@@ -1,6 +1,6 @@
 ---
 import { M } from '../lib/artifacts';
 const { video:v, showRole=false }=Astro.props;
-const role=M.videoRoles[v.id];
+const role=v.role||M.videoRoles[v.id];
 ---
-<article class="video-card"><a class="video-poster" href={v.url} aria-label={`Watch ${v.title} on YouTube`}><img src={v.image} alt={`Published video thumbnail: ${v.title}`} width="480" height="360" loading="lazy"/><span class="video-play" aria-hidden="true">▶</span><span class="video-duration">{v.duration}</span></a><h3><a href={v.url} title={v.title}>{v.displayTitle||v.title}</a></h3>{showRole&&role&&<p class="video-role">{role}</p>}<a class="video-watch" href={v.url}>Watch on YouTube ↗</a></article>
+<article class="video-card"><a class="video-poster" href={v.url} aria-label={`Watch ${v.title} on YouTube`}><img src={v.image} alt={`Published video thumbnail: ${v.title}`} width="480" height="360" loading="lazy"/><span class="video-play" aria-hidden="true">▶</span>{v.duration&&<span class="video-duration">{v.duration}</span>}</a><h3><a href={v.url} title={v.title}>{v.displayTitle||v.title}</a></h3>{v.publisher&&<p class="meta">Published by <a href={v.publisherUrl}>{v.publisher}</a></p>}{showRole&&role&&<p class="video-role"><strong>{role}</strong>{v.roleDetail&&<> · {v.roleDetail}</>}</p>}<a class="video-watch" href={v.url}>Watch on YouTube ↗</a></article>
