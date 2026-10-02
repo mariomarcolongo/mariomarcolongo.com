@@ -1,0 +1,58 @@
+{
+  "reviewedAt": "2026-10-02",
+  "attribution": "Editing roles confirmed by Mario Marcolongo on 2 October 2026. YouTube titles and publishers checked through its public oEmbed metadata; metadata does not establish editing credits.",
+  "items": [
+    {
+      "id": "8yIfGfzQ6FE",
+      "title": "Sapevi che esistono lune pastore?",
+      "displayTitle": "Shepherd moons",
+      "url": "https://www.youtube.com/shorts/8yIfGfzQ6FE",
+      "publisher": "Luca Perri",
+      "publisherUrl": "https://www.youtube.com/@astrowikiperri",
+      "role": "Full Short editing",
+      "roleDetail": "Edited the complete Short in DaVinci Resolve, including cuts and added images.",
+      "image": "/media/work/videos/8yIfGfzQ6FE.jpg",
+      "thumbnailSource": "https://i.ytimg.com/vi/8yIfGfzQ6FE/hqdefault.jpg",
+      "format": "Short"
+    },
+    {
+      "id": "uMOTgp2nJO8",
+      "title": "La luna di Avatar non doveva chiamarsi Pandora!",
+      "displayTitle": "Why Avatar’s moon shouldn’t be called Pandora",
+      "url": "https://www.youtube.com/shorts/uMOTgp2nJO8",
+      "publisher": "Luca Perri",
+      "publisherUrl": "https://www.youtube.com/@astrowikiperri",
+      "role": "Full Short editing",
+      "roleDetail": "Edited the complete Short in DaVinci Resolve, including cuts and added images.",
+      "image": "/media/work/videos/uMOTgp2nJO8.jpg",
+      "thumbnailSource": "https://i.ytimg.com/vi/uMOTgp2nJO8/hqdefault.jpg",
+      "format": "Short"
+    },
+    {
+      "id": "mAkiT0Ap4xA",
+      "title": "I campi elettromagnetici e le macchine elettriche",
+      "displayTitle": "Electromagnetic fields and electric cars",
+      "url": "https://www.youtube.com/watch?v=mAkiT0Ap4xA",
+      "publisher": "Luca Perri",
+      "publisherUrl": "https://www.youtube.com/@astrowikiperri",
+      "role": "Partial initial editing",
+      "roleDetail": "Contributed the initial edit: added images, removed pauses or unnecessary content, and improved structure.",
+      "image": "/media/work/videos/mAkiT0Ap4xA.jpg",
+      "thumbnailSource": "https://i.ytimg.com/vi/mAkiT0Ap4xA/hqdefault.jpg",
+      "format": "Video"
+    },
+    {
+      "id": "bOdizHTFlLQ",
+      "title": "Scoprire le Origini Genetiche con i Test online, ha senso?",
+      "displayTitle": "Do online genetic ancestry tests make sense?",
+      "url": "https://www.youtube.com/watch?v=bOdizHTFlLQ",
+      "publisher": "Entropy for Life - Giacomo Moro Mauretto",
+      "publisherUrl": "https://www.youtube.com/@EntropyforLife",
+      "role": "Full video editing",
+      "roleDetail": "Completed the video edit in DaVinci Resolve.",
+      "image": "/media/work/videos/bOdizHTFlLQ.jpg",
+      "thumbnailSource": "https://i.ytimg.com/vi/bOdizHTFlLQ/hqdefault.jpg",
+      "format": "Video"
+    }
+  ]
+}
