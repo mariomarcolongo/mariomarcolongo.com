@@ -307,16 +307,16 @@ function createMarioDossier() {
     },
     {
       "id": "notandia-source-release",
-      "text": "Developed and maintained an AI-assisted browser tool for research-result workflows; case study distinguishes released store versions from capabilities currently in source.",
+      "text": "Created and maintained Notandia, an AI-assisted research-workflow extension. Chrome version 0.1.1 was released on 3 October 2026.",
       "sourceUrl": "https://github.com/notandia/browser-extension",
       "sourceOwner": "project_maintainer",
       "evidenceType": "public_source_and_store_records",
       "engagementType": "independent_project",
-      "limitation": "Chrome: MDPI Filter 0.0.2 (June 2025), 14 users, one rating. Notandia 0.1.0 remains an unpublished draft. These are store counts, not verified active users. Edge availability and feature parity are unverified.",
+      "limitation": "Chrome: Notandia 0.1.1 (3 October 2026). Its 14 displayed users and one rating include earlier listing history; active use is unverified. Edge: MDPI Filter 0.0.1 (7 June 2025). Zotero releases are separate; cross-platform parity is unverified.",
       "startDate": null,
       "endDate": null,
-      "observedAt": "2026-09-30",
-      "lastReviewedAt": "2026-09-30",
+      "observedAt": "2026-10-03",
+      "lastReviewedAt": "2026-10-03",
       "visibility": "public"
     },
     {
@@ -675,11 +675,11 @@ function createMarioDossier() {
           "url": "https://github.com/notandia/browser-extension"
         },
         {
-          "label": "Chrome store record",
-          "url": "https://chromewebstore.google.com/detail/mdpi-filter/comknkeimaaadpiopddjoknflbmjeccp"
+          "label": "Install Notandia for Chrome",
+          "url": "https://chromewebstore.google.com/detail/notandia/comknkeimaaadpiopddjoknflbmjeccp"
         },
         {
-          "label": "Edge store record",
+          "label": "Legacy Edge release",
           "url": "https://microsoftedge.microsoft.com/addons/detail/mdpi-filter/efonlkldplkaeekpiajloajjmkappjgi"
         }
       ],
@@ -697,8 +697,8 @@ function createMarioDossier() {
           "text": "I created Notandia to support my work at Entropy for Life, where my team uses it during scientific source review. In my experience, the warnings help us notice issues and avoid repeated manual checking. This use is confirmed by me on 2 October 2026; I have not measured time savings or quality improvements independently."
         },
         {
-          "heading": "Released record versus source development",
-          "text": "On 30 September 2026, the public Chrome listing still showed MDPI Filter 0.0.2, updated June 2025, with 14 users and one rating. The developer dashboard's Notandia 0.1.0 draft was explicitly unpublished. These are dated store observations, not current combined usage. The canonical browser source contains the expanded Notandia work. Source development is not proof that every capability has shipped in Chrome and Edge. Compare store listings and repository release records before choosing a version."
+          "heading": "Chrome release",
+          "text": "Notandia 0.1.1 is available in the Chrome Web Store, updated 3 October 2026, continuing the former MDPI Filter listing. I tested the build and confirmed it works on that date. The listing displayed 14 users and one rating; these include its earlier history and do not establish active use of the new version. Source development is not proof that every capability has shipped in Chrome and Edge."
         },
         {
           "heading": "Evidence and interpretation",
@@ -706,7 +706,7 @@ function createMarioDossier() {
         },
         {
           "heading": "Availability",
-          "text": "Chrome: the public listing still distributes MDPI Filter 0.0.2, updated June 2025; Notandia 0.1.0 is an unpublished draft as of 30 September 2026. Edge: separate listing, whose installed version must be checked independently. Browser source: canonical Notandia repository, development tracked independently of store availability. Zotero: separate source repository with its own scope. No cross-store feature-parity claim is made."
+          "text": "Chrome: Notandia 0.1.1, updated 3 October 2026. Edge: the public listing still distributes MDPI Filter 0.0.1, updated 7 June 2025, as observed on 3 October 2026. Browser development is tracked in the canonical Notandia repository. Zotero has a separate source repository and its own releases. Check the relevant release before installing; no cross-store feature-parity claim is made."
         },
         {
           "heading": "Research workflow design",
@@ -1174,7 +1174,7 @@ function createMarioDossier() {
       role: "Creator & Product Lead",
       tech: ["Product Requirements", "Functional Testing", "Manifest V3", "NCBI E-utilities", "Browser Extension Maintenance"],
       links: {
-        chromeStore: "https://chromewebstore.google.com/detail/mdpi-filter/comknkeimaaadpiopddjoknflbmjeccp",
+        chromeStore: "https://chromewebstore.google.com/detail/notandia/comknkeimaaadpiopddjoknflbmjeccp",
         edgeStore: "https://microsoftedge.microsoft.com/addons/detail/mdpi-filter/efonlkldplkaeekpiajloajjmkappjgi",
         github: "https://github.com/orgs/mdpi-filter/repositories",
         screenshots: [
