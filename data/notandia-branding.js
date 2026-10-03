@@ -8,7 +8,7 @@ const NOTANDIA = Object.freeze({
   legacyOrganization: "https://github.com/mdpi-filter",
   legacyCompatibilityRepository: "https://github.com/mdpi-filter/moved-to-notandia",
   retiredOrganizationUrl: "https://github.com/orgs/mdpi-filter/repositories",
-  chromeStore: "https://chromewebstore.google.com/detail/mdpi-filter/comknkeimaaadpiopddjoknflbmjeccp",
+  chromeStore: "https://chromewebstore.google.com/detail/notandia/comknkeimaaadpiopddjoknflbmjeccp",
   edgeStore: "https://microsoftedge.microsoft.com/addons/detail/mdpi-filter/efonlkldplkaeekpiajloajjmkappjgi"
 });
 
