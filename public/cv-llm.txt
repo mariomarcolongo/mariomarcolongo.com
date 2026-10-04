@@ -60,8 +60,8 @@ Case: https://mariomarcolongo.com/work/yourself-to-science
 
 Independent project · AI-assisted implementation. A browser extension and separate Zotero plugin for research-result and reference workflows. I define product requirements, test behavior and manage AI-assisted development and releases.
 
-Created and maintained Notandia, an AI-assisted research-workflow extension. Chrome version 0.1.1 was released on 3 October 2026. Chrome: Notandia 0.1.1 (3 October 2026). Its 14 displayed users and one rating include earlier listing history; active use is unverified. Edge: MDPI Filter 0.0.1 (7 June 2025). Zotero releases are separate; cross-platform parity is unverified.
-Source: https://github.com/notandia/browser-extension. Owner: project maintainer; evidence: public source and store records; observed: 2026-10-03.
+Created Notandia, an AI-assisted research-workflow extension available in Chrome and Edge (maintainer confirmation, 4 October 2026). Chrome 0.1.1: released 3 October 2026; listing counts include legacy use. Edge package updated; artwork and description await approval. Firefox submitted, awaiting approval. Zotero releases are separate; platform parity and active usage unverified.
+Source: https://github.com/notandia/browser-extension. Owner: project maintainer; evidence: public source and store records; observed: 2026-10-04.
 
 Case: https://mariomarcolongo.com/notandia
 

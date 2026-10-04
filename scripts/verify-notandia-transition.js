@@ -19,7 +19,7 @@ const sameUrl = (value, expected) => {
 const hasUrl = (value, expected) => [...value.matchAll(/https?:\/\/[^\s"'<>\\]+/g)]
   .some(([url]) => sameUrl(url, expected));
 const boundaries = ['publisher-level', 'article-specific', 'AI-assisted',
-  'Source development is not proof that every capability has shipped in Chrome and Edge.'];
+  'Store availability does not establish feature parity across platforms.'];
 
 async function main() {
   for (const file of ['index.html', 'notandia.html', 'mdpi-filter.html', 'cv.html',
