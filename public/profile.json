@@ -152,6 +152,10 @@
         {
           "label": "Install Notandia for Edge",
           "url": "https://microsoftedge.microsoft.com/addons/detail/notandia/efonlkldplkaeekpiajloajjmkappjgi"
+        },
+        {
+          "label": "Install Notandia for Firefox",
+          "url": "https://addons.mozilla.org/en-US/firefox/addon/notandia/"
         }
       ]
     },
@@ -693,16 +697,16 @@
     },
     {
       "id": "notandia-source-release",
-      "text": "Created Notandia, an AI-assisted research-workflow extension available in Chrome and Edge (maintainer confirmation, 4 October 2026).",
-      "sourceUrl": "https://github.com/notandia/browser-extension",
+      "text": "Created Notandia, an AI-assisted research-workflow extension released for Chrome, Edge and Firefox.",
+      "sourceUrl": "https://addons.mozilla.org/en-US/firefox/addon/notandia/",
       "sourceOwner": "project_maintainer",
       "evidenceType": "public_source_and_store_records",
       "engagementType": "independent_project",
-      "limitation": "Chrome 0.1.1: released 3 October 2026; listing counts include legacy use. Edge package updated; artwork and description await approval. Firefox submitted, awaiting approval. Zotero releases are separate; platform parity and active usage unverified.",
+      "limitation": "Chrome 0.1.1 released 3 October; counts include legacy use. Edge package confirmed 4 October; artwork and description pending then. Firefox 0.1.2 publicly downloadable, verified 7 October 2026; automated screening, later human review possible. Separate Zotero releases; platform parity and usage unverified.",
       "startDate": null,
       "endDate": null,
-      "observedAt": "2026-10-04",
-      "lastReviewedAt": "2026-10-04",
+      "observedAt": "2026-10-07",
+      "lastReviewedAt": "2026-10-07",
       "visibility": "public"
     },
     {

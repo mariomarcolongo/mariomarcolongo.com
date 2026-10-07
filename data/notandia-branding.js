@@ -9,7 +9,8 @@ const NOTANDIA = Object.freeze({
   legacyCompatibilityRepository: "https://github.com/mdpi-filter/moved-to-notandia",
   retiredOrganizationUrl: "https://github.com/orgs/mdpi-filter/repositories",
   chromeStore: "https://chromewebstore.google.com/detail/notandia/comknkeimaaadpiopddjoknflbmjeccp",
-  edgeStore: "https://microsoftedge.microsoft.com/addons/detail/notandia/efonlkldplkaeekpiajloajjmkappjgi"
+  edgeStore: "https://microsoftedge.microsoft.com/addons/detail/notandia/efonlkldplkaeekpiajloajjmkappjgi",
+  firefoxStore: "https://addons.mozilla.org/en-US/firefox/addon/notandia/"
 });
 
 function rewriteLegacyLinks(value) {
@@ -54,6 +55,7 @@ function applyNotandiaBranding({ D, H, P } = {}) {
       zoteroRepository: NOTANDIA.zoteroRepository,
       chromeStore: NOTANDIA.chromeStore,
       edgeStore: NOTANDIA.edgeStore,
+      firefoxStore: NOTANDIA.firefoxStore,
       legacyCompatibility: NOTANDIA.legacyCompatibilityRepository,
       screenshots: project.links?.screenshots || []
     };
@@ -75,7 +77,7 @@ function applyNotandiaBranding({ D, H, P } = {}) {
     H.mdpiFilter.label = "Current product";
     H.mdpiFilter.title = "Notandia works across browser and Zotero research workflows.";
     H.mdpiFilter.body = "Notandia identifies articles from scrutinized publishers such as MDPI and Frontiers, checks Crossref/Retraction Watch for formal notices, and adds precise MDPI reference detection in Zotero. Publisher context is not an article-quality verdict.";
-    H.mdpiFilter.meta = "Chrome & Edge available · Firefox awaiting approval · Safari source · Zotero separate releases";
+    H.mdpiFilter.meta = "Chrome, Edge & Firefox available · Safari source · Zotero separate releases";
     H.mdpiFilter.storeHref = NOTANDIA.chromeStore;
     H.mdpiFilter.href = NOTANDIA.canonicalPath;
     H.mdpiFilter.linkLabel = "Open the Notandia project record";
