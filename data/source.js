@@ -307,16 +307,16 @@ function createMarioDossier() {
     },
     {
       "id": "notandia-source-release",
-      "text": "Created Notandia, an AI-assisted research-workflow extension available in Chrome and Edge (maintainer confirmation, 4 October 2026).",
-      "sourceUrl": "https://github.com/notandia/browser-extension",
+      "text": "Created Notandia, an AI-assisted research-workflow extension released for Chrome, Edge and Firefox.",
+      "sourceUrl": "https://addons.mozilla.org/en-US/firefox/addon/notandia/",
       "sourceOwner": "project_maintainer",
       "evidenceType": "public_source_and_store_records",
       "engagementType": "independent_project",
-      "limitation": "Chrome 0.1.1: released 3 October 2026; listing counts include legacy use. Edge package updated; artwork and description await approval. Firefox submitted, awaiting approval. Zotero releases are separate; platform parity and active usage unverified.",
+      "limitation": "Chrome 0.1.1 released 3 October; counts include legacy use. Edge package confirmed 4 October; artwork and description pending then. Firefox 0.1.2 publicly downloadable, verified 7 October 2026; automated screening, later human review possible. Separate Zotero releases; platform parity and usage unverified.",
       "startDate": null,
       "endDate": null,
-      "observedAt": "2026-10-04",
-      "lastReviewedAt": "2026-10-04",
+      "observedAt": "2026-10-07",
+      "lastReviewedAt": "2026-10-07",
       "visibility": "public"
     },
     {
@@ -681,6 +681,10 @@ function createMarioDossier() {
         {
           "label": "Install Notandia for Edge",
           "url": "https://microsoftedge.microsoft.com/addons/detail/notandia/efonlkldplkaeekpiajloajjmkappjgi"
+        },
+        {
+          "label": "Install Notandia for Firefox",
+          "url": "https://addons.mozilla.org/en-US/firefox/addon/notandia/"
         }
       ],
       "sections": [
@@ -698,7 +702,7 @@ function createMarioDossier() {
         },
         {
           "heading": "Browser releases",
-          "text": "Notandia 0.1.1 was released for Chrome on 3 October 2026; I tested the build. I confirmed the updated Edge package on 4 October 2026; listing artwork and description await approval. Firefox is submitted and awaiting approval. Store availability does not establish feature parity across platforms."
+          "text": "Notandia 0.1.1 was released for Chrome on 3 October 2026; I tested the build. I confirmed the updated Edge package on 4 October 2026, when listing artwork and description were awaiting approval. Firefox 0.1.2 is publicly downloadable on Mozilla Add-ons, verified 7 October 2026. Store availability does not establish feature parity across platforms."
         },
         {
           "heading": "Evidence and interpretation",
@@ -706,7 +710,7 @@ function createMarioDossier() {
         },
         {
           "heading": "Availability",
-          "text": "Chrome: Notandia 0.1.1, updated 3 October 2026. Edge: updated Notandia package confirmed by me on 4 October 2026, with listing description and artwork awaiting approval. Firefox: submitted to Mozilla; public listing unavailable as checked on 4 October 2026, so installation is not yet advertised. Browser development is tracked in the canonical Notandia repository. Zotero has a separate source repository and its own releases. Check the relevant release before installing; no cross-store feature-parity claim is made."
+          "text": "Chrome: Notandia 0.1.1, updated 3 October 2026. Edge: updated Notandia package confirmed by me on 4 October 2026, when listing description and artwork were awaiting approval. Firefox: Notandia 0.1.2, public listing and download verified 7 October 2026. Mozilla reports that the version passed automated screening; it remains subject to later human review. Browser development is tracked in the canonical Notandia repository. Zotero has a separate source repository and its own releases. Check the relevant release before installing; no cross-store feature-parity claim is made."
         },
         {
           "heading": "Research workflow design",
@@ -869,7 +873,7 @@ function createMarioDossier() {
     ],
     "notandia": [
       "Created Notandia, an AI-assisted browser tool used by the Entropy for Life team during scientific source review.",
-      "Defined requirements, tested warning behavior and maintained Chrome and Edge releases; Zotero plugin maintained separately."
+      "Defined requirements, tested warning behavior and managed releases for Chrome, Edge and Firefox; Zotero plugin maintained separately."
     ],
     "wikimedia": [
       "Review citations, reconcile conflicting sources and improve structured metadata; create sourced scientific explanations and diagrams.",
