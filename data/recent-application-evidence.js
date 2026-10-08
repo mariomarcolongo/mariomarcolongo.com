@@ -18,7 +18,7 @@ const RECENT_APPLICATION_EVIDENCE = {
       2: {
         title: "Reproducible ecological data explorer",
         body: "Built a public protein-supply-by-bodyweight explorer combining FAOSTAT, NCD-RisC and World Bank data with visible assumptions, benchmark caveats and shareable views.",
-        link: "https://jnton.github.io/protein-by-bodyweight-country/"
+        link: "https://mariomarcolongo.github.io/protein-by-bodyweight-country/"
       }
     }
   },
