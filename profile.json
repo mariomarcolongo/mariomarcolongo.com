@@ -515,6 +515,7 @@
     {
       "institution": "University of Campania Luigi Vanvitelli",
       "title": "Medicine studies, degree not completed",
+      "cvTitle": "Medicine coursework",
       "period": "2020–approx. 2023 (attendance)",
       "startDate": "2020",
       "endDate": null,
@@ -531,6 +532,7 @@
   ],
   "languages": {
     "text": "Italian native · English: EF SET C1 overall, 68/100 (Mar 2024)",
+    "cvText": "Italian native · English fluent; EF SET C1 overall, 68/100 (Mar 2024)",
     "sourceUrl": "https://cert.efset.org/jHk84h",
     "issuedAt": "2024-03-26",
     "currentEnglishSelfAssessment": {
