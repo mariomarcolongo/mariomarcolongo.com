@@ -20,6 +20,14 @@ function createMarioDossier() {
   "github": "https://github.com/mariomarcolongo",
   "linkedin": "https://www.linkedin.com/in/mario-marcolongo",
   "currentPositioning": "Research & Technical Operations",
+  "investigationMethods": {
+    "reviewedAt": "2026-10-08",
+    "cvText": "Source tracing, web archives, domain and website checks, image verification and cross-platform research; distinguish observed connections from attribution hypotheses.",
+    "summary": "My independent research includes observing conspiracy-focused communities and tracing how claims circulate and who influences discussions. I use archived-page comparisons, domain and website checks, page-source inspection, image metadata and reverse-image searches, and cross-platform comparisons to investigate sources and connections.",
+    "sourceRecovery": "I also reconstruct broken or unlisted URLs from consistent naming and format patterns to recover source material. The archived-record case below documents source recovery and reconciliation; the other methods describe my independent practice.",
+    "scope": "Shared narratives, follows, reposts and other interactions provide investigative leads. They do not by themselves establish coordination, funding or state direction. Specific attribution requires corroborating evidence.",
+    "evidenceType": "Self-reported methods; selected source-recovery work supported by linked public contributions."
+  },
   "location": "Based in Italy · EU citizen · Seeking opportunities abroad",
   "citizenship": [
     "Italy"
@@ -100,6 +108,7 @@ function createMarioDossier() {
     {
       "institution": "University of Campania Luigi Vanvitelli",
       "title": "Medicine studies, degree not completed",
+      "cvTitle": "Medicine coursework",
       "period": "2020–approx. 2023 (attendance)",
       "startDate": "2020",
       "endDate": null,
@@ -116,6 +125,7 @@ function createMarioDossier() {
   ],
   "languages": {
     "text": "Italian native · English: EF SET C1 overall, 68/100 (Mar 2024)",
+    "cvText": "Italian native · English fluent; EF SET C1 overall, 68/100 (Mar 2024)",
     "sourceUrl": "https://cert.efset.org/jHk84h",
     "issuedAt": "2024-03-26",
     "currentEnglishSelfAssessment": {"level": "C1", "reportedAt": "2026-10-01"},
@@ -841,7 +851,7 @@ function createMarioDossier() {
     "default": {
       "title": "Research & Technical Operations",
       "filename": "Mario-Marcolongo-Research-Technical-Operations.pdf",
-      "summary": "Paid contractor since 2023 in scientific literature research, fact-checking, data visualization and WordPress website operations. Additional experience includes volunteer research support, Wikimedia source and metadata work, and five accepted AI Safety Formalization Atlas contributions."
+      "summary": "Paid contractor since 2023 in scientific research, fact-checking, data visualization and WordPress operations. Investigate misinformation and reconcile sources; additional work includes sensitive research facilitation, Wikimedia contributions and five accepted Atlas changes."
     },
     "technical": {
       "title": "Technical Support & Website Operations",
@@ -851,7 +861,7 @@ function createMarioDossier() {
     "aiEvaluation": {
       "title": "AI Evaluation & Research Support",
       "filename": "Mario-Marcolongo-AI-Evaluation-Research-Support.pdf",
-      "summary": "Independent AI evaluator with a dated Gray Swan competition record, paid scientific research experience and accepted Atlas source-quality contributions. I investigate model behavior, reconcile sources and document evidence."
+      "summary": "Independent AI evaluator with a dated Gray Swan competition record, paid scientific fact-checking and accepted Atlas source-quality contributions. Investigate model behavior and misinformation, trace sources and document evidence."
     }
   },
   "cvBullets": {
