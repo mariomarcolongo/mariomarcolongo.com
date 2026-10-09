@@ -65,12 +65,15 @@ Source: https://addons.mozilla.org/en-US/firefox/addon/notandia/. Owner: project
 
 Case: https://mariomarcolongo.com/notandia
 
-## Gray Swan
+## AI evaluation & red teaming
 
-Independent evaluation · September 2026 snapshot.
+Independent testing & network membership.
 
-Dated Proving Ground record: rank #79, top 5%, with 127 platform-recorded total breaks on 30 September 2026. Captured from the logged-out public profile. The displayed total is 127; visible area counters sum to 126. Arena separately shows rank #462, 31 unique breaks, 1,260 points and 354 submissions. This is dated platform evidence, not paid employment, security certification or independent reproduction of every result.
+Dated Proving Ground record: rank #79, top 5%, with 127 platform-recorded total breaks on 30 September 2026. Dated platform metrics; 127/126 discrepancy preserved. Arena is separate; independent reproduction unestablished.
 Source: https://mariomarcolongo.com/evidence/gray-swan-2026-09-30/. Owner: public platform profile; evidence: dated platform snapshot; observed: 2026-09-30; event/start: 2026-09-30.
+
+Member of Syntony Research’s Trusted Red Team Network since October 2026. Project terms agreed separately.
+Source: Syntony acceptance; disclosure authorised. Owner: Syntony Research; evidence: private organizational acceptance; observed: 2026-10-10; event/start: 2026-10-03.
 
 Case: https://mariomarcolongo.com/ai-evaluation
 
@@ -104,4 +107,4 @@ Default résumé: https://mariomarcolongo.com/cv. Technical operations: https://
 
 Email: me@mariomarcolongo.com. ORCID: https://orcid.org/0000-0003-2846-7115. Full experience: https://mariomarcolongo.com/experience. Visual collections: https://mariomarcolongo.com/work/scientific-visualizations. GitHub: https://github.com/mariomarcolongo. LinkedIn: https://www.linkedin.com/in/mario-marcolongo. Italian citizen, based in Italy. US work authorization is not established in this record.
 
-Evidence review date: 2026-10-01. Individual records retain dates and limitations.
+Evidence review date: 2026-10-10. Individual records retain dates and limitations.

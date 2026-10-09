@@ -15,7 +15,7 @@ function createMarioDossier() {
   "schemaVersion": 1,
   "name": "Mario Marcolongo",
   "canonicalUrl": "https://mariomarcolongo.com",
-  "reviewedAt": "2026-10-01",
+  "reviewedAt": "2026-10-10",
   "email": "me@mariomarcolongo.com",
   "github": "https://github.com/mariomarcolongo",
   "linkedin": "https://www.linkedin.com/in/mario-marcolongo",
@@ -49,6 +49,17 @@ function createMarioDossier() {
     "default": "/cv",
     "technical": "/cv-technical",
     "aiEvaluation": "/cv-ai"
+  },
+  "redTeamNetwork": {
+    "organization": "Syntony Research",
+    "name": "Trusted Red Team Network",
+    "role": "Member",
+    "period": "Oct 2026–Present",
+    "startDate": "2026-10-03",
+    "reviewedAt": "2026-10-10",
+    "sourceUrl": "https://www.syntonyresearch.ai/work/trusted-red-team/",
+    "summary": "Member of Syntony Research’s Trusted Red Team Network, a project-based network of independent specialists in adversarial AI evaluation.",
+    "scope": "Network membership; scope, responsibilities and compensation are agreed for individual engagements."
   },
   "aiEvaluationSnapshot": {
     "displayDate": "30 September 2026",
@@ -308,11 +319,28 @@ function createMarioDossier() {
       "sourceOwner": "public_platform_profile",
       "evidenceType": "dated_platform_snapshot",
       "engagementType": "independent_evaluation",
+      "compactLimitation": "Dated platform metrics; 127/126 discrepancy preserved. Arena is separate; independent reproduction unestablished.",
       "limitation": "Captured from the logged-out public profile. The displayed total is 127; visible area counters sum to 126. Arena separately shows rank #462, 31 unique breaks, 1,260 points and 354 submissions. This is dated platform evidence, not paid employment, security certification or independent reproduction of every result.",
       "startDate": "2026-09-30",
       "endDate": "2026-09-30",
       "observedAt": "2026-09-30",
       "lastReviewedAt": "2026-09-30",
+      "visibility": "public"
+    },
+    {
+      "id": "syntony-network-membership",
+      "text": "Member of Syntony Research’s Trusted Red Team Network since October 2026.",
+      "compactLimitation": "Project terms agreed separately.",
+      "compactSourceNote": "Syntony acceptance; disclosure authorised",
+      "sourceNote": "Membership confirmed by Syntony’s private acceptance communication. Public disclosure of personal membership has been authorised in writing. The private records are retained and are not republished.",
+      "sourceOwner": "Syntony Research",
+      "evidenceType": "private_organizational_acceptance",
+      "engagementType": "network_membership",
+      "limitation": "Establishes network membership. Project participation, responsibilities and compensation depend on separately agreed engagements. The organization’s public network page describes its model; it does not verify individual members or establish completed client work.",
+      "startDate": "2026-10-03",
+      "endDate": null,
+      "observedAt": "2026-10-10",
+      "lastReviewedAt": "2026-10-10",
       "visibility": "public"
     },
     {
@@ -622,15 +650,16 @@ function createMarioDossier() {
     },
     {
       "id": "ai-evaluation",
-      "name": "Gray Swan",
+      "name": "AI evaluation & red teaming",
       "hook": "Testing where model behavior breaks down",
       "route": "/ai-evaluation",
-      "status": "Independent evaluation · September 2026 snapshot",
-      "reviewedAt": "2026-09-30",
+      "status": "Independent testing & network membership",
+      "reviewedAt": "2026-10-10",
       "text": "Hands-on adversarial model testing across chat, image, agent and indirect challenges. The 30 September 2026 Proving Ground profile shows #79, top 5%, and 127 platform-recorded total breaks.",
       "claimIds": [
         "gray-swan-september-30",
-        "gray-swan-july-29"
+        "gray-swan-july-29",
+        "syntony-network-membership"
       ],
       "image": "/media/work/gray-swan-profile-2026-09-30-detail.webp",
       "alt": "Detail of the original public Gray Swan profile captured on 30 September 2026, showing Mario Marcolongo and separate Arena and Proving Ground results",
@@ -851,7 +880,7 @@ function createMarioDossier() {
     "default": {
       "title": "Research & Technical Operations",
       "filename": "Mario-Marcolongo-Research-Technical-Operations.pdf",
-      "summary": "Paid contractor since 2023 in scientific research, fact-checking, data visualization and WordPress operations. Investigate misinformation and reconcile sources; additional work includes sensitive research facilitation, Wikimedia contributions and five accepted Atlas changes."
+      "summary": "Paid contractor since 2023: scientific research, fact-checking, data visualization and WordPress operations. Misinformation investigation, sensitive research facilitation, Wikimedia contributions and five accepted Atlas changes. Member, Syntony Research Trusted Red Team Network."
     },
     "technical": {
       "title": "Technical Support & Website Operations",
@@ -861,7 +890,7 @@ function createMarioDossier() {
     "aiEvaluation": {
       "title": "AI Evaluation & Research Support",
       "filename": "Mario-Marcolongo-AI-Evaluation-Research-Support.pdf",
-      "summary": "Independent AI evaluator with a dated Gray Swan competition record, paid scientific fact-checking and accepted Atlas source-quality contributions. Investigate model behavior and misinformation, trace sources and document evidence."
+      "summary": "Independent AI evaluator and Syntony Research Trusted Red Team Network member. Dated Gray Swan testing results, paid scientific fact-checking, misinformation investigation and accepted Atlas source-quality contributions."
     }
   },
   "cvBullets": {
@@ -898,6 +927,16 @@ function createMarioDossier() {
     "currentStudy": "Continuing study in Python, SQL, systems and quantitative foundations."
   },
   "experience": [
+    {
+      "name": "Syntony Research — Trusted Red Team Network",
+      "period": "Oct 2026–Present · Network membership",
+      "text": "Member of a project-based network of independent specialists in adversarial AI evaluation.",
+      "route": "/ai-evaluation#syntony",
+      "details": [
+        "Joined Syntony Research’s Trusted Red Team Network in October 2026.",
+        "Scope, responsibilities and compensation are agreed for individual engagements."
+      ]
+    },
     {
       "name": "Entropy for Life",
       "period": "Jun 2023–Present · Paid contractor",
@@ -1020,7 +1059,7 @@ function createMarioDossier() {
       "url": "https://mariomarcolongo.github.io/protein-by-bodyweight-country/"
     }
   ],
-  "updatedAt": "2026-09-30"
+  "updatedAt": "2026-10-10"
 },
   identity: {
     name: "Mario Marcolongo",
