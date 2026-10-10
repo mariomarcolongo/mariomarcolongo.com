@@ -37,7 +37,7 @@ async function main() {
    fs.writeFileSync(path.join(pub,size===32?'favicon.ico':size===180?'apple-touch-icon.png':`favicon-${size}x${size}.png`),size===32?ico(png):png);
   }
   const cards={
-   home:{label:'Research & technical operations',title:'Scientific evidence. Practical tools.',text:'Paid scientific work, website operations and open-source contributions.',image:M.screenshots.hypermandala.image,caption:'Hypermandala: an independent visualization experiment.'},
+   home:{label:'Information integrity & technical operations',title:P.headline,text:'Source investigations, AI evaluation and paid scientific and website work.',image:M.screenshots['entropy-map'].image,caption:'Published Tableau map: data collection and visualization for Entropy for Life.'},
    cv:{label:'Application résumés',title:'Experience you can inspect.',text:'Research operations · Technical support · AI evaluation',image:M.screenshots.notandia.image,caption:'One-page résumés. Published work and source records.'},
    'ai-evaluation':{label:'Independent model testing',title:'AI evaluation record',text:'Dated platform results, original captures and explicit evidence limits.',image:P.aiEvaluationSnapshot.detailImage,caption:`Gray Swan public profile · ${P.aiEvaluationSnapshot.displayDate}`},
    investigations:{label:'Source investigation & data quality',title:'Check the claim. Follow the source.',text:'Citation reconciliation, structured metadata and public investigation records.',image:M.screenshots.atlas.image,caption:'Accepted source-locator and provenance contribution.'}

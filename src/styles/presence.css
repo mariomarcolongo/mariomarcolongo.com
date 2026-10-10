@@ -463,3 +463,7 @@ body { transition: none; }
   .resume-document li { margin:2px 0; }
   .resume-document .evidence-note { margin-top:7px; padding-top:4px; }
 }
+
+/* Direct routes for the three application audiences. */
+.hero-resume-routes { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 0 0 18px; font-size: 14px; }
+.hero-resume-routes a { padding-block: 5px; }

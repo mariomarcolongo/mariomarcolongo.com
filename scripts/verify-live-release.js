@@ -15,7 +15,7 @@ const releaseId = process.env.LIVE_RELEASE_ID || `release-${Date.now()}`;
 const pages = [
   { path: '/', required: [P.name, `#${G.provingGround.rank}`, G.provingGround.percentile,
     G.displayDate, `${G.provingGround.totalBreaks} platform-recorded breaks`,
-    M.screenshots.hypermandala.image, '/work/entropy', '/work/atlas', '/notandia', '/cv'] },
+    P.headline.split('. ')[0], G.detailImage, '/investigations', '/cv-technical', '/cv-ai', '/work/entropy', '/work/atlas', '/notandia', '/cv'] },
   { path: '/ai-evaluation', required: [G.evidencePath, G.displayDate, '/cv-ai'] },
   { path: G.evidencePath, required: [G.displayDate, `#${G.provingGround.rank}`,
     G.provingGround.percentile, `${G.provingGround.totalBreaks} platform-recorded`,

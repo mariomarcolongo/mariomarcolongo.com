@@ -405,15 +405,15 @@
     "Italy"
   ],
   "usWorkAuthorization": "not_established",
-  "currentPositioning": "Research & Technical Operations",
+  "currentPositioning": "Information Integrity, AI Evaluation & Technical Operations",
   "developmentDirection": [
     "Technical implementation",
     "Data quality",
     "Systems diagnosis"
   ],
   "availability": "Open to relocation and international remote work. I can work in the EU as an Italian citizen; opportunities elsewhere depend on the role’s hiring and work-authorization arrangements.",
-  "summary": "Mario Marcolongo works on scientific information quality, research operations and practical technical problems. His evidence includes paid science communication work, public source investigations and accepted open source contributions. Based in Italy, he is an Italian citizen studying IT through Metropolia Open UAS and developing independent Python, SQL and quantitative skills.",
-  "authorship": "I use AI tools extensively for implementation. My contributions include defining problems and requirements, inspecting behavior, testing, diagnosing failures and maintaining the resulting tools. Each case identifies external review and remaining validation limits.",
+  "summary": "Mario Marcolongo investigates sources, tests AI behavior and operates tools and websites. Evidence includes paid scientific work, Wikimedia investigations, accepted Atlas contributions and dated platform-recorded Gray Swan testing results. A Syntony network member, he studies IT through non-degree Metropolia Open UAS. Based in Italy; open to remote work and relocation.",
+  "authorship": "For independent software projects, I define requirements, inspect behavior, test releases and maintain tools, using AI-assisted implementation. Case studies identify my contribution and link the outputs, source records and external reviews.",
   "resumeRoutes": {
     "default": "/cv",
     "technical": "/cv-technical",
@@ -434,7 +434,7 @@
     },
     {
       "focus": "aiEvaluation",
-      "title": "AI Evaluation & Research Support",
+      "title": "AI Evaluation & Information Integrity",
       "filename": "Mario-Marcolongo-AI-Evaluation-Research-Support.pdf",
       "route": "/cv-ai"
     }
