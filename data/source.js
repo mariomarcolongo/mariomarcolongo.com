@@ -880,7 +880,7 @@ function createMarioDossier() {
     "default": {
       "title": "Research & Technical Operations",
       "filename": "Mario-Marcolongo-Research-Technical-Operations.pdf",
-      "summary": "Paid scientific research, fact-checking, data visualization and WordPress operations since June 2023. Source investigations, structured metadata and sensitive research facilitation; Wikimedia contributions and five accepted Atlas changes. Member, Syntony Research Trusted Red Team Network."
+      "summary": "Paid scientific research, fact-checking, data visualization and WordPress operations since June 2023. Source investigations, structured metadata, sensitive research facilitation and five accepted Atlas changes. Independent adversarial AI testing; member, Syntony Research Trusted Red Team Network."
     },
     "technical": {
       "title": "Technical Support & Website Operations",
@@ -908,7 +908,7 @@ function createMarioDossier() {
       "Organized resource information and maintained the AI-assisted website."
     ],
     "gray": [
-      "Adversarial model testing: Proving Ground #79 (top 5%), 127 platform-recorded breaks; 30 Sep 2026 snapshot."
+      "Probe policy boundaries and follow up on failures. Proving Ground #79 (top 5%), 127 platform-recorded breaks; 30 Sep 2026."
     ],
     "notandia": [
       "Created Notandia, an AI-assisted browser tool used by the Entropy for Life team during scientific source review.",
