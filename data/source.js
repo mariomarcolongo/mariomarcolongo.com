@@ -19,7 +19,7 @@ function createMarioDossier() {
   "email": "me@mariomarcolongo.com",
   "github": "https://github.com/mariomarcolongo",
   "linkedin": "https://www.linkedin.com/in/mario-marcolongo",
-  "currentPositioning": "Research & Technical Operations",
+  "currentPositioning": "Information Integrity, AI Evaluation & Technical Operations",
   "investigationMethods": {
     "reviewedAt": "2026-10-08",
     "cvText": "Source tracing, web archives, domain and website checks, image verification and cross-platform research; distinguish observed connections from attribution hypotheses.",
@@ -38,13 +38,13 @@ function createMarioDossier() {
     "Data quality",
     "Systems diagnosis"
   ],
-  "headline": "Scientific evidence. Practical tools.",
-  "description": "Mario Marcolongo: scientific fact-checking, data visualization and website operations. Paid work since 2023, accepted Atlas contributions and open-source tools.",
-  "subheadline": "I research and fact-check scientific content, create data visualizations, and build and operate websites. Paid work since 2023, alongside accepted open-source contributions and independent research tools.",
-  "contact": "I’m looking for research operations, technical support and implementation opportunities outside Italy. Have a role where careful investigation leads to a practical result? Let’s talk.",
+  "headline": "Investigate information. Test systems.",
+  "description": "Mario Marcolongo: source investigations, AI evaluation, research and technical operations. Paid scientific work since 2023, public evidence and practical tools.",
+  "subheadline": "I trace claims to their sources, test AI behavior, and build and maintain research tools and websites. Paid scientific work since June 2023, alongside public investigations and accepted open-source contributions.",
+  "contact": "Open to paid roles and projects in information integrity, investigations, AI evaluation, research operations and technical support or implementation. If your team needs careful investigation and practical delivery, let’s talk.",
   "availability": "Open to relocation and international remote work. I can work in the EU as an Italian citizen; opportunities elsewhere depend on the role’s hiring and work-authorization arrangements.",
-  "authorship": "I use AI tools extensively for implementation. My contributions include defining problems and requirements, inspecting behavior, testing, diagnosing failures and maintaining the resulting tools. Each case identifies external review and remaining validation limits.",
-  "machineSummary": "Mario Marcolongo works on scientific information quality, research operations and practical technical problems. His evidence includes paid science communication work, public source investigations and accepted open source contributions. Based in Italy, he is an Italian citizen studying IT through Metropolia Open UAS and developing independent Python, SQL and quantitative skills.",
+  "authorship": "For independent software projects, I define requirements, inspect behavior, test releases and maintain tools, using AI-assisted implementation. Case studies identify my contribution and link the outputs, source records and external reviews.",
+  "machineSummary": "Mario Marcolongo investigates sources, tests AI behavior and operates tools and websites. Evidence includes paid scientific work, Wikimedia investigations, accepted Atlas contributions and dated platform-recorded Gray Swan testing results. A Syntony network member, he studies IT through non-degree Metropolia Open UAS. Based in Italy; open to remote work and relocation.",
   "resumeRoutes": {
     "default": "/cv",
     "technical": "/cv-technical",
@@ -880,17 +880,17 @@ function createMarioDossier() {
     "default": {
       "title": "Research & Technical Operations",
       "filename": "Mario-Marcolongo-Research-Technical-Operations.pdf",
-      "summary": "Paid contractor since 2023: scientific research, fact-checking, data visualization and WordPress operations. Misinformation investigation, sensitive research facilitation, Wikimedia contributions and five accepted Atlas changes. Member, Syntony Research Trusted Red Team Network."
+      "summary": "Paid scientific research, fact-checking, data visualization and WordPress operations since June 2023. Source investigations, structured metadata and sensitive research facilitation; Wikimedia contributions and five accepted Atlas changes. Member, Syntony Research Trusted Red Team Network."
     },
     "technical": {
       "title": "Technical Support & Website Operations",
       "filename": "Mario-Marcolongo-Technical-Operations.pdf",
-      "summary": "Technical support candidate with paid WordPress website delivery and ongoing publishing, hosting, DNS and SSL responsibilities. Define requirements, test browser-tool behavior and diagnose release issues in AI-assisted projects. Currently studying Python, SQL and systems fundamentals."
+      "summary": "Paid WordPress website delivery and ongoing publishing, hosting, DNS and SSL operations. Define requirements, test browser-tool behavior, diagnose release issues and maintain AI-assisted projects. Continuing study in Python, SQL and systems fundamentals."
     },
     "aiEvaluation": {
-      "title": "AI Evaluation & Research Support",
+      "title": "AI Evaluation & Information Integrity",
       "filename": "Mario-Marcolongo-AI-Evaluation-Research-Support.pdf",
-      "summary": "Independent AI evaluator and Syntony Research Trusted Red Team Network member. Dated Gray Swan testing results, paid scientific fact-checking, misinformation investigation and accepted Atlas source-quality contributions."
+      "summary": "Independent adversarial AI testing and source investigation; member of Syntony Research’s Trusted Red Team Network. Dated Gray Swan results, paid scientific fact-checking since June 2023, Wikimedia investigations and accepted Atlas source-quality contributions."
     }
   },
   "cvBullets": {

@@ -1,6 +1,6 @@
-# Mario Marcolongo — Research & Technical Operations
+# Mario Marcolongo — Information Integrity, AI Evaluation & Technical Operations
 
-Mario Marcolongo works on scientific information quality, research operations and practical technical problems. His evidence includes paid science communication work, public source investigations and accepted open source contributions. Based in Italy, he is an Italian citizen studying IT through Metropolia Open UAS and developing independent Python, SQL and quantitative skills.
+Mario Marcolongo investigates sources, tests AI behavior and operates tools and websites. Evidence includes paid scientific work, Wikimedia investigations, accepted Atlas contributions and dated platform-recorded Gray Swan testing results. A Syntony network member, he studies IT through non-degree Metropolia Open UAS. Based in Italy; open to remote work and relocation.
 
 ## Résumés
 
