@@ -115,20 +115,29 @@
       "name": "AI evaluation & red teaming",
       "route": "/ai-evaluation",
       "status": "Independent testing & network membership",
-      "text": "Hands-on adversarial model testing across chat, image, agent and indirect challenges. The 30 September 2026 Proving Ground profile shows #79, top 5%, and 127 platform-recorded total breaks.",
+      "text": "I investigate unexpected AI behavior, check whether it recurs, and document what the evidence supports. My independent testing spans chat, image, agent and indirect challenges, supported by scientific fact-checking and source investigations.",
       "claimIds": [
+        "gray-swan-october-13",
         "gray-swan-september-30",
         "gray-swan-july-29",
         "syntony-network-membership"
       ],
       "links": [
         {
-          "label": "Dated evidence",
+          "label": "13 October testing record",
+          "url": "https://mariomarcolongo.com/evidence/gray-swan-2026-10-13/"
+        },
+        {
+          "label": "September snapshot",
           "url": "https://mariomarcolongo.com/evidence/gray-swan-2026-09-30/"
         },
         {
-          "label": "July snapshot",
-          "url": "https://mariomarcolongo.com/evidence/gray-swan-2026-07-29/"
+          "label": "Source investigations",
+          "url": "https://mariomarcolongo.com/investigations"
+        },
+        {
+          "label": "Accepted Atlas contributions",
+          "url": "https://mariomarcolongo.com/work/atlas"
         }
       ]
     },
@@ -320,6 +329,84 @@
       "submissions": 354
     },
     "scope": "Public platform profile captured while logged out. Rankings and counts are dated platform reports, not independent reproduction of every result. Proving Ground and Arena are separate systems; the four visible area counts total 126 while the displayed total is 127."
+  },
+  "aiEvaluationLatestSnapshot": {
+    "displayDate": "13 October 2026",
+    "observedAt": "2026-10-13",
+    "preservedAtUtc": "2026-10-13T12:25:51.838Z",
+    "sourceUrl": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
+    "evidencePath": "/evidence/gray-swan-2026-10-13/",
+    "originalImage": "/evidence/gray-swan-public-2026-10-13.jpg",
+    "originalSha256": "2eea54ef29106c8e2f11837dad161492b3959e630ba6c4714b5a294a4b8c496d",
+    "originalDimensions": [
+      1280,
+      2035
+    ],
+    "previewImage": "/evidence/gray-swan-public-2026-10-13.jpg",
+    "detailImage": "/media/work/gray-swan-profile-2026-10-13-detail.jpg",
+    "detailDimensions": [
+      1184,
+      1040
+    ],
+    "captureContext": "Public profile route viewed in the account holder's authenticated browser session; no private submissions or correspondence are included in the capture.",
+    "provingGround": {
+      "rank": 81,
+      "percentile": "top 5%",
+      "totalBreaks": 127,
+      "displayedAreaTotal": 126,
+      "areas": [
+        {
+          "name": "Chat",
+          "breaks": 43,
+          "available": 552,
+          "displayedPercent": 8
+        },
+        {
+          "name": "Image",
+          "breaks": 32,
+          "available": 387,
+          "displayedPercent": 8
+        },
+        {
+          "name": "Agent",
+          "breaks": 35,
+          "available": 593,
+          "displayedPercent": 6
+        },
+        {
+          "name": "Indirect",
+          "breaks": 16,
+          "available": 547,
+          "displayedPercent": 3
+        }
+      ]
+    },
+    "arena": {
+      "rank": 426,
+      "uniqueBreaks": 40,
+      "points": 1430,
+      "submissions": 415,
+      "prizeMoneyWonUsd": 0
+    },
+    "challenges": [
+      {
+        "name": "Lucky Break: Level Up (Medium Challenge)",
+        "displayedRank": 40,
+        "participants": 300,
+        "breaks": 13,
+        "status": "provisional",
+        "sourceUrl": "https://app.grayswan.ai/arena/challenge/lucky-break-level-up"
+      },
+      {
+        "name": "Breaking Ties",
+        "displayedRank": 125,
+        "participants": 276,
+        "breaks": 4,
+        "status": "dated_profile_display",
+        "sourceUrl": "https://app.grayswan.ai/arena/challenge/breaking-ties-2026"
+      }
+    ],
+    "scope": "Dated platform-recorded testing activity. Arena and Proving Ground are separate systems. Active-challenge figures are provisional. Lucky Break prizes are awarded by raffle, not the displayed profile rank; no prize is claimed. The Proving Ground area counters sum to 126 while the displayed total is 127."
   },
   "visualArtifacts": [
     {
@@ -696,6 +783,7 @@
     },
     {
       "id": "gray-swan-september-30",
+      "includeInCompactCv": false,
       "text": "Dated Proving Ground record: rank #79, top 5%, with 127 platform-recorded total breaks on 30 September 2026.",
       "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-2026-09-30/",
       "sourceOwner": "public_platform_profile",
@@ -707,6 +795,21 @@
       "endDate": "2026-09-30",
       "observedAt": "2026-09-30",
       "lastReviewedAt": "2026-09-30",
+      "visibility": "public"
+    },
+    {
+      "id": "gray-swan-october-13",
+      "text": "Dated Arena record: 40 global unique breaks, 1,430 points and 415 submissions on 13 October 2026.",
+      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-2026-10-13/",
+      "sourceOwner": "public_platform_profile",
+      "evidenceType": "dated_platform_snapshot",
+      "engagementType": "independent_evaluation",
+      "compactLimitation": "Dated platform reports; active-challenge results provisional. Proving Ground is separate.",
+      "limitation": "The public profile route was captured in the account holder's authenticated browser session. Arena showed rank #426, 40 unique breaks, 1,430 points and 415 submissions. Proving Ground separately showed #81, top 5%, and 127 total breaks. The active Lucky Break result is provisional and the event awards prizes by raffle. This record establishes platform-reported activity, not independent reproduction of every result or a prize award.",
+      "startDate": "2026-10-13",
+      "endDate": "2026-10-13",
+      "observedAt": "2026-10-13",
+      "lastReviewedAt": "2026-10-13",
       "visibility": "public"
     },
     {

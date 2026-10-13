@@ -1,0 +1,29 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SiteNav from '../../components/SiteNav.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import D from '../../../data/source.js';
+const G=D.presence.aiEvaluationLatestSnapshot, PG=G.provingGround, A=G.arena;
+if(G.observedAt!=='2026-10-13')throw new Error('Archive the 13 October snapshot before advancing the latest Gray Swan record.');
+const title=`Gray Swan testing record — ${G.displayDate}`;
+const description=`Dated Arena record: ${A.uniqueBreaks} global unique breaks, ${A.points.toLocaleString('en-US')} points and ${A.submissions} submissions. Proving Ground metrics are separate.`;
+const evidenceJsonLd={'@context':'https://schema.org','@type':'DigitalDocument',name:title,description,url:`https://mariomarcolongo.com${G.evidencePath}`,dateCreated:G.preservedAtUtc,dateModified:G.observedAt,isBasedOn:G.sourceUrl,author:{'@id':'https://mariomarcolongo.com/#person'}};
+---
+<Layout title={title} description={description} canonical={`https://mariomarcolongo.com${G.evidencePath}`}>
+  <Fragment slot="head"><script type="application/ld+json" set:html={JSON.stringify(evidenceJsonLd)}></script></Fragment>
+  <SiteNav/>
+  <main id="main-content" class="presence-shell case-shell">
+    <p><a href="/ai-evaluation">AI evaluation work</a></p>
+    <p class="meta">Dated public-profile record · {G.displayDate}</p>
+    <h1>Gray Swan testing record.</h1>
+    <p class="lede">Arena displayed {A.uniqueBreaks} global unique breaks, {A.points.toLocaleString('en-US')} points and {A.submissions} submissions, with global rank #{A.rank}. Proving Ground separately displayed #{PG.rank}, {PG.percentile}, and {PG.totalBreaks} platform-recorded total breaks.</p>
+    <div class="source-links"><a href={G.sourceUrl}>Live public profile ↗</a><a href="/evidence/gray-swan-profile-2026-10-13.json">Structured transcription</a><a href="/evidence/gray-swan-2026-09-30/">September snapshot</a><a href="/evidence/gray-swan-2026-07-29/">July snapshot</a></div>
+    <figure class="actual-artifact"><a href={G.originalImage}><img src={G.previewImage} alt="Original 13 October 2026 Gray Swan public profile: 40 Arena unique breaks, 1,430 points and separate Proving Ground results" width={G.originalDimensions[0]} height={G.originalDimensions[1]} loading="lazy"/></a><figcaption>Unchanged original screenshot. The public profile route was viewed in an authenticated account-holder session; the capture contains profile metrics, not private submissions or correspondence.</figcaption></figure>
+    <section><h2>Challenge figures at capture time</h2><ul>{G.challenges.map(c=><li><a href={c.sourceUrl}>{c.name}</a>: {c.breaks} recorded breaks; profile-displayed rank #{c.displayedRank} among {c.participants} participants.</li>)}</ul><p>Lucky Break was still active at capture time. Its rules set the closing snapshot for 14 October 2026 at 09:00 Pacific time (18:00 Italy time), with a winner draw within 2–3 days. Prizes are awarded by raffle, with a maximum of five tickets per person. The profile-displayed rank is not a prize placing; no prize award is claimed.</p><a href="https://app.grayswan.ai/arena/challenge/lucky-break-level-up?panel=rules">Lucky Break event rules ↗</a></section>
+    <details><summary>Metric definitions and limitations</summary><p>Arena and Proving Ground are separate testing systems, and their metrics are not additive. Platform-recorded counts do not independently reproduce every result or establish a general model failure rate. Active-challenge counts and participant totals may change.</p><ul>{PG.areas.map(area=><li>{area.name}: {area.breaks} / {area.available}; {area.displayedPercent}% displayed.</li>)}</ul><p>The visible Proving Ground area counters sum to {PG.displayedAreaTotal}, while the platform displays {PG.totalBreaks} total breaks. Both values are preserved without inferring an internal aggregation rule.</p></details>
+    <details><summary>Original capture and SHA-256</summary><p>{G.captureContext}</p><p>Saved {G.preservedAtUtc}; dimensions {G.originalDimensions.join(' × ')}.</p><p class="capture-hash">{G.originalSha256}</p><a href={G.originalImage}>Open unchanged original JPEG</a></details>
+    <p><a href="/cv-ai">AI evaluation résumé →</a> · <a href="mailto:me@mariomarcolongo.com">Discuss a role or project</a></p>
+  </main>
+  <SiteFooter/>
+</Layout>
+<style>.capture-hash{overflow-wrap:anywhere;font:12px/1.6 monospace}</style>
