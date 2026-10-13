@@ -87,6 +87,38 @@ function createMarioDossier() {
     "arena": {"rank": 462, "uniqueBreaks": 31, "points": 1260, "submissions": 354},
     "scope": "Public platform profile captured while logged out. Rankings and counts are dated platform reports, not independent reproduction of every result. Proving Ground and Arena are separate systems; the four visible area counts total 126 while the displayed total is 127."
   },
+  "aiEvaluationLatestSnapshot": {
+    "displayDate": "13 October 2026",
+    "observedAt": "2026-10-13",
+    "preservedAtUtc": "2026-10-13T12:25:51.838Z",
+    "sourceUrl": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
+    "evidencePath": "/evidence/gray-swan-2026-10-13/",
+    "originalImage": "/evidence/gray-swan-public-2026-10-13.jpg",
+    "originalSha256": "2eea54ef29106c8e2f11837dad161492b3959e630ba6c4714b5a294a4b8c496d",
+    "originalDimensions": [1280, 2035],
+    "previewImage": "/evidence/gray-swan-public-2026-10-13.jpg",
+    "detailImage": "/media/work/gray-swan-profile-2026-10-13-detail.jpg",
+    "detailDimensions": [1184, 1040],
+    "captureContext": "Public profile route viewed in the account holder's authenticated browser session; no private submissions or correspondence are included in the capture.",
+    "provingGround": {
+      "rank": 81,
+      "percentile": "top 5%",
+      "totalBreaks": 127,
+      "displayedAreaTotal": 126,
+      "areas": [
+        {"name": "Chat", "breaks": 43, "available": 552, "displayedPercent": 8},
+        {"name": "Image", "breaks": 32, "available": 387, "displayedPercent": 8},
+        {"name": "Agent", "breaks": 35, "available": 593, "displayedPercent": 6},
+        {"name": "Indirect", "breaks": 16, "available": 547, "displayedPercent": 3}
+      ]
+    },
+    "arena": {"rank": 426, "uniqueBreaks": 40, "points": 1430, "submissions": 415, "prizeMoneyWonUsd": 0},
+    "challenges": [
+      {"name": "Lucky Break: Level Up (Medium Challenge)", "displayedRank": 40, "participants": 300, "breaks": 13, "status": "provisional", "sourceUrl": "https://app.grayswan.ai/arena/challenge/lucky-break-level-up"},
+      {"name": "Breaking Ties", "displayedRank": 125, "participants": 276, "breaks": 4, "status": "dated_profile_display", "sourceUrl": "https://app.grayswan.ai/arena/challenge/breaking-ties-2026"}
+    ],
+    "scope": "Dated platform-recorded testing activity. Arena and Proving Ground are separate systems. Active-challenge figures are provisional. Lucky Break prizes are awarded by raffle, not the displayed profile rank; no prize is claimed. The Proving Ground area counters sum to 126 while the displayed total is 127."
+  },
   "education": [
     {
       "institution": "Metropolia University of Applied Sciences",
@@ -314,6 +346,7 @@ function createMarioDossier() {
     },
     {
       "id": "gray-swan-september-30",
+      "includeInCompactCv": false,
       "text": "Dated Proving Ground record: rank #79, top 5%, with 127 platform-recorded total breaks on 30 September 2026.",
       "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-2026-09-30/",
       "sourceOwner": "public_platform_profile",
@@ -325,6 +358,21 @@ function createMarioDossier() {
       "endDate": "2026-09-30",
       "observedAt": "2026-09-30",
       "lastReviewedAt": "2026-09-30",
+      "visibility": "public"
+    },
+    {
+      "id": "gray-swan-october-13",
+      "text": "Dated Arena record: 40 global unique breaks, 1,430 points and 415 submissions on 13 October 2026.",
+      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-2026-10-13/",
+      "sourceOwner": "public_platform_profile",
+      "evidenceType": "dated_platform_snapshot",
+      "engagementType": "independent_evaluation",
+      "compactLimitation": "Dated platform reports; active-challenge results provisional. Proving Ground is separate.",
+      "limitation": "The public profile route was captured in the account holder's authenticated browser session. Arena showed rank #426, 40 unique breaks, 1,430 points and 415 submissions. Proving Ground separately showed #81, top 5%, and 127 total breaks. The active Lucky Break result is provisional and the event awards prizes by raffle. This record establishes platform-reported activity, not independent reproduction of every result or a prize award.",
+      "startDate": "2026-10-13",
+      "endDate": "2026-10-13",
+      "observedAt": "2026-10-13",
+      "lastReviewedAt": "2026-10-13",
       "visibility": "public"
     },
     {
@@ -654,45 +702,53 @@ function createMarioDossier() {
       "hook": "Testing where model behavior breaks down",
       "route": "/ai-evaluation",
       "status": "Independent testing & network membership",
-      "reviewedAt": "2026-10-10",
-      "text": "Hands-on adversarial model testing across chat, image, agent and indirect challenges. The 30 September 2026 Proving Ground profile shows #79, top 5%, and 127 platform-recorded total breaks.",
+      "reviewedAt": "2026-10-13",
+      "text": "I investigate unexpected AI behavior, check whether it recurs, and document what the evidence supports. My independent testing spans chat, image, agent and indirect challenges, supported by scientific fact-checking and source investigations.",
       "claimIds": [
+        "gray-swan-october-13",
         "gray-swan-september-30",
         "gray-swan-july-29",
         "syntony-network-membership"
       ],
-      "image": "/media/work/gray-swan-profile-2026-09-30-detail.webp",
-      "alt": "Detail of the original public Gray Swan profile captured on 30 September 2026, showing Mario Marcolongo and separate Arena and Proving Ground results",
+      "image": "/media/work/gray-swan-profile-2026-10-13-detail.jpg",
+      "imageWidth": 1184,
+      "imageHeight": 1040,
+      "alt": "Public Gray Swan profile captured on 13 October 2026: 40 Arena unique breaks, 1,430 points, 415 submissions, and separate Proving Ground results",
       "links": [
         {
-          "label": "Dated evidence",
+          "label": "13 October testing record",
+          "url": "https://mariomarcolongo.com/evidence/gray-swan-2026-10-13/"
+        },
+        {
+          "label": "September snapshot",
           "url": "https://mariomarcolongo.com/evidence/gray-swan-2026-09-30/"
         },
         {
-          "label": "July snapshot",
-          "url": "https://mariomarcolongo.com/evidence/gray-swan-2026-07-29/"
+          "label": "Source investigations",
+          "url": "https://mariomarcolongo.com/investigations"
+        },
+        {
+          "label": "Accepted Atlas contributions",
+          "url": "https://mariomarcolongo.com/work/atlas"
         }
       ],
       "sections": [
         {
-          "heading": "Activity",
-          "text": "I carried out independent adversarial/model-behavior evaluation through Gray Swan. This is independent platform activity, not employment at Gray Swan or a claim to be a research scientist. The public record supports a dated account of testing activity; it does not replace a reproducible evaluation method, a professional reference or an independent engineering assessment."
+          "heading": "How I investigate",
+          "text": "When a model produces a surprising result, I follow up: what conditions triggered it, can I reproduce it, and what can I reasonably conclude? I compare behavior across attempts, examine conflicting instructions and separate observations from explanations that still need testing. My scientific fact-checking with Entropy for Life and Wikimedia source work bring the same discipline to tracing claims and checking evidence."
         },
         {
-          "heading": "Dated result",
-          "text": "On 30 September 2026, the public Proving Ground profile displayed rank #79, top 5%, and 127 total breaks. Chat, image, agent and indirect area counts were 43, 32, 35 and 16, totaling 126. The displayed-total discrepancy remains visible. The separate Arena profile showed rank #462, 31 unique breaks, 1,260 points and 354 submissions. These are separate platform metrics, not additive totals. The July snapshot is retained as historical evidence."
+          "heading": "Testing record · 13 October 2026",
+          "text": "Gray Swan Arena displayed 40 global unique breaks, 1,430 points and 415 submissions, with global rank #426. The September record had 31 unique breaks. Proving Ground separately displayed #81, top 5%, and 127 total breaks across chat, image, agent and indirect challenges. These are dated platform-reported results; rankings can change."
         },
         {
-          "heading": "Evidence",
-          "text": "The September evidence page retains an unchanged screenshot of the logged-out public profile, its SHA-256 and a structured transcription. The platform is the source of the displayed numbers; the preserved capture supports inspection of the labels and date. The July account-holder capture remains separate. Live values can change and should not be confused with either dated snapshot."
+          "heading": "Work I can contribute",
+          "text": "Adversarial model testing, follow-up on unexpected behavior, source verification and clear evidence documentation. My accepted AI Safety Formalization Atlas contributions include source auditing and citation provenance. I am open to paid AI-evaluation, information-integrity and research-support roles and projects, including international remote work and relocation."
         },
         {
-          "heading": "What is not established",
-          "text": "Aggregate counts do not reveal every tested model, prompt, output, adjudication decision or denominator. They do not demonstrate that each counted result represents an independently verified security failure. The public page does not provide a complete reproduction package or private challenge material. It also does not establish paid evaluation work, current ranking or general competence in penetration testing."
-        },
-        {
-          "heading": "Contribution and next evidence",
-          "text": "The relevant contribution is hands-on model-behavior testing and evidence documentation within the demonstrated surfaces. My broader technical implementations are AI-assisted. A shareable method and rubric case could strengthen the record if it were completed and permitted to publish; it is not listed as an existing achievement. For current evaluation-support roles, use the specialist résumé and inspect the dated record alongside the scientific source work and accepted Atlas contributions."
+          "heading": "Evidence details and scope",
+          "collapsed": true,
+          "text": "The linked evidence pages preserve original captures, dates and structured transcriptions. Arena and Proving Ground metrics are separate, and platform counts do not independently reproduce every underlying result or establish general model failure rates. The Proving Ground area counts sum to 126 while the platform displays 127 total breaks; both values are retained. Active-challenge figures were provisional at capture time, and Lucky Break prizes are awarded by raffle. My Gray Swan testing is independent activity; Syntony membership and project engagements are distinct."
         }
       ]
     },

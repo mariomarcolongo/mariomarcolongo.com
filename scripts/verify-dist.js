@@ -12,10 +12,11 @@ for(const agent of ['*','OAI-SearchBot','GPTBot','ChatGPT-User','OAI-AdsBot']){
 }
 const headers=fs.readFileSync(path.join(dist,'_headers'),'utf8');
 assert.match(headers,/^\/\*\n(?:[ \t].*\n)*?  Content-Signal: search=yes, ai-input=yes, ai-train=yes\s*$/m,'Site-wide content-use header must preserve all permissions');
-const snapshot=D.presence.aiEvaluationSnapshot;
+for(const snapshot of [D.presence.aiEvaluationSnapshot,D.presence.aiEvaluationLatestSnapshot].filter(Boolean)){
 assert.equal(snapshot.provingGround.areas.reduce((total,area)=>total+area.breaks,0),snapshot.provingGround.displayedAreaTotal);
 assert.equal(require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(dist,snapshot.originalImage))).digest('hex'),snapshot.originalSha256,'Original evaluation capture changed');
-assert.deepEqual(JSON.parse(fs.readFileSync(path.join(dist,'evidence/gray-swan-profile-2026-09-30.json'),'utf8')),snapshot,'Evaluation transcription drift');
+assert.deepEqual(JSON.parse(fs.readFileSync(path.join(dist,`evidence/gray-swan-profile-${snapshot.observedAt}.json`),'utf8')),snapshot,'Evaluation transcription drift');
+}
 for(const [file,expected] of Object.entries({'llms.txt':g.generateLlmsTxt(D),'cv-llm.txt':g.generateCvLlmTxt(D),'llms-full.txt':g.generateLlmsFullTxt(D),'profile.json':JSON.stringify(g.generateProfile(D),null,2)+'\n'}))for(const folder of ['','public/','dist/'])assert.equal(fs.readFileSync(path.resolve(__dirname,'..',folder+file),'utf8'),expected,`${folder}${file} drift`);
 for(const [name,min,max] of [['llms.txt',150,300],['cv-llm.txt',700,1200]]){const n=fs.readFileSync(path.join(dist,name),'utf8').trim().split(/\s+/).length;assert.ok(n>=min&&n<=max,`${name}: ${n} words, expected ${min}–${max}`);}
 for(const file of ['auth.md','data/source.js','.well-known/api-catalog','.well-known/ard.json','.well-known/ai-catalog.json','.well-known/agent-card.json'])assert.ok(!fs.existsSync(path.join(dist,file)),`Retired resource ${file}`);
