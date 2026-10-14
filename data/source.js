@@ -7,6 +7,7 @@
 
 const ENTROPY_ORGANIZATION_CONTEXT = "Entropy for Life is an Italian science-communication project covering biology, evolution and the environment, with 500K+ combined followers and subscribers across its social accounts.";
 const ENTROPY_SHORT_CONTEXT = "Client: Italian science communication · 500K+ combined followers and subscribers";
+const AI_EVALUATION_METHODS = "I look for patterns in a model’s responses, adjust my approach, and test whether the same failure recurs in other scenarios. I combine role-play, emotional framing and structured-output or continuation techniques, refining them through trial and error.";
 
 function createMarioDossier() {
   return {
@@ -118,6 +119,53 @@ function createMarioDossier() {
       {"name": "Breaking Ties", "displayedRank": 125, "participants": 276, "breaks": 4, "status": "dated_profile_display", "sourceUrl": "https://app.grayswan.ai/arena/challenge/breaking-ties-2026"}
     ],
     "scope": "Dated platform-recorded testing activity. Arena and Proving Ground are separate systems. Active-challenge figures are provisional. Lucky Break prizes are awarded by raffle, not the displayed profile rank; no prize is claimed. The Proving Ground area counters sum to 126 while the displayed total is 127."
+  },
+  "aiEvaluationPractice": {
+    "reviewedAt": "2026-10-14",
+    "evidenceType": "self_reported_testing_methods",
+    "summary": AI_EVALUATION_METHODS,
+    "scope": "These patterns guide further testing; they do not by themselves establish the cause of a failure or a general success rate."
+  },
+  "aiEvaluationCertificates": {
+    "observedAt": "2026-10-14",
+    "displayDate": "14 October 2026",
+    "issuer": "Gray Swan Arena",
+    "evidencePath": "/evidence/gray-swan-certificates-2026-10-14/",
+    "sourceUrl": "https://app.grayswan.ai/dashboard",
+    "captureContext": "Unchanged certificate-modal screenshots from the account holder’s authenticated dashboard. No private prompts or submissions are included. The issuer dashboard requires sign-in; these are preserved captures, not an issuer-hosted public verification service.",
+    "scope": "Training completion and event participation are recorded separately. Certificate counters, challenge leaderboards and Arena or Proving Ground profile metrics are not interchangeable. No professional certification or prize award is claimed.",
+    "items": [
+      {
+        "id": "GS-TR-YRT7-Z0",
+        "anchor": "lucky-break-training",
+        "name": "Lucky Break: Level Up (Medium Challenge)",
+        "type": "Training",
+        "status": "Training completed",
+        "level": "Intermediate",
+        "issuedAt": "2026-10-14",
+        "displayDate": "14 October 2026",
+        "scenarios": {"completed": 6, "total": 6},
+        "modelsBroken": {"count": 4, "total": 5},
+        "originalImage": "/evidence/gray-swan-training-certificate-2026-10-14.jpg",
+        "originalDimensions": [1414, 827],
+        "originalSha256": "7ac61991ffa7348b09880e3f6a56d1ba6e97885a23cf16febeebf787f27fcd0d"
+      },
+      {
+        "id": "GS-PA-7DVV-JT",
+        "anchor": "breaking-ties-participation",
+        "name": "Breaking Ties",
+        "type": "Participant",
+        "status": "Participation",
+        "issuedAt": "2026-10-12",
+        "displayDate": "12 October 2026",
+        "scenarios": {"completed": 3, "total": 5},
+        "modelsBroken": {"count": 3, "total": 5},
+        "rank": {"position": 125, "total": 167},
+        "originalImage": "/evidence/gray-swan-participant-certificate-2026-10-12.jpg",
+        "originalDimensions": [1414, 827],
+        "originalSha256": "2d592b9513b9a9282049c1886ff1d75ed9b5dab69cb5e20e979a2e04157b6a14"
+      }
+    ]
   },
   "education": [
     {
@@ -389,6 +437,21 @@ function createMarioDossier() {
       "endDate": null,
       "observedAt": "2026-10-10",
       "lastReviewedAt": "2026-10-10",
+      "visibility": "public"
+    },
+    {
+      "id": "gray-swan-october-certificates",
+      "includeInCompactCv": false,
+      "text": "Gray Swan intermediate training completed: Lucky Break: Level Up (Medium Challenge), issued 14 October 2026; separate Breaking Ties participation certificate issued 12 October.",
+      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-certificates-2026-10-14/",
+      "sourceOwner": "Gray Swan Arena",
+      "evidenceType": "issuer_certificate_captured_by_account_holder",
+      "engagementType": "independent_training_and_participation",
+      "limitation": "The training certificate records 6/6 scenarios and 4/5 models broken. The participation certificate records 3/5 scenarios, 3/5 models broken and rank 125/167. These are certificate-specific figures, separate from profile and leaderboard metrics; neither establishes a professional qualification or prize award.",
+      "startDate": "2026-10-12",
+      "endDate": "2026-10-14",
+      "observedAt": "2026-10-14",
+      "lastReviewedAt": "2026-10-14",
       "visibility": "public"
     },
     {
@@ -702,12 +765,13 @@ function createMarioDossier() {
       "hook": "Testing where model behavior breaks down",
       "route": "/ai-evaluation",
       "status": "Independent testing & network membership",
-      "reviewedAt": "2026-10-13",
+      "reviewedAt": "2026-10-14",
       "text": "I investigate unexpected AI behavior, check whether it recurs, and document what the evidence supports. My independent testing spans chat, image, agent and indirect challenges, supported by scientific fact-checking and source investigations.",
       "claimIds": [
         "gray-swan-october-13",
         "gray-swan-september-30",
         "gray-swan-july-29",
+        "gray-swan-october-certificates",
         "syntony-network-membership"
       ],
       "image": "/media/work/gray-swan-profile-2026-10-13-detail.jpg",
@@ -715,6 +779,10 @@ function createMarioDossier() {
       "imageHeight": 1040,
       "alt": "Public Gray Swan profile captured on 13 October 2026: 40 Arena unique breaks, 1,430 points, 415 submissions, and separate Proving Ground results",
       "links": [
+        {
+          "label": "Training & participation certificates",
+          "url": "https://mariomarcolongo.com/evidence/gray-swan-certificates-2026-10-14/"
+        },
         {
           "label": "13 October testing record",
           "url": "https://mariomarcolongo.com/evidence/gray-swan-2026-10-13/"
@@ -735,7 +803,7 @@ function createMarioDossier() {
       "sections": [
         {
           "heading": "How I investigate",
-          "text": "When a model produces a surprising result, I follow up: what conditions triggered it, can I reproduce it, and what can I reasonably conclude? I compare behavior across attempts, examine conflicting instructions and separate observations from explanations that still need testing. My scientific fact-checking with Entropy for Life and Wikimedia source work bring the same discipline to tracing claims and checking evidence."
+          "text": `${AI_EVALUATION_METHODS} These observations guide further testing; I distinguish recurring behavior from explanations that still need evidence. Scientific fact-checking with Entropy for Life and Wikimedia source investigations bring the same care to tracing claims and checking sources.`
         },
         {
           "heading": "Testing record · 13 October 2026",
@@ -946,7 +1014,7 @@ function createMarioDossier() {
     "aiEvaluation": {
       "title": "AI Evaluation & Information Integrity",
       "filename": "Mario-Marcolongo-AI-Evaluation-Research-Support.pdf",
-      "summary": "Independent adversarial AI testing and source investigation; member of Syntony Research’s Trusted Red Team Network. Dated Gray Swan results, paid scientific fact-checking since June 2023, Wikimedia investigations and accepted Atlas source-quality contributions."
+      "summary": "Independent adversarial AI testing; member, Syntony Research Trusted Red Team Network. Paid scientific fact-checking since June 2023, Wikimedia investigations and accepted Atlas contributions."
     }
   },
   "cvBullets": {
@@ -964,7 +1032,8 @@ function createMarioDossier() {
       "Organized resource information and maintained the AI-assisted website."
     ],
     "gray": [
-      "Probe policy boundaries and follow up on failures. Proving Ground #79 (top 5%), 127 platform-recorded breaks; 30 Sep 2026."
+      "40 Arena global unique breaks; separately, 127 Proving Ground breaks (top 5%). Platform-recorded results.",
+      "Refine tests from response patterns and check recurrence across scenarios. Completed Lucky Break intermediate training, Oct 2026."
     ],
     "notandia": [
       "Created Notandia, an AI-assisted browser tool used by the Entropy for Life team during scientific source review.",

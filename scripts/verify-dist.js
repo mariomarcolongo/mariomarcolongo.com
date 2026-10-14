@@ -17,6 +17,9 @@ assert.equal(snapshot.provingGround.areas.reduce((total,area)=>total+area.breaks
 assert.equal(require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(dist,snapshot.originalImage))).digest('hex'),snapshot.originalSha256,'Original evaluation capture changed');
 assert.deepEqual(JSON.parse(fs.readFileSync(path.join(dist,`evidence/gray-swan-profile-${snapshot.observedAt}.json`),'utf8')),snapshot,'Evaluation transcription drift');
 }
+const certificates=D.presence.aiEvaluationCertificates;
+assert.deepEqual(JSON.parse(fs.readFileSync(path.join(dist,'evidence/gray-swan-certificates-2026-10-14.json'),'utf8')),certificates,'Certificate transcription drift');
+for(const certificate of certificates.items)assert.equal(require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(dist,certificate.originalImage))).digest('hex'),certificate.originalSha256,'Original certificate capture changed');
 for(const [file,expected] of Object.entries({'llms.txt':g.generateLlmsTxt(D),'cv-llm.txt':g.generateCvLlmTxt(D),'llms-full.txt':g.generateLlmsFullTxt(D),'profile.json':JSON.stringify(g.generateProfile(D),null,2)+'\n'}))for(const folder of ['','public/','dist/'])assert.equal(fs.readFileSync(path.resolve(__dirname,'..',folder+file),'utf8'),expected,`${folder}${file} drift`);
 for(const [name,min,max] of [['llms.txt',150,300],['cv-llm.txt',700,1200]]){const n=fs.readFileSync(path.join(dist,name),'utf8').trim().split(/\s+/).length;assert.ok(n>=min&&n<=max,`${name}: ${n} words, expected ${min}–${max}`);}
 for(const file of ['auth.md','data/source.js','.well-known/api-catalog','.well-known/ard.json','.well-known/ai-catalog.json','.well-known/agent-card.json'])assert.ok(!fs.existsSync(path.join(dist,file)),`Retired resource ${file}`);

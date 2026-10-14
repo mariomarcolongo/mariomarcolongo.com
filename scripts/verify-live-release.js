@@ -7,6 +7,7 @@ const { startStaticServer } = require('./lib/static-server.js');
 const P = require('../data/source.js').presence;
 const M = require('../data/work-media.json');
 const G = P.aiEvaluationLatestSnapshot || P.aiEvaluationSnapshot;
+const C = P.aiEvaluationCertificates;
 const DIST = path.resolve(__dirname, '../dist');
 const local = process.argv.includes('--local');
 const attempts = Number(process.env.LIVE_VERIFY_ATTEMPTS || (local ? 1 : 18));
@@ -26,8 +27,10 @@ const pages = [
     [P.name, cv.title, `/${cv.filename}`, P.orcidUrl, '3 ECTS', 'non-degree'] }))
 ];
 if(P.aiEvaluationLatestSnapshot){const previous=P.aiEvaluationSnapshot;pages.push({path:previous.evidencePath,required:[previous.displayDate,`#${previous.provingGround.rank}`,previous.originalImage,previous.originalSha256]});}
+if(C)pages.push({path:C.evidencePath,required:[C.displayDate,...C.items.flatMap(c=>[c.name,c.id,c.originalImage,c.originalSha256])]});
 const assets = [...new Set([M.screenshots.hypermandala.image, G.originalImage, G.detailImage,
   '/profile.json', '/robots.txt', `/evidence/gray-swan-profile-${G.observedAt}.json`,
+  ...(C ? [`/evidence/gray-swan-certificates-${C.observedAt}.json`,...C.items.map(c=>c.originalImage)] : []),
   ...Object.values(P.cv).map((cv) => `/${cv.filename}`)])];
 const sha256 = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const entities = { amp: '&', '#39': "'", apos: "'", quot: '"', lt: '<', gt: '>' };

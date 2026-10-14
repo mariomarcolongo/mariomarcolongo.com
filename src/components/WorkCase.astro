@@ -1,5 +1,6 @@
 ---
 import BookAcknowledgement from './BookAcknowledgement.astro';import PublishedArtifacts from './PublishedArtifacts.astro';import Layout from '../layouts/Layout.astro';import SiteNav from './SiteNav.astro';import SiteFooter from './SiteFooter.astro';import D from '../../data/source.js';
+import GraySwanCertificates from './GraySwanCertificates.astro';
 const P=D.presence,N=P.redTeamNetwork;const {id}=Astro.props;const p=P.projects.find(p=>p.id===id);const claims=P.claims.filter(c=>p.claimIds.includes(c.id));
 const isAiEvaluation=id==='ai-evaluation';
 ---
@@ -13,6 +14,7 @@ const isAiEvaluation=id==='ai-evaluation';
     {isAiEvaluation&&<div class="source-links"><a class="button primary" href="/cv-ai">AI evaluation résumé</a><a class="button" href="mailto:me@mariomarcolongo.com">Discuss a role or project</a></div>}
     <div class="source-links">{p.links.map(l=><a href={l.url}>{l.label}</a>)}</div>
     {isAiEvaluation&&p.sections.map(s=>s.collapsed?<details><summary>{s.heading}</summary><p>{s.text}</p></details>:<section><h2>{s.heading}</h2><p>{s.text}</p></section>)}
+    {isAiEvaluation&&<GraySwanCertificates/>}
     {isAiEvaluation&&<section id="syntony"><h2>{N.organization} — {N.name}</h2><p class="meta">{N.role} · {N.period}</p><p>{N.summary}</p><p>{N.scope}</p><a href={N.sourceUrl}>About the network ↗</a></section>}
     {id==='entropy'&&<BookAcknowledgement/>}
     <PublishedArtifacts id={id}/>
