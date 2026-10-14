@@ -17,6 +17,7 @@ const pages = [
   { path: '/', required: [P.name, `#${G.provingGround.rank}`, G.provingGround.percentile,
     G.displayDate, `${G.provingGround.totalBreaks} platform-recorded breaks`,
     P.headline.split('. ')[0], G.detailImage, '/investigations', '/cv-technical', '/cv-ai', '/work/entropy', '/work/atlas', '/notandia', '/cv'] },
+  { path: '/work/atlas', required: ['https://doi.org/10.5281/zenodo.23088952', 'Public preprint and affiliation', '1 October 2026'] },
   { path: '/ai-evaluation', required: [G.evidencePath, G.displayDate, '/cv-ai'] },
   { path: G.evidencePath, required: [G.displayDate, `#${G.provingGround.rank}`,
     G.provingGround.percentile, `${G.provingGround.totalBreaks} platform-recorded`,

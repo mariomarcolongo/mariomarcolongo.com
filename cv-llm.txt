@@ -25,7 +25,7 @@ Case: https://mariomarcolongo.com/work/entropy
 
 ## AI Safety Formalization Atlas
 
-Open-source contributor · Draft-paper coauthor · Sep 2026. Five merged contributions to source auditing, citation provenance and repository tooling; listed coauthor of the September 2026 Atlas paper draft.
+Open-source contributor · Preprint coauthor · 2026. Five merged contributions to source auditing, citation provenance and repository tooling; coauthor of the Atlas preprint released on Zenodo on 1 October 2026.
 
 Contributed merged PR #52: migration validation portability. Acceptance covers the submitted change; it does not establish authorship of the wider research or independent engineering proficiency.
 Source: https://github.com/mbrcic/ai-safety-formalization-atlas/pull/52. Owner: upstream project; evidence: external acceptance; observed: 2026-09-12; event/start: 2026-09-03.
@@ -42,8 +42,8 @@ Source: https://github.com/mbrcic/ai-safety-formalization-atlas/pull/69. Owner: 
 Contributed merged PR #70: 15 missing source locators and clarified publication provenance. Acceptance covers source traceability and bibliographic changes; no Lean theorem, proof or formalization-coverage change is claimed.
 Source: https://github.com/mbrcic/ai-safety-formalization-atlas/pull/70. Owner: upstream project; evidence: external acceptance; observed: 2026-09-30; event/start: 2026-09-28.
 
-Listed as a coauthor of the September 2026 draft “The AI Safety Formalization Atlas: a machine-checked memory for AI safety mathematics.” Draft status; publication and peer review are not established. The supplied page lists Metropolia University of Applied Sciences as affiliation, with permission confirmed by the contributor. It does not establish employment or a degree. Individual manuscript contributions are not yet specified here.
-Source: Draft title and author page supplied by the contributor; no public manuscript link supplied.. Owner: project authors; evidence: contributor supplied draft; observed: 2026-09-30; event/start: 2026-09.
+Coauthor of “The AI Safety Formalization Atlas: a machine-checked memory for AI safety mathematics,” publicly available as a Zenodo preprint since 1 October 2026. Public preprint, not an established peer-reviewed publication. Documented individual contributions concern source auditing, citation provenance and repository tooling; authorship does not imply responsibility for all proofs. Metropolia is the listed affiliation, with permission confirmed by the contributor; no employment or degree is implied.
+Source: https://doi.org/10.5281/zenodo.23088952. Owner: project authors; evidence: public preprint; observed: 2026-10-14; event/start: 2026-09.
 
 Case: https://mariomarcolongo.com/work/atlas
 

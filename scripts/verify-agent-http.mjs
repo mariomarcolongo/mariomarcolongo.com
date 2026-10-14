@@ -3,7 +3,7 @@ const base=(process.argv[2]||'http://127.0.0.1:59722').replace(/\/$/,'');
 const get=async path=>{const response=await fetch(base+path);assert.equal(response.status,200,path);assert.match(response.headers.get('Content-Type'),/application\/json/);assert.equal(response.headers.get('Content-Signal'),'search=yes, ai-input=yes, ai-train=yes');return response.json();};
 const profile=await get('/api/profile');
 const staticProfile=await get('/profile.json');assert.deepEqual(profile.profile,staticProfile);
-const evidence=await get('/api/evidence?q=Atlas&limit=5');assert.ok(evidence.results.some(item=>item.evidence?.some(claim=>claim.id==='atlas-paper-draft')));
+const evidence=await get('/api/evidence?q=Atlas&limit=5');assert.ok(evidence.results.some(item=>item.evidence?.some(claim=>claim.id==='atlas-paper-preprint')));
 const resumes=await get('/api/resumes');assert.equal(resumes.resumes.length,3);
 for(const resume of resumes.resumes){const response=await fetch(base+new URL(resume.pdfUrl).pathname);assert.equal(response.status,200);assert.match(response.headers.get('Content-Type'),/application\/pdf/);assert.equal(new TextDecoder().decode((await response.arrayBuffer()).slice(0,5)),'%PDF-');}
 const card=await get('/mcp/server-card');assert.equal(card.remotes[0].url,'https://mariomarcolongo.com/mcp');assert.deepEqual(await get('/.well-known/mcp/server-card.json'),card);
