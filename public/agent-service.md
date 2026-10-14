@@ -33,6 +33,6 @@ The `_index._agents.mariomarcolongo.com` SVCB record identifies the HTTPS host a
 
 ## Interpretation
 
-These are owner-maintained records, not independent certification. Preserve each claim’s source ownership, dates and limitations. Organizational audience figures are not Mario’s personally attributable reach. Draft-paper authorship is not publication; Open UAS path enrollment is not an awarded degree. AI-assisted implementation is disclosed in the underlying profile.
+These are owner-maintained records, not independent certification. Preserve each claim’s source ownership, dates and limitations. Organizational audience figures are not Mario’s personally attributable reach. Preprint availability does not establish peer review; Open UAS path enrollment is not an awarded degree. AI-assisted implementation is disclosed in the underlying profile.
 
 Responses derive from the public profile generated from `data/source.js`. No external websites are fetched during a query. No conversations, user accounts or query history are stored by the application; ordinary hosting infrastructure may retain request logs. Code: [public repository](https://github.com/mariomarcolongo/mariomarcolongo.com).

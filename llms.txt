@@ -13,7 +13,7 @@ Mario Marcolongo investigates sources, tests AI behavior and operates tools and 
 - Paid science work: https://mariomarcolongo.com/work/entropy
 - Wikimedia contributions: https://mariomarcolongo.com/work/wikimedia
 - Research support: https://mariomarcolongo.com/research-operations
-- Atlas contributions and draft paper: https://mariomarcolongo.com/work/atlas
+- Atlas contributions and public preprint: https://mariomarcolongo.com/work/atlas
 - Browser research tool: https://mariomarcolongo.com/notandia
 - Interactive geometry: https://mariomarcolongo.com/work/hypermandala
 - Research-participation directory: https://mariomarcolongo.com/work/yourself-to-science

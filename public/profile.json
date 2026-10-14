@@ -40,17 +40,21 @@
       "id": "atlas",
       "name": "AI Safety Formalization Atlas",
       "route": "/work/atlas",
-      "status": "Open-source contributor · Draft-paper coauthor · Sep 2026",
-      "text": "Five merged contributions to source auditing, citation provenance and repository tooling; listed coauthor of the September 2026 Atlas paper draft.",
+      "status": "Open-source contributor · Preprint coauthor · 2026",
+      "text": "Five merged contributions to source auditing, citation provenance and repository tooling; coauthor of the Atlas preprint released on Zenodo on 1 October 2026.",
       "claimIds": [
         "atlas-pr-52-accepted",
         "atlas-pr-54-accepted",
         "atlas-pr-61-accepted",
         "atlas-pr-69-accepted",
         "atlas-pr-70-accepted",
-        "atlas-paper-draft"
+        "atlas-paper-preprint"
       ],
       "links": [
+        {
+          "label": "Read the preprint · DOI",
+          "url": "https://doi.org/10.5281/zenodo.23088952"
+        },
         {
           "label": "Source audit · PR #69",
           "url": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/69"
@@ -973,18 +977,19 @@
       "visibility": "public"
     },
     {
-      "id": "atlas-paper-draft",
-      "text": "Listed as a coauthor of the September 2026 draft “The AI Safety Formalization Atlas: a machine-checked memory for AI safety mathematics.”",
-      "sourceUrl": null,
-      "sourceNote": "Draft title and author page supplied by the contributor; no public manuscript link supplied.",
+      "id": "atlas-paper-preprint",
+      "text": "Coauthor of “The AI Safety Formalization Atlas: a machine-checked memory for AI safety mathematics,” publicly available as a Zenodo preprint since 1 October 2026.",
+      "sourceUrl": "https://doi.org/10.5281/zenodo.23088952",
+      "sourceNote": "Zenodo version 1 record and the public PDF title page list five coauthors, including Mario Marcolongo with ORCID 0000-0003-2846-7115. The manuscript is dated September 2026; the repository publication date is 1 October 2026.",
+      "publicationDate": "2026-10-01",
       "sourceOwner": "project_authors",
-      "evidenceType": "contributor_supplied_draft",
+      "evidenceType": "public_preprint",
       "engagementType": "research_collaboration",
-      "limitation": "Draft status; publication and peer review are not established. The supplied page lists Metropolia University of Applied Sciences as affiliation, with permission confirmed by the contributor. It does not establish employment or a degree. Individual manuscript contributions are not yet specified here.",
+      "limitation": "Public preprint, not an established peer-reviewed publication. Documented individual contributions concern source auditing, citation provenance and repository tooling; authorship does not imply responsibility for all proofs. Metropolia is the listed affiliation, with permission confirmed by the contributor; no employment or degree is implied.",
       "startDate": "2026-09",
       "endDate": null,
-      "observedAt": "2026-09-30",
-      "lastReviewedAt": "2026-09-30",
+      "observedAt": "2026-10-14",
+      "lastReviewedAt": "2026-10-14",
       "visibility": "public"
     },
     {

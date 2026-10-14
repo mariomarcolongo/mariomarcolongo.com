@@ -511,18 +511,19 @@ function createMarioDossier() {
       "visibility": "public"
     },
     {
-      "id": "atlas-paper-draft",
-      "text": "Listed as a coauthor of the September 2026 draft “The AI Safety Formalization Atlas: a machine-checked memory for AI safety mathematics.”",
-      "sourceUrl": null,
-      "sourceNote": "Draft title and author page supplied by the contributor; no public manuscript link supplied.",
+      "id": "atlas-paper-preprint",
+      "text": "Coauthor of “The AI Safety Formalization Atlas: a machine-checked memory for AI safety mathematics,” publicly available as a Zenodo preprint since 1 October 2026.",
+      "sourceUrl": "https://doi.org/10.5281/zenodo.23088952",
+      "sourceNote": "Zenodo version 1 record and the public PDF title page list five coauthors, including Mario Marcolongo with ORCID 0000-0003-2846-7115. The manuscript is dated September 2026; the repository publication date is 1 October 2026.",
+      "publicationDate": "2026-10-01",
       "sourceOwner": "project_authors",
-      "evidenceType": "contributor_supplied_draft",
+      "evidenceType": "public_preprint",
       "engagementType": "research_collaboration",
-      "limitation": "Draft status; publication and peer review are not established. The supplied page lists Metropolia University of Applied Sciences as affiliation, with permission confirmed by the contributor. It does not establish employment or a degree. Individual manuscript contributions are not yet specified here.",
+      "limitation": "Public preprint, not an established peer-reviewed publication. Documented individual contributions concern source auditing, citation provenance and repository tooling; authorship does not imply responsibility for all proofs. Metropolia is the listed affiliation, with permission confirmed by the contributor; no employment or degree is implied.",
       "startDate": "2026-09",
       "endDate": null,
-      "observedAt": "2026-09-30",
-      "lastReviewedAt": "2026-09-30",
+      "observedAt": "2026-10-14",
+      "lastReviewedAt": "2026-10-14",
       "visibility": "public"
     },
     {
@@ -615,19 +616,23 @@ function createMarioDossier() {
       "name": "AI Safety Formalization Atlas",
       "hook": "Making research sources traceable",
       "route": "/work/atlas",
-      "status": "Open-source contributor · Draft-paper coauthor · Sep 2026",
-      "text": "Five merged contributions to source auditing, citation provenance and repository tooling; listed coauthor of the September 2026 Atlas paper draft.",
+      "status": "Open-source contributor · Preprint coauthor · 2026",
+      "text": "Five merged contributions to source auditing, citation provenance and repository tooling; coauthor of the Atlas preprint released on Zenodo on 1 October 2026.",
       "claimIds": [
         "atlas-pr-52-accepted",
         "atlas-pr-54-accepted",
         "atlas-pr-61-accepted",
         "atlas-pr-69-accepted",
         "atlas-pr-70-accepted",
-        "atlas-paper-draft"
+        "atlas-paper-preprint"
       ],
       "image": "/media/work/atlas-pr-70.webp",
       "alt": "GitHub pull request 70 showing Mario Marcolongo's accepted source-locator contribution and merged status",
       "links": [
+        {
+          "label": "Read the preprint · DOI",
+          "url": "https://doi.org/10.5281/zenodo.23088952"
+        },
         {
           "label": "Source audit · PR #69",
           "url": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/69"
@@ -667,12 +672,12 @@ function createMarioDossier() {
           "text": "PR #52 diagnosed and repaired a Bash 3.2 validation failure on macOS and improved migration checks. PR #54 added portable instruction adapters; PR #61 reorganized repository guidance into task-scoped policy files. These earlier contributions address tooling and repository instructions. Their public diffs describe the specific changes and validation limits."
         },
         {
-          "heading": "Paper draft and affiliation",
-          "text": "The September 2026 draft “The AI Safety Formalization Atlas: a machine-checked memory for AI safety mathematics” lists me as a coauthor alongside Mario Brčić, Luka Hobor, Mihael Kovač and Adrian Satja Kurdija. The author page supplied for this portfolio lists Metropolia University of Applied Sciences, Espoo, Finland; Metropolia’s permission to use that affiliation is confirmed by me. The manuscript is a draft, with no public link supplied here. Publication and peer review are not claimed; the affiliation does not change my Open UAS, non-degree study status."
+          "heading": "Public preprint and affiliation",
+          "text": "The AI Safety Formalization Atlas: a machine-checked memory for AI safety mathematics is publicly available as a Zenodo preprint, version 1, released on 1 October 2026. The manuscript is dated September 2026. Its title page lists me as a coauthor alongside Mario Brčić, Luka Hobor, Mihael Kovač and Adrian Satja Kurdija. Metropolia University of Applied Sciences is my listed affiliation, used with permission; my studies remain a non-degree Open UAS pathway. The public record establishes preprint authorship, not peer-reviewed publication."
         },
         {
           "heading": "Individual contribution and project scope",
-          "text": "The linked PRs establish my accepted work on source quality, provenance and tooling, with AI-assisted implementation. I do not attribute the Atlas’s library size, catalogue totals, formal proofs or mathematical findings to myself. The author page establishes draft coauthorship; a more specific manuscript-contribution statement will require the individual roles to be documented. Review the public diffs for the concrete scope of my work."
+          "text": "The linked PRs establish my accepted work on source quality, provenance and tooling, with AI-assisted implementation. I do not attribute the Atlas’s library size, catalogue totals, formal proofs or mathematical findings to myself. The public manuscript establishes coauthorship; the accepted PRs document my individual contribution scope. Review the public diffs for the concrete scope of my work."
         }
       ],
       "highlight": {
@@ -681,7 +686,7 @@ function createMarioDossier() {
         "detail": "Source audit · citation provenance · tooling",
         "caption": "Upstream acceptance · reviewed 30 September 2026"
       },
-      "reviewedAt": "2026-09-30"
+      "reviewedAt": "2026-10-14"
     },
     {
       "id": "yourself-to-science",
@@ -1025,7 +1030,7 @@ function createMarioDossier() {
     ],
     "atlas": [
       "Five merged PRs: source-metadata audit, 15 citation locators, validation portability and repository instructions.",
-      "Listed coauthor, The AI Safety Formalization Atlas (unpublished September 2026 draft)."
+      "Coauthor, The AI Safety Formalization Atlas (Zenodo preprint, 2026)."
     ],
     "yts": [
       "Founded and maintain a directory of 55 research-participation resources, with linked sources, releases archived on Zenodo (DOI) and a FAIRsharing knowledgebase record.",

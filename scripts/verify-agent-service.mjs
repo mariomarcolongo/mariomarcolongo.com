@@ -8,7 +8,7 @@ const send=(message,headers={})=>service.handle(request('/mcp',{method:'POST',he
 const rpc=(method,params={},id=1)=>({jsonrpc:'2.0',id,method,params});
 const evidence=service.search('Atlas',5);
 assert.ok(evidence.results.some(result=>result.kind==='project'&&result.id==='atlas'));
-assert.ok(evidence.results.some(result=>result.evidence?.some(claim=>claim.id==='atlas-paper-draft')));
+assert.ok(evidence.results.some(result=>result.evidence?.some(claim=>claim.id==='atlas-paper-preprint')));
 for(const result of evidence.results)if(result.evidence)for(const claim of result.evidence)assert.ok(claim.limitation&&claim.lastReviewedAt&&claim.sourceOwner);
 assert.equal(service.search('zzzzunmatchedterm').totalMatches,0);
 assert.equal(service.search('show Mario experience').totalMatches,0);
