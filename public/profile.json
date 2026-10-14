@@ -23,16 +23,16 @@
       ],
       "links": [
         {
-          "label": "Organizational work record",
-          "url": "https://entropyforlife.it/mario-marcolongo-entropy-for-life/"
+          "label": "Contributor portfolio (English)",
+          "url": "https://entropyforlife.it/mario-marcolongo-en/"
         },
         {
           "label": "Published science content",
           "url": "https://entropyforlife.it/"
         },
         {
-          "label": "Author articles",
-          "url": "https://entropyforlife.it/autore/mario-marcolongo/"
+          "label": "Published articles (Italian originals)",
+          "url": "https://entropyforlife.it/mario-marcolongo-en/#mario-articles-v5"
         }
       ]
     },
@@ -688,7 +688,7 @@
     {
       "id": "entropy-airc-visuals",
       "text": "Created the data visualizations in the Entropy for Life × AIRC reels that feature them.",
-      "sourceUrl": "https://entropyforlife.it/mario-marcolongo-entropy-for-life/",
+      "sourceUrl": "https://entropyforlife.it/mario-marcolongo-en/",
       "sourceOwner": "contributor",
       "evidenceType": "contributor_confirmation",
       "engagementType": "paid_contractor",
@@ -699,16 +699,16 @@
     },
     {
       "id": "entropy-published-work",
-      "text": "Contributed research, fact-checking and production support to 80 documented published pieces: 55 videos, 4 articles and 21 short-form pieces.",
-      "sourceUrl": "https://entropyforlife.it/mario-marcolongo-entropy-for-life/",
+      "text": "Research and production contributions: 57 videos and Shorts, 4 articles, 21 short-form entries and 17 selected thumbnail projects.",
+      "sourceUrl": "https://entropyforlife.it/mario-marcolongo-en/",
       "sourceOwner": "client_organization",
       "evidenceType": "organizational_work_record",
       "engagementType": "paid_contractor",
-      "limitation": "The attribution record is on a site I help manage. Responsibilities varied by assignment; the organization’s audience is not my personally attributable reach.",
+      "limitation": "Record on a site I manage. Roles vary; collections overlap. Thumbnails include shared work. Reels retain their earlier capture date. Brand audience is not my personal reach.",
       "startDate": "2023-06",
       "endDate": null,
-      "observedAt": "2026-09-12",
-      "lastReviewedAt": "2026-09-12",
+      "observedAt": "2026-10-14",
+      "lastReviewedAt": "2026-10-14",
       "visibility": "public"
     },
     {

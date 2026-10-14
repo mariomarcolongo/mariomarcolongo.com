@@ -1,5 +1,5 @@
 {
-  "observedAt": "2026-09-30",
+  "observedAt": "2026-10-14",
   "videos": {
     "playlist": "https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh",
     "items": [
@@ -26,6 +26,13 @@
         "id": "H0tHBLovQyA",
         "thumbnailSource": "https://i.ytimg.com/vi/H0tHBLovQyA/hqdefault.jpg",
         "image": "/media/work/videos/H0tHBLovQyA.webp"
+      },
+      {
+        "id": "PVgT6TNef3U",
+        "title": "Un caso di Peste in Siberia? Facciamo chiarezza",
+        "url": "https://www.youtube.com/watch?v=PVgT6TNef3U",
+        "thumbnailSource": "https://i.ytimg.com/vi/PVgT6TNef3U/hqdefault.jpg",
+        "image": "/media/work/videos/PVgT6TNef3U.jpg"
       },
       {
         "duration": "26:26",
@@ -68,14 +75,6 @@
         "image": "/media/work/videos/AruJh5WSP0E.webp"
       },
       {
-        "duration": "19:35",
-        "title": "L'Eterocefalo Glabro non ha Senso!",
-        "url": "https://www.youtube.com/watch?v=c5G9jwt_Tls",
-        "id": "c5G9jwt_Tls",
-        "thumbnailSource": "https://i.ytimg.com/vi/c5G9jwt_Tls/hqdefault.jpg",
-        "image": "/media/work/videos/c5G9jwt_Tls.webp"
-      },
-      {
         "duration": "25:49",
         "title": "La Scienza della Cannabis: Origine e Utilizzi",
         "url": "https://www.youtube.com/watch?v=0gaMHhXxFnc",
@@ -85,12 +84,28 @@
         "displayTitle": "The science of cannabis: origins & uses"
       },
       {
+        "duration": "19:35",
+        "title": "L'Eterocefalo Glabro non ha Senso!",
+        "url": "https://www.youtube.com/watch?v=c5G9jwt_Tls",
+        "id": "c5G9jwt_Tls",
+        "thumbnailSource": "https://i.ytimg.com/vi/c5G9jwt_Tls/hqdefault.jpg",
+        "image": "/media/work/videos/c5G9jwt_Tls.webp"
+      },
+      {
         "duration": "1:00",
         "title": "Blonde People Haven't Been Around for Long #science #hair",
         "url": "https://www.youtube.com/watch?v=v9NJjBRwMUk",
         "id": "v9NJjBRwMUk",
         "thumbnailSource": "https://i.ytimg.com/vi/v9NJjBRwMUk/hqdefault.jpg",
         "image": "/media/work/videos/v9NJjBRwMUk.webp"
+      },
+      {
+        "duration": "16:51",
+        "title": "The Science of Yawning",
+        "url": "https://www.youtube.com/watch?v=EB12kwTGzZs",
+        "id": "EB12kwTGzZs",
+        "thumbnailSource": "https://i.ytimg.com/vi/EB12kwTGzZs/hqdefault.jpg",
+        "image": "/media/work/videos/EB12kwTGzZs.webp"
       },
       {
         "duration": "24:25",
@@ -115,14 +130,6 @@
         "id": "6T9yQHN-r6E",
         "thumbnailSource": "https://i.ytimg.com/vi/6T9yQHN-r6E/hqdefault.jpg",
         "image": "/media/work/videos/6T9yQHN-r6E.webp"
-      },
-      {
-        "duration": "16:51",
-        "title": "The Science of Yawning",
-        "url": "https://www.youtube.com/watch?v=EB12kwTGzZs",
-        "id": "EB12kwTGzZs",
-        "thumbnailSource": "https://i.ytimg.com/vi/EB12kwTGzZs/hqdefault.jpg",
-        "image": "/media/work/videos/EB12kwTGzZs.webp"
       },
       {
         "duration": "16:46",
@@ -174,20 +181,20 @@
         "image": "/media/work/videos/B-5NR0FQsYs.webp"
       },
       {
+        "duration": "35:07",
+        "title": "How many times have animals conquered the Earth?",
+        "url": "https://www.youtube.com/watch?v=9Upk9DkckqI",
+        "id": "9Upk9DkckqI",
+        "thumbnailSource": "https://i.ytimg.com/vi/9Upk9DkckqI/hqdefault.jpg",
+        "image": "/media/work/videos/9Upk9DkckqI.webp"
+      },
+      {
         "duration": "21:55",
         "title": "The sex of the children does not have the same probability!",
         "url": "https://www.youtube.com/watch?v=Ac4dFptqYu0",
         "id": "Ac4dFptqYu0",
         "thumbnailSource": "https://i.ytimg.com/vi/Ac4dFptqYu0/hqdefault.jpg",
         "image": "/media/work/videos/Ac4dFptqYu0.webp"
-      },
-      {
-        "duration": "17:06",
-        "title": "You Could Have 45 Chromosomes and Give Birth to a New Human Species",
-        "url": "https://www.youtube.com/watch?v=vC-ZTnTR5l4",
-        "id": "vC-ZTnTR5l4",
-        "thumbnailSource": "https://i.ytimg.com/vi/vC-ZTnTR5l4/hqdefault.jpg",
-        "image": "/media/work/videos/vC-ZTnTR5l4.webp"
       },
       {
         "duration": "19:31",
@@ -198,12 +205,12 @@
         "image": "/media/work/videos/vkddETqKcpU.webp"
       },
       {
-        "duration": "35:07",
-        "title": "How many times have animals conquered the Earth?",
-        "url": "https://www.youtube.com/watch?v=9Upk9DkckqI",
-        "id": "9Upk9DkckqI",
-        "thumbnailSource": "https://i.ytimg.com/vi/9Upk9DkckqI/hqdefault.jpg",
-        "image": "/media/work/videos/9Upk9DkckqI.webp"
+        "duration": "17:06",
+        "title": "You Could Have 45 Chromosomes and Give Birth to a New Human Species",
+        "url": "https://www.youtube.com/watch?v=vC-ZTnTR5l4",
+        "id": "vC-ZTnTR5l4",
+        "thumbnailSource": "https://i.ytimg.com/vi/vC-ZTnTR5l4/hqdefault.jpg",
+        "image": "/media/work/videos/vC-ZTnTR5l4.webp"
       },
       {
         "duration": "26:17",
@@ -214,14 +221,6 @@
         "image": "/media/work/videos/eklz1PKh8S4.webp"
       },
       {
-        "duration": "10:35",
-        "title": "Sudden deaths among young people: is there an increase?",
-        "url": "https://www.youtube.com/watch?v=cfZNn4ACeEU",
-        "id": "cfZNn4ACeEU",
-        "thumbnailSource": "https://i.ytimg.com/vi/cfZNn4ACeEU/hqdefault.jpg",
-        "image": "/media/work/videos/cfZNn4ACeEU.webp"
-      },
-      {
         "duration": "27:20",
         "title": "Discovering Genetic Origins with Online Tests: Does It Make Sense?",
         "url": "https://www.youtube.com/watch?v=bOdizHTFlLQ",
@@ -230,12 +229,20 @@
         "image": "/media/work/videos/bOdizHTFlLQ.webp"
       },
       {
-        "duration": "17:02",
-        "title": "Did the Government approve GMOs in total silence?",
-        "url": "https://www.youtube.com/watch?v=NkUvb_Se1lU",
-        "id": "NkUvb_Se1lU",
-        "thumbnailSource": "https://i.ytimg.com/vi/NkUvb_Se1lU/hqdefault.jpg",
-        "image": "/media/work/videos/NkUvb_Se1lU.webp"
+        "duration": "10:35",
+        "title": "Sudden deaths among young people: is there an increase?",
+        "url": "https://www.youtube.com/watch?v=cfZNn4ACeEU",
+        "id": "cfZNn4ACeEU",
+        "thumbnailSource": "https://i.ytimg.com/vi/cfZNn4ACeEU/hqdefault.jpg",
+        "image": "/media/work/videos/cfZNn4ACeEU.webp"
+      },
+      {
+        "duration": "31:41",
+        "title": "The Story of the Man Who Genetically Modified Humans",
+        "url": "https://www.youtube.com/watch?v=57S9AzIvzfg",
+        "id": "57S9AzIvzfg",
+        "thumbnailSource": "https://i.ytimg.com/vi/57S9AzIvzfg/hqdefault.jpg",
+        "image": "/media/work/videos/57S9AzIvzfg.webp"
       },
       {
         "duration": "26:25",
@@ -246,12 +253,12 @@
         "image": "/media/work/videos/7NcqLnpEC7M.webp"
       },
       {
-        "duration": "31:41",
-        "title": "The Story of the Man Who Genetically Modified Humans",
-        "url": "https://www.youtube.com/watch?v=57S9AzIvzfg",
-        "id": "57S9AzIvzfg",
-        "thumbnailSource": "https://i.ytimg.com/vi/57S9AzIvzfg/hqdefault.jpg",
-        "image": "/media/work/videos/57S9AzIvzfg.webp"
+        "duration": "17:02",
+        "title": "Did the Government approve GMOs in total silence?",
+        "url": "https://www.youtube.com/watch?v=NkUvb_Se1lU",
+        "id": "NkUvb_Se1lU",
+        "thumbnailSource": "https://i.ytimg.com/vi/NkUvb_Se1lU/hqdefault.jpg",
+        "image": "/media/work/videos/NkUvb_Se1lU.webp"
       },
       {
         "duration": "16:13",
@@ -286,20 +293,20 @@
         "image": "/media/work/videos/mYOISKEmBok.webp"
       },
       {
-        "duration": "2:28",
-        "title": "Is there an underground Plant Internet like in Avatar?",
-        "url": "https://www.youtube.com/watch?v=BzQOAiKPhHY",
-        "id": "BzQOAiKPhHY",
-        "thumbnailSource": "https://i.ytimg.com/vi/BzQOAiKPhHY/hqdefault.jpg",
-        "image": "/media/work/videos/BzQOAiKPhHY.webp"
-      },
-      {
         "duration": "17:54",
         "title": "We should give less sugar to children and fetuses",
         "url": "https://www.youtube.com/watch?v=5KI9NVMoj7w",
         "id": "5KI9NVMoj7w",
         "thumbnailSource": "https://i.ytimg.com/vi/5KI9NVMoj7w/hqdefault.jpg",
         "image": "/media/work/videos/5KI9NVMoj7w.webp"
+      },
+      {
+        "duration": "2:28",
+        "title": "Is there an underground Plant Internet like in Avatar?",
+        "url": "https://www.youtube.com/watch?v=BzQOAiKPhHY",
+        "id": "BzQOAiKPhHY",
+        "thumbnailSource": "https://i.ytimg.com/vi/BzQOAiKPhHY/hqdefault.jpg",
+        "image": "/media/work/videos/BzQOAiKPhHY.webp"
       },
       {
         "duration": "29:47",
@@ -366,20 +373,20 @@
         "image": "/media/work/videos/W2iKQtijyf0.webp"
       },
       {
-        "duration": "18:06",
-        "title": "The Absurd Story of the Atlas of Creation",
-        "url": "https://www.youtube.com/watch?v=Q6sJeRImVcw",
-        "id": "Q6sJeRImVcw",
-        "thumbnailSource": "https://i.ytimg.com/vi/Q6sJeRImVcw/hqdefault.jpg",
-        "image": "/media/work/videos/Q6sJeRImVcw.webp"
-      },
-      {
         "duration": "20:22",
         "title": "Have We Created a New Geological Epoch? - Anthropocene",
         "url": "https://www.youtube.com/watch?v=-cpaFptgU2I",
         "id": "-cpaFptgU2I",
         "thumbnailSource": "https://i.ytimg.com/vi/-cpaFptgU2I/hqdefault.jpg",
         "image": "/media/work/videos/-cpaFptgU2I.webp"
+      },
+      {
+        "duration": "18:06",
+        "title": "The Absurd Story of the Atlas of Creation",
+        "url": "https://www.youtube.com/watch?v=Q6sJeRImVcw",
+        "id": "Q6sJeRImVcw",
+        "thumbnailSource": "https://i.ytimg.com/vi/Q6sJeRImVcw/hqdefault.jpg",
+        "image": "/media/work/videos/Q6sJeRImVcw.webp"
       },
       {
         "duration": "18:24",
@@ -414,20 +421,20 @@
         "image": "/media/work/videos/l83M6al_DGk.webp"
       },
       {
-        "duration": "8:14",
-        "title": "C'è un'Epidemia in Congo? Cosa si sa? E cosa no?",
-        "url": "https://www.youtube.com/watch?v=u6D7jmJ7Psk",
-        "id": "u6D7jmJ7Psk",
-        "thumbnailSource": "https://i.ytimg.com/vi/u6D7jmJ7Psk/hqdefault.jpg",
-        "image": "/media/work/videos/u6D7jmJ7Psk.webp"
-      },
-      {
         "duration": "0:38",
         "title": "Congo Disease X is actually Malaria",
         "url": "https://www.youtube.com/watch?v=vHD803PSBTg",
         "id": "vHD803PSBTg",
         "thumbnailSource": "https://i.ytimg.com/vi/vHD803PSBTg/hqdefault.jpg",
         "image": "/media/work/videos/vHD803PSBTg.webp"
+      },
+      {
+        "duration": "8:14",
+        "title": "C'è un'Epidemia in Congo? Cosa si sa? E cosa no?",
+        "url": "https://www.youtube.com/watch?v=u6D7jmJ7Psk",
+        "id": "u6D7jmJ7Psk",
+        "thumbnailSource": "https://i.ytimg.com/vi/u6D7jmJ7Psk/hqdefault.jpg",
+        "image": "/media/work/videos/u6D7jmJ7Psk.webp"
       },
       {
         "duration": "3:42",

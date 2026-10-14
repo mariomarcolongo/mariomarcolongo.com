@@ -44,7 +44,7 @@ await page.goto(server.origin+'/work',{waitUntil:'networkidle0'});await page.cli
 await page.setJavaScriptEnabled(false);await page.goto(server.origin+'/work',{waitUntil:'networkidle0'});assert.equal(await page.$$eval('[data-work-kind]',els=>els.filter(el=>!el.hidden).length),8);assert.equal(await page.$eval('.work-filters',el=>getComputedStyle(el).display),'none');await page.goto(server.origin,{waitUntil:'networkidle0'});assert.equal(await page.$$eval('.gallery-slide',els=>els.filter(el=>!el.hidden).length),3);assert.equal(await page.$eval('.gallery-controls',el=>getComputedStyle(el).display),'none');assert.ok(await page.$('a[href="/cv"]'));assert.ok(await page.$('a[href="mailto:me@mariomarcolongo.com"]'));await page.click('a[href="/cv"]');assert.ok((await page.title()).includes('Research & Technical Operations'));await page.setJavaScriptEnabled(true);
 // Published collections remain usable with JavaScript disabled; images are local.
 await page.setJavaScriptEnabled(false);await page.goto(server.origin+'/work/entropy',{waitUntil:'networkidle0'});
-assert.equal(await page.$$eval('#video-work .video-card',els=>els.length),56);
+assert.equal(await page.$$eval('#video-work .video-card',els=>els.length),57);
 assert.equal(await page.$$eval('#thumbnail-work .video-card',els=>els.length),17);
 assert.equal(await page.$$eval('#reel-work .reel-card',els=>els.length),21);
 assert.ok(await page.$$eval('.published-artifacts img',els=>els.every(el=>new URL(el.src).origin===location.origin)));
