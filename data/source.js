@@ -251,7 +251,7 @@ function createMarioDossier() {
     {
       "id": "entropy-airc-visuals",
       "text": "Created the data visualizations in the Entropy for Life × AIRC reels that feature them.",
-      "sourceUrl": "https://entropyforlife.it/mario-marcolongo-entropy-for-life/",
+      "sourceUrl": "https://entropyforlife.it/mario-marcolongo-en/",
       "sourceOwner": "contributor",
       "evidenceType": "contributor_confirmation",
       "engagementType": "paid_contractor",
@@ -262,16 +262,16 @@ function createMarioDossier() {
     },
     {
       "id": "entropy-published-work",
-      "text": "Contributed research, fact-checking and production support to 80 documented published pieces: 55 videos, 4 articles and 21 short-form pieces.",
-      "sourceUrl": "https://entropyforlife.it/mario-marcolongo-entropy-for-life/",
+      "text": "Research and production contributions: 57 videos and Shorts, 4 articles, 21 short-form entries and 17 selected thumbnail projects.",
+      "sourceUrl": "https://entropyforlife.it/mario-marcolongo-en/",
       "sourceOwner": "client_organization",
       "evidenceType": "organizational_work_record",
       "engagementType": "paid_contractor",
-      "limitation": "The attribution record is on a site I help manage. Responsibilities varied by assignment; the organization’s audience is not my personally attributable reach.",
+      "limitation": "Record on a site I manage. Roles vary; collections overlap. Thumbnails include shared work. Reels retain their earlier capture date. Brand audience is not my personal reach.",
       "startDate": "2023-06",
       "endDate": null,
-      "observedAt": "2026-09-12",
-      "lastReviewedAt": "2026-09-12",
+      "observedAt": "2026-10-14",
+      "lastReviewedAt": "2026-10-14",
       "visibility": "public"
     },
     {
@@ -484,7 +484,7 @@ function createMarioDossier() {
       "hook": "Scientific evidence behind published work",
       "route": "/work/entropy",
       "status": "Paid contractor · Jun 2023–Present",
-      "reviewedAt": "2026-10-02",
+      "reviewedAt": "2026-10-14",
       "text": "Paid research, fact-checking, scripts and visual production for Entropy for Life, an Italian science-communication project with 500K+ combined followers and subscribers, plus the design, build and operation of its WordPress website.",
       "organizationContext": ENTROPY_ORGANIZATION_CONTEXT,
       "claimIds": [
@@ -498,16 +498,16 @@ function createMarioDossier() {
       "alt": "Published Entropy for Life science content about H5N1",
       "links": [
         {
-          "label": "Organizational work record",
-          "url": "https://entropyforlife.it/mario-marcolongo-entropy-for-life/"
+          "label": "Contributor portfolio (English)",
+          "url": "https://entropyforlife.it/mario-marcolongo-en/"
         },
         {
           "label": "Published science content",
           "url": "https://entropyforlife.it/"
         },
         {
-          "label": "Author articles",
-          "url": "https://entropyforlife.it/autore/mario-marcolongo/"
+          "label": "Published articles (Italian originals)",
+          "url": "https://entropyforlife.it/mario-marcolongo-en/#mario-articles-v5"
         }
       ],
       "sections": [
@@ -533,7 +533,7 @@ function createMarioDossier() {
         },
         {
           "heading": "Published contribution record",
-          "text": "The dated record lists contributions to 55 videos, four articles and 21 short-form pieces: 80 published pieces in total. Eleven selected thumbnail contributions overlap with these projects and are not added to that total. The record describes varying combinations of research, writing, data analysis and visual production."
+          "text": "The video and thumbnail collections checked on 14 October 2026 list 57 video contributions (including Shorts) and 17 selected thumbnail projects. The profile also lists four articles and 21 short-form entries from the earlier reel capture. Collections can overlap and are not summed. Thumbnail roles include independent design, collaboration and concept direction. I contributed to the Siberian plague video, but did not create its thumbnail."
         },
         {
           "heading": "Attribution",
@@ -541,10 +541,10 @@ function createMarioDossier() {
         }
       ],
       "highlight": {
-        "value": "80",
-        "label": "published pieces",
-        "detail": "55 videos · 4 articles · 21 short-form pieces",
-        "caption": "Attributed contributions · reviewed Sep 2026"
+        "value": "57",
+        "label": "video contributions",
+        "detail": "Videos & Shorts · 17 selected thumbnail projects",
+        "caption": "Video and thumbnail collections checked 14 Oct 2026"
       }
     },
     {
@@ -951,7 +951,7 @@ function createMarioDossier() {
   },
   "cvBullets": {
     "entropy": [
-      "Contributed research, fact-checking, scripts and/or visuals to 80 published pieces: 55 videos, 4 articles and 21 short-form pieces; responsibilities vary by assignment.",
+      "Research, fact-checking, scripts and/or visuals across 57 video contributions, alongside 4 articles and 21 short-form entries; roles vary by assignment. Video collection checked Oct 2026.",
       "Research primary literature and adapt English-language evidence for Italian content; acknowledged for literature research and error detection in Italiani veri (Mondadori, a major European publishing group, 2025).",
       "Designed and built entropyforlife.it in WordPress; manage responsive design, publishing, OVHcloud hosting, DNS/SSL and technical SEO."
     ],
@@ -1266,7 +1266,7 @@ function createMarioDossier() {
       links: {
         website: "https://entropyforlife.it",
         playlist: "https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh",
-        authorPage: "https://entropyforlife.it/autore/mario-marcolongo/",
+        authorPage: "https://entropyforlife.it/mario-marcolongo-en/#mario-articles-v5",
         thumbnails: "https://www.youtube.com/playlist?list=PLUXju4zC0Sks"
       },
       highlights: [
@@ -1481,7 +1481,7 @@ function createMarioDossier() {
       links: {
         website: "https://entropyforlife.it",
         playlist: "https://www.youtube.com/playlist?list=PLMJaM7iJky4pKj6voGlUNHBnGdTj9rJNh",
-        authorPage: "https://entropyforlife.it/autore/mario-marcolongo/",
+        authorPage: "https://entropyforlife.it/mario-marcolongo-en/#mario-articles-v5",
         thumbnails: "https://www.youtube.com/playlist?list=PLUXju4zC0Sks"
       },
       bullets: [
