@@ -1,0 +1,62 @@
+{
+  "observedAt": "2026-10-14",
+  "displayDate": "14 October 2026",
+  "issuer": "Gray Swan Arena",
+  "evidencePath": "/evidence/gray-swan-certificates-2026-10-14/",
+  "sourceUrl": "https://app.grayswan.ai/dashboard",
+  "captureContext": "Unchanged certificate-modal screenshots from the account holder’s authenticated dashboard. No private prompts or submissions are included. The issuer dashboard requires sign-in; these are preserved captures, not an issuer-hosted public verification service.",
+  "scope": "Training completion and event participation are recorded separately. Certificate counters, challenge leaderboards and Arena or Proving Ground profile metrics are not interchangeable. No professional certification or prize award is claimed.",
+  "items": [
+    {
+      "id": "GS-TR-YRT7-Z0",
+      "anchor": "lucky-break-training",
+      "name": "Lucky Break: Level Up (Medium Challenge)",
+      "type": "Training",
+      "status": "Training completed",
+      "level": "Intermediate",
+      "issuedAt": "2026-10-14",
+      "displayDate": "14 October 2026",
+      "scenarios": {
+        "completed": 6,
+        "total": 6
+      },
+      "modelsBroken": {
+        "count": 4,
+        "total": 5
+      },
+      "originalImage": "/evidence/gray-swan-training-certificate-2026-10-14.jpg",
+      "originalDimensions": [
+        1414,
+        827
+      ],
+      "originalSha256": "7ac61991ffa7348b09880e3f6a56d1ba6e97885a23cf16febeebf787f27fcd0d"
+    },
+    {
+      "id": "GS-PA-7DVV-JT",
+      "anchor": "breaking-ties-participation",
+      "name": "Breaking Ties",
+      "type": "Participant",
+      "status": "Participation",
+      "issuedAt": "2026-10-12",
+      "displayDate": "12 October 2026",
+      "scenarios": {
+        "completed": 3,
+        "total": 5
+      },
+      "modelsBroken": {
+        "count": 3,
+        "total": 5
+      },
+      "rank": {
+        "position": 125,
+        "total": 167
+      },
+      "originalImage": "/evidence/gray-swan-participant-certificate-2026-10-12.jpg",
+      "originalDimensions": [
+        1414,
+        827
+      ],
+      "originalSha256": "2d592b9513b9a9282049c1886ff1d75ed9b5dab69cb5e20e979a2e04157b6a14"
+    }
+  ]
+}

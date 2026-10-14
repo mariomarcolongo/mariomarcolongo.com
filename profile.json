@@ -120,9 +120,14 @@
         "gray-swan-october-13",
         "gray-swan-september-30",
         "gray-swan-july-29",
+        "gray-swan-october-certificates",
         "syntony-network-membership"
       ],
       "links": [
+        {
+          "label": "Training & participation certificates",
+          "url": "https://mariomarcolongo.com/evidence/gray-swan-certificates-2026-10-14/"
+        },
         {
           "label": "13 October testing record",
           "url": "https://mariomarcolongo.com/evidence/gray-swan-2026-10-13/"
@@ -407,6 +412,74 @@
       }
     ],
     "scope": "Dated platform-recorded testing activity. Arena and Proving Ground are separate systems. Active-challenge figures are provisional. Lucky Break prizes are awarded by raffle, not the displayed profile rank; no prize is claimed. The Proving Ground area counters sum to 126 while the displayed total is 127."
+  },
+  "aiEvaluationPractice": {
+    "reviewedAt": "2026-10-14",
+    "evidenceType": "self_reported_testing_methods",
+    "summary": "I look for patterns in a model’s responses, adjust my approach, and test whether the same failure recurs in other scenarios. I combine role-play, emotional framing and structured-output or continuation techniques, refining them through trial and error.",
+    "scope": "These patterns guide further testing; they do not by themselves establish the cause of a failure or a general success rate."
+  },
+  "aiEvaluationCertificates": {
+    "observedAt": "2026-10-14",
+    "displayDate": "14 October 2026",
+    "issuer": "Gray Swan Arena",
+    "evidencePath": "/evidence/gray-swan-certificates-2026-10-14/",
+    "sourceUrl": "https://app.grayswan.ai/dashboard",
+    "captureContext": "Unchanged certificate-modal screenshots from the account holder’s authenticated dashboard. No private prompts or submissions are included. The issuer dashboard requires sign-in; these are preserved captures, not an issuer-hosted public verification service.",
+    "scope": "Training completion and event participation are recorded separately. Certificate counters, challenge leaderboards and Arena or Proving Ground profile metrics are not interchangeable. No professional certification or prize award is claimed.",
+    "items": [
+      {
+        "id": "GS-TR-YRT7-Z0",
+        "anchor": "lucky-break-training",
+        "name": "Lucky Break: Level Up (Medium Challenge)",
+        "type": "Training",
+        "status": "Training completed",
+        "level": "Intermediate",
+        "issuedAt": "2026-10-14",
+        "displayDate": "14 October 2026",
+        "scenarios": {
+          "completed": 6,
+          "total": 6
+        },
+        "modelsBroken": {
+          "count": 4,
+          "total": 5
+        },
+        "originalImage": "/evidence/gray-swan-training-certificate-2026-10-14.jpg",
+        "originalDimensions": [
+          1414,
+          827
+        ],
+        "originalSha256": "7ac61991ffa7348b09880e3f6a56d1ba6e97885a23cf16febeebf787f27fcd0d"
+      },
+      {
+        "id": "GS-PA-7DVV-JT",
+        "anchor": "breaking-ties-participation",
+        "name": "Breaking Ties",
+        "type": "Participant",
+        "status": "Participation",
+        "issuedAt": "2026-10-12",
+        "displayDate": "12 October 2026",
+        "scenarios": {
+          "completed": 3,
+          "total": 5
+        },
+        "modelsBroken": {
+          "count": 3,
+          "total": 5
+        },
+        "rank": {
+          "position": 125,
+          "total": 167
+        },
+        "originalImage": "/evidence/gray-swan-participant-certificate-2026-10-12.jpg",
+        "originalDimensions": [
+          1414,
+          827
+        ],
+        "originalSha256": "2d592b9513b9a9282049c1886ff1d75ed9b5dab69cb5e20e979a2e04157b6a14"
+      }
+    ]
   },
   "visualArtifacts": [
     {
@@ -826,6 +899,21 @@
       "endDate": null,
       "observedAt": "2026-10-10",
       "lastReviewedAt": "2026-10-10",
+      "visibility": "public"
+    },
+    {
+      "id": "gray-swan-october-certificates",
+      "includeInCompactCv": false,
+      "text": "Gray Swan intermediate training completed: Lucky Break: Level Up (Medium Challenge), issued 14 October 2026; separate Breaking Ties participation certificate issued 12 October.",
+      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-certificates-2026-10-14/",
+      "sourceOwner": "Gray Swan Arena",
+      "evidenceType": "issuer_certificate_captured_by_account_holder",
+      "engagementType": "independent_training_and_participation",
+      "limitation": "The training certificate records 6/6 scenarios and 4/5 models broken. The participation certificate records 3/5 scenarios, 3/5 models broken and rank 125/167. These are certificate-specific figures, separate from profile and leaderboard metrics; neither establishes a professional qualification or prize award.",
+      "startDate": "2026-10-12",
+      "endDate": "2026-10-14",
+      "observedAt": "2026-10-14",
+      "lastReviewedAt": "2026-10-14",
       "visibility": "public"
     },
     {

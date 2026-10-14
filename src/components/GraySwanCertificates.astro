@@ -1,0 +1,17 @@
+---
+import D from '../../data/source.js';
+const G=D.presence.aiEvaluationCertificates;
+const [training,participation]=G.items;
+---
+<section id="training">
+  <h2>Training &amp; participation</h2>
+  <h3>{training.name}</h3>
+  <p class="meta">{training.level} training completed · {training.displayDate}</p>
+  <p>Completed {training.scenarios.completed} of {training.scenarios.total} scenarios. The training certificate records {training.modelsBroken.count} of {training.modelsBroken.total} models broken.</p>
+  <a href={`${G.evidencePath}#${training.anchor}`}>View training certificate and record →</a>
+  <details>
+    <summary>Additional participation: {participation.name}</summary>
+    <p>Participant certificate issued {participation.displayDate}, recording {participation.scenarios.completed} of {participation.scenarios.total} scenarios and {participation.modelsBroken.count} of {participation.modelsBroken.total} models broken.</p>
+    <a href={`${G.evidencePath}#${participation.anchor}`}>View participation certificate and full figures →</a>
+  </details>
+</section>

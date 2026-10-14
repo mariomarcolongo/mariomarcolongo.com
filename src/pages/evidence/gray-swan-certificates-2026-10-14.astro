@@ -1,0 +1,38 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SiteNav from '../../components/SiteNav.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import D from '../../../data/source.js';
+const G=D.presence.aiEvaluationCertificates;
+const title='Gray Swan training & participation — October 2026';
+const description='Preserved Gray Swan certificate records: intermediate Lucky Break training completion and separate Breaking Ties participation.';
+const record={'@context':'https://schema.org','@type':'DigitalDocument',name:title,description,url:`https://mariomarcolongo.com${G.evidencePath}`,dateModified:G.observedAt,isBasedOn:G.sourceUrl,author:{'@id':'https://mariomarcolongo.com/#person'}};
+---
+<Layout title={title} description={description} canonical={`https://mariomarcolongo.com${G.evidencePath}`}>
+  <Fragment slot="head"><script type="application/ld+json" set:html={JSON.stringify(record)}></script></Fragment>
+  <SiteNav/>
+  <main id="main-content" class="presence-shell case-shell">
+    <p><a href="/ai-evaluation">AI evaluation work</a></p>
+    <p class="meta">Certificate records · captured {G.displayDate}</p>
+    <h1>Gray Swan training &amp; participation.</h1>
+    <p class="lede">Intermediate training completion and event participation, recorded separately with their original certificate details.</p>
+    <div class="source-links"><a href="/evidence/gray-swan-certificates-2026-10-14.json">Structured transcription</a><a href="/evidence/gray-swan-2026-10-13/">Dated profile metrics</a></div>
+    {G.items.map(c=><section id={c.anchor}>
+      <h2>{c.name}</h2>
+      <p class="meta">{c.status}{c.level&&` · ${c.level}`} · issued {c.displayDate}</p>
+      <ul>
+        <li>Certificate type: {c.type}</li>
+        <li>Scenarios: {c.scenarios.completed}/{c.scenarios.total}</li>
+        <li>Models broken: {c.modelsBroken.count}/{c.modelsBroken.total}</li>
+        {c.rank&&<li>Certificate-displayed rank: {c.rank.position}/{c.rank.total}</li>}
+        <li>Certificate ID: {c.id}</li>
+      </ul>
+      <figure class="actual-artifact"><a href={c.originalImage}><img src={c.originalImage} alt={`${c.name}: ${c.status} certificate for Mario Marcolongo, issued ${c.issuedAt}, ID ${c.id}`} width={c.originalDimensions[0]} height={c.originalDimensions[1]} loading="lazy"/></a><figcaption>Unchanged issuer-dashboard certificate capture.</figcaption></figure>
+      <details><summary>Original capture and SHA-256</summary><p>{c.originalDimensions.join(' × ')} pixels.</p><p class="capture-hash">{c.originalSha256}</p><a href={c.originalImage}>Open original screenshot</a></details>
+    </section>)}
+    <details><summary>Source and scope</summary><p>{G.captureContext}</p><p>{G.scope}</p><p>Breaking Ties profile and certificate figures are preserved as shown on their respective surfaces. Different denominators are not treated as the same ranking population.</p><a href={G.sourceUrl}>Issuer dashboard (sign-in required) ↗</a></details>
+    <p><a href="/cv-ai">AI evaluation résumé →</a> · <a href="mailto:me@mariomarcolongo.com">Discuss a role or project</a></p>
+  </main>
+  <SiteFooter/>
+</Layout>
+<style>.capture-hash{overflow-wrap:anywhere;font:12px/1.6 monospace}</style>
