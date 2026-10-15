@@ -31,7 +31,7 @@ for(const url of urls){
 }
 for(const [name,size] of [['favicon-48x48.png',48],['favicon-192x192.png',192],['favicon-512x512.png',512],['apple-touch-icon.png',180]])assert.deepEqual(pngSize(path.join(dist,name)),[size,size]);
 const manifest=JSON.parse(fs.readFileSync(path.join(dist,'site.webmanifest')));assert.equal(manifest.name,`${P.name} — ${P.currentPositioning}`);
-const profile=JSON.parse(fs.readFileSync(path.join(dist,'profile.json')));assert.equal(profile.reviewedAt,P.reviewedAt);assert.equal(profile.linkedin,P.linkedin);assert.equal(profile.education[0].degreeAwarded,false);
+const profile=JSON.parse(fs.readFileSync(path.join(dist,'profile.json')));assert.equal(profile.reviewedAt,P.reviewedAt);assert.equal(profile.linkedin,P.linkedin);assert.equal(profile.education[0].degreeAwarded,false);assert.equal(profile.education[0].degreeProgrammeAdmitted,false);
 assert.ok(fs.readFileSync(path.join(dist,'llms.txt'),'utf8').includes(`${P.canonicalUrl}/notandia`));
 assert.ok(fs.readFileSync(path.join(dist,'404.html'),'utf8').includes('content="noindex"'));
 assert.ok(fs.readFileSync(path.join(dist,'robots.txt'),'utf8').includes(`${P.canonicalUrl}/sitemap.xml`));
