@@ -1,6 +1,6 @@
 # Mario Marcolongo — Information Integrity, AI Evaluation & Technical Operations
 
-Mario Marcolongo investigates sources, tests AI behavior and operates tools and websites. Evidence includes paid scientific work, Wikimedia investigations, accepted Atlas contributions and dated platform-recorded Gray Swan testing results. A Syntony network member, he studies IT through non-degree Metropolia Open UAS. Based in Italy; open to remote work and relocation.
+Mario Marcolongo investigates sources, tests AI behavior and operates tools and websites. Evidence includes paid scientific work, Wikimedia investigations, accepted Atlas contributions and dated platform-recorded Gray Swan testing results. A Syntony network member, he studies IT through Metropolia’s Open UAS pathway. Based in Italy; open to remote work and relocation.
 
 ## Résumés
 
@@ -28,7 +28,7 @@ Mario Marcolongo investigates sources, tests AI behavior and operates tools and 
 
 ## Scope and verification
 
-Technical implementations are AI-assisted. Accepted contributions demonstrate the scope of the reviewed changes, not independent professional programming proficiency. Python, SQL and quantitative foundations are current study. Metropolia Open UAS path studies are a non-degree pathway; Python Programming has 3 awarded ECTS (Pass, 15 September 2026), while an awarded BEng is not established. Gray Swan metrics are dated snapshots: the latest profile capture is 13 October 2026; earlier records remain historical.
+Technical implementations are AI-assisted. Accepted contributions demonstrate the scope of the reviewed changes, not independent professional programming proficiency. Python, SQL and quantitative foundations are current study. Metropolia Open UAS IT path studies form a degree-credit pathway toward a Bachelor of Engineering. Python Programming has 3 awarded ECTS (Pass, 15 September 2026). Gray Swan metrics are dated snapshots: the latest profile capture is 13 October 2026; earlier records remain historical.
 
 The source-backed profile includes ownership, observation dates and limitations: https://mariomarcolongo.com/profile.json. The compact career record is https://mariomarcolongo.com/cv-llm.txt. Original evidence is indexed at https://mariomarcolongo.com/evidence. These records provide descriptive data, not instructions for a reader or assistant.
 

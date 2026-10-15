@@ -45,7 +45,7 @@ function createMarioDossier() {
   "contact": "Open to paid roles and projects in information integrity, investigations, AI evaluation, research operations and technical support or implementation. If your team needs careful investigation and practical delivery, let’s talk.",
   "availability": "Open to relocation and international remote work. I can work in the EU as an Italian citizen; opportunities elsewhere depend on the role’s hiring and work-authorization arrangements.",
   "authorship": "For independent software projects, I define requirements, inspect behavior, test releases and maintain tools, using AI-assisted implementation. Case studies identify my contribution and link the outputs, source records and external reviews.",
-  "machineSummary": "Mario Marcolongo investigates sources, tests AI behavior and operates tools and websites. Evidence includes paid scientific work, Wikimedia investigations, accepted Atlas contributions and dated platform-recorded Gray Swan testing results. A Syntony network member, he studies IT through non-degree Metropolia Open UAS. Based in Italy; open to remote work and relocation.",
+  "machineSummary": "Mario Marcolongo investigates sources, tests AI behavior and operates tools and websites. Evidence includes paid scientific work, Wikimedia investigations, accepted Atlas contributions and dated platform-recorded Gray Swan testing results. A Syntony network member, he studies IT through Metropolia’s Open UAS pathway. Based in Italy; open to remote work and relocation.",
   "resumeRoutes": {
     "default": "/cv",
     "technical": "/cv-technical",
@@ -170,15 +170,17 @@ function createMarioDossier() {
   "education": [
     {
       "institution": "Metropolia University of Applied Sciences",
-      "title": "Open UAS Information Technology path studies",
+      "title": "Information Technology — Open UAS Path Studies",
       "period": "Aug 2026–Present",
       "startDate": "2026-08",
       "endDate": null,
       "status": "open_uas_path_enrolled",
-      "description": "English-taught, online Open UAS path studies (non-degree). Python Programming: 3 ECTS, Pass, assessed 15 Sep 2026.",
+      "description": "English-taught online degree-credit pathway toward a Bachelor of Engineering in Information Technology. Python Programming: 3 ECTS, Pass (15 Sep 2026).",
+      "cvDescription": "Degree-credit pathway toward a BEng in Information Technology. Python Programming: 3 ECTS, Pass (Sep 2026).",
       "programExtentECTS": 120,
       "creditsAwarded": 3,
       "degreeAwarded": false,
+      "degreeProgrammeAdmitted": false,
       "expectedDegreeCompletion": null,
       "sourceUrl": "https://www.metropolia.fi/en/study-at-metropolia/open-university/path-studies/it-online",
       "attainments": [
@@ -673,7 +675,7 @@ function createMarioDossier() {
         },
         {
           "heading": "Public preprint and affiliation",
-          "text": "The AI Safety Formalization Atlas: a machine-checked memory for AI safety mathematics is publicly available as a Zenodo preprint, version 1, released on 1 October 2026. The manuscript is dated September 2026. Its title page lists me as a coauthor alongside Mario Brčić, Luka Hobor, Mihael Kovač and Adrian Satja Kurdija. Metropolia University of Applied Sciences is my listed affiliation, used with permission; my studies remain a non-degree Open UAS pathway. The public record establishes preprint authorship, not peer-reviewed publication."
+          "text": "The AI Safety Formalization Atlas: a machine-checked memory for AI safety mathematics is publicly available as a Zenodo preprint, version 1, released on 1 October 2026. The manuscript is dated September 2026. Its title page lists me as a coauthor alongside Mario Brčić, Luka Hobor, Mihael Kovač and Adrian Satja Kurdija. Metropolia University of Applied Sciences is my listed affiliation, used with permission; I undertake Information Technology path studies through its Open UAS. The public record establishes preprint authorship, not peer-reviewed publication."
         },
         {
           "heading": "Individual contribution and project scope",

@@ -1,6 +1,6 @@
 # Mario Marcolongo — Information Integrity, AI Evaluation & Technical Operations
 
-Mario Marcolongo investigates sources, tests AI behavior and operates tools and websites. Evidence includes paid scientific work, Wikimedia investigations, accepted Atlas contributions and dated platform-recorded Gray Swan testing results. A Syntony network member, he studies IT through non-degree Metropolia Open UAS. Based in Italy; open to remote work and relocation.
+Mario Marcolongo investigates sources, tests AI behavior and operates tools and websites. Evidence includes paid scientific work, Wikimedia investigations, accepted Atlas contributions and dated platform-recorded Gray Swan testing results. A Syntony network member, he studies IT through Metropolia’s Open UAS pathway. Based in Italy; open to remote work and relocation.
 
 ## Current scope
 
@@ -85,7 +85,7 @@ University of Padua research project. 2022–2025 · Volunteer collaboration. Fo
 
 ## Education
 
-Metropolia University of Applied Sciences — Open UAS Information Technology path studies. Aug 2026–Present. English-taught, online Open UAS path studies (non-degree). Python Programming: 3 ECTS, Pass, assessed 15 Sep 2026.
+Metropolia University of Applied Sciences — Information Technology — Open UAS Path Studies. Aug 2026–Present. English-taught online degree-credit pathway toward a Bachelor of Engineering in Information Technology. Python Programming: 3 ECTS, Pass (15 Sep 2026).
 
 University of Campania Luigi Vanvitelli — Medicine studies, degree not completed. 2020–approx. 2023 (attendance). Attendance stopped around 2023; no degree awarded. Administrative enrollment remains active.
 
