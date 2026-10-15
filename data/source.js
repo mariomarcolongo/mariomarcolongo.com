@@ -828,6 +828,16 @@ function createMarioDossier() {
     {
       "id": "notandia",
       "name": "Notandia",
+      "archive": {
+        "title": "Notandia for Zotero: publisher detection and verified reference highlighting",
+        "type": "Software",
+        "version": "v0.2.0",
+        "releasedAt": "2026-10-15",
+        "doi": "10.5281/zenodo.23390663",
+        "conceptDoi": "10.5281/zenodo.23390662",
+        "license": "AGPL-3.0-or-later",
+        "sourceUrl": "https://github.com/notandia/zotero-plugin/tree/v0.2.0"
+      },
       "hook": "A practical tool for research-result workflows",
       "route": "/notandia",
       "status": "Independent project · AI-assisted implementation",
@@ -965,6 +975,16 @@ function createMarioDossier() {
     {
       "id": "hypermandala",
       "name": "Hypermandala",
+      "archive": {
+        "title": "Hypermandala: interactive 2D, 3D and 4D geometry explorer",
+        "type": "Software",
+        "version": "v0.1.0",
+        "releasedAt": "2026-10-15",
+        "doi": "10.5281/zenodo.23391082",
+        "conceptDoi": "10.5281/zenodo.23391081",
+        "license": "AGPL-3.0-only",
+        "sourceUrl": "https://github.com/mariomarcolongo/hypermandala/tree/v0.1.0"
+      },
       "hook": "Explore geometry across dimensions",
       "route": "/work/hypermandala",
       "status": "Creator · Independent visualization experiment",
@@ -1112,6 +1132,10 @@ function createMarioDossier() {
     }
   ],
   "orcidUrl": "https://orcid.org/0000-0003-2846-7115",
+  "researchProfiles": [
+    { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=EnNykUIAAAAJ&hl=en" },
+    { "label": "ResearchGate", "url": "https://www.researchgate.net/profile/Mario_Marcolongo" }
+  ],
   "visualArtifacts": [
     {
       "title": "Industrial hemp cultivation in Europe",
@@ -1136,7 +1160,7 @@ function createMarioDossier() {
     },
     {
       "title": "Brain Disorder Gene Overlap",
-      "text": "Original vector diagram showing genes associated with overlapping clinical phenotypes. The Wikimedia file contains authorship, references and reuse information.",
+      "text": "Original vector diagram showing genes associated with overlapping clinical phenotypes. On 15 October 2026, the Commons reuse record listed it in seven Wikipedia articles across four language editions, plus an English Wikiversity learning page. The original file contains authorship, references and the current reuse list.",
       "url": "https://commons.wikimedia.org/wiki/File:Overlapping_clinical_phenotypes_in_genes_associated_with_monogenic_forms_of_autism_spectrum_disorder_(ASD),_dystonia,_epilepsy_and_schizophrenia.svg",
       "platform": "Wikimedia Commons",
       "image": "/media/work/wikimedia-clinical-overlap.svg"

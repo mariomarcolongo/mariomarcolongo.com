@@ -1,0 +1,9 @@
+---
+import D from '../../data/source.js';
+const P = D.presence;
+---
+<section aria-labelledby="research-profiles-title">
+  <h2 id="research-profiles-title">Research profiles</h2>
+  <p><a href={P.orcidUrl}>ORCID</a>{P.researchProfiles.map(profile=><Fragment> · <a href={profile.url}>{profile.label}</a></Fragment>)}</p>
+  <p>The Atlas preprint and software archives link to the original records on their project pages.</p>
+</section>

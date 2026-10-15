@@ -25,7 +25,7 @@ for(const url of urls){
  for(const link of ['/favicon-192x192.png','/favicon.svg','/apple-touch-icon.png','/site.webmanifest'])assert.ok(html.includes(`href="${link}"`),`${route}: ${link}`);
  const graphs=[...html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].flatMap(x=>{const g=JSON.parse(x[1]);return g['@graph']||[g]});
  const person=graphs.find(g=>g['@id']===`${P.canonicalUrl}/#person`);
- assert.equal(person.name,P.name);assert.deepEqual(person.sameAs,[P.github,P.linkedin,P.orcidUrl]);
+ assert.equal(person.name,P.name);assert.deepEqual(person.sameAs,[P.github,P.linkedin,P.orcidUrl,...P.researchProfiles.map(profile=>profile.url)]);
  const page=graphs.find(g=>g['@id']===`${canonical}#webpage`);
  assert.equal(page.url,canonical);assert.equal(page['@type'],route==='/'||/^\/cv(?:-technical|-ai)?$/.test(route)?'ProfilePage':'WebPage');
 }
