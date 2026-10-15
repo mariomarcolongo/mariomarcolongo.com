@@ -1,6 +1,7 @@
 ---
 import BookAcknowledgement from './BookAcknowledgement.astro';import PublishedArtifacts from './PublishedArtifacts.astro';import Layout from '../layouts/Layout.astro';import SiteNav from './SiteNav.astro';import SiteFooter from './SiteFooter.astro';import D from '../../data/source.js';
 import GraySwanCertificates from './GraySwanCertificates.astro';
+import ResearchProfiles from './ResearchProfiles.astro';
 const P=D.presence,N=P.redTeamNetwork;const {id}=Astro.props;const p=P.projects.find(p=>p.id===id);const claims=P.claims.filter(c=>p.claimIds.includes(c.id));
 const isAiEvaluation=id==='ai-evaluation';
 ---
@@ -20,6 +21,8 @@ const isAiEvaluation=id==='ai-evaluation';
     <PublishedArtifacts id={id}/>
     {p.image&&!['entropy','atlas','notandia','yourself-to-science','hypermandala'].includes(id)&&<figure><a href={p.image}><img src={p.image} alt={p.alt} width={p.imageWidth||800} height={p.imageHeight||450}/></a><figcaption>{p.name} · public artifact; source links above.</figcaption></figure>}
     {!isAiEvaluation&&p.sections.map(s=><section><h2>{s.heading}</h2><p>{s.text}</p></section>)}
+    {p.archive&&<section><h2>Archived software release</h2><p>{p.archive.title} · {p.archive.version} · {p.archive.releasedAt}. The archive preserves this release for citation and inspection.</p><div class="source-links"><a href={`https://doi.org/${p.archive.doi}`}>Release archive · DOI</a><a href={`https://doi.org/${p.archive.conceptDoi}`}>All versions</a><a href={p.archive.sourceUrl}>Versioned source</a></div><p class="meta">{p.archive.license}{id==='notandia'&&' · Zotero plugin; separate from the browser extension'}</p></section>}
+    {id==='atlas'&&<ResearchProfiles/>}
     {id==='notandia'&&<p><a href="https://github.com/notandia/zotero-plugin">Separate Zotero source repository</a></p>}
     {claims.length>0&&<section><h2>Claim provenance</h2>{claims.map(c=><details><summary>{c.text}</summary><p>{c.limitation}</p><p class="meta">Evidence: {c.evidenceType.replaceAll('_',' ')} · Owner: {c.sourceOwner.replaceAll('_',' ')} · Observed {c.observedAt}{c.startDate&&` · Event/start ${c.startDate}`}.</p>{c.sourceUrl ? <a href={c.sourceUrl}>Original evidence</a> : <p>{c.sourceNote}</p>}</details>)}</section>}
     <p class="evidence-note">Source review: {p.reviewedAt || P.reviewedAt}. This is a dated account; the linked sources may have changed.</p>

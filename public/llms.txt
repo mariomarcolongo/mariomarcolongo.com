@@ -20,6 +20,12 @@ Mario Marcolongo investigates sources, tests AI behavior and operates tools and 
 - Source investigations: https://mariomarcolongo.com/investigations
 - Dated AI evaluation: https://mariomarcolongo.com/ai-evaluation
 
+## Research profiles
+
+- Google Scholar: https://scholar.google.com/citations?user=EnNykUIAAAAJ&hl=en
+- ResearchGate: https://www.researchgate.net/profile/Mario_Marcolongo
+- ORCID: https://orcid.org/0000-0003-2846-7115
+
 ## Scope and verification
 
 Technical implementations are AI-assisted. Accepted contributions demonstrate the scope of the reviewed changes, not independent professional programming proficiency. Python, SQL and quantitative foundations are current study. Metropolia Open UAS path studies are a non-degree pathway; Python Programming has 3 awarded ECTS (Pass, 15 September 2026), while an awarded BEng is not established. Gray Swan metrics are dated snapshots: the latest profile capture is 13 October 2026; earlier records remain historical.
