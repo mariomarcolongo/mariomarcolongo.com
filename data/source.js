@@ -9,6 +9,47 @@ const ENTROPY_ORGANIZATION_CONTEXT = "Entropy for Life is an Italian science-com
 const ENTROPY_SHORT_CONTEXT = "Client: Italian science communication · 500K+ combined followers and subscribers";
 const AI_EVALUATION_METHODS = "I look for patterns in a model’s responses, adjust my approach, and test whether the same failure recurs in other scenarios. I combine role-play, emotional framing and structured-output or continuation techniques, refining them through trial and error.";
 
+// Published outputs only. Registry records and hosting mirrors are related records,
+// not additional publications. Individual evidence dates stay in their own records.
+const PUBLIC_OUTPUTS = [
+  {
+    id: 'atlas-preprint', projectId: 'atlas', type: 'Preprint',
+    title: 'The AI Safety Formalization Atlas: a machine-checked memory for AI safety mathematics',
+    role: 'Coauthor; source review, citation provenance and repository tooling',
+    version: null, releasedAt: '2026-10-01', doi: '10.5281/zenodo.23088952',
+    conceptDoi: '10.5281/zenodo.23088951', sourceUrl: 'https://zenodo.org/records/23088952',
+    sourceCommit: null, license: 'CC-BY-4.0', reviewedAt: '2026-10-15',
+    reviewScope: 'Public identifier, authorship and release date; not peer review'
+  },
+  {
+    id: 'yourself-to-science-software', projectId: 'yourself-to-science', type: 'Software',
+    title: 'Yourself To Science', role: 'Creator and maintainer', version: 'v2026.06.12',
+    releasedAt: '2026-06-12', doi: '10.5281/zenodo.20652062', conceptDoi: '10.5281/zenodo.15109359',
+    sourceUrl: 'https://github.com/yourselftoscience/yourselftoscience.org/tree/v2026.06.12',
+    sourceCommit: '0bbb5bcadc0e83e212c4cc2932e6fdd442b7c312', license: null, reviewedAt: '2026-10-15',
+    reviewScope: 'Archive identity and version. Component licences apply: AGPL code, CC BY-SA content, CC0 data.',
+    relatedRecords: [{ type: 'registry_record', title: 'FAIRsharing record for: Yourself to Science', doi: '10.25504/FAIRsharing.d3d487' }]
+  },
+  {
+    id: 'notandia-zotero', projectId: 'notandia', type: 'Software',
+    title: 'Notandia for Zotero: publisher detection and verified reference highlighting',
+    role: 'Creator and maintainer; AI-assisted implementation', version: 'v0.2.0',
+    releasedAt: '2026-10-15', doi: '10.5281/zenodo.23390663', conceptDoi: '10.5281/zenodo.23390662',
+    license: 'AGPL-3.0-or-later', sourceUrl: 'https://github.com/notandia/zotero-plugin/tree/v0.2.0',
+    sourceCommit: '53f37634e333022fe4b77b20936a4fe6691dd20c', reviewedAt: '2026-10-15',
+    reviewScope: 'Archived release metadata and source commit; separate from browser extension'
+  },
+  {
+    id: 'hypermandala', projectId: 'hypermandala', type: 'Software',
+    title: 'Hypermandala: interactive 2D, 3D and 4D geometry explorer',
+    role: 'Creator and maintainer; AI-assisted implementation', version: 'v0.1.0',
+    releasedAt: '2026-10-15', doi: '10.5281/zenodo.23391082', conceptDoi: '10.5281/zenodo.23391081',
+    license: 'AGPL-3.0-only', sourceUrl: 'https://github.com/mariomarcolongo/hypermandala/tree/v0.1.0',
+    sourceCommit: 'b064cbb03835207c851308a3dbb9ab5a4f0db277', reviewedAt: '2026-10-15',
+    reviewScope: 'Archived release metadata and source commit'
+  }
+];
+
 function createMarioDossier() {
   return {
   // Approved public projection. Legacy fields below support historical records only.
@@ -16,7 +57,9 @@ function createMarioDossier() {
   "schemaVersion": 1,
   "name": "Mario Marcolongo",
   "canonicalUrl": "https://mariomarcolongo.com",
-  "reviewedAt": "2026-10-10",
+  "reviewedAt": "2026-10-15",
+  "reviewScope": "Profile integration and published-output identifiers; individual evidence retains its own dated review.",
+  "outputs": PUBLIC_OUTPUTS,
   "email": "me@mariomarcolongo.com",
   "github": "https://github.com/mariomarcolongo",
   "linkedin": "https://www.linkedin.com/in/mario-marcolongo",
@@ -830,16 +873,7 @@ function createMarioDossier() {
     {
       "id": "notandia",
       "name": "Notandia",
-      "archive": {
-        "title": "Notandia for Zotero: publisher detection and verified reference highlighting",
-        "type": "Software",
-        "version": "v0.2.0",
-        "releasedAt": "2026-10-15",
-        "doi": "10.5281/zenodo.23390663",
-        "conceptDoi": "10.5281/zenodo.23390662",
-        "license": "AGPL-3.0-or-later",
-        "sourceUrl": "https://github.com/notandia/zotero-plugin/tree/v0.2.0"
-      },
+      "archive": PUBLIC_OUTPUTS.find(output => output.id === 'notandia-zotero'),
       "hook": "A practical tool for research-result workflows",
       "route": "/notandia",
       "status": "Independent project · AI-assisted implementation",
@@ -977,16 +1011,7 @@ function createMarioDossier() {
     {
       "id": "hypermandala",
       "name": "Hypermandala",
-      "archive": {
-        "title": "Hypermandala: interactive 2D, 3D and 4D geometry explorer",
-        "type": "Software",
-        "version": "v0.1.0",
-        "releasedAt": "2026-10-15",
-        "doi": "10.5281/zenodo.23391082",
-        "conceptDoi": "10.5281/zenodo.23391081",
-        "license": "AGPL-3.0-only",
-        "sourceUrl": "https://github.com/mariomarcolongo/hypermandala/tree/v0.1.0"
-      },
+      "archive": PUBLIC_OUTPUTS.find(output => output.id === 'hypermandala'),
       "hook": "Explore geometry across dimensions",
       "route": "/work/hypermandala",
       "status": "Creator · Independent visualization experiment",
