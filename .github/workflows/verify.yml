@@ -55,6 +55,8 @@ jobs:
 
       - name: Verify current release routes and exact public assets locally
         run: |
+          node scripts/verify-indexnow.mjs
+          node scripts/submit-indexnow.mjs --dry-run
           node scripts/verify-discovery.js
           node scripts/verify-live-release.js --local
 
