@@ -2,17 +2,26 @@
 import BookAcknowledgement from './BookAcknowledgement.astro';import PublishedArtifacts from './PublishedArtifacts.astro';import Layout from '../layouts/Layout.astro';import SiteNav from './SiteNav.astro';import SiteFooter from './SiteFooter.astro';import D from '../../data/source.js';
 import GraySwanCertificates from './GraySwanCertificates.astro';
 import ResearchProfiles from './ResearchProfiles.astro';
+import EmailLink from './EmailLink.astro';
 const P=D.presence,N=P.redTeamNetwork;const {id}=Astro.props;const p=P.projects.find(p=>p.id===id);const claims=P.claims.filter(c=>p.claimIds.includes(c.id));
 const isAiEvaluation=id==='ai-evaluation';
+const searchTitles = {
+  entropy: 'Entropy for Life — Research & Web Operations',
+  atlas: 'AI Safety Formalization Atlas',
+  'yourself-to-science': 'Yourself to Science — Research Directory',
+  'ai-evaluation': 'AI Evaluation & Red Teaming',
+  notandia: 'Notandia — Research Integrity Tools',
+  telegram: 'Telegram Link Converter & Automation'
+};
 ---
-<Layout title={`${p.name} — ${p.hook} | Mario Marcolongo`} description={p.text}>
+<Layout title={searchTitles[id] || `${p.name} — ${p.hook}`} description={p.text}>
   <SiteNav/>
   <main id="main-content" class="presence-shell case-shell">
     <p><a href="/work">Selected work</a></p>
     <p class="meta">{p.status}</p>
     <h1>{p.hook}</h1>
     <p class="lede">{p.text}</p>
-    {isAiEvaluation&&<div class="source-links"><a class="button primary" href="/cv-ai">AI evaluation résumé</a><a class="button" href="mailto:me@mariomarcolongo.com">Discuss a role or project</a></div>}
+    {isAiEvaluation&&<div class="source-links"><a class="button primary" href="/cv-ai">AI evaluation résumé</a><EmailLink class="button">Discuss a role or project</EmailLink></div>}
     <div class="source-links">{p.links.map(l=><a href={l.url}>{l.label}</a>)}</div>
     {isAiEvaluation&&p.sections.map(s=>s.collapsed?<details><summary>{s.heading}</summary><p>{s.text}</p></details>:<section><h2>{s.heading}</h2><p>{s.text}</p></section>)}
     {isAiEvaluation&&<GraySwanCertificates/>}
