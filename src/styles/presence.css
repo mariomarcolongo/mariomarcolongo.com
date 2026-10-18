@@ -467,3 +467,9 @@ body { transition: none; }
 /* Direct routes for the three application audiences. */
 .hero-resume-routes { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 0 0 18px; font-size: 14px; }
 .hero-resume-routes a { padding-block: 5px; }
+
+/* Keep the verified credential readable within each one-page résumé. */
+@media print {
+  .resume-document h2 { margin-top: 5px; }
+  .resume-document p { margin-bottom: 3px; }
+}

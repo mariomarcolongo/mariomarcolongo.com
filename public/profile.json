@@ -751,7 +751,7 @@
     "Systems diagnosis"
   ],
   "availability": "Open to relocation and international remote work. I can work in the EU as an Italian citizen; opportunities elsewhere depend on the role’s hiring and work-authorization arrangements.",
-  "summary": "Mario Marcolongo investigates sources, tests AI behavior and operates tools and websites. Evidence includes paid scientific work, Wikimedia investigations, accepted Atlas contributions and dated platform-recorded Gray Swan testing results. A Syntony network member, he studies IT through Metropolia’s Open UAS pathway. Based in Italy; open to remote work and relocation.",
+  "summary": "Mario Marcolongo investigates sources, tests AI behavior and operates tools and websites. Evidence includes paid scientific work, Wikimedia investigations, accepted Atlas contributions and dated platform-recorded Gray Swan testing results. He holds Microsoft’s Applied Skills credential for building an agent in Copilot Studio. A Syntony network member, he studies IT through Metropolia’s Open UAS pathway. Based in Italy; open to remote work and relocation.",
   "authorship": "For independent software projects, I define requirements, inspect behavior, test releases and maintain tools, using AI-assisted implementation. Case studies identify my contribution and link the outputs, source records and external reviews.",
   "resumeRoutes": {
     "default": "/cv",
@@ -831,6 +831,27 @@
         "Defined resource inclusion criteria, verification fields, provenance, licensing boundaries and the update process.",
         "Coordinate AI-assisted implementation, inspect behavior, test releases, diagnose deployment issues and maintain the directory."
       ]
+    }
+  ],
+  "credentials": [
+    {
+      "id": "microsoft-copilot-studio-2026",
+      "title": "Microsoft Applied Skills: Build an agent in Microsoft Copilot Studio",
+      "issuer": "Microsoft",
+      "issuerUrl": "https://www.microsoft.com/",
+      "credentialId": "48386317F9899EB1",
+      "earnedAt": "2026-10-19",
+      "displayDate": "19 October 2026",
+      "status": "Active",
+      "url": "https://learn.microsoft.com/en-us/users/mariomarcolongo/credentials/48386317f9899eb1",
+      "assessment": "Interactive hands-on lab assessment",
+      "scope": "Agent configuration, knowledge and generative answers, conversation topics, tools, and sharing in Microsoft Copilot Studio.",
+      "relatedTraining": {
+        "completedModules": 4,
+        "source": "User-confirmed Microsoft Learn course completion"
+      },
+      "limitation": "Assessed Copilot Studio skills; not a record of commercial platform delivery or Power Apps experience.",
+      "verifiedAt": "2026-10-19"
     }
   ],
   "education": [

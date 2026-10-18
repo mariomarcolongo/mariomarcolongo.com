@@ -19,7 +19,7 @@ const pages = [
     'Find a view worth exploring.', ...gallery.items.flatMap(item => [item.url, item.image])] },
   { path: '/', required: [P.name, `#${G.provingGround.rank}`, G.provingGround.percentile,
     G.displayDate, `${G.provingGround.totalBreaks} platform-recorded breaks`,
-    P.headline.split('. ')[0], ...P.services.map(service=>service.name), P.engagement.contactPreference, G.detailImage, '/investigations', '/cv-technical', '/cv-ai', '/work/entropy', '/work/atlas', '/notandia', '/cv'] },
+    P.headline.split('. ')[0], ...P.credentials.flatMap(c=>[c.title,c.url]), ...P.services.map(service=>service.name), P.engagement.contactPreference, G.detailImage, '/investigations', '/cv-technical', '/cv-ai', '/work/entropy', '/work/atlas', '/notandia', '/cv'] },
   { path: '/work/atlas', required: ['https://doi.org/10.5281/zenodo.23088952', 'Public preprint and affiliation', '1 October 2026'] },
   { path: '/ai-evaluation', required: [G.evidencePath, G.displayDate, '/cv-ai'] },
   { path: G.evidencePath, required: [G.displayDate, `#${G.provingGround.rank}`,
@@ -28,7 +28,7 @@ const pages = [
   { path: '/work/hypermandala', required: [M.screenshots.hypermandala.image,
     'https://github.com/mariomarcolongo/hypermandala', 'experimental'] },
   ...Object.entries(P.cv).map(([key, cv]) => ({ path: P.resumeRoutes[key], required:
-    [P.name, cv.title, `/${cv.filename}`, P.orcidUrl, '3 ECTS', 'Open UAS', 'Degree-credit pathway'] }))
+    [P.name, cv.title, ...P.credentials.flatMap(c=>[c.title,c.url]), `/${cv.filename}`, P.orcidUrl, '3 ECTS', 'Open UAS', 'Degree-credit pathway'] }))
 ];
 if(P.aiEvaluationLatestSnapshot){const previous=P.aiEvaluationSnapshot;pages.push({path:previous.evidencePath,required:[previous.displayDate,`#${previous.provingGround.rank}`,previous.originalImage,previous.originalSha256]});}
 if(C)pages.push({path:C.evidencePath,required:[C.displayDate,...C.items.flatMap(c=>[c.name,c.id,c.originalImage,c.originalSha256])]});

@@ -9,6 +9,23 @@ const ENTROPY_ORGANIZATION_CONTEXT = "Entropy for Life is an Italian science-com
 const ENTROPY_SHORT_CONTEXT = "Client: Italian science communication · 500K+ combined followers and subscribers";
 const AI_EVALUATION_METHODS = "I look for patterns in a model’s responses, adjust my approach, and test whether the same failure recurs in other scenarios. I combine role-play, emotional framing and structured-output or continuation techniques, refining them through trial and error.";
 
+const COPILOT_CREDENTIAL = {
+  id: 'microsoft-copilot-studio-2026',
+  title: 'Microsoft Applied Skills: Build an agent in Microsoft Copilot Studio',
+  issuer: 'Microsoft',
+  issuerUrl: 'https://www.microsoft.com/',
+  credentialId: '48386317F9899EB1',
+  earnedAt: '2026-10-19',
+  displayDate: '19 October 2026',
+  status: 'Active',
+  url: 'https://learn.microsoft.com/en-us/users/mariomarcolongo/credentials/48386317f9899eb1',
+  assessment: 'Interactive hands-on lab assessment',
+  scope: 'Agent configuration, knowledge and generative answers, conversation topics, tools, and sharing in Microsoft Copilot Studio.',
+  relatedTraining: { completedModules: 4, source: 'User-confirmed Microsoft Learn course completion' },
+  limitation: 'Assessed Copilot Studio skills; not a record of commercial platform delivery or Power Apps experience.',
+  verifiedAt: '2026-10-19'
+};
+
 // Published outputs only. Registry records and hosting mirrors are related records,
 // not additional publications. Individual evidence dates stay in their own records.
 const PUBLIC_OUTPUTS = [
@@ -60,6 +77,7 @@ function createMarioDossier() {
   "reviewedAt": "2026-10-15",
   "reviewScope": "Profile integration and published-output identifiers; individual evidence retains its own dated review.",
   "outputs": PUBLIC_OUTPUTS,
+  "credentials": [COPILOT_CREDENTIAL],
   "email": "me@mariomarcolongo.com",
   "github": "https://github.com/mariomarcolongo",
   "linkedin": "https://www.linkedin.com/in/mario-marcolongo",
@@ -88,7 +106,7 @@ function createMarioDossier() {
   "contact": "I support organisations of all sizes, research teams and creators with investigation, AI workflows, evaluation and practical technical delivery. Available for consulting, project delivery, ongoing collaborations and employed roles.",
   "availability": "Open to relocation and international remote work. I can work in the EU as an Italian citizen; opportunities elsewhere depend on the role’s hiring and work-authorization arrangements.",
   "authorship": "For independent software projects, I define requirements, inspect behavior, test releases and maintain tools, using AI-assisted implementation. Case studies identify my contribution and link the outputs, source records and external reviews.",
-  "machineSummary": "Mario Marcolongo investigates sources, tests AI behavior and operates tools and websites. Evidence includes paid scientific work, Wikimedia investigations, accepted Atlas contributions and dated platform-recorded Gray Swan testing results. A Syntony network member, he studies IT through Metropolia’s Open UAS pathway. Based in Italy; open to remote work and relocation.",
+  "machineSummary": "Mario Marcolongo investigates sources, tests AI behavior and operates tools and websites. Evidence includes paid scientific work, Wikimedia investigations, accepted Atlas contributions and dated platform-recorded Gray Swan testing results. He holds Microsoft’s Applied Skills credential for building an agent in Copilot Studio. A Syntony network member, he studies IT through Metropolia’s Open UAS pathway. Based in Italy; open to remote work and relocation.",
   "engagement": {
     "reviewedAt": "2026-10-18",
     "audience": "Organisations of all sizes, research teams and creators.",
