@@ -29,7 +29,7 @@ const topics = [...new Set(items.map(v=>v.topic))].sort();
       <div class="visual-section-heading"><div><p class="eyebrow">A closer look</p><h2 id="visual-case-title">Selected case studies</h2></div><p>Source research. Visual explanation. Published work.</p></div>
       <div class="visual-case-grid">
         {featuredCases.map(c=><article>
-          <a class="visual-case-image" href={c.links[0].href} aria-label={`Explore ${c.title}`}><img src={c.image} alt="" width="800" height="520" loading="eager" decoding="async"/></a>
+          <a class="visual-case-image" href={c.links[0].href} aria-label={`Explore ${c.title}`}><img src={c.image} alt={`Preview: ${c.title}. ${c.text}`} width="800" height="520" loading="eager" decoding="async"/></a>
           <div class="visual-case-copy"><p class="eyebrow">{c.label}</p><h3><a href={c.links[0].href}>{c.title}</a></h3><p>{c.text}</p><div class="visual-case-links">{c.links.map(link=><a href={link.href}>{link.label} <span aria-hidden="true">↗</span></a>)}</div></div>
         </article>)}
       </div>
@@ -52,7 +52,7 @@ const topics = [...new Set(items.map(v=>v.topic))].sort();
       <div id="visual-grid" class="visual-grid">
         {items.map(v=><article class="visual-card" data-platform={v.platform} data-topic={v.topic} data-search={`${v.title} ${v.originalTitle||''} ${v.topic} ${v.platform}`}>
           <a class="visual-card-link" href={v.url}>
-            <div class="visual-card-media"><img src={v.image} alt="" width={v.previewWidth||800} height={v.previewHeight||500} loading="lazy" decoding="async"/><span class="visual-kind">{v.kind}</span></div>
+            <div class="visual-card-media"><img src={v.image} alt={`${v.kind} preview: ${v.title}`} width={v.previewWidth||800} height={v.previewHeight||500} loading="lazy" decoding="async"/><span class="visual-kind">{v.kind}</span></div>
             <div class="visual-card-copy"><p class="visual-card-meta"><span>{v.platform}</span><span>{v.topic}</span></p><h3>{v.title}</h3><p class="visual-open">Open original <span aria-hidden="true">↗</span></p></div>
           </a>
         </article>)}

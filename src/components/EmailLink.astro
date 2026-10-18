@@ -1,0 +1,5 @@
+---
+import D from '../../data/source.js';
+const { address = D.presence.email, ...attributes } = Astro.props;
+---
+<Fragment set:html="<!--email_off-->"/><a {...attributes} href={`mailto:${address}`}><slot/></a><Fragment set:html="<!--/email_off-->"/>

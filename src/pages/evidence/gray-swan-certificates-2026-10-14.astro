@@ -1,4 +1,5 @@
 ---
+import EmailLink from '../../components/EmailLink.astro';
 import Layout from '../../layouts/Layout.astro';
 import SiteNav from '../../components/SiteNav.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
@@ -31,7 +32,7 @@ const record={'@context':'https://schema.org','@type':'DigitalDocument',name:tit
       <details><summary>Original capture and SHA-256</summary><p>{c.originalDimensions.join(' × ')} pixels.</p><p class="capture-hash">{c.originalSha256}</p><a href={c.originalImage}>Open original screenshot</a></details>
     </section>)}
     <details><summary>Source and scope</summary><p>{G.captureContext}</p><p>{G.scope}</p><p>Breaking Ties profile and certificate figures are preserved as shown on their respective surfaces. Different denominators are not treated as the same ranking population.</p><a href={G.sourceUrl}>Issuer dashboard (sign-in required) ↗</a></details>
-    <p><a href="/cv-ai">AI evaluation résumé →</a> · <a href="mailto:me@mariomarcolongo.com">Discuss a role or project</a></p>
+    <p><a href="/cv-ai">AI evaluation résumé →</a> · <EmailLink>Discuss a role or project</EmailLink></p>
   </main>
   <SiteFooter/>
 </Layout>

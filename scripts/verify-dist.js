@@ -25,6 +25,27 @@ for(const [name,min,max] of [['llms.txt',150,300],['cv-llm.txt',700,1200]]){cons
 for(const file of ['auth.md','data/source.js','.well-known/api-catalog','.well-known/ard.json','.well-known/ai-catalog.json','.well-known/agent-card.json'])assert.ok(!fs.existsSync(path.join(dist,file)),`Retired resource ${file}`);
 function walk(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(dir,e.name)):[path.join(dir,e.name)]);}
 const html=walk(dist).filter(f=>f.endsWith('.html'));
+// Guard the crawler-facing failures found by Bing's October site scan.
+const canonicalPaths=[...fs.readFileSync(path.join(dist,'sitemap.xml'),'utf8').matchAll(/<loc>(.*?)<\/loc>/g)].map(match=>new URL(match[1]).pathname);
+const titles=new Set();
+for(const route of canonicalPaths){
+ const text=fs.readFileSync(path.join(dist,route==='/'?'index.html':route.slice(1)+'.html'),'utf8');
+ const title=text.match(/<title>(.*?)<\/title>/s)?.[1].replace(/&amp;/g,'&');
+ assert.ok(title&&title.length<=70,`${route}: missing or overly long search title`);
+ assert.ok(!titles.has(title),`${route}: duplicate search title`);titles.add(title);
+ for(const match of text.matchAll(/<a\b[^>]*href="mailto:[^"]*"[^>]*>.*?<\/a>/gs)){
+  assert.ok(text.slice(0,match.index).endsWith('<!--email_off-->')&&text.slice(match.index+match[0].length).startsWith('<!--/email_off-->'),`${route}: public email link must work without Cloudflare's decode script`);
+ }
+}
+const gallery=fs.readFileSync(path.join(dist,'work/scientific-visualizations.html'),'utf8');
+for(const image of gallery.matchAll(/<img\b[^>]*>/g))if(!image[0].includes('aria-hidden="true"'))assert.match(image[0],/\balt="[^"]+"/,'Informative visualization preview needs alt text');
+for(const file of html){
+ const text=fs.readFileSync(file,'utf8');
+ for(const match of text.matchAll(/<a\b[^>]*href="([^"]+)"/g)){
+  const url=new URL(match[1],`https://mariomarcolongo.com/${path.relative(dist,file)}`);
+  if(url.origin==='https://mariomarcolongo.com'&&url.pathname.startsWith('/evidence/')&&url.pathname.endsWith('.html'))assert.ok(fs.existsSync(path.join(dist,url.pathname)),`${file}: broken evidence link ${url.pathname}`);
+ }
+}
 for(const file of html){const text=fs.readFileSync(file,'utf8');if(file.includes('/evidence/gray-swan-profile-'))continue;
  assert.equal((text.match(/<main(?:\s|>)/g)||[]).length,1,`${file}: one main`);
  assert.ok(text.includes('id="main-content"'),`${file}: skip target`);
