@@ -13,6 +13,9 @@ for(const result of evidence.results)if(result.evidence)for(const claim of resul
 assert.equal(service.search('zzzzunmatchedterm').totalMatches,0);
 assert.equal(service.search('show Mario experience').totalMatches,0);
 assert.ok(service.search('AI',20).results.every(result=>/\bAI\b/i.test([result.title,result.record.text,result.record.description,result.record.status,result.record.period,...(result.record.details||[]),result.record.limitation].filter(Boolean).join(' '))));
+const credential=service.search('Copilot Studio').results.find(result=>result.kind==='credential');
+assert.equal(credential?.record.credentialId,'48386317F9899EB1');
+assert.equal(credential?.sourceUrl,profile.credentials[0].url);
 assert.ok(service.search('Metropolia').results.some(result=>result.record.degreeAwarded===false));
 const org=service.search('followers',20).results.find(result=>result.id==='entropy-organization-context');assert.match(org.record.limitation,/not.*personal reach/);
 assert.throws(()=>service.search('Atlas',100));assert.throws(()=>service.search('x'.repeat(201)));assert.throws(()=>service.getResumes('executive'));

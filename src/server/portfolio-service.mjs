@@ -30,6 +30,7 @@ export function createPortfolioService(profile) {
     ...claims.map(claim=>({kind:'claim',id:claim.id,title:claim.text,record:claim,sourceUrl:claim.sourceUrl,recordUrl:link('/evidence')})),
     ...profile.projects.map(project=>({kind:'project',id:project.id,title:project.name,record:project,evidence:claims.filter(claim=>project.claimIds.includes(claim.id)),recordUrl:link(project.route)})),
     ...profile.experience.map((work,index)=>({kind:'experience',id:`experience-${index}`,title:work.name,record:work,recordUrl:link(work.route)})),
+    ...(profile.credentials||[]).map(c=>({kind:'credential',id:c.id,title:c.title,record:c,sourceUrl:c.url,recordUrl:link('/experience#credentials')})),
     ...profile.education.map((study,index)=>({kind:'education',id:`education-${index}`,title:study.title,record:study,sourceUrl:study.sourceUrl,recordUrl:link('/experience')})),
     ...profile.visualArtifacts.map((artifact,index)=>({kind:'visualization',id:`visualization-${index}`,title:artifact.title,record:artifact,sourceUrl:artifact.url,recordUrl:link('/work/scientific-visualizations')}))
   ];
