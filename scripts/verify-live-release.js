@@ -6,6 +6,7 @@ const { createHash } = require('node:crypto');
 const { startStaticServer } = require('./lib/static-server.js');
 const P = require('../data/source.js').presence;
 const M = require('../data/work-media.json');
+const gallery = require('../data/visualization-gallery.json');
 const G = P.aiEvaluationLatestSnapshot || P.aiEvaluationSnapshot;
 const C = P.aiEvaluationCertificates;
 const DIST = path.resolve(__dirname, '../dist');
@@ -14,6 +15,8 @@ const attempts = Number(process.env.LIVE_VERIFY_ATTEMPTS || (local ? 1 : 18));
 const delayMs = Number(process.env.LIVE_VERIFY_DELAY_MS || 10000);
 const releaseId = process.env.LIVE_RELEASE_ID || `release-${Date.now()}`;
 const pages = [
+  { path: '/work/scientific-visualizations', required: ['scientific diagrams.', 'Selected case studies',
+    'Find a view worth exploring.', ...gallery.items.flatMap(item => [item.url, item.image])] },
   { path: '/', required: [P.name, `#${G.provingGround.rank}`, G.provingGround.percentile,
     G.displayDate, `${G.provingGround.totalBreaks} platform-recorded breaks`,
     P.headline.split('. ')[0], G.detailImage, '/investigations', '/cv-technical', '/cv-ai', '/work/entropy', '/work/atlas', '/notandia', '/cv'] },
@@ -30,7 +33,8 @@ const pages = [
 if(P.aiEvaluationLatestSnapshot){const previous=P.aiEvaluationSnapshot;pages.push({path:previous.evidencePath,required:[previous.displayDate,`#${previous.provingGround.rank}`,previous.originalImage,previous.originalSha256]});}
 if(C)pages.push({path:C.evidencePath,required:[C.displayDate,...C.items.flatMap(c=>[c.name,c.id,c.originalImage,c.originalSha256])]});
 const assets = [...new Set([M.screenshots.hypermandala.image, G.originalImage, G.detailImage,
-  '/profile.json', '/robots.txt', `/evidence/gray-swan-profile-${G.observedAt}.json`,
+  '/profile.json', '/robots.txt', '/llms.txt', '/og/scientific-visualizations.png',
+  ...gallery.items.map(item => item.image), `/evidence/gray-swan-profile-${G.observedAt}.json`,
   ...(C ? [`/evidence/gray-swan-certificates-${C.observedAt}.json`,...C.items.map(c=>c.originalImage)] : []),
   ...Object.values(P.cv).map((cv) => `/${cv.filename}`)])];
 const sha256 = (bytes) => createHash('sha256').update(bytes).digest('hex');
