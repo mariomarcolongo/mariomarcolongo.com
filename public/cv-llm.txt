@@ -2,6 +2,10 @@
 
 Mario Marcolongo investigates sources, tests AI behavior and operates tools and websites. Evidence includes paid scientific work, Wikimedia investigations, accepted Atlas contributions and dated platform-recorded Gray Swan testing results. A Syntony network member, he studies IT through Metropolia’s Open UAS pathway. Based in Italy; open to remote work and relocation.
 
+## Engagement
+
+Services: https://mariomarcolongo.com/#services. Please email first to arrange a call. Consultations and calls are by appointment.
+
 ## Current scope
 
 For independent software projects, I define requirements, inspect behavior, test releases and maintain tools, using AI-assisted implementation. Case studies identify my contribution and link the outputs, source records and external reviews.
@@ -89,22 +93,22 @@ Metropolia University of Applied Sciences — Information Technology — Open UA
 
 University of Campania Luigi Vanvitelli — Medicine studies, degree not completed. 2020–approx. 2023 (attendance). Attendance stopped around 2023; no degree awarded. Administrative enrollment remains active.
 
-Metropolia path extent: 120 ECTS; awarded: 3. No degree or expected graduation is established.
+Metropolia path extent: 120 ECTS; awarded: 3. No degree awarded.
 
 ## Demonstrated work and current study
 
-Scientific literature search, source verification, information organization, technical documentation and functional testing are supported by the linked work. Python, SQL, systems and quantitative foundations remain current study.
+Linked work demonstrates source verification, technical documentation and functional testing. Python, SQL, systems and quantitative foundations remain current study.
 
 Italian native · English: EF SET C1 overall, 68/100 (Mar 2024). Certificate subscores: reading 75/C2; listening 81/C2; writing 59/B2; speaking 55/B2. Current English self-assessment: C1, reported 2026-10-01. Certificate: https://cert.efset.org/jHk84h
 
 ## Additional evidence
 
-Source investigations distinguish records, attributable edits and interpretation: https://mariomarcolongo.com/investigations. Scientific diagrams and data views (protein supply is not individual intake): https://mariomarcolongo.com/work/scientific-visualizations. Telegram source architecture: Lambda function URL, SQS, DynamoDB, EventBridge and SNS; current uptime unverified: https://mariomarcolongo.com/work/telegram. Hypermandala is an interactive geometry experiment: https://mariomarcolongo.com/work/hypermandala. The QCAE implementation presents an existing instrument and does not establish new psychometric validation.
+Source investigations distinguish records, attributable edits and interpretation: https://mariomarcolongo.com/investigations. Scientific diagrams and data views (protein supply is not individual intake): https://mariomarcolongo.com/work/scientific-visualizations. Telegram source architecture: Lambda function URL, SQS, DynamoDB, EventBridge and SNS; current uptime unverified: https://mariomarcolongo.com/work/telegram. Hypermandala is an interactive geometry experiment: https://mariomarcolongo.com/work/hypermandala. QCAE presents an existing instrument and does not establish new psychometric validation.
 
 ## Application documents and contact
 
-Default résumé: https://mariomarcolongo.com/cv. Technical operations: https://mariomarcolongo.com/cv-technical. AI evaluation and research support: https://mariomarcolongo.com/cv-ai. Role-specific views of shared facts.
+Default résumé: https://mariomarcolongo.com/cv. Technical operations: https://mariomarcolongo.com/cv-technical. AI evaluation and research support: https://mariomarcolongo.com/cv-ai.
 
 Email: me@mariomarcolongo.com. ORCID: https://orcid.org/0000-0003-2846-7115. Full experience: https://mariomarcolongo.com/experience. Visual collections: https://mariomarcolongo.com/work/scientific-visualizations. GitHub: https://github.com/mariomarcolongo. LinkedIn: https://www.linkedin.com/in/mario-marcolongo. Italian citizen, based in Italy. US work authorization is not established in this record.
 
-Profile integration reviewed: 2026-10-15. Individual evidence records retain their own dates and limitations.
+Profile reviewed: 2026-10-15. Individual evidence records retain their own dates and limitations.
