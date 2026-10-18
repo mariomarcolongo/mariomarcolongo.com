@@ -3,7 +3,97 @@ import Layout from '../../layouts/Layout.astro';
 import SiteNav from '../../components/SiteNav.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
 import D from '../../../data/source.js';
-import F from '../../../data/flourish-artifacts.json';
-const P=D.presence;
+import G from '../../../data/visualization-gallery.json';
+const P = D.presence;
+const featuredCases = [
+  {title:'Mapping shark encounters',label:'Entropy for Life · Tableau',image:'/media/work/entropy-shark-map.webp',text:'From source collection to an interactive map of shark attacks in Europe and the Mediterranean.',links:[{label:'Explore the map and article',href:'https://entropyforlife.it/2024/07/24/mappa-attacchi-squali-nel-mar-mediterraneo-e-in-europa/'},{label:'Related: white-shark sizes',href:'https://entropyforlife.it/2024/08/02/lunghezza-squali-bianchi/'}]},
+  {title:'Following Europe’s hemp cultivation',label:'Eurostat data · Flourish',image:'/media/visualizations/flourish-story-2720661.webp',text:'Seven linked views of cultivation, harvest and production, from European comparisons to Italian trends.',links:[{label:'Explore the seven-part story',href:'https://public.flourish.studio/story/2720661/'},{label:'Inspect the Eurostat source',href:'https://ec.europa.eu/eurostat/databrowser/view/APRO_CPSH1__custom_5830898/default/table?lang=en'}]},
+  {title:'Making gene overlap visible',label:'Biomedical diagram · Wikimedia Commons',image:'/media/work/wikimedia-clinical-overlap.svg',text:'An original vector diagram connecting genes and overlapping clinical phenotypes, with references and a public reuse record.',links:[{label:'Explore the diagram and references',href:'https://commons.wikimedia.org/wiki/File:Overlapping_clinical_phenotypes_in_genes_associated_with_monogenic_forms_of_autism_spectrum_disorder_(ASD),_dystonia,_epilepsy_and_schizophrenia.svg'}]}
+];
+const first = ['tableau-1','flourish-story-2238492','flourish-visualisation-18547994','flourish-visualisation-19966318','original-71','original-69'];
+const items = [...first.map(id=>G.items.find(v=>v.id===id)).filter(Boolean),...G.items.filter(v=>!first.includes(v.id))];
+const platforms = ['Flourish','Tableau','Wikimedia Commons','Independent'];
+const topics = [...new Set(items.map(v=>v.topic))].sort();
 ---
-<Layout title="Scientific charts, maps & diagrams — Mario Marcolongo"><SiteNav/><main id="main-content" class="presence-shell"><p class="eyebrow">Scientific visualization &amp; evidence synthesis</p><h1>Data made visible.</h1><p class="lede">Original diagrams, comparative maps and interactive charts. I organize source material, define what the measures mean and create visual explanations people can inspect.</p><div class="source-links"><a href="https://commons.wikimedia.org/wiki/Special:Contributions/Digressivo">Wikimedia Commons collection</a><a href="https://public.tableau.com/app/profile/mario.marcolongo/vizzes">All Tableau views</a><a href="https://app.flourish.studio/@Digressivo">All Flourish views</a></div><div class="visual-archive">{P.visualArtifacts.map(v=><article><p class="meta">{v.platform}</p>{v.image&&<a href={v.url}><img src={v.image} alt={v.title} width="800" height="450" loading="lazy"/></a>}<h2><a href={v.url}>{v.title}</a></h2><p>{v.text}</p><a href={v.url}>Open original and source context ↗</a></article>)}</div><details class="flourish-disclosure"><summary>Browse {F.items.length} published entries from my Flourish profile</summary><p class="artifact-date">Snapshot {F.observedAt}. Includes alternate views and stories of related datasets; these are not {F.items.length} separate assignments.</p><ul class="flourish-links">{F.items.map(v=><li><a href={v.url}>{v.title} ↗</a></li>)}</ul></details><p class="evidence-note">These are selected published artifacts, not a live inventory or a claim about current policy or clinical guidance. Interactive views open on their original platforms; publication dates, sources and licenses belong with each original record.</p></main><SiteFooter/></Layout>
+<Layout title="Scientific charts, maps & diagrams — Mario Marcolongo" description="Explore scientific charts, maps and diagrams by Mario Marcolongo. Visual previews of published Tableau, Flourish and Wikimedia work, with original sources and attribution." ogImage="/og/scientific-visualizations.png" ogImageAlt="Mario Marcolongo — scientific charts, maps and diagrams, featuring the published industrial hemp story" collectionItems={items}>
+  <SiteNav/>
+  <main id="main-content" class="presence-shell visualization-shell">
+    <header class="visualization-intro">
+      <p class="eyebrow">Scientific visualization &amp; evidence synthesis</p>
+      <h1>Charts, maps &amp;<br/>scientific diagrams.</h1>
+      <p class="lede">I turn source material into visual explanations you can explore. Browse the work, then open the original to inspect its data, sources and context.</p>
+      <div class="visualization-jumps"><a class="button primary" href="#visualization-library">Browse all {items.length} views <span aria-hidden="true">↓</span></a><span>Interactive charts · Data stories · Vector diagrams</span></div>
+    </header>
+
+    <section class="visual-case-studies" aria-labelledby="visual-case-title">
+      <div class="visual-section-heading"><div><p class="eyebrow">A closer look</p><h2 id="visual-case-title">Selected case studies</h2></div><p>Source research. Visual explanation. Published work.</p></div>
+      <div class="visual-case-grid">
+        {featuredCases.map(c=><article>
+          <a class="visual-case-image" href={c.links[0].href} aria-label={`Explore ${c.title}`}><img src={c.image} alt="" width="800" height="520" loading="eager" decoding="async"/></a>
+          <div class="visual-case-copy"><p class="eyebrow">{c.label}</p><h3><a href={c.links[0].href}>{c.title}</a></h3><p>{c.text}</p><div class="visual-case-links">{c.links.map(link=><a href={link.href}>{link.label} <span aria-hidden="true">↗</span></a>)}</div></div>
+        </article>)}
+      </div>
+    </section>
+
+    <section id="visualization-library" class="visual-library" aria-labelledby="visual-library-title">
+      <div class="visual-section-heading"><div><p class="eyebrow">The visual collection</p><h2 id="visual-library-title">Find a view worth exploring.</h2></div><p>{items.length} published views · Previews of the originals</p></div>
+      <p class="visual-library-note">Includes alternate views and stories of related datasets. Each card opens the published original; these are not {items.length} separate assignments.</p>
+      <div class="gallery-tools">
+        <div class="visual-platforms" role="group" aria-label="Filter by platform">
+          <button type="button" data-platform="all" aria-pressed="true">All work <span>{items.length}</span></button>
+          {platforms.map(platform=><button type="button" data-platform={platform} aria-pressed="false">{platform} <span>{items.filter(v=>v.platform===platform).length}</span></button>)}
+        </div>
+        <div class="visual-search-row">
+          <label><span>Search the collection</span><input id="visual-search" type="search" placeholder="Try sharks, hemp, mortality…" autocomplete="off" aria-controls="visual-grid"/></label>
+          <label><span>Topic</span><select id="visual-topic" aria-controls="visual-grid"><option value="all">All topics</option>{topics.map(topic=><option value={topic}>{topic}</option>)}</select></label>
+          <p id="visual-result-count" role="status" aria-live="polite" aria-atomic="true">{items.length} views</p>
+        </div>
+      </div>
+      <div id="visual-grid" class="visual-grid">
+        {items.map(v=><article class="visual-card" data-platform={v.platform} data-topic={v.topic} data-search={`${v.title} ${v.originalTitle||''} ${v.topic} ${v.platform}`}>
+          <a class="visual-card-link" href={v.url}>
+            <div class="visual-card-media"><img src={v.image} alt="" width={v.previewWidth||800} height={v.previewHeight||500} loading="lazy" decoding="async"/><span class="visual-kind">{v.kind}</span></div>
+            <div class="visual-card-copy"><p class="visual-card-meta"><span>{v.platform}</span><span>{v.topic}</span></p><h3>{v.title}</h3><p class="visual-open">Open original <span aria-hidden="true">↗</span></p></div>
+          </a>
+        </article>)}
+      </div>
+      <p id="visual-empty" class="visual-empty" hidden>No views match those filters. <button type="button" id="visual-reset">Reset filters</button></p>
+      <noscript><p>All {items.length} previews are shown. Use your browser’s Find command to search titles.</p></noscript>
+    </section>
+
+    <aside class="visual-source-note"><h2>Follow the source.</h2><p>Previews are static images of the published work. Open a card for interactive controls, publication dates, source notes and licensing. Entropy for Life projects retain their original branding and attribution.</p><div class="source-links"><a href="https://commons.wikimedia.org/wiki/Special:Contributions/Digressivo">Wikimedia Commons collection ↗</a>{P.visualizationProfiles.map(profile=><a href={profile.url}>{profile.label} collection ↗</a>)}</div></aside>
+    <p class="evidence-note">Collection checked {G.reviewedAt}. These are published artifacts, not a claim about current policy or clinical guidance. Read each view with its dataset, units and source context.</p>
+  </main>
+  <SiteFooter/>
+</Layout>
+<script>
+  const library = document.querySelector<HTMLElement>('.visual-library');
+  const search = document.querySelector<HTMLInputElement>('#visual-search');
+  const topic = document.querySelector<HTMLSelectElement>('#visual-topic');
+  const buttons = [...document.querySelectorAll<HTMLButtonElement>('.visual-platforms button')];
+  const cards = [...document.querySelectorAll<HTMLElement>('.visual-card')];
+  const count = document.querySelector<HTMLElement>('#visual-result-count');
+  const empty = document.querySelector<HTMLElement>('#visual-empty');
+  const normalize = (text: string) => text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  let platform = 'all';
+  function filter() {
+    const words = normalize(search?.value || '').trim().split(/\s+/).filter(Boolean);
+    let shown = 0;
+    for (const card of cards) {
+      const text = normalize(card.dataset.search || '');
+      const match = (platform === 'all' || card.dataset.platform === platform) && (topic?.value === 'all' || card.dataset.topic === topic?.value) && words.every(word=>text.includes(word));
+      card.hidden = !match;
+      if (match) shown++;
+    }
+    buttons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.platform === platform)));
+    if (count) count.textContent = `${shown} of ${cards.length} views`;
+    if (empty) empty.hidden = shown > 0;
+  }
+  if (library && search && topic) {
+    buttons.forEach(button=>button.addEventListener('click',()=>{platform=button.dataset.platform || 'all';filter();}));
+    search.addEventListener('input',filter);
+    topic.addEventListener('change',filter);
+    document.querySelector('#visual-reset')?.addEventListener('click',()=>{platform='all';search.value='';topic.value='all';filter();search.focus();});
+    library.classList.add('gallery-enhanced');
+  }
+</script>

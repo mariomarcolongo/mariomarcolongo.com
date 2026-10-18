@@ -25,12 +25,14 @@ function ico(png) {
 }
 
 async function main() {
+ const cardName = process.argv[2] === '--card' ? process.argv[3] : null;
+ if(process.argv.length > 2 && !cardName) throw new Error('Usage: node scripts/generate-brand-assets.js [--card name]');
  fs.mkdirSync(path.join(pub,'og'),{recursive:true});
  const browser=await launchBrowser();
  try {
   const page=await browser.newPage();
   const svg=fs.readFileSync(path.join(pub,'favicon.svg'),'utf8');
-  for(const size of [32,48,180,192,512]) {
+  for(const size of cardName ? [] : [32,48,180,192,512]) {
    await page.setViewport({width:size,height:size,deviceScaleFactor:1});
    await page.setContent(`<style>body{margin:0;width:${size}px;height:${size}px}svg{display:block;width:100%;height:100%}</style>${svg}`,{waitUntil:'load'});
    const png=Buffer.from(await page.screenshot({type:'png',omitBackground:true}));
@@ -40,15 +42,18 @@ async function main() {
    home:{label:'Information integrity & technical operations',title:P.headline,text:'Source investigations, AI evaluation and paid scientific and website work.',image:M.screenshots['entropy-map'].image,caption:'Published Tableau map: data collection and visualization for Entropy for Life.'},
    cv:{label:'Application résumés',title:'Experience you can inspect.',text:'Research operations · Technical support · AI evaluation',image:M.screenshots.notandia.image,caption:'One-page résumés. Published work and source records.'},
    'ai-evaluation':{label:'Independent model testing',title:'AI evaluation record',text:'Dated platform results, original captures and explicit evidence limits.',image:P.aiEvaluationSnapshot.detailImage,caption:`Gray Swan public profile · ${P.aiEvaluationSnapshot.displayDate}`},
-   investigations:{label:'Source investigation & data quality',title:'Check the claim. Follow the source.',text:'Citation reconciliation, structured metadata and public investigation records.',image:M.screenshots.atlas.image,caption:'Accepted source-locator and provenance contribution.'}
+   investigations:{label:'Source investigation & data quality',title:'Check the claim. Follow the source.',text:'Citation reconciliation, structured metadata and public investigation records.',image:M.screenshots.atlas.image,caption:'Accepted source-locator and provenance contribution.'},
+   'scientific-visualizations':{label:'Scientific charts, maps & diagrams',title:'Data made visible.',text:'Interactive data views and scientific diagrams with sources and attribution.',image:M.screenshots['entropy-cannabis'].image,caption:'Published Flourish story: European industrial hemp cultivation, with Eurostat data.'}
   };
+  if(cardName && !cards[cardName]) throw new Error(`Unknown social preview card: ${cardName}`);
   await page.setViewport({width:1200,height:630,deviceScaleFactor:1});
   for(const [name,config] of Object.entries(cards)) {
+   if(cardName && name !== cardName) continue;
    await page.setContent(card(config),{waitUntil:'load'});
    await page.screenshot({path:path.join(pub,'og',`${name}.png`),type:'png'});
   }
-  fs.writeFileSync(path.join(pub,'site.webmanifest'),JSON.stringify({name:`${P.name} — ${P.currentPositioning}`,short_name:'Mario M.',description:P.description,start_url:'/',scope:'/',icons:[192,512].map(size=>({src:`/favicon-${size}x${size}.png`,sizes:`${size}x${size}`,type:'image/png'})),theme_color:'#f4f5f7',background_color:'#f4f5f7',display:'standalone'},null,2)+'\n');
+  if(!cardName) fs.writeFileSync(path.join(pub,'site.webmanifest'),JSON.stringify({name:`${P.name} — ${P.currentPositioning}`,short_name:'Mario M.',description:P.description,start_url:'/',scope:'/',icons:[192,512].map(size=>({src:`/favicon-${size}x${size}.png`,sizes:`${size}x${size}`,type:'image/png'})),theme_color:'#f4f5f7',background_color:'#f4f5f7',display:'standalone'},null,2)+'\n');
  } finally { await browser.close(); }
- console.log('Generated consistent icons, manifest and four current social preview cards.');
+ console.log(cardName ? `Generated social preview card: ${cardName}.` : 'Generated consistent icons, manifest and five current social preview cards.');
 }
 main().catch(e=>{console.error(e);process.exit(1)});

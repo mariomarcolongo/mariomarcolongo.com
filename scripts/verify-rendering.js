@@ -1,5 +1,54 @@
 const fs=require('node:fs');const path=require('node:path');const assert=require('node:assert/strict');const {startStaticServer}=require('./lib/static-server');const {launchBrowser}=require('./lib/browser');
 // Reproduce slow module delivery: first-paint geometry must match the initialized gallery.
+async function verifyVisualizationGallery(browser, origin) {
+ const page=await browser.newPage();
+ try {
+  await page.setViewport({width:1440,height:1100});
+  await page.goto(origin+'/work/scientific-visualizations',{waitUntil:'networkidle0'});
+  await page.waitForSelector('.gallery-enhanced');
+  const visible=()=>page.$$eval('.visual-card',cards=>cards.filter(card=>!card.hidden).length);
+  assert.equal(await visible(),73);
+  await page.focus('.visual-platforms [data-platform="Tableau"]');
+  await page.keyboard.press('Enter');
+  assert.equal(await visible(),16);
+  await page.type('#visual-search','shark');
+  assert.equal(await visible(),2);
+  await page.select('#visual-topic','Public health');
+  assert.equal(await visible(),0);
+  assert.equal(await page.$eval('#visual-empty',el=>el.hidden),false);
+  await page.click('#visual-reset');
+  assert.equal(await visible(),73);
+  assert.equal(await page.evaluate(()=>document.activeElement.id),'visual-search');
+  await page.type('#visual-search','cimex'); // Also searches the original Italian publication title.
+  assert.equal(await visible(),1);
+  assert.ok((await page.$eval('#visual-result-count',el=>el.textContent)).startsWith('1 of 73'));
+  await page.$eval('#visual-search',el=>{el.value='';el.dispatchEvent(new Event('input',{bubbles:true}));});
+  await page.click('.visual-platforms [data-platform="Tableau"]');
+  await page.select('#visual-topic','Food & nutrition');
+  assert.equal(await visible(),3);
+  await page.click('.visual-platforms [data-platform="all"]');
+  await page.select('#visual-topic','all');
+  await page.evaluate(async()=>{await document.fonts.ready;await Promise.all([...document.images].map(i=>{i.loading='eager';return i.decode();}));});
+  await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
+  await page.screenshot({path:path.resolve('private/qa/scientific-visualizations-desktop.png')});
+  await page.$eval('#visualization-library',el=>el.scrollIntoView({behavior:'instant'}));
+  await page.screenshot({path:path.resolve('private/qa/scientific-visualizations-gallery-desktop.png')});
+  await page.evaluate(()=>document.documentElement.dataset.theme='dark');
+  await page.screenshot({path:path.resolve('private/qa/scientific-visualizations-gallery-dark.png')});
+  await page.evaluate(()=>document.documentElement.dataset.theme='light');
+  await page.setViewport({width:390,height:960});
+  await page.$eval('#visualization-library',el=>el.scrollIntoView({behavior:'instant'}));
+  await page.screenshot({path:path.resolve('private/qa/scientific-visualizations-gallery-mobile.png')});
+  await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
+  await page.screenshot({path:path.resolve('private/qa/scientific-visualizations-mobile.png')});
+  await page.setJavaScriptEnabled(false);
+  await page.goto(origin+'/work/scientific-visualizations',{waitUntil:'networkidle0'});
+  assert.equal(await visible(),73);
+  assert.equal(await page.$eval('.gallery-tools',el=>getComputedStyle(el).display),'none');
+  assert.ok(await page.$$eval('.visual-card img',images=>images.every(image=>new URL(image.src).origin===location.origin)));
+  console.log('Visualization gallery: previews, keyboard filters, combined search/topic filters, empty/reset state and no-JS access passed.');
+ } finally {await page.close();}
+}
 async function verifyDelayedGallery(browser, origin) {
  const page=await browser.newPage();
  const html=fs.readFileSync(path.resolve('dist/index.html'),'utf8');
@@ -35,7 +84,8 @@ async function verifyDelayedGallery(browser, origin) {
   assert.equal(await page.$$eval('.gallery-controls button',els=>els.filter(el=>el.disabled).length),0);
  } finally {await page.close();}
 }
-(async()=>{const out=path.resolve('private/qa');fs.mkdirSync(out,{recursive:true});const server=await startStaticServer(path.resolve('dist'));const browser=await launchBrowser();const report=[];try{const page=await browser.newPage();for(const width of [1440,768,390,320]){await page.setViewport({width,height:960});for(const route of ['/','/work','/work/entropy','/work/atlas','/work/hypermandala','/work/wikimedia','/work/scientific-visualizations','/experience','/research-operations','/cv','/cv-technical','/cv-ai','/investigations','/notandia','/evidence/gray-swan-2026-07-29','/evidence/gray-swan-2026-09-30','/evidence/gray-swan-2026-10-13','/evidence/gray-swan-certificates-2026-10-14','/ai-evaluation']){await page.goto(server.origin+route,{waitUntil:'networkidle0'});await page.evaluate(async()=>{await Promise.all([...document.images].map(i=>{i.loading='eager';return i.decode().catch(()=>{});}));});const result=await page.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth+1,main:document.querySelectorAll('main').length,h1:document.querySelectorAll('h1').length,brokenImages:[...document.images].filter(i=>!i.complete||i.naturalWidth===0).map(i=>i.src),h1visible:getComputedStyle(document.querySelector('h1')).opacity!=='0'}));assert.equal(result.overflow,false,`${width} ${route}: overflow`);assert.equal(result.main,1);assert.equal(result.h1,1);assert.equal(result.brokenImages.length,0,`${width} ${route}: ${result.brokenImages}`);assert.ok(result.h1visible);report.push({width,route,...result});if(route==='/'||route==='/cv')await page.screenshot({path:path.join(out,`${route==='/'?'home':'cv'}-${width}.png`),fullPage:true});}}
+(async()=>{const out=path.resolve('private/qa');fs.mkdirSync(out,{recursive:true});const server=await startStaticServer(path.resolve('dist'));const browser=await launchBrowser();const report=[];try{if(process.argv.includes('--visualizations-only')){await verifyVisualizationGallery(browser,server.origin);return;}const page=await browser.newPage();for(const width of [1440,768,390,320]){await page.setViewport({width,height:960});for(const route of ['/','/work','/work/entropy','/work/atlas','/work/hypermandala','/work/wikimedia','/work/scientific-visualizations','/experience','/research-operations','/cv','/cv-technical','/cv-ai','/investigations','/notandia','/evidence/gray-swan-2026-07-29','/evidence/gray-swan-2026-09-30','/evidence/gray-swan-2026-10-13','/evidence/gray-swan-certificates-2026-10-14','/ai-evaluation']){await page.goto(server.origin+route,{waitUntil:'networkidle0'});await page.evaluate(async()=>{await Promise.all([...document.images].map(i=>{i.loading='eager';return i.decode().catch(()=>{});}));});const result=await page.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth+1,main:document.querySelectorAll('main').length,h1:document.querySelectorAll('h1').length,brokenImages:[...document.images].filter(i=>!i.complete||i.naturalWidth===0).map(i=>i.src),h1visible:getComputedStyle(document.querySelector('h1')).opacity!=='0'}));assert.equal(result.overflow,false,`${width} ${route}: overflow`);assert.equal(result.main,1);assert.equal(result.h1,1);assert.equal(result.brokenImages.length,0,`${width} ${route}: ${result.brokenImages}`);assert.ok(result.h1visible);report.push({width,route,...result});if(route==='/'||route==='/cv')await page.screenshot({path:path.join(out,`${route==='/'?'home':'cv'}-${width}.png`),fullPage:true});}}
+await verifyVisualizationGallery(browser,server.origin);
 await verifyDelayedGallery(browser,server.origin);
 await page.setViewport({width:1440,height:960});await page.goto(server.origin,{waitUntil:'networkidle0'});await page.keyboard.press('Tab');assert.equal(await page.evaluate(()=>document.activeElement.textContent),'Skip to content');await page.keyboard.press('Enter');assert.equal(await page.evaluate(()=>location.hash),'#main-content');await page.evaluate(()=>document.documentElement.dataset.theme='light');await page.click('#themeToggle');assert.equal(await page.evaluate(()=>document.documentElement.dataset.theme),'dark');await page.screenshot({path:path.join(out,'home-dark.png'),fullPage:true});
 await page.focus('#work-tab-0');await page.keyboard.press('ArrowRight');assert.equal(await page.$eval('#work-tab-1',el=>el.getAttribute('aria-selected')),'true');assert.equal(await page.evaluate(()=>document.activeElement.id),'work-tab-1');await page.keyboard.press('End');assert.equal(await page.$eval('#work-tab-2',el=>el.getAttribute('aria-selected')),'true');await page.keyboard.press('ArrowRight');assert.equal(await page.$eval('#work-tab-0',el=>el.getAttribute('aria-selected')),'true');await page.click('#work-tab-2');assert.equal(await page.$$eval('.gallery-slide',els=>els.filter(el=>!el.hidden).length),1);assert.ok(await page.$eval('#work-panel-2',el=>!el.hidden));

@@ -1163,6 +1163,10 @@ function createMarioDossier() {
     { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=EnNykUIAAAAJ&hl=en" },
     { "label": "ResearchGate", "url": "https://www.researchgate.net/profile/Mario_Marcolongo" }
   ],
+  "visualizationProfiles": [
+    { "label": "Tableau Public", "url": "https://public.tableau.com/app/profile/mario.marcolongo/vizzes" },
+    { "label": "Flourish", "url": "https://app.flourish.studio/@Digressivo" }
+  ],
   "visualArtifacts": [
     {
       "title": "Industrial hemp cultivation in Europe",

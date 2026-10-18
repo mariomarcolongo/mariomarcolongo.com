@@ -11,14 +11,18 @@ const suppliedCanonical = Astro.props.canonical || `${P.canonicalUrl}${pagePath}
 const canonical = suppliedCanonical === P.canonicalUrl || suppliedCanonical === `${P.canonicalUrl}/` ? `${P.canonicalUrl}/` : suppliedCanonical.replace(/\/$/, '').replace(/\.html$/, '');
 const markdown = Astro.url.pathname === '/' ? '/index.md' : `${Astro.url.pathname.replace(/\/$/, '').replace(/\.html$/, '')}.md`;
 const profilePage = pagePath === '/' || /^\/cv(?:-technical|-ai)?$/.test(pagePath);
-const preview = `${P.canonicalUrl}/og/${pagePath.startsWith('/cv') ? 'cv' : pagePath === '/ai-evaluation' ? 'ai-evaluation' : pagePath === '/investigations' ? 'investigations' : 'home'}.png`;
+const collectionPage = pagePath === '/work/scientific-visualizations';
+const collectionItems = Astro.props.collectionItems || P.visualArtifacts;
+const preview = Astro.props.ogImage ? `${P.canonicalUrl}${Astro.props.ogImage}` : `${P.canonicalUrl}/og/${pagePath.startsWith('/cv') ? 'cv' : pagePath === '/ai-evaluation' ? 'ai-evaluation' : pagePath === '/investigations' ? 'investigations' : 'home'}.png`;
+const previewAlt = Astro.props.ogImageAlt || `${P.name} — ${pagePath.startsWith('/cv')?'Application résumés':P.currentPositioning}`;
 const directory = pagePath === '/work/yourself-to-science' ? D.projects.find(project => project.id === 'yourself-to-science') : undefined;
 const outputs = P.outputs.filter(output => P.projects.find(project => project.id === output.projectId)?.route === pagePath);
 const graph = {'@context':'https://schema.org','@graph':[
- {'@type':'Person','@id':`${P.canonicalUrl}/#person`,name:P.name,url:P.canonicalUrl,description:P.machineSummary,email:P.email,sameAs:[P.github,P.linkedin,P.orcidUrl,...P.researchProfiles.map(profile=>profile.url)],identifier:{'@type':'PropertyValue',propertyID:'ORCID',value:P.orcidUrl.split('/').pop()}},
- {'@type':profilePage?'ProfilePage':'WebPage','@id':`${canonical}#webpage`,name:title,url:canonical,description,inLanguage:'en',isPartOf:{'@id':`${P.canonicalUrl}/#website`},...(profilePage?{mainEntity:{'@id':`${P.canonicalUrl}/#person`}}:{about:{'@id':`${P.canonicalUrl}/#person`}})},
+ {'@type':'Person','@id':`${P.canonicalUrl}/#person`,name:P.name,url:P.canonicalUrl,description:P.machineSummary,email:P.email,sameAs:[P.github,P.linkedin,P.orcidUrl,...P.researchProfiles.map(profile=>profile.url),...P.visualizationProfiles.map(profile=>profile.url)],identifier:{'@type':'PropertyValue',propertyID:'ORCID',value:P.orcidUrl.split('/').pop()}},
+ {'@type':profilePage?'ProfilePage':collectionPage?'CollectionPage':'WebPage','@id':`${canonical}#webpage`,name:title,url:canonical,description,inLanguage:'en',isPartOf:{'@id':`${P.canonicalUrl}/#website`},...(profilePage?{mainEntity:{'@id':`${P.canonicalUrl}/#person`}}:{about:{'@id':`${P.canonicalUrl}/#person`}}),...(collectionPage?{mainEntity:{'@id':`${canonical}#visualizations`}}:{})},
  ...(pagePath==='/'?[{'@type':'WebSite','@id':`${P.canonicalUrl}/#website`,name:P.name,url:P.canonicalUrl,inLanguage:'en',publisher:{'@id':`${P.canonicalUrl}/#person`}}]:[]),
  ...(directory?[{'@type':'SoftwareApplication','@id':`${directory.links.website}/#app`,name:'Yourself to Science',url:directory.links.website,applicationCategory:'ScientificApplication',operatingSystem:'Web',author:{'@id':`${P.canonicalUrl}/#person`},sameAs:[directory.links.doi],subjectOf:{'@type':'CreativeWork',name:'FAIRsharing record for: Yourself to Science',url:directory.links.fairsharing}}]:[]),
+ ...(collectionPage?[{'@type':'ItemList','@id':`${canonical}#visualizations`,name:'Published scientific visualizations',numberOfItems:collectionItems.length,itemListElement:collectionItems.map((item,index)=>({'@type':'ListItem',position:index+1,name:item.title,url:item.url,...(item.text?{description:item.text}:{}),...(item.image?{image:`${P.canonicalUrl}${item.image}`}:{})}))}]:[]),
  ...outputs.map(output=>({'@type':output.type==='Preprint'?'ScholarlyArticle':'SoftwareSourceCode','@id':`https://doi.org/${output.doi}`,name:output.title,url:`https://doi.org/${output.doi}`,identifier:output.doi,...(output.version?{version:output.version}:{}),datePublished:output.releasedAt,...(output.type==='Preprint'?{creativeWorkStatus:'Preprint'}:{codeRepository:output.sourceUrl.split('/tree/')[0]}),...(output.license?{license:`https://spdx.org/licenses/${output.license}.html`}:{}),isPartOf:{'@id':`https://doi.org/${output.conceptDoi}`}}))
 ]};
 ---
@@ -29,8 +33,8 @@ const graph = {'@context':'https://schema.org','@graph':[
 <title>{title}</title><meta name="description" content={description}/><link rel="canonical" href={canonical}/>
 <meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:type" content="website"/><meta property="og:url" content={canonical}/>
 <meta property="og:site_name" content={P.name}/><meta property="og:locale" content="en_US"/>
-<meta property="og:image" content={preview}/><meta property="og:image:type" content="image/png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image:alt" content={`${P.name} — ${pagePath.startsWith('/cv')?'Application résumés':P.currentPositioning}`}/>
-<meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content={title}/><meta name="twitter:description" content={description}/><meta name="twitter:image" content={preview}/><meta name="twitter:image:alt" content={`${P.name} — ${P.currentPositioning}`}/><meta name="theme-color" content="#f4f5f7"/>
+<meta property="og:image" content={preview}/><meta property="og:image:type" content="image/png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image:alt" content={previewAlt}/>
+<meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content={title}/><meta name="twitter:description" content={description}/><meta name="twitter:image" content={preview}/><meta name="twitter:image:alt" content={previewAlt}/><meta name="theme-color" content="#f4f5f7"/>
 <link rel="icon" href="/favicon-192x192.png" type="image/png" sizes="192x192"/><link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180"/><link rel="manifest" href="/site.webmanifest"/>
 <link rel="alternate" type="text/markdown" href={markdown}/><link rel="describedby" type="text/plain" href="/llms.txt"/>

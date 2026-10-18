@@ -13,6 +13,16 @@
       "url": "https://www.researchgate.net/profile/Mario_Marcolongo"
     }
   ],
+  "visualizationProfiles": [
+    {
+      "label": "Tableau Public",
+      "url": "https://public.tableau.com/app/profile/mario.marcolongo/vizzes"
+    },
+    {
+      "label": "Flourish",
+      "url": "https://app.flourish.studio/@Digressivo"
+    }
+  ],
   "github": "https://github.com/mariomarcolongo",
   "reviewedAt": "2026-10-15",
   "reviewScope": "Profile integration and published-output identifiers; individual evidence retains its own dated review.",
