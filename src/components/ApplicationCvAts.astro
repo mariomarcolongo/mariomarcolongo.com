@@ -1,4 +1,5 @@
 ---
+import EmailLink from "./EmailLink.astro";
 import Layout from "../layouts/Layout.astro";
 import SiteNav from "./SiteNav.astro";
 import SiteFooter from "./SiteFooter.astro";
@@ -61,7 +62,7 @@ function publicHref(value: string) {
           <p class="ats-subtitle">{profile.subtitle}</p>
           <p class="ats-location">{shared.location}</p>
           <p class="ats-contact">
-            <a href={`mailto:${shared.email}`}>{shared.email}</a>
+            <EmailLink address={shared.email}>{shared.email}</EmailLink>
             <span aria-hidden="true"> | </span>
             <a id="cvPhoneSlot" class="application-phone" hidden></a>
             <span id="cvPhoneSeparator" hidden aria-hidden="true"> | </span>
