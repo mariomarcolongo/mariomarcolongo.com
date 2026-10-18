@@ -49,3 +49,20 @@ assert.ok(fs.readFileSync(path.join(dist,'llms.txt'),'utf8').includes(`${P.canon
 assert.ok(fs.readFileSync(path.join(dist,'404.html'),'utf8').includes('content="noindex"'));
 assert.ok(fs.readFileSync(path.join(dist,'robots.txt'),'utf8').includes(`${P.canonicalUrl}/sitemap.xml`));
 console.log(`${urls.length} indexable routes: canonical, identity, schema, social previews, icons and machine-readable records passed.`);
+// Services, appointment preferences and public data describe the same engagement.
+const home=fs.readFileSync(path.join(dist,'index.html'),'utf8');
+assert.deepEqual(profile.services,P.services);
+assert.deepEqual(profile.engagement,P.engagement);
+const homeGraph=JSON.parse(home.match(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/)[1])['@graph'];
+const services=homeGraph.filter(item=>item['@type']==='Service');
+assert.equal(services.length,P.services.length);
+for(const service of P.services){
+ const record=services.find(item=>item['@id']===`${P.canonicalUrl}/#service-${service.id}`);
+ assert.equal(record.name,service.name);assert.equal(record.description,service.description);
+ assert.ok(home.includes(service.name.replaceAll('&','&amp;')));
+ assert.ok(home.includes(service.description.replaceAll('&','&amp;')));
+ assert.ok(fs.existsSync(path.join(dist,service.evidencePath+'.html')));
+}
+assert.ok(home.includes(P.engagement.contactPreference));
+assert.ok(fs.readFileSync(path.join(dist,'cv-llm.txt'),'utf8').includes(P.engagement.contactPreference));
+console.log('Visible services, JSON-LD, profile exports and appointment preferences agree.');
