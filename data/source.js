@@ -85,10 +85,55 @@ function createMarioDossier() {
   "headline": "Investigate information. Test systems.",
   "description": "Mario Marcolongo: source investigations, AI evaluation, research and technical operations. Paid scientific work since 2023, public evidence and practical tools.",
   "subheadline": "I trace claims to their sources, test AI behavior, and build and maintain research tools and websites. Paid scientific work since June 2023, alongside public investigations and accepted open-source contributions.",
-  "contact": "Open to paid roles and projects in information integrity, investigations, AI evaluation, research operations and technical support or implementation. If your team needs careful investigation and practical delivery, let’s talk.",
+  "contact": "I support organisations of all sizes, research teams and creators with investigation, AI workflows, evaluation and practical technical delivery. Available for consulting, project delivery, ongoing collaborations and employed roles.",
   "availability": "Open to relocation and international remote work. I can work in the EU as an Italian citizen; opportunities elsewhere depend on the role’s hiring and work-authorization arrangements.",
   "authorship": "For independent software projects, I define requirements, inspect behavior, test releases and maintain tools, using AI-assisted implementation. Case studies identify my contribution and link the outputs, source records and external reviews.",
   "machineSummary": "Mario Marcolongo investigates sources, tests AI behavior and operates tools and websites. Evidence includes paid scientific work, Wikimedia investigations, accepted Atlas contributions and dated platform-recorded Gray Swan testing results. A Syntony network member, he studies IT through Metropolia’s Open UAS pathway. Based in Italy; open to remote work and relocation.",
+  "engagement": {
+    "reviewedAt": "2026-10-18",
+    "audience": "Organisations of all sizes, research teams and creators.",
+    "contactPreference": "Please email first to arrange a call. Consultations and calls are by appointment.",
+    "hours": "Afternoon and evening appointments are usually available (Europe/Rome); other times by arrangement.",
+    "delivery": "Available for international remote work and on-site projects by prior arrangement, with travel scope and expenses agreed before booking."
+  },
+  "services": [
+    {
+      "id": "ai-workflows",
+      "name": "AI workflows and client training",
+      "description": "Configure AI-assisted workflows, select tools, write operating instructions, test outputs and train clients to use the workflow independently.",
+      "evidencePath": "/work/entropy"
+    },
+    {
+      "id": "agent-instructions",
+      "name": "Agent instructions and prompt engineering",
+      "description": "Research platform guidelines and context limits; design maintainable instructions, task routing and checks for AI coding agents.",
+      "evidencePath": "/work/atlas"
+    },
+    {
+      "id": "ai-evaluation",
+      "name": "Adversarial AI evaluation",
+      "description": "Test authorised scenarios for prompt injection and instruction-following failures; investigate recurring patterns and document reproducibility.",
+      "evidencePath": "/ai-evaluation"
+    },
+    {
+      "id": "source-investigations",
+      "name": "Scientific fact-checking and source investigations",
+      "description": "Trace claims to original sources, assess evidence quality and support citation audits, research and publishing.",
+      "evidencePath": "/investigations"
+    },
+    {
+      "id": "data-visualisation",
+      "name": "Data visualisation and research support",
+      "description": "Organise and check source data, create interactive charts and explain findings with their provenance and limitations.",
+      "evidencePath": "/work/scientific-visualizations"
+    },
+    {
+      "id": "technical-operations",
+      "name": "Website operations and technical support",
+      "description": "Maintain websites and technical workflows, diagnose issues, test changes and manage publishing, hosting and releases.",
+      "evidencePath": "/work/entropy"
+    }
+  ],
   "resumeRoutes": {
     "default": "/cv",
     "technical": "/cv-technical",
@@ -633,6 +678,10 @@ function createMarioDossier() {
           "text": "My work includes collecting and organizing data, creating charts and maps, preparing slides and on-screen assets, and researching images. I also contribute to short-form content and selected thumbnail concepts or production, independently or in collaboration with the video editor. Responsibilities vary by project. I personally created the data visualizations in the AIRC reel collaborations that use them; the whole reels are collaborative productions."
         },
         {
+          "heading": "AI-assisted media workflows and client training",
+          "text": "I configure prompts and tool choices in Google Antigravity for paid media workflows, including inspecting, selecting and renaming image and video files. One assignment covered thousands of images. I review output files and recorded actions, and trained the client to operate the workflow independently. This recent workflow work is part of the wider paid collaboration."
+        },
+        {
           "heading": "Website design, build and operations",
           "text": "I designed and built entropyforlife.it in WordPress. Since September 2023, my work has included responsive design, publishing, configuration and functionality changes, OVHcloud hosting, DNS, SSL and technical SEO. This combines initial website delivery with ongoing responsibility for its operation."
         },
@@ -695,6 +744,10 @@ function createMarioDossier() {
           "url": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/54"
         },
         {
+          "label": "Source-backed agent-instruction guide",
+          "url": "https://github.com/mbrcic/ai-safety-formalization-atlas/blob/66ceba19c1904f00b2a734486ee0de3f5fc5a470/docs/guide/agent-instruction-design.md"
+        },
+        {
           "label": "Accepted PR #61",
           "url": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/61"
         }
@@ -714,7 +767,7 @@ function createMarioDossier() {
         },
         {
           "heading": "Earlier repository contributions",
-          "text": "PR #52 diagnosed and repaired a Bash 3.2 validation failure on macOS and improved migration checks. PR #54 added portable instruction adapters; PR #61 reorganized repository guidance into task-scoped policy files. These earlier contributions address tooling and repository instructions. Their public diffs describe the specific changes and validation limits."
+          "text": "PR #52 diagnosed and repaired a Bash 3.2 validation failure on macOS and improved migration checks. PR #54 added portable instruction adapters. In PR #61, I researched official platform guidelines, instruction discovery and precedence, context limits and maintenance practices; wrote a 312-line cross-platform agent-instruction guide; and reorganized repository guidance into task-scoped policy files. These earlier contributions address tooling and repository instructions. Their public diffs describe the specific changes and validation limits."
         },
         {
           "heading": "Public preprint and affiliation",
