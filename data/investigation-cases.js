@@ -88,9 +88,10 @@ const INVESTIGATION_CASES = {
     demonstrates: ["Policy research", "Neutral explanatory writing", "Contested-source synthesis", "Information architecture", "Citation management"],
     limitations: "Wikipedia is collaborative and the current article includes later edits by other contributors. The exact creation revision verifies the initial 18,351-byte contribution. B-Class is a WikiProject assessment, not academic peer review, independent publication approval or endorsement of the proposal.",
     links: [
-      { label: "Inspect the 18,351-byte creation revision", href: "https://en.wikipedia.org/w/index.php?oldid=1306119107&title=Freedom_Cities" },
+      { label: "Read my authored version — 16 August 2025", href: "https://en.wikipedia.org/w/index.php?title=Freedom_Cities&oldid=1306265602" },
       { label: "Open the current article", href: "https://en.wikipedia.org/wiki/Freedom_Cities" },
       { label: "Inspect the complete revision history", href: "https://en.wikipedia.org/w/index.php?title=Freedom_Cities&action=history" },
+      { label: "Inspect the initial creation record", href: "https://en.wikipedia.org/w/index.php?oldid=1306119107&title=Freedom_Cities" },
       { label: "Inspect WikiProject assessments", href: "https://en.wikipedia.org/wiki/Talk:Freedom_Cities" }
     ]
   },
@@ -143,9 +144,11 @@ const INVESTIGATION_CASES = {
     demonstrates: ["Scientific localization", "Physics terminology", "Source enrichment", "Cross-language adaptation", "Iterative editorial quality"],
     limitations: "The article began as a translation and is now collaborative. The history verifies the attributed creation and later revisions; this is not original particle-physics research or an independently commissioned biography.",
     links: [
-      { label: "Open the current Italian article", href: "https://it.wikipedia.org/wiki/Daniela_Bortoletto" },
-      { label: "Inspect my initial English-to-Italian translation", href: "https://it.wikipedia.org/w/index.php?oldid=122759395" },
+      { label: "Read the reviewed Italian article — 7 August 2026", href: "https://it.wikipedia.org/w/index.php?title=Daniela_Bortoletto&oldid=151935146" },
+      { label: "Inspect my published contribution — 26 February 2022", href: "https://it.wikipedia.org/w/index.php?title=Daniela_Bortoletto&oldid=125925148" },
+      { label: "Open the current collaborative article", href: "https://it.wikipedia.org/wiki/Daniela_Bortoletto" },
       { label: "Compare the English source version", href: "https://en.wikipedia.org/w/index.php?oldid=1031453192" },
+      { label: "Inspect the initial sandbox import", href: "https://it.wikipedia.org/w/index.php?oldid=122759395" },
       { label: "Inspect the complete revision history", href: "https://it.wikipedia.org/w/index.php?title=Daniela_Bortoletto&action=history" }
     ]
   },
@@ -163,9 +166,11 @@ const INVESTIGATION_CASES = {
     demonstrates: ["Technical localization", "Scholarly-communication research", "Legal-risk framing", "Terminology adaptation", "Citation repair"],
     limitations: "The article is a translated and collaborative encyclopedia entry, not original legal analysis. Its present maintenance notices and broad legal claims mean the attributable creation history is a stronger work sample than the current page alone.",
     links: [
-      { label: "Open the current Italian article", href: "https://it.wikipedia.org/wiki/Biblioteca_ombra" },
-      { label: "Inspect my initial English-to-Italian translation", href: "https://it.wikipedia.org/w/index.php?oldid=134644711" },
+      { label: "Read the reviewed Italian article — 17 January 2026", href: "https://it.wikipedia.org/w/index.php?title=Biblioteca_ombra&oldid=148967897" },
+      { label: "Inspect my revised contribution — 5 August 2023", href: "https://it.wikipedia.org/w/index.php?title=Biblioteca_ombra&oldid=134825889" },
+      { label: "Open the current collaborative article", href: "https://it.wikipedia.org/wiki/Biblioteca_ombra" },
       { label: "Compare the English source version", href: "https://en.wikipedia.org/w/index.php?oldid=1163630620" },
+      { label: "Inspect the initial sandbox import", href: "https://it.wikipedia.org/w/index.php?oldid=134644711" },
       { label: "Inspect the complete revision history", href: "https://it.wikipedia.org/w/index.php?title=Biblioteca_ombra&action=history" }
     ]
   },
