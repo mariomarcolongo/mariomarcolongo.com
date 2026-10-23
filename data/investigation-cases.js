@@ -144,8 +144,7 @@ const INVESTIGATION_CASES = {
     demonstrates: ["Scientific localization", "Physics terminology", "Source enrichment", "Cross-language adaptation", "Iterative editorial quality"],
     limitations: "The article began as a translation and is now collaborative. The history verifies the attributed creation and later revisions; this is not original particle-physics research or an independently commissioned biography.",
     links: [
-      { label: "Read the reviewed Italian article — 7 August 2026", href: "https://it.wikipedia.org/w/index.php?title=Daniela_Bortoletto&oldid=151935146" },
-      { label: "Inspect my published contribution — 26 February 2022", href: "https://it.wikipedia.org/w/index.php?title=Daniela_Bortoletto&oldid=125925148" },
+      { label: "Read my published contribution — 26 February 2022", href: "https://it.wikipedia.org/w/index.php?title=Daniela_Bortoletto&oldid=125925148" },
       { label: "Open the current collaborative article", href: "https://it.wikipedia.org/wiki/Daniela_Bortoletto" },
       { label: "Compare the English source version", href: "https://en.wikipedia.org/w/index.php?oldid=1031453192" },
       { label: "Inspect the initial sandbox import", href: "https://it.wikipedia.org/w/index.php?oldid=122759395" },
@@ -166,8 +165,7 @@ const INVESTIGATION_CASES = {
     demonstrates: ["Technical localization", "Scholarly-communication research", "Legal-risk framing", "Terminology adaptation", "Citation repair"],
     limitations: "The article is a translated and collaborative encyclopedia entry, not original legal analysis. Its present maintenance notices and broad legal claims mean the attributable creation history is a stronger work sample than the current page alone.",
     links: [
-      { label: "Read the reviewed Italian article — 17 January 2026", href: "https://it.wikipedia.org/w/index.php?title=Biblioteca_ombra&oldid=148967897" },
-      { label: "Inspect my revised contribution — 5 August 2023", href: "https://it.wikipedia.org/w/index.php?title=Biblioteca_ombra&oldid=134825889" },
+      { label: "Read my revised contribution — 5 August 2023", href: "https://it.wikipedia.org/w/index.php?title=Biblioteca_ombra&oldid=134825889" },
       { label: "Open the current collaborative article", href: "https://it.wikipedia.org/wiki/Biblioteca_ombra" },
       { label: "Compare the English source version", href: "https://en.wikipedia.org/w/index.php?oldid=1163630620" },
       { label: "Inspect the initial sandbox import", href: "https://it.wikipedia.org/w/index.php?oldid=134644711" },
