@@ -21,13 +21,17 @@ const originalArticle = cases.freedomCities;
 
     <section aria-labelledby="translation-examples">
       <h2 id="translation-examples">English-to-Italian translation and adaptation</h2>
-      <p>These articles began as English-to-Italian translations. My work included terminology research, source checks, citation repair and adaptation for Italian readers. The links distinguish the English source, my initial translation and the current collaborative article.</p>
+      <p>These articles began as English-to-Italian translations. My work included terminology research, source checks, citation repair and adaptation for Italian readers. The reading links open dated, reviewed article versions that include later community edits. The source records identify my own published contributions and the original English versions.</p>
       {translations.map(c => (
-        <article class="presence-section">
+        <article id={c.id} class="presence-section">
           <h3>{c.title}</h3>
           <p>{c.context}</p>
           <ul>{c.work.slice(0, 2).map(work => <li>{work}</li>)}</ul>
-          <ul>{c.links.map(link => <li><a href={link.href}>{link.label} ↗</a></li>)}</ul>
+          <p><a href={c.links[0].href}>{c.links[0].label} ↗</a></p>
+          <details>
+            <summary>Source versions and attribution</summary>
+            <ul>{c.links.slice(1).map(link => <li><a href={link.href}>{link.label} ↗</a></li>)}</ul>
+          </details>
         </article>
       ))}
     </section>
@@ -38,7 +42,11 @@ const originalArticle = cases.freedomCities;
         <h3>{originalArticle.title}</h3>
         <p>{originalArticle.context}</p>
         <ul>{originalArticle.work.slice(0, 2).map(work => <li>{work}</li>)}</ul>
-        <ul>{originalArticle.links.slice(0, 3).map(link => <li><a href={link.href}>{link.label} ↗</a></li>)}</ul>
+        <p><a href={originalArticle.links[0].href}>{originalArticle.links[0].label} ↗</a></p>
+        <details>
+          <summary>Article history and current version</summary>
+          <ul>{originalArticle.links.slice(1).map(link => <li><a href={link.href}>{link.label} ↗</a></li>)}</ul>
+        </details>
       </article>
       <p class="evidence-note">The initial revisions are attributed to my Digressivo account. Current Wikipedia articles are collaborative and include later changes by other editors.</p>
     </section>
@@ -73,7 +81,7 @@ const originalArticle = cases.freedomCities;
       <p>Wikidata work complements prose editing through structured records, references and connections between resources. These contributions sit alongside my work maintaining the Yourself to Science directory.</p>
       <a href="https://www.wikidata.org/wiki/Special:Contributions/Digressivo">Inspect Wikidata contributions ↗</a>
     </section>
-    <p class="evidence-note">Selected examples come from the September 2026 evidence review. The initial revisions for the two Italian translations and the English article were rechecked on 23 October 2026. Original revisions establish attribution; underlying sources support the subject matter.</p>
+    <p class="evidence-note">Selected examples come from the September 2026 evidence review. Reading versions and attribution records were rechecked on 23 October 2026. Dated article versions preserve the reviewed text; contribution histories establish attribution.</p>
   </main>
   <SiteFooter />
 </Layout>
