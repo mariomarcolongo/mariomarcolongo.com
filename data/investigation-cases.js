@@ -144,6 +144,8 @@ const INVESTIGATION_CASES = {
     limitations: "The article began as a translation and is now collaborative. The history verifies the attributed creation and later revisions; this is not original particle-physics research or an independently commissioned biography.",
     links: [
       { label: "Open the current Italian article", href: "https://it.wikipedia.org/wiki/Daniela_Bortoletto" },
+      { label: "Inspect my initial English-to-Italian translation", href: "https://it.wikipedia.org/w/index.php?oldid=122759395" },
+      { label: "Compare the English source version", href: "https://en.wikipedia.org/w/index.php?oldid=1031453192" },
       { label: "Inspect the complete revision history", href: "https://it.wikipedia.org/w/index.php?title=Daniela_Bortoletto&action=history" }
     ]
   },
@@ -162,6 +164,8 @@ const INVESTIGATION_CASES = {
     limitations: "The article is a translated and collaborative encyclopedia entry, not original legal analysis. Its present maintenance notices and broad legal claims mean the attributable creation history is a stronger work sample than the current page alone.",
     links: [
       { label: "Open the current Italian article", href: "https://it.wikipedia.org/wiki/Biblioteca_ombra" },
+      { label: "Inspect my initial English-to-Italian translation", href: "https://it.wikipedia.org/w/index.php?oldid=134644711" },
+      { label: "Compare the English source version", href: "https://en.wikipedia.org/w/index.php?oldid=1163630620" },
       { label: "Inspect the complete revision history", href: "https://it.wikipedia.org/w/index.php?title=Biblioteca_ombra&action=history" }
     ]
   },
