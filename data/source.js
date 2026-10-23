@@ -948,7 +948,8 @@ function createMarioDossier() {
       "hook": "A practical tool for research-result workflows",
       "route": "/notandia",
       "status": "Independent project · AI-assisted implementation",
-      "text": "A browser extension and separate Zotero plugin for research-result and reference workflows. I define product requirements, test behavior and manage AI-assisted development and releases.",
+      "text": "A browser extension and separate Zotero plugin for research-result and reference workflows. My work covers product requirements, English-Italian interface localisation, software testing and maintenance with AI-assisted implementation.",
+      "reviewedAt": "2026-10-23",
       "claimIds": [
         "notandia-source-release"
       ],
@@ -958,6 +959,10 @@ function createMarioDossier() {
         {
           "label": "Canonical browser source",
           "url": "https://github.com/notandia/browser-extension"
+        },
+        {
+          "label": "Source releases and change history",
+          "url": "https://github.com/notandia/browser-extension/releases"
         },
         {
           "label": "Install Notandia for Chrome",
@@ -982,11 +987,15 @@ function createMarioDossier() {
           "text": "Notandia continues MDPI Filter. I define the product requirements and evidence hierarchy, inspect matching and API behavior, reproduce failures and guide AI-assisted implementation. My work includes cross-browser and Zotero testing, documentation, release verification and deployment. Browser and Zotero sources are maintained separately."
         },
         {
+          "heading": "Localisation and software QA",
+          "text": "Implemented English-Italian localisation for the popup, settings, status messages and badges, with saved language selection and a scientific-editorial terminology glossary. Manual functional and visual testing covers Safari on macOS; Firefox, Chrome and Edge across supported desktop configurations; and Edge and Firefox on Android. Xcode and the iOS Simulator were used to check installation, Italian UI, saved settings and reference scanning. I reproduce browser-specific defects, track changes through GitHub and retest fixes."
+        },
+        {
           "heading": "Use in scientific production",
           "text": "I created Notandia to support my work at Entropy for Life, where my team uses it during scientific source review. In my experience, the warnings help us notice issues and avoid repeated manual checking. This use is confirmed by me on 2 October 2026; I have not measured time savings or quality improvements independently."
         },
         {
-          "heading": "Browser releases",
+          "heading": "Earlier store checks · October 2026",
           "text": "Notandia 0.1.1 was released for Chrome on 3 October 2026; I tested the build. I confirmed the updated Edge package on 4 October 2026, when listing artwork and description were awaiting approval. Firefox 0.1.2 is publicly downloadable on Mozilla Add-ons, verified 7 October 2026. Store availability does not establish feature parity across platforms."
         },
         {
@@ -994,8 +1003,8 @@ function createMarioDossier() {
           "text": "Use the canonical browser repository to inspect the current source and release notes. Follow the separate store links to check what is actually distributed there. The expanded source includes publisher context and formal-notice workflows, but a notice’s type and source matter: a correction is not synonymous with a retraction, and either still requires reading its scope. This portfolio does not certify complete detection or make a paper-level verdict."
         },
         {
-          "heading": "Availability",
-          "text": "Chrome: Notandia 0.1.1, updated 3 October 2026. Edge: updated Notandia package confirmed by me on 4 October 2026, when listing description and artwork were awaiting approval. Firefox: Notandia 0.1.2, public listing and download verified 7 October 2026. Mozilla reports that the version passed automated screening; it remains subject to later human review. Browser development is tracked in the canonical Notandia repository. Zotero has a separate source repository and its own releases. Check the relevant release before installing; no cross-store feature-parity claim is made."
+          "heading": "Source and store availability",
+          "text": "The source repository and release history document current development, including localisation and browser-specific fixes. The store links above show the version distributed for each browser; store review and signing can lag source releases. Safari source and Simulator testing do not establish Safari App Store publication or physical-iPhone testing. Zotero has a separate source repository and release cycle."
         },
         {
           "heading": "Research workflow design",
@@ -1052,12 +1061,17 @@ function createMarioDossier() {
     },
     {
       "id": "telegram",
-      "name": "Telegram and cloud automation",
-      "hook": "A documented link-conversion workflow",
+      "name": "English Wikipedia Link Converter",
+      "hook": "Wikipedia links across languages",
       "route": "/work/telegram",
       "status": "Independent project · AI-assisted implementation",
-      "text": "A practical Telegram workflow with inspected cloud architecture and explicit operating limits.",
+      "text": "A Python Telegram bot that converts non-English Wikipedia article links to their English equivalents, with English and Italian user interfaces.",
+      "reviewedAt": "2026-10-23",
       "links": [
+        {
+          "label": "Open the Telegram bot",
+          "url": "https://t.me/ToEnWikipediaBot"
+        },
         {
           "label": "Source and operating instructions",
           "url": "https://github.com/mariomarcolongo/english-wikipedia-link-converter-telegram-bot"
@@ -1067,15 +1081,15 @@ function createMarioDossier() {
       "sections": [
         {
           "heading": "Problem and contribution",
-          "text": "The bot converts English Wikipedia links in Telegram workflows. I defined requirements, inspected behavior, tested workflows and diagnosed deployment problems using AI-assisted implementation. The repository is the source for current reproduction and configuration details."
+          "text": "The bot finds the English-language version of a Wikipedia article shared in another language. I define requirements, inspect behavior, test workflows and diagnose deployment problems using AI-assisted implementation. The repository provides the implementation, tests and operating instructions."
+        },
+        {
+          "heading": "Italian localisation and QA",
+          "text": "Localised help, command menus, buttons and error messages into Italian. The interface supports automatic language detection, a saved user preference and English fallback. Checks cover string coverage, placeholders, links, message formatting and language-selection behavior, alongside Python regression tests. Interface language and the language of the target Wikipedia article are separate: the converted article link points to English."
         },
         {
           "heading": "Inspected architecture",
-          "text": "The inspected architecture uses an AWS Lambda function URL with SQS, DynamoDB, EventBridge and SNS. The architecture describes the reviewed source; this portfolio release does not independently prove that the hosted bot is currently operating or rerun its cloud deployment."
-        },
-        {
-          "heading": "Evidence and limits",
-          "text": "Source history and operating instructions support inspection of the implementation. Private, group and inline behavior should be tested against the version being assessed. No uptime guarantee, independently assessed AWS proficiency or production-readiness certification is claimed."
+          "text": "The source uses AWS Lambda, SQS and DynamoDB for webhook processing, queued conversions and operational state, with EventBridge and SNS for independent monitoring and alerts. My work includes checking configuration, failure handling and deployment behavior. The source and operating instructions describe the current architecture."
         }
       ]
     },

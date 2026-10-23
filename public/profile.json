@@ -298,7 +298,7 @@
       "name": "Notandia",
       "route": "/notandia",
       "status": "Independent project · AI-assisted implementation",
-      "text": "A browser extension and separate Zotero plugin for research-result and reference workflows. I define product requirements, test behavior and manage AI-assisted development and releases.",
+      "text": "A browser extension and separate Zotero plugin for research-result and reference workflows. My work covers product requirements, English-Italian interface localisation, software testing and maintenance with AI-assisted implementation.",
       "claimIds": [
         "notandia-source-release"
       ],
@@ -306,6 +306,10 @@
         {
           "label": "Canonical browser source",
           "url": "https://github.com/notandia/browser-extension"
+        },
+        {
+          "label": "Source releases and change history",
+          "url": "https://github.com/notandia/browser-extension/releases"
         },
         {
           "label": "Install Notandia for Chrome",
@@ -361,12 +365,16 @@
     },
     {
       "id": "telegram",
-      "name": "Telegram and cloud automation",
+      "name": "English Wikipedia Link Converter",
       "route": "/work/telegram",
       "status": "Independent project · AI-assisted implementation",
-      "text": "A practical Telegram workflow with inspected cloud architecture and explicit operating limits.",
+      "text": "A Python Telegram bot that converts non-English Wikipedia article links to their English equivalents, with English and Italian user interfaces.",
       "claimIds": [],
       "links": [
+        {
+          "label": "Open the Telegram bot",
+          "url": "https://t.me/ToEnWikipediaBot"
+        },
         {
           "label": "Source and operating instructions",
           "url": "https://github.com/mariomarcolongo/english-wikipedia-link-converter-telegram-bot"
