@@ -35,7 +35,7 @@ export function createPortfolioService(profile) {
     ...profile.visualArtifacts.map((artifact,index)=>({kind:'visualization',id:`visualization-${index}`,title:artifact.title,record:artifact,sourceUrl:artifact.url,recordUrl:link('/work/scientific-visualizations')}))
   ];
   // Match descriptive text only; do not score arbitrary URL strings or object keys.
-  const texts = records.map(item=>normalize([item.title,item.record.institution,item.record.text,item.record.description,item.record.status,item.record.period,...(item.record.details||[]),item.record.limitation].filter(Boolean).join(' ')));
+  const texts = records.map(item=>normalize([item.title,item.record.institution,item.record.text,item.record.description,item.record.status,item.record.period,...(item.record.details||[]),...(item.record.sections||[]).flatMap(section=>[section.heading,section.text]),item.record.limitation].filter(Boolean).join(' ')));
   const words = texts.map(text=>new Set(text.match(/[\p{L}\p{N}]+/gu)||[]));
   const envelope = data => ({schemaVersion:1,profileReviewedAt:profile.reviewedAt,sourceUrl:link('/profile.json'),scope,...data});
   function search(query, limit=10) {

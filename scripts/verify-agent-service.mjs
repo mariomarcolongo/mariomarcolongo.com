@@ -12,7 +12,11 @@ assert.ok(evidence.results.some(result=>result.evidence?.some(claim=>claim.id===
 for(const result of evidence.results)if(result.evidence)for(const claim of result.evidence)assert.ok(claim.limitation&&claim.lastReviewedAt&&claim.sourceOwner);
 assert.equal(service.search('zzzzunmatchedterm').totalMatches,0);
 assert.equal(service.search('show Mario experience').totalMatches,0);
-assert.ok(service.search('AI',20).results.every(result=>/\bAI\b/i.test([result.title,result.record.text,result.record.description,result.record.status,result.record.period,...(result.record.details||[]),result.record.limitation].filter(Boolean).join(' '))));
+assert.ok(service.search('AI',20).results.every(result=>/\bAI\b/i.test([result.title,result.record.text,result.record.description,result.record.status,result.record.period,...(result.record.details||[]),...(result.record.sections||[]).flatMap(section=>[section.heading,section.text]),result.record.limitation].filter(Boolean).join(' '))));
+// Detailed public case evidence must remain retrievable, not just visible in HTML.
+assert.ok(service.search('Xcode',20).results.some(result=>result.id==='notandia'));
+assert.ok(service.search('glossary',20).results.some(result=>result.id==='qcae'));
+assert.ok(service.search('client training',20).results.some(result=>result.id==='entropy'));
 const credential=service.search('Copilot Studio').results.find(result=>result.kind==='credential');
 assert.equal(credential?.record.credentialId,'48386317F9899EB1');
 assert.equal(credential?.sourceUrl,profile.credentials[0].url);

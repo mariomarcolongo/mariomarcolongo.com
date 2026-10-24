@@ -28,7 +28,7 @@ const pages = [
   { path: '/work/hypermandala', required: [M.screenshots.hypermandala.image,
     'https://github.com/mariomarcolongo/hypermandala', 'experimental'] },
   ...Object.entries(P.cv).map(([key, cv]) => ({ path: P.resumeRoutes[key], required:
-    [P.name, cv.title, ...P.credentials.flatMap(c=>[c.title,c.url]), `/${cv.filename}`, P.orcidUrl, '3 ECTS', 'Open UAS', 'Degree-credit pathway'] }))
+    [P.name, cv.title, ...P.credentials.flatMap(c=>[c.title,c.url]), `/${cv.filename}`, P.orcidUrl, '3 ECTS', 'Open UAS', 'Fully online degree-credit pathway'] }))
 ];
 if(P.aiEvaluationLatestSnapshot){const previous=P.aiEvaluationSnapshot;pages.push({path:previous.evidencePath,required:[previous.displayDate,`#${previous.provingGround.rank}`,previous.originalImage,previous.originalSha256]});}
 if(C)pages.push({path:C.evidencePath,required:[C.displayDate,...C.items.flatMap(c=>[c.name,c.id,c.originalImage,c.originalSha256])]});
