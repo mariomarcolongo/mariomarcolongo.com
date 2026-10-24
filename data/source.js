@@ -74,8 +74,8 @@ function createMarioDossier() {
   "schemaVersion": 1,
   "name": "Mario Marcolongo",
   "canonicalUrl": "https://mariomarcolongo.com",
-  "reviewedAt": "2026-10-15",
-  "reviewScope": "Profile integration and published-output identifiers; individual evidence retains its own dated review.",
+  "reviewedAt": "2026-10-24",
+  "reviewScope": "Consulting, technical-delivery and CV positioning; individual evidence retains its own dated review.",
   "outputs": PUBLIC_OUTPUTS,
   "credentials": [COPILOT_CREDENTIAL],
   "email": "me@mariomarcolongo.com",
@@ -102,14 +102,16 @@ function createMarioDossier() {
   ],
   "headline": "Investigate information. Test systems.",
   "description": "Mario Marcolongo: source investigations, AI evaluation, research and technical operations. Paid scientific work since 2023, public evidence and practical tools.",
-  "subheadline": "I trace claims to their sources, test AI behavior, and build and maintain research tools and websites. Paid scientific work since June 2023, alongside public investigations and accepted open-source contributions.",
-  "contact": "I support organisations of all sizes, research teams and creators with investigation, AI workflows, evaluation and practical technical delivery. Available for consulting, project delivery, ongoing collaborations and employed roles.",
+  "subheadline": "I investigate sources, evaluate AI behavior and configure practical workflows. Paid scientific work and website delivery since 2023, with reusable client workflows, training and accepted open-source contributions.",
+  "contact": "I work with organisations, research teams and creators on AI workflows, evaluation, source investigations and technical delivery. Available for scoped consulting projects, ongoing collaborations and relevant employed roles.",
   "availability": "Open to relocation and international remote work. I can work in the EU as an Italian citizen; opportunities elsewhere depend on the role’s hiring and work-authorization arrangements.",
   "authorship": "For independent software projects, I define requirements, inspect behavior, test releases and maintain tools, using AI-assisted implementation. Case studies identify my contribution and link the outputs, source records and external reviews.",
-  "machineSummary": "Mario Marcolongo investigates sources, tests AI behavior and operates tools and websites. Evidence includes paid scientific work, Wikimedia investigations, accepted Atlas contributions and dated platform-recorded Gray Swan testing results. He holds Microsoft’s Applied Skills credential for building an agent in Copilot Studio. A Syntony network member, he studies IT through Metropolia’s Open UAS pathway. Based in Italy; open to remote work and relocation.",
+  "machineSummary": "Mario Marcolongo investigates sources, tests software and AI behaviour, and configures workflows and websites. Evidence includes paid scientific work and client training, localisation projects, Wikimedia investigations, accepted Atlas contributions and dated platform-recorded Gray Swan results. He holds Microsoft’s Copilot Studio Applied Skills credential. A Syntony network member, he studies IT through Metropolia’s Open UAS pathway. Based in Italy; open to remote work and relocation.",
   "engagement": {
-    "reviewedAt": "2026-10-18",
+    "reviewedAt": "2026-10-24",
     "audience": "Organisations of all sizes, research teams and creators.",
+    "projectScope": "Agree the problem, deliverables, review points and handover before work starts.",
+    "projectBrief": "Share the problem, intended users, desired outcome, timeline and indicative budget.",
     "contactPreference": "Please email first to arrange a call. Consultations and calls are by appointment.",
     "hours": "Afternoon and evening appointments are usually available (Europe/Rome); other times by arrangement.",
     "delivery": "Available for international remote work and on-site projects by prior arrangement, with travel scope and expenses agreed before booking."
@@ -118,13 +120,13 @@ function createMarioDossier() {
     {
       "id": "ai-workflows",
       "name": "AI workflows and client training",
-      "description": "Configure AI-assisted workflows, select tools, write operating instructions, test outputs and train clients to use the workflow independently.",
+      "description": "A reusable AI-assisted workflow with tool selection, operating instructions, output checks and training so your team can run it independently.",
       "evidencePath": "/work/entropy"
     },
     {
       "id": "agent-instructions",
       "name": "Agent instructions and prompt engineering",
-      "description": "Research platform guidelines and context limits; design maintainable instructions, task routing and checks for AI coding agents.",
+      "description": "Maintainable instructions, task routing and checks for AI coding agents, based on platform guidance and context limits.",
       "evidencePath": "/work/atlas"
     },
     {
@@ -147,8 +149,8 @@ function createMarioDossier() {
     },
     {
       "id": "technical-operations",
-      "name": "Website operations and technical support",
-      "description": "Maintain websites and technical workflows, diagnose issues, test changes and manage publishing, hosting and releases.",
+      "name": "Website delivery and workflow improvement",
+      "description": "Deliver or improve websites and publishing workflows, diagnose issues, verify changes and document the setup for ongoing use.",
       "evidencePath": "/work/entropy"
     }
   ],
@@ -281,8 +283,8 @@ function createMarioDossier() {
       "startDate": "2026-08",
       "endDate": null,
       "status": "open_uas_path_enrolled",
-      "description": "English-taught online degree-credit pathway toward a Bachelor of Engineering in Information Technology. Python Programming: 3 ECTS, Pass (15 Sep 2026).",
-      "cvDescription": "Degree-credit pathway toward a BEng in Information Technology. Python Programming: 3 ECTS, Pass (Sep 2026).",
+      "description": "Fully online degree-credit pathway toward a Bachelor of Engineering in Information Technology, with self-paced coursework and assessments. English-taught studies; Python Programming: 3 ECTS, Pass (15 Sep 2026).",
+      "cvDescription": "Fully online degree-credit pathway toward a BEng; self-paced coursework and assessments. Python Programming: 3 ECTS, Pass (Sep 2026).",
       "programExtentECTS": 120,
       "creditsAwarded": 3,
       "degreeAwarded": false,
@@ -655,9 +657,9 @@ function createMarioDossier() {
       "name": "Entropy for Life",
       "hook": "Scientific evidence behind published work",
       "route": "/work/entropy",
-      "status": "Paid contractor · Jun 2023–Present",
-      "reviewedAt": "2026-10-14",
-      "text": "Paid research, fact-checking, scripts and visual production for Entropy for Life, an Italian science-communication project with 500K+ combined followers and subscribers, plus the design, build and operation of its WordPress website.",
+      "status": "Paid contractor · Jun 2023–Present · Hybrid, primarily remote",
+      "reviewedAt": "2026-10-24",
+      "text": "Paid scientific research, fact-checking, visual production and WordPress operations since 2023. Since October 2026, my work also includes reusable media workflows using Antigravity, Gemini and Google Drive, with client training.",
       "organizationContext": ENTROPY_ORGANIZATION_CONTEXT,
       "claimIds": [
         "entropy-published-work",
@@ -689,7 +691,7 @@ function createMarioDossier() {
         },
         {
           "heading": "Scientific research, writing and fact-checking",
-          "text": "Since June 2023, I have worked as a paid contractor on primary-literature research, scientific fact-checking and script development. Depending on the assignment, I write, co-write or review content, check claims against sources and adapt English-language evidence for Italian audiences, preserving terminology and scientific context."
+          "text": "Since June 2023, I have worked as a paid contractor on primary-literature research, scientific fact-checking and script development. The collaboration is primarily remote, with occasional onsite work at the client's studio in Bassano del Grappa, Italy. Depending on the assignment, I write, co-write or review content, check claims against sources and adapt English-language evidence for Italian audiences, preserving terminology and scientific context."
         },
         {
           "heading": "Data analysis and visual production",
@@ -697,11 +699,11 @@ function createMarioDossier() {
         },
         {
           "heading": "AI-assisted media workflows and client training",
-          "text": "I configure prompts and tool choices in Google Antigravity for paid media workflows, including inspecting, selecting and renaming image and video files. One assignment covered thousands of images. I review output files and recorded actions, and trained the client to operate the workflow independently. This recent workflow work is part of the wider paid collaboration."
+          "text": "Since October 2026, I have configured reusable AI-assisted media workflows using Antigravity, Gemini and Google Drive. I compare tools for the task and budget, configure prompts and the Drive connection, and check file inspection, selection and renaming. One assignment covered thousands of images. I review output files and recorded actions, and trained the client to use the setup independently. This is part of the wider paid collaboration."
         },
         {
           "heading": "Website design, build and operations",
-          "text": "I designed and built entropyforlife.it in WordPress. Since September 2023, my work has included responsive design, publishing, configuration and functionality changes, OVHcloud hosting, DNS, SSL and technical SEO. This combines initial website delivery with ongoing responsibility for its operation."
+          "text": "I designed and built entropyforlife.it in WordPress. Since September 2023, my work has included responsive design, publishing, configuration and functionality changes, OVHcloud hosting, DNS, SSL and technical SEO. I investigate configuration and publishing problems, then check the affected layouts and functions after changes. This combines initial website delivery with ongoing responsibility for its operation."
         },
         {
           "heading": "Examples to inspect",
@@ -947,9 +949,9 @@ function createMarioDossier() {
       "archive": PUBLIC_OUTPUTS.find(output => output.id === 'notandia-zotero'),
       "hook": "A practical tool for research-result workflows",
       "route": "/notandia",
-      "status": "Independent project · AI-assisted implementation",
-      "text": "A browser extension and separate Zotero plugin for research-result and reference workflows. My work covers product requirements, English-Italian interface localisation, software testing and maintenance with AI-assisted implementation.",
-      "reviewedAt": "2026-10-23",
+      "status": "Creator & maintainer · May 2025–Present · Independent project · Remote, Italy",
+      "text": "A browser extension and separate Zotero plugin for research workflows. My work includes English-Italian UI localisation, terminology research, cross-browser testing, GitHub issue tracking and Xcode/iOS Simulator checks.",
+      "reviewedAt": "2026-10-24",
       "claimIds": [
         "notandia-source-release"
       ],
@@ -988,7 +990,11 @@ function createMarioDossier() {
         },
         {
           "heading": "Localisation and software QA",
-          "text": "Implemented English-Italian localisation for the popup, settings, status messages and badges, with saved language selection and a scientific-editorial terminology glossary. Manual functional and visual testing covers Safari on macOS; Firefox, Chrome and Edge across supported desktop configurations; and Edge and Firefox on Android. Xcode and the iOS Simulator were used to check installation, Italian UI, saved settings and reference scanning. I reproduce browser-specific defects, track changes through GitHub and retest fixes."
+          "text": "Implemented English-Italian localisation for the popup, settings, status messages and badges, with saved language selection and a scientific-editorial terminology glossary. I check established terminology against publisher guidance, including expression of concern / espressione di preoccupazione. Manual functional and visual testing covers Safari on macOS; Firefox, Chrome and Edge across supported macOS, Windows, Linux and ChromeOS configurations; and Edge and Firefox on Android. Xcode and the iOS Simulator were used to check installation, Italian UI, saved settings and reference scanning. I reproduce browser-specific defects, track changes through GitHub and retest fixes.",
+          "links": [
+            { "label": "scientific-editorial terminology glossary", "url": "https://github.com/notandia/browser-extension/blob/a3d00fac6c48eecaffedd08a59a0ba0828a0662e/docs/LOCALIZATION_IT.md" },
+            { "label": "publisher guidance", "url": "https://socialsciences.pagepress.net/rp/ethics" }
+          ]
         },
         {
           "heading": "Use in scientific production",
@@ -1064,9 +1070,9 @@ function createMarioDossier() {
       "name": "English Wikipedia Link Converter",
       "hook": "Wikipedia links across languages",
       "route": "/work/telegram",
-      "status": "Independent project · AI-assisted implementation",
-      "text": "A Python Telegram bot that converts non-English Wikipedia article links to their English equivalents, with English and Italian user interfaces.",
-      "reviewedAt": "2026-10-23",
+      "status": "Creator & maintainer · Apr 2024–Present · Independent project · Remote, Italy",
+      "text": "A Python Telegram bot converting non-English Wikipedia links into English equivalents. I maintain English-Italian UI localisation, saved language preferences and fallback, test message behavior and diagnose AWS deployment issues.",
+      "reviewedAt": "2026-10-24",
       "links": [
         {
           "label": "Open the Telegram bot",
@@ -1085,11 +1091,45 @@ function createMarioDossier() {
         },
         {
           "heading": "Italian localisation and QA",
-          "text": "Localised help, command menus, buttons and error messages into Italian. The interface supports automatic language detection, a saved user preference and English fallback. Checks cover string coverage, placeholders, links, message formatting and language-selection behavior, alongside Python regression tests. Interface language and the language of the target Wikipedia article are separate: the converted article link points to English."
+          "text": "Localised help, command menus, buttons and error messages into Italian, maintaining an English-Italian glossary. The interface supports automatic language detection, a saved user preference and English fallback. Checks cover string coverage, placeholders, links, message formatting and language-selection behavior, alongside Python regression tests. Interface language and the language of the target Wikipedia article are separate: the converted article link points to English.",
+          "links": [
+            { "label": "English-Italian glossary", "url": "https://github.com/mariomarcolongo/english-wikipedia-link-converter-telegram-bot/blob/d37c912c82a590ac9999bc28f4186b75f22844c1/docs/LOCALIZATION_GLOSSARY.md" }
+          ]
         },
         {
           "heading": "Inspected architecture",
           "text": "The source uses AWS Lambda, SQS and DynamoDB for webhook processing, queued conversions and operational state, with EventBridge and SNS for independent monitoring and alerts. My work includes checking configuration, failure handling and deployment behavior. The source and operating instructions describe the current architecture."
+        }
+      ]
+    },
+    {
+      "id": "qcae",
+      "name": "QCAE Online Questionnaire",
+      "hook": "Making an existing questionnaire usable across languages",
+      "route": "/work/qcae",
+      "status": "Creator & maintainer · Aug 2023–Present · Independent project · Remote, Italy",
+      "text": "A multilingual web interface for the existing QCAE questionnaire, with keyboard navigation, local scoring and JSON/CSV export. I define requirements, maintain UI terminology and language-version provenance, and test functionality.",
+      "reviewedAt": "2026-10-24",
+      "links": [
+        { "label": "Try the questionnaire", "url": "https://mariomarcolongo.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/" },
+        { "label": "Source and questionnaire references", "url": "https://github.com/mariomarcolongo/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire" }
+      ],
+      "claimIds": [],
+      "sections": [
+        {
+          "heading": "Interface and personal contribution",
+          "text": "I created and maintain a web interface for the existing Questionnaire of Cognitive and Affective Empathy. My work covers requirements, interaction design, keyboard navigation, local scoring, JSON/CSV export and functional checks, using AI-assisted implementation. The source repository identifies the instrument and the publications used for questionnaire variants."
+        },
+        {
+          "heading": "Localisation and terminology",
+          "text": "I maintain a UI terminology glossary and check interface wording, language selection and questionnaire variants against their source publications. Language-version provenance is retained so readers can distinguish the interface translation from the questionnaire wording and its underlying evidence.",
+          "links": [
+            { "label": "UI terminology glossary", "url": "https://github.com/mariomarcolongo/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/blob/d2d96ba3fa90af324a7b5f0a8c24d0b7b332829d/docs/LOCALIZATION.md" }
+          ]
+        },
+        {
+          "heading": "Testing and scope",
+          "text": "I inspect the rendered interface, keyboard behavior, scoring and exported files, and review changes against the requirements. Published questionnaire versions retain their source references; this interface work does not constitute a new psychometric validation."
         }
       ]
     },
@@ -1141,27 +1181,28 @@ function createMarioDossier() {
     "default": {
       "title": "Research & Technical Operations",
       "filename": "Mario-Marcolongo-Research-Technical-Operations.pdf",
-      "summary": "Paid scientific research, fact-checking, data visualization and WordPress operations since June 2023. Source investigations, structured metadata, sensitive research facilitation and five accepted Atlas changes. Independent adversarial AI testing; member, Syntony Research Trusted Red Team Network."
+      "summary": "Paid scientific fact-checking, data visualization and website operations since 2023, with recent AI workflow configuration and client training. Source investigations, structured metadata, remote research facilitation and accepted Atlas contributions."
     },
     "technical": {
-      "title": "Technical Support & Website Operations",
+      "title": "AI Workflows & Technical Delivery",
       "filename": "Mario-Marcolongo-Technical-Operations.pdf",
-      "summary": "Paid WordPress website delivery and ongoing publishing, hosting, DNS and SSL operations. Define requirements, test browser-tool behavior, diagnose release issues and maintain AI-assisted projects. Continuing study in Python, SQL and systems fundamentals."
+      "summary": "Configure reusable AI workflows, document operating instructions and provide client training for independent use. Paid website delivery and operations since 2023; software testing, English-Italian UI localisation and defect investigation. Accepted Atlas contributions to agent instructions and source quality."
     },
     "aiEvaluation": {
       "title": "AI Evaluation & Information Integrity",
       "filename": "Mario-Marcolongo-AI-Evaluation-Research-Support.pdf",
-      "summary": "Independent adversarial AI testing; member, Syntony Research Trusted Red Team Network. Paid scientific fact-checking since June 2023, Wikimedia investigations and accepted Atlas contributions."
+      "summary": "Independent adversarial AI testing; member, Syntony Research Trusted Red Team Network. Paid scientific fact-checking, AI workflow configuration and client training. Wikimedia source investigations, accepted agent-instruction work and Atlas preprint coauthorship."
     }
   },
   "cvBullets": {
     "entropy": [
       "Research, fact-checking, scripts and/or visuals across 57 video contributions, alongside 4 articles and 21 short-form entries; roles vary by assignment. Video collection checked Oct 2026.",
       "Research primary literature and adapt English-language evidence for Italian content; acknowledged for literature research and error detection in Italiani veri (Mondadori, a major European publishing group, 2025).",
-      "Designed and built entropyforlife.it in WordPress; manage responsive design, publishing, OVHcloud hosting, DNS/SSL and technical SEO."
+      "Built and operate entropyforlife.it: WordPress, responsive layouts, OVHcloud, DNS/SSL and publishing. Diagnose configuration issues and check functionality after changes.",
+      "Since Oct 2026, configure reusable Antigravity/Gemini workflows with Google Drive; compare tools, inspect media outputs and train the client to use the setup independently."
     ],
     "atlas": [
-      "Five merged PRs: source-metadata audit, 15 citation locators, validation portability and repository instructions.",
+      "Five merged PRs: source-metadata audit, 15 citation locators, macOS validation and agent instructions.",
       "Coauthor, The AI Safety Formalization Atlas (Zenodo preprint, 2026)."
     ],
     "yts": [
@@ -1173,20 +1214,47 @@ function createMarioDossier() {
       "Refine tests from response patterns and check recurrence across scenarios. Completed Lucky Break intermediate training, Oct 2026."
     ],
     "notandia": [
-      "Created Notandia, an AI-assisted browser tool used by the Entropy for Life team during scientific source review.",
-      "Defined requirements, tested warning behavior and managed releases for Chrome, Edge and Firefox; Zotero plugin maintained separately."
+      "Created a browser extension used by the Entropy for Life team; implemented English-Italian UI localisation with a terminology glossary.",
+      "Test cross-browser behavior and language fallback; reproduce defects, track GitHub changes and retest. Related localisations: Telegram bot and QCAE interface."
     ],
     "wikimedia": [
       "Review citations, reconcile conflicting sources and improve structured metadata; create sourced scientific explanations and diagrams.",
       "Create sourced scientific explanations and diagrams, with attributable edits and public artifacts."
     ],
     "padua": [
-      "Co-facilitated sensitive-topic remote focus groups; prepared guides for nonjudgmental prompts, spoken/written participation, consent and timed turn-taking."
+      "Led or co-facilitated approximately 4-5 remote focus groups under Marta Panzeri (DPSS); supported literature research, recruitment, accessible participation and technical preparation."
     ]
+  },
+  "cvMeta": {
+    "entropy": "Paid contractor · Jun 2023–Present · Hybrid, primarily remote · Bassano del Grappa, Italy",
+    "atlas": "Open-source contributor & preprint coauthor · Sep 2026–Present · Remote",
+    "notandia": "Creator & maintainer · May 2025–Present · Independent project, remote",
+    "yts": "Founder & maintainer · Since 2024 · Independent project, remote",
+    "wikimedia": "Public contributor · Since 2018 · Remote",
+    "padua": "Volunteer research support · Nov 2022–approx. Jun 2025 · Remote, Italy"
+  },
+  "cvEvidence": {
+    "entropy": [{ "label": "Italiani veri", "url": "/work/entropy#book-acknowledgement" }],
+    "atlas": [
+      { "label": "source-metadata audit", "url": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/69" },
+      { "label": "agent instructions", "url": "https://github.com/mbrcic/ai-safety-formalization-atlas/blob/66ceba19c1904f00b2a734486ee0de3f5fc5a470/docs/guide/agent-instruction-design.md" },
+      { "label": "Zenodo preprint", "url": "https://doi.org/10.5281/zenodo.23088952" }
+    ],
+    "notandia": [
+      { "label": "terminology glossary", "url": "https://github.com/notandia/browser-extension/blob/a3d00fac6c48eecaffedd08a59a0ba0828a0662e/docs/LOCALIZATION_IT.md" },
+      { "label": "Telegram bot", "url": "/work/telegram" },
+      { "label": "QCAE interface", "url": "/work/qcae" }
+    ],
+    "padua": [{ "label": "Marta Panzeri", "url": "https://dpss.unipd.it/en/node/239" }]
   },
   "cvSkills": {
     "foundation": "Python fundamentals — Python Programming, 3 ECTS, Pass (Sep 2026).",
-    "currentStudy": "Continuing study in Python, SQL, systems and quantitative foundations."
+    "currentStudy": "Continuing study in Python, SQL, systems and quantitative foundations.",
+    "demonstrated": {
+      "default": "Literature search, data visualization, WordPress, structured metadata and accessible research procedures.",
+      "technical": "Browser DevTools, Terminal/npm, API/JSON checks, GitHub issues/PRs, manual and regression testing, Xcode/iOS Simulator, WordPress and DNS/SSL.",
+      "aiEvaluation": "Adversarial testing, response-pattern analysis, agent instructions, technical documentation and client workflows."
+    }
   },
   "experience": [
     {
@@ -1201,15 +1269,17 @@ function createMarioDossier() {
     },
     {
       "name": "Entropy for Life",
-      "period": "Jun 2023–Present · Paid contractor",
-      "text": "Scientific research, fact-checking, visual production and WordPress operations for an Italian science-communication project with 500K+ combined social followers and subscribers.",
+      "period": "Jun 2023–Present · Paid contractor · Hybrid, primarily remote",
+      "text": "Scientific research, fact-checking, visual production, WordPress operations and client AI workflows for an Italian science-communication project.",
       "route": "/work/entropy",
       "details": [
         ENTROPY_ORGANIZATION_CONTEXT,
+        "Primarily remote work, with occasional onsite activities at the client's studio in Bassano del Grappa, Italy.",
         "Since June 2023, I have worked as a paid contractor on primary-literature research, scientific fact-checking and script development. Depending on the assignment, I write, co-write or review content, check claims against sources and adapt English-language evidence for Italian audiences, preserving terminology and scientific context.",
         "My work includes collecting and organizing data, creating charts and maps, preparing slides and on-screen assets, and researching images. I also contribute to short-form content and selected thumbnail concepts or production, independently or in collaboration with the video editor. Responsibilities vary by project. I personally created the data visualizations in the AIRC reel collaborations that use them; the whole reels are collaborative productions.",
         "Edited selected science videos and Shorts in DaVinci Resolve, including work published on Luca Perri’s channel through my collaboration with Giacomo. My role ranges from full editing to partial initial edits; the linked examples identify each contribution separately.",
-        "I designed and built entropyforlife.it in WordPress. Since September 2023, my work has included responsive design, publishing, configuration and functionality changes, OVHcloud hosting, DNS, SSL and technical SEO. This combines initial website delivery with ongoing responsibility for its operation."
+        "I designed and built entropyforlife.it in WordPress. Since September 2023, my work has included responsive design, publishing, configuration and functionality changes, OVHcloud hosting, DNS, SSL and technical SEO. I investigate configuration and publishing problems and check functionality after changes.",
+        "Since October 2026, configure reusable media workflows using Antigravity, Gemini and Google Drive: compare tools, configure prompts and data access, check file outputs and train the client to use the setup independently."
       ]
     },
     {
@@ -1224,12 +1294,15 @@ function createMarioDossier() {
     },
     {
       "name": "University of Padua research project",
-      "period": "2022–2025 · Volunteer collaboration",
-      "text": "Focus-group facilitation, participant recruitment and accessible research procedures, working with a supervisor and fellow facilitator.",
+      "period": "Nov 2022–approximately Jun 2025 · Remote volunteer collaboration, Italy",
+      "text": "Focus-group facilitation and accessible research procedures under Marta Panzeri, Department of Developmental Psychology and Socialisation (DPSS), with a fellow facilitator.",
       "route": "/research-operations",
+      "links": [
+        { "label": "Marta Panzeri", "url": "https://dpss.unipd.it/en/node/239" }
+      ],
       "details": [
         "Led or co-facilitated approximately 4–5 remote focus groups, supported recruitment and bibliographic research, and helped prepare accessible participation procedures.",
-        "Prepared facilitation guides and worked with Marta Panzeri, researchers and a second facilitator on consent, optional captions, written-chat participation, nonjudgmental prompts, timed turns, recording boundaries and handoffs. Reviewed guides corroborate the facilitator role and procedures; approximate session counts are self-reported. The university record establishes the project context."
+        "Prepared facilitation guides and worked with Marta Panzeri at the Department of Developmental Psychology and Socialisation (DPSS), researchers and a second facilitator on consent, optional captions, written-chat participation, nonjudgmental prompts, timed turns, recording boundaries and handoffs. Reviewed guides corroborate the facilitator role and procedures; approximate session counts are self-reported. The university record establishes the project context."
       ]
     },
     {

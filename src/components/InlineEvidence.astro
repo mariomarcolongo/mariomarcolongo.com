@@ -1,0 +1,35 @@
+---
+interface EvidenceLink {
+  label: string;
+  url: string;
+}
+
+interface Props {
+  text: string;
+  links?: EvidenceLink[];
+}
+
+const { text, links = [] } = Astro.props;
+const evidence = links.filter(({ label, url }) =>
+  label && /^(https:\/\/|\/(?!\/)|#)/.test(url)
+);
+const segments: { text: string; url?: string }[] = [];
+let cursor = 0;
+
+// Resolve overlaps by preferring the earliest, then longest, exact label.
+// Astro escapes both the text and attributes; no HTML from the data is injected.
+while (cursor < text.length) {
+  const next = evidence
+    .map(link => ({ ...link, index: text.indexOf(link.label, cursor) }))
+    .filter(link => link.index !== -1)
+    .sort((a, b) => a.index - b.index || b.label.length - a.label.length)[0];
+  if (!next) {
+    segments.push({ text: text.slice(cursor) });
+    break;
+  }
+  if (next.index > cursor) segments.push({ text: text.slice(cursor, next.index) });
+  segments.push({ text: next.label, url: next.url });
+  cursor = next.index + next.label.length;
+}
+---
+{segments.map(segment => segment.url ? <a href={segment.url}>{segment.text}</a> : segment.text)}
