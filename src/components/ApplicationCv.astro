@@ -4,7 +4,7 @@ import InlineEvidence from './InlineEvidence.astro';
 import Layout from '../layouts/Layout.astro';import SiteNav from './SiteNav.astro';import SiteFooter from './SiteFooter.astro';import D from '../../data/source.js';
 const P=D.presence;const {variant='default'}=Astro.props;const cv=P.cv[variant];
 const entry=(key,name,meta,bullets,url)=>({key,name,meta:P.cvMeta?.[key]??meta,bullets,url,evidence:P.cvEvidence?.[key]??[]});
-const entropyIndexes=variant==='technical'?[2,3]:variant==='aiEvaluation'?[1,3]:[0,1];
+const entropyIndexes=variant==='technical'?[3,2]:variant==='aiEvaluation'?[1,3]:[0,1];
 const entropy={...entry('entropy','Entropy for Life','Scientific research, fact-checking & website operations · Paid contractor · Jun 2023–Present',entropyIndexes.map(index=>P.cvBullets.entropy[index]).filter(Boolean),'/work/entropy'),context:P.entropyOrganization.cvContext};
 entropy.meta=`${variant==='technical'?'Website operations & AI workflows':'Scientific content & technical operations'} · ${entropy.meta}`;
 const atlas=entry('atlas','AI Safety Formalization Atlas','Open-source contributor · Sep 2026',P.cvBullets.atlas,'/work/atlas');
@@ -18,7 +18,7 @@ const demonstratedWork=P.cvSkills.demonstrated?.[variant]??(variant==='technical
 
 ---
 <Layout title={`Mario Marcolongo — ${cv.title}`} description={`${cv.summary} One-page application résumé with contact details, experience, education and source links.`}><SiteNav/><main id="main-content" class="presence-shell">
-<nav class="resume-switch" aria-label="Résumé versions"><div class="resume-choices"><a href="/cv" aria-current={variant==='default'?'page':undefined}><strong>Research operations</strong><span>Source quality &amp; coordination</span></a><a href="/cv-technical" aria-current={variant==='technical'?'page':undefined}><strong>Technical operations</strong><span>Implementation &amp; troubleshooting</span></a><a href="/cv-ai" aria-current={variant==='aiEvaluation'?'page':undefined}><strong>AI evaluation</strong><span>Model testing &amp; investigations</span></a></div><a class="button primary" href={`/${cv.filename}`} download>Download PDF</a><button type="button" onclick="window.print()">Print résumé</button></nav>
+<nav class="resume-switch" aria-label="Résumé versions"><div class="resume-choices"><a href="/cv" aria-current={variant==='default'?'page':undefined}><strong>Research operations</strong><span>Source quality &amp; coordination</span></a><a href="/cv-technical" aria-current={variant==='technical'?'page':undefined}><strong>AI workflows &amp; delivery</strong><span>Implementation &amp; software quality</span></a><a href="/cv-ai" aria-current={variant==='aiEvaluation'?'page':undefined}><strong>AI evaluation</strong><span>Model testing &amp; investigations</span></a></div><a class="button primary" href={`/${cv.filename}`} download>Download PDF</a><button type="button" onclick="window.print()">Print résumé</button></nav>
 <article class="resume-document" id="cvDocument" data-ats-layout="single-column">
 <header><h1>{P.name}</h1><p class="resume-title">{cv.title}</p><p class="meta" id="resume-location">Italy · EU citizen · Open to international remote work & relocation</p><p class="meta"><EmailLink>{P.email}</EmailLink><span id="cvPhoneSlot" hidden></span> · <a href={P.canonicalUrl}>mariomarcolongo.com</a> · <a href={P.linkedin}>LinkedIn</a> · <a href={P.orcidUrl}>ORCID</a> · <a href={P.github}>GitHub</a></p></header>
 <section><h2>Summary</h2><p>{cv.summary}</p></section>

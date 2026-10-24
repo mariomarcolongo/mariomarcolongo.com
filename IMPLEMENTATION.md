@@ -117,3 +117,14 @@ Project sections are exported through the canonical public profile and included 
 Validation: full build, routing/factual/privacy/generated-output checks, 36 HTML pages and 40 parsed JSON-LD records; all three public PDFs one page (412/357/412 words), 19 canonical links each, education order and public-contact isolation checked; all final PDF pages visually inspected. Comprehensive rendering passed 84 route/viewport combinations, keyboard, theme, reduced motion, no-JavaScript access and local links. After the final copy changes, another 24 CV/localisation route/viewport checks passed at 1440/768/390/320 pixels, with desktop/mobile inspection of the new QCAE case.
 
 A private LinkedIn review draft is based on a live profile read: retain the already-current headline/About and focus on localisation/testing details, the Notandia Featured destination, the bot's current repository, self-paced study wording and Padua context. Paid Experience descriptions did not load and remain conditional. No live LinkedIn edits, résumé uploads or messages were made; website deployment remains a separate review step.
+
+
+## 24 October 2026 — Consulting and technical-delivery positioning
+
+The technical CV is now titled **AI Workflows & Technical Delivery**, retaining its established route and PDF filename. Its summary and Entropy bullet order lead with reusable workflows, operating instructions, output review and client training. Scientific research, source investigations, software quality and the separate LocalEyes QA application remain relevant evidence. This change does not add commercial enterprise-platform experience or measured financial outcomes.
+
+The homepage leads to services while preserving a prominent résumé route. Services specify useful deliverables, review points and handover, and contact guidance asks for the problem, users, desired outcome, timeline and indicative budget. Website work is presented as delivery and workflow improvement. Broad audience, remote/relocation openness and email-first calls by appointment are retained. Public profile/LLM route labels are generated consistently.
+
+Private strategy documents supersede support-first job targeting and fixed application quotas with screening for contact volume, shifts, substantive responsibility and effective compensation. LinkedIn About, Services text and job recommendations were updated and saved: scoped consulting, implementation, evaluation, research and software QA. Recruiter-only visibility and existing service categories were retained. No messages, posts or CV uploads were made.
+
+Validation: full build and generated-output/privacy/routing checks; the technical PDF remains one page, visually inspected, with 19 canonical links. All three public PDFs retain one-page counts, education order and canonical URLs. Targeted desktop/mobile and no-JavaScript navigation checks cover the changed homepage and all CV routes.

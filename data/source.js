@@ -75,7 +75,7 @@ function createMarioDossier() {
   "name": "Mario Marcolongo",
   "canonicalUrl": "https://mariomarcolongo.com",
   "reviewedAt": "2026-10-24",
-  "reviewScope": "Experience, localisation and CV alignment; individual evidence retains its own dated review.",
+  "reviewScope": "Consulting, technical-delivery and CV positioning; individual evidence retains its own dated review.",
   "outputs": PUBLIC_OUTPUTS,
   "credentials": [COPILOT_CREDENTIAL],
   "email": "me@mariomarcolongo.com",
@@ -102,14 +102,16 @@ function createMarioDossier() {
   ],
   "headline": "Investigate information. Test systems.",
   "description": "Mario Marcolongo: source investigations, AI evaluation, research and technical operations. Paid scientific work since 2023, public evidence and practical tools.",
-  "subheadline": "I trace claims to their sources, test AI behavior, and build and maintain research tools and websites. Paid scientific work since June 2023, alongside public investigations and accepted open-source contributions.",
-  "contact": "I support organisations of all sizes, research teams and creators with investigation, AI workflows, evaluation and practical technical delivery. Available for consulting, project delivery, ongoing collaborations and employed roles.",
+  "subheadline": "I investigate sources, evaluate AI behavior and configure practical workflows. Paid scientific work and website delivery since 2023, with reusable client workflows, training and accepted open-source contributions.",
+  "contact": "I work with organisations, research teams and creators on AI workflows, evaluation, source investigations and technical delivery. Available for scoped consulting projects, ongoing collaborations and relevant employed roles.",
   "availability": "Open to relocation and international remote work. I can work in the EU as an Italian citizen; opportunities elsewhere depend on the role’s hiring and work-authorization arrangements.",
   "authorship": "For independent software projects, I define requirements, inspect behavior, test releases and maintain tools, using AI-assisted implementation. Case studies identify my contribution and link the outputs, source records and external reviews.",
   "machineSummary": "Mario Marcolongo investigates sources, tests software and AI behaviour, and configures workflows and websites. Evidence includes paid scientific work and client training, localisation projects, Wikimedia investigations, accepted Atlas contributions and dated platform-recorded Gray Swan results. He holds Microsoft’s Copilot Studio Applied Skills credential. A Syntony network member, he studies IT through Metropolia’s Open UAS pathway. Based in Italy; open to remote work and relocation.",
   "engagement": {
-    "reviewedAt": "2026-10-18",
+    "reviewedAt": "2026-10-24",
     "audience": "Organisations of all sizes, research teams and creators.",
+    "projectScope": "Agree the problem, deliverables, review points and handover before work starts.",
+    "projectBrief": "Share the problem, intended users, desired outcome, timeline and indicative budget.",
     "contactPreference": "Please email first to arrange a call. Consultations and calls are by appointment.",
     "hours": "Afternoon and evening appointments are usually available (Europe/Rome); other times by arrangement.",
     "delivery": "Available for international remote work and on-site projects by prior arrangement, with travel scope and expenses agreed before booking."
@@ -118,13 +120,13 @@ function createMarioDossier() {
     {
       "id": "ai-workflows",
       "name": "AI workflows and client training",
-      "description": "Configure AI-assisted workflows, select tools, write operating instructions, test outputs and train clients to use the workflow independently.",
+      "description": "A reusable AI-assisted workflow with tool selection, operating instructions, output checks and training so your team can run it independently.",
       "evidencePath": "/work/entropy"
     },
     {
       "id": "agent-instructions",
       "name": "Agent instructions and prompt engineering",
-      "description": "Research platform guidelines and context limits; design maintainable instructions, task routing and checks for AI coding agents.",
+      "description": "Maintainable instructions, task routing and checks for AI coding agents, based on platform guidance and context limits.",
       "evidencePath": "/work/atlas"
     },
     {
@@ -147,8 +149,8 @@ function createMarioDossier() {
     },
     {
       "id": "technical-operations",
-      "name": "Website operations and technical support",
-      "description": "Maintain websites and technical workflows, diagnose issues, test changes and manage publishing, hosting and releases.",
+      "name": "Website delivery and workflow improvement",
+      "description": "Deliver or improve websites and publishing workflows, diagnose issues, verify changes and document the setup for ongoing use.",
       "evidencePath": "/work/entropy"
     }
   ],
@@ -1182,9 +1184,9 @@ function createMarioDossier() {
       "summary": "Paid scientific fact-checking, data visualization and website operations since 2023, with recent AI workflow configuration and client training. Source investigations, structured metadata, remote research facilitation and accepted Atlas contributions."
     },
     "technical": {
-      "title": "Technical Support & Website Operations",
+      "title": "AI Workflows & Technical Delivery",
       "filename": "Mario-Marcolongo-Technical-Operations.pdf",
-      "summary": "Paid website delivery, publishing and hosting operations since 2023. Configure reusable AI workflows and provide client training; investigate software defects, localise English-Italian interfaces and retest changes. Python, SQL and systems study."
+      "summary": "Configure reusable AI workflows, document operating instructions and provide client training for independent use. Paid website delivery and operations since 2023; software testing, English-Italian UI localisation and defect investigation. Accepted Atlas contributions to agent instructions and source quality."
     },
     "aiEvaluation": {
       "title": "AI Evaluation & Information Integrity",
