@@ -2,7 +2,7 @@ const fs=require('node:fs');const path=require('node:path');
 const root=path.resolve(__dirname,'..');const dist=path.join(root,'dist');
 // public/robots.txt owns the crawler policy; the root copy is only a mirror.
 fs.copyFileSync(path.join(root,'public/robots.txt'),path.join(root,'robots.txt'));
-const routes=['/','/work','/work/entropy','/work/atlas','/work/hypermandala','/work/wikimedia','/experience','/work/yourself-to-science','/work/scientific-visualizations','/work/telegram','/investigations','/ai-evaluation','/notandia','/research-operations','/cv','/cv-technical','/cv-ai','/evidence','/evidence/gray-swan-2026-07-29/','/evidence/gray-swan-2026-09-30/','/evidence/gray-swan-2026-10-13/','/evidence/gray-swan-certificates-2026-10-14/'];
+const routes=['/','/work','/work/entropy','/work/atlas','/work/hypermandala','/work/wikimedia','/experience','/work/yourself-to-science','/work/scientific-visualizations','/work/telegram','/work/qcae','/investigations','/ai-evaluation','/notandia','/research-operations','/cv','/cv-technical','/cv-ai','/evidence','/evidence/gray-swan-2026-07-29/','/evidence/gray-swan-2026-09-30/','/evidence/gray-swan-2026-10-13/','/evidence/gray-swan-certificates-2026-10-14/'];
 const presence=require('../data/source.js').presence;
 for(const snapshot of [presence.aiEvaluationSnapshot,presence.aiEvaluationLatestSnapshot].filter(Boolean))for(const folder of ['public','dist'])fs.writeFileSync(path.join(root,folder,`evidence/gray-swan-profile-${snapshot.observedAt}.json`),JSON.stringify(snapshot,null,2)+'\n');
 for(const folder of ['public','dist'])fs.writeFileSync(path.join(root,folder,'evidence/gray-swan-certificates-2026-10-14.json'),JSON.stringify(presence.aiEvaluationCertificates,null,2)+'\n');

@@ -24,8 +24,8 @@
     }
   ],
   "github": "https://github.com/mariomarcolongo",
-  "reviewedAt": "2026-10-15",
-  "reviewScope": "Profile integration and published-output identifiers; individual evidence retains its own dated review.",
+  "reviewedAt": "2026-10-24",
+  "reviewScope": "Experience, localisation and CV alignment; individual evidence retains its own dated review.",
   "outputs": [
     {
       "id": "atlas-preprint",
@@ -151,8 +151,8 @@
       "id": "entropy",
       "name": "Entropy for Life",
       "route": "/work/entropy",
-      "status": "Paid contractor · Jun 2023–Present",
-      "text": "Paid research, fact-checking, scripts and visual production for Entropy for Life, an Italian science-communication project with 500K+ combined followers and subscribers, plus the design, build and operation of its WordPress website.",
+      "status": "Paid contractor · Jun 2023–Present · Hybrid, primarily remote",
+      "text": "Paid scientific research, fact-checking, visual production and WordPress operations since 2023. Since October 2026, my work also includes reusable media workflows using Antigravity, Gemini and Google Drive, with client training.",
       "claimIds": [
         "entropy-published-work",
         "entropy-airc-visuals",
@@ -172,6 +172,40 @@
         {
           "label": "Published articles (Italian originals)",
           "url": "https://entropyforlife.it/mario-marcolongo-en/#mario-articles-v5"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "About the project",
+          "text": "Entropy for Life is an Italian science-communication project covering biology, evolution and the environment, with 500K+ combined followers and subscribers across its social accounts. As of 1 October 2026, the main YouTube channel displayed 272K subscribers, More Entropy displayed 50.2K and Instagram displayed 159K followers. The combined total also includes TikTok, Facebook and Telegram; it counts subscriptions and follows, with overlapping audiences."
+        },
+        {
+          "heading": "Scientific research, writing and fact-checking",
+          "text": "Since June 2023, I have worked as a paid contractor on primary-literature research, scientific fact-checking and script development. The collaboration is primarily remote, with occasional onsite work at the client's studio in Bassano del Grappa, Italy. Depending on the assignment, I write, co-write or review content, check claims against sources and adapt English-language evidence for Italian audiences, preserving terminology and scientific context."
+        },
+        {
+          "heading": "Data analysis and visual production",
+          "text": "My work includes collecting and organizing data, creating charts and maps, preparing slides and on-screen assets, and researching images. I also contribute to short-form content and selected thumbnail concepts or production, independently or in collaboration with the video editor. Responsibilities vary by project. I personally created the data visualizations in the AIRC reel collaborations that use them; the whole reels are collaborative productions."
+        },
+        {
+          "heading": "AI-assisted media workflows and client training",
+          "text": "Since October 2026, I have configured reusable AI-assisted media workflows using Antigravity, Gemini and Google Drive. I compare tools for the task and budget, configure prompts and the Drive connection, and check file inspection, selection and renaming. One assignment covered thousands of images. I review output files and recorded actions, and trained the client to use the setup independently. This is part of the wider paid collaboration."
+        },
+        {
+          "heading": "Website design, build and operations",
+          "text": "I designed and built entropyforlife.it in WordPress. Since September 2023, my work has included responsive design, publishing, configuration and functionality changes, OVHcloud hosting, DNS, SSL and technical SEO. I investigate configuration and publishing problems, then check the affected layouts and functions after changes. This combines initial website delivery with ongoing responsibility for its operation."
+        },
+        {
+          "heading": "Examples to inspect",
+          "text": "The organizational work record links four representative areas: the website and infrastructure, the shark-attack map, analysis of great-white-shark length, and H5N1 source research and articles. These show different parts of the work rather than treating every contribution as the same task."
+        },
+        {
+          "heading": "Published contribution record",
+          "text": "The video and thumbnail collections checked on 14 October 2026 list 57 video contributions (including Shorts) and 17 selected thumbnail projects. The profile also lists four articles and 21 short-form entries from the earlier reel capture. Collections can overlap and are not summed. Thumbnail roles include independent design, collaboration and concept direction. I contributed to the Siberian plague video, but did not create its thumbnail."
+        },
+        {
+          "heading": "Attribution",
+          "text": "The linked work record is published on the Entropy for Life website, which I help manage. It is an organizational attribution record; project-specific credits describe shared work. Brand audience figures and channel-wide performance are not presented as my personal results."
         }
       ]
     },
@@ -218,6 +252,32 @@
           "label": "Accepted PR #61",
           "url": "https://github.com/mbrcic/ai-safety-formalization-atlas/pull/61"
         }
+      ],
+      "sections": [
+        {
+          "heading": "A usable source trail",
+          "text": "Formal mathematics still depends on knowing which source, version and statement a result refers to. My recent Atlas work makes bibliographic comparisons inspectable and references easier to follow. The public contribution record now contains five merged PRs, each with its own scope and review trail."
+        },
+        {
+          "heading": "Source metadata and rights-evidence audit",
+          "text": "PR #69, merged on 22 September 2026, adds a reproducible audit that compares catalogue entries with Crossref, arXiv and public-page metadata. It saves dated evidence and generates a report of differences, missing information and retrieval failures for human review. Bibliographic comparison is separate from registry validation; licence observations remain distinct from a rights determination. The PR records a 109-work snapshot and full local validation. Those are dated audit and validation results, not counts of research I personally formalized."
+        },
+        {
+          "heading": "Missing locators and publication provenance",
+          "text": "PR #70, merged on 28 September, adds 15 missing source locators and enriches selected references. It preserves the cited technical report where a later journal version also exists, with supplementary publication information. My work included verifying locators and statement correspondence for selected sources. Automated retrieval failures remain visible; they are not treated as proof of an incorrect citation."
+        },
+        {
+          "heading": "Earlier repository contributions",
+          "text": "PR #52 diagnosed and repaired a Bash 3.2 validation failure on macOS and improved migration checks. PR #54 added portable instruction adapters. In PR #61, I researched official platform guidelines, instruction discovery and precedence, context limits and maintenance practices; wrote a 312-line cross-platform agent-instruction guide; and reorganized repository guidance into task-scoped policy files. These earlier contributions address tooling and repository instructions. Their public diffs describe the specific changes and validation limits."
+        },
+        {
+          "heading": "Public preprint and affiliation",
+          "text": "The AI Safety Formalization Atlas: a machine-checked memory for AI safety mathematics is publicly available as a Zenodo preprint, version 1, released on 1 October 2026. The manuscript is dated September 2026. Its title page lists me as a coauthor alongside Mario Brčić, Luka Hobor, Mihael Kovač and Adrian Satja Kurdija. Metropolia University of Applied Sciences is my listed affiliation, used with permission; I undertake Information Technology path studies through its Open UAS. The public record establishes preprint authorship, not peer-reviewed publication."
+        },
+        {
+          "heading": "Individual contribution and project scope",
+          "text": "The linked PRs establish my accepted work on source quality, provenance and tooling, with AI-assisted implementation. I do not attribute the Atlas’s library size, catalogue totals, formal proofs or mathematical findings to myself. The public manuscript establishes coauthorship; the accepted PRs document my individual contribution scope. Review the public diffs for the concrete scope of my work."
+        }
       ]
     },
     {
@@ -246,6 +306,32 @@
           "label": "FAIRsharing knowledgebase record",
           "url": "https://doi.org/10.25504/FAIRsharing.d3d487"
         }
+      ],
+      "sections": [
+        {
+          "heading": "Problem",
+          "text": "Research-participation opportunities are spread across institutions and project websites. A directory is useful only if readers can identify the opportunity, find its original source and understand what an entry represents. Organizing links is therefore also a provenance and maintenance task: an entry needs a defensible inclusion decision, not just an appealing description."
+        },
+        {
+          "heading": "My contribution",
+          "text": "I founded the directory and defined its inclusion criteria, verification fields, provenance model, licensing boundaries and update process. I coordinate AI-assisted implementation, inspect behavior, test releases, diagnose deployment issues and maintain the service."
+        },
+        {
+          "heading": "Result",
+          "text": "The dated review found 55 resources. Software releases are archived on Zenodo with a persistent DOI, and the directory is listed as a knowledgebase in FAIRsharing; both records identify me as creator or maintainer and link my ORCID. A separate check found 37 Wikidata items that referenced the project URL. The two counts answer different questions: the first describes directory scope and the second a form of reference use. Neither establishes 37 active users, 37 independent scholarly citations or participation in 55 studies. Counts describe the inspected state and are not presented as live counters."
+        },
+        {
+          "heading": "How to inspect it",
+          "text": "Open the directory and follow an entry to the original research source. The project repository provides the structure and source history used to maintain the resource. A reviewer can compare the public presentation with those records and inspect changes over time. For any individual opportunity, the originating institution’s current eligibility, consent and participation information governs; a directory entry does not replace those materials."
+        },
+        {
+          "heading": "Publication and validation limits",
+          "text": "A publicly deposited DOI provides a persistent record. It does not establish peer review of the directory or scientific validation of its design. Wikidata references establish the referenced URL’s appearance in structured records, with their own provenance. They do not independently verify every statement on the website. No verified user count, revenue figure or effect on recruitment is claimed."
+        },
+        {
+          "heading": "Ongoing responsibility",
+          "text": "The work combines resource selection, information architecture, provenance and licensing decisions, functional testing and maintenance. The directory provides a practical way to compare opportunities and reach the original institutions."
+        }
       ]
     },
     {
@@ -255,7 +341,8 @@
       "status": "Public-source contributions",
       "text": "Selected cases showing what I checked, which evidence changed the conclusion and what remains uncertain.",
       "claimIds": [],
-      "links": []
+      "links": [],
+      "sections": []
     },
     {
       "id": "ai-evaluation",
@@ -291,14 +378,33 @@
           "label": "Accepted Atlas contributions",
           "url": "https://mariomarcolongo.com/work/atlas"
         }
+      ],
+      "sections": [
+        {
+          "heading": "How I investigate",
+          "text": "I look for patterns in a model’s responses, adjust my approach, and test whether the same failure recurs in other scenarios. I combine role-play, emotional framing and structured-output or continuation techniques, refining them through trial and error. These observations guide further testing; I distinguish recurring behavior from explanations that still need evidence. Scientific fact-checking with Entropy for Life and Wikimedia source investigations bring the same care to tracing claims and checking sources."
+        },
+        {
+          "heading": "Testing record · 13 October 2026",
+          "text": "Gray Swan Arena displayed 40 global unique breaks, 1,430 points and 415 submissions, with global rank #426. The September record had 31 unique breaks. Proving Ground separately displayed #81, top 5%, and 127 total breaks across chat, image, agent and indirect challenges. These are dated platform-reported results; rankings can change."
+        },
+        {
+          "heading": "Work I can contribute",
+          "text": "Adversarial model testing, follow-up on unexpected behavior, source verification and clear evidence documentation. My accepted AI Safety Formalization Atlas contributions include source auditing and citation provenance. I am open to paid AI-evaluation, information-integrity and research-support roles and projects, including international remote work and relocation."
+        },
+        {
+          "heading": "Evidence details and scope",
+          "collapsed": true,
+          "text": "The linked evidence pages preserve original captures, dates and structured transcriptions. Arena and Proving Ground metrics are separate, and platform counts do not independently reproduce every underlying result or establish general model failure rates. The Proving Ground area counts sum to 126 while the platform displays 127 total breaks; both values are retained. Active-challenge figures were provisional at capture time, and Lucky Break prizes are awarded by raffle. My Gray Swan testing is independent activity; Syntony membership and project engagements are distinct."
+        }
       ]
     },
     {
       "id": "notandia",
       "name": "Notandia",
       "route": "/notandia",
-      "status": "Independent project · AI-assisted implementation",
-      "text": "A browser extension and separate Zotero plugin for research-result and reference workflows. My work covers product requirements, English-Italian interface localisation, software testing and maintenance with AI-assisted implementation.",
+      "status": "Creator & maintainer · May 2025–Present · Independent project · Remote, Italy",
+      "text": "A browser extension and separate Zotero plugin for research workflows. My work includes English-Italian UI localisation, terminology research, cross-browser testing, GitHub issue tracking and Xcode/iOS Simulator checks.",
       "claimIds": [
         "notandia-source-release"
       ],
@@ -322,6 +428,50 @@
         {
           "label": "Install Notandia for Firefox",
           "url": "https://addons.mozilla.org/en-US/firefox/addon/notandia/"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Problem",
+          "text": "Research-result workflows can make it difficult to distinguish a publisher-level signal from an article-specific notice. A tool must explain that difference and give the reader control. A publisher’s inclusion in a watchlist does not by itself establish that a particular paper is unreliable, retracted or scientifically incorrect."
+        },
+        {
+          "heading": "Product ownership and implementation",
+          "text": "Notandia continues MDPI Filter. I define the product requirements and evidence hierarchy, inspect matching and API behavior, reproduce failures and guide AI-assisted implementation. My work includes cross-browser and Zotero testing, documentation, release verification and deployment. Browser and Zotero sources are maintained separately."
+        },
+        {
+          "heading": "Localisation and software QA",
+          "text": "Implemented English-Italian localisation for the popup, settings, status messages and badges, with saved language selection and a scientific-editorial terminology glossary. I check established terminology against publisher guidance, including expression of concern / espressione di preoccupazione. Manual functional and visual testing covers Safari on macOS; Firefox, Chrome and Edge across supported macOS, Windows, Linux and ChromeOS configurations; and Edge and Firefox on Android. Xcode and the iOS Simulator were used to check installation, Italian UI, saved settings and reference scanning. I reproduce browser-specific defects, track changes through GitHub and retest fixes.",
+          "links": [
+            {
+              "label": "scientific-editorial terminology glossary",
+              "url": "https://github.com/notandia/browser-extension/blob/a3d00fac6c48eecaffedd08a59a0ba0828a0662e/docs/LOCALIZATION_IT.md"
+            },
+            {
+              "label": "publisher guidance",
+              "url": "https://socialsciences.pagepress.net/rp/ethics"
+            }
+          ]
+        },
+        {
+          "heading": "Use in scientific production",
+          "text": "I created Notandia to support my work at Entropy for Life, where my team uses it during scientific source review. In my experience, the warnings help us notice issues and avoid repeated manual checking. This use is confirmed by me on 2 October 2026; I have not measured time savings or quality improvements independently."
+        },
+        {
+          "heading": "Earlier store checks · October 2026",
+          "text": "Notandia 0.1.1 was released for Chrome on 3 October 2026; I tested the build. I confirmed the updated Edge package on 4 October 2026, when listing artwork and description were awaiting approval. Firefox 0.1.2 is publicly downloadable on Mozilla Add-ons, verified 7 October 2026. Store availability does not establish feature parity across platforms."
+        },
+        {
+          "heading": "Evidence and interpretation",
+          "text": "Use the canonical browser repository to inspect the current source and release notes. Follow the separate store links to check what is actually distributed there. The expanded source includes publisher context and formal-notice workflows, but a notice’s type and source matter: a correction is not synonymous with a retraction, and either still requires reading its scope. This portfolio does not certify complete detection or make a paper-level verdict."
+        },
+        {
+          "heading": "Source and store availability",
+          "text": "The source repository and release history document current development, including localisation and browser-specific fixes. The store links above show the version distributed for each browser; store review and signing can lag source releases. Safari source and Simulator testing do not establish Safari App Store publication or physical-iPhone testing. Zotero has a separate source repository and release cycle."
+        },
+        {
+          "heading": "Research workflow design",
+          "text": "The browser source supports publisher context and formal-notice workflows; the Zotero source focuses on item and reference detection. I distinguish publisher-level context from article-level evidence and test matching behavior to reduce ambiguous results. The source and release links above establish which version is available; development capabilities should not be assumed to exist in every store build."
         }
       ],
       "archive": {
@@ -361,14 +511,36 @@
           "label": "Flourish charts and maps",
           "url": "https://app.flourish.studio/@Digressivo"
         }
+      ],
+      "sections": [
+        {
+          "heading": "Problem",
+          "text": "A scientific relationship can be difficult to inspect in prose alone. A diagram or data view can expose definitions, groupings and assumptions, provided the viewer can trace what each mark means. The goal is to make a source-backed relationship legible, not to make the visual itself look like independent evidence."
+        },
+        {
+          "heading": "Overlapping genes and clinical phenotypes",
+          "text": "The diagram shows genes associated with overlapping clinical phenotypes, using intersecting regions to make shared associations visible. It is a sourced visual explanation; the original Wikimedia file and its references provide the scientific context."
+        },
+        {
+          "heading": "Data views",
+          "text": "The Tableau profile links published epidemiological and public-health views. Each view should be read with its dataset, units and transformation assumptions. Protein-supply work describes food supply, not observed individual protein intake. A national aggregate cannot be silently converted into a personal nutritional conclusion. The original data and view context are the appropriate place to inspect the measure."
+        },
+        {
+          "heading": "My contribution",
+          "text": "I organized scientific material and created visual explanations and data views. The useful evidence is the actual artifact, its source trail and documented attributable changes. A reuse record, where present at the original file, supports that specific reuse; it is not a blanket statement about the impact of all my visualizations. No audience or clinical outcome is inferred from a download or publication."
+        },
+        {
+          "heading": "How to inspect",
+          "text": "Start with the diagram and its public contribution trail, or open a data view and examine its labels and original dataset. Check whether the displayed relationship is a definition, an estimate or a transformation. The project remains supporting evidence of source communication and data presentation, separate from paid scientific production and accepted repository contributions."
+        }
       ]
     },
     {
       "id": "telegram",
       "name": "English Wikipedia Link Converter",
       "route": "/work/telegram",
-      "status": "Independent project · AI-assisted implementation",
-      "text": "A Python Telegram bot that converts non-English Wikipedia article links to their English equivalents, with English and Italian user interfaces.",
+      "status": "Creator & maintainer · Apr 2024–Present · Independent project · Remote, Italy",
+      "text": "A Python Telegram bot converting non-English Wikipedia links into English equivalents. I maintain English-Italian UI localisation, saved language preferences and fallback, test message behavior and diagnose AWS deployment issues.",
       "claimIds": [],
       "links": [
         {
@@ -378,6 +550,64 @@
         {
           "label": "Source and operating instructions",
           "url": "https://github.com/mariomarcolongo/english-wikipedia-link-converter-telegram-bot"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Problem and contribution",
+          "text": "The bot finds the English-language version of a Wikipedia article shared in another language. I define requirements, inspect behavior, test workflows and diagnose deployment problems using AI-assisted implementation. The repository provides the implementation, tests and operating instructions."
+        },
+        {
+          "heading": "Italian localisation and QA",
+          "text": "Localised help, command menus, buttons and error messages into Italian, maintaining an English-Italian glossary. The interface supports automatic language detection, a saved user preference and English fallback. Checks cover string coverage, placeholders, links, message formatting and language-selection behavior, alongside Python regression tests. Interface language and the language of the target Wikipedia article are separate: the converted article link points to English.",
+          "links": [
+            {
+              "label": "English-Italian glossary",
+              "url": "https://github.com/mariomarcolongo/english-wikipedia-link-converter-telegram-bot/blob/d37c912c82a590ac9999bc28f4186b75f22844c1/docs/LOCALIZATION_GLOSSARY.md"
+            }
+          ]
+        },
+        {
+          "heading": "Inspected architecture",
+          "text": "The source uses AWS Lambda, SQS and DynamoDB for webhook processing, queued conversions and operational state, with EventBridge and SNS for independent monitoring and alerts. My work includes checking configuration, failure handling and deployment behavior. The source and operating instructions describe the current architecture."
+        }
+      ]
+    },
+    {
+      "id": "qcae",
+      "name": "QCAE Online Questionnaire",
+      "route": "/work/qcae",
+      "status": "Creator & maintainer · Aug 2023–Present · Independent project · Remote, Italy",
+      "text": "A multilingual web interface for the existing QCAE questionnaire, with keyboard navigation, local scoring and JSON/CSV export. I define requirements, maintain UI terminology and language-version provenance, and test functionality.",
+      "claimIds": [],
+      "links": [
+        {
+          "label": "Try the questionnaire",
+          "url": "https://mariomarcolongo.github.io/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/"
+        },
+        {
+          "label": "Source and questionnaire references",
+          "url": "https://github.com/mariomarcolongo/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "Interface and personal contribution",
+          "text": "I created and maintain a web interface for the existing Questionnaire of Cognitive and Affective Empathy. My work covers requirements, interaction design, keyboard navigation, local scoring, JSON/CSV export and functional checks, using AI-assisted implementation. The source repository identifies the instrument and the publications used for questionnaire variants."
+        },
+        {
+          "heading": "Localisation and terminology",
+          "text": "I maintain a UI terminology glossary and check interface wording, language selection and questionnaire variants against their source publications. Language-version provenance is retained so readers can distinguish the interface translation from the questionnaire wording and its underlying evidence.",
+          "links": [
+            {
+              "label": "UI terminology glossary",
+              "url": "https://github.com/mariomarcolongo/Questionnaire-of-Cognitive-and-Affective-Empathy-QCAE-online-questionnaire/blob/d2d96ba3fa90af324a7b5f0a8c24d0b7b332829d/docs/LOCALIZATION.md"
+            }
+          ]
+        },
+        {
+          "heading": "Testing and scope",
+          "text": "I inspect the rendered interface, keyboard behavior, scoring and exported files, and review changes against the requirements. Published questionnaire versions retain their source references; this interface work does not constitute a new psychometric validation."
         }
       ]
     },
@@ -398,6 +628,24 @@
         {
           "label": "Public source · AGPL-3.0",
           "url": "https://github.com/mariomarcolongo/hypermandala"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "A visual question you can manipulate",
+          "text": "Hypermandala makes higher-dimensional geometry explorable through a browser interface. Choose a form, move between 2D, 3D and 4D, rotate in coordinate planes and collapse a dimension. The form library includes geometric patterns, specific yantras and architecture-inspired abstractions."
+        },
+        {
+          "heading": "Implementation and inspectable behavior",
+          "text": "The live explorer offers six-plane rotation, projection controls, a projected coordinate basis and a library of procedural forms. Moving from 2D to 4D produces staged dimensional transitions. The source repository is publicly accessible under AGPL-3.0, verified while logged out on 30 September 2026. The screenshot was refreshed from the adjusted Sri Yantra form. Technical implementation is AI-assisted, as with my other projects."
+        },
+        {
+          "heading": "An evolving experiment",
+          "text": "Higher-dimensional extensions are experimental interpretations. New form additions remain under testing and adjustment, as confirmed by the creator; the portfolio screenshot shows the adjusted Sri Yantra form rather than presenting every new preset as validated. Public source availability supports inspection, not an independent guarantee of mathematical or historical accuracy."
+        },
+        {
+          "heading": "What this contributes to my portfolio",
+          "text": "This is a practical sample of interactive visualization and product exploration: a visible interface with behavior visitors can manipulate and inspect. It complements my scientific diagrams and data views. It is an independent experiment; usage, learning outcomes and commercial demand have not been established."
         }
       ],
       "archive": {
@@ -759,7 +1007,7 @@
     "Systems diagnosis"
   ],
   "availability": "Open to relocation and international remote work. I can work in the EU as an Italian citizen; opportunities elsewhere depend on the role’s hiring and work-authorization arrangements.",
-  "summary": "Mario Marcolongo investigates sources, tests AI behavior and operates tools and websites. Evidence includes paid scientific work, Wikimedia investigations, accepted Atlas contributions and dated platform-recorded Gray Swan testing results. He holds Microsoft’s Applied Skills credential for building an agent in Copilot Studio. A Syntony network member, he studies IT through Metropolia’s Open UAS pathway. Based in Italy; open to remote work and relocation.",
+  "summary": "Mario Marcolongo investigates sources, tests software and AI behaviour, and configures workflows and websites. Evidence includes paid scientific work and client training, localisation projects, Wikimedia investigations, accepted Atlas contributions and dated platform-recorded Gray Swan results. He holds Microsoft’s Copilot Studio Applied Skills credential. A Syntony network member, he studies IT through Metropolia’s Open UAS pathway. Based in Italy; open to remote work and relocation.",
   "authorship": "For independent software projects, I define requirements, inspect behavior, test releases and maintain tools, using AI-assisted implementation. Case studies identify my contribution and link the outputs, source records and external reviews.",
   "resumeRoutes": {
     "default": "/cv",
@@ -799,15 +1047,17 @@
     },
     {
       "name": "Entropy for Life",
-      "period": "Jun 2023–Present · Paid contractor",
-      "text": "Scientific research, fact-checking, visual production and WordPress operations for an Italian science-communication project with 500K+ combined social followers and subscribers.",
+      "period": "Jun 2023–Present · Paid contractor · Hybrid, primarily remote",
+      "text": "Scientific research, fact-checking, visual production, WordPress operations and client AI workflows for an Italian science-communication project.",
       "route": "/work/entropy",
       "details": [
         "Entropy for Life is an Italian science-communication project covering biology, evolution and the environment, with 500K+ combined followers and subscribers across its social accounts.",
+        "Primarily remote work, with occasional onsite activities at the client's studio in Bassano del Grappa, Italy.",
         "Since June 2023, I have worked as a paid contractor on primary-literature research, scientific fact-checking and script development. Depending on the assignment, I write, co-write or review content, check claims against sources and adapt English-language evidence for Italian audiences, preserving terminology and scientific context.",
         "My work includes collecting and organizing data, creating charts and maps, preparing slides and on-screen assets, and researching images. I also contribute to short-form content and selected thumbnail concepts or production, independently or in collaboration with the video editor. Responsibilities vary by project. I personally created the data visualizations in the AIRC reel collaborations that use them; the whole reels are collaborative productions.",
         "Edited selected science videos and Shorts in DaVinci Resolve, including work published on Luca Perri’s channel through my collaboration with Giacomo. My role ranges from full editing to partial initial edits; the linked examples identify each contribution separately.",
-        "I designed and built entropyforlife.it in WordPress. Since September 2023, my work has included responsive design, publishing, configuration and functionality changes, OVHcloud hosting, DNS, SSL and technical SEO. This combines initial website delivery with ongoing responsibility for its operation."
+        "I designed and built entropyforlife.it in WordPress. Since September 2023, my work has included responsive design, publishing, configuration and functionality changes, OVHcloud hosting, DNS, SSL and technical SEO. I investigate configuration and publishing problems and check functionality after changes.",
+        "Since October 2026, configure reusable media workflows using Antigravity, Gemini and Google Drive: compare tools, configure prompts and data access, check file outputs and train the client to use the setup independently."
       ]
     },
     {
@@ -822,12 +1072,18 @@
     },
     {
       "name": "University of Padua research project",
-      "period": "2022–2025 · Volunteer collaboration",
-      "text": "Focus-group facilitation, participant recruitment and accessible research procedures, working with a supervisor and fellow facilitator.",
+      "period": "Nov 2022–approximately Jun 2025 · Remote volunteer collaboration, Italy",
+      "text": "Focus-group facilitation and accessible research procedures under Marta Panzeri, Department of Developmental Psychology and Socialisation (DPSS), with a fellow facilitator.",
       "route": "/research-operations",
+      "links": [
+        {
+          "label": "Marta Panzeri",
+          "url": "https://dpss.unipd.it/en/node/239"
+        }
+      ],
       "details": [
         "Led or co-facilitated approximately 4–5 remote focus groups, supported recruitment and bibliographic research, and helped prepare accessible participation procedures.",
-        "Prepared facilitation guides and worked with Marta Panzeri, researchers and a second facilitator on consent, optional captions, written-chat participation, nonjudgmental prompts, timed turns, recording boundaries and handoffs. Reviewed guides corroborate the facilitator role and procedures; approximate session counts are self-reported. The university record establishes the project context."
+        "Prepared facilitation guides and worked with Marta Panzeri at the Department of Developmental Psychology and Socialisation (DPSS), researchers and a second facilitator on consent, optional captions, written-chat participation, nonjudgmental prompts, timed turns, recording boundaries and handoffs. Reviewed guides corroborate the facilitator role and procedures; approximate session counts are self-reported. The university record establishes the project context."
       ]
     },
     {
@@ -870,8 +1126,8 @@
       "startDate": "2026-08",
       "endDate": null,
       "status": "open_uas_path_enrolled",
-      "description": "English-taught online degree-credit pathway toward a Bachelor of Engineering in Information Technology. Python Programming: 3 ECTS, Pass (15 Sep 2026).",
-      "cvDescription": "Degree-credit pathway toward a BEng in Information Technology. Python Programming: 3 ECTS, Pass (Sep 2026).",
+      "description": "Fully online degree-credit pathway toward a Bachelor of Engineering in Information Technology, with self-paced coursework and assessments. English-taught studies; Python Programming: 3 ECTS, Pass (15 Sep 2026).",
+      "cvDescription": "Fully online degree-credit pathway toward a BEng; self-paced coursework and assessments. Python Programming: 3 ECTS, Pass (Sep 2026).",
       "programExtentECTS": 120,
       "creditsAwarded": 3,
       "degreeAwarded": false,

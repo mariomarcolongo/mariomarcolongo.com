@@ -1,6 +1,6 @@
 # Mario Marcolongo — Information Integrity, AI Evaluation & Technical Operations
 
-Mario Marcolongo investigates sources, tests AI behavior and operates tools and websites. Evidence includes paid scientific work, Wikimedia investigations, accepted Atlas contributions and dated platform-recorded Gray Swan testing results. He holds Microsoft’s Applied Skills credential for building an agent in Copilot Studio. A Syntony network member, he studies IT through Metropolia’s Open UAS pathway. Based in Italy; open to remote work and relocation.
+Mario Marcolongo investigates sources, tests software and AI behaviour, and configures workflows and websites.
 
 ## Engagement
 
@@ -14,7 +14,7 @@ Open to relocation and international remote work. I can work in the EU as an Ita
 
 ## Entropy for Life
 
-Paid contractor · Jun 2023–Present. Paid research, fact-checking, scripts and visual production for Entropy for Life, an Italian science-communication project with 500K+ combined followers and subscribers, plus the design, build and operation of its WordPress website.
+Paid contractor · Jun 2023–Present · Hybrid, primarily remote. Paid scientific research, fact-checking, visual production and WordPress operations since 2023. Since October 2026, my work also includes reusable media workflows using Antigravity, Gemini and Google Drive, with client training.
 
 Entropy for Life is an Italian science-communication project with 500K+ combined followers and subscribers across its social accounts. Organization accounts; audiences overlap. TikTok contributor-reported.
 Source: https://entropyforlife.it/chi-sono/. Owner: contributor; evidence: contributor confirmation; observed: 2026-10-01.
@@ -62,7 +62,7 @@ Case: https://mariomarcolongo.com/work/yourself-to-science
 
 ## Notandia
 
-Independent project · AI-assisted implementation. A browser extension and separate Zotero plugin for research-result and reference workflows. My work covers product requirements, English-Italian interface localisation, software testing and maintenance with AI-assisted implementation.
+Creator & maintainer · May 2025–Present · Independent project · Remote, Italy. A browser extension and separate Zotero plugin for research workflows. My work includes English-Italian UI localisation, terminology research, cross-browser testing, GitHub issue tracking and Xcode/iOS Simulator checks.
 
 Created Notandia, an AI-assisted research-workflow extension released for Chrome, Edge and Firefox. Chrome 0.1.1 released 3 October; counts include legacy use. Edge package confirmed 4 October; artwork and description pending then. Firefox 0.1.2 publicly downloadable, verified 7 October 2026; automated screening, later human review possible. Separate Zotero releases; platform parity and usage unverified.
 Source: https://addons.mozilla.org/en-US/firefox/addon/notandia/. Owner: project maintainer; evidence: public source and store records; observed: 2026-10-07.
@@ -85,7 +85,7 @@ Case: https://mariomarcolongo.com/ai-evaluation
 
 Wikipedia, Wikidata & Wikimedia Commons. Since 2018 · Public contributions. Citation review, source reconciliation, structured-data editing and scientific visualizations. Source and attribution: https://mariomarcolongo.com/work/wikimedia
 
-University of Padua research project. 2022–2025 · Volunteer collaboration. Focus-group facilitation, participant recruitment and accessible research procedures, working with a supervisor and fellow facilitator. Source and attribution: https://mariomarcolongo.com/research-operations
+University of Padua research project. Nov 2022–approximately Jun 2025 · Remote volunteer collaboration, Italy. Focus-group facilitation and accessible research procedures under Marta Panzeri, Department of Developmental Psychology and Socialisation (DPSS), with a fellow facilitator. Source and attribution: https://mariomarcolongo.com/research-operations
 
 ## Assessed credential
 
@@ -93,19 +93,19 @@ Microsoft Applied Skills: Build an agent in Microsoft Copilot Studio. Microsoft;
 
 ## Education
 
-Metropolia University of Applied Sciences — Information Technology — Open UAS Path Studies. Aug 2026–Present. English-taught online degree-credit pathway toward a Bachelor of Engineering in Information Technology. Python Programming: 3 ECTS, Pass (15 Sep 2026).
+Metropolia University of Applied Sciences — Information Technology — Open UAS Path Studies. Aug 2026–Present. Fully online degree-credit pathway toward a Bachelor of Engineering in Information Technology, with self-paced coursework and assessments. English-taught studies; Python Programming: 3 ECTS, Pass (15 Sep 2026).
 
 University of Campania Luigi Vanvitelli — Medicine studies, degree not completed. 2020–approx. 2023 (attendance). Attendance stopped around 2023; no degree awarded. Administrative enrollment remains active.
 
 ## Demonstrated work and current study
 
-Linked work: source verification, technical documentation and functional testing. Python, SQL and systems remain current study.
+Linked work: source verification, technical documentation and functional testing. Python, SQL and systems study continues.
 
 Italian native · English: EF SET C1 overall, 68/100 (Mar 2024). Certificate subscores: reading 75/C2; listening 81/C2; writing 59/B2; speaking 55/B2. Current English self-assessment: C1, reported 2026-10-01. Certificate: https://cert.efset.org/jHk84h
 
 ## Additional evidence
 
-Source investigations: https://mariomarcolongo.com/investigations. Scientific visualizations (protein supply is not intake): https://mariomarcolongo.com/work/scientific-visualizations. Telegram source architecture: Lambda function URL, SQS, DynamoDB, EventBridge and SNS; current uptime unverified: https://mariomarcolongo.com/work/telegram. Hypermandala is an interactive geometry experiment: https://mariomarcolongo.com/work/hypermandala. QCAE implements an existing instrument; no new psychometric validation.
+Source investigations: https://mariomarcolongo.com/investigations. Scientific visualizations (protein supply, not intake): https://mariomarcolongo.com/work/scientific-visualizations. Telegram localisation and source architecture: https://mariomarcolongo.com/work/telegram. QCAE interface and source-version provenance, not new psychometric validation: https://mariomarcolongo.com/work/qcae. Hypermandala geometry experiment: https://mariomarcolongo.com/work/hypermandala.
 
 ## Application documents and contact
 
@@ -113,4 +113,4 @@ Résumés: https://mariomarcolongo.com/cv, https://mariomarcolongo.com/cv-techni
 
 Email: me@mariomarcolongo.com. ORCID: https://orcid.org/0000-0003-2846-7115. Experience: https://mariomarcolongo.com/experience. GitHub: https://github.com/mariomarcolongo. LinkedIn: https://www.linkedin.com/in/mario-marcolongo. Italy/EU citizen; US work authorization not established.
 
-Reviewed: 2026-10-15; evidence retains individual dates/limitations.
+Reviewed: 2026-10-24; evidence retains individual dates/limitations.

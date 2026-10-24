@@ -3,6 +3,7 @@ import BookAcknowledgement from './BookAcknowledgement.astro';import PublishedAr
 import GraySwanCertificates from './GraySwanCertificates.astro';
 import ResearchProfiles from './ResearchProfiles.astro';
 import EmailLink from './EmailLink.astro';
+import InlineEvidence from './InlineEvidence.astro';
 const P=D.presence,N=P.redTeamNetwork;const {id}=Astro.props;const p=P.projects.find(p=>p.id===id);const claims=P.claims.filter(c=>p.claimIds.includes(c.id));
 const isAiEvaluation=id==='ai-evaluation';
 const searchTitles = {
@@ -11,7 +12,8 @@ const searchTitles = {
   'yourself-to-science': 'Yourself to Science — Research Directory',
   'ai-evaluation': 'AI Evaluation & Red Teaming',
   notandia: 'Notandia — Research Integrity Tools',
-  telegram: 'Telegram Link Converter & Automation'
+  telegram: 'Telegram Link Converter & Automation',
+  qcae: 'QCAE — Multilingual Questionnaire Interface'
 };
 ---
 <Layout title={searchTitles[id] || `${p.name} — ${p.hook}`} description={p.text}>
@@ -23,13 +25,13 @@ const searchTitles = {
     <p class="lede">{p.text}</p>
     {isAiEvaluation&&<div class="source-links"><a class="button primary" href="/cv-ai">AI evaluation résumé</a><EmailLink class="button">Discuss a role or project</EmailLink></div>}
     <div class="source-links">{p.links.map(l=><a href={l.url}>{l.label}</a>)}</div>
-    {isAiEvaluation&&p.sections.map(s=>s.collapsed?<details><summary>{s.heading}</summary><p>{s.text}</p></details>:<section><h2>{s.heading}</h2><p>{s.text}</p></section>)}
+    {isAiEvaluation&&p.sections.map(s=>s.collapsed?<details><summary>{s.heading}</summary><p><InlineEvidence text={s.text} links={s.links}/></p></details>:<section><h2>{s.heading}</h2><p><InlineEvidence text={s.text} links={s.links}/></p></section>)}
     {isAiEvaluation&&<GraySwanCertificates/>}
     {isAiEvaluation&&<section id="syntony"><h2>{N.organization} — {N.name}</h2><p class="meta">{N.role} · {N.period}</p><p>{N.summary}</p><p>{N.scope}</p><a href={N.sourceUrl}>About the network ↗</a></section>}
     {id==='entropy'&&<BookAcknowledgement/>}
     <PublishedArtifacts id={id}/>
     {p.image&&!['entropy','atlas','notandia','yourself-to-science','hypermandala'].includes(id)&&<figure><a href={p.image}><img src={p.image} alt={p.alt} width={p.imageWidth||800} height={p.imageHeight||450}/></a><figcaption>{p.name} · public artifact; source links above.</figcaption></figure>}
-    {!isAiEvaluation&&p.sections.map(s=><section><h2>{s.heading}</h2><p>{s.text}</p></section>)}
+    {!isAiEvaluation&&p.sections.map(s=><section><h2>{s.heading}</h2><p><InlineEvidence text={s.text} links={s.links}/></p></section>)}
     {p.archive&&<section><h2>Archived software release</h2><p>{p.archive.title} · {p.archive.version} · {p.archive.releasedAt}. The archive preserves this release for citation and inspection.</p><div class="source-links"><a href={`https://doi.org/${p.archive.doi}`}>Release archive · DOI</a><a href={`https://doi.org/${p.archive.conceptDoi}`}>All versions</a><a href={p.archive.sourceUrl}>Versioned source</a></div><p class="meta">{p.archive.license}{id==='notandia'&&' · Zotero plugin; separate from the browser extension'}</p></section>}
     {id==='atlas'&&<ResearchProfiles/>}
     {id==='notandia'&&<p><a href="https://github.com/notandia/zotero-plugin">Separate Zotero source repository</a></p>}
