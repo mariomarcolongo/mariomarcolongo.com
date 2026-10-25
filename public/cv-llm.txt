@@ -87,9 +87,11 @@ Wikipedia, Wikidata & Wikimedia Commons. Since 2018 · Public contributions. Cit
 
 University of Padua research project. Nov 2022–approximately Jun 2025 · Remote volunteer collaboration, Italy. Focus-group facilitation and accessible research procedures under Marta Panzeri, Department of Developmental Psychology and Socialisation (DPSS), with a fellow facilitator. Source and attribution: https://mariomarcolongo.com/research-operations
 
-## Assessed credential
+## Assessed credentials
 
 Microsoft Applied Skills: Build an agent in Microsoft Copilot Studio. Microsoft; earned 2026-10-19; Interactive hands-on lab assessment. Verification: https://learn.microsoft.com/en-us/users/mariomarcolongo/credentials/48386317f9899eb1. Assessed Copilot Studio skills; not a record of commercial platform delivery or Power Apps experience.
+
+Atlassian Credentialed in JSM Fundamentals with AI. Atlassian; earned 2026-10-24; Fundamentals certificate exam (ACH-815). Valid through 2027-10-24. Verification: https://cp.certmetrics.com/atlassian/en/public/verify/credential/4ec41335733f49508b42ab3faab010d1. Assessed fundamentals knowledge; not a record of commercial Jira delivery, Jira Software defect tracking or administrator certification.
 
 ## Education
 
@@ -113,4 +115,4 @@ Résumés: https://mariomarcolongo.com/cv, https://mariomarcolongo.com/cv-techni
 
 Email: me@mariomarcolongo.com. ORCID: https://orcid.org/0000-0003-2846-7115. Experience: https://mariomarcolongo.com/experience. GitHub: https://github.com/mariomarcolongo. LinkedIn: https://www.linkedin.com/in/mario-marcolongo. Italy/EU citizen; US work authorization not established.
 
-Reviewed: 2026-10-24; evidence retains individual dates/limitations.
+Reviewed: 2026-10-25; evidence retains individual dates/limitations.

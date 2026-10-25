@@ -20,6 +20,12 @@ assert.ok(service.search('client training',20).results.some(result=>result.id===
 const credential=service.search('Copilot Studio').results.find(result=>result.kind==='credential');
 assert.equal(credential?.record.credentialId,'48386317F9899EB1');
 assert.equal(credential?.sourceUrl,profile.credentials[0].url);
+const jiraCredential=service.search('Jira Service Management',20).results.find(result=>result.kind==='credential'&&result.id==='atlassian-jsm-fundamentals-ai-2026');
+assert.equal(jiraCredential?.record.status,'Active');
+assert.equal(jiraCredential?.record.expiresAt,'2027-10-24');
+assert.equal(jiraCredential?.record.category,'Atlassian Certificate');
+assert.deepEqual(jiraCredential?.record.cvVariants,['technical']);
+assert.ok(jiraCredential?.sourceUrl.endsWith('/4ec41335733f49508b42ab3faab010d1'));
 assert.ok(service.search('Metropolia').results.some(result=>result.record.degreeAwarded===false));
 const org=service.search('followers',20).results.find(result=>result.id==='entropy-organization-context');assert.match(org.record.limitation,/not.*personal reach/);
 assert.throws(()=>service.search('Atlas',100));assert.throws(()=>service.search('x'.repeat(201)));assert.throws(()=>service.getResumes('executive'));
