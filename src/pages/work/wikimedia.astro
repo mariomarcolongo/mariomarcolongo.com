@@ -3,11 +3,13 @@ import Layout from '../../layouts/Layout.astro';
 import SiteNav from '../../components/SiteNav.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
 import cases from '../../../data/investigation-cases.js';
+import D from '../../../data/source.js';
 const examples = [cases.syndromicAutism, cases.giannino];
 const translations = [cases.danielaBortoletto, cases.shadowLibrary];
 const originalArticle = cases.freedomCities;
 const wikidata = cases.wikidataTerminology;
 const bibliography = cases.wikidataBibliography;
+const diagramReuse = D.presence.claims.find(claim => claim.id === 'biomedical-diagram-publication-reuse');
 ---
 
 <Layout title="Wikipedia, Wikidata & Wikimedia Commons — Mario Marcolongo">
@@ -65,17 +67,22 @@ const bibliography = cases.wikidataBibliography;
       ))}
     </section>
 
-    <section>
-      <h2>Scientific visual communication</h2>
+    <section id="diagram-reuse" aria-labelledby="diagram-reuse-title">
+      <h2 id="diagram-reuse-title">Scientific visual communication and publication reuse</h2>
       <figure>
         <img src="/media/work/wikimedia-clinical-overlap.svg" alt="Diagram of overlapping genes associated with clinical phenotypes" width="800" height="500" />
-        <figcaption>Original diagram published on Wikimedia Commons.</figcaption>
+        <figcaption>My original diagram, published on Wikimedia Commons on 10 February 2024 under CC BY-SA 4.0.</figcaption>
       </figure>
       <details>
         <summary>What does this diagram explain?</summary>
         <p>Intersecting regions show genes associated with more than one clinical phenotype. This helps readers see shared associations alongside the sourced explanation; it is not a diagnostic tool.</p>
       </details>
-      <a href="/work/scientific-visualizations">View the diagrams, data views and source trail ↗</a>
+      <p>My diagram was reused in Michele Di Salvo’s chapter “{diagramReuse.chapter.title}”, in <cite>{diagramReuse.chapter.book}</cite> ({diagramReuse.chapter.publisher}, 2024). The Commons reuse record also documents use across four Wikipedia language editions.</p>
+      <div class="source-links">
+        <a href={diagramReuse.original.sourceUrl}>Original diagram, references and licence ↗</a>
+        <a href={diagramReuse.sourceUrl}>Published book chapter ↗</a>
+        <a href="/work/scientific-visualizations">Diagrams, data views and source trail ↗</a>
+      </div>
     </section>
 
     <section id={bibliography.id} aria-labelledby="bibliography-heading">
