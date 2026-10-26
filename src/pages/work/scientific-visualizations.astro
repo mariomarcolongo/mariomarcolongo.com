@@ -5,10 +5,11 @@ import SiteFooter from '../../components/SiteFooter.astro';
 import D from '../../../data/source.js';
 import G from '../../../data/visualization-gallery.json';
 const P = D.presence;
+const diagramReuse = P.claims.find(claim => claim.id === 'biomedical-diagram-publication-reuse');
 const featuredCases = [
   {title:'Mapping shark encounters',label:'Entropy for Life · Tableau',image:'/media/work/entropy-shark-map.webp',text:'From source collection to an interactive map of shark attacks in Europe and the Mediterranean.',links:[{label:'Explore the map and article',href:'https://entropyforlife.it/2024/07/24/mappa-attacchi-squali-nel-mar-mediterraneo-e-in-europa/'},{label:'Related: white-shark sizes',href:'https://entropyforlife.it/2024/08/02/lunghezza-squali-bianchi/'}]},
   {title:'Following Europe’s hemp cultivation',label:'Eurostat data · Flourish',image:'/media/visualizations/flourish-story-2720661.webp',text:'Seven linked views of cultivation, harvest and production, from European comparisons to Italian trends.',links:[{label:'Explore the seven-part story',href:'https://public.flourish.studio/story/2720661/'},{label:'Inspect the Eurostat source',href:'https://ec.europa.eu/eurostat/databrowser/view/APRO_CPSH1__custom_5830898/default/table?lang=en'}]},
-  {title:'Making gene overlap visible',label:'Biomedical diagram · Wikimedia Commons',image:'/media/work/wikimedia-clinical-overlap.svg',text:'An original vector diagram connecting genes and overlapping clinical phenotypes, with references and a public reuse record.',links:[{label:'Explore the diagram and references',href:'https://commons.wikimedia.org/wiki/File:Overlapping_clinical_phenotypes_in_genes_associated_with_monogenic_forms_of_autism_spectrum_disorder_(ASD),_dystonia,_epilepsy_and_schizophrenia.svg'}]}
+  {title:'Making gene overlap visible',label:'Biomedical diagram · Wikimedia Commons',image:'/media/work/wikimedia-clinical-overlap.svg',text:'My original vector diagram connects genes and overlapping clinical phenotypes, with references and a public reuse record.',reuseText:'Reused in a 2024 Palgrave Macmillan / Springer Nature book chapter and across four Wikipedia language editions.',links:[{label:'Original diagram and references',href:diagramReuse.original.sourceUrl},{label:'Published book chapter',href:diagramReuse.sourceUrl},{label:'Publication and reuse details',href:'/work/wikimedia#diagram-reuse'}]}
 ];
 const first = ['tableau-1','flourish-story-2238492','flourish-visualisation-18547994','flourish-visualisation-19966318','original-71','original-69'];
 const items = [...first.map(id=>G.items.find(v=>v.id===id)).filter(Boolean),...G.items.filter(v=>!first.includes(v.id))];
@@ -30,7 +31,7 @@ const topics = [...new Set(items.map(v=>v.topic))].sort();
       <div class="visual-case-grid">
         {featuredCases.map(c=><article>
           <a class="visual-case-image" href={c.links[0].href} aria-label={`Explore ${c.title}`}><img src={c.image} alt={`Preview: ${c.title}. ${c.text}`} width="800" height="520" loading="eager" decoding="async"/></a>
-          <div class="visual-case-copy"><p class="eyebrow">{c.label}</p><h3><a href={c.links[0].href}>{c.title}</a></h3><p>{c.text}</p><div class="visual-case-links">{c.links.map(link=><a href={link.href}>{link.label} <span aria-hidden="true">↗</span></a>)}</div></div>
+          <div class="visual-case-copy"><p class="eyebrow">{c.label}</p><h3><a href={c.links[0].href}>{c.title}</a></h3><p>{c.text}</p>{c.reuseText && <p>{c.reuseText}</p>}<div class="visual-case-links">{c.links.map(link=><a href={link.href}>{link.label} <span aria-hidden="true">↗</span></a>)}</div></div>
         </article>)}
       </div>
     </section>
