@@ -1244,8 +1244,9 @@ function createMarioDossier() {
       "Test cross-browser behavior and language fallback; reproduce defects, track GitHub changes and retest. Related localisations: Telegram bot and QCAE interface."
     ],
     "wikimedia": [
-      "Review citations, reconcile conflicting sources and improve structured metadata; create sourced scientific explanations and diagrams.",
-      "Create sourced scientific explanations and diagrams, with attributable edits and public artifacts."
+      "Synthesize biomedical literature, verify citations and create sourced diagrams; improve English and Italian terminology and descriptions in Wikidata.",
+      "Translate scientific and technical articles from English into Italian; research terminology, check citations and improve Wikidata descriptions.",
+      "Review citations and reconcile conflicting sources; check biomedical terminology, structured metadata and source provenance through attributable public revisions."
     ],
     "padua": [
       "Led or co-facilitated approximately 4-5 remote focus groups under Marta Panzeri (DPSS); supported literature research, recruitment, accessible participation and technical preparation."
@@ -1270,6 +1271,10 @@ function createMarioDossier() {
       { "label": "terminology glossary", "url": "https://github.com/notandia/browser-extension/blob/a3d00fac6c48eecaffedd08a59a0ba0828a0662e/docs/LOCALIZATION_IT.md" },
       { "label": "Telegram bot", "url": "/work/telegram" },
       { "label": "QCAE interface", "url": "/work/qcae" }
+    ],
+    "wikimedia": [
+      { "label": "English into Italian", "url": "/work/wikimedia#translation-examples" },
+      { "label": "Wikidata", "url": "/work/wikimedia#wikidata-terminology" }
     ],
     "padua": [{ "label": "Marta Panzeri", "url": "https://dpss.unipd.it/en/node/239" }]
   },
@@ -1311,10 +1316,11 @@ function createMarioDossier() {
     {
       "name": "Wikipedia, Wikidata & Wikimedia Commons",
       "period": "Since 2018 · Public contributions",
-      "text": "Citation review, source reconciliation, structured-data editing and scientific visualizations.",
+      "text": "English-to-Italian translation, citation review, multilingual metadata and scientific visualizations.",
       "route": "/work/wikimedia",
       "details": [
-        "Review citations, reconcile conflicting records and improve structured metadata across Wikipedia, Wikidata and Commons.",
+        "Translate and adapt English-language scientific and technical articles into Italian, researching terminology and checking sources.",
+        "Review citations, reconcile conflicting records and improve English and Italian Wikidata labels, descriptions and aliases.",
         "Create sourced biomedical explanations, original vector diagrams, charts and maps; maintain attributable revision and source trails."
       ]
     },

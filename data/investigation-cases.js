@@ -7,17 +7,23 @@ const INVESTIGATION_CASES = {
     work: [
       "Built and maintained a sourced privacy section using independent reporting, peer-reviewed genomic-risk analysis, archived company pages, privacy policies, SEC filings and litigation coverage.",
       "Reconciled the historical BGI sequencing relationship with later company statements about European sequencing, preserving dates rather than presenting different operating periods as simultaneous facts.",
+      "Reconstructed the 2021 acquisition through ProPhase Precision Medicine and the separate formation and launch of DNA Complete in 2024, comparing company announcements, a 2025 SEC registration statement and an annual report.",
+      "Created separate Wikidata records for ProPhase Labs and DNA Complete in October 2025, adding dated parent relationships and source references. Kept DNA Complete distinct from Nebula and represented their sequencing relationship separately from corporate ownership.",
       "Expanded the third-party-data analysis using a peer-reviewed risk paper and an archived privacy policy, while distinguishing documented policy language from hypotheses about downstream data use.",
-      "Added later corporate and litigation developments, removed duplicative or promotional citations and maintained neutral sourcing during a contentious public editorial process—including requesting evidence for unsupported criticism."
+      "Added later litigation developments, removed duplicative or promotional citations and maintained neutral sourcing during a contentious public editorial process—including requesting evidence for unsupported criticism."
     ],
-    demonstrates: ["Corporate-source reconciliation", "Privacy-policy analysis", "Archived web research", "Litigation tracking", "Content-governance judgment"],
-    limitations: "The linked records verify attributable edits and public sources. The case does not independently conclude that Nebula sold genetic data, violated the law or that any participating editor was affiliated with the company. Lawsuit allegations remain allegations, and the procedural record must be updated as the case changes.",
+    demonstrates: ["Corporate-source reconciliation", "Corporate entity mapping", "SEC filing research", "Referenced structured data", "Privacy-policy analysis", "Archived web research", "Litigation tracking", "Content-governance judgment"],
+    limitations: "The linked records verify attributable edits and public sources. The corporate relationships describe the historical disclosures reviewed in 2022 and 2025. The case does not independently conclude that Nebula sold genetic data, violated the law or that any participating editor was affiliated with the company. Lawsuit allegations remain allegations, and the procedural record must be updated as the case changes.",
     links: [
-      { label: "Inspect the current privacy section", href: "https://en.wikipedia.org/wiki/Nebula_Genomics#Privacy_concerns" },
-      { label: "Inspect attributed page-edit history", href: "https://sigma.toolforge.org/usersearch.py?name=Digressivo&page=Nebula+Genomics&server=enwiki&max=" },
+      { label: "Inspect the current collaborative privacy section", href: "https://en.wikipedia.org/wiki/Nebula_Genomics#Privacy_concerns" },
       { label: "Inspect the 2024 third-party-data diff", href: "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1232715097" },
       { label: "Inspect the 2025 corporate-record diff", href: "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1322371890" },
-      { label: "Inspect the 2025 litigation diff", href: "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1322390519" }
+      { label: "Inspect the 2022 acquisition diff", href: "https://en.wikipedia.org/w/index.php?diff=1072662056&oldid=1072570463" },
+      { label: "Inspect my ProPhase Labs structured record", href: "https://www.wikidata.org/w/index.php?oldid=2422680546" },
+      { label: "Inspect my DNA Complete entity and relationship record", href: "https://www.wikidata.org/w/index.php?oldid=2422565854" },
+      { label: "Inspect the 2025 litigation diff", href: "https://en.wikipedia.org/w/index.php?diff=prev&oldid=1322390519" },
+      { label: "Compare the October 2025 SEC registration statement", href: "https://www.sec.gov/Archives/edgar/data/868278/000149315225018819/forms-1.htm" },
+      { label: "Inspect attributed page-edit history", href: "https://sigma.toolforge.org/usersearch.py?name=Digressivo&page=Nebula+Genomics&server=enwiki&max=" }
     ]
   },
   giannino: {
@@ -172,6 +178,75 @@ const INVESTIGATION_CASES = {
       { label: "Inspect the complete revision history", href: "https://it.wikipedia.org/w/index.php?title=Biblioteca_ombra&action=history" }
     ]
   },
+  wikidataTerminology: {
+    id: "wikidata-terminology",
+    title: "Wikidata: bilingual terminology and descriptions",
+    context: "My volunteer Wikidata work includes English and Italian terminology and descriptions for technical and biomedical records. These examples show the text contributed through my Digressivo account and the revisions that establish attribution.",
+    examples: [
+      {
+        id: "wikidata-search-history",
+        title: "Search history: technical terminology",
+        sourceLabel: "Existing English description",
+        sourceText: "log of past queries made by a user in an information system",
+        addedLabel: "Italian description I added",
+        addedText: "registro delle query di ricerca passate di un utente",
+        contribution: "Added an Italian description, label and synonyms so the software concept can be identified and understood in Italian.",
+        links: [
+          { label: "Inspect my Italian-description edit", href: "https://www.wikidata.org/w/index.php?diff=2381824821" },
+          { label: "Inspect my Italian-label edit", href: "https://www.wikidata.org/w/index.php?diff=2381821997" },
+          { label: "Inspect the first Italian-synonym edit", href: "https://www.wikidata.org/w/index.php?diff=2381822000" },
+          { label: "Inspect the additional Italian synonym", href: "https://www.wikidata.org/w/index.php?diff=2381822054" }
+        ]
+      },
+      {
+        id: "wikidata-syndromic-autism",
+        title: "Syndromic autism: biomedical terminology",
+        sourceLabel: "Existing English label",
+        sourceText: "syndromic autism",
+        addedLabel: "Italian label I added",
+        addedText: "autismo sindromico",
+        contribution: "Added the Italian name to a record with an existing English label, aligning the biomedical terminology across languages.",
+        links: [
+          { label: "Compare the record before and after my Italian-label edit", href: "https://www.wikidata.org/w/index.php?diff=2300124758&oldid=2300123595" }
+        ]
+      },
+      {
+        id: "wikidata-clinical-registry",
+        title: "Clinical-trial volunteer registry: bilingual descriptions",
+        sourceLabel: "English description I wrote",
+        sourceText: "clinical trials volunteer registry by the Centro Ricerche Cliniche di Verona",
+        addedLabel: "Italian description I added",
+        addedText: "registro dei volontari per studi clinici del Centro Ricerche Cliniche di Verona",
+        contribution: "Wrote corresponding English and Italian descriptions identifying the registry and its research centre.",
+        links: [
+          { label: "Inspect my Italian-description edit", href: "https://www.wikidata.org/w/index.php?diff=2470316295" },
+          { label: "Read the preceding English-description revision", href: "https://www.wikidata.org/w/index.php?oldid=2470316190" }
+        ]
+      }
+    ],
+    limitations: "These are attributable volunteer terminology and metadata contributions to a collaborative public knowledge base. They complement the source-verification work in my Yourself to Science directory.",
+    links: [
+      { label: "Inspect my Wikidata contributions", href: "https://www.wikidata.org/wiki/Special:Contributions/Digressivo" }
+    ]
+  },
+  wikidataBibliography: {
+    id: "wikidata-bibliography",
+    category: "Bibliographic research & structured metadata",
+    title: "Wikidata: organising a book and its critical literature",
+    context: "In July and August 2025, I organised bibliographic records around Against Intellectual Monopoly, linking the book to five reviews and critical discussions.",
+    work: [
+      "Created the book record and four review or discussion records, adding publication metadata, source URLs and identifiers including DOIs and an SSRN record.",
+      "Added links from reviews to the book and from the book to sources discussing it, including an existing article record."
+    ],
+    demonstrates: ["Bibliographic research", "Source selection", "Publication metadata", "Identifier checking", "Structured-data relationships"],
+    limitations: "These are attributable contributions to a collaborative bibliography. The linked material includes reviews and critical discussions with different publication statuses; current records may include later edits.",
+    links: [
+      { label: "Inspect my book and bibliography revision", href: "https://www.wikidata.org/w/index.php?oldid=2382147159" },
+      { label: "Inspect my critical-review record", href: "https://www.wikidata.org/w/index.php?oldid=2381931712" },
+      { label: "Inspect my link to an existing critical discussion", href: "https://www.wikidata.org/w/index.php?diff=2398091717" },
+      { label: "Inspect my critical-analysis review relationship", href: "https://www.wikidata.org/w/index.php?diff=2398091105" }
+    ]
+  },
   pencil: {
     id: "pencil",
     category: "Additional provenance & rights example",
@@ -204,6 +279,7 @@ INVESTIGATION_CASES.primary = [
 INVESTIGATION_CASES.supporting = [
   INVESTIGATION_CASES.danielaBortoletto,
   INVESTIGATION_CASES.shadowLibrary,
+  INVESTIGATION_CASES.wikidataBibliography,
   INVESTIGATION_CASES.pencil
 ];
 
