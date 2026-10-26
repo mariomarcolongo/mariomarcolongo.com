@@ -1065,10 +1065,11 @@
     {
       "name": "Wikipedia, Wikidata & Wikimedia Commons",
       "period": "Since 2018 · Public contributions",
-      "text": "Citation review, source reconciliation, structured-data editing and scientific visualizations.",
+      "text": "English-to-Italian translation, citation review, multilingual metadata and scientific visualizations.",
       "route": "/work/wikimedia",
       "details": [
-        "Review citations, reconcile conflicting records and improve structured metadata across Wikipedia, Wikidata and Commons.",
+        "Translate and adapt English-language scientific and technical articles into Italian, researching terminology and checking sources.",
+        "Review citations, reconcile conflicting records and improve English and Italian Wikidata labels, descriptions and aliases.",
         "Create sourced biomedical explanations, original vector diagrams, charts and maps; maintain attributable revision and source trails."
       ]
     },
