@@ -100,8 +100,8 @@ function createMarioDossier() {
   "schemaVersion": 1,
   "name": "Mario Marcolongo",
   "canonicalUrl": "https://mariomarcolongo.com",
-  "reviewedAt": "2026-10-25",
-  "reviewScope": "Issued Atlassian credential added to the previously reviewed consulting, technical-delivery and CV record; individual evidence retains its own dated review.",
+  "reviewedAt": "2026-10-26",
+  "reviewScope": "Verified biomedical-diagram publication reuse added to the previously reviewed Wikimedia, consulting, technical-delivery and CV record; individual evidence retains its own dated review.",
   "outputs": PUBLIC_OUTPUTS,
   "credentials": [COPILOT_CREDENTIAL, ATLASSIAN_JSM_CREDENTIAL],
   "email": "me@mariomarcolongo.com",
@@ -393,6 +393,37 @@ function createMarioDossier() {
     "reviewedAt": "2026-10-02"
   },
   "claims": [
+    {
+      "id": "biomedical-diagram-publication-reuse",
+      "text": "Mario's original biomedical diagram was reused in a Palgrave Macmillan / Springer Nature book chapter and across four Wikipedia language editions.",
+      "sourceUrl": "https://doi.org/10.1007/978-3-031-68338-1_10",
+      "sourceOwner": "publisher_and_contributor",
+      "evidenceType": "published_figure_reuse",
+      "engagementType": "volunteer_contribution",
+      "original": {
+        "title": "Overlapping clinical phenotypes in genes associated with monogenic forms of autism spectrum disorder (ASD), dystonia, epilepsy and schizophrenia",
+        "author": "Mario Marcolongo",
+        "publishedAt": "2024-02-10",
+        "license": "CC BY-SA 4.0",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Overlapping_clinical_phenotypes_in_genes_associated_with_monogenic_forms_of_autism_spectrum_disorder_(ASD),_dystonia,_epilepsy_and_schizophrenia.svg"
+      },
+      "chapter": {
+        "title": "Genetic Research on Autism: From the ‘Autism Gene’ to the ‘Genetic Susceptibility Base’",
+        "author": "Michele Di Salvo",
+        "book": "Autism Research between Psychology and Neuroscience",
+        "publisher": "Palgrave Macmillan (Springer Nature)",
+        "firstOnline": "2024-10-16",
+        "pages": "241–261",
+        "doi": "10.1007/978-3-031-68338-1_10",
+        "sourceUrl": "https://link.springer.com/chapter/10.1007/978-3-031-68338-1_10"
+      },
+      "wikipediaReuse": { "observedAt": "2026-10-15", "languageEditions": 4, "articleCount": 7 },
+      "sourceNote": "The Commons record establishes the original diagram's authorship, date and licence. The publisher page establishes the chapter metadata. Visual comparison of the chapter figure with the Commons original confirmed correspondence on 26 October 2026.",
+      "limitation": "This records reuse of the graphic in a chapter authored by Michele Di Salvo; scientific and editorial conclusions remain those of the chapter author.",
+      "observedAt": "2026-10-26",
+      "lastReviewedAt": "2026-10-26",
+      "visibility": "public"
+    },
     {
       "id": "entropy-book-acknowledgement",
       "includeInCompactCv": false,
@@ -1050,8 +1081,8 @@ function createMarioDossier() {
       "hook": "Making a relationship easier to inspect",
       "route": "/work/scientific-visualizations",
       "status": "Public diagrams and data views",
-      "text": "Scientific diagrams, charts and maps across Wikimedia Commons, Tableau Public and Flourish, with links to original files and interactive views.",
-      "claimIds": [],
+      "text": "Scientific diagrams, charts and maps across Wikimedia Commons, Tableau Public and Flourish, including an original biomedical diagram reused in a Palgrave Macmillan / Springer Nature book chapter.",
+      "claimIds": ["biomedical-diagram-publication-reuse"],
       "image": "/media/work/wikimedia-clinical-overlap.svg",
       "alt": "Diagram of overlapping genes associated with clinical phenotypes",
       "links": [
@@ -1075,7 +1106,7 @@ function createMarioDossier() {
         },
         {
           "heading": "Overlapping genes and clinical phenotypes",
-          "text": "The diagram shows genes associated with overlapping clinical phenotypes, using intersecting regions to make shared associations visible. It is a sourced visual explanation; the original Wikimedia file and its references provide the scientific context."
+          "text": "The diagram shows genes associated with overlapping clinical phenotypes, using intersecting regions to make shared associations visible. Published on Wikimedia Commons in February 2024 under CC BY-SA 4.0, it was reused in Michele Di Salvo's Genetic Research on Autism chapter (Palgrave Macmillan / Springer Nature, October 2024). The Commons original and its references provide the scientific context."
         },
         {
           "heading": "Data views",
@@ -1244,7 +1275,7 @@ function createMarioDossier() {
       "Test cross-browser behavior and language fallback; reproduce defects, track GitHub changes and retest. Related localisations: Telegram bot and QCAE interface."
     ],
     "wikimedia": [
-      "Synthesize biomedical literature, verify citations and create sourced diagrams; improve English and Italian terminology and descriptions in Wikidata.",
+      "Created an original biomedical diagram reused in a Springer Nature book chapter and four Wikipedia language editions; improve bilingual Wikidata terminology.",
       "Translate scientific and technical articles from English into Italian; research terminology, check citations and improve Wikidata descriptions.",
       "Review citations and reconcile conflicting sources; check biomedical terminology, structured metadata and source provenance through attributable public revisions."
     ],
@@ -1273,6 +1304,7 @@ function createMarioDossier() {
       { "label": "QCAE interface", "url": "/work/qcae" }
     ],
     "wikimedia": [
+      { "label": "Springer Nature book chapter", "url": "/work/wikimedia#diagram-reuse" },
       { "label": "English into Italian", "url": "/work/wikimedia#translation-examples" },
       { "label": "Wikidata", "url": "/work/wikimedia#wikidata-terminology" }
     ],
@@ -1321,7 +1353,7 @@ function createMarioDossier() {
       "details": [
         "Translate and adapt English-language scientific and technical articles into Italian, researching terminology and checking sources.",
         "Review citations, reconcile conflicting records and improve English and Italian Wikidata labels, descriptions and aliases.",
-        "Create sourced biomedical explanations, original vector diagrams, charts and maps; maintain attributable revision and source trails."
+        "Create sourced biomedical explanations, vector diagrams, charts and maps; my gene-overlap diagram was reused in a Palgrave Macmillan / Springer Nature book chapter."
       ]
     },
     {
@@ -1381,7 +1413,7 @@ function createMarioDossier() {
     },
     {
       "title": "Brain Disorder Gene Overlap",
-      "text": "Original vector diagram showing genes associated with overlapping clinical phenotypes. On 15 October 2026, the Commons reuse record listed it in seven Wikipedia articles across four language editions, plus an English Wikiversity learning page. The original file contains authorship, references and the current reuse list.",
+      "text": "Original vector diagram showing genes associated with overlapping clinical phenotypes, reused in Michele Di Salvo's 2024 Palgrave Macmillan / Springer Nature book chapter. On 15 October 2026, the Commons reuse record also listed it in seven Wikipedia articles across four language editions, plus an English Wikiversity learning page. The Commons original records authorship, references and licence; the publication-reuse claim links the chapter.",
       "url": "https://commons.wikimedia.org/wiki/File:Overlapping_clinical_phenotypes_in_genes_associated_with_monogenic_forms_of_autism_spectrum_disorder_(ASD),_dystonia,_epilepsy_and_schizophrenia.svg",
       "platform": "Wikimedia Commons",
       "image": "/media/work/wikimedia-clinical-overlap.svg"
