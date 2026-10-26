@@ -134,3 +134,12 @@ Validation: full build and generated-output/privacy/routing checks; the technica
 Validation: full build and agent-discovery checks passed; 84 route/viewport checks and local verification of 11 routes and 87 exact assets passed. The revised technical PDF remains one page with 20 links, and its layout was visually inspected. A separate review confirmed the title, dates, verification code, scope and absence of private account identifiers from the public change.
 
 The remote rendering check exposed a navigation race in the existing no-JavaScript CV-link test. The check now waits for the clicked link's document navigation before reading its title; no assertion was removed or relaxed.
+
+
+## Wikimedia corporate research and bibliography — 26 October 2026
+
+Expanded the existing Nebula case with acquisition and company-formation chronology, separate ProPhase Labs and DNA Complete records, and the distinction between ownership and sequencing-service relationships. Attributed Wikipedia and Wikidata revisions and the SEC filing remain accessible through the source links and an expandable list. Historical source work is distinguished from a current corporate-status audit; the evidence note dates the fresh Nebula review separately from the older cases.
+
+Added a compact Wikidata bibliography example linking Against Intellectual Monopoly to five reviews and critical discussions. The copy describes created records, publication identifiers, source references and relationships while preserving contribution attribution and differing publication statuses. The existing CV statements already cover source review and structured metadata; this addition supplies concrete portfolio evidence.
+
+Validation: the full configured build sequence passed, including stale-copy, public routing, Vite interop, generated dossiers, agent discovery/service, Astro, generated-output/privacy, structured-data and output-provenance checks. After the final copy edit, regenerated Astro output and repeated the generated-output, structured-data and output checks. Targeted browser verification passed eight route/viewport combinations for /work/wikimedia and /investigations at 1440, 768, 390 and 320 pixels, plus keyboard-operated source disclosures, no-JavaScript access, local links, duplicate IDs, overflow and page errors. Inspected desktop and mobile captures. An independent review verified contribution attribution and retained bibliography relationships. Local only; no commit, push or deployment.
