@@ -27,7 +27,7 @@ const searchTitles = {
     <div class="source-links">{p.links.map(l=><a href={l.url}>{l.label}</a>)}</div>
     {isAiEvaluation&&p.sections.map(s=>s.collapsed?<details><summary>{s.heading}</summary><p><InlineEvidence text={s.text} links={s.links}/></p></details>:<section><h2>{s.heading}</h2><p><InlineEvidence text={s.text} links={s.links}/></p></section>)}
     {isAiEvaluation&&<GraySwanCertificates/>}
-    {isAiEvaluation&&<section id="syntony"><h2>{N.organization} — {N.name}</h2><p class="meta">{N.role} · {N.period}</p><p>{N.summary}</p><p>{N.scope}</p><a href={N.sourceUrl}>About the network ↗</a></section>}
+    {isAiEvaluation&&<section id="syntony"><h2>{N.organization} — {N.name}</h2><p class="meta">{N.role} · {N.period}</p><p>{N.summary}</p><p>{N.scope}</p><div class="source-links"><a href={N.sourceUrl}>About the network ↗</a>{N.publicAcknowledgementUrl&&<a href={N.publicAcknowledgementUrl}>Nathan Heath’s public acknowledgement ↗</a>}</div></section>}
     {id==='entropy'&&<BookAcknowledgement/>}
     <PublishedArtifacts id={id}/>
     {p.image&&!['entropy','atlas','notandia','yourself-to-science','hypermandala'].includes(id)&&<figure><a href={p.image}><img src={p.image} alt={p.alt} width={p.imageWidth||800} height={p.imageHeight||450}/></a><figcaption>{p.name} · public artifact; source links above.</figcaption></figure>}
