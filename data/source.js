@@ -191,8 +191,10 @@ function createMarioDossier() {
     "role": "Member",
     "period": "Oct 2026–Present",
     "startDate": "2026-10-03",
-    "reviewedAt": "2026-10-10",
+    "reviewedAt": "2026-10-31",
     "sourceUrl": "https://www.syntonyresearch.ai/work/trusted-red-team/",
+    "publicAcknowledgementUrl": "https://www.linkedin.com/posts/nathanheath92_congratulations-to-mario-marcolongo-one-ugcPost-7521713825960841216-cBam/",
+    "publicAcknowledgementObservedAt": "2026-10-31",
     "summary": "Member of Syntony Research’s Trusted Red Team Network, a project-based network of independent specialists in adversarial AI evaluation.",
     "scope": "Network membership; scope, responsibilities and compensation are agreed for individual engagements."
   },
@@ -253,6 +255,44 @@ function createMarioDossier() {
       {"name": "Breaking Ties", "displayedRank": 125, "participants": 276, "breaks": 4, "status": "dated_profile_display", "sourceUrl": "https://app.grayswan.ai/arena/challenge/breaking-ties-2026"}
     ],
     "scope": "Dated platform-recorded testing activity. Arena and Proving Ground are separate systems. Active-challenge figures are provisional. Lucky Break prizes are awarded by raffle, not the displayed profile rank; no prize is claimed. The Proving Ground area counters sum to 126 while the displayed total is 127."
+  },
+  "aiEvaluationFinalResult": {
+    "name": "Lucky Break: Level Up (Medium Challenge)",
+    "status": "Completed competition",
+    "displayDate": "29 October 2026",
+    "observedAt": "2026-10-29",
+    "reviewedAt": "2026-10-31",
+    "challengeStartedAt": "2026-10-09",
+    "challengeEndedAt": "2026-10-14",
+    "rank": 49,
+    "participants": 390,
+    "recordedBreaks": 15,
+    "sourceUrl": "https://app.grayswan.ai/arena/challenge/lucky-break-level-up",
+    "profileUrl": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
+    "evidencePath": "/evidence/gray-swan-lucky-break-2026-10-29/",
+    "transcriptionPath": "/evidence/gray-swan-lucky-break-2026-10-29.json",
+    "captures": [
+      {
+        "originalImage": "/evidence/gray-swan-lucky-break-leaderboard-2026-10-29.jpg",
+        "capturedAt": "2026-10-29",
+        "originalDimensions": [
+          420,
+          639
+        ],
+        "originalSha256": "564e3f55f8ec12264e9c2341ea264f9518707ef137eef16cee6b649d50293bea"
+      },
+      {
+        "originalImage": "/evidence/gray-swan-lucky-break-ranking-card-2026-10-28.jpg",
+        "capturedAt": "2026-10-28",
+        "originalDimensions": [
+          1158,
+          125
+        ],
+        "originalSha256": "f7ff9ef8c58be5198b307288a04665d2babfafc10c73cf7000bac24aea725b95"
+      }
+    ],
+    "captureContext": "Original clipped screenshots from the account holder’s authenticated Gray Swan session: the leaderboard captures Mario Marcolongo at rank 49 with 15 breaks on 29 October; the profile challenge card captures rank 49, 390 participants and 15 breaks on 28 October. No private prompts, outputs or correspondence are included.",
+    "scope": "Final competition placing and platform-recorded breaks. Separate from the intermediate training certificate, global Arena totals and Proving Ground results. Platform counts do not independently reproduce every underlying result or establish a general failure rate. Competition prizes were awarded by raffle; no prize is claimed."
   },
   "aiEvaluationPractice": {
     "reviewedAt": "2026-10-14",
@@ -576,6 +616,21 @@ function createMarioDossier() {
       "visibility": "public"
     },
     {
+      "id": "gray-swan-lucky-break-final",
+      "includeInCompactCv": false,
+      "text": "Lucky Break: Level Up final result: 49th of 390 participants, with 15 platform-recorded breaks.",
+      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-lucky-break-2026-10-29/",
+      "sourceOwner": "Gray Swan Arena",
+      "evidenceType": "dated_platform_leaderboard",
+      "engagementType": "independent_evaluation",
+      "limitation": "Final competition placing and platform-recorded breaks. Separate from the intermediate training certificate, global Arena totals and Proving Ground results. Platform counts do not independently reproduce every underlying result or establish a general failure rate. Competition prizes were awarded by raffle; no prize is claimed.",
+      "startDate": "2026-10-09",
+      "endDate": "2026-10-14",
+      "observedAt": "2026-10-29",
+      "lastReviewedAt": "2026-10-31",
+      "visibility": "public"
+    },
+    {
       "id": "gray-swan-october-13",
       "text": "Dated Arena record: 40 global unique breaks, 1,430 points and 415 submissions on 13 October 2026.",
       "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-2026-10-13/",
@@ -594,16 +649,17 @@ function createMarioDossier() {
       "id": "syntony-network-membership",
       "text": "Member of Syntony Research’s Trusted Red Team Network since October 2026.",
       "compactLimitation": "Project terms agreed separately.",
-      "compactSourceNote": "Syntony acceptance; disclosure authorised",
-      "sourceNote": "Membership confirmed by Syntony’s private acceptance communication. Public disclosure of personal membership has been authorised in writing. The private records are retained and are not republished.",
-      "sourceOwner": "Syntony Research",
-      "evidenceType": "private_organizational_acceptance",
+      "compactSourceNote": "Public acknowledgement from Nathan Heath",
+      "sourceUrl": "https://www.linkedin.com/posts/nathanheath92_congratulations-to-mario-marcolongo-one-ugcPost-7521713825960841216-cBam/",
+      "sourceNote": "Nathan Heath publicly acknowledged Mario’s membership of Syntony’s Trusted Red Team Network. The earlier private acceptance was reviewed on 10 October 2026; that acceptance and written permission to disclose membership are retained without republication.",
+      "sourceOwner": "Nathan Heath / Syntony Research",
+      "evidenceType": "public_individual_acknowledgement",
       "engagementType": "network_membership",
-      "limitation": "Establishes network membership. Project participation, responsibilities and compensation depend on separately agreed engagements. The organization’s public network page describes its model; it does not verify individual members or establish completed client work.",
+      "limitation": "Nathan Heath’s public acknowledgement supports individual network membership. It does not establish Syntony employment or completed paid engagements; project participation, responsibilities and compensation are agreed separately.",
       "startDate": "2026-10-03",
       "endDate": null,
-      "observedAt": "2026-10-10",
-      "lastReviewedAt": "2026-10-10",
+      "observedAt": "2026-10-31",
+      "lastReviewedAt": "2026-10-31",
       "visibility": "public"
     },
     {
@@ -945,20 +1001,25 @@ function createMarioDossier() {
       "hook": "Testing where model behavior breaks down",
       "route": "/ai-evaluation",
       "status": "Independent testing & network membership",
-      "reviewedAt": "2026-10-14",
+      "reviewedAt": "2026-10-31",
       "text": "I investigate unexpected AI behavior, check whether it recurs, and document what the evidence supports. My independent testing spans chat, image, agent and indirect challenges, supported by scientific fact-checking and source investigations.",
       "claimIds": [
+        "gray-swan-lucky-break-final",
         "gray-swan-october-13",
         "gray-swan-september-30",
         "gray-swan-july-29",
         "gray-swan-october-certificates",
         "syntony-network-membership"
       ],
-      "image": "/media/work/gray-swan-profile-2026-10-13-detail.jpg",
-      "imageWidth": 1184,
-      "imageHeight": 1040,
-      "alt": "Public Gray Swan profile captured on 13 October 2026: 40 Arena unique breaks, 1,430 points, 415 submissions, and separate Proving Ground results",
+      "image": "/evidence/gray-swan-lucky-break-leaderboard-2026-10-29.jpg",
+      "imageWidth": 420,
+      "imageHeight": 639,
+      "alt": "Original Gray Swan leaderboard captured 29 October 2026: Mario Marcolongo at rank 49 with 15 recorded breaks",
       "links": [
+        {
+          "label": "Final Lucky Break result · 49th of 390",
+          "url": "/evidence/gray-swan-lucky-break-2026-10-29/"
+        },
         {
           "label": "Training & participation certificates",
           "url": "https://mariomarcolongo.com/evidence/gray-swan-certificates-2026-10-14/"
@@ -982,11 +1043,16 @@ function createMarioDossier() {
       ],
       "sections": [
         {
+          "heading": "Lucky Break: Level Up — final result",
+          "text": "Finished 49th out of 390 participants, with 15 platform-recorded breaks. The competition ran 9–14 October 2026; leaderboard captured 29 October. The intermediate training certificate below is a separate record."
+        },
+        {
           "heading": "How I investigate",
           "text": `${AI_EVALUATION_METHODS} These observations guide further testing; I distinguish recurring behavior from explanations that still need evidence. Scientific fact-checking with Entropy for Life and Wikimedia source investigations bring the same care to tracing claims and checking sources.`
         },
         {
-          "heading": "Testing record · 13 October 2026",
+          "heading": "Earlier testing record · 13 October 2026",
+          "collapsed": true,
           "text": "Gray Swan Arena displayed 40 global unique breaks, 1,430 points and 415 submissions, with global rank #426. The September record had 31 unique breaks. Proving Ground separately displayed #81, top 5%, and 127 total breaks across chat, image, agent and indirect challenges. These are dated platform-reported results; rankings can change."
         },
         {
