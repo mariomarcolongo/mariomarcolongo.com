@@ -1,0 +1,38 @@
+{
+  "name": "Lucky Break: Level Up (Medium Challenge)",
+  "status": "Completed competition",
+  "displayDate": "29 October 2026",
+  "observedAt": "2026-10-29",
+  "reviewedAt": "2026-10-31",
+  "challengeStartedAt": "2026-10-09",
+  "challengeEndedAt": "2026-10-14",
+  "rank": 49,
+  "participants": 390,
+  "recordedBreaks": 15,
+  "sourceUrl": "https://app.grayswan.ai/arena/challenge/lucky-break-level-up",
+  "profileUrl": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
+  "evidencePath": "/evidence/gray-swan-lucky-break-2026-10-29/",
+  "transcriptionPath": "/evidence/gray-swan-lucky-break-2026-10-29.json",
+  "captures": [
+    {
+      "originalImage": "/evidence/gray-swan-lucky-break-leaderboard-2026-10-29.jpg",
+      "capturedAt": "2026-10-29",
+      "originalDimensions": [
+        420,
+        639
+      ],
+      "originalSha256": "564e3f55f8ec12264e9c2341ea264f9518707ef137eef16cee6b649d50293bea"
+    },
+    {
+      "originalImage": "/evidence/gray-swan-lucky-break-ranking-card-2026-10-28.jpg",
+      "capturedAt": "2026-10-28",
+      "originalDimensions": [
+        1158,
+        125
+      ],
+      "originalSha256": "f7ff9ef8c58be5198b307288a04665d2babfafc10c73cf7000bac24aea725b95"
+    }
+  ],
+  "captureContext": "Original clipped screenshots from the account holder’s authenticated Gray Swan session: the leaderboard captures Mario Marcolongo at rank 49 with 15 breaks on 29 October; the profile challenge card captures rank 49, 390 participants and 15 breaks on 28 October. No private prompts, outputs or correspondence are included.",
+  "scope": "Final competition placing and platform-recorded breaks. Separate from the intermediate training certificate, global Arena totals and Proving Ground results. Platform counts do not independently reproduce every underlying result or establish a general failure rate. Competition prizes were awarded by raffle; no prize is claimed."
+}

@@ -17,6 +17,9 @@ assert.equal(snapshot.provingGround.areas.reduce((total,area)=>total+area.breaks
 assert.equal(require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(dist,snapshot.originalImage))).digest('hex'),snapshot.originalSha256,'Original evaluation capture changed');
 assert.deepEqual(JSON.parse(fs.readFileSync(path.join(dist,`evidence/gray-swan-profile-${snapshot.observedAt}.json`),'utf8')),snapshot,'Evaluation transcription drift');
 }
+const finalResult=D.presence.aiEvaluationFinalResult;
+assert.deepEqual(JSON.parse(fs.readFileSync(path.join(dist,finalResult.transcriptionPath),'utf8')),finalResult,'Final competition transcription drift');
+for(const capture of finalResult.captures)assert.equal(require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(dist,capture.originalImage))).digest('hex'),capture.originalSha256,'Original final-result capture changed');
 const certificates=D.presence.aiEvaluationCertificates;
 assert.deepEqual(JSON.parse(fs.readFileSync(path.join(dist,'evidence/gray-swan-certificates-2026-10-14.json'),'utf8')),certificates,'Certificate transcription drift');
 for(const certificate of certificates.items)assert.equal(require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(dist,certificate.originalImage))).digest('hex'),certificate.originalSha256,'Original certificate capture changed');

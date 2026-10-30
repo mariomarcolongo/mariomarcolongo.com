@@ -1,0 +1,31 @@
+---
+import EmailLink from '../../components/EmailLink.astro';
+import Layout from '../../layouts/Layout.astro';
+import SiteNav from '../../components/SiteNav.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import D from '../../../data/source.js';
+const G=D.presence.aiEvaluationFinalResult;
+const [leaderboard,rankingCard]=G.captures;
+const title='Lucky Break: Level Up — final Gray Swan result';
+const description=`Mario Marcolongo finished ${G.rank}th of ${G.participants} participants, with ${G.recordedBreaks} platform-recorded breaks. Original leaderboard and profile-card captures.`;
+const evidenceJsonLd={'@context':'https://schema.org','@type':'DigitalDocument',name:title,description,url:`https://mariomarcolongo.com${G.evidencePath}`,dateCreated:G.observedAt,dateModified:G.reviewedAt,isBasedOn:[G.sourceUrl,G.profileUrl],author:{'@id':'https://mariomarcolongo.com/#person'}};
+---
+<Layout title={title} description={description} canonical={`https://mariomarcolongo.com${G.evidencePath}`}>
+  <Fragment slot="head"><script type="application/ld+json" set:html={JSON.stringify(evidenceJsonLd)}></script></Fragment>
+  <SiteNav/>
+  <main id="main-content" class="presence-shell case-shell">
+    <p><a href="/ai-evaluation">AI evaluation work</a></p>
+    <p class="meta">Completed competition · 9–14 October 2026</p>
+    <h1>Lucky Break: Level Up — final result.</h1>
+    <p class="lede">Finished {G.rank}th out of {G.participants} participants in Gray Swan Arena’s Lucky Break: Level Up (Medium Challenge), with {G.recordedBreaks} platform-recorded breaks.</p>
+    <div class="source-links"><a href={G.sourceUrl}>Challenge ↗</a><a href={G.profileUrl}>Public profile ↗</a><a href={G.transcriptionPath}>Structured transcription</a></div>
+    <figure class="actual-artifact leaderboard-capture"><a href={leaderboard.originalImage}><img src={leaderboard.originalImage} alt="Original Gray Swan leaderboard: Mario Marcolongo at rank 49 with 15 recorded breaks" width={leaderboard.originalDimensions[0]} height={leaderboard.originalDimensions[1]}/></a><figcaption>Leaderboard captured 29 October 2026. The highlighted row shows Mario Marcolongo at rank 49 with 15 breaks.</figcaption></figure>
+    <figure class="actual-artifact"><a href={rankingCard.originalImage}><img src={rankingCard.originalImage} alt="Gray Swan profile challenge card: Lucky Break Level Up, rank 49, 390 participants and 15 breaks" width={rankingCard.originalDimensions[0]} height={rankingCard.originalDimensions[1]} loading="lazy"/></a><figcaption>Profile challenge card captured 28 October 2026; records the participant total alongside the same rank and break count.</figcaption></figure>
+    <section><h2>Training is a separate record</h2><p>The intermediate training certificate records 6/6 scenarios and 4/5 models broken, issued 14 October 2026. These training counters are distinct from the competition leaderboard.</p><a href="/evidence/gray-swan-certificates-2026-10-14/#lucky-break-training">View training certificate →</a></section>
+    <details><summary>Scope and original captures</summary><p>{G.scope}</p><p>{G.captureContext}</p><ul>{G.captures.map(capture=><li><a href={capture.originalImage}>Original JPEG · {capture.capturedAt}</a><p class="meta">{capture.originalDimensions.join(' × ')} pixels · SHA-256</p><p class="capture-hash">{capture.originalSha256}</p></li>)}</ul></details>
+    <p><a href="/evidence/gray-swan-2026-10-13/">Earlier 13 October profile snapshot →</a></p>
+    <p><a href="/cv-ai">AI evaluation résumé →</a> · <EmailLink>Discuss a role or project</EmailLink></p>
+  </main>
+  <SiteFooter/>
+</Layout>
+<style>.leaderboard-capture{max-width:420px}.capture-hash{overflow-wrap:anywhere;font:12px/1.6 monospace}</style>
