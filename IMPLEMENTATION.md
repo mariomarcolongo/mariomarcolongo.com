@@ -106,7 +106,7 @@ Captured the logged-out public Gray Swan profile: Proving Ground #79, top 5%, 12
 Validation: full build and factual/routing/interop/generated-output checks, 33 HTML pages and 35 JSON-LD records; 68 route/viewport checks at 1440/768/390/320, images, overflow, keyboard, theme, reduced motion, no-JavaScript collections and local links. Repaired the verifier’s no-JS wait by polling native scroll state from Node rather than relying on page animation callbacks. Public and ignored private EU AI résumé exports are each one page; inspected both rendered pages and verified selectable updated scores, contact isolation and canonical PDF links. Private-preview escaping/download/isolation checks and final public artifact privacy scan passed. Added a bounded `--variant` PDF-export option to update only the affected résumé. No push, deployment, account edits or repository-visibility changes were performed by this pass; hiring conversion remains unmeasured.
 
 
-## 24 October 2026 — Carry the LocalEyes CV's evidence standard into public materials
+## 24 October 2026 — Carry the tailored CV's evidence standard into public materials
 
 The three public CVs now use dated roles, concrete responsibilities, practical methods and inline evidence links. Paid October media-workflow configuration and client training are distinct from the wider Entropy collaboration. Technical evidence covers troubleshooting, localisation, regression checks and Xcode/iOS Simulator use, without presenting this as physical-device testing or commercial Copilot Studio delivery. Metropolia remains ahead of Microsoft; the AI and technical variants select current study, while the research variant and full experience retain the earlier medicine coursework. Public PDFs remain one page with the existing font sizes.
 
@@ -121,7 +121,7 @@ A private LinkedIn review draft is based on a live profile read: retain the alre
 
 ## 24 October 2026 — Consulting and technical-delivery positioning
 
-The technical CV is now titled **AI Workflows & Technical Delivery**, retaining its established route and PDF filename. Its summary and Entropy bullet order lead with reusable workflows, operating instructions, output review and client training. Scientific research, source investigations, software quality and the separate LocalEyes QA application remain relevant evidence. This change does not add commercial enterprise-platform experience or measured financial outcomes.
+The technical CV is now titled **AI Workflows & Technical Delivery**, retaining its established route and PDF filename. Its summary and Entropy bullet order lead with reusable workflows, operating instructions, output review and client training. Scientific research, source investigations, software quality and a separate tailored QA application remain relevant evidence. This change does not add commercial enterprise-platform experience or measured financial outcomes.
 
 The homepage leads to services while preserving a prominent résumé route. Services specify useful deliverables, review points and handover, and contact guidance asks for the problem, users, desired outcome, timeline and indicative budget. Website work is presented as delivery and workflow improvement. Broad audience, remote/relocation openness and email-first calls by appointment are retained. Public profile/LLM route labels are generated consistently.
 
