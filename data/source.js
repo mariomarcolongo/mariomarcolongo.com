@@ -491,6 +491,23 @@ function createMarioDossier() {
       "visibility": "public"
     },
     {
+      "id": "entropy-client-workflow-outcome",
+      "includeInCompactCv": false,
+      "text": "Mario reports that the client renamed and added metadata to thousands of images and hundreds of videos, addressed a major video-pipeline bottleneck and continues using and expanding the configured workflow.",
+      "sourceOwner": "contributor",
+      "evidenceType": "contributor_confirmation",
+      "engagementType": "paid_contractor",
+      "sourceNote": "Mario's firsthand report supplied on 29 October 2026, following his workflow configuration, output review and client training. This records the reported client outcome, not an independently audited measurement or a verbatim client testimonial. Client files and private correspondence are not republished.",
+      "compactSourceNote": "Mario, 29 October 2026",
+      "compactLimitation": "Contributor-reported outcome; no measured savings.",
+      "limitation": "Approximate image/video scale and the bottleneck addressed are reported by Mario. No exact inventory, measured time or cost savings, revenue, independent causal evaluation or commercial Copilot Studio delivery is established. The AI workflow work began in October 2026, within the wider paid collaboration that began in June 2023.",
+      "startDate": "2026-10",
+      "endDate": null,
+      "observedAt": "2026-10-29",
+      "lastReviewedAt": "2026-10-29",
+      "visibility": "public"
+    },
+    {
       "id": "entropy-organization-context",
       "text": "Entropy for Life is an Italian science-communication project with 500K+ combined followers and subscribers across its social accounts.",
       "sourceUrl": "https://entropyforlife.it/chi-sono/",
@@ -776,6 +793,7 @@ function createMarioDossier() {
       "organizationContext": ENTROPY_ORGANIZATION_CONTEXT,
       "claimIds": [
         "entropy-published-work",
+        "entropy-client-workflow-outcome",
         "entropy-airc-visuals",
         "entropy-selected-video-editing",
         "entropy-book-acknowledgement",
@@ -1322,7 +1340,7 @@ function createMarioDossier() {
       "Research, fact-checking, scripts and/or visuals across 57 video contributions, alongside 4 articles and 21 short-form entries; roles vary by assignment. Video collection checked Oct 2026.",
       "Research primary literature and adapt English-language evidence for Italian content; acknowledged for literature research and error detection in Italiani veri (Mondadori, a major European publishing group, 2025).",
       "Built and operate entropyforlife.it: WordPress, responsive layouts, OVHcloud, DNS/SSL and publishing. Diagnose configuration issues and check functionality after changes.",
-      "Since Oct 2026, configure reusable Antigravity/Gemini workflows with Google Drive; compare tools, inspect media outputs and train the client to use the setup independently."
+      "Since Oct 2026, configure Antigravity/Gemini workflows with Google Drive, review outputs and train the client. Client used the workflow to rename and add metadata to thousands of images and hundreds of videos, addressing a major video-pipeline bottleneck."
     ],
     "atlas": [
       "Five merged PRs: source-metadata audit, 15 citation locators, macOS validation and agent instructions.",
@@ -1333,11 +1351,11 @@ function createMarioDossier() {
       "Organized resource information and maintained the AI-assisted website."
     ],
     "gray": [
-      "40 Arena global unique breaks; separately, 127 Proving Ground breaks (top 5%). Platform-recorded results.",
+      "49th of 390 participants in Lucky Break: Level Up (9–14 Oct 2026), with 15 platform-recorded breaks.",
       "Refine tests from response patterns and check recurrence across scenarios. Completed Lucky Break intermediate training, Oct 2026."
     ],
     "notandia": [
-      "Created a browser extension used by the Entropy for Life team; implemented English-Italian UI localisation with a terminology glossary.",
+      "Created a browser extension for scientific-reference checks, used by the Entropy for Life team; implemented English-Italian UI localisation with a terminology glossary.",
       "Test cross-browser behavior and language fallback; reproduce defects, track GitHub changes and retest. Related localisations: Telegram bot and QCAE interface."
     ],
     "wikimedia": [
