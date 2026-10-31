@@ -157,6 +157,7 @@
       "text": "Paid scientific research, fact-checking, visual production and WordPress operations since 2023. Since October 2026, my work also includes reusable media workflows using Antigravity, Gemini and Google Drive, with client training.",
       "claimIds": [
         "entropy-published-work",
+        "entropy-client-workflow-outcome",
         "entropy-airc-visuals",
         "entropy-selected-video-editing",
         "entropy-book-acknowledgement",
@@ -1324,6 +1325,23 @@
       "limitation": "Mario confirmed full editing of two linked Luca Perri Shorts and two Entropy videos about genetic testing and genetic selection, plus partial initial editing of the Luca Perri electric-car video, on 2 October 2026. YouTube metadata confirms publication titles and channels, not individual editing credits. These examples do not establish channel ownership, sole production authorship, advanced editing proficiency or additional pieces beyond the older inventory.",
       "observedAt": "2026-10-02",
       "lastReviewedAt": "2026-10-02",
+      "visibility": "public"
+    },
+    {
+      "id": "entropy-client-workflow-outcome",
+      "includeInCompactCv": false,
+      "text": "Mario reports that the client renamed and added metadata to thousands of images and hundreds of videos, addressed a major video-pipeline bottleneck and continues using and expanding the configured workflow.",
+      "sourceOwner": "contributor",
+      "evidenceType": "contributor_confirmation",
+      "engagementType": "paid_contractor",
+      "sourceNote": "Mario's firsthand report supplied on 29 October 2026, following his workflow configuration, output review and client training. This records the reported client outcome, not an independently audited measurement or a verbatim client testimonial. Client files and private correspondence are not republished.",
+      "compactSourceNote": "Mario, 29 October 2026",
+      "compactLimitation": "Contributor-reported outcome; no measured savings.",
+      "limitation": "Approximate image/video scale and the bottleneck addressed are reported by Mario. No exact inventory, measured time or cost savings, revenue, independent causal evaluation or commercial Copilot Studio delivery is established. The AI workflow work began in October 2026, within the wider paid collaboration that began in June 2023.",
+      "startDate": "2026-10",
+      "endDate": null,
+      "observedAt": "2026-10-29",
+      "lastReviewedAt": "2026-10-29",
       "visibility": "public"
     },
     {
