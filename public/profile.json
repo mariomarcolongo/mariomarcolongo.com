@@ -24,8 +24,8 @@
     }
   ],
   "github": "https://github.com/mariomarcolongo",
-  "reviewedAt": "2026-10-26",
-  "reviewScope": "Verified biomedical-diagram publication reuse added to the previously reviewed Wikimedia, consulting, technical-delivery and CV record; individual evidence retains its own dated review.",
+  "reviewedAt": "2026-10-31",
+  "reviewScope": "Public positioning aligned on software QA, AI evaluation and research; résumé titles, services and PDF names updated. Verified biomedical-diagram publication reuse added to the previously reviewed Wikimedia, consulting, technical-delivery and CV record; individual evidence retains its own dated review.",
   "outputs": [
     {
       "id": "atlas-preprint",
@@ -102,8 +102,8 @@
   "linkedin": "https://www.linkedin.com/in/mario-marcolongo",
   "email": "me@mariomarcolongo.com",
   "engagement": {
-    "reviewedAt": "2026-10-24",
-    "audience": "Organisations of all sizes, research teams and creators.",
+    "reviewedAt": "2026-10-31",
+    "audience": "Creators, small teams and research groups.",
     "projectScope": "Agree the problem, deliverables, review points and handover before work starts.",
     "projectBrief": "Share the problem, intended users, desired outcome, timeline and indicative budget.",
     "contactPreference": "Please email first to arrange a call. Consultations and calls are by appointment.",
@@ -111,6 +111,18 @@
     "delivery": "Available for international remote work and on-site projects by prior arrangement, with travel scope and expenses agreed before booking."
   },
   "services": [
+    {
+      "id": "ai-evaluation",
+      "name": "AI assistant and agent testing",
+      "description": "Authorised adversarial testing of your chatbot or agent, in English and Italian: prompt injection, ignored instructions, wrong or unsafe answers. You get reproducible cases and a retest.",
+      "evidencePath": "/ai-evaluation"
+    },
+    {
+      "id": "software-qa",
+      "name": "Software and localisation QA",
+      "description": "Manual and regression testing, English-Italian interface checks and reproducible bug reports for websites, apps and browser tools.",
+      "evidencePath": "/notandia"
+    },
     {
       "id": "ai-workflows",
       "name": "AI workflows and client training",
@@ -124,22 +136,10 @@
       "evidencePath": "/work/atlas"
     },
     {
-      "id": "ai-evaluation",
-      "name": "Adversarial AI evaluation",
-      "description": "Test authorised scenarios for prompt injection and instruction-following failures; investigate recurring patterns and document reproducibility.",
-      "evidencePath": "/ai-evaluation"
-    },
-    {
       "id": "source-investigations",
       "name": "Scientific fact-checking and source investigations",
       "description": "Trace claims to original sources, assess evidence quality and support citation audits, research and publishing.",
       "evidencePath": "/investigations"
-    },
-    {
-      "id": "data-visualisation",
-      "name": "Data visualisation and research support",
-      "description": "Organise and check source data, create interactive charts and explain findings with their provenance and limitations.",
-      "evidencePath": "/work/scientific-visualizations"
     },
     {
       "id": "technical-operations",
@@ -683,7 +683,7 @@
   ],
   "entropyOrganization": {
     "context": "Entropy for Life is an Italian science-communication project covering biology, evolution and the environment, with 500K+ combined followers and subscribers across its social accounts.",
-    "cvContext": "Client: Italian science communication · 500K+ combined followers and subscribers",
+    "cvContext": "Client: Italian science YouTube channel · 272K subscribers (Oct 2026)",
     "audienceReportedAt": "2026-10-01",
     "audienceSource": "Approximate combined total from displayed organization-account counts checked on 1 October 2026, including a contributor-reported TikTok count.",
     "scope": "Organization accounts, including the secondary More Entropy YouTube channel. Combined following is not unique people, reach of an individual piece or growth attributable to Mario.",
@@ -1053,7 +1053,7 @@
     "Italy"
   ],
   "usWorkAuthorization": "not_established",
-  "currentPositioning": "Information Integrity, AI Evaluation & Technical Operations",
+  "currentPositioning": "Software QA, AI Evaluation & Research",
   "developmentDirection": [
     "Technical implementation",
     "Data quality",
@@ -1070,20 +1070,20 @@
   "resumeDocuments": [
     {
       "focus": "default",
-      "title": "Research & Technical Operations",
-      "filename": "Mario-Marcolongo-Research-Technical-Operations.pdf",
+      "title": "Scientific Research & Fact-Checking",
+      "filename": "Mario-Marcolongo-Scientific-Research-Fact-Checking.pdf",
       "route": "/cv"
     },
     {
       "focus": "technical",
-      "title": "AI Workflows & Technical Delivery",
-      "filename": "Mario-Marcolongo-Technical-Operations.pdf",
+      "title": "Software QA & AI Workflows",
+      "filename": "Mario-Marcolongo-Software-QA-AI-Workflows.pdf",
       "route": "/cv-technical"
     },
     {
       "focus": "aiEvaluation",
-      "title": "AI Evaluation & Information Integrity",
-      "filename": "Mario-Marcolongo-AI-Evaluation-Research-Support.pdf",
+      "title": "AI Evaluation & Red Teaming",
+      "filename": "Mario-Marcolongo-AI-Evaluation-Red-Teaming.pdf",
       "route": "/cv-ai"
     }
   ],
@@ -1250,7 +1250,7 @@
   ],
   "languages": {
     "text": "Italian native · English: EF SET C1 overall, 68/100 (Mar 2024)",
-    "cvText": "Italian native · English fluent; EF SET C1 overall, 68/100 (Mar 2024)",
+    "cvText": "Italian native · English fluent (EF SET C1, Mar 2024)",
     "sourceUrl": "https://cert.efset.org/jHk84h",
     "issuedAt": "2024-03-26",
     "currentEnglishSelfAssessment": {
