@@ -1,4 +1,4 @@
-# Mario Marcolongo — Software QA, AI Evaluation & Research
+# Mario Marcolongo — AI Evaluation, Information Integrity & Research
 
 Mario Marcolongo investigates sources, tests software and AI behaviour, and configures workflows and websites.
 

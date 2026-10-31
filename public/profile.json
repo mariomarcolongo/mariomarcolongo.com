@@ -25,7 +25,7 @@
   ],
   "github": "https://github.com/mariomarcolongo",
   "reviewedAt": "2026-10-31",
-  "reviewScope": "Public positioning aligned on software QA, AI evaluation and research; résumé titles, services and PDF names updated. Verified biomedical-diagram publication reuse added to the previously reviewed Wikimedia, consulting, technical-delivery and CV record; individual evidence retains its own dated review.",
+  "reviewScope": "Public positioning aligned on AI evaluation, information integrity and research; résumé titles, services and PDF names updated. Verified biomedical-diagram publication reuse added to the previously reviewed Wikimedia, consulting, technical-delivery and CV record; individual evidence retains its own dated review.",
   "outputs": [
     {
       "id": "atlas-preprint",
@@ -118,28 +118,34 @@
       "evidencePath": "/ai-evaluation"
     },
     {
-      "id": "software-qa",
-      "name": "Software and localisation QA",
-      "description": "Manual and regression testing, English-Italian interface checks and reproducible bug reports for websites, apps and browser tools.",
-      "evidencePath": "/notandia"
-    },
-    {
       "id": "ai-workflows",
       "name": "AI workflows and client training",
       "description": "A reusable AI-assisted workflow with tool selection, operating instructions, output checks and training so your team can run it independently.",
       "evidencePath": "/work/entropy"
     },
     {
-      "id": "agent-instructions",
-      "name": "Agent instructions and prompt engineering",
-      "description": "Maintainable instructions, task routing and checks for AI coding agents, based on platform guidance and context limits.",
-      "evidencePath": "/work/atlas"
-    },
-    {
       "id": "source-investigations",
       "name": "Scientific fact-checking and source investigations",
       "description": "Trace claims to original sources, assess evidence quality and support citation audits, research and publishing.",
       "evidencePath": "/investigations"
+    },
+    {
+      "id": "data-visualisation",
+      "name": "Data visualisation and research support",
+      "description": "Organise and check source data, create interactive charts and explain findings with their provenance and limitations.",
+      "evidencePath": "/work/scientific-visualizations"
+    },
+    {
+      "id": "software-qa",
+      "name": "Software and localisation QA",
+      "description": "Manual and regression testing, English-Italian interface checks and reproducible bug reports for websites, apps and browser tools.",
+      "evidencePath": "/notandia"
+    },
+    {
+      "id": "agent-instructions",
+      "name": "Agent instructions and prompt engineering",
+      "description": "Maintainable instructions, task routing and checks for AI coding agents, based on platform guidance and context limits.",
+      "evidencePath": "/work/atlas"
     },
     {
       "id": "technical-operations",
@@ -1053,7 +1059,7 @@
     "Italy"
   ],
   "usWorkAuthorization": "not_established",
-  "currentPositioning": "Software QA, AI Evaluation & Research",
+  "currentPositioning": "AI Evaluation, Information Integrity & Research",
   "developmentDirection": [
     "Technical implementation",
     "Data quality",
@@ -1082,7 +1088,7 @@
     },
     {
       "focus": "aiEvaluation",
-      "title": "AI Evaluation & Red Teaming",
+      "title": "AI Evaluation, Red Teaming & Information Integrity",
       "filename": "Mario-Marcolongo-AI-Evaluation-Red-Teaming.pdf",
       "route": "/cv-ai"
     }
