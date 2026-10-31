@@ -145,9 +145,9 @@ Added a compact Wikidata bibliography example linking Against Intellectual Monop
 Validation: the full configured build sequence passed, including stale-copy, public routing, Vite interop, generated dossiers, agent discovery/service, Astro, generated-output/privacy, structured-data and output-provenance checks. After the final copy edit, regenerated Astro output and repeated the generated-output, structured-data and output checks. Targeted browser verification passed eight route/viewport combinations for /work/wikimedia and /investigations at 1440, 768, 390 and 320 pixels, plus keyboard-operated source disclosures, no-JavaScript access, local links, duplicate IDs, overflow and page errors. Inspected desktop and mobile captures. An independent review verified contribution attribution and retained bibliography relationships. Local only; no commit, push or deployment.
 
 
-## One positioning for software QA, AI evaluation and research — 31 October 2026
+## One positioning for AI evaluation, information integrity and research — 31 October 2026
 
-Public materials now follow one thread: testing software, AI systems and claims. `currentPositioning`, the hero, the page title and the résumé titles use Software QA, AI Evaluation and Research. The three PDFs are renamed to match, with 301 redirects from the old names, and carry an author field. Services move directly below the hero, add software and localisation QA, and drop data visualisation as a listed service; the portfolio pages are unchanged. Header lines state native Italian, and the site links to the Malt profile.
+Public materials now lead with AI evaluation, information integrity and research. `currentPositioning`, the hero and the page title use that wording; software QA stays as a résumé and a service. The three PDFs are renamed to match their titles, with 301 redirects from the old names, and carry an author field. Services move directly below the hero and add software and localisation QA. Header lines state native Italian, and the site links to the Malt profile.
 
 Validation: the full configured build, 84 route/viewport and interaction checks, and three regenerated one-page PDFs with their links intact.
 

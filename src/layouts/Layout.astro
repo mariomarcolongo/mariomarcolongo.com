@@ -5,7 +5,7 @@ import '../styles/studio.css';
 import D from '../../data/source.js';
 const P = D.presence;
 const pagePath = Astro.url.pathname.replace(/\/index\.html$/, '/').replace(/\.html$/, '').replace(/\/$/, '') || '/';
-const {title: suppliedTitle = `${P.name} — Software QA, AI Evaluation & Research`, description = P.description, noIndex = false} = Astro.props;
+const {title: suppliedTitle = `${P.name} — AI Evaluation, Information Integrity & Research`, description = P.description, noIndex = false} = Astro.props;
 const title = suppliedTitle.includes(P.name) ? suppliedTitle : `${suppliedTitle} — ${P.name}`;
 const suppliedCanonical = Astro.props.canonical || `${P.canonicalUrl}${pagePath}`;
 const canonical = suppliedCanonical === P.canonicalUrl || suppliedCanonical === `${P.canonicalUrl}/` ? `${P.canonicalUrl}/` : suppliedCanonical.replace(/\/$/, '').replace(/\.html$/, '');

@@ -39,8 +39,8 @@ async function main() {
    fs.writeFileSync(path.join(pub,size===32?'favicon.ico':size===180?'apple-touch-icon.png':`favicon-${size}x${size}.png`),size===32?ico(png):png);
   }
   const cards={
-   home:{label:'Software QA, AI evaluation & research',title:P.headline,text:'Testing software and AI systems, and checking the evidence behind claims.',image:M.screenshots['entropy-map'].image,caption:'Published Tableau map: data collection and visualization for Entropy for Life.'},
-   cv:{label:'Application résumés',title:'Experience you can inspect.',text:'Software QA · AI evaluation · Scientific research',image:M.screenshots.notandia.image,caption:'One-page résumés. Published work and source records.'},
+   home:{label:'AI evaluation, information integrity & research',title:P.headline,text:'Testing AI systems and software, and checking the evidence behind claims.',image:M.screenshots['entropy-map'].image,caption:'Published Tableau map: data collection and visualization for Entropy for Life.'},
+   cv:{label:'Application résumés',title:'Experience you can inspect.',text:'AI evaluation · Scientific research · Software QA',image:M.screenshots.notandia.image,caption:'One-page résumés. Published work and source records.'},
    'ai-evaluation':{label:'Independent model testing',title:'AI evaluation record',text:'Dated platform results, original captures and explicit evidence limits.',image:P.aiEvaluationSnapshot.detailImage,caption:`Gray Swan public profile · ${P.aiEvaluationSnapshot.displayDate}`},
    investigations:{label:'Source investigation & data quality',title:'Check the claim. Follow the source.',text:'Citation reconciliation, structured metadata and public investigation records.',image:M.screenshots.atlas.image,caption:'Accepted source-locator and provenance contribution.'},
    'scientific-visualizations':{label:'Scientific charts, maps & diagrams',title:'Data made visible.',text:'Interactive data views and scientific diagrams with sources and attribution.',image:M.screenshots['entropy-cannabis'].image,caption:'Published Flourish story: European industrial hemp cultivation, with Eurostat data.'}

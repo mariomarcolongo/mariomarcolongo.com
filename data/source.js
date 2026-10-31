@@ -101,14 +101,14 @@ function createMarioDossier() {
   "name": "Mario Marcolongo",
   "canonicalUrl": "https://mariomarcolongo.com",
   "reviewedAt": "2026-10-31",
-  "reviewScope": "Public positioning aligned on software QA, AI evaluation and research; résumé titles, services and PDF names updated. Verified biomedical-diagram publication reuse added to the previously reviewed Wikimedia, consulting, technical-delivery and CV record; individual evidence retains its own dated review.",
+  "reviewScope": "Public positioning aligned on AI evaluation, information integrity and research; résumé titles, services and PDF names updated. Verified biomedical-diagram publication reuse added to the previously reviewed Wikimedia, consulting, technical-delivery and CV record; individual evidence retains its own dated review.",
   "outputs": PUBLIC_OUTPUTS,
   "credentials": [COPILOT_CREDENTIAL, ATLASSIAN_JSM_CREDENTIAL],
   "email": "me@mariomarcolongo.com",
   "github": "https://github.com/mariomarcolongo",
   "linkedin": "https://www.linkedin.com/in/mario-marcolongo",
   "malt": "https://www.malt.com/profile/mariomarcolongo",
-  "currentPositioning": "Software QA, AI Evaluation & Research",
+  "currentPositioning": "AI Evaluation, Information Integrity & Research",
   "investigationMethods": {
     "reviewedAt": "2026-10-08",
     "cvText": "Source tracing, web archives, domain and website checks, image verification and cross-platform research; distinguish observed connections from attribution hypotheses.",
@@ -128,9 +128,9 @@ function createMarioDossier() {
     "Systems diagnosis"
   ],
   "headline": "Investigate information. Test systems.",
-  "description": "Mario Marcolongo: software QA, AI evaluation and scientific research, in English and Italian. Paid scientific work since 2023, public evidence and practical tools.",
-  "subheadline": "I test software and AI systems and check the evidence behind claims, in English and Italian. Paid scientific and website work since 2023, with AI workflow setup and client training since October 2026.",
-  "contact": "Available for employed roles, contracts and scoped projects in software QA, AI evaluation, AI workflows and research.",
+  "description": "Mario Marcolongo: AI evaluation, information integrity and scientific research, in English and Italian. Paid scientific work since 2023, public evidence and practical tools.",
+  "subheadline": "I test AI systems and software and check the evidence behind claims, in English and Italian. Paid scientific and website work since 2023, with AI workflow setup and client training since October 2026.",
+  "contact": "Available for employed roles, contracts and scoped projects in AI evaluation, information integrity, research, AI workflows and software QA.",
   "availability": "Open to relocation and international remote work. I can work in the EU as an Italian citizen; opportunities elsewhere depend on the role’s hiring and work-authorization arrangements.",
   "authorship": "For independent software projects, I define requirements, inspect behavior, test releases and maintain tools, using AI-assisted implementation. Case studies identify my contribution and link the outputs, source records and external reviews.",
   "machineSummary": "Mario Marcolongo investigates sources, tests software and AI behaviour, and configures workflows and websites. Evidence includes paid scientific work and client training, localisation projects, Wikimedia investigations, accepted Atlas contributions and dated platform-recorded Gray Swan results. He holds Microsoft’s Copilot Studio Applied Skills credential. A Syntony network member, he studies IT through Metropolia’s Open UAS pathway. Based in Italy; open to remote work and relocation.",
@@ -151,28 +151,34 @@ function createMarioDossier() {
       "evidencePath": "/ai-evaluation"
     },
     {
-      "id": "software-qa",
-      "name": "Software and localisation QA",
-      "description": "Manual and regression testing, English-Italian interface checks and reproducible bug reports for websites, apps and browser tools.",
-      "evidencePath": "/notandia"
-    },
-    {
       "id": "ai-workflows",
       "name": "AI workflows and client training",
       "description": "A reusable AI-assisted workflow with tool selection, operating instructions, output checks and training so your team can run it independently.",
       "evidencePath": "/work/entropy"
     },
     {
-      "id": "agent-instructions",
-      "name": "Agent instructions and prompt engineering",
-      "description": "Maintainable instructions, task routing and checks for AI coding agents, based on platform guidance and context limits.",
-      "evidencePath": "/work/atlas"
-    },
-    {
       "id": "source-investigations",
       "name": "Scientific fact-checking and source investigations",
       "description": "Trace claims to original sources, assess evidence quality and support citation audits, research and publishing.",
       "evidencePath": "/investigations"
+    },
+    {
+      "id": "data-visualisation",
+      "name": "Data visualisation and research support",
+      "description": "Organise and check source data, create interactive charts and explain findings with their provenance and limitations.",
+      "evidencePath": "/work/scientific-visualizations"
+    },
+    {
+      "id": "software-qa",
+      "name": "Software and localisation QA",
+      "description": "Manual and regression testing, English-Italian interface checks and reproducible bug reports for websites, apps and browser tools.",
+      "evidencePath": "/notandia"
+    },
+    {
+      "id": "agent-instructions",
+      "name": "Agent instructions and prompt engineering",
+      "description": "Maintainable instructions, task routing and checks for AI coding agents, based on platform guidance and context limits.",
+      "evidencePath": "/work/atlas"
     },
     {
       "id": "technical-operations",
@@ -1331,7 +1337,7 @@ function createMarioDossier() {
       "summary": "Software QA and English-Italian localisation testing: cross-browser checks, reproducible bug reports and retesting on released browser tools. Paid website delivery since 2023; configure reusable AI workflows and train the client to run them. Accepted Atlas contributions to agent instructions and source quality."
     },
     "aiEvaluation": {
-      "title": "AI Evaluation & Red Teaming",
+      "title": "AI Evaluation, Red Teaming & Information Integrity",
       "filename": "Mario-Marcolongo-AI-Evaluation-Red-Teaming.pdf",
       "summary": "Adversarial LLM testing, including jailbreaks and prompt injection; top 5% of Gray Swan Proving Ground; member, Syntony Research Trusted Red Team Network. Paid scientific fact-checking and AI workflow configuration. Atlas preprint coauthor."
     }
