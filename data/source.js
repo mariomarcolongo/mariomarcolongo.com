@@ -6,7 +6,7 @@
  */
 
 const ENTROPY_ORGANIZATION_CONTEXT = "Entropy for Life is an Italian science-communication project covering biology, evolution and the environment, with 500K+ combined followers and subscribers across its social accounts.";
-const ENTROPY_SHORT_CONTEXT = "Client: Italian science communication · 500K+ combined followers and subscribers";
+const ENTROPY_SHORT_CONTEXT = "Client: Italian science YouTube channel · 272K subscribers (Oct 2026)";
 const AI_EVALUATION_METHODS = "I look for patterns in a model’s responses, adjust my approach, and test whether the same failure recurs in other scenarios. I combine role-play, emotional framing and structured-output or continuation techniques, refining them through trial and error.";
 
 const COPILOT_CREDENTIAL = {
@@ -100,14 +100,15 @@ function createMarioDossier() {
   "schemaVersion": 1,
   "name": "Mario Marcolongo",
   "canonicalUrl": "https://mariomarcolongo.com",
-  "reviewedAt": "2026-10-26",
-  "reviewScope": "Verified biomedical-diagram publication reuse added to the previously reviewed Wikimedia, consulting, technical-delivery and CV record; individual evidence retains its own dated review.",
+  "reviewedAt": "2026-10-31",
+  "reviewScope": "Public positioning aligned on software QA, AI evaluation and research; résumé titles, services and PDF names updated. Verified biomedical-diagram publication reuse added to the previously reviewed Wikimedia, consulting, technical-delivery and CV record; individual evidence retains its own dated review.",
   "outputs": PUBLIC_OUTPUTS,
   "credentials": [COPILOT_CREDENTIAL, ATLASSIAN_JSM_CREDENTIAL],
   "email": "me@mariomarcolongo.com",
   "github": "https://github.com/mariomarcolongo",
   "linkedin": "https://www.linkedin.com/in/mario-marcolongo",
-  "currentPositioning": "Information Integrity, AI Evaluation & Technical Operations",
+  "malt": "https://www.malt.com/profile/mariomarcolongo",
+  "currentPositioning": "Software QA, AI Evaluation & Research",
   "investigationMethods": {
     "reviewedAt": "2026-10-08",
     "cvText": "Source tracing, web archives, domain and website checks, image verification and cross-platform research; distinguish observed connections from attribution hypotheses.",
@@ -127,15 +128,15 @@ function createMarioDossier() {
     "Systems diagnosis"
   ],
   "headline": "Investigate information. Test systems.",
-  "description": "Mario Marcolongo: source investigations, AI evaluation, research and technical operations. Paid scientific work since 2023, public evidence and practical tools.",
-  "subheadline": "I investigate sources, evaluate AI behavior and configure practical workflows. Paid scientific work and website delivery since 2023, with reusable client workflows, training and accepted open-source contributions.",
-  "contact": "I work with organisations, research teams and creators on AI workflows, evaluation, source investigations and technical delivery. Available for scoped consulting projects, ongoing collaborations and relevant employed roles.",
+  "description": "Mario Marcolongo: software QA, AI evaluation and scientific research, in English and Italian. Paid scientific work since 2023, public evidence and practical tools.",
+  "subheadline": "I test software and AI systems and check the evidence behind claims, in English and Italian. Paid scientific and website work since 2023, with AI workflow setup and client training since October 2026.",
+  "contact": "Available for employed roles, contracts and scoped projects in software QA, AI evaluation, AI workflows and research.",
   "availability": "Open to relocation and international remote work. I can work in the EU as an Italian citizen; opportunities elsewhere depend on the role’s hiring and work-authorization arrangements.",
   "authorship": "For independent software projects, I define requirements, inspect behavior, test releases and maintain tools, using AI-assisted implementation. Case studies identify my contribution and link the outputs, source records and external reviews.",
   "machineSummary": "Mario Marcolongo investigates sources, tests software and AI behaviour, and configures workflows and websites. Evidence includes paid scientific work and client training, localisation projects, Wikimedia investigations, accepted Atlas contributions and dated platform-recorded Gray Swan results. He holds Microsoft’s Copilot Studio Applied Skills credential. A Syntony network member, he studies IT through Metropolia’s Open UAS pathway. Based in Italy; open to remote work and relocation.",
   "engagement": {
-    "reviewedAt": "2026-10-24",
-    "audience": "Organisations of all sizes, research teams and creators.",
+    "reviewedAt": "2026-10-31",
+    "audience": "Creators, small teams and research groups.",
     "projectScope": "Agree the problem, deliverables, review points and handover before work starts.",
     "projectBrief": "Share the problem, intended users, desired outcome, timeline and indicative budget.",
     "contactPreference": "Please email first to arrange a call. Consultations and calls are by appointment.",
@@ -143,6 +144,18 @@ function createMarioDossier() {
     "delivery": "Available for international remote work and on-site projects by prior arrangement, with travel scope and expenses agreed before booking."
   },
   "services": [
+    {
+      "id": "ai-evaluation",
+      "name": "AI assistant and agent testing",
+      "description": "Authorised adversarial testing of your chatbot or agent, in English and Italian: prompt injection, ignored instructions, wrong or unsafe answers. You get reproducible cases and a retest.",
+      "evidencePath": "/ai-evaluation"
+    },
+    {
+      "id": "software-qa",
+      "name": "Software and localisation QA",
+      "description": "Manual and regression testing, English-Italian interface checks and reproducible bug reports for websites, apps and browser tools.",
+      "evidencePath": "/notandia"
+    },
     {
       "id": "ai-workflows",
       "name": "AI workflows and client training",
@@ -156,22 +169,10 @@ function createMarioDossier() {
       "evidencePath": "/work/atlas"
     },
     {
-      "id": "ai-evaluation",
-      "name": "Adversarial AI evaluation",
-      "description": "Test authorised scenarios for prompt injection and instruction-following failures; investigate recurring patterns and document reproducibility.",
-      "evidencePath": "/ai-evaluation"
-    },
-    {
       "id": "source-investigations",
       "name": "Scientific fact-checking and source investigations",
       "description": "Trace claims to original sources, assess evidence quality and support citation audits, research and publishing.",
       "evidencePath": "/investigations"
-    },
-    {
-      "id": "data-visualisation",
-      "name": "Data visualisation and research support",
-      "description": "Organise and check source data, create interactive charts and explain findings with their provenance and limitations.",
-      "evidencePath": "/work/scientific-visualizations"
     },
     {
       "id": "technical-operations",
@@ -392,7 +393,7 @@ function createMarioDossier() {
   ],
   "languages": {
     "text": "Italian native · English: EF SET C1 overall, 68/100 (Mar 2024)",
-    "cvText": "Italian native · English fluent; EF SET C1 overall, 68/100 (Mar 2024)",
+    "cvText": "Italian native · English fluent (EF SET C1, Mar 2024)",
     "sourceUrl": "https://cert.efset.org/jHk84h",
     "issuedAt": "2024-03-26",
     "currentEnglishSelfAssessment": {"level": "C1", "reportedAt": "2026-10-01"},
@@ -1320,27 +1321,27 @@ function createMarioDossier() {
   ],
   "cv": {
     "default": {
-      "title": "Research & Technical Operations",
-      "filename": "Mario-Marcolongo-Research-Technical-Operations.pdf",
+      "title": "Scientific Research & Fact-Checking",
+      "filename": "Mario-Marcolongo-Scientific-Research-Fact-Checking.pdf",
       "summary": "Paid scientific fact-checking, data visualization and website operations since 2023, with recent AI workflow configuration and client training. Source investigations, structured metadata, remote research facilitation and accepted Atlas contributions."
     },
     "technical": {
-      "title": "AI Workflows & Technical Delivery",
-      "filename": "Mario-Marcolongo-Technical-Operations.pdf",
-      "summary": "Configure reusable AI workflows, document operating instructions and provide client training for independent use. Paid website delivery and operations since 2023; software testing, English-Italian UI localisation and defect investigation. Accepted Atlas contributions to agent instructions and source quality."
+      "title": "Software QA & AI Workflows",
+      "filename": "Mario-Marcolongo-Software-QA-AI-Workflows.pdf",
+      "summary": "Software QA and English-Italian localisation testing: cross-browser checks, reproducible bug reports and retesting on released browser tools. Paid website delivery since 2023; configure reusable AI workflows and train the client to run them. Accepted Atlas contributions to agent instructions and source quality."
     },
     "aiEvaluation": {
-      "title": "AI Evaluation & Information Integrity",
-      "filename": "Mario-Marcolongo-AI-Evaluation-Research-Support.pdf",
-      "summary": "Independent adversarial AI testing; member, Syntony Research Trusted Red Team Network. Paid scientific fact-checking, AI workflow configuration and client training. Wikimedia source investigations, accepted agent-instruction work and Atlas preprint coauthorship."
+      "title": "AI Evaluation & Red Teaming",
+      "filename": "Mario-Marcolongo-AI-Evaluation-Red-Teaming.pdf",
+      "summary": "Adversarial LLM testing, including jailbreaks and prompt injection; top 5% of Gray Swan Proving Ground; member, Syntony Research Trusted Red Team Network. Paid scientific fact-checking and AI workflow configuration. Atlas preprint coauthor."
     }
   },
   "cvBullets": {
     "entropy": [
-      "Research, fact-checking, scripts and/or visuals across 57 video contributions, alongside 4 articles and 21 short-form entries; roles vary by assignment. Video collection checked Oct 2026.",
+      "Research, fact-checking, scripts or visuals for 57 YouTube videos, 4 articles and 21 short-form entries (collection checked Oct 2026).",
       "Research primary literature and adapt English-language evidence for Italian content; acknowledged for literature research and error detection in Italiani veri (Mondadori, a major European publishing group, 2025).",
       "Built and operate entropyforlife.it: WordPress, responsive layouts, OVHcloud, DNS/SSL and publishing. Diagnose configuration issues and check functionality after changes.",
-      "Since Oct 2026, configure Antigravity/Gemini workflows with Google Drive, review outputs and train the client. Client used the workflow to rename and add metadata to thousands of images and hundreds of videos, addressing a major video-pipeline bottleneck."
+      "Since Oct 2026, configure Antigravity/Gemini workflows, review outputs and train the client, who used them to rename and tag thousands of images and hundreds of videos."
     ],
     "atlas": [
       "Five merged PRs: source-metadata audit, 15 citation locators, macOS validation and agent instructions.",
@@ -1351,8 +1352,8 @@ function createMarioDossier() {
       "Organized resource information and maintained the AI-assisted website."
     ],
     "gray": [
-      "49th of 390 participants in Lucky Break: Level Up (9–14 Oct 2026), with 15 platform-recorded breaks.",
-      "Refine tests from response patterns and check recurrence across scenarios. Completed Lucky Break intermediate training, Oct 2026."
+      "Top 5% of Gray Swan Proving Ground: #81, 127 recorded breaks across chat, image, agent and indirect prompt injection (13 Oct 2026).",
+      "49th of 390 in Lucky Break: Level Up (Oct 2026), 15 recorded breaks. Refine tests from response patterns and check recurrence across scenarios."
     ],
     "notandia": [
       "Created a browser extension for scientific-reference checks, used by the Entropy for Life team; implemented English-Italian UI localisation with a terminology glossary.",
@@ -1361,10 +1362,10 @@ function createMarioDossier() {
     "wikimedia": [
       "Created an original biomedical diagram reused in a Springer Nature book chapter and four Wikipedia language editions; improve bilingual Wikidata terminology.",
       "Translate scientific and technical articles from English into Italian; research terminology, check citations and improve Wikidata descriptions.",
-      "Review citations and reconcile conflicting sources; check biomedical terminology, structured metadata and source provenance through attributable public revisions."
+      "Review citations, reconcile conflicting sources and check biomedical terminology through attributable public revisions."
     ],
     "padua": [
-      "Led or co-facilitated approximately 4-5 remote focus groups under Marta Panzeri (DPSS); supported literature research, recruitment, accessible participation and technical preparation."
+      "Led or co-facilitated 4–5 remote focus groups under Marta Panzeri (DPSS); supported literature research, recruitment, accessible participation and technical preparation."
     ]
   },
   "cvMeta": {
@@ -1373,7 +1374,7 @@ function createMarioDossier() {
     "notandia": "Creator & maintainer · May 2025–Present · Independent project, remote",
     "yts": "Founder & maintainer · Since 2024 · Independent project, remote",
     "wikimedia": "Public contributor · Since 2018 · Remote",
-    "padua": "Volunteer research support · Nov 2022–approx. Jun 2025 · Remote, Italy"
+    "padua": "Volunteer research support · Nov 2022–2025 · Remote, Italy"
   },
   "cvEvidence": {
     "entropy": [{ "label": "Italiani veri", "url": "/work/entropy#book-acknowledgement" }],
@@ -1399,8 +1400,8 @@ function createMarioDossier() {
     "currentStudy": "Continuing study in Python, SQL, systems and quantitative foundations.",
     "demonstrated": {
       "default": "Literature search, data visualization, WordPress, structured metadata and accessible research procedures.",
-      "technical": "Browser DevTools, Terminal/npm, API/JSON checks, GitHub issues/PRs, manual and regression testing, Xcode/iOS Simulator, WordPress and DNS/SSL.",
-      "aiEvaluation": "Adversarial testing, response-pattern analysis, agent instructions, technical documentation and client workflows."
+      "technical": "Manual QA, regression and localisation testing, bug reports in GitHub Issues, browser DevTools, Terminal/npm, API/JSON checks, Xcode/iOS Simulator, WordPress and DNS/SSL.",
+      "aiEvaluation": "LLM adversarial testing, jailbreaks, prompt injection, response-pattern analysis, agent instructions, technical documentation and client workflows."
     }
   },
   "experience": [

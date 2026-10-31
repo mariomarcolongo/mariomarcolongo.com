@@ -145,6 +145,12 @@ Added a compact Wikidata bibliography example linking Against Intellectual Monop
 Validation: the full configured build sequence passed, including stale-copy, public routing, Vite interop, generated dossiers, agent discovery/service, Astro, generated-output/privacy, structured-data and output-provenance checks. After the final copy edit, regenerated Astro output and repeated the generated-output, structured-data and output checks. Targeted browser verification passed eight route/viewport combinations for /work/wikimedia and /investigations at 1440, 768, 390 and 320 pixels, plus keyboard-operated source disclosures, no-JavaScript access, local links, duplicate IDs, overflow and page errors. Inspected desktop and mobile captures. An independent review verified contribution attribution and retained bibliography relationships. Local only; no commit, push or deployment.
 
 
+## One positioning for software QA, AI evaluation and research — 31 October 2026
+
+Public materials now follow one thread: testing software, AI systems and claims. `currentPositioning`, the hero, the page title and the résumé titles use Software QA, AI Evaluation and Research. The three PDFs are renamed to match, with 301 redirects from the old names, and carry an author field. Services move directly below the hero, add software and localisation QA, and drop data visualisation as a listed service; the portfolio pages are unchanged. Header lines state native Italian, and the site links to the Malt profile.
+
+Validation: the full configured build, 84 route/viewport and interaction checks, and three regenerated one-page PDFs with their links intact.
+
 ## Biomedical diagram publication reuse — 26 October 2026
 
 Added the verified reuse of Mario's Commons biomedical diagram in Michele Di Salvo's 2024 Palgrave Macmillan / Springer Nature chapter. The public claim separates original authorship and licence from chapter metadata and links both primary records. The Wikimedia case, visualisation gallery and default research CV now expose that evidence through a shared diagram-reuse anchor. The technical and AI CV PDFs are unchanged.

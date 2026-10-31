@@ -29,7 +29,7 @@ assert.ok(jiraCredential?.sourceUrl.endsWith('/4ec41335733f49508b42ab3faab010d1'
 assert.ok(service.search('Metropolia').results.some(result=>result.record.degreeAwarded===false));
 const org=service.search('followers',20).results.find(result=>result.id==='entropy-organization-context');assert.match(org.record.limitation,/not.*personal reach/);
 assert.throws(()=>service.search('Atlas',100));assert.throws(()=>service.search('x'.repeat(201)));assert.throws(()=>service.getResumes('executive'));
-assert.equal(service.getResumes('technical').resumes[0].pdfUrl,'https://mariomarcolongo.com/Mario-Marcolongo-Technical-Operations.pdf');
+assert.equal(service.getResumes('technical').resumes[0].pdfUrl,'https://mariomarcolongo.com/Mario-Marcolongo-Software-QA-AI-Workflows.pdf');
 assert.deepEqual(service.call('get_profile').profile,profile);
 for(const version of PROTOCOLS){const response=await send(rpc('initialize',{protocolVersion:version,capabilities:{},clientInfo:{name:'test',version:'1'}}));assert.equal((await response.json()).result.protocolVersion,version);}
 let response=await send({jsonrpc:'2.0',method:'notifications/initialized'});assert.equal(response.status,202);assert.equal(await response.text(),'');
