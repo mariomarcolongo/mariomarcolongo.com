@@ -13,7 +13,7 @@ Everything here is generated or checked by the build. `scripts/verify-seo.js` fa
 
 ## Rules
 
-- **Do not publish a capability the site does not have.** No OAuth metadata or `auth.md`, because nothing here needs a sign-in. No Web Bot Auth keys, because the site runs no crawler. A scanner scoring those as failures is expected, and it limits the agent-readiness scan to Level 4.
+- **Do not publish a capability the site does not have.** No OAuth metadata or `auth.md`, because nothing here needs a sign-in. No Web Bot Auth keys, because the site runs no crawler. The agent-readiness scanner marks those as failed or neutral, and the site still reaches its top level without them.
 - **The HTML page is the one that ranks.** Markdown mirrors stay available to agents but send `X-Robots-Tag: noindex` and point to the page as canonical.
 - **Link straight to canonical addresses.** No trailing slashes or `.html` in internal links.
 - **Keep links out of `<nav>` if agents need them.** The markdown converter strips `<nav>`, so source links use a `div` with `role="group"`.

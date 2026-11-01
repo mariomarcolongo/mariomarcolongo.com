@@ -3,7 +3,7 @@
 const fs=require('node:fs');const path=require('node:path');const assert=require('node:assert/strict');const crypto=require('node:crypto');
 const P=require('../data/source.js').presence;
 const dist=path.resolve(__dirname,'../dist');const read=file=>fs.readFileSync(path.join(dist,file),'utf8');
-const origin=P.canonicalUrl;const decode=text=>text.replaceAll('&amp;','&').replaceAll('&#39;',"'").replaceAll('&quot;','"');
+const origin=P.canonicalUrl;const entities={'&amp;':'&','&#39;':"'",'&quot;':'"'};const decode=text=>text.replace(/&(?:amp|#39|quot);/g,entity=>entities[entity]);
 const sitemap=read('sitemap.xml');const entries=[...sitemap.matchAll(/<url><loc>(.*?)<\/loc><lastmod>(\d{4}-\d{2}-\d{2})<\/lastmod><\/url>/g)].map(m=>({url:m[1],lastmod:m[2]}));
 assert.equal(entries.length,(sitemap.match(/<url>/g)||[]).length,'Every sitemap entry needs a lastmod date');
 const fileFor=url=>{const route=new URL(url).pathname;return route==='/'?'index.html':`${route.slice(1)}.html`;};
