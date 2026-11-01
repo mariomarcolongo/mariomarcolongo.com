@@ -2,12 +2,13 @@
 import Layout from '../../layouts/Layout.astro';
 import SiteNav from '../../components/SiteNav.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
+import PageHead from '../../components/PageHead.astro';
 import D from '../../../data/source.js';
 import G from '../../../data/visualization-gallery.json';
 const P = D.presence;
 const diagramReuse = P.claims.find(claim => claim.id === 'biomedical-diagram-publication-reuse');
 const featuredCases = [
-  {title:'Mapping shark encounters',label:'Entropy for Life · Tableau',image:'/media/work/entropy-shark-map.webp',text:'From source collection to an interactive map of shark attacks in Europe and the Mediterranean.',links:[{label:'Explore the map and article',href:'https://entropyforlife.it/2024/07/24/mappa-attacchi-squali-nel-mar-mediterraneo-e-in-europa/'},{label:'Related: white-shark sizes',href:'https://entropyforlife.it/2024/08/02/lunghezza-squali-bianchi/'}]},
+  {title:'Mapping shark encounters',label:'Entropy for Life · Tableau',image:'/media/work/entropy-shark-map.webp',srcset:'/media/work/entropy-shark-map-640.webp 640w, /media/work/entropy-shark-map.webp 1000w',text:'From source collection to an interactive map of shark attacks in Europe and the Mediterranean.',links:[{label:'Explore the map and article',href:'https://entropyforlife.it/2024/07/24/mappa-attacchi-squali-nel-mar-mediterraneo-e-in-europa/'},{label:'Related: white-shark sizes',href:'https://entropyforlife.it/2024/08/02/lunghezza-squali-bianchi/'}]},
   {title:'Following Europe’s hemp cultivation',label:'Eurostat data · Flourish',image:'/media/visualizations/flourish-story-2720661.webp',text:'Seven linked views of cultivation, harvest and production, from European comparisons to Italian trends.',links:[{label:'Explore the seven-part story',href:'https://public.flourish.studio/story/2720661/'},{label:'Inspect the Eurostat source',href:'https://ec.europa.eu/eurostat/databrowser/view/APRO_CPSH1__custom_5830898/default/table?lang=en'}]},
   {title:'Making gene overlap visible',label:'Biomedical diagram · Wikimedia Commons',image:'/media/work/wikimedia-clinical-overlap.svg',text:'My original vector diagram connects genes and overlapping clinical phenotypes, with references and a public reuse record.',reuseText:'Reused in a 2024 Palgrave Macmillan / Springer Nature book chapter and across four Wikipedia language editions.',links:[{label:'Original diagram and references',href:diagramReuse.original.sourceUrl},{label:'Published book chapter',href:diagramReuse.sourceUrl},{label:'Publication and reuse details',href:'/work/wikimedia#diagram-reuse'}]}
 ];
@@ -18,19 +19,17 @@ const topics = [...new Set(items.map(v=>v.topic))].sort();
 ---
 <Layout title="Scientific charts, maps & diagrams — Mario Marcolongo" description="Explore scientific charts, maps and diagrams by Mario Marcolongo. Visual previews of published Tableau, Flourish and Wikimedia work, with original sources and attribution." ogImage="/og/scientific-visualizations.png" ogImageAlt="Mario Marcolongo — scientific charts, maps and diagrams, featuring the published industrial hemp story" collectionItems={items}>
   <SiteNav/>
-  <main id="main-content" class="presence-shell visualization-shell">
-    <header class="visualization-intro">
-      <p class="eyebrow">Scientific visualization &amp; evidence synthesis</p>
-      <h1>Charts, maps &amp;<br/>scientific diagrams.</h1>
+  <main id="main-content" class="presence-shell ruled visualization-shell">
+    <PageHead title="Charts, maps & scientific diagrams." status="Scientific visualization & evidence synthesis">
       <p class="lede">I turn source material into visual explanations you can explore. Browse the work, then open the original to inspect its data, sources and context.</p>
       <div class="visualization-jumps"><a class="button primary" href="#visualization-library">Browse all {items.length} views <span aria-hidden="true">↓</span></a><span>Interactive charts · Data stories · Vector diagrams</span></div>
-    </header>
+    </PageHead>
 
     <section class="visual-case-studies" aria-labelledby="visual-case-title">
       <div class="visual-section-heading"><div><p class="eyebrow">A closer look</p><h2 id="visual-case-title">Selected case studies</h2></div><p>Source research. Visual explanation. Published work.</p></div>
       <div class="visual-case-grid">
         {featuredCases.map(c=><article>
-          <a class="visual-case-image" href={c.links[0].href} aria-label={`Explore ${c.title}`}><img src={c.image} alt={`Preview: ${c.title}. ${c.text}`} width="800" height="520" loading="eager" decoding="async"/></a>
+          <a class="visual-case-image" href={c.links[0].href} aria-label={`Explore ${c.title}`}><img src={c.image} srcset={c.srcset} sizes="(max-width:859px) 100vw, 320px" alt={`Preview: ${c.title}. ${c.text}`} width="800" height="520" loading="eager" decoding="async"/></a>
           <div class="visual-case-copy"><p class="eyebrow">{c.label}</p><h3><a href={c.links[0].href}>{c.title}</a></h3><p>{c.text}</p>{c.reuseText && <p>{c.reuseText}</p>}<div class="visual-case-links">{c.links.map(link=><a href={link.href}>{link.label} <span aria-hidden="true">↗</span></a>)}</div></div>
         </article>)}
       </div>
@@ -58,11 +57,12 @@ const topics = [...new Set(items.map(v=>v.topic))].sort();
           </a>
         </article>)}
       </div>
+      <button type="button" id="visual-more" class="button visual-more" hidden>Show all {items.length} views</button>
       <p id="visual-empty" class="visual-empty" hidden>No views match those filters. <button type="button" id="visual-reset">Reset filters</button></p>
       <noscript><p>All {items.length} previews are shown. Use your browser’s Find command to search titles.</p></noscript>
     </section>
 
-    <aside class="visual-source-note"><h2>Follow the source.</h2><p>Previews are static images of the published work. Open a card for interactive controls, publication dates, source notes and licensing. Entropy for Life projects retain their original branding and attribution.</p><div class="source-links"><a href="https://commons.wikimedia.org/wiki/Special:Contributions/Digressivo">Wikimedia Commons collection ↗</a>{P.visualizationProfiles.map(profile=><a href={profile.url}>{profile.label} collection ↗</a>)}</div></aside>
+    <section class="visual-source-note"><h2>Follow the source.</h2><p>Previews are static images of the published work. Open a card for interactive controls, publication dates, source notes and licensing. Entropy for Life projects retain their original branding and attribution.</p><div class="source-links"><a href="https://commons.wikimedia.org/wiki/Special:Contributions/Digressivo">Wikimedia Commons collection ↗</a>{P.visualizationProfiles.map(profile=><a href={profile.url}>{profile.label} collection ↗</a>)}</div></section>
     <p class="evidence-note">Collection checked {G.reviewedAt}. These are published artifacts, not a claim about current policy or clinical guidance. Read each view with its dataset, units and source context.</p>
   </main>
   <SiteFooter/>
@@ -76,8 +76,12 @@ const topics = [...new Set(items.map(v=>v.topic))].sort();
   const count = document.querySelector<HTMLElement>('#visual-result-count');
   const empty = document.querySelector<HTMLElement>('#visual-empty');
   const normalize = (text: string) => text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  const grid = document.querySelector<HTMLElement>('#visual-grid');
+  const more = document.querySelector<HTMLButtonElement>('#visual-more');
   let platform = 'all';
+  const expand = () => { grid?.classList.remove('collapsed'); if (more) more.hidden = true; };
   function filter() {
+    expand();
     const words = normalize(search?.value || '').trim().split(/\s+/).filter(Boolean);
     let shown = 0;
     for (const card of cards) {
@@ -95,6 +99,8 @@ const topics = [...new Set(items.map(v=>v.topic))].sort();
     search.addEventListener('input',filter);
     topic.addEventListener('change',filter);
     document.querySelector('#visual-reset')?.addEventListener('click',()=>{platform='all';search.value='';topic.value='all';filter();search.focus();});
+    grid?.classList.add('collapsed');
+    if (more) { more.hidden = false; more.addEventListener('click', () => { expand(); cards[12]?.querySelector('a')?.focus(); }); }
     library.classList.add('gallery-enhanced');
   }
 </script>

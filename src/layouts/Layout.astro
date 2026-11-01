@@ -1,7 +1,6 @@
 ---
-import '../styles/global.css';
-import '../styles/presence.css';
-import '../styles/studio.css';
+import '../styles/site.css';
+import '../styles/print.css';
 import D from '../../data/source.js';
 const P = D.presence;
 const pagePath = Astro.url.pathname.replace(/\/index\.html$/, '/').replace(/\.html$/, '').replace(/\/$/, '') || '/';
@@ -36,13 +35,13 @@ const graph = {'@context':'https://schema.org','@graph':[
 <meta property="og:site_name" content={P.name}/><meta property="og:locale" content="en_US"/>
 <meta property="og:image" content={preview}/><meta property="og:image:type" content="image/png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image:alt" content={previewAlt}/>
 <meta name="msvalidate.01" content="BD54E4EE6CADEC40C0F941C7F43F3B68"/>
-<meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content={title}/><meta name="twitter:description" content={description}/><meta name="twitter:image" content={preview}/><meta name="twitter:image:alt" content={previewAlt}/><meta name="theme-color" content="#f4f5f7"/>
+<meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content={title}/><meta name="twitter:description" content={description}/><meta name="twitter:image" content={preview}/><meta name="twitter:image:alt" content={previewAlt}/><meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)"/><meta name="theme-color" content="#13181e" media="(prefers-color-scheme: dark)"/>
 <link rel="icon" href="/favicon-192x192.png" type="image/png" sizes="192x192"/><link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180"/><link rel="manifest" href="/site.webmanifest"/>
 <link rel="alternate" type="text/markdown" href={markdown}/><link rel="describedby" type="text/plain" href="/llms.txt"/>
 {noIndex && <meta name="robots" content="noindex"/>}
 <script type="application/ld+json" set:html={JSON.stringify(graph).replace(/</g,'\\u003c')}/>
-<script is:inline>document.documentElement.classList.add('js-enabled');try{document.documentElement.dataset.theme=localStorage.getItem('theme')||'light'}catch{}</script>
+<script is:inline>document.documentElement.classList.add('js-enabled');try{document.documentElement.dataset.theme=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch{}</script>
 <slot name="head"/>
 </head>
 <body><a class="skip-link" href="#main-content">Skip to content</a><slot/></body>

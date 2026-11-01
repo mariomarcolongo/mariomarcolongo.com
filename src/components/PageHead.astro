@@ -1,0 +1,18 @@
+---
+// Opening of every ruled page. The record sits left of the line, the claim right of it; on phones the claim comes before the sources.
+interface Link { label:string; url:string }
+interface Props { title:string; crumb?:Link; status?:string; links?:Link[]; id?:string }
+const {title,crumb,status='',links=[],id}=Astro.props;
+const lines=status.split(' · ').filter(Boolean);
+---
+<header class="page-head">
+  <div class="page-meta">
+    {crumb&&<a class="crumb" href={crumb.url}>{crumb.label}</a>}
+    {lines.length>0&&<ul class="record-lines">{lines.map(line=><li>{line}</li>)}</ul>}
+  </div>
+  <div class="page-title"><h1 id={id}>{title}</h1><slot/></div>
+  <div class="page-side">
+    {links.length>0&&<nav class="source-links page-sources" aria-label="Sources and records">{links.map(link=><a href={link.url}>{link.label}</a>)}</nav>}
+    <slot name="margin"/>
+  </div>
+</header>

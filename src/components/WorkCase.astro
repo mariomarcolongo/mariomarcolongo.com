@@ -4,8 +4,11 @@ import GraySwanCertificates from './GraySwanCertificates.astro';
 import ResearchProfiles from './ResearchProfiles.astro';
 import EmailLink from './EmailLink.astro';
 import InlineEvidence from './InlineEvidence.astro';
-const P=D.presence,N=P.redTeamNetwork;const {id}=Astro.props;const p=P.projects.find(p=>p.id===id);const claims=P.claims.filter(c=>p.claimIds.includes(c.id));
+import PageHead from './PageHead.astro';
+import TrackChart from './TrackChart.astro';
+const P=D.presence,N=P.redTeamNetwork,G=P.aiEvaluationLatestSnapshot,F=P.aiEvaluationFinalResult;const {id}=Astro.props;const p=P.projects.find(p=>p.id===id);const claims=P.claims.filter(c=>p.claimIds.includes(c.id));
 const isAiEvaluation=id==='ai-evaluation';
+const proofLevel=G.provingGround.percentile.replace(/^./,c=>c.toUpperCase());
 const searchTitles = {
   entropy: 'Entropy for Life — Research & Web Operations',
   atlas: 'AI Safety Formalization Atlas',
@@ -18,24 +21,23 @@ const searchTitles = {
 ---
 <Layout title={searchTitles[id] || `${p.name} — ${p.hook}`} description={p.text}>
   <SiteNav/>
-  <main id="main-content" class="presence-shell case-shell">
-    <p><a href="/work">Selected work</a></p>
-    <p class="meta">{p.status}</p>
-    <h1>{p.hook}</h1>
-    <p class="lede">{p.text}</p>
-    {isAiEvaluation&&<div class="source-links"><a class="button primary" href="/cv-ai">AI evaluation résumé</a><EmailLink class="button">Discuss a role or project</EmailLink></div>}
-    <div class="source-links">{p.links.map(l=><a href={l.url}>{l.label}</a>)}</div>
-    {isAiEvaluation&&p.sections.map(s=>s.collapsed?<details><summary>{s.heading}</summary><p><InlineEvidence text={s.text} links={s.links}/></p></details>:<section><h2>{s.heading}</h2><p><InlineEvidence text={s.text} links={s.links}/></p></section>)}
+  <main id="main-content" class="presence-shell ruled">
+    <PageHead title={p.hook} crumb={{label:'Selected work',url:'/work'}} status={p.status} links={p.links}>
+      <p class="lede">{p.text}</p>
+      {isAiEvaluation&&<div class="actions"><a class="button primary" href="/cv-ai">AI evaluation résumé</a><EmailLink class="button">Discuss a role or project</EmailLink></div>}
+    </PageHead>
+    {isAiEvaluation&&<section aria-labelledby="results-title"><h2 id="results-title">Results at a glance</h2><ul class="result-strip"><li><strong>{proofLevel}</strong><span>Gray Swan Proving Ground, #{G.provingGround.rank}. Captured {G.displayDate}.</span></li><li><strong>{G.provingGround.totalBreaks} breaks</strong><span>Platform-recorded across chat, image, agent and indirect tracks.</span></li><li><strong>{F.rank}th of {F.participants}</strong><span>Lucky Break: Level Up, final result.</span></li></ul><TrackChart snapshot={G}/></section>}
+    {isAiEvaluation&&p.sections.filter(s=>!s.collapsed).map((s,index)=><section><h2>{s.heading}</h2><p><InlineEvidence text={s.text} links={s.links}/></p>{index===0&&<figure class="leaderboard-capture"><a href={F.evidencePath}><img src={p.image} alt={p.alt} width={p.imageWidth||800} height={p.imageHeight||450} loading="lazy"/></a><figcaption>Leaderboard captured 29 October 2026. <a href={F.evidencePath}>Original captures →</a></figcaption></figure>}</section>)}
     {isAiEvaluation&&<GraySwanCertificates/>}
     {isAiEvaluation&&<section id="syntony"><h2>{N.organization} — {N.name}</h2><p class="meta">{N.role} · {N.period}</p><p>{N.summary}</p><p>{N.scope}</p><div class="source-links"><a href={N.sourceUrl}>About the network ↗</a>{N.publicAcknowledgementUrl&&<a href={N.publicAcknowledgementUrl}>Nathan Heath’s public acknowledgement ↗</a>}</div></section>}
     {id==='entropy'&&<BookAcknowledgement/>}
     <PublishedArtifacts id={id}/>
-    {p.image&&!['entropy','atlas','notandia','yourself-to-science','hypermandala'].includes(id)&&<figure><a href={p.image}><img src={p.image} alt={p.alt} width={p.imageWidth||800} height={p.imageHeight||450}/></a><figcaption>{p.name} · public artifact; source links above.</figcaption></figure>}
+    {p.image&&!['entropy','atlas','notandia','yourself-to-science','hypermandala','ai-evaluation'].includes(id)&&<section><h2>Public artifact</h2><figure><a href={p.image}><img src={p.image} alt={p.alt} width={p.imageWidth||800} height={p.imageHeight||450}/></a><figcaption>{p.name} · public artifact; source links above.</figcaption></figure></section>}
     {!isAiEvaluation&&p.sections.map(s=><section><h2>{s.heading}</h2><p><InlineEvidence text={s.text} links={s.links}/></p></section>)}
     {p.archive&&<section><h2>Archived software release</h2><p>{p.archive.title} · {p.archive.version} · {p.archive.releasedAt}. The archive preserves this release for citation and inspection.</p><div class="source-links"><a href={`https://doi.org/${p.archive.doi}`}>Release archive · DOI</a><a href={`https://doi.org/${p.archive.conceptDoi}`}>All versions</a><a href={p.archive.sourceUrl}>Versioned source</a></div><p class="meta">{p.archive.license}{id==='notandia'&&' · Zotero plugin; separate from the browser extension'}</p></section>}
     {id==='atlas'&&<ResearchProfiles/>}
-    {id==='notandia'&&<p><a href="https://github.com/notandia/zotero-plugin">Separate Zotero source repository</a></p>}
-    {claims.length>0&&<section><h2>Claim provenance</h2>{claims.map(c=><details><summary>{c.text}</summary><p>{c.limitation}</p><p class="meta">Evidence: {c.evidenceType.replaceAll('_',' ')} · Owner: {c.sourceOwner.replaceAll('_',' ')} · Observed {c.observedAt}{c.startDate&&` · Event/start ${c.startDate}`}.</p>{c.sourceUrl ? <a href={c.sourceUrl}>Original evidence</a> : <p>{c.sourceNote}</p>}</details>)}</section>}
+    {id==='notandia'&&<section><h2>Zotero plugin</h2><p><a href="https://github.com/notandia/zotero-plugin">Separate Zotero source repository</a></p></section>}
+    {(claims.length>0||isAiEvaluation)&&<section><h2>Claim provenance</h2>{isAiEvaluation&&p.sections.filter(s=>s.collapsed).map(s=><details><summary>{s.heading}</summary><p><InlineEvidence text={s.text} links={s.links}/></p></details>)}{claims.map(c=><details><summary>{c.text}</summary><p>{c.limitation}</p><p class="meta">Evidence: {c.evidenceType.replaceAll('_',' ')} · Owner: {c.sourceOwner.replaceAll('_',' ')} · Observed {c.observedAt}{c.startDate&&` · Event/start ${c.startDate}`}.</p>{c.sourceUrl ? <a href={c.sourceUrl}>Original evidence</a> : <p>{c.sourceNote}</p>}<p><a href={`/evidence#${c.id}`}>In the evidence index →</a></p></details>)}</section>}
     <p class="evidence-note">Source review: {p.reviewedAt || P.reviewedAt}. This is a dated account; the linked sources may have changed.</p>
   </main>
   <SiteFooter/>

@@ -1,0 +1,6 @@
+---
+const {snapshot:G}=Astro.props;
+const areas=G.provingGround.areas;
+const most=Math.max(...areas.map(area=>area.breaks));
+---
+<figure class="track-summary"><figcaption>Proving Ground breaks by track</figcaption><ul class="track-list">{areas.map(area=><li class="track-row"><span>{area.name}</span><span class="track-bar" aria-hidden="true"><span style={`width:${Math.round(area.breaks/most*100)}%`}></span></span><span>{area.breaks} of {area.available}</span></li>)}</ul><p class="track-note">Bar length compares the tracks with each other. <a href={G.evidencePath}>Inspect the dated scores →</a></p></figure>

@@ -1,0 +1,23 @@
+/* Printed résumés only. Values are fixed, so a dark screen theme cannot reach the page. */
+@media print {
+  @page { size:A4; margin:15mm 17mm; }
+  *,::before,::after { box-sizing:border-box; margin:0; padding:0; }
+  img { max-width:100%; height:auto; }
+  html,body { background:#fff!important; color:#202322!important; font:10pt/1.25 Arial,sans-serif; -webkit-font-smoothing:antialiased; overflow-wrap:anywhere; }
+  a { color:#185b4b; text-decoration:underline; text-underline-offset:.18em; }
+  .site-header,.site-footer,.skip-link,.resume-switch,.print-hide,.button { display:none!important; }
+  [hidden] { display:none!important; }
+  .presence-shell { width:100%; margin:0; padding:0; }
+  .resume-document { margin-inline:auto; padding:0; border:0; border-radius:0; background:#fff; }
+  .resume-document h1,.resume-document h2,.resume-document h3 { color:#202322; letter-spacing:-.025em; }
+  .resume-document h1 { max-width:20ch; margin:0 0 8px; font:400 24pt/1.12 Georgia,serif; }
+  .resume-document h2 { margin:4px 0 4px; font:700 11pt Arial; break-after:avoid; }
+  .resume-document h3 { margin:4px 0 2px; font:700 10.5pt Arial; break-after:avoid; }
+  .resume-document p { margin-bottom:2px; max-width:none; }
+  .resume-document .resume-title { font-size:13pt; }
+  .resume-document .meta,.resume-document .evidence-note { color:#333; font-size:9pt; }
+  .resume-document ul { margin:3px 0 5px; padding-left:17px; }
+  .resume-document li { margin:2px 0; break-inside:avoid; }
+  .resume-document .resume-entry { break-inside:avoid; }
+  .resume-document .evidence-note { margin-top:7px; padding-top:4px; border-top:1px solid #d9ddda; font-size:8pt; }
+}

@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import SiteNav from '../../components/SiteNav.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
+import PageHead from '../../components/PageHead.astro';
 import cases from '../../../data/investigation-cases.js';
 import D from '../../../data/source.js';
 const examples = [cases.syndromicAutism, cases.giannino];
@@ -14,14 +15,11 @@ const diagramReuse = D.presence.claims.find(claim => claim.id === 'biomedical-di
 
 <Layout title="Wikipedia, Wikidata & Wikimedia Commons — Mario Marcolongo">
   <SiteNav />
-  <main id="main-content" class="presence-shell case-shell">
-    <p class="eyebrow">Public contributor · Since 2018</p>
-    <h1>Making sources easier to trust and understand.</h1>
-    <p class="lede">My Wikimedia work combines English-to-Italian translation and adaptation, original explanatory writing, citation review, structured-data editing and scientific visualizations. The public record shows both the edits and the material behind them.</p>
-    <div class="source-links">
+  <main id="main-content" class="presence-shell ruled">
+    <PageHead title="Making sources easier to trust and understand." status="Public contributor · Since 2018"><div slot="margin" class="source-links page-sources">
       <a href="https://commons.wikimedia.org/wiki/Special:CentralAuth/Digressivo">Cross-project contribution record</a>
       <a href="/investigations">Detailed source investigations</a>
-    </div>
+    </div><p class="lede">My Wikimedia work combines English-to-Italian translation and adaptation, original explanatory writing, citation review, structured-data editing and scientific visualizations. The public record shows both the edits and the material behind them.</p></PageHead>
 
     <section aria-labelledby="translation-examples">
       <h2 id="translation-examples">English-to-Italian translation and adaptation</h2>
