@@ -1,6 +1,7 @@
 ---
 import ProfessionalCredentials from '../components/ProfessionalCredentials.astro';
 import InlineEvidence from '../components/InlineEvidence.astro';
+import PageHead from '../components/PageHead.astro';
 import Layout from '../layouts/Layout.astro';
 import SiteNav from '../components/SiteNav.astro';
 import SiteFooter from '../components/SiteFooter.astro';
@@ -9,11 +10,11 @@ const P=D.presence;
 ---
 <Layout title="Experience & responsibilities — Mario Marcolongo">
   <SiteNav/>
-  <main id="main-content" class="presence-shell case-shell">
-    <p class="eyebrow">Professional, volunteer and independent work</p>
-    <h1>Experience, with the details.</h1>
-    <p class="lede">Scientific research and communication, website delivery, public-source work and practical research support.</p>
-    <p><a href="/cv">Concise application résumé</a> · <a href={P.orcidUrl}>ORCID record</a></p>
+  <main id="main-content" class="presence-shell ruled">
+    <PageHead title="Experience, with the details." status="Professional, volunteer and independent work">
+      <p class="lede">Scientific research and communication, website delivery, public-source work and practical research support.</p>
+      <p><a href="/cv">Concise application résumé</a> · <a href={P.orcidUrl}>ORCID record</a></p>
+    </PageHead>
     {P.experience.map(e=><section>
       <p class="meta">{e.period}</p>
       <h2>{e.name}</h2>

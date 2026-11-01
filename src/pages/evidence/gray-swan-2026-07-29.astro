@@ -2,7 +2,6 @@
 import Layout from "../../layouts/Layout.astro";
 import SiteNav from "../../components/SiteNav.astro";
 import SiteFooter from "../../components/SiteFooter.astro";
-import "../../styles/career-v2.css";
 import D from "../../../data/source.js";
 
 const title = "Gray Swan Proving Ground Evidence — 29 July 2026";
@@ -30,17 +29,17 @@ const evidenceJsonLd = {
 <Layout title={title} description={description} canonical="https://mariomarcolongo.com/evidence/gray-swan-2026-07-29/">
   <Fragment slot="head"><script type="application/ld+json" set:html={JSON.stringify(evidenceJsonLd)}></script></Fragment>
   <SiteNav activePage="security" />
-  <main id="main-content" class="evaluation-shell">
+  <main id="main-content" class="presence-shell ruled evaluation-shell">
     <section class="evaluation-hero">
       <div>
         <div class="evaluation-eyebrow">Dated platform record · 29 July 2026 · 03:35:50 CEST</div>
         <h1 class="evaluation-title">Gray Swan profile evidence.</h1>
         <p class="evaluation-lede">The account-holder capture displayed Proving Ground rank #74, top 6% and 113 Total Breaks. The separate Arena profile displayed rank #365, 28 global unique breaks, 1,120 points and 255 submissions.</p>
-        <div class="career-actions">
-          <a class="btn btn-primary" href={D.identity.grayswanUrl} target="_blank" rel="noopener noreferrer">Open live Gray Swan profile ↗</a>
-          <a class="btn" href="/ai-evaluation">Read the evaluation record</a>
-          <a class="btn" href="/evidence/gray-swan-profile-2026-07-29.html">Preservation manifest</a>
-          <a class="btn" href="/evidence/gray-swan-2026-07-25/">Previous snapshot</a>
+        <div class="actions career-actions">
+          <a class="button primary" href={D.identity.grayswanUrl} target="_blank" rel="noopener noreferrer">Open live Gray Swan profile ↗</a>
+          <a class="button" href="/ai-evaluation">Read the evaluation record</a>
+          <a class="button" href="/evidence/gray-swan-profile-2026-07-29.html">Preservation manifest</a>
+          <a class="button" href="/evidence/gray-swan-2026-07-25/">Previous snapshot</a>
         </div>
       </div>
       <aside class="evaluation-scope-note"><strong>Evidence limits</strong><p>The original PNG is retained unchanged. Responsive WebP derivatives are used on the website. Counts and rankings are platform-reported, time-sensitive and not independent reproduction of every adjudicated result.</p></aside>
@@ -58,7 +57,7 @@ const evidenceJsonLd = {
         <a href={original} aria-label="Open the original Gray Swan profile screenshot at full size"><img src={preview} srcset={previewSet} sizes="(max-width: 900px) 100vw, 1200px" alt="Screenshot of Mario Marcolongo's Gray Swan profile showing Proving Ground rank 74, top 6%, 113 total breaks and separate Arena activity on 29 July 2026" width="1600" height="903" style="display:block;width:100%;height:auto;border:1px solid rgba(127,127,127,.3);border-radius:18px;background:#090b0d" /></a>
         <figcaption style="margin-top:12px;line-height:1.6">Original capture: 2940 × 1660 PNG · captured 29 July 2026 at 03:35:50 CEST.</figcaption>
       </figure>
-      <div class="career-actions" style="margin-top:18px"><a class="btn" href="/evidence/gray-swan-profile-2026-07-29.html">Preservation manifest and SHA-256</a><a class="btn" href="/evidence/gray-swan-profile-2026-07-29.json">Machine-readable evidence JSON</a></div>
+      <div class="actions career-actions" style="margin-top:18px"><a class="button" href="/evidence/gray-swan-profile-2026-07-29.html">Preservation manifest and SHA-256</a><a class="button" href="/evidence/gray-swan-profile-2026-07-29.json">Machine-readable evidence JSON</a></div>
     </section>
 
     <section class="evaluation-section">

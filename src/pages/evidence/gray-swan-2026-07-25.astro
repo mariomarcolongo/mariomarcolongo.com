@@ -2,7 +2,6 @@
 import Layout from "../../layouts/Layout.astro";
 import SiteNav from "../../components/SiteNav.astro";
 import SiteFooter from "../../components/SiteFooter.astro";
-import "../../styles/career-v2.css";
 import release from "../../../data/release-data.js";
 
 const { D, GS } = release;
@@ -40,7 +39,7 @@ const evidenceJsonLd = {
 
   <SiteNav activePage="security" />
 
-  <main id="main-content" class="evaluation-shell">
+  <main id="main-content" class="presence-shell ruled evaluation-shell">
     <section class="evaluation-hero">
       <div>
         <div class="evaluation-eyebrow">Dated platform record · 25 July 2026</div>
@@ -48,11 +47,11 @@ const evidenceJsonLd = {
         <p class="evaluation-lede">
           The account-holder capture displayed Proving Ground rank #{GS.rank}, {GS.percentile.toLowerCase()} and {GS.totalBreaks} Total Breaks. It also recorded the separate Arena metrics: rank #{GS.arenaRank}, {GS.arenaUniqueBreaks} global unique breaks, {GS.arenaPoints.toLocaleString("en-US")} points and {GS.arenaSubmissions} submissions.
         </p>
-        <div class="career-actions">
-          <a class="btn btn-primary" href={D.identity.grayswanUrl} target="_blank" rel="noopener noreferrer">Open live Gray Swan profile ↗</a>
-          <a class="btn" href="/ai-evaluation">Read the evaluation record</a>
-          <a class="btn" href="/evidence/gray-swan-profile-2026-07-25.html">Open preservation manifest</a>
-          <a class="btn" href="/evidence/gray-swan-2026-07-24/">Previous preserved snapshot</a>
+        <div class="actions career-actions">
+          <a class="button primary" href={D.identity.grayswanUrl} target="_blank" rel="noopener noreferrer">Open live Gray Swan profile ↗</a>
+          <a class="button" href="/ai-evaluation">Read the evaluation record</a>
+          <a class="button" href="/evidence/gray-swan-profile-2026-07-25.html">Open preservation manifest</a>
+          <a class="button" href="/evidence/gray-swan-2026-07-24/">Previous preserved snapshot</a>
         </div>
       </div>
 
@@ -93,9 +92,9 @@ const evidenceJsonLd = {
           Public screenshot preview. Open it at full size or use the preservation manifest for the original capture metadata and cryptographic hash.
         </figcaption>
       </figure>
-      <div class="career-actions" style="margin-top:18px">
-        <a class="btn" href="/evidence/gray-swan-profile-2026-07-25.html">Preservation manifest and capture chain</a>
-        <a class="btn" href="/evidence/gray-swan-profile-2026-07-25.json">Machine-readable evidence JSON</a>
+      <div class="actions career-actions" style="margin-top:18px">
+        <a class="button" href="/evidence/gray-swan-profile-2026-07-25.html">Preservation manifest and capture chain</a>
+        <a class="button" href="/evidence/gray-swan-profile-2026-07-25.json">Machine-readable evidence JSON</a>
       </div>
     </section>
 

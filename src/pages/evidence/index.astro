@@ -1,6 +1,37 @@
 ---
 import ProfessionalCredentials from '../../components/ProfessionalCredentials.astro';
 import ResearchProfiles from '../../components/ResearchProfiles.astro';
+import ClaimLedger from '../../components/ClaimLedger.astro';
+import EmailLink from '../../components/EmailLink.astro';
+import PageHead from '../../components/PageHead.astro';
 import Layout from '../../layouts/Layout.astro';import SiteNav from '../../components/SiteNav.astro';import SiteFooter from '../../components/SiteFooter.astro';import D from '../../../data/source.js';const P=D.presence;
+const filters=[{id:'all',label:'All claims'},{id:'ai-evaluation',label:'AI evaluation'},{id:'paid',label:'Paid work'},{id:'research',label:'Open source & research'},{id:'projects',label:'Projects & study'}];
 ---
-<Layout title="Evidence index — Mario Marcolongo"><SiteNav/><main id="main-content" class="presence-shell case-shell"><h1>Evidence and its limits.</h1><p>Original sources establish different things: attribution, maintainer acceptance, a dated platform result or the existence of a public artifact. Publication is not automatically independent verification.</p><ResearchProfiles/><ProfessionalCredentials/><ul class="case-index">{P.claims.map(c=><li><h2>{c.text}</h2><p>{c.limitation}</p><p class="meta">{c.engagementType.replaceAll('_',' ')} · {c.evidenceType.replaceAll('_',' ')} · Owner: {c.sourceOwner.replaceAll('_',' ')} · Reviewed {c.lastReviewedAt}</p>{c.sourceUrl ? <a href={c.sourceUrl}>Inspect source</a> : <p>{c.sourceNote || 'Private institutional transcript supplied by the student; not published.'}</p>}</li>)}</ul><p><a href="/investigations">Attributed source investigations</a> · <a href={P.languages.sourceUrl}>EF SET certificate</a> · <a href="/profile.json">Structured claim records</a></p></main><SiteFooter/></Layout>
+<Layout title="Evidence index — Mario Marcolongo"><SiteNav/><main id="main-content" class="presence-shell ruled"><PageHead title="Evidence and its limits." status="Evidence index"><p class="lede">Original sources establish different things: attribution, maintainer acceptance, a dated platform result or the existence of a public artifact. Publication is not automatically independent verification.</p><div class="claim-tools"><label>Check a claim<input id="claim-search" type="search" placeholder="Try Python, Gray Swan, paid, Wikipedia…" autocomplete="off" aria-controls="claim-ledger" aria-keyshortcuts="/"/></label><div class="chip-row" role="group" aria-label="Filter claims by area">{filters.map((filter,index)=><button type="button" data-area={filter.id} aria-pressed={index===0?'true':'false'}>{filter.label}</button>)}</div><p id="claim-count" class="claim-count" role="status" aria-live="polite" aria-atomic="true">{P.claims.length} claims</p></div></PageHead><p id="claim-empty" class="claim-empty" hidden>Nothing on this site claims that. <EmailLink>Ask me</EmailLink>.</p><div id="claim-ledger" class="claim-group"><ClaimLedger/></div><ResearchProfiles/><ProfessionalCredentials/><p class="evidence-note"><a href="/investigations">Attributed source investigations</a> · <a href={P.languages.sourceUrl}>EF SET certificate</a> · <a href="/profile.json">Structured claim records</a></p></main><SiteFooter/></Layout>
+<script>
+const search=document.querySelector<HTMLInputElement>('#claim-search');
+const buttons=[...document.querySelectorAll<HTMLButtonElement>('.claim-tools button')];
+const groups=[...document.querySelectorAll<HTMLElement>('#claim-ledger > .claim-group')];
+const count=document.querySelector<HTMLElement>('#claim-count');
+const empty=document.querySelector<HTMLElement>('#claim-empty');
+const normalize=(text:string)=>text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+let area='all';
+function filter(){
+ const words=normalize(search?.value||'').trim().split(/\s+/).filter(Boolean);
+ let shown=0,total=0;
+ for(const group of groups){
+  const claims=[...group.querySelectorAll<HTMLElement>('.claim')];
+  let inGroup=0;total+=claims.length;
+  for(const claim of claims){const text=normalize(claim.dataset.search||'');const match=(area==='all'||group.dataset.area===area)&&words.every(word=>text.includes(word));claim.hidden=!match;if(match)inGroup++;}
+  group.hidden=inGroup===0;shown+=inGroup;
+ }
+ buttons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.area===area)));
+ if(count)count.textContent=shown===total?`${total} claims`:`${shown} of ${total} claims`;
+ if(empty)empty.hidden=shown>0;
+}
+if(search){
+ buttons.forEach(button=>button.addEventListener('click',()=>{area=button.dataset.area||'all';filter();}));
+ search.addEventListener('input',filter);
+ addEventListener('keydown',event=>{if(event.key==='/'&&!(event.target instanceof HTMLInputElement)&&!event.metaKey&&!event.ctrlKey){event.preventDefault();search.focus();}});
+}
+</script>

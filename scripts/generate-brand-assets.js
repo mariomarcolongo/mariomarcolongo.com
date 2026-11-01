@@ -12,10 +12,10 @@ const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&
 function card({label, title, text, image, caption}) {
  const media = fs.readFileSync(path.join(pub, image));
  return `<!doctype html><html lang="en"><meta charset="utf-8"><style>
- *{box-sizing:border-box}body{margin:0;width:1200px;height:630px;background:#f4f5f7;color:#1c2736;font-family:Arial,sans-serif;padding:52px;display:grid;grid-template-columns:620px 428px;gap:48px}
- .label{color:#536174;font-size:20px;line-height:1.4;margin:0 0 26px}h1{font-size:64px;line-height:1.03;letter-spacing:-2.5px;margin:0 0 27px}p{font-size:27px;line-height:1.4;margin:0}.brand{display:flex;align-items:center;gap:14px;font-size:20px;font-weight:bold;margin-bottom:44px}.brand img{width:38px;height:38px}.url{font-size:20px;color:#2452c6;margin-top:30px}
- .artifact{align-self:center;background:#fff;border:1px solid #d7dee6;border-radius:14px;overflow:hidden}.artifact>img{width:100%;height:315px;object-fit:contain;background:#10141a;display:block}.artifact p{font-size:18px;color:#536174;padding:20px;line-height:1.45}
- </style><body><div><div class="brand"><img alt="" src="data:image/svg+xml;base64,${fs.readFileSync(path.join(pub,'favicon.svg')).toString('base64')}">${esc(P.name)}</div><p class="label">${esc(label)}</p><h1>${esc(title)}</h1><p>${esc(text)}</p><p class="url">mariomarcolongo.com</p></div><div class="artifact"><img alt="" src="data:image/${image.endsWith('.webp')?'webp':'png'};base64,${media.toString('base64')}"><p>${esc(caption)}</p></div></body></html>`;
+ *{box-sizing:border-box}body{margin:0;width:1200px;height:630px;background:#f7f6f2;color:#17202a;font-family:Arial,sans-serif;padding:52px;display:grid;grid-template-columns:620px 428px;gap:48px}
+ .label{color:#505a64;font-size:20px;line-height:1.4;margin:0 0 26px}h1{font-family:'Iowan Old Style',Palatino,Georgia,serif;font-weight:400;font-size:60px;line-height:1.06;letter-spacing:-1.3px;margin:0 0 27px}h1 em{color:#b83d25;font-style:normal}p{font-size:27px;line-height:1.4;margin:0}.brand{display:flex;align-items:center;gap:14px;font-size:20px;font-weight:bold;margin-bottom:44px}.brand img{width:38px;height:38px}.url{font-size:20px;color:#b83d25;margin-top:30px}
+ .artifact{align-self:center;background:#fff;border:1px solid #dcd9d0;border-radius:3px;overflow:hidden}.artifact>img{width:100%;height:315px;object-fit:contain;background:#10141a;display:block}.artifact p{font-size:18px;color:#505a64;padding:20px;line-height:1.45}
+ </style><body><div><div class="brand"><img alt="" src="data:image/svg+xml;base64,${fs.readFileSync(path.join(pub,'favicon.svg')).toString('base64')}">${esc(P.name)}</div><p class="label">${esc(label)}</p><h1>${esc(title).replace(/\. (.+)$/,'.<br><em>$1</em>')}</h1><p>${esc(text)}</p><p class="url">mariomarcolongo.com</p></div><div class="artifact"><img alt="" src="data:image/${image.endsWith('.webp')?'webp':'png'};base64,${media.toString('base64')}"><p>${esc(caption)}</p></div></body></html>`;
 }
 
 function ico(png) {
@@ -41,7 +41,7 @@ async function main() {
   const cards={
    home:{label:'AI evaluation, information integrity & research',title:P.headline,text:'Testing AI systems and software, and checking the evidence behind claims.',image:M.screenshots['entropy-map'].image,caption:'Published Tableau map: data collection and visualization for Entropy for Life.'},
    cv:{label:'Application résumés',title:'Experience you can inspect.',text:'AI evaluation · Scientific research · Software QA',image:M.screenshots.notandia.image,caption:'One-page résumés. Published work and source records.'},
-   'ai-evaluation':{label:'Independent model testing',title:'AI evaluation record',text:'Dated platform results, original captures and explicit evidence limits.',image:P.aiEvaluationSnapshot.detailImage,caption:`Gray Swan public profile · ${P.aiEvaluationSnapshot.displayDate}`},
+   'ai-evaluation':{label:'Independent model testing',title:'AI evaluation record',text:'Dated platform results, original captures and explicit evidence limits.',image:P.aiEvaluationLatestSnapshot.detailImage,caption:`Gray Swan public profile · ${P.aiEvaluationLatestSnapshot.displayDate}`},
    investigations:{label:'Source investigation & data quality',title:'Check the claim. Follow the source.',text:'Citation reconciliation, structured metadata and public investigation records.',image:M.screenshots.atlas.image,caption:'Accepted source-locator and provenance contribution.'},
    'scientific-visualizations':{label:'Scientific charts, maps & diagrams',title:'Data made visible.',text:'Interactive data views and scientific diagrams with sources and attribution.',image:M.screenshots['entropy-cannabis'].image,caption:'Published Flourish story: European industrial hemp cultivation, with Eurostat data.'}
   };
@@ -52,7 +52,7 @@ async function main() {
    await page.setContent(card(config),{waitUntil:'load'});
    await page.screenshot({path:path.join(pub,'og',`${name}.png`),type:'png'});
   }
-  if(!cardName) fs.writeFileSync(path.join(pub,'site.webmanifest'),JSON.stringify({name:`${P.name} — ${P.currentPositioning}`,short_name:'Mario M.',description:P.description,start_url:'/',scope:'/',icons:[192,512].map(size=>({src:`/favicon-${size}x${size}.png`,sizes:`${size}x${size}`,type:'image/png'})),theme_color:'#f4f5f7',background_color:'#f4f5f7',display:'standalone'},null,2)+'\n');
+  if(!cardName) fs.writeFileSync(path.join(pub,'site.webmanifest'),JSON.stringify({name:`${P.name} — ${P.currentPositioning}`,short_name:'Mario M.',description:P.description,start_url:'/',scope:'/',icons:[192,512].map(size=>({src:`/favicon-${size}x${size}.png`,sizes:`${size}x${size}`,type:'image/png'})),theme_color:'#f7f6f2',background_color:'#f7f6f2',display:'standalone'},null,2)+'\n');
  } finally { await browser.close(); }
  console.log(cardName ? `Generated social preview card: ${cardName}.` : 'Generated consistent icons, manifest and five current social preview cards.');
 }
