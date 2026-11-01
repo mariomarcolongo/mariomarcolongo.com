@@ -37,8 +37,8 @@ async function capture(browser, server, name, width, height, theme) {
       .map((image) => ({ src: image.getAttribute('src'), alt: image.alt }));
     const contact = document.querySelector('#contact');
     const contactStyle = contact ? getComputedStyle(contact) : null;
-    const caseImages = document.querySelectorAll('.evidence-work-card img').length;
-    const entropyImages = document.querySelectorAll('.entropy-case img').length;
+    const caseImages = document.querySelectorAll('#evidence-work img').length;
+    const entropyImages = document.querySelectorAll('#selected-work img').length;
     const totalPortfolioImages = document.querySelectorAll('main img').length;
     return {
       scrollWidth: document.documentElement.scrollWidth,
@@ -47,10 +47,10 @@ async function capture(browser, server, name, width, height, theme) {
       contactExists: Boolean(contact),
       contactOpacity: contactStyle ? Number.parseFloat(contactStyle.opacity) : null,
       contactHeight: contact ? Math.round(contact.getBoundingClientRect().height) : null,
-      heroImages: document.querySelectorAll('.work-gallery img').length,
+      recordRows: document.querySelectorAll('.record-rows li').length,
       caseImages,
       entropyImages,
-      productImages: document.querySelectorAll('.real-tool-card img').length,
+      productImages: document.querySelectorAll('.card img').length,
       totalPortfolioImages,
       brokenLocalImages: brokenImages.filter((item) => item.src && item.src.startsWith('/')),
       brokenExternalImages: brokenImages.filter((item) => !item.src || !item.src.startsWith('/'))
@@ -67,7 +67,7 @@ async function capture(browser, server, name, width, height, theme) {
   if (!measurements.contactExists || measurements.contactOpacity < 0.95 || !measurements.contactHeight) {
     throw new Error(`${name} has a hidden or missing contact conversion section: ${JSON.stringify(measurements)}`);
   }
-  if (!measurements.heroImages || !measurements.caseImages || !measurements.entropyImages || !measurements.productImages) {
+  if (!measurements.recordRows || !measurements.caseImages || !measurements.entropyImages || !measurements.productImages) {
     throw new Error(`${name} does not render the expected real-work evidence: ${JSON.stringify(measurements)}`);
   }
   if (measurements.brokenLocalImages.length) {
