@@ -1,0 +1,40 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Mario Marcolongo",
+    "identifier": "https://mariomarcolongo.com"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:mariomarcolongo.com:server:portfolio-evidence",
+      "displayName": "Mario Marcolongo — public evidence",
+      "type": "application/mcp-server-card+json",
+      "url": "https://mariomarcolongo.com/.well-known/mcp/server-card.json",
+      "representativeQueries": [
+        "find an Italian-speaking AI red teamer",
+        "what evidence supports Mario Marcolongo’s Gray Swan results",
+        "get Mario Marcolongo’s résumé for AI evaluation roles"
+      ]
+    },
+    {
+      "identifier": "urn:air:mariomarcolongo.com:agent:evidence",
+      "displayName": "Mario Marcolongo evidence agent",
+      "type": "application/a2a-agent-card+json",
+      "url": "https://mariomarcolongo.com/.well-known/agent-card.json",
+      "representativeQueries": [
+        "ask whether Mario Marcolongo has prompt injection experience",
+        "find public evidence for an Italian-speaking AI evaluator"
+      ]
+    },
+    {
+      "identifier": "urn:air:mariomarcolongo.com:api:portfolio-evidence",
+      "displayName": "Mario Marcolongo public evidence API",
+      "type": "application/openapi+json",
+      "url": "https://mariomarcolongo.com/openapi.json",
+      "representativeQueries": [
+        "search a candidate’s dated public claims and their limits",
+        "retrieve résumé links for a scientific fact-checker"
+      ]
+    }
+  ]
+}

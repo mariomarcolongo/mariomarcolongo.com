@@ -1,0 +1,47 @@
+{
+  "name": "Mario Marcolongo evidence agent",
+  "description": "Answers questions about Mario Marcolongo by keyword search over his public professional records. Returns dated records with sources and limits. Uses no language model, keeps no conversation and is not an independent assessment.",
+  "supportedInterfaces": [
+    {
+      "url": "https://mariomarcolongo.com/a2a",
+      "protocolBinding": "JSONRPC",
+      "protocolVersion": "1.0"
+    }
+  ],
+  "provider": {
+    "organization": "Mario Marcolongo",
+    "url": "https://mariomarcolongo.com"
+  },
+  "version": "1.0.0",
+  "documentationUrl": "https://mariomarcolongo.com/agent-service.md",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "extendedAgentCard": false
+  },
+  "defaultInputModes": [
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "skills": [
+    {
+      "id": "search-evidence",
+      "name": "Search public evidence",
+      "description": "Find claims, projects, work, credentials, education, services and résumés matching the words in a message.",
+      "tags": [
+        "evidence",
+        "recruiting",
+        "ai-evaluation",
+        "fact-checking"
+      ],
+      "examples": [
+        "prompt injection",
+        "Wikipedia translation",
+        "Italian software QA"
+      ]
+    }
+  ]
+}

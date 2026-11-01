@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "mario-marcolongo-evidence",
+      "type": "skill-md",
+      "description": "Retrieve Mario Marcolongo’s public professional profile, dated evidence and résumé links.",
+      "url": "https://mariomarcolongo.com/.well-known/agent-skills/mario-marcolongo-evidence/SKILL.md",
+      "digest": "sha256:cb30811d660a0dcbba3ffb277c51f1e28545b8caa1e5a5b9f2a3f5ad8ee39167"
+    }
+  ]
+}

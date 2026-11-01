@@ -1,0 +1,19 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://mariomarcolongo.com/api/",
+      "service-desc": [
+        {
+          "href": "https://mariomarcolongo.com/openapi.json",
+          "type": "application/openapi+json"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://mariomarcolongo.com/agent-service.md",
+          "type": "text/markdown"
+        }
+      ]
+    }
+  ]
+}

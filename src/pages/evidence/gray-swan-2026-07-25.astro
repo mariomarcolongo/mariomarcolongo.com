@@ -6,13 +6,13 @@ import release from "../../../data/release-data.js";
 
 const { D, GS } = release;
 const title = "Gray Swan Proving Ground Evidence — 25 July 2026";
-const description = "Dated Gray Swan evidence record for Mario Marcolongo: original public profile screenshot, Proving Ground rank 75, top 6%, 110 total breaks, separate Arena metrics and preserved capture metadata.";
+const description = "Dated Gray Swan record for Mario Marcolongo: original public profile screenshot, Proving Ground rank 75, top 6%, 110 total breaks, separate Arena metrics.";
 const evidenceJsonLd = {
   "@context": "https://schema.org",
   "@type": "DigitalDocument",
   name: title,
   description,
-  url: "https://mariomarcolongo.com/evidence/gray-swan-2026-07-25/",
+  url: "https://mariomarcolongo.com/evidence/gray-swan-2026-07-25",
   dateCreated: "2026-07-25T19:19:07Z",
   dateModified: "2026-07-26",
   author: { "@id": "https://mariomarcolongo.com/#person" },
@@ -32,7 +32,7 @@ const evidenceJsonLd = {
 };
 ---
 
-<Layout title={title} description={description} canonical="https://mariomarcolongo.com/evidence/gray-swan-2026-07-25/">
+<Layout title={title} description={description} canonical="https://mariomarcolongo.com/evidence/gray-swan-2026-07-25">
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(evidenceJsonLd)}></script>
   </Fragment>
@@ -50,8 +50,8 @@ const evidenceJsonLd = {
         <div class="actions career-actions">
           <a class="button primary" href={D.identity.grayswanUrl} target="_blank" rel="noopener noreferrer">Open live Gray Swan profile ↗</a>
           <a class="button" href="/ai-evaluation">Read the evaluation record</a>
-          <a class="button" href="/evidence/gray-swan-profile-2026-07-25.html">Open preservation manifest</a>
-          <a class="button" href="/evidence/gray-swan-2026-07-24/">Previous preserved snapshot</a>
+          <a class="button" href="/evidence/gray-swan-profile-2026-07-25">Open preservation manifest</a>
+          <a class="button" href="/evidence/gray-swan-2026-07-24">Previous preserved snapshot</a>
         </div>
       </div>
 
@@ -93,7 +93,7 @@ const evidenceJsonLd = {
         </figcaption>
       </figure>
       <div class="actions career-actions" style="margin-top:18px">
-        <a class="button" href="/evidence/gray-swan-profile-2026-07-25.html">Preservation manifest and capture chain</a>
+        <a class="button" href="/evidence/gray-swan-profile-2026-07-25">Preservation manifest and capture chain</a>
         <a class="button" href="/evidence/gray-swan-profile-2026-07-25.json">Machine-readable evidence JSON</a>
       </div>
     </section>

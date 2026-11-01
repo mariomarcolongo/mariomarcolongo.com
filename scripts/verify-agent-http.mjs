@@ -20,6 +20,8 @@ assert.deepEqual(JSON.parse((await rpc('resources/read',{uri:'portfolio://profil
 assert.equal((await fetch(base+'/mcp')).status,405);
 assert.equal((await fetch(base+'/mcp',{headers:{Origin:'https://attacker.invalid'}})).status,403);
 assert.equal((await fetch(base+'/api/evidence?q=test&limit=100')).status,400);
-for(const path of ['/auth.md','/.well-known/oauth-authorization-server','/.well-known/agent-card.json','/api/absent'])assert.equal((await fetch(base+path)).status,404,path);
+for(const path of ['/auth.md','/.well-known/oauth-authorization-server','/api/absent'])assert.equal((await fetch(base+path)).status,404,path);
 const robots=await (await fetch(base+'/robots.txt')).text();for(const signal of ['search=yes','ai-input=yes','ai-train=yes'])assert.ok(robots.includes(signal));
+const a2a=await (await fetch(base+'/a2a',{method:'POST',headers:{'Content-Type':'application/json','A2A-Version':'1.0'},body:JSON.stringify({jsonrpc:'2.0',id:1,method:'SendMessage',params:{message:{messageId:'test',role:'ROLE_USER',parts:[{text:'prompt injection'}]}}})})).json();assert.equal(a2a.result.message.role,'ROLE_AGENT');assert.ok(a2a.result.message.parts[1].data.totalMatches>0);
+const agentCard=await (await fetch(base+'/.well-known/agent-card.json')).json();assert.ok(agentCard.supportedInterfaces[0].url.endsWith('/a2a'));
 console.log(`Verified real HTTP profile, evidence, PDF links, discovery, MCP tool/resource round trips and request boundaries at ${base}.`);

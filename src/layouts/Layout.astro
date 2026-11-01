@@ -13,13 +13,17 @@ const profilePage = pagePath === '/' || /^\/cv(?:-technical|-ai)?$/.test(pagePat
 const collectionPage = pagePath === '/work/scientific-visualizations';
 const collectionItems = Astro.props.collectionItems || P.visualArtifacts;
 const preview = Astro.props.ogImage ? `${P.canonicalUrl}${Astro.props.ogImage}` : `${P.canonicalUrl}/og/${pagePath.startsWith('/cv') ? 'cv' : pagePath === '/ai-evaluation' ? 'ai-evaluation' : pagePath === '/investigations' ? 'investigations' : 'home'}.png`;
+const shortName = title.replace(/\s*—\s*Mario Marcolongo.*$/, '').replace(/^Mario Marcolongo\s*—\s*/, '');
+const parent = pagePath.startsWith('/work/') || ['/ai-evaluation', '/notandia', '/investigations'].includes(pagePath) ? {name: 'Selected work', url: `${P.canonicalUrl}/work`} : pagePath.startsWith('/evidence/') ? {name: 'Evidence index', url: `${P.canonicalUrl}/evidence`} : pagePath.startsWith('/cv-') ? {name: 'Résumé', url: `${P.canonicalUrl}/cv`} : null;
+const crumbs = pagePath === '/' || noIndex ? [] : [{name: P.name, url: `${P.canonicalUrl}/`}, ...(parent ? [parent] : []), {name: shortName, url: canonical}];
 const previewAlt = Astro.props.ogImageAlt || `${P.name} — ${pagePath.startsWith('/cv')?'Application résumés':P.currentPositioning}`;
 const directory = pagePath === '/work/yourself-to-science' ? D.projects.find(project => project.id === 'yourself-to-science') : undefined;
 const outputs = P.outputs.filter(output => P.projects.find(project => project.id === output.projectId)?.route === pagePath);
 const graph = {'@context':'https://schema.org','@graph':[
- {'@type':'Person','@id':`${P.canonicalUrl}/#person`,name:P.name,url:P.canonicalUrl,description:P.machineSummary,email:P.email,hasCredential:P.credentials.map(c=>({'@type':'EducationalOccupationalCredential',name:c.title,url:c.url,identifier:c.credentialId,credentialCategory:c.category,dateCreated:c.earnedAt,recognizedBy:{'@type':'Organization',name:c.issuer,url:c.issuerUrl}})),sameAs:[P.github,P.linkedin,P.orcidUrl,...P.researchProfiles.map(profile=>profile.url),...P.visualizationProfiles.map(profile=>profile.url)],identifier:{'@type':'PropertyValue',propertyID:'ORCID',value:P.orcidUrl.split('/').pop()}},
- {'@type':profilePage?'ProfilePage':collectionPage?'CollectionPage':'WebPage','@id':`${canonical}#webpage`,name:title,url:canonical,description,inLanguage:'en',isPartOf:{'@id':`${P.canonicalUrl}/#website`},...(profilePage?{mainEntity:{'@id':`${P.canonicalUrl}/#person`}}:{about:{'@id':`${P.canonicalUrl}/#person`}}),...(collectionPage?{mainEntity:{'@id':`${canonical}#visualizations`}}:{})},
- ...(pagePath==='/'?[{'@type':'WebSite','@id':`${P.canonicalUrl}/#website`,name:P.name,url:P.canonicalUrl,inLanguage:'en',publisher:{'@id':`${P.canonicalUrl}/#person`}}]:[]),
+ {'@type':'Person','@id':`${P.canonicalUrl}/#person`,name:P.name,givenName:'Mario',familyName:'Marcolongo',url:P.canonicalUrl,...(pagePath.startsWith('/cv')?{}:{image:`${P.canonicalUrl}/media/mario-marcolongo-portrait.webp`}),jobTitle:Object.values(P.cv).map(cv=>cv.title),description:P.machineSummary,email:P.email,nationality:{'@type':'Country',name:'Italy'},address:{'@type':'PostalAddress',addressCountry:'IT'},knowsLanguage:[{'@type':'Language',name:'Italian',alternateName:'it'},{'@type':'Language',name:'English',alternateName:'en'}],knowsAbout:P.knowsAbout,memberOf:{'@type':'Organization',name:`${P.redTeamNetwork.organization} ${P.redTeamNetwork.name}`,url:P.redTeamNetwork.sourceUrl},hasCredential:P.credentials.map(c=>({'@type':'EducationalOccupationalCredential',name:c.title,url:c.url,identifier:c.credentialId,credentialCategory:c.category,dateCreated:c.earnedAt,recognizedBy:{'@type':'Organization',name:c.issuer,url:c.issuerUrl}})),sameAs:[P.github,P.linkedin,P.orcidUrl,...P.researchProfiles.map(profile=>profile.url),...P.visualizationProfiles.map(profile=>profile.url)],identifier:{'@type':'PropertyValue',propertyID:'ORCID',value:P.orcidUrl.split('/').pop()}},
+ {'@type':profilePage?'ProfilePage':collectionPage?'CollectionPage':'WebPage','@id':`${canonical}#webpage`,name:title,url:canonical,description,inLanguage:'en',dateModified:Astro.props.modified||P.reviewedAt,...(profilePage?{dateCreated:'2026-07-13'}:{}),...(crumbs.length?{breadcrumb:{'@id':`${canonical}#breadcrumb`}}:{}),isPartOf:{'@id':`${P.canonicalUrl}/#website`},...(profilePage?{mainEntity:{'@id':`${P.canonicalUrl}/#person`}}:{about:{'@id':`${P.canonicalUrl}/#person`}}),...(collectionPage?{mainEntity:{'@id':`${canonical}#visualizations`}}:{})},
+ {'@type':'WebSite','@id':`${P.canonicalUrl}/#website`,name:P.name,url:P.canonicalUrl,inLanguage:'en',publisher:{'@id':`${P.canonicalUrl}/#person`}},
+ ...(crumbs.length?[{'@type':'BreadcrumbList','@id':`${canonical}#breadcrumb`,itemListElement:crumbs.map((crumb,index)=>({'@type':'ListItem',position:index+1,name:crumb.name,item:crumb.url}))}]:[]),
  ...(directory?[{'@type':'SoftwareApplication','@id':`${directory.links.website}/#app`,name:'Yourself to Science',url:directory.links.website,applicationCategory:'ScientificApplication',operatingSystem:'Web',author:{'@id':`${P.canonicalUrl}/#person`},sameAs:[directory.links.doi],subjectOf:{'@type':'CreativeWork',name:'FAIRsharing record for: Yourself to Science',url:directory.links.fairsharing}}]:[]),
  ...(collectionPage?[{'@type':'ItemList','@id':`${canonical}#visualizations`,name:'Published scientific visualizations',numberOfItems:collectionItems.length,itemListElement:collectionItems.map((item,index)=>({'@type':'ListItem',position:index+1,name:item.title,url:item.url,...(item.text?{description:item.text}:{}),...(item.image?{image:`${P.canonicalUrl}${item.image}`}:{})}))}]:[]),
  ...(pagePath==='/'?P.services.map(service=>({'@type':'Service','@id':`${P.canonicalUrl}/#service-${service.id}`,name:service.name,description:service.description,url:`${P.canonicalUrl}/#services`,provider:{'@id':`${P.canonicalUrl}/#person`},subjectOf:{'@id':`${P.canonicalUrl}${service.evidencePath}#webpage`}})):[]),
@@ -31,18 +35,29 @@ const graph = {'@context':'https://schema.org','@graph':[
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>{title}</title><meta name="description" content={description}/><link rel="canonical" href={canonical}/>
-<meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:type" content="website"/><meta property="og:url" content={canonical}/>
+<meta name="author" content={P.name}/>
+<meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:type" content={profilePage?'profile':'website'}/><meta property="og:url" content={canonical}/>{profilePage&&<Fragment><meta property="profile:first_name" content="Mario"/><meta property="profile:last_name" content="Marcolongo"/></Fragment>}
 <meta property="og:site_name" content={P.name}/><meta property="og:locale" content="en_US"/>
 <meta property="og:image" content={preview}/><meta property="og:image:type" content="image/png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image:alt" content={previewAlt}/>
 <meta name="msvalidate.01" content="BD54E4EE6CADEC40C0F941C7F43F3B68"/>
 <meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content={title}/><meta name="twitter:description" content={description}/><meta name="twitter:image" content={preview}/><meta name="twitter:image:alt" content={previewAlt}/><meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)"/><meta name="theme-color" content="#13181e" media="(prefers-color-scheme: dark)"/>
 <link rel="icon" href="/favicon-192x192.png" type="image/png" sizes="192x192"/><link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180"/><link rel="manifest" href="/site.webmanifest"/>
-<link rel="alternate" type="text/markdown" href={markdown}/><link rel="describedby" type="text/plain" href="/llms.txt"/>
-{noIndex && <meta name="robots" content="noindex"/>}
+<link rel="alternate" type="text/markdown" href={markdown}/><link rel="describedby" type="text/plain" href="/llms.txt"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><link rel="ai-catalog" href="/.well-known/ai-catalog.json"/>{profilePage&&<link rel="alternate" type="application/json" href="/resume.json" title="JSON Resume"/>}
+{noIndex ? <meta name="robots" content="noindex"/> : <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>}
 <script type="application/ld+json" set:html={JSON.stringify(graph).replace(/</g,'\\u003c')}/>
 <script is:inline>document.documentElement.classList.add('js-enabled');try{document.documentElement.dataset.theme=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch{}</script>
 <slot name="head"/>
 </head>
 <body><a class="skip-link" href="#main-content">Skip to content</a><slot/></body>
 </html>
+<script>
+// Read-only tools for agents working in a browser. They call the same public API as everyone else.
+const context=(document as any).modelContext??(navigator as any).modelContext;
+if(context?.registerTool){
+ const read=async(url:string)=>({content:[{type:'text',text:await (await fetch(url)).text()}]});
+ const annotations={readOnlyHint:true};
+ context.registerTool({name:'search_evidence',description:'Keyword-search Mario Marcolongo’s public claims, projects, work and education. Returns sources and stated limits; not a competency assessment.',inputSchema:{type:'object',properties:{query:{type:'string',description:'Keywords, for example prompt injection or Wikipedia.'},limit:{type:'integer',minimum:1,maximum:20}},required:['query']},annotations,execute:({query,limit=5}:{query:string;limit?:number})=>read(`/api/evidence?q=${encodeURIComponent(query)}&limit=${limit}`)});
+ context.registerTool({name:'get_resumes',description:'List Mario Marcolongo’s public résumés with page and PDF links, optionally for one role family.',inputSchema:{type:'object',properties:{focus:{type:'string',enum:['default','technical','aiEvaluation']}}},annotations,execute:({focus}:{focus?:string}={})=>read(`/api/resumes${focus?`?focus=${encodeURIComponent(focus)}`:''}`)});
+}
+</script>

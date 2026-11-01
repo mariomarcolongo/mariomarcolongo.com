@@ -9,13 +9,15 @@ Retrieve the same professional records and evidence used by this portfolio. The 
 - All résumé links: `GET https://mariomarcolongo.com/api/resumes`
 - Technical résumé links: `GET https://mariomarcolongo.com/api/resumes?focus=technical`
 
-Résumé focus values are `default`, `technical` and `aiEvaluation`. Search is literal keyword overlap, not semantic matching or an assessment of competence. Query length is limited to 200 characters; results to 20. No match is not proof that experience is absent. Queries are URL parameters and may appear in hosting access logs; use public professional topics only.
+Résumé focus values are `default`, `technical` and `aiEvaluation`. Search is keyword overlap with plural forms and a short synonym list, not semantic matching or an assessment of competence. It covers claims, projects, experience, credentials, education, services, résumés, skills and availability. Query length is limited to 200 characters; results to 20. No match is not proof that experience is absent. Queries are URL parameters and may appear in hosting access logs; use public professional topics only.
+
+OpenAPI description: https://mariomarcolongo.com/openapi.json. API catalog (RFC 9727): https://mariomarcolongo.com/.well-known/api-catalog.
 
 ## MCP connection
 
 Streamable HTTP endpoint: **https://mariomarcolongo.com/mcp**
 
-Supported versions: `2025-11-25`, `2025-06-18`, `2025-03-26`. No API key, OAuth, session or model subscription is needed. The server returns JSON responses and does not offer an SSE stream. POST messages must accept both `application/json` and `text/event-stream`; include the negotiated `MCP-Protocol-Version` header on subsequent requests. Requests are limited to 16 KiB. Browser-origin requests must originate from the same site; server-to-server clients can omit Origin.
+Supported versions: `2026-07-28` (per-request metadata, with `server/discover`), plus `2025-11-25`, `2025-06-18` and `2025-03-26` through `initialize`. No API key, OAuth, session or model subscription is needed. The server returns JSON responses and does not offer an SSE stream. POST messages must accept both `application/json` and `text/event-stream`; include the negotiated `MCP-Protocol-Version` header on subsequent requests. Requests are limited to 16 KiB. Browser-origin requests must originate from the same site; server-to-server clients can omit Origin.
 
 Tools:
 
@@ -24,6 +26,14 @@ Tools:
 - `get_resumes`: optionally `{ "focus": "technical" }`; returns existing public PDFs and pages.
 
 Resources: `portfolio://profile`, `portfolio://evidence`, `portfolio://resumes`.
+
+## A2A agent
+
+JSON-RPC endpoint: **https://mariomarcolongo.com/a2a**, protocol version `1.0`, with the `A2A-Version: 1.0` header. [Agent card](https://mariomarcolongo.com/.well-known/agent-card.json).
+
+Send `SendMessage` with a text part. It returns a direct message with matching public records. It uses keyword search, not a language model, and keeps no tasks or conversation. No sign-in is needed.
+
+Other formats: [JSON Resume](https://mariomarcolongo.com/resume.json), [full record](https://mariomarcolongo.com/llms-full.txt), [agent skill](https://mariomarcolongo.com/.well-known/agent-skills/index.json).
 
 Discovery: [MCP server card](https://mariomarcolongo.com/mcp/server-card) (experimental MCP extension) and [organization index](https://mariomarcolongo.com/.well-known/agent-index.json) (publisher-defined JSON). DNS-AID remains an experimental draft. Neither discovery document advertises A2A or authentication services.
 

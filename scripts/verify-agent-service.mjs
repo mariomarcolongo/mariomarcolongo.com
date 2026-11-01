@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {createPortfolioService,PROTOCOLS} from '../src/server/portfolio-service.mjs';
+import {createPortfolioService,PROTOCOLS,LEGACY_PROTOCOLS} from '../src/server/portfolio-service.mjs';
 const profile=JSON.parse(await readFile(new URL('../public/profile.json',import.meta.url),'utf8'));
 const service=createPortfolioService(profile);
 const request=(path,options={})=>new Request('https://mariomarcolongo.com'+path,options);
@@ -31,7 +31,7 @@ const org=service.search('followers',20).results.find(result=>result.id==='entro
 assert.throws(()=>service.search('Atlas',100));assert.throws(()=>service.search('x'.repeat(201)));assert.throws(()=>service.getResumes('executive'));
 assert.equal(service.getResumes('technical').resumes[0].pdfUrl,'https://mariomarcolongo.com/Mario-Marcolongo-Software-QA-AI-Workflows.pdf');
 assert.deepEqual(service.call('get_profile').profile,profile);
-for(const version of PROTOCOLS){const response=await send(rpc('initialize',{protocolVersion:version,capabilities:{},clientInfo:{name:'test',version:'1'}}));assert.equal((await response.json()).result.protocolVersion,version);}
+for(const version of LEGACY_PROTOCOLS){const response=await send(rpc('initialize',{protocolVersion:version,capabilities:{},clientInfo:{name:'test',version:'1'}}));assert.equal((await response.json()).result.protocolVersion,version);}
 let response=await send({jsonrpc:'2.0',method:'notifications/initialized'});assert.equal(response.status,202);assert.equal(await response.text(),'');
 response=await send(rpc('tools/list'));assert.equal((await response.json()).result.tools.length,3);
 response=await send(rpc('tools/call',{name:'search_evidence',arguments:{query:'Atlas',limit:5}}));const result=(await response.json()).result;assert.deepEqual(JSON.parse(result.content[0].text),result.structuredContent);assert.deepEqual(result.structuredContent,evidence);
@@ -52,6 +52,33 @@ assert.equal((await service.handle(request('/api/evidence'))).status,400);
 assert.equal((await service.handle(request('/api/resumes?focus=unknown'))).status,400);
 assert.equal(await (await service.handle(request('/api/profile',{method:'HEAD'}))).text(),'');
 assert.equal(await service.handle(request('/')),null);
+// Agents screen with these words. A miss here tells them the skill is absent.
+for(const term of ['prompt injection','jailbreak','jailbreaks','red teaming','red team','LLM','AI evaluation','adversarial testing','AI safety','agent testing','Italian','English','bilingual','fact-checking','fact checking','scientific research','medical','biology','QA','software testing','localisation','localization','Python','SQL','WordPress','Tableau','data visualization','remote','relocation','EU citizen','freelance','contractor','trust and safety','OSINT','investigations','Wikipedia','translation','Copilot Studio','Jira','GitHub','Zotero','Gray Swan','Syntony'])assert.ok(service.search(term,5).totalMatches>0,`Evidence search finds nothing for: ${term}`);
+// Current MCP revision: per-request metadata, no handshake, mirrored headers validated against the body.
+const MODERN='2026-07-28';
+const modern=(method,params={},headers={})=>service.handle(request('/mcp',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json, text/event-stream','MCP-Protocol-Version':MODERN,'Mcp-Method':method,...headers},body:JSON.stringify({jsonrpc:'2.0',id:1,method,params:{...params,_meta:{'io.modelcontextprotocol/protocolVersion':MODERN,'io.modelcontextprotocol/clientInfo':{name:'test',version:'1'},'io.modelcontextprotocol/clientCapabilities':{}}}})}));
+let answer=await (await modern('server/discover')).json();
+assert.deepEqual(answer.result.supportedVersions,PROTOCOLS);assert.equal(answer.result.resultType,'complete');assert.equal(answer.result.cacheScope,'public');assert.ok(answer.result.ttlMs>0);assert.ok(answer.result.instructions);assert.equal(answer.result._meta['io.modelcontextprotocol/serverInfo'].name,'com.mariomarcolongo/portfolio-evidence');
+answer=await (await modern('tools/list')).json();assert.equal(answer.result.tools.length,3);assert.equal(answer.result.resultType,'complete');assert.ok(answer.result.ttlMs>0);
+answer=await (await modern('tools/call',{name:'search_evidence',arguments:{query:'Atlas',limit:2}},{'Mcp-Name':'search_evidence'})).json();assert.ok(answer.result.structuredContent.totalMatches>0);assert.equal(answer.result.resultType,'complete');
+answer=await (await modern('tools/call',{name:'search_evidence',arguments:{query:'Atlas',limit:2}},{'Mcp-Name':'=?base64?c2VhcmNoX2V2aWRlbmNl?='})).json();assert.ok(answer.result.structuredContent);
+answer=await (await modern('resources/read',{uri:'portfolio://profile'},{'Mcp-Name':'portfolio://profile'})).json();assert.equal(answer.result.contents.length,1);assert.equal(answer.result.cacheScope,'public');
+answer=await (await modern('resources/read',{uri:'portfolio://absent'},{'Mcp-Name':'portfolio://absent'})).json();assert.equal(answer.error.code,-32602);
+let reply=await modern('tools/call',{name:'get_profile',arguments:{}});assert.equal(reply.status,400);assert.equal((await reply.json()).error.code,-32020);
+reply=await modern('tools/call',{name:'get_profile',arguments:{}},{'Mcp-Name':'get_resumes'});assert.equal(reply.status,400);assert.equal((await reply.json()).error.code,-32020);
+reply=await modern('tools/list',{},{'Mcp-Method':'resources/list'});assert.equal(reply.status,400);assert.equal((await reply.json()).error.code,-32020);
+reply=await modern('tools/list',{},{'MCP-Protocol-Version':'1900-01-01'});assert.equal(reply.status,400);const refused=await reply.json();assert.equal(refused.error.code,-32022);assert.deepEqual(refused.error.data.supported,PROTOCOLS);assert.equal(refused.error.data.requested,'1900-01-01');
+reply=await modern('ping');assert.equal(reply.status,404);assert.equal((await reply.json()).error.code,-32601);
+assert.equal((await send(rpc('tools/list'),{'MCP-Protocol-Version':'2025-11-25'})).status,200);
+// The A2A agent answers from the same records and refuses what it cannot do.
+const a2a=(method,params,headers={'A2A-Version':'1.0'})=>service.handle(request('/a2a',{method:'POST',headers:{'Content-Type':'application/json',...headers},body:JSON.stringify({jsonrpc:'2.0',id:7,method,params})}));
+const ask=text=>({message:{messageId:'m1',role:'ROLE_USER',parts:[{text}]}});
+answer=await (await a2a('SendMessage',ask('Does Mario have prompt injection experience?'))).json();assert.equal(answer.result.message.role,'ROLE_AGENT');assert.ok(answer.result.message.parts[1].data.totalMatches>0);assert.match(answer.result.message.parts[0].text,/not an independent assessment/);
+assert.equal((await (await a2a('SendStreamingMessage',ask('Atlas'))).json()).error.code,-32004);
+assert.equal((await (await a2a('GetTask',{id:'x'})).json()).error.code,-32601);
+assert.equal((await (await a2a('SendMessage',{message:{parts:[]}})).json()).error.code,-32602);
+answer=await (await a2a('SendMessage',ask('Atlas'),{})).json();assert.equal(answer.error.code,-32009);assert.deepEqual(answer.error.data.supported,['1.0']);
+assert.equal((await service.handle(request('/a2a'))).status,405);
 // Discovery must reflect actual tools and protocol versions, not invented capabilities.
 const card=JSON.parse(await readFile(new URL('../public/mcp/server-card',import.meta.url),'utf8'));
 assert.deepEqual(card.remotes[0].supportedProtocolVersions,PROTOCOLS);
