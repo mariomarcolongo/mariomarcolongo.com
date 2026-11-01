@@ -40,8 +40,8 @@ for(const page of pages){
  for(const field of ['name','givenName','familyName','url','jobTitle','description','email','nationality','address','knowsLanguage','knowsAbout','memberOf','sameAs','identifier','hasCredential'])assert.ok(person[field],`${file}: Person.${field}`);
  assert.equal(Boolean(person.image),!file.startsWith('cv'),`${file}: the portrait belongs off résumé pages only`);
  assert.ok(graph.some(g=>g['@type']==='WebSite'),`${file}: WebSite`);
- const webpage=graph.find(g=>g['@id']===`${url}#webpage`);assert.ok(webpage?.dateModified,`${file}: dateModified`);
- if(webpage['@type']==='ProfilePage'){assert.ok(webpage.dateCreated&&webpage.mainEntity,`${file}: ProfilePage fields`);}
+ const webpage=graph.find(g=>g['@id']===`${url}#webpage`);assert.match(webpage?.dateModified||'',/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})$/,`${file}: dateModified needs a full date and time`);
+ if(webpage['@type']==='ProfilePage'){assert.match(webpage.dateCreated||'',/T/,`${file}: dateCreated needs a time`);assert.ok(webpage.mainEntity,`${file}: ProfilePage fields`);}
  if(url!==`${origin}/`){const crumbs=graph.find(g=>g['@type']==='BreadcrumbList');assert.ok(crumbs?.itemListElement.length>=2,`${file}: breadcrumb`);assert.equal(crumbs.itemListElement.at(-1).item,url,`${file}: breadcrumb target`);}
  // Agents read the markdown mirror, so it must keep every link the page shows in its main content.
  const body=html.slice(html.indexOf('<main'),html.indexOf('</main>'));const mirror=read(file.replace(/\.html$/,'.md')).replaceAll('\\','');
