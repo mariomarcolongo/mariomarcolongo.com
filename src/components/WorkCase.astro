@@ -13,17 +13,27 @@ const searchTitles = {
   entropy: 'Entropy for Life — Research & Web Operations',
   atlas: 'AI Safety Formalization Atlas',
   'yourself-to-science': 'Yourself to Science — Research Directory',
-  'ai-evaluation': 'AI Evaluation & Red Teaming',
+  'ai-evaluation': 'AI Red Teaming & LLM Evaluation, English & Italian',
   notandia: 'Notandia — Research Integrity Tools',
   telegram: 'Telegram Link Converter & Automation',
   qcae: 'QCAE — Multilingual Questionnaire Interface'
 };
+const searchDescriptions = {
+  entropy: 'Paid scientific research, fact-checking, visual production and WordPress operations for Entropy for Life since 2023, with client AI workflows since 2026.',
+  atlas: 'Five merged contributions to source auditing, citation provenance and repository tooling, and coauthorship of the AI Safety Formalization Atlas preprint.',
+  'ai-evaluation': 'Independent AI red teaming and LLM evaluation in English and Italian: prompt injection, jailbreaks and agent testing. Top 5% of Gray Swan Proving Ground.',
+  'yourself-to-science': 'Yourself to Science: a maintained directory, founded by Mario Marcolongo, that helps people find research-participation opportunities and original sources.',
+  notandia: 'Notandia: a browser extension and Zotero plugin for research workflows, with publisher watchlists, English-Italian localisation and cross-browser testing.',
+  telegram: 'A Python Telegram bot that converts non-English Wikipedia links into English equivalents, with Italian localisation, testing and AWS deployment work.',
+  qcae: 'A multilingual interface for the QCAE questionnaire, with terminology provenance, keyboard navigation and local scoring. Not a new psychometric validation.'
+};
 ---
-<Layout title={searchTitles[id] || `${p.name} — ${p.hook}`} description={p.text}>
+<Layout title={searchTitles[id] || `${p.name} — ${p.hook}`} description={searchDescriptions[id] || p.text} modified={p.reviewedAt}>
   <SiteNav/>
   <main id="main-content" class="presence-shell ruled">
     <PageHead title={p.hook} crumb={{label:'Selected work',url:'/work'}} status={p.status} links={p.links}>
       <p class="lede">{p.text}</p>
+      {isAiEvaluation&&<p class="meta">English and Italian · Prompt injection · Jailbreaks · Chatbot and agent testing · Based in Italy, EU citizen</p>}
       {isAiEvaluation&&<div class="actions"><a class="button primary" href="/cv-ai">AI evaluation résumé</a><EmailLink class="button">Discuss a role or project</EmailLink></div>}
     </PageHead>
     {isAiEvaluation&&<section aria-labelledby="results-title"><h2 id="results-title">Results at a glance</h2><ul class="result-strip"><li><strong>{proofLevel}</strong><span>Gray Swan Proving Ground, #{G.provingGround.rank}. Captured {G.displayDate}.</span></li><li><strong>{G.provingGround.totalBreaks} breaks</strong><span>Platform-recorded across chat, image, agent and indirect tracks.</span></li><li><strong>{F.rank}th of {F.participants}</strong><span>Lucky Break: Level Up, final result.</span></li></ul><TrackChart snapshot={G}/></section>}

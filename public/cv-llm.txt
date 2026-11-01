@@ -4,7 +4,7 @@ Mario Marcolongo investigates sources, tests software and AI behaviour, and conf
 
 ## Engagement
 
-Services: https://mariomarcolongo.com/#services. Please email first to arrange a call. Consultations and calls are by appointment.
+Services: https://mariomarcolongo.com/#services Please email first to arrange a call. Consultations and calls are by appointment.
 
 ## Current scope
 
@@ -17,13 +17,13 @@ Open to relocation and international remote work. I can work in the EU as an Ita
 Paid contractor · Jun 2023–Present · Hybrid, primarily remote. Paid scientific research, fact-checking, visual production and WordPress operations since 2023. Since October 2026, my work also includes reusable media workflows using Antigravity, Gemini and Google Drive, with client training.
 
 Entropy for Life is an Italian science-communication project with 500K+ combined followers and subscribers across its social accounts. Organization accounts; audiences overlap. TikTok contributor-reported.
-Source: https://entropyforlife.it/chi-sono/. Owner: contributor; evidence: contributor confirmation; observed: 2026-10-01.
+Source: https://entropyforlife.it/chi-sono/ Owner: contributor; evidence: contributor confirmation; observed: 2026-10-01.
 
 Created the data visualizations in the Entropy for Life × AIRC reels that feature them. Visualization authorship: contributor-confirmed, 30 September 2026. Public captions verify AIRC context, not individual production roles. Shared productions; no sole reel authorship or direct AIRC employment is implied.
-Source: https://entropyforlife.it/mario-marcolongo-en/. Owner: contributor; evidence: contributor confirmation; observed: 2026-09-30.
+Source: https://entropyforlife.it/mario-marcolongo-en/ Owner: contributor; evidence: contributor confirmation; observed: 2026-09-30.
 
 Research and production contributions: 57 videos and Shorts, 4 articles, 21 short-form entries and 17 selected thumbnail projects. Record on a site I manage. Roles vary; collections overlap. Thumbnails include shared work. Reels retain their earlier capture date. Brand audience is not my personal reach.
-Source: https://entropyforlife.it/mario-marcolongo-en/. Owner: client organization; evidence: organizational work record; observed: 2026-10-14; event/start: 2023-06.
+Source: https://entropyforlife.it/mario-marcolongo-en/ Owner: client organization; evidence: organizational work record; observed: 2026-10-14; event/start: 2023-06.
 
 Case: https://mariomarcolongo.com/work/entropy
 
@@ -32,22 +32,22 @@ Case: https://mariomarcolongo.com/work/entropy
 Open-source contributor · Preprint coauthor · 2026. Five merged contributions to source auditing, citation provenance and repository tooling; coauthor of the Atlas preprint released on Zenodo on 1 October 2026.
 
 Contributed merged PR #52: migration validation portability. Acceptance covers the submitted change; it does not establish authorship of the wider research or independent engineering proficiency.
-Source: https://github.com/mbrcic/ai-safety-formalization-atlas/pull/52. Owner: upstream project; evidence: external acceptance; observed: 2026-09-12; event/start: 2026-09-03.
+Source: https://github.com/mbrcic/ai-safety-formalization-atlas/pull/52 Owner: upstream project; evidence: external acceptance; observed: 2026-09-12; event/start: 2026-09-03.
 
 Contributed merged PR #54: portable repository instruction adapters. Acceptance covers the submitted change; it does not establish authorship of the wider research or independent engineering proficiency.
-Source: https://github.com/mbrcic/ai-safety-formalization-atlas/pull/54. Owner: upstream project; evidence: external acceptance; observed: 2026-09-12; event/start: 2026-09-03.
+Source: https://github.com/mbrcic/ai-safety-formalization-atlas/pull/54 Owner: upstream project; evidence: external acceptance; observed: 2026-09-12; event/start: 2026-09-03.
 
 Contributed merged PR #61: repository instruction organization. Acceptance covers the submitted change; it does not establish authorship of the wider research or independent engineering proficiency.
-Source: https://github.com/mbrcic/ai-safety-formalization-atlas/pull/61. Owner: upstream project; evidence: external acceptance; observed: 2026-09-12; event/start: 2026-09-06.
+Source: https://github.com/mbrcic/ai-safety-formalization-atlas/pull/61 Owner: upstream project; evidence: external acceptance; observed: 2026-09-12; event/start: 2026-09-06.
 
 Contributed merged PR #69: a human-reviewable source metadata and rights-evidence audit. The audit compares metadata and preserves retrieval evidence for human review; it does not certify citations or reuse rights. Most added lines are generated reports and evidence, not handwritten tooling.
-Source: https://github.com/mbrcic/ai-safety-formalization-atlas/pull/69. Owner: upstream project; evidence: external acceptance; observed: 2026-09-30; event/start: 2026-09-22.
+Source: https://github.com/mbrcic/ai-safety-formalization-atlas/pull/69 Owner: upstream project; evidence: external acceptance; observed: 2026-09-30; event/start: 2026-09-22.
 
 Contributed merged PR #70: 15 missing source locators and clarified publication provenance. Acceptance covers source traceability and bibliographic changes; no Lean theorem, proof or formalization-coverage change is claimed.
-Source: https://github.com/mbrcic/ai-safety-formalization-atlas/pull/70. Owner: upstream project; evidence: external acceptance; observed: 2026-09-30; event/start: 2026-09-28.
+Source: https://github.com/mbrcic/ai-safety-formalization-atlas/pull/70 Owner: upstream project; evidence: external acceptance; observed: 2026-09-30; event/start: 2026-09-28.
 
 Coauthor of “The AI Safety Formalization Atlas: a machine-checked memory for AI safety mathematics,” publicly available as a Zenodo preprint since 1 October 2026. Public preprint, not an established peer-reviewed publication. Documented individual contributions concern source auditing, citation provenance and repository tooling; authorship does not imply responsibility for all proofs. Metropolia is the listed affiliation, with permission confirmed by the contributor; no employment or degree is implied.
-Source: https://doi.org/10.5281/zenodo.23088952. Owner: project authors; evidence: public preprint; observed: 2026-10-14; event/start: 2026-09.
+Source: https://doi.org/10.5281/zenodo.23088952 Owner: project authors; evidence: public preprint; observed: 2026-10-14; event/start: 2026-09.
 
 Case: https://mariomarcolongo.com/work/atlas
 
@@ -56,7 +56,7 @@ Case: https://mariomarcolongo.com/work/atlas
 Founder · Independent maintained project. I founded and maintain a directory that helps people find research-participation opportunities and follow their original sources.
 
 Maintained a directory containing 55 research-participation resources in the dated review. 37 Wikidata items referenced the project URL in the dated check; these are not 37 users or independent citations. A deposited DOI is not peer review.
-Source: https://github.com/yourselftoscience/yourselftoscience.org. Owner: project maintainer; evidence: public artifact; observed: 2026-09-12.
+Source: https://github.com/yourselftoscience/yourselftoscience.org Owner: project maintainer; evidence: public artifact; observed: 2026-09-12.
 
 Case: https://mariomarcolongo.com/work/yourself-to-science
 
@@ -65,7 +65,7 @@ Case: https://mariomarcolongo.com/work/yourself-to-science
 Creator & maintainer · May 2025–Present · Independent project · Remote, Italy. A browser extension and separate Zotero plugin for research workflows. My work includes English-Italian UI localisation, terminology research, cross-browser testing, GitHub issue tracking and Xcode/iOS Simulator checks.
 
 Created Notandia, an AI-assisted research-workflow extension released for Chrome, Edge and Firefox. Chrome 0.1.1 released 3 October; counts include legacy use. Edge package confirmed 4 October; artwork and description pending then. Firefox 0.1.2 publicly downloadable, verified 7 October 2026; automated screening, later human review possible. Separate Zotero releases; platform parity and usage unverified.
-Source: https://addons.mozilla.org/en-US/firefox/addon/notandia/. Owner: project maintainer; evidence: public source and store records; observed: 2026-10-07.
+Source: https://addons.mozilla.org/en-US/firefox/addon/notandia/ Owner: project maintainer; evidence: public source and store records; observed: 2026-10-07.
 
 Case: https://mariomarcolongo.com/notandia
 
@@ -74,10 +74,10 @@ Case: https://mariomarcolongo.com/notandia
 Independent testing & network membership.
 
 Dated Arena record: 40 global unique breaks, 1,430 points and 415 submissions on 13 October 2026. Dated platform reports; active-challenge results provisional. Proving Ground is separate.
-Source: https://mariomarcolongo.com/evidence/gray-swan-2026-10-13/. Owner: public platform profile; evidence: dated platform snapshot; observed: 2026-10-13; event/start: 2026-10-13.
+Source: https://mariomarcolongo.com/evidence/gray-swan-2026-10-13 Owner: public platform profile; evidence: dated platform snapshot; observed: 2026-10-13; event/start: 2026-10-13.
 
 Member of Syntony Research’s Trusted Red Team Network since October 2026. Project terms agreed separately.
-Source: https://www.linkedin.com/posts/nathanheath92_congratulations-to-mario-marcolongo-one-ugcPost-7521713825960841216-cBam/. Owner: Nathan Heath / Syntony Research; evidence: public individual acknowledgement; observed: 2026-10-31; event/start: 2026-10-03.
+Source: https://www.linkedin.com/posts/nathanheath92_congratulations-to-mario-marcolongo-one-ugcPost-7521713825960841216-cBam/ Owner: Nathan Heath / Syntony Research; evidence: public individual acknowledgement; observed: 2026-10-31; event/start: 2026-10-03.
 
 Case: https://mariomarcolongo.com/ai-evaluation
 
@@ -89,9 +89,9 @@ University of Padua research project. Nov 2022–approximately Jun 2025 · Remot
 
 ## Assessed credentials
 
-Microsoft Applied Skills: Build an agent in Microsoft Copilot Studio. Microsoft; earned 2026-10-19; Interactive hands-on lab assessment. Verification: https://learn.microsoft.com/en-us/users/mariomarcolongo/credentials/48386317f9899eb1. Assessed Copilot Studio skills; not a record of commercial platform delivery or Power Apps experience.
+Microsoft Applied Skills: Build an agent in Microsoft Copilot Studio. Microsoft; earned 2026-10-19; Interactive hands-on lab assessment. Verification: https://learn.microsoft.com/en-us/users/mariomarcolongo/credentials/48386317f9899eb1 Assessed Copilot Studio skills; not a record of commercial platform delivery or Power Apps experience.
 
-Atlassian Credentialed in JSM Fundamentals with AI. Atlassian; earned 2026-10-24; Fundamentals certificate exam (ACH-815). Valid through 2027-10-24. Verification: https://cp.certmetrics.com/atlassian/en/public/verify/credential/4ec41335733f49508b42ab3faab010d1. Assessed fundamentals knowledge; not a record of commercial Jira delivery, Jira Software defect tracking or administrator certification.
+Atlassian Credentialed in JSM Fundamentals with AI. Atlassian; earned 2026-10-24; Fundamentals certificate exam (ACH-815). Valid through 2027-10-24. Verification: https://cp.certmetrics.com/atlassian/en/public/verify/credential/4ec41335733f49508b42ab3faab010d1 Assessed fundamentals knowledge; not a record of commercial Jira delivery, Jira Software defect tracking or administrator certification.
 
 ## Education
 
@@ -107,12 +107,12 @@ Italian native · English: EF SET C1 overall, 68/100 (Mar 2024). Certificate sub
 
 ## Additional evidence
 
-Source investigations: https://mariomarcolongo.com/investigations. Scientific visualizations (protein supply, not intake): https://mariomarcolongo.com/work/scientific-visualizations. Telegram localisation and source architecture: https://mariomarcolongo.com/work/telegram. QCAE interface and source-version provenance, not new psychometric validation: https://mariomarcolongo.com/work/qcae. Hypermandala geometry experiment: https://mariomarcolongo.com/work/hypermandala.
+Source investigations: https://mariomarcolongo.com/investigations Scientific visualizations (protein supply, not intake): https://mariomarcolongo.com/work/scientific-visualizations Telegram localisation and source architecture: https://mariomarcolongo.com/work/telegram QCAE interface and source-version provenance, not new psychometric validation: https://mariomarcolongo.com/work/qcae Hypermandala geometry experiment: https://mariomarcolongo.com/work/hypermandala
 
 ## Application documents and contact
 
-Résumés: https://mariomarcolongo.com/cv, https://mariomarcolongo.com/cv-technical, https://mariomarcolongo.com/cv-ai.
+Résumés: https://mariomarcolongo.com/cv https://mariomarcolongo.com/cv-technical https://mariomarcolongo.com/cv-ai
 
-Email: me@mariomarcolongo.com. ORCID: https://orcid.org/0000-0003-2846-7115. Experience: https://mariomarcolongo.com/experience. GitHub: https://github.com/mariomarcolongo. LinkedIn: https://www.linkedin.com/in/mario-marcolongo. Italy/EU citizen; US work authorization not established.
+Email: me@mariomarcolongo.com. ORCID: https://orcid.org/0000-0003-2846-7115 Experience: https://mariomarcolongo.com/experience GitHub: https://github.com/mariomarcolongo LinkedIn: https://www.linkedin.com/in/mario-marcolongo Italy/EU citizen; US work authorization not established.
 
 Reviewed: 2026-10-31; evidence retains individual dates/limitations.

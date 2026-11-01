@@ -1,0 +1,130 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Mario Marcolongo public evidence API",
+    "version": "1.0.0",
+    "description": "Read-only retrieval of public professional records, dated claims with their limits, and résumé links. Owner-maintained records, not an independent assessment.",
+    "contact": {
+      "name": "Mario Marcolongo",
+      "email": "me@mariomarcolongo.com",
+      "url": "https://mariomarcolongo.com"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://mariomarcolongo.com"
+    }
+  ],
+  "paths": {
+    "/api/profile": {
+      "get": {
+        "operationId": "getProfile",
+        "summary": "Public professional profile",
+        "responses": {
+          "200": {
+            "description": "Profile with education, attribution and limits.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/evidence": {
+      "get": {
+        "operationId": "searchEvidence",
+        "summary": "Keyword search across public claims, projects, work and education",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 20,
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Matching records with sources and limits.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid query.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/resumes": {
+      "get": {
+        "operationId": "getResumes",
+        "summary": "Public résumé pages and PDFs",
+        "parameters": [
+          {
+            "name": "focus",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "default",
+                "technical",
+                "aiEvaluation"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Résumé links.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Unknown focus.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

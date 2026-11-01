@@ -17,7 +17,7 @@ const items = [...first.map(id=>G.items.find(v=>v.id===id)).filter(Boolean),...G
 const platforms = ['Flourish','Tableau','Wikimedia Commons','Independent'];
 const topics = [...new Set(items.map(v=>v.topic))].sort();
 ---
-<Layout title="Scientific charts, maps & diagrams — Mario Marcolongo" description="Explore scientific charts, maps and diagrams by Mario Marcolongo. Visual previews of published Tableau, Flourish and Wikimedia work, with original sources and attribution." ogImage="/og/scientific-visualizations.png" ogImageAlt="Mario Marcolongo — scientific charts, maps and diagrams, featuring the published industrial hemp story" collectionItems={items}>
+<Layout title="Scientific charts, maps & diagrams — Mario Marcolongo" description="Scientific charts, maps and diagrams by Mario Marcolongo: published Tableau, Flourish and Wikimedia work, with original sources and attribution." ogImage="/og/scientific-visualizations.png" ogImageAlt="Mario Marcolongo — scientific charts, maps and diagrams, featuring the published industrial hemp story" collectionItems={items}>
   <SiteNav/>
   <main id="main-content" class="presence-shell ruled visualization-shell">
     <PageHead title="Charts, maps & scientific diagrams." status="Scientific visualization & evidence synthesis">
@@ -28,8 +28,8 @@ const topics = [...new Set(items.map(v=>v.topic))].sort();
     <section class="visual-case-studies" aria-labelledby="visual-case-title">
       <div class="visual-section-heading"><div><p class="eyebrow">A closer look</p><h2 id="visual-case-title">Selected case studies</h2></div><p>Source research. Visual explanation. Published work.</p></div>
       <div class="visual-case-grid">
-        {featuredCases.map(c=><article>
-          <a class="visual-case-image" href={c.links[0].href} aria-label={`Explore ${c.title}`}><img src={c.image} srcset={c.srcset} sizes="(max-width:859px) 100vw, 320px" alt={`Preview: ${c.title}. ${c.text}`} width="800" height="520" loading="eager" decoding="async"/></a>
+        {featuredCases.map((c,index)=><article>
+          <a class="visual-case-image" href={c.links[0].href} aria-label={`Explore ${c.title}`}><img src={c.image} srcset={c.srcset} sizes="(max-width:480px) 240px, (max-width:859px) 100vw, 320px" alt={`Preview: ${c.title}. ${c.text}`} width="800" height="520" loading={index===0?'eager':'lazy'} fetchpriority={index===0?'high':undefined} decoding="async"/></a>
           <div class="visual-case-copy"><p class="eyebrow">{c.label}</p><h3><a href={c.links[0].href}>{c.title}</a></h3><p>{c.text}</p>{c.reuseText && <p>{c.reuseText}</p>}<div class="visual-case-links">{c.links.map(link=><a href={link.href}>{link.label} <span aria-hidden="true">↗</span></a>)}</div></div>
         </article>)}
       </div>

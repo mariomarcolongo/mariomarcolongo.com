@@ -15,7 +15,7 @@ const graySwan = Object.freeze({
   uniqueBreaks: 28,
   points: 1120,
   submissions: 255,
-  evidencePath: '/evidence/gray-swan-2026-07-29/',
+  evidencePath: '/evidence/gray-swan-2026-07-29',
   screenshotPath: '/media/work/gray-swan-profile-2026-07-29-1600.webp',
   screenshotSet: '/media/work/gray-swan-profile-2026-07-29-800.webp 800w, /media/work/gray-swan-profile-2026-07-29-1600.webp 1600w'
 });

@@ -67,7 +67,7 @@ async function verifyEvidenceLedger(browser, origin) {
   await page.keyboard.type(' zzzz');
   assert.equal(await visible(),0);
   assert.equal(await page.$eval('#claim-empty',el=>el.hidden),false);
-  assert.ok((await page.$eval('#claim-empty',el=>el.textContent)).includes('Nothing on this site claims that'));
+  assert.ok((await page.$eval('#claim-empty',el=>el.textContent)).includes('No claim in this ledger matches that'));
   await page.$eval('#claim-search',el=>{el.value='';el.dispatchEvent(new Event('input',{bubbles:true}));});
   assert.equal(await visible(),claimTotal);
   assert.equal(await page.$eval('#claim-empty',el=>el.hidden),true);

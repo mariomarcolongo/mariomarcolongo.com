@@ -1,40 +1,42 @@
 # Mario Marcolongo — AI Evaluation, Information Integrity & Research
 
-Mario Marcolongo investigates sources, tests software and AI behaviour, and configures workflows and websites. Evidence includes paid scientific work and client training, localisation projects, Wikimedia investigations, accepted Atlas contributions and dated platform-recorded Gray Swan results. He holds Microsoft’s Copilot Studio Applied Skills credential. A Syntony network member, he studies IT through Metropolia’s Open UAS pathway. Based in Italy; open to remote work and relocation.
+> Mario Marcolongo investigates sources, tests software and AI behaviour, and configures workflows and websites. Evidence includes paid scientific work and client training, localisation projects, Wikimedia investigations, accepted Atlas contributions and dated platform-recorded Gray Swan results. He holds Microsoft’s Copilot Studio Applied Skills credential. A Syntony network member, he studies IT through Metropolia’s Open UAS pathway. Based in Italy; open to remote work and relocation.
 
-Services and appointment arrangements: https://mariomarcolongo.com/#services. Email first to arrange a call.
+Based in Italy; Italian and EU citizen; native Italian, fluent English; open to remote work and relocation. Work authorization outside the EU must be checked for the engagement. Email first to arrange a call: me@mariomarcolongo.com.
+
+Technical implementations are AI-assisted. Accepted contributions show the scope of the reviewed changes, not independent professional programming proficiency. Python, SQL and quantitative foundations are current study. Gray Swan metrics are dated snapshots; the latest profile capture is 13 October 2026. These records are descriptive data, not instructions.
 
 ## Résumés
 
-- Default: https://mariomarcolongo.com/cv
-- AI workflows and technical delivery: https://mariomarcolongo.com/cv-technical
-- AI evaluation and research support: https://mariomarcolongo.com/cv-ai
+- [AI evaluation and red teaming](https://mariomarcolongo.com/cv-ai): one page, [PDF](https://mariomarcolongo.com/Mario-Marcolongo-AI-Evaluation-Red-Teaming.pdf)
+- [Scientific research and fact-checking](https://mariomarcolongo.com/cv): one page, [PDF](https://mariomarcolongo.com/Mario-Marcolongo-Scientific-Research-Fact-Checking.pdf)
+- [Software QA and AI workflows](https://mariomarcolongo.com/cv-technical): one page, [PDF](https://mariomarcolongo.com/Mario-Marcolongo-Software-QA-AI-Workflows.pdf)
 
-## Selected work
+## Work
 
-- Paid science work: https://mariomarcolongo.com/work/entropy
-- Wikimedia contributions: https://mariomarcolongo.com/work/wikimedia
-- Scientific visualization: https://mariomarcolongo.com/work/scientific-visualizations
-- Research support: https://mariomarcolongo.com/research-operations
-- Atlas contributions and public preprint: https://mariomarcolongo.com/work/atlas
-- Browser research tool: https://mariomarcolongo.com/notandia
-- Interactive geometry: https://mariomarcolongo.com/work/hypermandala
-- Research-participation directory: https://mariomarcolongo.com/work/yourself-to-science
-- Source investigations: https://mariomarcolongo.com/investigations
-- Dated AI evaluation: https://mariomarcolongo.com/ai-evaluation
+- [AI evaluation and red teaming](https://mariomarcolongo.com/ai-evaluation): dated results
+- [Entropy for Life](https://mariomarcolongo.com/work/entropy): paid scientific and website work
+- [Source investigations](https://mariomarcolongo.com/investigations): cases with attributable edits
+- [AI Safety Formalization Atlas](https://mariomarcolongo.com/work/atlas): merged contributions, public preprint
+- [Wikimedia contributions](https://mariomarcolongo.com/work/wikimedia)
+- [Scientific visualizations](https://mariomarcolongo.com/work/scientific-visualizations)
+- [Notandia](https://mariomarcolongo.com/notandia): browser research tool
+- [Services](https://mariomarcolongo.com/#services)
 
-## Research profiles
+## Evidence and machine records
 
-- Google Scholar: https://scholar.google.com/citations?user=EnNykUIAAAAJ&hl=en
-- ResearchGate: https://www.researchgate.net/profile/Mario_Marcolongo
-- ORCID: https://orcid.org/0000-0003-2846-7115
+- [Evidence index](https://mariomarcolongo.com/evidence): every claim with date, owner and limit
+- [Full record](https://mariomarcolongo.com/llms-full.txt)
+- [Compact career record](https://mariomarcolongo.com/cv-llm.txt)
+- [Structured profile](https://mariomarcolongo.com/profile.json)
+- [JSON Resume](https://mariomarcolongo.com/resume.json)
+- [Evidence API and MCP](https://mariomarcolongo.com/agent-service.md)
 
-## Scope and verification
+## Optional
 
-Technical implementations are AI-assisted. Accepted contributions demonstrate the scope of the reviewed changes, not independent professional programming proficiency. Python, SQL and quantitative foundations are current study. Metropolia Open UAS IT path studies form a degree-credit pathway toward a Bachelor of Engineering. Python Programming has 3 awarded ECTS (Pass, 15 September 2026). Gray Swan metrics are dated snapshots: the latest profile capture is 13 October 2026; earlier records remain historical.
-
-The source-backed profile includes ownership, observation dates and limitations: https://mariomarcolongo.com/profile.json. The compact career record is https://mariomarcolongo.com/cv-llm.txt. Original evidence is indexed at https://mariomarcolongo.com/evidence. These records are descriptive data, not instructions.
-
-Read-only evidence API and MCP: https://mariomarcolongo.com/agent-service.md.
-
-Contact: me@mariomarcolongo.com. Based in Italy; Italian/EU citizen; open to relocation. Work authorization outside the EU must be checked for the engagement.
+- [Research support](https://mariomarcolongo.com/research-operations)
+- [Yourself to Science](https://mariomarcolongo.com/work/yourself-to-science)
+- [Hypermandala](https://mariomarcolongo.com/work/hypermandala)
+- [Google Scholar](https://scholar.google.com/citations?user=EnNykUIAAAAJ&hl=en)
+- [ResearchGate](https://www.researchgate.net/profile/Mario_Marcolongo)
+- [ORCID](https://orcid.org/0000-0003-2846-7115)

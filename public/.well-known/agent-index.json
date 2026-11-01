@@ -24,7 +24,20 @@
       "readOnly": true,
       "authentication": "none",
       "documentation": "https://mariomarcolongo.com/agent-service.md"
+    },
+    {
+      "id": "evidence-agent",
+      "name": "Mario Marcolongo evidence agent",
+      "protocol": "a2a",
+      "endpoint": "https://mariomarcolongo.com/a2a",
+      "agentCard": "https://mariomarcolongo.com/.well-known/agent-card.json",
+      "capabilities": [
+        "search-evidence"
+      ],
+      "readOnly": true,
+      "authentication": "none",
+      "documentation": "https://mariomarcolongo.com/agent-service.md"
     }
   ],
-  "scope": "Experimental organization index for a working public retrieval service. No generative model, A2A, OAuth, booking, payments or private data access."
+  "scope": "Experimental organization index for a working public retrieval service. No generative model, OAuth, booking, payments or private data access."
 }

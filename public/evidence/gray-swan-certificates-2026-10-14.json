@@ -2,7 +2,7 @@
   "observedAt": "2026-10-14",
   "displayDate": "14 October 2026",
   "issuer": "Gray Swan Arena",
-  "evidencePath": "/evidence/gray-swan-certificates-2026-10-14/",
+  "evidencePath": "/evidence/gray-swan-certificates-2026-10-14",
   "sourceUrl": "https://app.grayswan.ai/dashboard",
   "captureContext": "Unchanged certificate-modal screenshots from the account holder’s authenticated dashboard. No private prompts or submissions are included. The issuer dashboard requires sign-in; these are preserved captures, not an issuer-hosted public verification service.",
   "scope": "Training completion and event participation are recorded separately. Certificate counters, challenge leaderboards and Arena or Proving Ground profile metrics are not interchangeable. No professional certification or prize award is claimed.",

@@ -20,7 +20,7 @@ const GS = Object.freeze({
   arenaUniqueBreaks: 28,
   arenaPoints: 1120,
   arenaSubmissions: 255,
-  evidencePath: "/evidence/gray-swan-2026-07-29/",
+  evidencePath: "/evidence/gray-swan-2026-07-29",
   profileUrl: "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf"
 });
 

@@ -109,6 +109,7 @@ function createMarioDossier() {
   "linkedin": "https://www.linkedin.com/in/mario-marcolongo",
   "malt": "https://www.malt.com/profile/mariomarcolongo",
   "currentPositioning": "AI Evaluation, Information Integrity & Research",
+  "knowsAbout": ["AI evaluation", "AI red teaming", "LLM adversarial testing", "Prompt injection", "Jailbreak testing", "AI agent testing", "Scientific fact-checking", "Source verification", "Information integrity", "Public-source investigations", "Data visualization", "Software QA", "Localisation QA", "AI workflow configuration", "Technical documentation", "WordPress"],
   "investigationMethods": {
     "reviewedAt": "2026-10-08",
     "cvText": "Source tracing, web archives, domain and website checks, image verification and cross-platform research; distinguish observed connections from attribution hypotheses.",
@@ -128,7 +129,7 @@ function createMarioDossier() {
     "Systems diagnosis"
   ],
   "headline": "Investigate information. Test systems.",
-  "description": "Mario Marcolongo: AI evaluation, information integrity and scientific research, in English and Italian. Paid scientific work since 2023, public evidence and practical tools.",
+  "description": "Mario Marcolongo: AI red teaming and evaluation, information integrity and scientific research, in English and Italian. Paid scientific work since 2023.",
   "subheadline": "I test AI systems and software and check the evidence behind claims, in English and Italian. Paid scientific and website work since 2023, with AI workflow setup and client training since October 2026.",
   "contact": "Available for employed roles, contracts and scoped projects in AI evaluation, information integrity, research, AI workflows and software QA.",
   "availability": "Open to relocation and international remote work. I can work in the EU as an Italian citizen; opportunities elsewhere depend on the role’s hiring and work-authorization arrangements.",
@@ -210,7 +211,7 @@ function createMarioDossier() {
     "observedAt": "2026-09-30",
     "preservedAtUtc": "2026-09-30T03:21:36.759698Z",
     "sourceUrl": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
-    "evidencePath": "/evidence/gray-swan-2026-09-30/",
+    "evidencePath": "/evidence/gray-swan-2026-09-30",
     "originalImage": "/evidence/gray-swan-public-2026-09-30.jpg",
     "originalSha256": "6a4c364c4c639c0dd96276838c64699bd3b18402dcec72789c8d0620fecb7a67",
     "originalDimensions": [1280, 1675],
@@ -236,7 +237,7 @@ function createMarioDossier() {
     "observedAt": "2026-10-13",
     "preservedAtUtc": "2026-10-13T12:25:51.838Z",
     "sourceUrl": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
-    "evidencePath": "/evidence/gray-swan-2026-10-13/",
+    "evidencePath": "/evidence/gray-swan-2026-10-13",
     "originalImage": "/evidence/gray-swan-public-2026-10-13.jpg",
     "originalSha256": "2eea54ef29106c8e2f11837dad161492b3959e630ba6c4714b5a294a4b8c496d",
     "originalDimensions": [1280, 2035],
@@ -276,7 +277,7 @@ function createMarioDossier() {
     "recordedBreaks": 15,
     "sourceUrl": "https://app.grayswan.ai/arena/challenge/lucky-break-level-up",
     "profileUrl": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
-    "evidencePath": "/evidence/gray-swan-lucky-break-2026-10-29/",
+    "evidencePath": "/evidence/gray-swan-lucky-break-2026-10-29",
     "transcriptionPath": "/evidence/gray-swan-lucky-break-2026-10-29.json",
     "captures": [
       {
@@ -311,7 +312,7 @@ function createMarioDossier() {
     "observedAt": "2026-10-14",
     "displayDate": "14 October 2026",
     "issuer": "Gray Swan Arena",
-    "evidencePath": "/evidence/gray-swan-certificates-2026-10-14/",
+    "evidencePath": "/evidence/gray-swan-certificates-2026-10-14",
     "sourceUrl": "https://app.grayswan.ai/dashboard",
     "captureContext": "Unchanged certificate-modal screenshots from the account holder’s authenticated dashboard. No private prompts or submissions are included. The issuer dashboard requires sign-in; these are preserved captures, not an issuer-hosted public verification service.",
     "scope": "Training completion and event participation are recorded separately. Certificate counters, challenge leaderboards and Arena or Proving Ground profile metrics are not interchangeable. No professional certification or prize award is claimed.",
@@ -612,7 +613,7 @@ function createMarioDossier() {
     {
       "id": "gray-swan-july-29",
       "text": "Dated Proving Ground record: rank #74, top 6%, on 29 July 2026.",
-      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-2026-07-29/",
+      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-2026-07-29",
       "sourceOwner": "platform_record_captured_by_account_holder",
       "evidenceType": "dated_platform_snapshot",
       "engagementType": "independent_evaluation",
@@ -627,7 +628,7 @@ function createMarioDossier() {
       "id": "gray-swan-september-30",
       "includeInCompactCv": false,
       "text": "Dated Proving Ground record: rank #79, top 5%, with 127 platform-recorded total breaks on 30 September 2026.",
-      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-2026-09-30/",
+      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-2026-09-30",
       "sourceOwner": "public_platform_profile",
       "evidenceType": "dated_platform_snapshot",
       "engagementType": "independent_evaluation",
@@ -643,7 +644,7 @@ function createMarioDossier() {
       "id": "gray-swan-lucky-break-final",
       "includeInCompactCv": false,
       "text": "Lucky Break: Level Up final result: 49th of 390 participants, with 15 platform-recorded breaks.",
-      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-lucky-break-2026-10-29/",
+      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-lucky-break-2026-10-29",
       "sourceOwner": "Gray Swan Arena",
       "evidenceType": "dated_platform_leaderboard",
       "engagementType": "independent_evaluation",
@@ -657,7 +658,7 @@ function createMarioDossier() {
     {
       "id": "gray-swan-october-13",
       "text": "Dated Arena record: 40 global unique breaks, 1,430 points and 415 submissions on 13 October 2026.",
-      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-2026-10-13/",
+      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-2026-10-13",
       "sourceOwner": "public_platform_profile",
       "evidenceType": "dated_platform_snapshot",
       "engagementType": "independent_evaluation",
@@ -690,7 +691,7 @@ function createMarioDossier() {
       "id": "gray-swan-october-certificates",
       "includeInCompactCv": false,
       "text": "Gray Swan intermediate training completed: Lucky Break: Level Up (Medium Challenge), issued 14 October 2026; separate Breaking Ties participation certificate issued 12 October.",
-      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-certificates-2026-10-14/",
+      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-certificates-2026-10-14",
       "sourceOwner": "Gray Swan Arena",
       "evidenceType": "issuer_certificate_captured_by_account_holder",
       "engagementType": "independent_training_and_participation",
@@ -1043,19 +1044,19 @@ function createMarioDossier() {
       "links": [
         {
           "label": "Final Lucky Break result · 49th of 390",
-          "url": "/evidence/gray-swan-lucky-break-2026-10-29/"
+          "url": "/evidence/gray-swan-lucky-break-2026-10-29"
         },
         {
           "label": "Training & participation certificates",
-          "url": "https://mariomarcolongo.com/evidence/gray-swan-certificates-2026-10-14/"
+          "url": "https://mariomarcolongo.com/evidence/gray-swan-certificates-2026-10-14"
         },
         {
           "label": "13 October testing record",
-          "url": "https://mariomarcolongo.com/evidence/gray-swan-2026-10-13/"
+          "url": "https://mariomarcolongo.com/evidence/gray-swan-2026-10-13"
         },
         {
           "label": "September snapshot",
-          "url": "https://mariomarcolongo.com/evidence/gray-swan-2026-09-30/"
+          "url": "https://mariomarcolongo.com/evidence/gray-swan-2026-09-30"
         },
         {
           "label": "Source investigations",
@@ -1567,7 +1568,7 @@ function createMarioDossier() {
     centralAuth: "https://commons.wikimedia.org/wiki/Special:CentralAuth/Digressivo",
     grayswanId: "6a57be70d15e123775a1e9cf",
     grayswanUrl: "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
-    grayswanArchiveUrl: "/evidence/gray-swan-2026-07-29/",
+    grayswanArchiveUrl: "/evidence/gray-swan-2026-07-29",
     evaluationAsOf: "29 July 2026",
     professionalHeadline: "Data Quality & Information Retrieval | AI Evaluation & Adversarial Testing | Scientific Fact-Checking & Evidence Synthesis",
     secondaryTitle: "Information Retrieval · Evidence Synthesis · AI Evaluation",

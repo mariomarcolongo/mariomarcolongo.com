@@ -60,7 +60,8 @@ export default function markdownEmitter() {
           const description = descMatch ? descMatch[1].replace(/\s+/g, ' ').trim() : '';
 
           // Construct YAML frontmatter
-          const frontmatter = `---\ntitle: ${JSON.stringify(title)}\ndescription: ${JSON.stringify(description)}\n---\n\n`;
+          const canonical = htmlContent.match(/<link[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)["']/i)?.[1];
+          const frontmatter = `---\ntitle: ${JSON.stringify(title)}\ndescription: ${JSON.stringify(description)}\n${canonical ? `canonical: ${canonical}\n` : ''}---\n\n`;
 
           let bodyContent = '';
 

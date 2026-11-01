@@ -1,6 +1,24 @@
 {
   "schemaVersion": 1,
   "name": "Mario Marcolongo",
+  "knowsAbout": [
+    "AI evaluation",
+    "AI red teaming",
+    "LLM adversarial testing",
+    "Prompt injection",
+    "Jailbreak testing",
+    "AI agent testing",
+    "Scientific fact-checking",
+    "Source verification",
+    "Information integrity",
+    "Public-source investigations",
+    "Data visualization",
+    "Software QA",
+    "Localisation QA",
+    "AI workflow configuration",
+    "Technical documentation",
+    "WordPress"
+  ],
   "canonicalUrl": "https://mariomarcolongo.com",
   "orcidUrl": "https://orcid.org/0000-0003-2846-7115",
   "researchProfiles": [
@@ -370,19 +388,19 @@
       "links": [
         {
           "label": "Final Lucky Break result · 49th of 390",
-          "url": "/evidence/gray-swan-lucky-break-2026-10-29/"
+          "url": "/evidence/gray-swan-lucky-break-2026-10-29"
         },
         {
           "label": "Training & participation certificates",
-          "url": "https://mariomarcolongo.com/evidence/gray-swan-certificates-2026-10-14/"
+          "url": "https://mariomarcolongo.com/evidence/gray-swan-certificates-2026-10-14"
         },
         {
           "label": "13 October testing record",
-          "url": "https://mariomarcolongo.com/evidence/gray-swan-2026-10-13/"
+          "url": "https://mariomarcolongo.com/evidence/gray-swan-2026-10-13"
         },
         {
           "label": "September snapshot",
-          "url": "https://mariomarcolongo.com/evidence/gray-swan-2026-09-30/"
+          "url": "https://mariomarcolongo.com/evidence/gray-swan-2026-09-30"
         },
         {
           "label": "Source investigations",
@@ -742,7 +760,7 @@
     "observedAt": "2026-09-30",
     "preservedAtUtc": "2026-09-30T03:21:36.759698Z",
     "sourceUrl": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
-    "evidencePath": "/evidence/gray-swan-2026-09-30/",
+    "evidencePath": "/evidence/gray-swan-2026-09-30",
     "originalImage": "/evidence/gray-swan-public-2026-09-30.jpg",
     "originalSha256": "6a4c364c4c639c0dd96276838c64699bd3b18402dcec72789c8d0620fecb7a67",
     "originalDimensions": [
@@ -796,7 +814,7 @@
     "observedAt": "2026-10-13",
     "preservedAtUtc": "2026-10-13T12:25:51.838Z",
     "sourceUrl": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
-    "evidencePath": "/evidence/gray-swan-2026-10-13/",
+    "evidencePath": "/evidence/gray-swan-2026-10-13",
     "originalImage": "/evidence/gray-swan-public-2026-10-13.jpg",
     "originalSha256": "2eea54ef29106c8e2f11837dad161492b3959e630ba6c4714b5a294a4b8c496d",
     "originalDimensions": [
@@ -882,7 +900,7 @@
     "recordedBreaks": 15,
     "sourceUrl": "https://app.grayswan.ai/arena/challenge/lucky-break-level-up",
     "profileUrl": "https://app.grayswan.ai/arena/user/6a57be70d15e123775a1e9cf",
-    "evidencePath": "/evidence/gray-swan-lucky-break-2026-10-29/",
+    "evidencePath": "/evidence/gray-swan-lucky-break-2026-10-29",
     "transcriptionPath": "/evidence/gray-swan-lucky-break-2026-10-29.json",
     "captures": [
       {
@@ -917,7 +935,7 @@
     "observedAt": "2026-10-14",
     "displayDate": "14 October 2026",
     "issuer": "Gray Swan Arena",
-    "evidencePath": "/evidence/gray-swan-certificates-2026-10-14/",
+    "evidencePath": "/evidence/gray-swan-certificates-2026-10-14",
     "sourceUrl": "https://app.grayswan.ai/dashboard",
     "captureContext": "Unchanged certificate-modal screenshots from the account holder’s authenticated dashboard. No private prompts or submissions are included. The issuer dashboard requires sign-in; these are preserved captures, not an issuer-hosted public verification service.",
     "scope": "Training completion and event participation are recorded separately. Certificate counters, challenge leaderboards and Arena or Proving Ground profile metrics are not interchangeable. No professional certification or prize award is claimed.",
@@ -1078,21 +1096,28 @@
       "focus": "default",
       "title": "Scientific Research & Fact-Checking",
       "filename": "Mario-Marcolongo-Scientific-Research-Fact-Checking.pdf",
-      "route": "/cv"
+      "route": "/cv",
+      "summary": "Paid scientific fact-checking, data visualization and website operations since 2023, with recent AI workflow configuration and client training. Source investigations, structured metadata, remote research facilitation and accepted Atlas contributions.",
+      "skills": "Literature search, data visualization, WordPress, structured metadata and accessible research procedures."
     },
     {
       "focus": "technical",
       "title": "Software QA & AI Workflows",
       "filename": "Mario-Marcolongo-Software-QA-AI-Workflows.pdf",
-      "route": "/cv-technical"
+      "route": "/cv-technical",
+      "summary": "Software QA and English-Italian localisation testing: cross-browser checks, reproducible bug reports and retesting on released browser tools. Paid website delivery since 2023; configure reusable AI workflows and train the client to run them. Accepted Atlas contributions to agent instructions and source quality.",
+      "skills": "Manual QA, regression and localisation testing, bug reports in GitHub Issues, browser DevTools, Terminal/npm, API/JSON checks, Xcode/iOS Simulator, WordPress and DNS/SSL."
     },
     {
       "focus": "aiEvaluation",
       "title": "AI Evaluation, Red Teaming & Information Integrity",
       "filename": "Mario-Marcolongo-AI-Evaluation-Red-Teaming.pdf",
-      "route": "/cv-ai"
+      "route": "/cv-ai",
+      "summary": "Adversarial LLM testing, including jailbreaks and prompt injection; top 5% of Gray Swan Proving Ground; member, Syntony Research Trusted Red Team Network. Paid scientific fact-checking and AI workflow configuration. Atlas preprint coauthor.",
+      "skills": "LLM adversarial testing, jailbreaks, prompt injection, response-pattern analysis, agent instructions, technical documentation and client workflows."
     }
   ],
+  "currentStudy": "Continuing study in Python, SQL, systems and quantitative foundations.",
   "experience": [
     {
       "name": "Syntony Research — Trusted Red Team Network",
@@ -1448,7 +1473,7 @@
     {
       "id": "gray-swan-july-29",
       "text": "Dated Proving Ground record: rank #74, top 6%, on 29 July 2026.",
-      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-2026-07-29/",
+      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-2026-07-29",
       "sourceOwner": "platform_record_captured_by_account_holder",
       "evidenceType": "dated_platform_snapshot",
       "engagementType": "independent_evaluation",
@@ -1463,7 +1488,7 @@
       "id": "gray-swan-september-30",
       "includeInCompactCv": false,
       "text": "Dated Proving Ground record: rank #79, top 5%, with 127 platform-recorded total breaks on 30 September 2026.",
-      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-2026-09-30/",
+      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-2026-09-30",
       "sourceOwner": "public_platform_profile",
       "evidenceType": "dated_platform_snapshot",
       "engagementType": "independent_evaluation",
@@ -1479,7 +1504,7 @@
       "id": "gray-swan-lucky-break-final",
       "includeInCompactCv": false,
       "text": "Lucky Break: Level Up final result: 49th of 390 participants, with 15 platform-recorded breaks.",
-      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-lucky-break-2026-10-29/",
+      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-lucky-break-2026-10-29",
       "sourceOwner": "Gray Swan Arena",
       "evidenceType": "dated_platform_leaderboard",
       "engagementType": "independent_evaluation",
@@ -1493,7 +1518,7 @@
     {
       "id": "gray-swan-october-13",
       "text": "Dated Arena record: 40 global unique breaks, 1,430 points and 415 submissions on 13 October 2026.",
-      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-2026-10-13/",
+      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-2026-10-13",
       "sourceOwner": "public_platform_profile",
       "evidenceType": "dated_platform_snapshot",
       "engagementType": "independent_evaluation",
@@ -1526,7 +1551,7 @@
       "id": "gray-swan-october-certificates",
       "includeInCompactCv": false,
       "text": "Gray Swan intermediate training completed: Lucky Break: Level Up (Medium Challenge), issued 14 October 2026; separate Breaking Ties participation certificate issued 12 October.",
-      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-certificates-2026-10-14/",
+      "sourceUrl": "https://mariomarcolongo.com/evidence/gray-swan-certificates-2026-10-14",
       "sourceOwner": "Gray Swan Arena",
       "evidenceType": "issuer_certificate_captured_by_account_holder",
       "engagementType": "independent_training_and_participation",

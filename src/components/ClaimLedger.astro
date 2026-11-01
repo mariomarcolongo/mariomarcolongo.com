@@ -3,10 +3,10 @@
 import D from '../../data/source.js';
 const P=D.presence;
 const areas=[
- {id:'ai-evaluation',label:'AI evaluation',types:['independent_evaluation','network_membership','independent_training_and_participation']},
- {id:'paid',label:'Paid work',types:['paid_contractor','organizational_context']},
- {id:'research',label:'Open source & research',types:['open_source_contribution','research_collaboration','volunteer_contribution']},
- {id:'projects',label:'Projects & study',types:['independent_project','open_uas_study']}
+ {id:'ai-evaluation',label:'AI evaluation',terms:'prompt injection jailbreak jailbreaks red team red teaming LLM adversarial testing model evaluation',types:['independent_evaluation','network_membership','independent_training_and_participation']},
+ {id:'paid',label:'Paid work',terms:'contractor freelance client scientific research fact-checking',types:['paid_contractor','organizational_context']},
+ {id:'research',label:'Open source & research',terms:'GitHub pull request citation AI safety',types:['open_source_contribution','research_collaboration','volunteer_contribution']},
+ {id:'projects',label:'Projects & study',terms:'software tool extension education university',types:['independent_project','open_uas_study']}
 ];
 const known=new Set(areas.flatMap(area=>area.types));
 const unplaced=P.claims.filter(claim=>!known.has(claim.engagementType));
@@ -15,4 +15,4 @@ const human=value=>value.replaceAll('_',' ');
 const day=value=>new Intl.DateTimeFormat('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}).format(new Date(value));
 const groups=areas.map(area=>({...area,claims:P.claims.filter(claim=>area.types.includes(claim.engagementType)).sort((a,b)=>b.observedAt.localeCompare(a.observedAt))}));
 ---
-{groups.map(group=><div class="claim-group" data-area={group.id}><h2 id={`claims-${group.id}`}>{group.label}</h2><ol class="claim-list">{group.claims.map(c=><li class="claim" id={c.id} data-search={[c.text,c.limitation,group.label,human(c.evidenceType),human(c.engagementType),human(c.sourceOwner)].join(' ')}><div class="claim-margin"><span>Observed <time datetime={c.observedAt}>{day(c.observedAt)}</time></span><span>{human(c.evidenceType)}</span><span>Owner: {human(c.sourceOwner)}</span></div><div class="claim-body"><p class="claim-text">{c.text}</p><p class="claim-limit"><b>Limit</b> {c.limitation}</p>{c.sourceUrl?<a class="claim-source" href={c.sourceUrl}>Inspect source ↗</a>:<p class="claim-source-note">{c.sourceNote||'Private institutional transcript supplied by the student; not published.'}</p>}</div></li>)}</ol></div>)}
+{groups.map(group=><div class="claim-group" data-area={group.id}><h2 id={`claims-${group.id}`}>{group.label}</h2><ol class="claim-list">{group.claims.map(c=><li class="claim" id={c.id} data-search={[c.text,c.limitation,group.label,group.terms,human(c.evidenceType),human(c.engagementType),human(c.sourceOwner)].join(' ')}><div class="claim-margin"><span>Observed <time datetime={c.observedAt}>{day(c.observedAt)}</time></span><span>{human(c.evidenceType)}</span><span>Owner: {human(c.sourceOwner)}</span></div><div class="claim-body"><p class="claim-text">{c.text}</p><p class="claim-limit"><b>Limit</b> {c.limitation}</p>{c.sourceUrl?<a class="claim-source" href={c.sourceUrl}>Inspect source ↗</a>:<p class="claim-source-note">{c.sourceNote||'Private institutional transcript supplied by the student; not published.'}</p>}</div></li>)}</ol></div>)}

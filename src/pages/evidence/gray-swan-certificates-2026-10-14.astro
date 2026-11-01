@@ -7,14 +7,14 @@ import PageHead from '../../components/PageHead.astro';
 import D from '../../../data/source.js';
 const G=D.presence.aiEvaluationCertificates;
 const title='Gray Swan training & participation — October 2026';
-const description='Preserved Gray Swan certificate records: intermediate Lucky Break training completion and separate Breaking Ties participation.';
+const description='Preserved Gray Swan certificates for Mario Marcolongo, October 2026: intermediate Lucky Break training completion and separate Breaking Ties participation.';
 const record={'@context':'https://schema.org','@type':'DigitalDocument',name:title,description,url:`https://mariomarcolongo.com${G.evidencePath}`,dateModified:G.observedAt,isBasedOn:G.sourceUrl,author:{'@id':'https://mariomarcolongo.com/#person'}};
 ---
 <Layout title={title} description={description} canonical={`https://mariomarcolongo.com${G.evidencePath}`}>
   <Fragment slot="head"><script type="application/ld+json" set:html={JSON.stringify(record)}></script></Fragment>
   <SiteNav/>
   <main id="main-content" class="presence-shell ruled">
-    <PageHead title="Gray Swan training & participation." crumb={{label:'AI evaluation work',url:'/ai-evaluation'}} status={`Certificate records · captured ${G.displayDate}`}><div slot="margin" class="source-links page-sources"><a href="/evidence/gray-swan-certificates-2026-10-14.json">Structured transcription</a><a href="/evidence/gray-swan-2026-10-13/">Dated profile metrics</a></div><p class="lede">Intermediate training completion and event participation, recorded separately with their original certificate details.</p></PageHead>
+    <PageHead title="Gray Swan training & participation." crumb={{label:'AI evaluation work',url:'/ai-evaluation'}} status={`Certificate records · captured ${G.displayDate}`}><div slot="margin" class="source-links page-sources"><a href="/evidence/gray-swan-certificates-2026-10-14.json">Structured transcription</a><a href="/evidence/gray-swan-2026-10-13">Dated profile metrics</a></div><p class="lede">Intermediate training completion and event participation, recorded separately with their original certificate details.</p></PageHead>
     {G.items.map(c=><section id={c.anchor}>
       <h2>{c.name}</h2>
       <p class="meta">{c.status}{c.level&&` · ${c.level}`} · issued {c.displayDate}</p>
