@@ -8,7 +8,7 @@ on:
       - src/pages/index.astro
       - src/pages/evidence/**
       - src/components/**
-      - src/styles/studio.css
+      - src/styles/site.css
       - data/source.js
       - data/work-media.json
       - public/media/work/**

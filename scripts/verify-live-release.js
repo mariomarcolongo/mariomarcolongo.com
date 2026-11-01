@@ -19,7 +19,7 @@ const pages = [
     'Find a view worth exploring.', ...gallery.items.flatMap(item => [item.url, item.image])] },
   { path: '/', required: [P.name, `#${G.provingGround.rank}`, G.provingGround.percentile,
     G.displayDate, `${G.provingGround.totalBreaks} platform-recorded breaks`,
-    P.headline.split('. ')[0], ...P.credentials.flatMap(c=>[c.title,c.url]), ...P.services.map(service=>service.name), P.engagement.contactPreference, G.detailImage, '/investigations', '/cv-technical', '/cv-ai', '/work/entropy', '/work/atlas', '/notandia', '/cv'] },
+    P.headline.split('. ')[0], ...P.credentials.flatMap(c=>[c.title,c.url]), ...P.services.map(service=>service.name), P.engagement.contactPreference, 'On the record', G.evidencePath, '/investigations', '/cv-technical', '/cv-ai', '/work/entropy', '/work/atlas', '/notandia', '/cv'] },
   { path: '/work/atlas', required: ['https://doi.org/10.5281/zenodo.23088952', 'Public preprint and affiliation', '1 October 2026'] },
   { path: '/ai-evaluation', required: [G.evidencePath, G.displayDate, '/cv-ai'] },
   { path: G.evidencePath, required: [G.displayDate, `#${G.provingGround.rank}`,
@@ -33,7 +33,8 @@ const pages = [
 if(P.aiEvaluationLatestSnapshot){const previous=P.aiEvaluationSnapshot;pages.push({path:previous.evidencePath,required:[previous.displayDate,`#${previous.provingGround.rank}`,previous.originalImage,previous.originalSha256]});}
 if(C)pages.push({path:C.evidencePath,required:[C.displayDate,...C.items.flatMap(c=>[c.name,c.id,c.originalImage,c.originalSha256])]});
 const assets = [...new Set([M.screenshots.hypermandala.image, G.originalImage, G.detailImage,
-  '/profile.json', '/robots.txt', '/llms.txt', '/og/scientific-visualizations.png',
+  '/profile.json', '/resume.json', '/openapi.json', '/robots.txt', '/llms.txt', '/llms-full.txt', '/og/scientific-visualizations.png',
+  '/.well-known/api-catalog', '/.well-known/ai-catalog.json', '/.well-known/agent-card.json', '/.well-known/agent-skills/index.json', '/.well-known/security.txt',
   ...gallery.items.map(item => item.image), `/evidence/gray-swan-profile-${G.observedAt}.json`,
   ...(C ? [`/evidence/gray-swan-certificates-${C.observedAt}.json`,...C.items.map(c=>c.originalImage)] : []),
   ...Object.values(P.cv).map((cv) => `/${cv.filename}`)])];
