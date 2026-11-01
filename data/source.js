@@ -87,8 +87,8 @@ const PUBLIC_OUTPUTS = [
     title: 'Hypermandala: interactive 2D, 3D and 4D geometry explorer',
     role: 'Creator and maintainer; AI-assisted implementation', version: 'v0.1.0',
     releasedAt: '2026-10-15', doi: '10.5281/zenodo.23391082', conceptDoi: '10.5281/zenodo.23391081',
-    license: 'AGPL-3.0-only', sourceUrl: 'https://github.com/mariomarcolongo/hypermandala/tree/v0.1.0',
-    sourceCommit: 'b064cbb03835207c851308a3dbb9ab5a4f0db277', reviewedAt: '2026-10-15',
+    license: 'AGPL-3.0-or-later', sourceUrl: 'https://github.com/mariomarcolongo/hypermandala/tree/v0.1.0',
+    sourceCommit: 'b064cbb03835207c851308a3dbb9ab5a4f0db277', reviewedAt: '2026-11-01',
     reviewScope: 'Archived release metadata and source commit'
   }
 ];
