@@ -383,7 +383,8 @@
         "gray-swan-september-30",
         "gray-swan-july-29",
         "gray-swan-october-certificates",
-        "syntony-network-membership"
+        "syntony-network-membership",
+        "basic-memory-similar-notes-fix-accepted"
       ],
       "links": [
         {
@@ -403,6 +404,10 @@
           "url": "https://mariomarcolongo.com/evidence/gray-swan-2026-09-30"
         },
         {
+          "label": "Merged Basic Memory fix",
+          "url": "https://github.com/basicmachines-co/basic-memory/commit/3dda18fbfaae4dc871918a94d8c019722dcef52a"
+        },
+        {
           "label": "Source investigations",
           "url": "https://mariomarcolongo.com/investigations"
         },
@@ -419,6 +424,21 @@
         {
           "heading": "How I investigate",
           "text": "I look for patterns in a model’s responses, adjust my approach, and test whether the same failure recurs in other scenarios. I combine role-play, emotional framing and structured-output or continuation techniques, refining them through trial and error. These observations guide further testing; I distinguish recurring behavior from explanations that still need evidence. Scientific fact-checking with Entropy for Life and Wikimedia source investigations bring the same care to tracing claims and checking sources."
+        },
+        {
+          "id": "basic-memory",
+          "heading": "Basic Memory — merged fix to agent tool output",
+          "text": "Basic Memory is an open-source knowledge base that AI assistants read and write through tools. When an assistant saved a note that looked like a duplicate, the write tool’s reply spelled out two calls for it to run: append the new text to the older note, then delete the new note. My fix replaces those calls with advice to ask the user whether to merge, keeping both notes until they decide, and adds a regression test that the advice contains no tool calls. On 11 November 2026 the maintainer merged it through a separate pull request that also carried two related fixes by another contributor.",
+          "links": [
+            {
+              "label": "My fix",
+              "url": "https://github.com/basicmachines-co/basic-memory/commit/3dda18fbfaae4dc871918a94d8c019722dcef52a"
+            },
+            {
+              "label": "a separate pull request",
+              "url": "https://github.com/basicmachines-co/basic-memory/pull/2082"
+            }
+          ]
         },
         {
           "heading": "Earlier testing record · 13 October 2026",
@@ -1113,7 +1133,7 @@
       "title": "AI Evaluation, Red Teaming & Information Integrity",
       "filename": "Mario-Marcolongo-AI-Evaluation-Red-Teaming.pdf",
       "route": "/cv-ai",
-      "summary": "Adversarial LLM testing, including jailbreaks and prompt injection; top 5% of Gray Swan Proving Ground; member, Syntony Research Trusted Red Team Network. Paid scientific fact-checking and AI workflow configuration. Atlas preprint coauthor.",
+      "summary": "Adversarial LLM testing, including jailbreaks and prompt injection; top 5% of Gray Swan Proving Ground; member, Syntony Research Trusted Red Team Network. Paid scientific fact-checking and AI workflow configuration. Atlas preprint coauthor; merged a Basic Memory fix that stops AI agents from being told to edit or delete notes unasked.",
       "skills": "LLM adversarial testing, jailbreaks, prompt injection, response-pattern analysis, agent instructions, technical documentation and client workflows."
     }
   ],
@@ -1616,6 +1636,22 @@
       "endDate": "2026-09-28",
       "observedAt": "2026-09-30",
       "lastReviewedAt": "2026-09-30",
+      "visibility": "public"
+    },
+    {
+      "id": "basic-memory-similar-notes-fix-accepted",
+      "includeInCompactCv": false,
+      "text": "Contributed a merged fix to Basic Memory, an open-source knowledge base for AI assistants: its write tool no longer hands agents edit and delete calls to run unasked.",
+      "sourceUrl": "https://github.com/basicmachines-co/basic-memory/commit/3dda18fbfaae4dc871918a94d8c019722dcef52a",
+      "sourceNote": "The maintainer merged the commit, with my authorship, through pull request #2082, which also carried two related fixes by another contributor; my pull request #2066 was closed when #2082 merged. The fix addresses issue #2011, which the maintainer opened.",
+      "sourceOwner": "upstream_project",
+      "evidenceType": "external_acceptance",
+      "engagementType": "open_source_contribution",
+      "limitation": "Acceptance covers this change and its regression test; it does not establish independent engineering proficiency.",
+      "startDate": "2026-11-11",
+      "endDate": "2026-11-11",
+      "observedAt": "2026-11-11",
+      "lastReviewedAt": "2026-11-11",
       "visibility": "public"
     },
     {

@@ -9,6 +9,7 @@ The website preserves breadth; the three application CVs select work relevant to
 | Selected DaVinci Resolve editing, including Luca Perri channel productions | `/work/entropy#video-editing`, `/experience`, profile claim with contributor-confirmed roles; five deduplicated public examples | Full-experience link only | Full-experience link only | Full-experience link only |
 | Atlas source audit, citation locators and earlier tooling PRs | Homepage, `/work/atlas`, evidence index, structured records | Yes | Yes | Yes |
 | Atlas public preprint coauthorship | `/work/atlas`, evidence index and structured records; Zenodo preprint released 1 October 2026 | Yes | Yes | Yes |
+| Basic Memory merged fix: agent tool output no longer spells out edit and delete calls; regression test (11 November 2026) | Homepage record, `/ai-evaluation#basic-memory`, evidence index and structured records | Not selected | Yes |Summary line |
 | Metropolia affiliation permission | Atlas case; contributor-confirmed, separate from study qualification | Education and preprint entry | Education and preprint entry | Education and preprint entry |
 | Wikipedia/Wikidata/Commons source work and original scientific explanations | Homepage, `/experience`, `/work/wikimedia`, investigations | Yes | Yes | Yes |
 | Commons diagrams/maps, Tableau and Flourish | `/work/scientific-visualizations`: original previews, published interactive views, source context and platform filters | Wikimedia summary + full-experience link | Same | Same |
