@@ -759,6 +759,22 @@ function createMarioDossier() {
       "visibility": "public"
     },
     {
+      "id": "basic-memory-similar-notes-fix-accepted",
+      "includeInCompactCv": false,
+      "text": "Contributed a merged fix to Basic Memory, an open-source knowledge base for AI assistants: its write tool no longer hands agents edit and delete calls to run unasked.",
+      "sourceUrl": "https://github.com/basicmachines-co/basic-memory/commit/3dda18fbfaae4dc871918a94d8c019722dcef52a",
+      "sourceNote": "The maintainer merged the commit, with my authorship, through pull request #2082, which also carried two related fixes by another contributor; my pull request #2066 was closed when #2082 merged. The fix addresses issue #2011, which the maintainer opened.",
+      "sourceOwner": "upstream_project",
+      "evidenceType": "external_acceptance",
+      "engagementType": "open_source_contribution",
+      "limitation": "Acceptance covers this change and its regression test; it does not establish independent engineering proficiency.",
+      "startDate": "2026-11-11",
+      "endDate": "2026-11-11",
+      "observedAt": "2026-11-11",
+      "lastReviewedAt": "2026-11-11",
+      "visibility": "public"
+    },
+    {
       "id": "atlas-paper-preprint",
       "text": "Coauthor of “The AI Safety Formalization Atlas: a machine-checked memory for AI safety mathematics,” publicly available as a Zenodo preprint since 1 October 2026.",
       "sourceUrl": "https://doi.org/10.5281/zenodo.23088952",
@@ -1027,7 +1043,7 @@ function createMarioDossier() {
       "hook": "Testing where model behavior breaks down",
       "route": "/ai-evaluation",
       "status": "Independent testing & network membership",
-      "reviewedAt": "2026-10-31",
+      "reviewedAt": "2026-11-11",
       "text": "I investigate unexpected AI behavior, check whether it recurs, and document what the evidence supports. My independent testing spans chat, image, agent and indirect challenges, supported by scientific fact-checking and source investigations.",
       "claimIds": [
         "gray-swan-lucky-break-final",
@@ -1035,7 +1051,8 @@ function createMarioDossier() {
         "gray-swan-september-30",
         "gray-swan-july-29",
         "gray-swan-october-certificates",
-        "syntony-network-membership"
+        "syntony-network-membership",
+        "basic-memory-similar-notes-fix-accepted"
       ],
       "image": "/evidence/gray-swan-lucky-break-leaderboard-2026-10-29.jpg",
       "imageWidth": 420,
@@ -1059,6 +1076,10 @@ function createMarioDossier() {
           "url": "https://mariomarcolongo.com/evidence/gray-swan-2026-09-30"
         },
         {
+          "label": "Merged Basic Memory fix",
+          "url": "https://github.com/basicmachines-co/basic-memory/commit/3dda18fbfaae4dc871918a94d8c019722dcef52a"
+        },
+        {
           "label": "Source investigations",
           "url": "https://mariomarcolongo.com/investigations"
         },
@@ -1075,6 +1096,15 @@ function createMarioDossier() {
         {
           "heading": "How I investigate",
           "text": `${AI_EVALUATION_METHODS} These observations guide further testing; I distinguish recurring behavior from explanations that still need evidence. Scientific fact-checking with Entropy for Life and Wikimedia source investigations bring the same care to tracing claims and checking sources.`
+        },
+        {
+          "id": "basic-memory",
+          "heading": "Basic Memory — merged fix to agent tool output",
+          "text": "Basic Memory is an open-source knowledge base that AI assistants read and write through tools. When an assistant saved a note that looked like a duplicate, the write tool’s reply spelled out two calls for it to run: append the new text to the older note, then delete the new note. My fix replaces those calls with advice to ask the user whether to merge, keeping both notes until they decide, and adds a regression test that the advice contains no tool calls. On 11 November 2026 the maintainer merged it through a separate pull request that also carried two related fixes by another contributor.",
+          "links": [
+            { "label": "My fix", "url": "https://github.com/basicmachines-co/basic-memory/commit/3dda18fbfaae4dc871918a94d8c019722dcef52a" },
+            { "label": "a separate pull request", "url": "https://github.com/basicmachines-co/basic-memory/pull/2082" }
+          ]
         },
         {
           "heading": "Earlier testing record · 13 October 2026",
@@ -1340,7 +1370,7 @@ function createMarioDossier() {
     "aiEvaluation": {
       "title": "AI Evaluation, Red Teaming & Information Integrity",
       "filename": "Mario-Marcolongo-AI-Evaluation-Red-Teaming.pdf",
-      "summary": "Adversarial LLM testing, including jailbreaks and prompt injection; top 5% of Gray Swan Proving Ground; member, Syntony Research Trusted Red Team Network. Paid scientific fact-checking and AI workflow configuration. Atlas preprint coauthor."
+      "summary": "Adversarial LLM testing, including jailbreaks and prompt injection; top 5% of Gray Swan Proving Ground; member, Syntony Research Trusted Red Team Network. Paid scientific fact-checking and AI workflow configuration. Atlas preprint coauthor; merged a Basic Memory fix that stops AI agents from being told to edit or delete notes unasked."
     }
   },
   "cvBullets": {
@@ -1362,6 +1392,9 @@ function createMarioDossier() {
       "Top 5% of Gray Swan Proving Ground: #81, 127 recorded breaks across chat, image, agent and indirect prompt injection (13 Oct 2026).",
       "49th of 390 in Lucky Break: Level Up (Oct 2026), 15 recorded breaks. Refine tests from response patterns and check recurrence across scenarios."
     ],
+    "basicMemory": [
+      "Merged fix to an open-source knowledge base for AI assistants: its write tool no longer hands agents edit and delete calls to run unasked; regression test added."
+    ],
     "notandia": [
       "Created a browser extension for scientific-reference checks, used by the Entropy for Life team; implemented English-Italian UI localisation with a terminology glossary.",
       "Test cross-browser behavior and language fallback; reproduce defects, track GitHub changes and retest. Related localisations: Telegram bot and QCAE interface."
@@ -1378,6 +1411,7 @@ function createMarioDossier() {
   "cvMeta": {
     "entropy": "Paid contractor · Jun 2023–Present · Hybrid, primarily remote · Bassano del Grappa, Italy",
     "atlas": "Open-source contributor & preprint coauthor · Sep 2026–Present · Remote",
+    "basicMemory": "Open-source contributor · Nov 2026 · Remote",
     "notandia": "Creator & maintainer · May 2025–Present · Independent project, remote",
     "yts": "Founder & maintainer · Since 2024 · Independent project, remote",
     "wikimedia": "Public contributor · Since 2018 · Remote",
@@ -1390,6 +1424,7 @@ function createMarioDossier() {
       { "label": "agent instructions", "url": "https://github.com/mbrcic/ai-safety-formalization-atlas/blob/66ceba19c1904f00b2a734486ee0de3f5fc5a470/docs/guide/agent-instruction-design.md" },
       { "label": "Zenodo preprint", "url": "https://doi.org/10.5281/zenodo.23088952" }
     ],
+    "basicMemory": [{ "label": "Merged fix", "url": "https://github.com/basicmachines-co/basic-memory/commit/3dda18fbfaae4dc871918a94d8c019722dcef52a" }],
     "notandia": [
       { "label": "terminology glossary", "url": "https://github.com/notandia/browser-extension/blob/a3d00fac6c48eecaffedd08a59a0ba0828a0662e/docs/LOCALIZATION_IT.md" },
       { "label": "Telegram bot", "url": "/work/telegram" },

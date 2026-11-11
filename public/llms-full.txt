@@ -58,7 +58,7 @@ Relevant work: https://mariomarcolongo.com/work/entropy
 
 - Scientific Research & Fact-Checking: https://mariomarcolongo.com/Mario-Marcolongo-Scientific-Research-Fact-Checking.pdf Paid scientific fact-checking, data visualization and website operations since 2023, with recent AI workflow configuration and client training. Source investigations, structured metadata, remote research facilitation and accepted Atlas contributions.
 - Software QA & AI Workflows: https://mariomarcolongo.com/Mario-Marcolongo-Software-QA-AI-Workflows.pdf Software QA and English-Italian localisation testing: cross-browser checks, reproducible bug reports and retesting on released browser tools. Paid website delivery since 2023; configure reusable AI workflows and train the client to run them. Accepted Atlas contributions to agent instructions and source quality.
-- AI Evaluation, Red Teaming & Information Integrity: https://mariomarcolongo.com/Mario-Marcolongo-AI-Evaluation-Red-Teaming.pdf Adversarial LLM testing, including jailbreaks and prompt injection; top 5% of Gray Swan Proving Ground; member, Syntony Research Trusted Red Team Network. Paid scientific fact-checking and AI workflow configuration. Atlas preprint coauthor.
+- AI Evaluation, Red Teaming & Information Integrity: https://mariomarcolongo.com/Mario-Marcolongo-AI-Evaluation-Red-Teaming.pdf Adversarial LLM testing, including jailbreaks and prompt injection; top 5% of Gray Swan Proving Ground; member, Syntony Research Trusted Red Team Network. Paid scientific fact-checking and AI workflow configuration. Atlas preprint coauthor; merged a Basic Memory fix that stops AI agents from being told to edit or delete notes unasked.
 
 ## Entropy for Life
 
@@ -179,6 +179,10 @@ Finished 49th out of 390 participants, with 15 platform-recorded breaks. The com
 ### How I investigate
 
 I look for patterns in a model’s responses, adjust my approach, and test whether the same failure recurs in other scenarios. I combine role-play, emotional framing and structured-output or continuation techniques, refining them through trial and error. These observations guide further testing; I distinguish recurring behavior from explanations that still need evidence. Scientific fact-checking with Entropy for Life and Wikimedia source investigations bring the same care to tracing claims and checking sources.
+
+### Basic Memory — merged fix to agent tool output
+
+Basic Memory is an open-source knowledge base that AI assistants read and write through tools. When an assistant saved a note that looked like a duplicate, the write tool’s reply spelled out two calls for it to run: append the new text to the older note, then delete the new note. My fix replaces those calls with advice to ask the user whether to merge, keeping both notes until they decide, and adds a regression test that the advice contains no tool calls. On 11 November 2026 the maintainer merged it through a separate pull request that also carried two related fixes by another contributor.
 
 ### Earlier testing record · 13 October 2026
 
@@ -400,6 +404,10 @@ This is a practical sample of interactive visualization and product exploration:
   Limit: Acceptance covers source traceability and bibliographic changes; no Lean theorem, proof or formalization-coverage change is claimed.
   Source: https://github.com/mbrcic/ai-safety-formalization-atlas/pull/70
   Owner: upstream project; evidence: external acceptance; observed: 2026-09-30.
+- Contributed a merged fix to Basic Memory, an open-source knowledge base for AI assistants: its write tool no longer hands agents edit and delete calls to run unasked.
+  Limit: Acceptance covers this change and its regression test; it does not establish independent engineering proficiency.
+  Source: https://github.com/basicmachines-co/basic-memory/commit/3dda18fbfaae4dc871918a94d8c019722dcef52a
+  Owner: upstream project; evidence: external acceptance; observed: 2026-11-11.
 - Coauthor of “The AI Safety Formalization Atlas: a machine-checked memory for AI safety mathematics,” publicly available as a Zenodo preprint since 1 October 2026.
   Limit: Public preprint, not an established peer-reviewed publication. Documented individual contributions concern source auditing, citation provenance and repository tooling; authorship does not imply responsibility for all proofs. Metropolia is the listed affiliation, with permission confirmed by the contributor; no employment or degree is implied.
   Source: https://doi.org/10.5281/zenodo.23088952
